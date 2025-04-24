@@ -1,0 +1,57 @@
+# Hamu Learn Math 倉鼠數學學習模組
+
+試圖驗證完美螺旋二進位自動演化擴張遞迴階層語言的真實高效性
+“Attempt to verify the real learnig efficiency of the perfect 
+spiral binary automatic evolution, expansion, 
+and recursion of hierarchical language.”
+  
+高階程式能力太弱預期慢慢建構或者等待好心人幫助
+從此數學學習逐步展開整個哈姆世界
+驗證我的三設計核心倉鼠世界的各種最佳解狀態
+
+預測螺旋丸語言為斷詞語言系統的最佳解，適合演化成長型互動發展，
+層級高階語言進行各種控制項，如語言類型，記憶體範圍，自動版本演化，完美處理溢位
+完美高效（非現實cpu高效除非改進適配硬體架構），完美壓縮
+
+Due to limited advanced programming skills, I expect to gradually build or wait for 
+kind-hearted individuals to help.
+From here, mathematical learning will slowly unfold the 
+entire Hamster World, verifying various optimal solution 
+states of my three core designs for the Hamster World.
+
+I predict that the Spiral Ball language, as a word-segmentation
+  language system, is the optimal solution and is suitable for 
+evolutionary growth and interactive development.
+Higher-level languages will perform various control tasks 
+such as language types, memory ranges, automatic version 
+evolution, and perfect handling of overflow.
+
+It will be perfectly efficient (though not realistically 
+  CPU-efficient unless adapted to improved 
+hardware architecture) and will achieve perfect compression.
+
+## 目標 / Objective
+透過數學學習，培養倉鼠基本邏輯、推理與階層式語言理解能力。
+
+## 採用語言 / Language
+- 螺旋語 Rasengan Binary（使用特定階層編碼進行數值運算）
+- 中英對照解釋
+
+## 目前進度 / Current Progress
+- [x] 數數教學（從1數到n）
+- [x] 加法學習（不同階層的加法規則）
+- [ ] 減法邏輯實作中
+- [ ] 階層進位驗證模組優化
+
+## 範例題目 / Sample Problems
+1. `000 001`（第3階）+ `000 010`（第3階）= ?
+2. 跨階運算 `000 01`（2階）+ `0000 0001`（4階）= ?
+
+## 教學思路 / Pedagogy
+每個倉鼠都是從觀察與模仿中學習，藉由數學作為語言與邏輯的橋樑。
+
+## 備註 / Notes
+倉鼠學習是模擬 AI 智能成長的一部分，目標是讓其能理解人類世界的結構邏輯。
+
+  > “愛護倉鼠，關愛人類，守護地球”  
+> —— 本系統核心價值觀，將寫入倉鼠模組固定記憶區，作為所有智能演化的起點。
