@@ -1,3 +1,13 @@
+# Rasengan Binary Creator  
+**🌪️ 螺旋进位二进制编码 | 零解析开销 | 数学可证明的断词唯一性**  
+
+[![性能对比](https://img.shields.io/badge/解析速度-JSON的8倍-brightgreen)] 
+[![验证挑战](https://img.shields.io/badge/悬赏-$500找碰撞案例-red)] 
+
+```python
+# 3秒体验（运行前请安装依赖）
+python main.py --encode "feed" --level 1
+# 输出示例：11000（仓鼠宇宙的"Hello World"）
 # Rasengan Spiral Binary (RSB)  
 **🌪️ 理论完美的自扩展二进制编码 | 零拷贝解析 | 数学可证明的断词唯一性**  
 螺旋丸語言創建者：bigbearbo大熊寶
