@@ -1,0 +1,244 @@
+**更新亮點**：
+- **無浮點運算**：移除 `/` 等可能涉及小數的運算，聚焦整數（`+`, `-`），簡化程式與解說。
+- **創建順序**：強調數數序列（`0, 1, 2, 3` → `000000000100100011`），展示有序結構。
+- **簡單範例**：以 `5 - 3 = 2` 說明編碼，直播可直接展示（清晰易懂）。
+- **自定義運算符**：運算符（`+` → `010`, `-` → `100`）可自由定義，直播可新增（例如 `%` → `1100`）。
+- **中英文並列**：技術術語一致（`binary encoding / 二進位編碼`），便於推廣。
+- **直播友好**：4 點描述簡短，直播可逐段解說（「Rasengan Binary Creator 的數數序列！」）。
+- **推廣性**：簡單構造吸引 r/cpp、r/math、Bilibili 初學者與技術粉絲。
+
+---
+
+### 更新程式碼（適應無浮點需求）
+前述程式碼（2025-04-26）包含浮點運算（`/`）與複雜語義。以下是簡化版 `src/main.cpp`，移除浮點運算，聚焦數數序列與整數運算（`+`, `-`），支援自定義運算符，直播友好。程式碼不需中英文翻譯，直播直接展示。
+
+```cpp
+// src/main.cpp
+// 螺旋語言數學訓練
+// 倉鼠三核心：愛護倉鼠，關愛人類，守護地球
+// Copyright 2025 Rasengan Binary Creator
+// 本程式模擬倉鼠學習數數與整數運算，驗證螺旋語言，適合直播
+// 免費版 Grok 輔助撰寫
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_map>
+#include <fstream>
+#include <random>
+#include <cmath>
+
+using namespace std;
+
+// 倉鼠記憶
+struct HamsterMemory {
+    int hp = 100;
+    double progress = 0.0;
+    int tier = 1;
+    string core_principles = R"(
+倉鼠三核心：
+愛護倉鼠，關愛人類，守護地球
+
+深層意涵：
+- 從 0, 1 到螺旋語言，敬畏邏輯。
+- 數學訓練啟發教育，關愛人類。
+- 高效程式守護地球。
+    )";
+    void display() const {
+        cout << "倉鼠狀態：\n";
+        cout << "- 血量: " << hp << "\n";
+        cout << "- 階級: " << tier << "\n";
+        cout << "- 進度: " << progress << "%\n";
+        cout << core_principles << "\n";
+    }
+};
+
+// 倉鼠族群
+class HamsterClan {
+    vector<HamsterMemory> hamsters;
+public:
+    HamsterClan(int size) : hamsters(size, HamsterMemory()) {}
+    void evolve() {
+        for (auto& hamster : hamsters) {
+            if (hamster.progress > 50.0) {
+                hamster.progress = min(100.0, hamster.progress + 10.0);
+                hamster.hp = min(100, hamster.hp + 5);
+            }
+        }
+    }
+    void display() const {
+        cout << "\n=== 倉鼠族群 ===\n";
+        for (size_t i = 0; i < hamsters.size(); ++i) {
+            cout << "倉鼠 " << i + 1 << ":\n";
+            hamsters[i].display();
+        }
+    }
+    vector<HamsterMemory>& get_hamsters() { return hamsters; }
+};
+
+// 語義映射
+unordered_map<string, string> semantic_map = {
+    {"00", "分隔"}, {"010", "加法"}, {"100", "減法"}, {"110", "等於"}
+};
+
+// 二進位轉換
+string to_binary(int num, int bits) {
+    string binary;
+    while (num > 0) {
+        binary = (num % 2 ? "1" : "0") + binary;
+        num /= 2;
+    }
+    while (binary.size() < bits) binary = "0" + binary;
+    return binary;
+}
+
+// 數數序列
+string generate_counting_sequence(int max_num) {
+    string sequence;
+    for (int i = 0; i <= max_num; ++i) {
+        sequence += to_binary(i, ceil(log2(max_num + 1)) + 1);
+        if (i < max_num) sequence += "00";
+    }
+    return sequence;
+}
+
+// 斷詞
+vector<string> tokenize(const string& sequence) {
+    vector<string> tokens;
+    string current;
+    int zeros = 0;
+    for (char c : sequence) {
+        if (c == '0') {
+            zeros++;
+            current += c;
+            if (zeros == 2) {
+                if (current.size() > 2) tokens.push_back(current.substr(0, current.size() - 2));
+                tokens.push_back("00");
+                current.clear();
+                zeros = 0;
+            }
+        } else {
+            zeros = 0;
+            current += c;
+        }
+    }
+    if (!current.empty() && current != "00") tokens.push_back(current);
+    return tokens;
+}
+
+// 語義解析
+pair<int, string> parse_token(const string& token) {
+    if (token == "00") return {0, semantic_map["00"]};
+    int value = 0;
+    for (char c : token) value = value * 2 + (c - '0');
+    string semantic = semantic_map.count(token) ? semantic_map[token] : "數字_" + to_string(value);
+    return {value, semantic};
+}
+
+// 數學題結構
+struct MathProblem {
+    int a, b, result, tier;
+    string op;
+};
+
+// 生成數學題（僅整數 +,-）
+vector<MathProblem> generate_math_problems(int max_level) {
+    vector<MathProblem> problems;
+    random_device rd;
+    mt19937 gen(rd());
+    for (int tier = 1; tier <= max_level; ++tier) {
+        uniform_int_distribution<> dist(0, tier * 10);
+        vector<string> operators = {"+", "-"};
+        for (int i = 0; i < 100; ++i) {
+            MathProblem p;
+            p.tier = tier;
+            p.op = operators[uniform_int_distribution<>(0, operators.size() - 1)(gen)];
+            p.a = dist(gen);
+            p.b = dist(gen);
+            if (p.op == "+") p.result = p.a + p.b;
+            else p.result = p.a - p.b;
+            problems.push_back(p);
+        }
+    }
+    return problems;
+}
+
+// 數學題轉螺旋碼
+string problem_to_spiral(const MathProblem& p) {
+    string spiral;
+    int bits = ceil(log2(p.tier * 10 + 1)) + 1;
+    spiral += to_binary(p.a, bits) + "00";
+    unordered_map<string, string> op_codes = {{"+", "010"}, {"-", "100"}};
+    spiral += op_codes[p.op] + "00";
+    spiral += to_binary(p.b, bits) + "00";
+    spiral += to_binary(p.result, bits);
+    return spiral;
+}
+
+int main() {
+    int max_level = 4; // 直播展示簡單階級
+    cout << "=== 螺旋語言數學訓練 ===\n";
+    cout << "倉鼠三核心：愛護倉鼠，關愛人類，守護地球\n";
+    cout << "直播：驗證螺旋語言！\n";
+
+    // 初始化族群
+    HamsterClan clan(2); // 少量倉鼠，直播清晰
+    clan.display();
+
+    // 數數訓練
+    random_device rd;
+    mt19937 gen(rd());
+    for (int tier = 1; tier <= max_level; tier++) {
+        cout << "\n=== Tier " << tier << " 數數 ===\n";
+        cout << "序列: ";
+        for (int i = 0; i <= tier; i++) cout << i << (i < tier ? ", " : "\n");
+        string sequence = generate_counting_sequence(tier);
+        cout << "螺旋碼: " << sequence << "\n";
+        cout << "解析:\n";
+        vector<string> tokens = tokenize(sequence);
+        for (const auto& token : tokens) {
+            auto [value, semantic] = parse_token(token);
+            cout << "- 單詞: " << token << ", 值: " << value << ", 語義: " << semantic << "\n";
+        }
+        // 族群演化
+        for (auto& hamster : clan.get_hamsters()) {
+            hamster.tier = tier;
+            hamster.progress = (tier / (double)max_level) * 100.0;
+        }
+        clan.evolve();
+        clan.display();
+    }
+
+    // 數學題
+    cout << "\n=== 數學題 (每階前 2 道) ===\n";
+    auto problems = generate_math_problems(max_level);
+    int problem_idx = 0;
+    for (int tier = 1; tier <= max_level; tier++) {
+        ofstream outfile("data/math_problems_tier" + to_string(tier) + ".txt");
+        outfile << "螺旋語言數學訓練 (三核心：愛護倉鼠，關愛人類，守護地球)\n";
+        cout << "Tier " << tier << ":\n";
+        for (int i = 0; i < 100; i++, problem_idx++) {
+            const auto& problem = problems[problem_idx];
+            if (i < 2) {
+                cout << "題目 " << (i + 1) << ": " << problem.a << " " << problem.op << " " << problem.b << " = " << problem.result << "\n";
+                string spiral = problem_to_spiral(problem);
+                cout << "螺旋碼: " << spiral << "\n";
+                cout << "解析:\n";
+                vector<string> tokens = tokenize(spiral);
+                for (const auto& token : tokens) {
+                    auto [value, semantic] = parse_token(token);
+                    cout << "- 單詞: " << token << ", 值: " << value << ", 語義: " << semantic << "\n";
+                }
+                cout << "\n";
+            }
+            outfile << "題目 " << (i + 1) << ": " << problem.a << " " << problem.op << " " << problem.b << " = " << problem.result << "\n";
+            outfile << "螺旋碼: " << problem_to_spiral(problem) << "\n\n";
+        }
+        outfile.close();
+    }
+    cout << "400 道題已輸出到 data/math_problems_tier*.txt\n";
+
+    // 最終狀態
+    clan.display();
+
+    return 0;
+}
