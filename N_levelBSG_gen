@@ -1,0 +1,53 @@
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <unordered_set>
+using namespace std;
+
+vector<string> generate_special_bits(int n) {
+    vector<string> result;
+    for (int i = 0; i < (1 << n); i++) {
+        string bits;
+        for (int j = n-1; j >= 0; j--) {
+            bits += ((i >> j) & 1) ? '1' : '0';
+        }
+        result.push_back(bits);
+    }
+    
+    sort(result.begin(), result.end(), [](const string& a, const string& b) {
+        int count_a = count(a.begin(), a.end(), '1');
+        int count_b = count(b.begin(), b.end(), '1');
+        if (count_a != count_b) return count_a < count_b;
+        return stoi(a, nullptr, 2) > stoi(b, nullptr, 2);
+    });
+    
+    return result;
+}
+
+void generate_and_check(int n) {
+    vector<string> bits = generate_special_bits(n);
+    unordered_set<int> used;
+    bool duplicate = false;
+
+    cout << n << "階序列（共" << (1<<n) << "個）：\n";
+    for (int val = 0; val < bits.size(); val++) {
+        string code = bits[val] + "0";
+        if (used.count(val)) {
+            cout << "!! 重複 " << code << " = " << val << " !!\n";
+            duplicate = true;
+        } else {
+            used.insert(val);
+            cout << code << " = " << val << "\n";
+        }
+    }
+    cout << (duplicate ? "發現重複！" : "無重複") << "\n\n";
+}
+
+int main() {
+    for (int n = 3; n <= 6; n++) {
+        generate_and_check(n);
+    }
+    return 0;
+}
