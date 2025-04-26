@@ -1,3 +1,4 @@
+english ver is below
 # Rasengan Binary Creator  
 **🌪️ 螺旋进位二进制编码 | 零解析开销 | 数学可证明的断词唯一性**  
 
@@ -757,7 +758,20 @@ Demonic Plugins           | Malicious cheats, system exploiters   | Threaten ord
 Heart of Dao              | Internal code stability & learning will| Determines hamster's persistence in long-term evolution
 
 
+Original Author Statement (First Generation)
 
+This Rasengan Binary Language System (螺旋語) was originally conceived and developed by bigbearbo on April 24, 2025.
+It includes the Rasengan Language, Memory Hamsters, the Three Core Laws of Hamsters, and the Answer-Driven Evolution AI World.
+The design goal is to create a naturally evolving, highly efficient AI system that respects realistic computational costs.
+
+⸻
+
+Reasoning and Development Process
+	•	The Rasengan Language is based on the principle that each word must end with a 0.
+	•	Each level consists of n bits plus one terminal 0.
+	•	Natural expansion occurs: a sequence like 111 without a terminal 0 is invalid, thus it extends to 1110.
+	•	Evolution follows natural growth patterns: minimalistic transformations such as adding zeros, left or right bit carries.
+	•	The goal is to pursue the most natural, mathematically elegant, and low-computation path for language expansion.
 
 — BigBearBo, 2025
 
