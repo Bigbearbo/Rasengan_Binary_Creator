@@ -1,4 +1,6 @@
 english ver is below
+任何基于本项目的商业产品，需在官网首页标注：  
+"Powered by 螺旋语言（原作者：bigbearbo大熊寶）
 # Rasengan Binary Creator  
 **🌪️ 螺旋进位二进制编码 | 零解析开销 | 数学可证明的断词唯一性**  
 
