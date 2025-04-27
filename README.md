@@ -5,7 +5,7 @@ english ver is below
 
 目前進度：
 	•	螺旋式自然擴容二進制（Rasengan Binary）基礎理論完成
-	•	初版螺旋生成器（生成數字到螺旋碼）已由 AI (Grok) 與人工驗證完成
+	•	初版螺旋生成器（生成數字到螺旋碼）已由 某小助手 與人工驗證完成
 	•	生成器連結
 
 下一步計畫：
@@ -35,7 +35,7 @@ english ver is below
 
 About Maybe_correct_rsbgen
 
-This script is the result of Grok’s repeated confident attempts, followed by meticulous checking, feedback, guidance, and multiple rounds of correction by Bigbearbo.
+This script is the result of 某小助手 repeated confident attempts, followed by meticulous checking, feedback, guidance, and multiple rounds of correction by Bigbearbo.
 The filename Maybe_correct_rsbgen was intentionally named by Bigbearbo, humorously reflecting the cautious optimism after a long journey of adjustments.
 
 View Maybe_correct_rsbgen
