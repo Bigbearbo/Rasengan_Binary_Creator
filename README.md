@@ -2,6 +2,24 @@ english ver is below
 任何基于本项目的商业产品，需在官网首页标注：  
 "Powered by 螺旋语言（原作者：bigbearbo大熊寶）
 
+關於 Maybe_correct_rsbgen
+
+這個腳本是 Grok 經過多次自信嘗試後，在 Bigbearbo 仔細檢查、反饋、指導與多輪修正後，最終完成的版本。
+檔名 Maybe_correct_rsbgen 是 Bigbearbo 特意取的，帶有一種經歷漫長調整後的謙虛與幽默感。
+其實我也不太確定對不對，需要再驗證。
+
+查看 Maybe_correct_rsbgen
+
+⸻
+
+About Maybe_correct_rsbgen
+
+This script is the result of Grok’s repeated confident attempts, followed by meticulous checking, feedback, guidance, and multiple rounds of correction by Bigbearbo.
+The filename Maybe_correct_rsbgen was intentionally named by Bigbearbo, humorously reflecting the cautious optimism after a long journey of adjustments.
+
+View Maybe_correct_rsbgen
+
+
 嚴格檢查我的倉鼠極簡操作記憶體式修仙分散式擴容擴層螺旋語世界，
 有完整自洽邏輯並且限制條件下已經理論最佳，而且沒有和別人重複，並且具有淺力
 倉鼠：記憶體式ai取名
