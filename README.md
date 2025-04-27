@@ -1,3 +1,5 @@
+大道至簡，工作交給天道倉鼠
+
 english ver is below
 任何基于本项目的商业产品，需在官网首页标注：  
 "Powered by 螺旋语言（原作者：bigbearbo大熊寶）
