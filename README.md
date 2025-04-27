@@ -25,7 +25,7 @@ english ver is below
 
 關於 Maybe_correct_rsbgen
 
-這個腳本是 Grok 經過多次自信嘗試後，在 Bigbearbo 仔細檢查、反饋、指導與多輪修正後，最終完成的版本。
+這個腳本是 某小助手 經過多次自信嘗試後，在 Bigbearbo 仔細檢查、反饋、指導與多輪修正後，最終完成的版本。
 檔名 Maybe_correct_rsbgen 是 Bigbearbo 特意取的，帶有一種經歷漫長調整後的謙虛與幽默感。
 其實我也不太確定對不對，需要再驗證。
 
