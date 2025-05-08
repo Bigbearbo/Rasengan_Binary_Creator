@@ -1,6 +1,7 @@
 倉鼠極簡操作記憶體式遊戲分散式擴容擴層螺旋語世界
 
 [**English Version (README_en.md)**](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/main/README_en.md)
+En.ver is under construction 
 
 名詞解釋
 倉鼠：記憶體式AI取名
