@@ -2,6 +2,8 @@
 
 This document is structured from simple to complex, allowing for gradual understanding of the Hamster World design. If you’re short on time, feel free to input sections (e.g., lines 100–300) into an AI tool for translation, summarization, or key point extraction.
 
+[![DOI](https://zenodo.org/badge/DOI/10.36227/techrxiv.174702488.82967589/v1.svg)](https://doi.org/10.36227/techrxiv.174702488.82967589/v1)
+
 [**English Version (README_en.md)**](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/main/README_en.md)
 En.ver is under construction 
 
