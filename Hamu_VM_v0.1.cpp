@@ -1,4 +1,3 @@
-// 20250520
 #include <vector>
 #include <iostream>
 #include <stdexcept>
@@ -10,22 +9,55 @@
 #include <iomanip>
 using namespace std;
 
-const int ROUND_outside=500;
-const int ROUND=100;
-const int Hamu_num=20;
+const int ROUND_outside=2000;
+const int ROUND=500;
+const int Grow_up=50;
+const int Hamu_num=100;
 const bool op_print=false;
 const bool mem_print=false;
-const int mem_p_size=60;
+const int mem_p_size=80;
 const int deth_loop_num=10;
-const int Change_rate = 100;
-const float basic_use = 0.5;
+const int Change_rate = 50;
+const float basic_use = 1;
+const bool only_count = true;
+const int Print_per = 20;
+const int Good_age = 30;
+const int Good_ratio = 10;
+const int Adition_hp = 0;
+float Correct_rate = 0.25;
+float Mem_inc_rate = 0;
+const int Mem_size = 220;
+const int Pro_start = 120;
+const int Add_hp_ratio = 3;
 
 struct SpiralToken {
     int value;
     int order;
     int level;
     std::vector<bool> bits;
-    SpiralToken() : value(0), order(0), level(0) {};
+      // 預先分配空間更穩定
+    SpiralToken() : value(0), order(1), level(1) {
+        bits.push_back(0); // 1-bit order
+        bits.push_back(0); // 1-bit level
+    }
+    SpiralToken(int val, int ord, int lvl) {
+    if (val >= (1 << ord)) {
+        throw std::invalid_argument("Value exceeds maximum for given order.");
+    }
+    value = val;
+    order = ord;
+    level = lvl;
+    
+    bits.reserve(ord + lvl);
+    
+    if (ord > 0) {
+        for (int i = ord - 1; i >= 0; --i)
+            bits.push_back((val >> i) & 1);
+    }
+    for (int i = 0; i < lvl; ++i)
+        bits.push_back(0);
+    }
+    /*
     SpiralToken(int val, int ord, int lvl) {
         if (val >= (1 << ord)) {
             throw std::invalid_argument("Value exceeds maximum for given order.");
@@ -39,7 +71,7 @@ struct SpiralToken {
         for (int i = 0; i < lvl; ++i)
             bits.push_back(0);
     }
-
+    */
     void print() const {
         std::cout << "Value: " << value
                   << " | Order(n): " << order
@@ -96,10 +128,12 @@ Problem generateOneProblem(int order, int level) {
         std::string opStr = "?";
 
         if (op == 12) { // +
+            if(only_count) continue;
             if (a + b > 10) continue;
             result = a + b;
             opStr = "+";
         } else if (op == 11) { // -
+            if(only_count) continue;
             if (a - b < 0) continue;
             result = a - b;
             opStr = "-";
@@ -188,7 +222,26 @@ SpiralOp decode_op(const SpiralToken& token) {
         {{1,1,1,0,0}, SpiralOp::SMOVE_PTR},
         {{1,1,1,1,0}, SpiralOp::OUT_AREA}
     };
-
+    /*
+    for (const auto& pair : op_map) {
+        const auto& pattern = pair.first;
+        const auto& op = pair.second;
+    
+        if (token.bits.size() >= pattern.size()) {
+            bool match = true;
+            for (size_t i = 0; i < pattern.size(); ++i) {
+                if (token.bits[i] != pattern[i]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) return op;
+        }
+    }
+    */
+    if (token.bits.empty()) {
+    std::cerr << "[decode_op] token.bits is empty!\n";
+    }
     for (const auto& [pattern, op] : op_map) {
         if (token.bits.size() >= pattern.size()) {
             bool match = true;
@@ -201,7 +254,7 @@ SpiralOp decode_op(const SpiralToken& token) {
             if (match) return op;
         }
     }
-
+    
     return SpiralOp::INVALID;
 }
 
@@ -235,18 +288,18 @@ struct HamsterParams {
     int mature_age = 10;
     int reward_correct = 5;
     int penalty_wrong = 10;
-    int unit_cost_per = 600; 
-    int add_hp_ratio = 2;
+    int unit_cost_per = 500; 
+    int add_hp_ratio = Add_hp_ratio;
     int op_order = 4;
     int op_lvl = 1;
 
     struct {
         int input_start = 0;
-        int status_start = 32;
-        int output_start = 40;
+        int status_start = 20;
+        int output_start = 30;
         int work_start = 60;
-        int program_start = 180;
-        int total_size = 256;
+        int program_start = Pro_start;
+        int total_size = Mem_size;
         int val_reg_size = 32;
     } layout;
     
@@ -281,6 +334,7 @@ struct Hamster {
     int incorrect_count = 0;
 
     Hamster(int _id, const HamsterParams& p) : id(_id), params(p), hp(p.initial_hp), age(0) {
+        params.layout.total_size += int(Mem_inc_rate*ROUND_outside);
         memory = std::vector<bool>(params.layout.total_size, 0);
         val_reg = std::vector<bool>(params.layout.val_reg_size, 0);
         
@@ -291,7 +345,7 @@ struct Hamster {
         pro_1=params.layout.program_start+1-50;
         pro_2=params.layout.total_size-1;
         hp=params.initial_hp;
-        max_hp_his=hp;
+        max_hp_his=hp+Adition_hp;
         creat_his = false;
         ptr=0;
         val_ptr=0;
@@ -354,7 +408,7 @@ struct Hamster {
         val_ptr=0;
         
         pro_2=params.layout.total_size-1;
-        pro_1=params.layout.program_start+1-50;
+        pro_1=params.layout.program_start+1;
         stop=false;
         
     }
@@ -374,7 +428,7 @@ struct Hamster {
     
     void change_hamu(int r){
         
-        for(int i=0;i<memory.size();i++){
+        for(int i=params.layout.work_start;i<memory.size();i++){
             if(rand()%r==1){
                 memory[i] = !memory[i];
             }
@@ -408,11 +462,12 @@ struct Hamster {
     }
 
     void print_summary() const {
-        std::cout << "Hamster#" << id
-                  << " | HP: " << std::setw(3) << hp
+        std::cout << "Hamster#" << id <<std::setw(6)
+                  << " | HP: " << std::setw(3) << int(hp)
                   << " | Age: " << std::setw(2) << age
-                  << " | COUNTING: " << correct_count_counting
-                  << " | ARITH: " << correct_count_arith
+                  << " Rate = " << correct_count_counting*100/age
+                  << "% | COUNTING: " << correct_count_counting
+                  //<< " | ARITH: " << correct_count_arith
                   << " | WRONG: " << incorrect_count << std::endl;
     }
     void print_ptr(){
@@ -470,43 +525,87 @@ std::ostream& operator<<(std::ostream& os, const SpiralToken& token) {
 }
 
 void simulate_spiral_program(Hamster& h) {
-    
-    int loop_num=0;
+    int loop_num = 0;
     int lvl = h.params.op_lvl;
-    
+    int op_order = h.params.op_order;
+    int move_width = op_order + lvl;
     static bool mem_old[mem_p_size];
     
-    //if(h.memory[h.params.layout.program_start] == 0)return;
-    int op_order = h.params.op_order;
-    int tokens_size = (h.pro_2 - h.pro_1+1) / (op_order+lvl);
+    int token_bits_total = (h.pro_2 - h.pro_1 + 1);
+    if (token_bits_total < move_width) return; // 不夠一個 token，跳出
+
+    int tokens_size = token_bits_total / move_width;
     std::vector<SpiralToken> tokens;
-    int move_width = op_order+lvl;
-    
-    for(int i = 0; i < tokens_size; i++) {
-        int op_to_num = 0;
-        // stop if loop
-        if(loop_num > deth_loop_num){
-            cout<<"Loop stop"<<endl;
+
+    // Token解析
+    for (int i = 0; i < tokens_size; i++) {
+        int start_idx = h.pro_1 + i * move_width;
+        if (start_idx < 0 || start_idx + move_width > (int)h.memory.size()) {
+            std::cerr << "[Hamster#" << h.id << "] Token[" << i << "] memory out of bounds.\n";
             return;
         }
-        // 檢查這次操作是否會越界
-        int start_idx = 1 + h.pro_1 + i * (op_order + lvl);
-        int end_idx = start_idx + op_order; // 不含end_idx
-    
-        if(end_idx > h.memory.size()) {
-            std::cerr << "Memory access out of bounds when reading token " << i << std::endl;
-            break;
+
+        int val = 0;
+        for (int j = 0; j < op_order; ++j) {
+            val = (val << 1) | h.memory[start_idx + j];
         }
-    
-        for(int j = 0; j < op_order; j++) {
-            op_to_num += h.memory[start_idx + j];
-            op_to_num *= 2;
+
+        SpiralToken tok;
+        try {
+            tok = SpiralToken(val, op_order, lvl);
+        } catch (const std::exception& e) {
+            std::cerr << "[Hamster#" << h.id << "] Invalid SpiralToken: " << e.what() << "\n";
+            return;
         }
-        op_to_num /= 2;
-    
-        tokens.push_back(SpiralToken(op_to_num, op_order, lvl));
+
+        if (tok.bits.empty() || (int)tok.bits.size() != move_width) {
+            std::cerr << "[Hamster#" << h.id << "] Token[" << i << "] bits size mismatch.\n";
+            return;
+        }
+
+        tokens.push_back(tok);
     }
-    
+
+    if (tokens.empty()) return;
+
+    // Token執行
+    for (size_t i = 0; i < tokens.size(); ) {
+        if (++loop_num > deth_loop_num) {
+            //std::cerr << "[Hamster#" << h.id << "] Loop exceeded " << deth_loop_num << " steps.\n";
+            return;
+        }
+
+        if (i >= tokens.size()) {
+            std::cerr << "[Hamster#" << h.id << "] Execution index out of bounds.\n";
+            return;
+        }
+
+        const SpiralToken& tok = tokens[i];
+        if (tok.bits.empty()) {
+            std::cerr << "[Hamster#" << h.id << "] Token[" << i << "] has empty bits.\n";
+            ++i;
+            continue;
+        }
+
+        SpiralOp op = decode_op(tok);
+        if (op == SpiralOp::INVALID) {
+            if (op_print)
+                std::cout << "[Hamster#" << h.id << "] Invalid op: Token[" << i << "]\n";
+            ++i;
+            continue;
+        }
+
+        // 非合法 spiral 結尾 (一般判定為資料區而非指令)
+        if ((int)tok.bits.size() < move_width || tok.bits[move_width - 1] == 1) {
+            ++i;
+            continue;
+        }
+
+        // 執行操作（你原本的 switch 或 case 區塊）
+        // 這裡略過，假設你後面有定義好對 op 的 switch 操作
+
+        ++i; // 正常情況下推進指令
+    }
     for (size_t i = 0; i < tokens_size;) {
         int op_len=2;
         SpiralOp op = decode_op(tokens[i]);
@@ -573,10 +672,6 @@ void simulate_spiral_program(Hamster& h) {
                     if(j+h.val_ptr>h.params.layout.val_reg_size-1)break;
                     h.val_reg[j+h.val_ptr] = h.memory[h.ptr + j];
                 }
-                //h.ptr += param;
-                // move ptr after READ
-                break;
-                
             case SpiralOp::XOR:
                 for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j)
                     h.memory[h.ptr + j] = h.memory[h.ptr + j] ^ h.val_reg[h.val_ptr+j];
@@ -709,7 +804,7 @@ void simulate_spiral_program(Hamster& h) {
                 for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j) {
                     int addr = h.ptr + j;
                     if (addr >= h.params.layout.output_start) {
-                        h.memory[addr] = h.val_reg[val_ptr+j];
+                        h.memory[addr] = h.val_reg[h.val_ptr+j];
                     }
                 }
                 break;
@@ -781,8 +876,296 @@ void simulate_spiral_program(Hamster& h) {
         
         i += 2;
     }
+    
 }
+/*
+void simulate_spiral_program(Hamster& h) {
+    
+    int loop_num=0;
+    int lvl = h.params.op_lvl;
+    
+    static bool mem_old[mem_p_size];
+    
+    //if(h.memory[h.params.layout.program_start] == 0)return;
+    int op_order = h.params.op_order;
+    int tokens_size = (h.pro_2 - h.pro_1+1) / (op_order+lvl);
+    std::vector<SpiralToken> tokens;
+    int move_width = op_order+lvl;
+    
+    for(int i = 0; i < tokens_size; i++) {
+        int op_to_num = 0;
+        // stop if loop
+        if(loop_num > deth_loop_num){
+            cout<<"Loop stop"<<endl;
+            return;
+        }
+        // 檢查這次操作是否會越界
+        int start_idx = 1 + h.pro_1 + i * (op_order + lvl);
+        int end_idx = start_idx + op_order; // 不含end_idx
+    
+        if(end_idx > h.memory.size()) {
+            std::cerr << "Memory access out of bounds when reading token " << i << std::endl;
+            break;
+        }
+    
+        for(int j = 0; j < op_order; j++) {
+            op_to_num += h.memory[start_idx + j];
+            op_to_num *= 2;
+        }
+        op_to_num /= 2;
+    
+        tokens.push_back(SpiralToken(op_to_num, op_order, lvl));
+    }
+    
+    for (size_t i = 0; i < tokens_size;) {
+        int op_len=2;
+        SpiralOp op = decode_op(tokens[i]);
+        
+        
+        if (op == SpiralOp::INVALID) {
+            if(op_print)std::cout << "[Hamster#" << h.id << "] Invalid op token: " << tokens[i] << "\n";
+            ++i;
+            continue;
+        }
+        
+        // not SpiralToken
+        if(tokens[i].bits[move_width-1] == 1){
+            i += 1;
+            continue;
+        }
+        // no param exit
+            
+        if (op == SpiralOp::OUT_AREA) {
+            if(op_print)std::cout << "[Hamster#" << h.id << "] Op: out_area\n";
+            op_len=1;
+            // OUT_AREA will break 
+            
+            //h.stop=true;
+            //return;
+            
+            break;
+        }
+        
+        if(i==tokens_size-1){
+            i++;
+            return;
+            
+        }
+        
+                
+        if (i + 1 >= tokens_size) {
+            if(op_print)std::cout << "[Hamster#" << h.id << "] Missing parameter for: " << tokens[i] << "\n";
+            break;
+        }
+        
+        int param=tokens[i+1].value;
+        
+        switch (op) {
+            case SpiralOp::WRITE_1:
+                for (int j = 0; j < param && h.ptr < h.memory.size(); ++j) {
+                    int addr = h.ptr++;
+                    if (addr >= h.params.layout.work_start) {
+                        h.memory[addr] = 1;
+                    }
+                }
+                break;
+            case SpiralOp::WRITE_0:
+                for (int j = 0; j < param && h.ptr < h.memory.size(); ++j) {
+                    int addr = h.ptr++;
+                    if (addr >= h.params.layout.work_start) {
+                        h.memory[addr] = 0;
+                    }
+                }
+                break;
+            case SpiralOp::READ:
 
+                for (int j = 0; j < param && (h.ptr + j) < h.memory.size(); ++j){
+                    if(j+h.val_ptr>h.params.layout.val_reg_size-1)break;
+                    h.val_reg[j+h.val_ptr] = h.memory[h.ptr + j];
+                }
+                //h.ptr += param;
+                // move ptr after READ
+                break;
+                
+            case SpiralOp::XOR:
+                for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j)
+                    h.memory[h.ptr + j] = h.memory[h.ptr + j] ^ h.val_reg[h.val_ptr+j];
+                break;
+            case SpiralOp::AND:
+                for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j)
+                    h.memory[h.ptr + j] = h.memory[h.ptr + j] & h.val_reg[h.val_ptr+j];
+                break;
+            case SpiralOp::OR:
+                for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j)
+                    h.memory[h.ptr + j] = h.memory[h.ptr + j] | h.val_reg[h.val_ptr+j];
+                break;
+            case SpiralOp::MOVE_PTR: {
+                // 取得方向位元（用第一個 bit 控制方向）
+                
+                // param 來自 token[i+1] 的值，最高位為方向
+                int total_bits = tokens[i+1].order;
+                if (total_bits < 1) break;
+            
+                int raw_val = tokens[i+1].value;
+                int dir_bit = (raw_val >> (total_bits - 1)) & 1;
+                int magnitude = raw_val & ((1 << (total_bits - 1)) - 1);
+                
+                int direction = dir_bit ? +1 : -1;
+                //cout<<"Move "<<direction * magnitude * move_width<<endl;
+                h.ptr += direction * magnitude * move_width;
+            
+                // 邊界修正
+                h.ptr = std::max(0, std::min(h.ptr, (int)h.memory.size() - 1));
+                break;
+
+            }
+            
+            case SpiralOp::SMOVE_PTR: {
+                // 取得方向位元（用第一個 bit 控制方向）
+                int dir_bit = tokens[i+1].bits[0];
+                int direction = dir_bit ? +1 : -1;
+            
+                // 將 direction bit 乘上高權重（<< op_order-1）作為 bias 調整量
+                int bias = dir_bit << (op_order - 1);
+            
+                // 真正位移量 = 螺旋數值 - 偏移 → *方向
+                int move_amount = direction * (param - bias);
+            
+                h.ptr += move_amount;
+            
+                // 邊界限制
+                if (h.ptr < 0) h.ptr = 0;
+                if (h.ptr >= (int)h.memory.size()) h.ptr = h.memory.size() - 1;
+                break;
+            }
+            
+            case SpiralOp::MOVE_VAL_PTR: {
+                int dir_bit = tokens[i+1].bits[0];
+                int direction = dir_bit ? +1 : -1;
+            
+                // 將 direction bit 乘上高權重（<< op_order-1）作為 bias 調整量
+                int bias = dir_bit << (op_order - 1);
+            
+                // 真正位移量 = 螺旋數值 - 偏移 → *方向
+                int move_amount = direction * (param - bias);
+            
+                h.val_ptr += move_amount * move_width;
+            
+                // 邊界限制
+                if (h.val_ptr < 0) h.val_ptr = 0;
+                if (h.val_ptr >= h.params.layout.val_reg_size) 
+                    h.val_ptr = h.params.layout.val_reg_size - 1;
+               break;
+            }
+            case SpiralOp::SET_PTR1: {
+                int dir_bit = tokens[i+1].bits[0];
+                int direction = dir_bit ? +1 : -1;
+                int bias = dir_bit << (op_order - 1);
+                int move_amount = direction * (param - bias) ;
+            
+                h.pro_1 += move_amount * move_width;
+                if (h.pro_1 < 0) h.pro_1 = 0;
+                if (h.pro_1 > h.params.layout.total_size) h.pro_1 = h.params.layout.total_size - 1;
+                break;
+            }    
+            case SpiralOp::SET_PTR2: {
+                int dir_bit = tokens[i+1].bits[0];
+                int direction = dir_bit ? +1 : -1;
+                int bias = dir_bit << (op_order - 1);
+                int move_amount = direction * (param - bias);
+            
+                h.pro_2 += move_amount * move_width;
+                if (h.pro_2 < 0) h.pro_2 = 0;
+                if (h.pro_2 > h.params.layout.total_size) h.pro_2 = h.params.layout.total_size - 1;
+                break;
+            }
+            
+           
+            case SpiralOp::SET_AREA:
+                if(param%8==0) ;//h.ptr=0;
+                else if(param%8==1) h.ptr=h.params.layout.status_start;
+                else if(param%8==2) h.ptr=h.params.layout.output_start;
+                else if(param%8==3) h.ptr=h.params.layout.work_start;
+                else if(param%8==4) h.ptr=h.params.layout.work_start+10*(op_order+lvl);
+                else if(param%8==5) h.ptr=h.pro_1;
+                else if(param%8==6) h.ptr=h.pro_2;
+                //else if(param%8==7) h.ptr=h.params.layout.total_size;
+                else if(param%8==7) h.stop=true;
+                
+                break;
+                
+            case SpiralOp::WRITE_VAL:
+                for (int j = 0; j < param && (h.ptr + j) < h.memory.size() && j < h.val_reg.size(); ++j) {
+                    int addr = h.ptr + j;
+                    if (addr >= h.params.layout.output_start) {
+                        h.memory[addr] = h.val_reg[h.val_ptr+j];
+                    }
+                }
+                break;
+            
+            case SpiralOp::INSERT:
+            // 在 ptr 位置插入 val_reg 中的前 param 個位元，後方位元右移
+                for (int j = h.params.layout.total_size - 1; j >= h.ptr + param; --j) {
+                    if (j < h.memory.size() && j - param >= 0)
+                        h.memory[j] = h.memory[j - param];
+                }
+                for (int j = 0; j < param && j + h.val_ptr < h.val_reg.size(); ++j) {
+                    if (h.ptr + j < h.memory.size())
+                        h.memory[h.ptr + j] = h.val_reg[j + h.val_ptr];
+                }
+                break;
+            
+            case SpiralOp::DELETE:
+            // 刪除 ptr 位置後 param 個位元，後方位元左移填補
+                for (int j = h.ptr; j + param < h.memory.size(); ++j) {
+                    h.memory[j] = h.memory[j + param];
+                }
+                for (int j = h.memory.size() - param; j < h.memory.size(); ++j) {
+                    h.memory[j] = rand() %2 ;
+                }
+                break;
+            
+            
+            
+                        default:
+                break;
+        }
+
+        // Optional: debug memory snapshot
+        
+        if(op_print){
+            cout<<tokens[i].value<<" "<<tokens[i+1].value<<" "<<param<<endl;
+            cout<<"Op="<<op_to_string(op)<<" i="<<i<<" "<<tokens[i]<<" "<<param<<" ";
+            if(i+1<tokens_size)cout<<tokens[i+1]<<" ";
+            std::cout << "[Hamster#" << h.id << "] Mem[ptr=" << h.ptr << "] ";
+        }
+        if(mem_print){
+            bool mem_p_arr[mem_p_size];
+            for(int j=0;j<mem_p_size;j++)
+                mem_p_arr[j]=h.memory[j+190];
+            bool p_same=true;
+            for(int j=0;j<mem_p_size;j++)
+                if(mem_p_arr[j]!=mem_old[j]){
+                    p_same=false;
+                    break;
+                }
+            if(p_same){
+                cout<<".";
+                loop_num++;
+            }else{
+                cout<<endl;
+                for(int j=0;j<mem_p_size;j++){
+                    cout<<mem_p_arr[j];
+                    mem_old[j]=mem_p_arr[j];
+                }
+            }
+        }
+        //h.print_ptr();
+        
+        i += 2;
+    }
+}
+*/
 
 int main() {
     srand(time(0));
@@ -818,37 +1201,45 @@ int main() {
     HamsterParams base_param;
     std::vector<Hamster> good_hamsters;
     int index=0;
-    
+    std::vector<Hamster> hamsters;
     
     for (int out_round = 1; out_round <= ROUND_outside; out_round++) {
-        std::cout << "--- Out_Round " << out_round << " ---" << std::endl;
-        
-        std::vector<Hamster> hamsters;
-        int hamu_num_rand;
+        if(out_round%Print_per==0)
+            std::cout << "--- Out_Round " << out_round << " --- ";
+        hamsters.clear();
+        //std::vector<Hamster> hamsters;
+        int hamu_num_rand=0;
+        //cout<<"+";
         if(good_hamsters.size()==0){
             hamu_num_rand=Hamu_num;
         }else{
-            hamu_num_rand=Hamu_num/(2+(out_round/ROUND_outside)*10);
-        }
             
+            hamu_num_rand=Hamu_num/5+Hamu_num/(2+good_hamsters.size()/Good_ratio);
+        }
+        //cout<<"*";    
         for (int i = 0; i < hamu_num_rand; ++i) {
         hamsters.emplace_back(index++, base_param);
-        hamsters[i].set_mem_rand();
+        if(i<hamsters.size())hamsters[i].set_mem_rand();
+            else cout<<"!!!!!";
         }
         for(int i= hamu_num_rand ;i < Hamu_num && good_hamsters.size()>0; i++){
             int good_id = rand()%good_hamsters.size();
-            good_id += (good_hamsters.size() - good_id)*((rand()%10)/10);
-            if(good_id > good_hamsters.size()) cout<<"Out bound good_id!!"<<endl;
+            good_id += (((good_hamsters.size() - good_id)*(rand()%3))/3);
+            if(good_id >= good_hamsters.size()){
+                cout<<"Out bound good_id!!"<<endl;
+                good_id -= 1;
+            }
             hamsters.emplace_back(index++, base_param);
             hamsters[i].copy_hamu(good_hamsters[good_id]);
             hamsters[i].change_hamu(Change_rate);
         
         
         }
-        
+        if(out_round%Print_per==0)
+            cout<<hamu_num_rand<<" "<<good_hamsters.size()<<endl;
         
         for (auto& h : hamsters) {
-            
+            //cout<<".";
             for(int round = 1; round <= ROUND; ++round){
                 if (!h.is_alive()){
                     break;
@@ -867,22 +1258,23 @@ int main() {
                     h.ptr=0;
                     //count_cont=h.memory[h.params.layout.program_start];
                     if(h.hp<0)break;
-                    loop_num += 3;
+                    loop_num += 6;
                 }
                 h.status_ref();
                 bool correct = Check_ans(h,p);
                 if(correct)h.add_hp(p);
-            
+                
+                //hamu creat history 
                 h.record_result(correct, p);
-                if(h.hp > h.max_hp_his && h.hp > (5 + h.params.initial_hp) && h.age>20
-                && float(h.correct_count_counting/2+h.correct_count_counting)/float(h.age)>0.1){
+                if(h.hp > h.max_hp_his && h.hp > (Adition_hp + h.params.initial_hp) && h.age>(ROUND/Grow_up) 
+                && float(h.correct_count_counting+h.correct_count_counting)/float(h.age)>Correct_rate){
                     h.new_his();
                 }
                 h.age++;
                 h.stop=false;
                 //h.print_summary();
             }
-            if(h.id%100==0)cout<<h.id<<" age="<<h.age<<" hp="<<int(h.hp)<<endl;
+           // if(h.id%100==0)cout<<h.id<<" age="<<h.age<<" hp="<<int(h.hp)<<endl;
             
             
         }
@@ -898,10 +1290,14 @@ int main() {
             avg_rate1 += h.correct_count_counting;
             avg_rate2 += h.correct_count_arith;
             
-            if(h.creat_his){
-                cout<<h.id<<" age="<<h.max_hp_age_his<<
-                " maxhp="<<int(h.max_hp_his)<<endl;
-                h.print_summary();
+            if(h.creat_his && h.age > Good_age ){
+                if((h.correct_count_counting*100)/h.age>Correct_rate*100){
+                    cout<<" Age="<<h.max_hp_age_his<<
+                    " maxhp="<<int(h.max_hp_his)<<" ";
+                    h.print_summary();
+                
+                    
+                }
                 good_hamsters.emplace_back(index ++, base_param);
                 good_hamsters[good_hamsters.size()-1].copy_hamu(h);
                 //good_hamsters[good_hamsters.size()-1].change_hamu(Change_rate);
@@ -913,7 +1309,7 @@ int main() {
         avg_rate1 /= Hamu_num;
         avg_rate2 /= Hamu_num;
         
-        if(out_round%5==1){
+        if(out_round%Print_per==0){
             cout<<"avg_age= "<<avg_age<<" ,avg_hp= "<<avg_hp<<
             " ,avg_count= "<<avg_rate1<<" avg_arth= "<<avg_rate2<<endl;
         }
