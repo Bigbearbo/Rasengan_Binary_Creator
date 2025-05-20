@@ -8,35 +8,44 @@
 #include <bitset>
 #include <iomanip>
 #include <fstream>
+#include <map>
+#include <random>
+
 using namespace std;
 
-const int ROUND_outside = 100;
+const int ROUND_outside = 1000;
 const int ROUND = 500;
 const int Grow_up = 50;
-const int Hamu_num = 50;
+const int Hamu_num = 100;
 
-const int deth_loop_num = 10;
+
+const int deth_loop_num = 5;
 const int Change_rate = 50;
+const int Op_cost = 200;
 const float basic_use = 1.5;
-const bool only_count = true;
+const int Add_hp_ratio = 3;
+
 const int Print_per = 20;
-int Good_age = 25;
+int Good_age = 15;
 const int Good_ratio = 10;
 const int Adition_hp = 0;
-float Correct_rate = 0.25;
+float Correct_rate = 0.45;
 float Mem_inc_rate = 0;
-const int Mem_size = 250;
-const int Pro_start = 120;
-const int Add_hp_ratio = 5;
+const int Mem_size = 150;
+const int Reg_size = 5;
+const int Pro_start = 80;
+
+const bool only_count = true;
 
 string File_name = "output.txt";
 string File_name2 = "output2.txt";
 bool print_hamu_control = 0;
 const bool op_print = 0;
 const bool mem_print = 0;
-const int mem_p_size = 80;
+const int mem_p_size = Mem_size;
 const bool Simu_dbug = 0;
 
+bool Tese_other = 0;
 
 struct SpiralToken {
     int value;
@@ -116,15 +125,26 @@ const int END_CODE = 15;
 
 enum class ProblemType {
     COUNTING,
-    ARITHMETIC
+    ARITHMETIC,
+    EAZY
 };
+
+
+
 
 struct Problem {
     ProblemType type;
     std::vector<SpiralToken> question;
     SpiralToken answer;
     std::string readable;
+    void print_Problem() {
+        for (int i = 0; i < question.size(); i++) {
+            cout << question[i].value << " ";
+        }
+        cout << endl;
+    }
 };
+
 
 Problem generateOneProblem(int order, int level) {
     while (true) {
@@ -199,6 +219,72 @@ enum class SpiralOp {
     INVALID
 };
 
+
+// generate simple problem
+enum class OpType { COPY, AND, OR, XOR };
+
+std::map<OpType, int> op_to_code = {
+    {OpType::COPY, 0},
+    {OpType::AND, 1},
+    {OpType::OR, 2},
+    {OpType::XOR, 3}
+};
+
+std::map<int, OpType> code_to_op = {
+    {0, OpType::COPY},
+    {1, OpType::AND},
+    {2, OpType::OR},
+    {3, OpType::XOR}
+};
+
+std::string op_to_string(OpType op) {
+    switch (op) {
+    case OpType::COPY: return "COPY";
+    case OpType::AND:  return "AND";
+    case OpType::OR:   return "OR";
+    case OpType::XOR:  return "XOR";
+    default: return "UNKNOWN";
+    }
+}
+
+// 生成一個隨機 n 階 (n+1 bit) 題目（2階共 4 bits）
+Problem generate_simple_problem(int order = 2, int level = 1) {
+    static std::mt19937 rng(std::random_device{}());
+    std::uniform_int_distribution<int> val_dist(0, (1 << order) - 1);
+    std::uniform_int_distribution<int> op_dist(0, 3);  // 四種運算
+
+    int a = val_dist(rng);
+    int b = val_dist(rng);
+    OpType op = static_cast<OpType>(op_dist(rng));
+
+    int result = 0;
+    switch (op) {
+    case OpType::COPY: result = a; break;
+    case OpType::AND:  result = a & b; break;
+    case OpType::OR:   result = a | b; break;
+    case OpType::XOR:  result = a ^ b; break;
+    }
+
+    Problem p;
+    p.type = ProblemType::EAZY;
+    p.question.push_back(SpiralToken(op_to_code[op], order, level));
+    p.question.push_back(SpiralToken(a, order, level));
+    if(op != OpType::COPY) 
+        p.question.push_back(SpiralToken(b, order, level));
+    p.answer = SpiralToken(result, order, level);
+
+    p.readable = op_to_string(op) + " " + std::to_string(a) + " " + std::to_string(b) +
+        " = " + std::to_string(result);
+
+    return p;
+}
+
+// 判斷倉鼠回答是否正確
+bool check_answer(const std::vector<SpiralToken>& hamster_output, const SpiralToken& correct) {
+    if (hamster_output.empty()) return false;
+    return hamster_output[0].value == correct.value;
+}
+
 SpiralOp decode_op(const std::string& token) {
     static const std::unordered_map<std::string, SpiralOp> op_map = {
         {"00000", SpiralOp::SET_AREA}, {"00010", SpiralOp::MOVE_PTR},
@@ -233,23 +319,7 @@ SpiralOp decode_op(const SpiralToken& token) {
         {{1,1,1,0,0}, SpiralOp::SMOVE_PTR},
         {{1,1,1,1,0}, SpiralOp::OUT_AREA}
     };
-    /*
-    for (const auto& pair : op_map) {
-        const auto& pattern = pair.first;
-        const auto& op = pair.second;
-
-        if (token.bits.size() >= pattern.size()) {
-            bool match = true;
-            for (size_t i = 0; i < pattern.size(); ++i) {
-                if (token.bits[i] != pattern[i]) {
-                    match = false;
-                    break;
-                }
-            }
-            if (match) return op;
-        }
-    }
-    */
+    
     if (token.bits.empty()) {
         std::cerr << "[decode_op] token.bits is empty!\n";
     }
@@ -299,7 +369,7 @@ struct HamsterParams {
     int mature_age = 10;
     int reward_correct = 5;
     int penalty_wrong = 10;
-    int unit_cost_per = 500;
+    int unit_cost_per = Op_cost;
     int add_hp_ratio = Add_hp_ratio;
     int op_order = 4;
     int op_lvl = 1;
@@ -311,7 +381,7 @@ struct HamsterParams {
         int work_start = 60;
         int program_start = Pro_start;
         int total_size = Mem_size;
-        int val_reg_size = 30;
+        int val_reg_size = Reg_size;
     } layout;
 
     struct {
@@ -342,6 +412,7 @@ struct Hamster {
     std::vector<std::string> result_log;
     int correct_count_counting = 0;
     int correct_count_arith = 0;
+    int correct_EAZY = 0;
     int incorrect_count = 0;
 
     Hamster(int _id, const HamsterParams& p) : id(_id), params(p), hp(p.initial_hp), age(0) {
@@ -435,11 +506,11 @@ struct Hamster {
 
     void copy_hamu(Hamster& h2) {
         for(int i= params.layout.work_start;i<h2.params.layout.total_size;i++){
-            memory[i] = h2.memory[i];
+            memory[i] = h2.memory_his[i];
 		}
         //memory = h2.memory_his;
-        for (int i = 0; i < h2.params.layout.val_reg_size; i++) {
-            val_reg[i] = h2.val_reg[i];
+        for (int i = 0; i < h2.val_reg_his.size(); i++) {
+            val_reg[i] = h2.val_reg_his[i];
             //val_reg = h2.val_reg_his;
         }
     }
@@ -460,17 +531,29 @@ struct Hamster {
     }
 
     void add_hp(Problem& p) {
-        if (p.type == ProblemType::COUNTING)hp += params.add_hp_ratio;
+
+        if (p.type == ProblemType::EAZY) {
+            //cout << "*";
+            hp += params.add_hp_ratio;
+        }
         else hp += params.add_hp_ratio * 2;
         if (hp > params.max_hp) hp = params.max_hp;
+    }
+
+    bool Chk_vag() {
+        for (int i = 0; i < val_reg.size(); i++) {
+            if (val_reg[i] == 1)return true;
+        }
+        return false;
     }
 
     void record_result(bool correct, const Problem& prob) {
         std::string entry = (correct ? "[O] " : "[X] ") + prob.readable;
         result_log.push_back(entry);
         if (correct) {
-            if (prob.type == ProblemType::COUNTING) ++correct_count_counting;
-            else ++correct_count_arith;
+            if (prob.type == ProblemType::EAZY) ++correct_EAZY;
+            else if (prob.type == ProblemType::COUNTING) ++correct_count_counting;
+            else if (prob.type == ProblemType::ARITHMETIC)++correct_count_arith;
             //hp += params.reward_correct;
         }
         else {
@@ -484,8 +567,9 @@ struct Hamster {
         std::cout << "Hamster#" << id << std::setw(6)
             << " | HP: " << std::setw(3) << int(hp)
             << " | Age: " << std::setw(2) << age
-            << " Rate = " << correct_count_counting * 100 / age
-            << "% | COUNTING: " << correct_count_counting
+            << " Rate = " << correct_EAZY * 100 / age
+            << " EAZY: "  << correct_EAZY
+            //<< "% | COUNTING: " << correct_count_counting
             //<< " | ARITH: " << correct_count_arith
             << " | WRONG: " << incorrect_count << std::endl;
     }
@@ -502,7 +586,7 @@ struct Hamster {
             cout << memory[i];
             if (i % 64 == 63)cout << endl;
         }
-        cout << "Memory_his: "<<endl;
+        cout << endl<<"Memory_his: "<<endl;
         for (int i = 0; i < memory_his.size(); i++) {
             
             cout << memory_his[i];
@@ -935,19 +1019,23 @@ void export_hamster_state(const Hamster& h, std::string filename) {
     outfile << "Age: " << h.age << " HP: " << h.hp << "\n";
     outfile << "Pointer: " << h.ptr << "  ValPtr: " << h.val_ptr << "\n";
     outfile << "Pro1: " << h.pro_1 << "  Pro2: " << h.pro_2 << "\n";
-    outfile << "Val_Reg: ";
-    for (auto v : h.val_reg) outfile << v;
+    outfile << "Creat_his: = " << h.creat_his << endl;
     outfile << "\nMemory:\n";
     for (int i = 0; i < h.memory.size(); ++i) {
         outfile << h.memory[i];
         if ((i + 1) % 64 == 0) outfile << "\n";  // 每 64 位元換行
     }
+    /*
     outfile << "\nAge:_his " << h.max_hp_age_his << " HP_his: " << h.max_hp_his << "\n";
     outfile << "\nMemory_his:\n";
     for (int i = 0; i < h.memory_his.size(); ++i) {
         outfile << h.memory_his[i];
         if ((i + 1) % 64 == 0) outfile << "\n";  // 每 64 位元換行
     }
+    */
+    outfile << endl<< "Val_Reg: ";
+    for (auto v : h.val_reg) outfile << v;
+    outfile << "\n";
     outfile.close();
     //std::cout << "Hamster state exported to: " << filename << "\n";
 }
@@ -984,6 +1072,20 @@ int main() {
     };
     */
     //simulate_spiral_program(spiral_program);
+    /*
+    for (int i = 0; i < 20; i++) {
+        auto p1 = generate_simple_problem();
+        while (1) {
+            p1 = generate_simple_problem();
+            if (p1.question[0].value == 0)break;
+        }
+        p1.print_Problem();
+        cout<<p1.answer<<endl;
+    }
+    */
+
+    if (Tese_other == true) return 0;
+
     std::ofstream outfile(File_name2);  // 開啟輸出檔案
 
     if (!outfile.is_open()) {
@@ -1044,9 +1146,14 @@ int main() {
                 if (!h.is_alive()) {
                     break;
                 }
-                Problem p = generateOneProblem(order, level);
+                //Problem p = generateOneProblem(order, level);
+                auto p = generate_simple_problem();
+                while (1) {
+                    p = generate_simple_problem();
+                    if (p.question[0].value == 0)break;
+                }
                 h.write_prob(p);
-                bool count_cont = true;
+                //bool count_cont = true;
 
                 int loop_num = 0;
                 while (h.stop == false) {
@@ -1058,17 +1165,22 @@ int main() {
                     h.ptr = 0;
                     //count_cont=h.memory[h.params.layout.program_start];
                     if (h.hp < 0)break;
-                    loop_num += 6;
+                    loop_num += deth_loop_num;
                 }
                 h.status_ref();
                 bool correct = Check_ans(h, p);
-                if (correct)h.add_hp(p);
+                if (correct) {
+                    //cout << "+";
+                    h.add_hp(p);
+                }
 
                 //hamu creat history 
                 h.record_result(correct, p);
+
                 if (h.hp > h.max_hp_his && h.hp > (Adition_hp + h.params.initial_hp) && h.age > (ROUND / Grow_up)
-                    && float(h.correct_count_counting + h.correct_count_counting) / float(h.age) > Correct_rate) {
+                    && float(h.correct_EAZY) / float(h.age) > Correct_rate) {
                     h.new_his();
+                    //cout << "creat";
                 }
                 h.age++;
                 h.stop = false;
@@ -1083,15 +1195,17 @@ int main() {
         float avg_hp = 0;
         float avg_rate1 = 0;
         float avg_rate2 = 0;
+        float avg_rate3 = 0;
 
         for (auto& h : hamsters) {
             avg_age += h.age;
             avg_hp += h.hp;
             avg_rate1 += h.correct_count_counting;
             avg_rate2 += h.correct_count_arith;
+            avg_rate3 += h.correct_EAZY;
 
-            if (h.creat_his && h.age > Good_age) {
-                if ((h.correct_count_counting * 100) / h.age > Correct_rate * 100) {
+            if (h.creat_his && (h.age > Good_age)) {
+                if ((h.correct_EAZY * 100) / h.age > Correct_rate * 100) {
                     cout << " Age=" << h.max_hp_age_his <<
                         " maxhp=" << int(h.max_hp_his) << " ";
                     h.print_summary();
@@ -1099,6 +1213,8 @@ int main() {
 
 
                 }
+                //h.print_summary();
+                //h.print_Hamu();
                 good_hamsters.emplace_back(index++, base_param);
                 good_hamsters[good_hamsters.size() - 1].copy_hamu(h);
                 //output file
@@ -1111,15 +1227,20 @@ int main() {
         avg_hp /= Hamu_num;
         avg_rate1 /= Hamu_num;
         avg_rate2 /= Hamu_num;
+        avg_rate3 /= Hamu_num;
 
         if (out_round % Print_per == 0) {
 
             cout << "avg_age= " << avg_age << " ,avg_hp= " << avg_hp <<
-                " ,avg_count= " << avg_rate1 << " avg_arth= " << avg_rate2 << endl;
+                " ,avg_EAZY= " << avg_rate3
+                //" ,avg_count= " << avg_rate1 << " avg_arth= " << avg_rate2 
+                << endl;
 
             
-            outfile << "avg_age= " << avg_age << " ,avg_hp= " << avg_hp <<
-                " ,avg_count= " << avg_rate1 << " avg_arth= " << avg_rate2 << endl;
+            outfile2 << "avg_age= " << avg_age << " ,avg_hp= " << avg_hp <<
+                " ,avg_EAZY= " << avg_rate3
+                //" ,avg_count= " << avg_rate1 << " avg_arth= " << avg_rate2 
+                << endl;
             
         }
 
