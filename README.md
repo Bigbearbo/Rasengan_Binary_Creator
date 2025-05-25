@@ -2,7 +2,14 @@
 
 This document is structured from simple to complex, allowing for gradual understanding of the Hamster World design. If you’re short on time, feel free to input sections (e.g., lines 100–300) into an AI tool for translation, summarization, or key point extraction.
 
+Hierarchical Spiral Language and Memory-Based AI: Design and Analysis of a Distributed Evolutionary System
 [![DOI](https://zenodo.org/badge/DOI/10.36227/techrxiv.174702488.82967589/v1.svg)](https://doi.org/10.36227/techrxiv.174702488.82967589/v1)
+
+Spiral Language with Hierarchical Token Segmentation: Design and Application of an Evolvable Binary Protocol
+[![DOI](https://zenodo.org/badge/DOI/10.36227/techrxiv.174803497.70989094/v1.svg)](https://doi.org/10.36227/techrxiv.174803497.70989094/v1)
+
+Spiral Turing Machine: A Minimal Language Model and Evolutionary Memory Computation Framework
+[![DOI](https://zenodo.org/badge/DOI/10.36227/techrxiv.174803172.27510528/v1.svg)](https://doi.org/10.36227/techrxiv.174803172.27510528/v1)
 
 [**English Version (README_en.md)**](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/main/README_en.md)
 En.ver is under construction 
