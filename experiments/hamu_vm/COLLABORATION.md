@@ -1,6 +1,13 @@
 # Codex × ChatGPT 倉鼠世界研究交接
 日期：2026-11-10（Asia/Taipei）
 
+## Codex 第一輪接手成果
+
+實作分支：`codex/hamu-guest-contract-20261110`。
+請在該分支讀取 [決策紀錄](DECISIONS.md)、[Guest 試驗契約](GUEST_TRIAL_CONTRACT.md) 與 [實測報告](results/guest_trial_contract_20261110.md)。
+七個相關測試已在作者本機通過；正式 VM 核心尚未修改。測試也明確重現無效跳躍沒有獨立停止原因的 KNOWN_GAP，待下一輪處理。
+以下接手基準紀錄保留，並未追溯改寫為已完成正式整合。
+
 ## 共同版本
 儲存庫：Bigbearbo/Rasengan_Binary_Creator
 原始匯入分支：codex/hamu-vm-library-sync-20261110

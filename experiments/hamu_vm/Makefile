@@ -696,3 +696,10 @@ build/test_tree_reject_mask: tests/test_tree_reject_mask.cpp src/hamu_vm_core.hp
 segmented-reject-mask-test: build/test_tree_reject_mask
 	ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_reject_mask
 .PHONY: segmented-reject-mask-test
+
+# Host-only guest execution contract reference; not production VM routing.
+build/test_guest_trial_contract: tests/test_guest_trial_contract.cpp tests/test_tree_guest_full_state_transaction.cpp tests/tree_generation_registry_fixture.hpp tests/test_tree_reject_mask.cpp prototypes/guest_trial_contract_ref.hpp src/hamu_vm_core.hpp src/tree_wide_segment_migration.hpp | build
+	$(CXX) -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_guest_trial_contract.cpp -o $@
+guest-trial-contract-test: build/test_guest_trial_contract
+	ASAN_OPTIONS=detect_leaks=0 ./build/test_guest_trial_contract
+.PHONY: guest-trial-contract-test

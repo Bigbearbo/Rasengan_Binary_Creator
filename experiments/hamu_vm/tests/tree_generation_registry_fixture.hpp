@@ -1,3 +1,4 @@
+#pragma once
 #define main previous_reject_main
 #include "test_tree_reject_mask.cpp"
 #undef main
@@ -127,4 +128,5 @@ int prior_generation_main(){
  require(child_reg.valid(child_reg.acquire(1)),"child reference invalid");
  require(d.valid(fresh),"parent corrupted by child");
  std::cout<<"PASS durable host registry reload, stale refs, corrupt rollback, offspring isolation\n";
+ return 0;
 }

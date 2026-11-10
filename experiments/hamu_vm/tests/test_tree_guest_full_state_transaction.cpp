@@ -92,4 +92,5 @@ int main(){
  require(!tx.run([&](){require(d.erase(handle),"erase overflow");return true;}),"overflow accepted");
  require(d.snapshot()==high && d.valid(handle) && r.revision==UINT64_MAX,"overflow rollback leaked");
  std::cout<<"PASS: full-state host checkpoint rolls back work, generation, HP, exception and revision overflow\n";
+ return 0;
 }
