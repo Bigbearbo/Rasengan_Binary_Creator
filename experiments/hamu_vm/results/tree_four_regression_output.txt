@@ -1,0 +1,6 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_width_learning_turn.cpp -o build/test_tree_width_learning_turn
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_width_reuse.cpp -o build/test_tree_width_reuse
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_width_learning_turn
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_width_reuse
+PASS width learning: COPY then promoted FLIP, guest binding, rejection, inheritance
+PASS reusable width slots: action readback, interrupted release, five learned paths, inheritance

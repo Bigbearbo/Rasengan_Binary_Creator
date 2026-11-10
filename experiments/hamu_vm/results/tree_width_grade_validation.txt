@@ -1,0 +1,4 @@
+2026-10-31: make tree-width-grade-test
+ASan/UBSan, ASAN_OPTIONS=detect_leaks=0
+PASS width-bound grade snapshot and pending guard
+Checks: n=2/n=3 graded trials, cross-width stale grade rejection, data/output/snapshot mismatch rejection, two-mask feedback completion and confirmation.

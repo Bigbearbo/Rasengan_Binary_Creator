@@ -1,0 +1,23 @@
+==== test_tree_wide_index O0 ASan UBSan ====
+PASS: VM indexed/linear differential 600 paths, 7 grows, reused ID, guest edit, inheritance, rollback/retry
+indexed scanned_rows=3744, linear scanned_rows=789958, cache_builds=9, cache_lookups=3105, cache_updates=689, live_index_entries=688, cache_bytes=4096, cache_probes=17161, next_free_id=689
+==== test_tree_wide_vm_growth O0 ASan UBSan ====
+PASS guest VM wide tree 600 paths, maximum handle 688, capacity 1023, 7 dynamic growth events, scanned_rows=2720, reserved_tree_bits=17391, index_slots=1024, index_allocated_bytes=4096, index_probes=14385, inheritance, action memory, layout mismatch, atomic full refusal
+==== test_vm O0 ASan UBSan ====
+PASS: decoding, READ, inheritance, I/O, COPY, branching, protection, budget; 6000 random guests
+==== test_tree_vm O0 ASan UBSan ====
+PASS VM tree add/find, duplicate, full, missing parent, inheritance
+==== test_tree_compact_optimized_cost O0 ASan UBSan ====
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=52,vm_steps=1982,peak_steps=92,choice_steps=1239,record_steps=743,read_steps=0,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS optimized same-question same-feedback replay
+==== wide 3000 O2 no sanitizers ====
+PASS guest VM wide tree 3000 paths, maximum handle 3429, capacity 4095, 9 dynamic growth events, scanned_rows=11603, reserved_tree_bits=77805, index_slots=8192, index_allocated_bytes=32768, index_probes=75944, inheritance, action memory, layout mismatch, atomic full refusal
+==== 600 differential O0 ASan UBSan recheck after packed index ====
+PASS: VM indexed/linear differential 600 paths, 7 grows, reused ID, guest edit, inheritance, rollback/retry
+indexed scanned_rows=3744, linear scanned_rows=789958, cache_builds=9, cache_lookups=3105, cache_updates=689, live_index_entries=688, cache_bytes=4096, cache_probes=17161, next_free_id=689
+==== 600 + 3000 growth O2 no Sanitizer ====
+PASS guest VM wide tree 600 paths, maximum handle 688, capacity 1023, 7 dynamic growth events, scanned_rows=2720, reserved_tree_bits=17391, index_slots=1024, index_allocated_bytes=4096, index_probes=14385, inheritance, action memory, layout mismatch, atomic full refusal
+PASS guest VM wide tree 3000 paths, maximum handle 3429, capacity 4095, 9 dynamic growth events, scanned_rows=11603, reserved_tree_bits=77805, index_slots=8192, index_allocated_bytes=32768, index_probes=75944, inheritance, action memory, layout mismatch, atomic full refusal
+==== 3000 indexed/linear differential O2 no Sanitizer ====
+PASS 3000-path VM indexed/linear differential: nodes=3429, grows=9, indexed_rows=11603, linear_rows=22489628, packed_index_bytes=32768, hash_probes=75393

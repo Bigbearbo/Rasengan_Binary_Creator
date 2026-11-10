@@ -1,0 +1,13 @@
+round,question,mastered,correct,resource
+1,1,0,0,3600
+2,1,0,0,3200
+3,1,0,0,2800
+4,1,1,1,2600
+5,1,2,2,2600
+6,1,3,3,2800
+7,2,1,1,2800
+8,2,2,2,2800
+9,2,3,3,3000
+10,2,3,3,3200
+11,2,4,4,3600
+vm_calls=216 vm_steps=8689 peak_vm_steps=84 used_question_nodes=8 reserved_tree_bits=1116 reserved_payload_bits=1488

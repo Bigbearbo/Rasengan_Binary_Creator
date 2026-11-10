@@ -1,0 +1,6 @@
+# 2026-11-04 Linear-time generation snapshot validation
+U: scale-safe tree and safe restore; F: generation_structure_host_trial_20261104.zip; T: this execution; A: future VM integration.
+[更新] Replaced per-node ancestor walk (worst-case O(N^2)) with three-color parent graph traversal, O(N) time and O(N) auxiliary space. Added explicit forged snapshot rejection for duplicate parent/key edges and two-node cycles. Existing atomic-in-memory restore invariant retained.
+[取代] The previous prototype's cycle check was O(N^2) and duplicate/cycle guards lacked explicit adversarial tests.
+[原因] Deep valid chains cause quadratic validation; syntactically valid but structurally forged snapshots must be rejected before mutation.
+[狀態] PASS C++17 -O0 -g0 ASan/UBSan. Command: g++ -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_generation_persistence.cpp -o gen_linear_test && ASAN_OPTIONS=detect_leaks=0 ./gen_linear_test. Output: PASS durable host registry reload, stale refs, corrupt rollback, offspring isolation. Known preexisting warning in included test_tree_reject_mask.cpp (missing return). No official VM core changes; no crash-safe disk commit, checksum, guest handles, restore epoch, performance benchmark or HP cost.

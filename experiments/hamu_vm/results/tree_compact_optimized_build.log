@@ -1,0 +1,35 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_optimized_cost.cpp -o build/test_tree_compact_optimized_cost
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_optimized_cost
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=52,vm_steps=1774,peak_steps=84,choice_steps=1119,record_steps=655,read_steps=0,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS optimized same-question same-feedback replay
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_differential_cost.cpp -o build/test_tree_compact_differential_cost
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_differential_cost
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=67,vm_steps=2599,peak_steps=84,choice_steps=1119,record_steps=655,read_steps=825,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS same-question same-feedback same-revisit differential replay
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_reference.cpp -o build/test_tree_compact_reference
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_reference
+PASS guest chooses known or untried options and addresses payload, IDs 1..7 and 31; inheritance
+mkdir -p build
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_world.cpp -o build/test_tree_compact_world
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_world
+PASS compact four-agent world promotion, resource accounting, capacity refusal
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_error_trial.cpp -o build/test_tree_error_trial
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_error_trial
+PASS input-token search and feedback, recursion, inheritance and full-tree refusal
+mkdir -p build
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_world.cpp -o build/test_tree_compact_world
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_world
+PASS compact four-agent world promotion, resource accounting, capacity refusal
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_reference.cpp -o build/test_tree_compact_reference
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_reference
+PASS guest chooses known or untried options and addresses payload, IDs 1..7 and 31; inheritance
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_optimized_cost
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=52,vm_steps=1774,peak_steps=84,choice_steps=1119,record_steps=655,read_steps=0,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS optimized same-question same-feedback replay
+mkdir -p build
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_world.cpp -o build/test_tree_compact_world
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_world
+PASS compact four-agent world promotion, resource accounting, capacity refusal

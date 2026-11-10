@@ -1,0 +1,18 @@
+TEST test_tree_segmented_vm ASan/UBSan O0
+PASS segmented VM 600 paths, nodes=689, capacity=1024, growth_events=7, pages=34, native_row_bytes=4216, program_start=350, indexed_rebuild_rows=1015, indexed_lookups=3732, linear_rows=664616, inheritance and atomic rollback
+TEST test_tree_wide_index ASan/UBSan O0
+PASS: VM indexed/linear differential 600 paths, 7 grows, reused ID, guest edit, inheritance, rollback/retry
+indexed scanned_rows=3744, linear scanned_rows=789958, cache_builds=9, cache_lookups=3105, cache_updates=689, live_index_entries=688, cache_bytes=4096, cache_probes=17161, next_free_id=689
+TEST test_tree_wide_vm_growth ASan/UBSan O0
+PASS guest VM wide tree 600 paths, maximum handle 688, capacity 1023, 7 dynamic growth events, scanned_rows=2720, reserved_tree_bits=17391, index_slots=1024, index_allocated_bytes=4096, index_probes=14385, inheritance, action memory, layout mismatch, atomic full refusal
+TEST test_tree_vm ASan/UBSan O0
+PASS VM tree add/find, duplicate, full, missing parent, inheritance
+TEST test_vm ASan/UBSan O0
+PASS: decoding, READ, inheritance, I/O, COPY, branching, protection, budget; 6000 random guests
+TEST test_tree_compact_optimized_cost ASan/UBSan O0
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=52,vm_steps=1982,peak_steps=92,choice_steps=1239,record_steps=743,read_steps=0,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS optimized same-question same-feedback replay
+TEST test_segmented_tree_growth_ref ASan/UBSan O0
+PASS host-only segmented tree: 3000 distinct keys, 3429 nodes / 111 segments; first boundary on key 24; stable handles, memorization, inheritance copy, atomic refusal
+ALL 7 PASS

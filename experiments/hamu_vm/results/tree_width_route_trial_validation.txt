@@ -1,0 +1,17 @@
+2026-10-31 (Asia/Taipei)
+Source: hamu_vm_tree_width_validation_20261031.zip
+Compiler: g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer
+Runtime: ASAN_OPTIONS=detect_leaks=0
+
+PASS make tree-width-route-test
+PASS make tree-width-trial-test
+PASS make tree-width-scaffold-test
+PASS make tree-dynamic-scaffold-test
+
+make tree-feedback-cycle-test: started as a regression check but stopped
+partway through the 32-case matrix after the existing edge cases passed.
+Not counted as PASS for this run; none of its implementation files changed.
+No full VM random-guest regression was rerun for this branch.
+
+Scope: width-aware guest route, width-aware candidate output and grading.
+The pending/feedback/confirmation pipeline remains fixed n=3.

@@ -1,0 +1,8 @@
+# 2026-11-04 host snapshot structural validation
+U: scalable tree, safe rollback and inheritance. F: generation_persistence_host_trial_20261103. T: current compile and execution. A: further work.
+[更新] DurableRegistry::restore validates canonical rows before commit: unused rows zero, active parent exists, no self/cyclic parent chain, no duplicate parent/key edges. Existing parser still rejects malformed/truncated payload and preserves state.
+[取代] Previous restore accepted structurally inconsistent but syntactically valid snapshots. This host prototype now rejects selected inconsistencies, without claiming complete snapshot integrity.
+[原因] Derived edge indexes could silently disagree with corrupted canonical rows.
+[狀態] C++17 -O0 ASan/UBSan compiled and executed PASS; explicit dangling/self parent rejection and unchanged live snapshot tested. First compilation failed due to missing <unordered_set>, fixed. Existing test fixture emits inherited no-return warning. No VM core change.
+Reproduce: g++ -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_generation_persistence.cpp -o gen_structure_test && ASAN_OPTIONS=detect_leaks=0 ./gen_structure_test
+Limitations: does not yet test duplicate edges/cycles explicitly; no checksum, crash-atomic file writes, guest-facing handles, external timeline invalidation or resource cost. Full capacity scan and per-node ancestor walk are potentially O(N^2), unsuitable as final large-scale validator. Next test explicit duplicate edges/cycles and replace cycle checking with O(N) tri-color traversal; then restore epoch policy.

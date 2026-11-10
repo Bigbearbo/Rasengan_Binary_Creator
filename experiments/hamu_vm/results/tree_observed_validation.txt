@@ -1,0 +1,60 @@
+2026-10-31 (Asia/Taipei)
+Source: hamu_vm_tree_four_candidates_20261031.zip plus this turn's changes.
+
+Larger related batch written before the first compile: seven code/build/test
+files, 340 added lines and 4 removed versus source ZIP. No core VM/ISA changes.
+
+Changed code/build/test parts:
+ADD src/tree_observed_vm.hpp: capture, batch context/commit, prediction-based
+feedback, guarded confirmation and guest lookup exporting fragment indices.
+ADD src/tree_observed_learner.hpp: immutable host fragment table, inherited
+wrapper, private candidate observations, full learning turn, actual-fragment route.
+MOD src/tree_four_layout.hpp: observed-record format offsets 156/157.
+MOD src/tree_four_vm.hpp: optional observed choice guard and shared confirm body.
+MOD src/tree_width_pending_vm.hpp: observed-record initialization, publish last.
+ADD tests/test_tree_observed_learner.cpp: new integration and negative examples.
+MOD Makefile: sanitizer target and dependencies.
+Records: README.md, this validation file, tree_observed_test_output.txt,
+tree_observed_regression_output.txt, tree_observed_workflow.json.
+
+New test assertions:
+64 private-copy observations across two widths/eight inputs/four fragments.
+Catalogue is ZERO/XOR1/COPY/FLIP: XOR1 toggles only the final data bit, absent
+from previous fixed prediction formulas. All four fragment indices are learned
+and used in 40 routed parent/child answers, despite changed semantic order.
+Mutation of the catalogue source vector after construction does not alter it;
+child wrapper preserves the exact same fragment table and inherited tree.
+Six invalid cases: partial output, extra output, exhausted execution, work write,
+restricted explicit work read, explicit teacher read. Source learner memory and
+write coverage remain unchanged by observing any of these candidates.
+Invalid alternative predictions remain unknown and cannot eliminate hypotheses.
+Invalid selected fragment publishes no valid batch and does not alter masks.
+Batch data mismatch rejects stale observations before mask updates.
+A controlled singleton fixture tests interruption between final mask update and
+completion, then recovery/confirmation/binding. This fixture is distinct from
+the integration's genuine mask elimination by guest feedback.
+A corrupt leaf selecting a partial program returns no stale output or coverage.
+
+Execution contract and limits:
+Host provides four immutable controlled pure fragments, scheduling, private
+copies, output validation and teacher answers; guest records observations,
+checks their context, intersects masks, confirms, binds and selects a route.
+Fragment table is carried by host wrapper constructor, not guest program writes.
+Explicit READ accesses are checked with read_seen, writes with written; these
+checks are not a universal purity proof or adversarial program sandbox.
+Only input (excluding teacher bit), current width and own answer explicit reads
+are accepted. Other side effects are discarded with the private copy.
+Four observations per learning turn; their steps are returned but not charged
+to HP yet. Fixed first-survivor scheduling can retry an invalid selected fragment.
+Fixed n=3 category, one-way n=2->3 operator, 3-bit answers, two pending records,
+fixed tree capacity; no automatic conversion of older pending formats.
+No long-term evolution, autonomous virus discovery or efficiency advantage claim.
+
+This turn's execution results:
+make tree-observed-learner-test: PASS on first compile/run, 726.71 seconds total.
+ASan/UBSan, ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16.
+make -j2 tree-four-learning-test tree-width-learning-test: both PASS.
+Exact output: tree_observed_test_output.txt and tree_observed_regression_output.txt.
+No test-driven code correction, and no optional test repetition after these passes.
+Timing includes partial overlap with regressions, not a standalone benchmark.
+No full 6000-random-guest rerun; kernel/ISA was not changed.

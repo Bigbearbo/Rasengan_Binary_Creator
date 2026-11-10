@@ -1,0 +1,22 @@
+2026-10-31 / cross-width pending and candidate choice
+
+Source: hamu_vm_tree_width_route_trial_20261031.zip (Library)
+Changes: src/tree_width_pending_vm.hpp, src/tree_width_choice_vm.hpp,
+tests/test_tree_width_pending.cpp, Makefile, README.md, this record.
+
+Command: make tree-width-pending-test tree-width-scaffold-test tree-width-route-test tree-width-trial-test
+Compiler: g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer
+Runtime: ASAN_OPTIONS=detect_leaks=0
+Result: all four targets PASS.
+
+New test: separate n=2 and n=3 pending slots with identical category and
+numeric operator key; reject duplicate capture of the same path; choose
+the matching width and surviving COPY/FLIP hypothesis; reject an unrelated
+operator; verify inherited slot identities. The test harness directly
+eliminates a COPY mask to isolate guest selection; this is not evidence of
+cross-width feedback learning.
+
+Limits: the caller must first validate/scaffold the question. The existing
+grade snapshot, context guard, feedback cycle and confirmation still assume
+fixed n=3 input offsets and must not be used with these slots yet. No full
+feedback matrix or 6,000-random-guest regression was rerun in this round.

@@ -1,0 +1,24 @@
+mkdir -p build
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_world.cpp -o build/test_tree_compact_world
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_world
+PASS compact four-agent world promotion, resource accounting, capacity refusal
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_reference
+PASS guest chooses known or untried options and addresses payload, IDs 1..7 and 31; inheritance
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_error_trial.cpp -o build/test_tree_error_trial
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_error_trial
+PASS input-token search and feedback, recursion, inheritance and full-tree refusal
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_error_world
+PASS majority gate and full-tree refusal without repeated paid attempts
+round,question,mastered,correct,resource
+1,1,0,0,3600
+2,1,0,0,3200
+3,1,0,0,2800
+4,1,1,1,2600
+5,1,2,2,2600
+6,1,3,3,2800
+7,2,1,1,2800
+8,2,2,2,2800
+9,2,3,3,3000
+10,2,3,3,3200
+11,2,4,4,3600
+vm_calls=260 vm_steps=32189 peak_vm_steps=598 used_question_nodes=8 reserved_tree_bits=1116 reserved_payload_bits=1488
