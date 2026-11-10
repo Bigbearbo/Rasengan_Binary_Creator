@@ -1,6 +1,13 @@
 # Codex × ChatGPT 倉鼠世界研究交接
 日期：2026-11-10（Asia/Taipei）
 
+## Codex 第二輪：代理分工與停止原因
+
+本輪分支：`codex/hamu-stop-reasons-20261110`，基準 `7196afcce8476a1546d01266ce6b4757f8f00e10`。
+採三個子代理分工：核心停止原因實作、參考交易／反例測試、獨立只讀審查；主代理整合、重跑回歸與記錄證據。
+本輪重新審議 D-006，並以 D-007 明確保留既有窗口與解碼相容性；結果及限制見 `results/vm_stop_reasons_20261110.md`。
+原 GPT 仍以非同步方式審查 GitHub 文件，不假設它與子代理或這個聊天共享記憶。
+
 ## Codex 第一輪接手成果
 
 實作分支：`codex/hamu-guest-contract-20261110`。

@@ -224,6 +224,15 @@ enum class SpiralOp {
     INVALID
 };
 
+// Diagnostics for one interpreter invocation. These do not change the legacy
+// stop flag: WindowEnd still returns with stop=false so callers may run again.
+// Malformed tokens retain the historical skip behavior rather than becoming a
+// new failure category; this is not a strict bytecode validation result.
+enum class VmStopReason {
+    None, AlreadyStopped, WindowEnd, OutArea, SetAreaStop,
+    InvalidWindow, InvalidJumpTarget, BudgetExhausted, WorkCapacity, TreeCapacity
+};
+
 
 // generate simple problem
 enum class OpType { COPY, AND, OR, XOR };
@@ -636,6 +645,7 @@ struct Hamster {
         ++tree_index_rebuilds;
     }
     int step_limit = 32;
+    VmStopReason stop_reason = VmStopReason::None;
     bool budget_exhausted = false;
     bool work_insert_blocked = false;
     bool tree_capacity_blocked = false; // wide-mode path transaction failed
@@ -790,6 +800,7 @@ struct Hamster {
         budget_exhausted = false;
         work_insert_blocked = false;
         tree_capacity_blocked = false;
+        stop_reason = VmStopReason::None;
 
         // 將題目 token bits 寫入 input 區
         for (const auto& token : p.question) {
@@ -836,6 +847,7 @@ struct Hamster {
         pro_2 = params.layout.total_size - 1;
         pro_1 = params.layout.program_start;
         stop = false;
+        stop_reason = VmStopReason::None;
 
     }
 
@@ -1053,9 +1065,21 @@ std::ostream& operator<<(std::ostream& os, const SpiralToken& token) {
 
 void simulate_spiral_program(Hamster& h) {
     const int width = h.params.op_order + h.params.op_lvl;
-    if (h.stop) return;
+    if (h.stop) {
+        // A repeated call must not erase the cause of a prior stop.
+        if (h.stop_reason == VmStopReason::None || h.stop_reason == VmStopReason::WindowEnd)
+            h.stop_reason = VmStopReason::AlreadyStopped;
+        return;
+    }
+    h.stop_reason = VmStopReason::None;
+    auto halt = [&](VmStopReason reason) {
+        h.stop_reason = reason;
+        h.stop = true;
+    };
     if (h.pro_1 < h.params.layout.program_start || h.pro_2 < h.pro_1 ||
-        h.pro_2 >= static_cast<int>(h.memory.size())) { h.stop = true; return; }
+        h.pro_2 >= static_cast<int>(h.memory.size())) {
+        halt(VmStopReason::InvalidWindow); return;
+    }
     // One question is a transaction for writable memory when strict INSERT
     // runs out of work space. Preserve the blocked flag and read trace.
     const int writable_start=h.params.layout.output_start;
@@ -1099,7 +1123,7 @@ void simulate_spiral_program(Hamster& h) {
     int first = h.pro_1;
     int end = h.pro_2;
     int count = window_count(first,end);
-    if(count<0){h.stop=true;return;}
+    if(count<0){halt(VmStopReason::InvalidWindow);return;}
     int jump_mode = 0; // 0=after this window, 1=immediate
     bool pending = false;
     auto token = [&](int i, int& value) {
@@ -1127,26 +1151,28 @@ void simulate_spiral_program(Hamster& h) {
     };
     for (int i = 0;;) {
         if (i >= count) {
-            if (!pending) return;
+            if (!pending) { h.stop_reason = VmStopReason::WindowEnd; return; }
             first = h.pro_1;
             end = h.pro_2;
             if (first < h.params.layout.program_start || first > end ||
-                end >= static_cast<int>(h.memory.size())) { h.stop = true; return; }
+                end >= static_cast<int>(h.memory.size())) {
+                halt(VmStopReason::InvalidWindow); return;
+            }
             count = window_count(first,end);
-            if(count<0){h.stop=true;return;}
+            if(count<0){halt(VmStopReason::InvalidWindow);return;}
             pending = false;
             i = 0;
             continue;
         }
         if (h.executed_steps >= h.step_limit) {
-            h.budget_exhausted = true; h.stop = true; return;
+            h.budget_exhausted = true; halt(VmStopReason::BudgetExhausted); return;
         }
         ++h.executed_steps;
         int code = 0, param = 0;
         const int op_ordinal=ordinal_at(first,false)+i;
         if (!token(i, code) || code > 31 || (code >= 16 && order_at(op_ordinal) < 5)) { ++i; continue; }
         const auto op = static_cast<SpiralOp>(code);
-        if (op == SpiralOp::OUT_AREA) { h.stop = true; return; }
+        if (op == SpiralOp::OUT_AREA) { halt(VmStopReason::OutArea); return; }
         if (!token(i + 1, param)) { ++i; continue; }
         const int param_order=order_at(op_ordinal+1);
         const int sign = 1 << (param_order - 1);
@@ -1284,7 +1310,7 @@ void simulate_spiral_program(Hamster& h) {
                 int found=parent_exists?h.segment_find(parent,key):0;
                 if(!found&&parent_exists&&(op==SpiralOp::TREE_ADD||op==SpiralOp::TREE_ADD_REG)){
                     if(h.segment_first_free_id>cap){
-                        h.tree_capacity_blocked=true;h.stop=true;
+                        h.tree_capacity_blocked=true;halt(VmStopReason::TreeCapacity);
                         // Atomic guest transaction: roll back only rows touched
                         // by tree opcodes, without copying the entire tree.
                         for(auto it=segment_action_undo.rbegin();it!=segment_action_undo.rend();++it)
@@ -1398,7 +1424,7 @@ void simulate_spiral_program(Hamster& h) {
                (op==SpiralOp::TREE_ADD||op==SpiralOp::TREE_ADD_REG)&&
                bits>5 && !free_id) {
                 h.tree_capacity_blocked=true;
-                h.stop=true;
+                halt(VmStopReason::TreeCapacity);
                 h.invalidate_tree_index(); // the whole guest transaction rolls back
                 std::copy(memory_before.begin(),memory_before.end(),
                           h.memory.begin()+writable_start);
@@ -1436,7 +1462,7 @@ void simulate_spiral_program(Hamster& h) {
                                     h.params.layout.work_start + 10 * width); break;
             case 5: h.ptr = h.pro_1; break;
             case 6: h.ptr = h.pro_2; break;
-            case 7: h.stop = true; break;
+            case 7: halt(VmStopReason::SetAreaStop); break;
             }
             break;
         case SpiralOp::MOVE_PTR:
@@ -1467,7 +1493,9 @@ void simulate_spiral_program(Hamster& h) {
                                ordinal_at(h.pro_1,false)+delta);
              const int address=start_at(target);
              if(target<0||address<h.params.layout.program_start||order_at(target)<4||
-                address+order_at(target)+h.params.op_lvl>static_cast<int>(h.memory.size())){h.stop=true;break;}
+                address+order_at(target)+h.params.op_lvl>static_cast<int>(h.memory.size())){
+                 halt(VmStopReason::InvalidJumpTarget);break;
+             }
              h.pro_1=address;}
             // Targets are word-aligned because the displacement is in words.
             if (h.pro_1 != first) {
@@ -1479,7 +1507,9 @@ void simulate_spiral_program(Hamster& h) {
             {const int target=ordinal_at(h.pro_2,true)+delta;
              const int address=start_at(target),n=order_at(target);
              if(target<0||address<h.params.layout.program_start||n<4||n>16||
-                address+n+h.params.op_lvl>static_cast<int>(h.memory.size())){h.stop=true;break;}
+                address+n+h.params.op_lvl>static_cast<int>(h.memory.size())){
+                 halt(VmStopReason::InvalidJumpTarget);break;
+             }
              h.pro_2=address+n+h.params.op_lvl-1;}
             break;
         case SpiralOp::READ:
@@ -1523,7 +1553,7 @@ void simulate_spiral_program(Hamster& h) {
             if (h.params.strict_work_insert && op == SpiralOp::INSERT &&
                 std::any_of(outgoing.begin(),outgoing.end(),[](bool bit){return bit;})) {
                 h.work_insert_blocked = true;
-                h.stop = true;
+                halt(VmStopReason::WorkCapacity);
                 h.invalidate_tree_index();
                 std::copy(memory_before.begin(),memory_before.end(),
                           h.memory.begin()+writable_start);
@@ -1548,9 +1578,11 @@ void simulate_spiral_program(Hamster& h) {
             first = h.pro_1;
             end = h.pro_2;
             if (first < h.params.layout.program_start || first > end ||
-                end >= static_cast<int>(h.memory.size())) { h.stop = true; return; }
+                end >= static_cast<int>(h.memory.size())) {
+                halt(VmStopReason::InvalidWindow); return;
+            }
             count = window_count(first,end);
-            if(count<0){h.stop=true;return;}
+            if(count<0){halt(VmStopReason::InvalidWindow);return;}
             pending = false;
             i = 0;
             continue;

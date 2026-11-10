@@ -10,7 +10,8 @@
 | D-003 | 嘗試的實際步數在交易外結算一次 HP，失敗不免單 | 回滾 HP 成本，或只收固定費用 | 沿用 executed_steps / unit_cost_per 的成本尺度；不含原有 status_ref 的基本費、答題獎懲與樹原生查找成本；需生態對照實驗再決定最終成本模型 |
 | D-004 | 保留全狀態拷貝作為參考，行為站穩後再比較差分實作 | 直接寫差分日誌 | 簡化正確性對照；大型狀態效能需求出現時重議，不能宣稱本版已高效 |
 | D-005 | guest revision 追蹤 memory、val_reg、HP 的交易內改變、各游標、程式窗口、canonical tree、generation、lineage；診斷／衍生快取不單獨增版 | 任一欄位都增版，或僅樹變更增版 | ptr-only 已證明是舊版遺漏；stop、written、read_seen、steps、查找計數視為診斷。交易外 HP 扣款不增 guest revision，因此此版本號不能當整個生物狀態的並行更新鎖 |
-| D-006 | 先保留 legacy 的停止語義；以 KNOWN_GAP 明列無效跳躍也只設 stop 的缺口 | 用 stop=true 一律判失敗，或此輪改核心 | 一律判失敗會連正常停止也撤銷；下一輪正式整合前應加入明確停止原因，再決定哪些狀況回滾 |
+| D-006 | 第二輪新增 typed stop reason，參考交易只接受明確正常結束；無效跳躍／採用無效窗口回滾 | 用 stop=true 一律判失敗，或繼續接受任何核心返回 | 第一輪僅標 KNOWN_GAP；第二輪據此修正判斷。正常 OUT_AREA、SET_AREA(7)、WindowEnd 保留提交資格，不改 legacy stop bool 行為 |
+| D-007 | 保留 legacy 的壞 token 略過、半 token 尾端與延後採用窗口語義 | 在核心全面採嚴格解碼／對齊或立即驗證所有窗口改變 | 本輪只增加原因分類，避免意外改 ABI；Reference 仍可事前嚴格驗證。若要嚴格解碼，應另立規格並建立相容性對照 |
 
 ## D-005 的範圍細節
 
@@ -26,3 +27,11 @@
 參考 Trial 自己結算一次成本。呼叫後不能再對同次嘗試呼叫 use_hp()，否則重複收費。
 目前未接正式生態迴圈；正式整合時須移除相同路徑上既有的重複結算，並維持活體檢查與死亡規則。
 測試中的 HOST 例外注入可撤銷交易內直接扣 HP；其後仍扣本次已實際執行的成本。這與舊版「所有 HP 都回滾」的原型有意不同。
+
+## D-006／D-007 的第二輪解釋
+
+- 正常窗口結束維持 `stop=false`，但記錄 `WindowEnd`；明確停止仍維持 `stop=true`。
+- 停止原因是本次核心實際採用窗口的執行結果。SET_PTR2 修改的是待採用窗口，尚未採用時不把它當成當前窗口失敗；pending／immediate 切換真正採用無效窗口時記錄 `InvalidWindow`。
+- `write_prob` 清空原因；活躍執行重新記錄原因。已停止的短路呼叫不抹除既有終止證據，若只留下 None／WindowEnd，則記為 AlreadyStopped。
+- 原始核心的停止原因分類不等於強制交易。直接呼叫 simulate_spiral_program 仍可能留下前綴；本輪以參考邊界將錯誤原因轉為回滾。
+- 壞 token 的略過仍可導致正常 WindowEnd；Completed 不代表通過嚴格解碼，亦不代表答案正確。

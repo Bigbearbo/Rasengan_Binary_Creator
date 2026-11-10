@@ -1,5 +1,20 @@
 # Hamster World / Spiral Language VM (research snapshot)
 
+## Subsequent research changes
+
+The original import described below is preserved as provenance. Later work is
+tracked in [DECISIONS.md](DECISIONS.md), [GUEST_TRIAL_CONTRACT.md](GUEST_TRIAL_CONTRACT.md),
+and dated reports under `results/`.
+
+The second iteration adds typed VM stop diagnostics and uses them in the
+host-only trial reference to reject invalid jumps/windows. It does not make
+transactions mandatory for callers of the raw interpreter. Legacy skip and
+deferred-window semantics remain explicit compatibility choices (D-007).
+
+Run the related regression set with `bash scripts/verify_guest_trial_contract.sh`.
+
+## Original import
+
 This directory is a text-file checkout of the ChatGPT Library archive
 `/倉鼠世界/程式版本/hamu_vm_tree_guest_full_state_transaction_20261110.zip`,
 archived 2026-11-10 (Asia/Taipei). The archive contains 395 UTF-8 files;

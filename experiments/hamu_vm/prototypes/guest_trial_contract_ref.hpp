@@ -12,7 +12,8 @@
 // Not a production entry point, durable transaction, or external-I/O rollback.
 namespace guest_trial_ref {
 enum class Outcome { Completed, InvalidInput, BudgetExhausted, WorkCapacity,
-                     TreeCapacity, Exception, RevisionOverflow };
+                     TreeCapacity, Exception, RevisionOverflow,
+                     InvalidJumpTarget, InvalidTermination };
 struct Result {
     Outcome outcome = Outcome::InvalidInput;
     bool committed = false;
@@ -20,6 +21,7 @@ struct Result {
     int attempted_steps = 0;
     float charged_hp = 0;
     bool observed_stop = false;
+    VmStopReason stop_reason = VmStopReason::None;
     std::vector<bool> read_trace;
     std::string error;
 };
@@ -66,13 +68,19 @@ template<class Host, class Registry> class Trial {
             simulate_spiral_program(h);
             result.attempted_steps = std::max(0, h.executed_steps);
             result.observed_stop = h.stop;
+            result.stop_reason = h.stop_reason;
             result.read_trace = h.read_seen;
             // Capture cost before the optional HOST-ONLY fault injection hook.
             if (after_guest) after_guest();
-            if (h.budget_exhausted) result.outcome = Outcome::BudgetExhausted;
-            else if (h.work_insert_blocked) result.outcome = Outcome::WorkCapacity;
-            else if (h.tree_capacity_blocked) result.outcome = Outcome::TreeCapacity;
-            else {
+            switch (result.stop_reason) {
+            case VmStopReason::BudgetExhausted: result.outcome = Outcome::BudgetExhausted; break;
+            case VmStopReason::WorkCapacity: result.outcome = Outcome::WorkCapacity; break;
+            case VmStopReason::TreeCapacity: result.outcome = Outcome::TreeCapacity; break;
+            case VmStopReason::InvalidWindow: result.outcome = Outcome::InvalidInput; break;
+            case VmStopReason::InvalidJumpTarget: result.outcome = Outcome::InvalidJumpTarget; break;
+            case VmStopReason::WindowEnd:
+            case VmStopReason::OutArea:
+            case VmStopReason::SetAreaStop: {
                 result.versioned_change = guest_changed(h, saved) ||
                     registry.generation != generations || registry.lineage != lineage;
                 if (result.versioned_change && revision == std::numeric_limits<uint64_t>::max())
@@ -82,16 +90,25 @@ template<class Host, class Registry> class Trial {
                     result.outcome = Outcome::Completed;
                     result.committed = true;
                 }
+                break;
+            }
+            default:
+                // An unclassified exit must not silently commit a guest prefix.
+                result.outcome = Outcome::InvalidTermination;
+                break;
             }
         } catch (const std::exception& e) {
             result.attempted_steps = std::max(result.attempted_steps, std::max(0, h.executed_steps));
             result.observed_stop = h.stop;
+            result.stop_reason = h.stop_reason;
             result.read_trace = h.read_seen;
             result.outcome = Outcome::Exception;
             result.error = e.what();
         } catch (...) {
             result.attempted_steps = std::max(result.attempted_steps, std::max(0, h.executed_steps));
             result.outcome = Outcome::Exception;
+            result.observed_stop = h.stop;
+            result.stop_reason = h.stop_reason;
             result.error = "non-standard exception";
         }
         if (!result.committed) rollback();

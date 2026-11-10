@@ -86,6 +86,7 @@ static void rejected_attempts() {
                 h.budget_exhausted==before.budget_exhausted &&
                 h.work_insert_blocked==before.work_insert_blocked &&
                 h.tree_capacity_blocked==before.tree_capacity_blocked &&
+                h.stop_reason==before.stop_reason &&
                 d.snapshot()==bytes && rev==before_rev,"rejected guest leaked state");
         cost_is(h,before.hp,result);
         if(kind==0) {const float hp=h.hp; const auto retry=trial.run(); cost_is(h,hp,retry);
@@ -153,19 +154,67 @@ static void read_trace_outlives_rollback() {
             "read trace or registers leaked into rejected state");
     std::cout<<"PASS attempted read trace survives in result, not rolled-back guest state\n";
 }
-static void legacy_stop_reason_gap() {
+static void invalid_jump_rolls_back() {
     Hamster h(9050,contract_config()); DurableRegistry d(h,9050); uint64_t rev=0;
     ReferenceTrial trial(h,d,rev);
     prepare(h,{28,1,20,15,15,0}); set_id_candidate(h,0,0);
+    const auto before=h; const auto bytes=d.snapshot();
     const auto result=trial.run(); // JUMP_LOCAL(-15) stops on invalid target
-    require(result.committed && result.outcome==Outcome::Completed &&
-            h.stop && (h.segment_row(1)&1u),"legacy stop reason behavior changed");
-    std::cout<<"KNOWN_GAP reference: invalid jump target is indistinguishable from explicit stop; prefix commits\n";
+    require(!result.committed && result.outcome==Outcome::InvalidJumpTarget &&
+            result.stop_reason==VmStopReason::InvalidJumpTarget && result.observed_stop,
+            "invalid jump target was accepted or lost reason");
+    require(d.snapshot()==bytes && h.memory==before.memory &&
+            h.val_reg==before.val_reg && h.stop==before.stop &&
+            h.stop_reason==before.stop_reason && rev==0,"invalid jump leaked prefix state");
+    require(result.attempted_steps==2,"invalid jump cost does not include attempted jump");
+    cost_is(h,before.hp,result);
+    const float retry_hp=h.hp;
+    const auto retry=trial.run();
+    require(!retry.committed && retry.stop_reason==VmStopReason::InvalidJumpTarget &&
+            d.snapshot()==bytes && rev==0,"invalid jump retry leaked prefix");
+    cost_is(h,retry_hp,retry);
+    std::cout<<"PASS invalid jump rolls back guest prefix; reason survives rollback and retry costs HP\n";
+}
+static void normal_stop_reasons_commit() {
+    const std::initializer_list<int> programs[]={{28,1,15,0},{28,1,0,7},{28,1}};
+    const VmStopReason expected[]={VmStopReason::OutArea,VmStopReason::SetAreaStop,VmStopReason::WindowEnd};
+    for(int i=0;i<3;++i) {
+        Hamster h(9060+i,contract_config());DurableRegistry d(h,9060+i);uint64_t rev=0;
+        ReferenceTrial trial(h,d,rev);
+        prepare(h,programs[i]);set_id_candidate(h,0,0);const float hp=h.hp;
+        const auto result=trial.run();
+        require(result.committed && result.outcome==Outcome::Completed &&
+                result.stop_reason==expected[i] && h.stop_reason==expected[i],"normal reason not committed");
+        require((h.segment_row(1)&1u) && rev==1,"normal stop lost tree prefix");
+        require(result.observed_stop==(i!=2),"legacy stop bool compatibility changed");
+        cost_is(h,hp,result);
+    }
+    std::cout<<"PASS OUT_AREA, SET_AREA(7), window end commit with distinct normal reasons\n";
+}
+static void switched_invalid_windows_roll_back() {
+    const std::initializer_list<int> programs[]={
+        {0,2,2,1,12,22,13,5,2,1}, // output prefix, then deferred window start>end
+        {0,2,2,1,16,1,13,3,12,26,2,1} // prefix, then immediate window start>end
+    };
+    for(int i=0;i<2;++i) {
+        Hamster h(9070+i,contract_config());DurableRegistry d(h,9070+i);uint64_t rev=0;
+        ReferenceTrial trial(h,d,rev);
+        prepare(h,programs[i]);const auto before=h;
+        const auto result=trial.run();
+        require(!result.committed && result.outcome==Outcome::InvalidInput &&
+                result.stop_reason==VmStopReason::InvalidWindow,"invalid switched window accepted");
+        require(h.memory==before.memory && h.ptr==before.ptr && h.pro_1==before.pro_1 &&
+                h.pro_2==before.pro_2 && h.stop_reason==before.stop_reason && rev==0,
+                "invalid switched window leaked output or cursor");
+        cost_is(h,before.hp,result);
+    }
+    std::cout<<"PASS invalid deferred/immediate window switch rolls back prior output and cursors\n";
 }
 int main() {
     legacy_gaps(); successful_guest(); rejected_attempts();
     wrong_answer_is_not_execution_failure(); exception_and_invalid_input();
-    read_trace_outlives_rollback(); legacy_stop_reason_gap();
+    read_trace_outlives_rollback(); invalid_jump_rolls_back();normal_stop_reasons_commit();
+    switched_invalid_windows_roll_back();
     std::cout<<"SCOPE host-only reference; no production routing, disk atomicity or autonomous learning\n";
     return 0;
 }

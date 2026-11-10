@@ -703,3 +703,9 @@ build/test_guest_trial_contract: tests/test_guest_trial_contract.cpp tests/test_
 guest-trial-contract-test: build/test_guest_trial_contract
 	ASAN_OPTIONS=detect_leaks=0 ./build/test_guest_trial_contract
 .PHONY: guest-trial-contract-test
+
+build/test_vm_stop_reason: tests/test_vm_stop_reason.cpp src/hamu_vm_core.hpp | build
+	$(CXX) -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_vm_stop_reason.cpp -o $@
+vm-stop-reason-test: build/test_vm_stop_reason
+	ASAN_OPTIONS=detect_leaks=0 ./build/test_vm_stop_reason
+.PHONY: vm-stop-reason-test
