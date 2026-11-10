@@ -1,0 +1,4 @@
+ChatGPT GitHub connector write verification
+Date: 2026-11-10 (Asia/Taipei)
+Branch: chatgpt-write-check-20261110
+Purpose: Verify GitHub write and read-back, without modifying main.
