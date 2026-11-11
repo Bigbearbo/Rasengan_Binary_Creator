@@ -1,0 +1,140 @@
+{
+  "schema": "spiral_dialogue_v02",
+  "active_version": 3,
+  "profiles": {
+    "0": {
+      "arg_n": 3,
+      "k": 1,
+      "op_n": 3,
+      "parent": null,
+      "result_n": 4
+    },
+    "1": {
+      "arg_n": 4,
+      "k": 1,
+      "op_n": 4,
+      "parent": 0,
+      "result_n": 5
+    },
+    "2": {
+      "arg_n": 5,
+      "k": 2,
+      "op_n": 5,
+      "parent": 1,
+      "result_n": 6
+    },
+    "3": {
+      "arg_n": 5,
+      "k": 2,
+      "op_n": 6,
+      "parent": 2,
+      "result_n": 6
+    }
+  },
+  "tree": {
+    "math": {
+      "operators": {
+        "1": {
+          "encodings": {
+            "0": "0010",
+            "1": "00010",
+            "2": "0000100",
+            "3": "00000100"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": null,
+          "seen": 4,
+          "status": "unknown"
+        },
+        "17": {
+          "encodings": {
+            "2": "1000100",
+            "3": "01000100"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": null,
+          "seen": 2,
+          "status": "unknown"
+        },
+        "5": {
+          "encodings": {
+            "0": "1010",
+            "1": "01010",
+            "2": "0010100",
+            "3": "00010100"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": null,
+          "seen": 4,
+          "status": "unknown"
+        },
+        "6": {
+          "encodings": {
+            "0": "1100",
+            "1": "01100",
+            "2": "0011000",
+            "3": "00011000"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": null,
+          "seen": 3,
+          "status": "unknown"
+        },
+        "9": {
+          "encodings": {
+            "1": "10010",
+            "2": "0100100",
+            "3": "00100100"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": null,
+          "seen": 3,
+          "status": "unknown"
+        },
+        "31": {
+          "encodings": {
+            "2": "1111100",
+            "3": "01111100"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": "xor",
+          "seen": 0,
+          "status": "confirmed"
+        },
+        "32": {
+          "encodings": {
+            "3": "10000000"
+          },
+          "examples": [],
+          "hypotheses": [],
+          "meaning": "and",
+          "seen": 0,
+          "status": "confirmed"
+        }
+      },
+      "operator_branch": {
+        "highwater": 32
+      }
+    }
+  },
+  "question_bank": {
+    "schema": "sle_bank_v03",
+    "role": "student",
+    "observations": [],
+    "by_operator": {},
+    "feedback": [],
+    "wire_received": 0
+  },
+  "sync_cursors": {
+    "teacher": {
+      "revision": 3,
+      "last_digest": "a43e00c088cf72ea13548cdcbca2996546ba86856856f6c07f44713675fefae6"
+    }
+  }
+}

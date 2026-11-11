@@ -1,0 +1,497 @@
+{
+  "schema": "spiral_dialogue_v02",
+  "active_version": 2,
+  "profiles": {
+    "0": {
+      "parent": null,
+      "op_n": 3,
+      "arg_n": 3,
+      "result_n": 4,
+      "k": 1
+    },
+    "1": {
+      "parent": 0,
+      "op_n": 4,
+      "arg_n": 4,
+      "result_n": 5,
+      "k": 1
+    },
+    "2": {
+      "parent": 1,
+      "op_n": 5,
+      "arg_n": 5,
+      "result_n": 6,
+      "k": 2
+    }
+  },
+  "tree": {
+    "math": {
+      "operators": {
+        "1": {
+          "status": "hypothesis",
+          "meaning": "left",
+          "seen": 8,
+          "examples": [
+            {
+              "a": 1,
+              "b": 2,
+              "result": 1,
+              "via_version": 0
+            },
+            {
+              "a": 3,
+              "b": 1,
+              "result": 3,
+              "via_version": 0
+            }
+          ],
+          "hypotheses": [
+            "left"
+          ],
+          "encodings": {
+            "0": "0010",
+            "1": "00010",
+            "2": "0000100"
+          }
+        },
+        "5": {
+          "status": "hypothesis",
+          "meaning": "add",
+          "seen": 9,
+          "examples": [
+            {
+              "a": 1,
+              "b": 2,
+              "result": 3,
+              "via_version": 0
+            },
+            {
+              "a": 2,
+              "b": 3,
+              "result": 5,
+              "via_version": 0
+            },
+            {
+              "a": 2,
+              "b": 2,
+              "result": 4,
+              "via_version": 0
+            }
+          ],
+          "hypotheses": [
+            "add"
+          ],
+          "encodings": {
+            "0": "1010",
+            "1": "01010",
+            "2": "0010100"
+          }
+        },
+        "6": {
+          "status": "hypothesis",
+          "meaning": "xor",
+          "seen": 5,
+          "examples": [
+            {
+              "a": 5,
+              "b": 3,
+              "result": 6,
+              "via_version": 0
+            }
+          ],
+          "hypotheses": [
+            "xor"
+          ],
+          "encodings": {
+            "0": "1100",
+            "1": "01100",
+            "2": "0011000"
+          }
+        },
+        "9": {
+          "status": "hypothesis",
+          "meaning": "and",
+          "seen": 5,
+          "examples": [
+            {
+              "a": 6,
+              "b": 3,
+              "result": 2,
+              "via_version": 1
+            }
+          ],
+          "hypotheses": [
+            "and"
+          ],
+          "encodings": {
+            "1": "10010",
+            "2": "0100100"
+          }
+        },
+        "17": {
+          "status": "hypothesis",
+          "meaning": "or",
+          "seen": 4,
+          "examples": [
+            {
+              "a": 5,
+              "b": 3,
+              "result": 7,
+              "via_version": 2
+            }
+          ],
+          "hypotheses": [
+            "or"
+          ],
+          "encodings": {
+            "2": "1000100"
+          }
+        }
+      }
+    }
+  },
+  "question_bank": {
+    "schema": "sle_bank_v03",
+    "role": "student",
+    "observations": [
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 1,
+        "a": 1,
+        "b": 1,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 1,
+        "a": 1,
+        "b": 2,
+        "result": 1
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 1,
+        "a": 1,
+        "b": 1,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 1,
+        "a": 3,
+        "b": 1,
+        "result": 3
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 1,
+        "a": 1,
+        "b": 1,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 1,
+        "a": 1,
+        "b": 3,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 2,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 5,
+        "a": 1,
+        "b": 2,
+        "result": 3
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 2,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 3,
+        "result": 5
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 2,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 2,
+        "result": 4
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 2,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 4,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 1,
+        "a": 2,
+        "b": 1,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 6,
+        "a": 3,
+        "b": 3,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 0,
+        "operator": 6,
+        "a": 5,
+        "b": 3,
+        "result": 6
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 6,
+        "a": 3,
+        "b": 3,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 6,
+        "a": 3,
+        "b": 4,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 0,
+        "operator": 5,
+        "a": 2,
+        "b": 5,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 1,
+        "operator": 9,
+        "a": 3,
+        "b": 3,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 1,
+        "operator": 9,
+        "a": 6,
+        "b": 3,
+        "result": 2
+      },
+      {
+        "kind": "query",
+        "version": 1,
+        "operator": 9,
+        "a": 3,
+        "b": 3,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 1,
+        "operator": 9,
+        "a": 3,
+        "b": 4,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 1,
+        "operator": 6,
+        "a": 3,
+        "b": 5,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 2,
+        "operator": 17,
+        "a": 7,
+        "b": 7,
+        "result": null
+      },
+      {
+        "kind": "example",
+        "version": 2,
+        "operator": 17,
+        "a": 5,
+        "b": 3,
+        "result": 7
+      },
+      {
+        "kind": "query",
+        "version": 2,
+        "operator": 17,
+        "a": 7,
+        "b": 7,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 2,
+        "operator": 17,
+        "a": 7,
+        "b": 8,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 2,
+        "operator": 9,
+        "a": 3,
+        "b": 5,
+        "result": null
+      },
+      {
+        "kind": "query",
+        "version": 2,
+        "operator": 1,
+        "a": 2,
+        "b": 2,
+        "result": null
+      }
+    ],
+    "by_operator": {
+      "1": {
+        "examples": 2,
+        "queries": 6,
+        "replies": 0
+      },
+      "5": {
+        "examples": 3,
+        "queries": 6,
+        "replies": 0
+      },
+      "6": {
+        "examples": 1,
+        "queries": 4,
+        "replies": 0
+      },
+      "9": {
+        "examples": 1,
+        "queries": 4,
+        "replies": 0
+      },
+      "17": {
+        "examples": 1,
+        "queries": 3,
+        "replies": 0
+      }
+    },
+    "feedback": [
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 0
+      },
+      {
+        "status": 0,
+        "version": 1
+      },
+      {
+        "status": 0,
+        "version": 1
+      },
+      {
+        "status": 0,
+        "version": 1
+      },
+      {
+        "status": 0,
+        "version": 2
+      },
+      {
+        "status": 0,
+        "version": 2
+      },
+      {
+        "status": 0,
+        "version": 2
+      },
+      {
+        "status": 0,
+        "version": 2
+      }
+    ],
+    "wire_received": 31
+  }
+}

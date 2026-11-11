@@ -1,0 +1,46 @@
+{
+  "summary": "branch metadata stored on syntax tree; no external operator_registry",
+  "stages": [
+    {
+      "kind": "snapshot",
+      "packet": 25,
+      "chunks": 6,
+      "changed_nodes": 5,
+      "branch_on_wire": {
+        "highwater": 17
+      },
+      "receiver_branch": {
+        "highwater": 17
+      }
+    },
+    {
+      "kind": "delta",
+      "packet": 26,
+      "chunks": 2,
+      "changed_nodes": 1,
+      "branch_on_wire": {
+        "highwater": 31
+      },
+      "receiver_branch": {
+        "highwater": 31
+      }
+    },
+    {
+      "kind": "delta",
+      "packet": 27,
+      "chunks": 2,
+      "changed_nodes": 1,
+      "branch_on_wire": {
+        "highwater": 32
+      },
+      "receiver_branch": {
+        "highwater": 32
+      }
+    }
+  ],
+  "active_version": 3,
+  "highwater": 32,
+  "latest_operator5": "00010100",
+  "old_v2_operator5": "0010100",
+  "question_bank_preserved": true
+}
