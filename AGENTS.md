@@ -16,3 +16,10 @@ Research and implementation expectations:
 - Report actual commands, tests executed, results, changes and remaining limitations. Never claim tests ran unless they were executed.
 
 This file is navigational guidance; it does not supersede repository code or a task's explicit requirements.
+
+For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_language_research_index.md](docs/spiral_language_research_index.md) first. It links:
+- `experiments/spiral_parser/`: runnable v0.1–v0.6 scripted twin-agent parser and test suite;
+- `experiments/spiral_teaching/`: teaching packet generators, two-layer verifiers, archived bitstream codec tools;
+- `experiments/spiral_semantics/`: synthetic SL09–SL18 vocab/history/ICFP-transport studies;
+- `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
+Do not confuse these code families, or treat historical draft documents as the current binding protocol.
