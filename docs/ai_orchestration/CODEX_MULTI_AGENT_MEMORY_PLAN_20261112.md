@@ -110,3 +110,22 @@ ai_orchestration/
 ## 4. 非目標
 
 本次不改動 Hamster VM 或 Spiral Language 協議，不把私人 ChatGPT Library 全量上傳公開 Git，不建立多模型自動改碼／自動推送權限，不保證 OpenRouter NVIDIA 的特定免費端點一定長期可用。
+
+## 5. [更新] 2026-11-12：Gemini CLI 個人訂閱與第三方調度限制（本節優先於前文 P0/P2 的舊建議）
+
+[更新] **不要再預設 Google AI Pro/Ultra 的舊 Gemini CLI 個人 Google 登入可用，亦不得讓 Codex 在消費者訂閱底下包裝 `agy -p` 作為第三方模型後端。** Codex 自動分工給 Gemini 時，優先使用使用者自行配置且允許的 **Google AI Studio / Gemini API Key** 或合規企業 API；Gemini CLI/Antigravity CLI 留作使用者獨立操作或其他允許的直接工作流程。OpenRouter/NVIDIA 仍使用其 API Key；Codex 可以以 ChatGPT 訂閱登入。
+
+[取代] 前文「Gemini worker 優先調用使用者已可操作的 Gemini CLI」與「Google 訂閱可直接當程式化第三方 worker」的隱含假設。**舊的 `workers/gemini_worker.py` 名稱可保留，但內部應以合法 Gemini API adapter 為準**，不能直接 subprocess 包裝個人 Antigravity CLI。
+
+[原因] Google 2026-06-18 起停用 Gemini CLI 個人免費／Google AI Pro／Ultra 的舊 Google 登入服務，改推 Antigravity CLI。Google Antigravity FAQ 表明，在消費者方案下，將 Antigravity CLI headless 包入第三方 coding agent/application 並不受支援；要整合第三方 coding agent，Google 建議 Gemini API Key。
+
+[狀態] 官方政策來源已核對；Codex 本機環境是否配置 Gemini API Key 尚未知，不能聲稱 live worker 已可執行。此限制不影響 mock/dry-run MVP。
+
+官方來源：
+- https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals
+- https://antigravity.google/docs/faq
+- https://antigravity.google/docs/cli/overview/
+- https://antigravity.google/docs/cli/headless/
+- https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan
+
+Codex 工作順序同步修正：先盤點本機 Gemini API 是否已獲合法授權及免費/付費額度；未配置便做 mock，**不要為繞過限制而自動抽取 Google 個人帳號 token、操控 UI 假裝人工、輪轉帳號**。Antigravity 可另列「人類直接使用」模式，不納入 MVP 的第三方 subprocess worker。
