@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>螺旋語尾碼轉換器｜SpiralToken</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;color-scheme:light}*{box-sizing:border-box}body{max-width:810px;margin:24px auto;padding:0 18px;line-height:1.55;color:#202c35;background:#f7f9fc}main{background:white;padding:22px;border-radius:16px;box-shadow:0 4px 24px #22334816}h1{font-size:1.5rem;margin:0 0 4px}small,p{color:#526275}label{display:block;font-weight:600;margin:12px 0 5px}.controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.controls>div{width:145px}input,textarea{width:100%;border:1px solid #b1bac4;border-radius:9px;padding:10px;font-family:ui-monospace,Consolas,monospace;font-size:1.03rem}textarea{min-height:150px;resize:vertical;white-space:pre;overflow:auto}button{border:0;border-radius:8px;padding:11px 15px;color:white;background:#176fa1;font-weight:600;cursor:pointer;margin:10px 8px 0 0}button.secondary{background:#5e6875}.error{color:#bc2929;font-weight:600;white-space:pre-wrap}.hint{padding:10px 14px;border-left:3px solid #176fa1;background:#f0f7fc;border-radius:6px;color:#3c505f}.mono{font-family:ui-monospace,Consolas,monospace}
+</style></head><body><main><h1>螺旋語尾碼轉換器</h1><p>依照 GitHub 初版 <code>SpiralToken(value, order, level)</code>：先固定 <strong>n 位數值</strong>，再補 <strong>k 個 0</strong>。這裡不處理語場啟動碼，也不會自動替你指定詞義。</p>
+<div class="controls"><div><label for="k">層數 k（補幾個 0）</label><input id="k" type="number" min="1" max="20" value="1"></div><div><label for="n">限定階數 n（可留空）</label><input id="n" type="number" min="1" max="100" placeholder="不限定"></div></div>
+<label for="input">原始數值位元（一行一個詞，尚未補尾碼）</label><textarea id="input" spellcheck="false">00
+01
+10
+11</textarea>
+<button id="encode">轉成螺旋詞</button><button id="copy" class="secondary">複製結果</button><button id="example" class="secondary">回音範例</button>
+<label for="output">編碼結果（可直接轉送）</label><textarea readonly id="output" spellcheck="false"></textarea>
+<p id="status" class="error" role="status"></p>
+<div class="hint">例：原始數值 <code>01</code>、n=2、k=1 → <code>010</code>。不能單靠尾端 0 的總個數判定 k，因為數值部分也可能是 0；解碼時須保留已知的 n、k 或詞表。</div>
+</main><script>
+'use strict';
+const el=id=>document.getElementById(id);
+function convert(){
+  try{
+    const k=Number(el('k').value), nRaw=el('n').value.trim();
+    const n=nRaw===''?null:Number(nRaw);
+    if(!Number.isInteger(k)||k<1||k>20)throw Error('k 必須是 1 至 20 的整數');
+    if(n!==null&&(!Number.isInteger(n)||n<1||n>100))throw Error('n 必須是 1 至 100 的整數');
+    const out=el('input').value.split(/\r?\n/).map((line,i)=>{
+      const bits=line.trim();if(bits==='')return '';
+      if(!/^[01]+$/.test(bits))throw Error(`第 ${i+1} 行含有非 01 字元`);
+      if(n!==null&&bits.length!==n)throw Error(`第 ${i+1} 行應為 ${n} 位，目前 ${bits.length} 位`);
+      return bits+'0'.repeat(k);
+    });
+    el('output').value=out.join('\n');el('status').textContent='';
+  }catch(e){el('status').textContent=e.message;el('output').value='';}
+}
+el('encode').addEventListener('click',convert);
+el('example').addEventListener('click',()=>{el('n').value='';el('k').value='1';el('input').value='0\n10\n10\n\n0\n11\n11\n\n0\n01\n01\n\n0\n00';convert();});
+el('copy').addEventListener('click',async()=>{let t=el('output').value;if(!t){el('status').textContent='沒有可複製內容';return}try{await navigator.clipboard.writeText(t);el('status').textContent='已複製'}catch(e){el('output').focus();el('output').select();el('status').textContent='請使用選取／複製功能';}});
+convert();
+</script></body></html>

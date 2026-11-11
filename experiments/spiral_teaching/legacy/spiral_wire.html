@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>螺旋語｜16×1 位元流編碼器</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans TC',system-ui,sans-serif;--ink:#202b3b;--muted:#576579;--blue:#176e9c;--border:#c8d3e0;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6}main{max-width:900px;margin:20px auto 60px;padding:0 15px}
+h1{font-size:1.5rem;margin:0 0 4px}h2{font-size:1.12rem;margin:0 0 10px}p{margin:5px 0 14px;color:var(--muted)}section{background:white;border:1px solid #e0e7ef;border-radius:14px;padding:17px 18px;margin:16px 0;box-shadow:0 2px 12px #18334a0c}
+label{display:block;font-weight:650;margin:10px 0 5px}textarea,input,select{border:1px solid var(--border);border-radius:8px;padding:10px 12px;font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:#16243a}
+textarea{display:block;width:100%;resize:vertical;white-space:pre;overflow-x:auto;min-height:110px}textarea[readonly]{background:#f8fafc}input:not([type=checkbox]),select{width:100%}
+button{border:1px solid transparent;border-radius:9px;background:var(--blue);color:white;font-weight:650;font-size:.98rem;cursor:pointer;padding:9px 13px;margin:8px 7px 0 0}
+button.alt{background:#eef4f9;border-color:#c7d9e6;color:#205574}button:active{opacity:.75}.buttons{display:flex;flex-wrap:wrap;align-items:center;gap:4px}.muted{font-size:.92rem;color:var(--muted)}.small{font-size:.84rem}
+.status{white-space:pre-wrap;margin-top:8px;font-size:.9rem;color:#175879;min-height:22px}.error{color:#b42e31}.ok{color:#167348}.mono{font:14px ui-monospace,SFMono-Regular,Consolas,monospace}
+.note{background:#f1f6fb;border-left:3px solid var(--blue);padding:10px 12px;border-radius:5px;font-size:.9rem;color:#384f63}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:550px){.formrow{grid-template-columns:1fr}}.check{display:flex;align-items:center;gap:7px;font-weight:500}.check input{width:auto}
+#visual{display:flex;gap:6px;flex-wrap:wrap;overflow-wrap:anywhere;line-height:2.25;padding:5px 0}.word{background:#edf3f9;color:#173950;border-radius:5px;padding:1px 5px}.sep{background:#fbe7ce;color:#88420d;border-radius:5px;padding:1px 5px;font-weight:650}.data-table{margin-top:9px;overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.87rem}th,td{text-align:left;border-bottom:1px solid #e3e8f0;padding:7px 8px}td.bits{word-break:break-all;font:13px ui-monospace,SFMono-Regular,Consolas,monospace}th{background:#f1f5f9}
+</style></head><body><main>
+<h1>螺旋語｜16 個 1 封包編碼器</h1>
+<p>給雙 AI 的純 01 通訊實驗使用。<b>每行一段位元</b>，工具自動在每段之間加入恰好 16 個 <code>1</code>；可反向拆包核對。完全離線，不連接 Gemini 或 ChatGPT。</p>
+<section>
+<h2>一、封包：多行題答 → 連續 01</h2>
+<label for="source">題目／答案（每行一段；空行只用來排版）</label>
+<textarea id="source" rows="10" spellcheck="false"></textarea>
+<label class="check"><input id="terminal" type="checkbox" checked> 在最後一段後也加入結尾分隔符（延續上一輪格式）</label>
+<div class="buttons"><button id="pack">產生位元流並驗證</button><button class="alt" id="copy">複製連續 01</button><button class="alt" id="loadExample">載入示範</button></div>
+<div class="status" id="packStatus" role="status"></div>
+<label for="wireOut">連續 01（可直接轉給 Gemini）</label>
+<textarea id="wireOut" rows="5" readonly wrap="off" spellcheck="false"></textarea>
+<div class="muted small">視覺分段預覽：藍底是原資料；橘底每塊恰好 16 個 1（實際傳送不含空白或色彩）</div><div id="visual" class="mono"></div>
+</section>
+<section><h2>二、解包：連續 01 → 分段核對</h2>
+<label for="wireIn">貼入 Gemini 或我們傳送的連續 01</label>
+<textarea id="wireIn" rows="4" spellcheck="false"></textarea>
+<div class="buttons"><button id="unpack">解包並檢查</button><button class="alt" id="fromOut">從上方結果填入</button></div>
+<div class="status" id="unpackStatus" role="status"></div>
+<div class="data-table"><table><thead><tr><th>#</th><th>預設角色</th><th>位數</th><th>位元內容</th></tr></thead><tbody id="decoded"></tbody></table></div>
+</section>
+<section><h2>三、快速產生符合目前題型的題目</h2>
+<p class="small">依本次教學採用的規則：<code>01 + 四位算符 + 資料詞 + 四位句號（1110）</code>；答案保留資料詞最後一個 0。這是目前教學題型的輔助產生器，不代表所有螺旋語語義都已定義。</p>
+<div class="formrow"><div><label for="op">算符</label><select id="op"><option value="echo">回音 0000</option><option value="neg">反回音 0100</option><option value="zero">全寫 0　1000</option><option value="one">全寫 1　0110</option></select></div><div><label for="data">資料詞（末尾需為 0）</label><input id="data" value="010110" spellcheck="false" inputmode="numeric"></div></div>
+<div class="buttons"><button id="addQA">追加題目＋答案</button><button class="alt" id="addQ">只追加待答題目</button></div>
+<div class="status" id="questionStatus" role="status"></div>
+</section>
+<section><h2>封包規則與限制</h2>
+<div class="note">分隔符固定為 <code>1111111111111111</code>（16 個 1）。所有資料段必須以 <code>0</code> 結尾，且資料段內不能自行出現連續 16 個 1；否則可能和分隔符混淆。<b>注意：</b>答案如果以 1 開頭，整串看起來可能出現 17 個連續的 1，這不等於分隔符長度錯誤。</div>
+<p class="small">封包只記錄「依序送出的片段」，不會把「題目／答案」的角色嵌入資料。若最後留一道待答題，可以採用「前面成對示範、最後一題無答案」的慣例。不要在沒有額外協議的情況下連續放兩道待答題，否則接收端未必知道兩者都是題目。</p>
+<p class="small">這個 16 個 1 的分隔符是實驗過渡機制，並非螺旋語原本的層階斷詞機制。大於目前詞長的資料可能包含連續 16 個 1，需要另外設計跳脫或分框規則。</p>
+</section>
+</main><script>
+'use strict';
+const SEP='1'.repeat(16),OPS={echo:'0000',neg:'0100',zero:'1000',one:'0110'};
+const el=id=>document.getElementById(id);
+function checkField(b,i){if(!/^[01]+$/.test(b))throw Error(`第 ${i} 段有非 01 字元或為空`);if(!b.endsWith('0'))throw Error(`第 ${i} 段結尾不是 0，無法保證分隔界線`);if(b.includes(SEP))throw Error(`第 ${i} 段內含 16 個連續的 1，與分隔符衝突`)}
+function fromLines(s){const xs=s.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);if(!xs.length)throw Error('請先填入資料');xs.forEach((x,i)=>checkField(x,i+1));return xs}
+function packData(xs,terminal=true){if(!xs.length)throw Error('空資料');xs.forEach((x,i)=>checkField(x,i+1));return xs.join(SEP)+(terminal?SEP:'')}
+function unpackData(stream){const s=stream.replace(/\s+/g,'');if(!/^[01]+$/.test(s))throw Error('位元流僅能包含 0 與 1');let terminal=s.endsWith(SEP);let xs=s.split(SEP);if(terminal)xs.pop();if(!xs.length)throw Error('沒有找到可解出的資料段');xs.forEach((x,i)=>checkField(x,i+1));if(packData(xs,terminal)!==s)throw Error('封包非標準格式');return {xs,terminal,s}}
+function makeQuestion(op,data){if(!(op in OPS))throw Error('未知算符');checkField(data,1);if(data.length<3)throw Error('資料詞至少需三位');const end='1'.repeat(OPS[op].length-1)+'0';if(end.includes(SEP))throw Error('句號會撞到 16 個 1 分隔符，請縮短資料詞');const q='01'+OPS[op]+data+end;const bits=data.slice(0,-1);const a=op==='echo'?data:op==='neg'?[...bits].map(x=>x==='0'?'1':'0').join('')+'0':op==='zero'?'0'.repeat(data.length):'1'.repeat(bits.length)+'0';checkField(q,1);checkField(a,2);return {q,a}}
+function setStatus(id,txt,cls='ok'){let x=el(id);x.textContent=txt;x.className='status '+cls}
+function renderViz(xs,terminal){const dest=el('visual');dest.replaceChildren();for(let i=0;i<xs.length;i++){let a=document.createElement('span');a.className='word';a.textContent=xs[i];dest.appendChild(a);if(i<xs.length-1||terminal){let b=document.createElement('span');b.className='sep';b.textContent='1111 1111 1111 1111';b.title='這一塊是 16 個 1；實際輸出沒有空白';dest.appendChild(b)}}}
+function generate(){try{const xs=fromLines(el('source').value),terminal=el('terminal').checked,s=packData(xs,terminal),y=unpackData(s);if(y.xs.join('|')!==xs.join('|')||y.terminal!==terminal)throw Error('往返檢查失敗');el('wireOut').value=s;renderViz(xs,terminal);setStatus('packStatus',`已產生 ${xs.length} 段，共 ${s.length} 位元；${xs.length-1+(terminal?1:0)} 個分隔符。封包→解包核對通過。`)}catch(e){el('wireOut').value='';el('visual').replaceChildren();setStatus('packStatus',e.message,'error')}}
+function decode(){try{const {xs,terminal,s}=unpackData(el('wireIn').value),dest=el('decoded');dest.replaceChildren();for(let i=0;i<xs.length;i++){let tr=document.createElement('tr');for(let v of [String(i+1),i%2?'示範答案':'題目（推定）',String(xs[i].length),xs[i]]){let td=document.createElement('td');td.textContent=v;if(v===xs[i])td.className='bits';tr.appendChild(td)}dest.appendChild(tr)}setStatus('unpackStatus',`解出 ${xs.length} 段；${s.length} 位元；結尾分隔符：${terminal?'有':'無'}。所有段均符合封包限制。`)}catch(e){el('decoded').replaceChildren();setStatus('unpackStatus',e.message,'error')}}
+function appendQuestion(withAnswer){try{const {q,a}=makeQuestion(el('op').value,el('data').value);let s=el('source').value.trim();el('source').value=(s?s+'\n\n':'')+q+(withAnswer?'\n'+a:'');setStatus('questionStatus',`${withAnswer?'已追加一組題答':'已追加一題'}：${q} ${withAnswer?'→ '+a:''}`);generate();el('source').scrollTop=el('source').scrollHeight}catch(e){setStatus('questionStatus',e.message,'error')}}
+async function copyOut(){if(!el('wireOut').value){setStatus('packStatus','尚無可複製資料','error');return}try{await navigator.clipboard.writeText(el('wireOut').value);setStatus('packStatus','已複製連續 01 位元流。')}catch(e){el('wireOut').focus();el('wireOut').select();setStatus('packStatus','無法使用自動剪貼簿，已選取文字，請手動複製。','error')}}
+function example(){const p1=makeQuestion('echo','001010'),p2=makeQuestion('neg','001010'),p3=makeQuestion('zero','110010');el('source').value=[p1.q,p1.a,'',p2.q,p2.a,'',p3.q].join('\n');generate();setStatus('packStatus','已載入兩組題答＋一題待答，並完成封包核對。')}
+el('pack').addEventListener('click',generate);el('copy').addEventListener('click',copyOut);el('loadExample').addEventListener('click',example);el('unpack').addEventListener('click',decode);el('fromOut').addEventListener('click',()=>{el('wireIn').value=el('wireOut').value;decode()});el('addQA').addEventListener('click',()=>appendQuestion(true));el('addQ').addEventListener('click',()=>appendQuestion(false));el('terminal').addEventListener('change',generate);
+example();
+</script></body></html>
