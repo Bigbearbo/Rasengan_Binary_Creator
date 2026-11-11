@@ -23,3 +23,9 @@ For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_la
 - `experiments/spiral_semantics/`: synthetic SL09–SL18 vocab/history/ICFP-transport studies;
 - `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
 Do not confuse these code families, or treat historical draft documents as the current binding protocol.
+
+## Active Codex implementation work order (2026-11-12)
+
+The user requested a shared-memory / multi-model coordination MVP for their local Codex, OpenRouter NVIDIA worker, and Gemini worker. Read [docs/ai_orchestration/CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md](docs/ai_orchestration/CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md) before working on this specific task.
+
+Start with the P0 environment audit, then P1 memory index and P2 mock/dry-run dispatcher. Keep the original SLE/Hamster code unchanged. The repository is public: never commit API keys, private ChatGPT Library contents, personal chats, or runtime state. Other workers are advisory/read-only; Codex validates and integrates. Report real test results, not anticipated ones. See the matching GitHub Issue for task tracking. This work order does not automatically start any desktop process.
