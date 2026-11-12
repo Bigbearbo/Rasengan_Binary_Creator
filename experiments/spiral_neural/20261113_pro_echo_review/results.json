@@ -1,0 +1,276 @@
+{
+  "schema": "PRO-PR13-TARGET-ORDER-READONLY-v1",
+  "author": "ChatGPT Pro",
+  "status": "passed_no_findings_in_scope",
+  "source_commit": "15b7788c1d50269f477b0681d64cbbd08708d65f",
+  "package_manifest_sha256": "947af4a1406bb463a11b17a823e0301bd98b4d790d6ea8352622af421a257748",
+  "prereg_manifest_sha256": "db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc",
+  "control_manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "baseline_package_manifest_sha256": "51253e19dd24e69594b5233ec601dac94b30126a9be186d7bced2c3b3191e015",
+  "audit_script_sha256": "ebaa30464d028ec0b5d695ea7b703ee5ff022201676d33a43fb2390b7bd9e546",
+  "command": "python -B audit_target_order.py --out results.json",
+  "working_directory": "experiments/spiral_neural/20261113_pro_echo_review",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "package_file_hashes_verified": 10,
+  "archive_entries_verified": {
+    "evidence-seed101.zip": 24,
+    "evidence-seed202.zip": 24,
+    "evidence-seed303.zip": 24,
+    "run-metadata.zip": 34,
+    "baseline-inputs.zip": 12
+  },
+  "total_archive_entries_verified": 118,
+  "local_scientific_sources_verified": 3,
+  "inherited_scientific_sources_verified": 7,
+  "paired_initial_states_verified": [
+    101,
+    202,
+    303
+  ],
+  "original_and_shuffled_target_multiset_exact": true,
+  "epochs_verified_per_seed": 128,
+  "targets_per_epoch": 212,
+  "frozen_target_streams_regenerated": 3,
+  "actual_final_checkpoint_rows": 54,
+  "comparisons": [
+    {
+      "seed": 101,
+      "baseline_final_metrics": {
+        "heldout": {
+          "STOP_position_correct": 3,
+          "UP_correct_at_expected_position": 3,
+          "address_correct": 0,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 1.3668161794120435,
+          "teacher_correct": 87,
+          "teacher_targets": 106,
+          "total": 6,
+          "whole_correct": 0
+        },
+        "train": {
+          "STOP_position_correct": 10,
+          "UP_correct_at_expected_position": 10,
+          "address_correct": 7,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 0.6066157344077708,
+          "teacher_correct": 192,
+          "teacher_targets": 212,
+          "total": 12,
+          "whole_correct": 7
+        }
+      },
+      "actual_final_metrics": {
+        "train": {
+          "total": 12,
+          "whole_correct": 11,
+          "address_correct": 11,
+          "UP_correct_at_expected_position": 12,
+          "STOP_position_correct": 11,
+          "overflow": 0,
+          "cap_exhausted": 1,
+          "teacher_targets": 212,
+          "teacher_correct": 210,
+          "teacher_CE_mean": 0.062483342803975835
+        },
+        "heldout": {
+          "total": 6,
+          "whole_correct": 0,
+          "address_correct": 0,
+          "UP_correct_at_expected_position": 3,
+          "STOP_position_correct": 4,
+          "overflow": 0,
+          "cap_exhausted": 0,
+          "teacher_targets": 106,
+          "teacher_correct": 83,
+          "teacher_CE_mean": 1.4226105430157947
+        }
+      },
+      "paired_difference": {
+        "train_whole_correct": 4,
+        "train_address_correct": 4,
+        "heldout_whole_correct_diagnostic": 0
+      },
+      "actual_inference_calls": 642,
+      "actual_inference_dense_MAC": 6697344,
+      "final_checkpoint_sha256": "20d628a40664e27ea8a7ec27352be295ef807a7c4903d558ea43287297404922",
+      "learning_state_unchanged": true
+    },
+    {
+      "seed": 202,
+      "baseline_final_metrics": {
+        "heldout": {
+          "STOP_position_correct": 1,
+          "UP_correct_at_expected_position": 1,
+          "address_correct": 0,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 2.2001237107239895,
+          "teacher_correct": 81,
+          "teacher_targets": 106,
+          "total": 6,
+          "whole_correct": 0
+        },
+        "train": {
+          "STOP_position_correct": 6,
+          "UP_correct_at_expected_position": 6,
+          "address_correct": 6,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 0.29087288769449665,
+          "teacher_correct": 197,
+          "teacher_targets": 212,
+          "total": 12,
+          "whole_correct": 5
+        }
+      },
+      "actual_final_metrics": {
+        "train": {
+          "total": 12,
+          "whole_correct": 12,
+          "address_correct": 12,
+          "UP_correct_at_expected_position": 12,
+          "STOP_position_correct": 12,
+          "overflow": 0,
+          "cap_exhausted": 0,
+          "teacher_targets": 212,
+          "teacher_correct": 212,
+          "teacher_CE_mean": 0.002589424919408023
+        },
+        "heldout": {
+          "total": 6,
+          "whole_correct": 0,
+          "address_correct": 0,
+          "UP_correct_at_expected_position": 5,
+          "STOP_position_correct": 5,
+          "overflow": 0,
+          "cap_exhausted": 0,
+          "teacher_targets": 106,
+          "teacher_correct": 86,
+          "teacher_CE_mean": 1.8019654490618475
+        }
+      },
+      "paired_difference": {
+        "train_whole_correct": 7,
+        "train_address_correct": 6,
+        "heldout_whole_correct_diagnostic": 0
+      },
+      "actual_inference_calls": 633,
+      "actual_inference_dense_MAC": 6603456,
+      "final_checkpoint_sha256": "90dc29776072e35a79e47ebe703f8e702194676813383a4660491164f02ee56e",
+      "learning_state_unchanged": true
+    },
+    {
+      "seed": 303,
+      "baseline_final_metrics": {
+        "heldout": {
+          "STOP_position_correct": 4,
+          "UP_correct_at_expected_position": 4,
+          "address_correct": 0,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 2.076731590764687,
+          "teacher_correct": 79,
+          "teacher_targets": 106,
+          "total": 6,
+          "whole_correct": 0
+        },
+        "train": {
+          "STOP_position_correct": 10,
+          "UP_correct_at_expected_position": 10,
+          "address_correct": 6,
+          "cap_exhausted": 0,
+          "overflow": 0,
+          "teacher_CE_mean": 0.24457897253834257,
+          "teacher_correct": 200,
+          "teacher_targets": 212,
+          "total": 12,
+          "whole_correct": 5
+        }
+      },
+      "actual_final_metrics": {
+        "train": {
+          "total": 12,
+          "whole_correct": 11,
+          "address_correct": 11,
+          "UP_correct_at_expected_position": 12,
+          "STOP_position_correct": 12,
+          "overflow": 0,
+          "cap_exhausted": 0,
+          "teacher_targets": 212,
+          "teacher_correct": 211,
+          "teacher_CE_mean": 0.022717292019140498
+        },
+        "heldout": {
+          "total": 6,
+          "whole_correct": 0,
+          "address_correct": 0,
+          "UP_correct_at_expected_position": 4,
+          "STOP_position_correct": 4,
+          "overflow": 0,
+          "cap_exhausted": 1,
+          "teacher_targets": 106,
+          "teacher_correct": 88,
+          "teacher_CE_mean": 1.5221475918279568
+        }
+      },
+      "paired_difference": {
+        "train_whole_correct": 6,
+        "train_address_correct": 5,
+        "heldout_whole_correct_diagnostic": 0
+      },
+      "actual_inference_calls": 642,
+      "actual_inference_dense_MAC": 6697344,
+      "final_checkpoint_sha256": "39051b567548f8772b6dd79ad591fac9fc42323df287368e4c2a28418dbe86d3",
+      "learning_state_unchanged": true
+    }
+  ],
+  "pooled_final_train_whole": [
+    34,
+    36
+  ],
+  "pooled_final_train_address": [
+    34,
+    36
+  ],
+  "pooled_final_heldout_whole": [
+    0,
+    18
+  ],
+  "pooled_final_heldout_address": [
+    0,
+    18
+  ],
+  "final_cap_exhausted": 2,
+  "final_overflow": 0,
+  "max_actual_vs_archived_TF_logit_difference": 3.814697265625e-06,
+  "max_actual_vs_archived_free_run_logit_difference": 3.814697265625e-06,
+  "actual_audit_inference_calls": 1917,
+  "actual_audit_inference_dense_MAC": 19998144,
+  "inference_cost_scope": "New forward calls only; subtract copied checkpoint inference counters; includes free generation and TF",
+  "forbidden_methods": [
+    "Model.step",
+    "Model.lesson",
+    "Model.loss_grad",
+    "Model.grow"
+  ],
+  "forbidden_method_calls": [],
+  "new_training_target_updates": 0,
+  "new_students": 0,
+  "full_training_replays": 0,
+  "intermediate_checkpoint_inferences": 0,
+  "source_package_and_inherited_sources_unchanged": true,
+  "nvidia_status": "skipped_unavailable",
+  "NVIDIA_calls_this_review": 0,
+  "findings_in_scope": [],
+  "limitations": [
+    "Bounded audit of three final checkpoints, not a repeat of all 18 checkpoints or 324 responses.",
+    "Large target traces are not republished; actual training trajectories and full replay were not independently rerun here.",
+    "The fixed control scores come from pinned archived results, not new baseline inference or training.",
+    "Identical target multisets, initial states, inherited sources and training budgets support an update-order comparison in this configuration.",
+    "ACK fitting does not establish semantic Echo, unseen-combination success, SLE superiority, or a universal claim about fully connected networks.",
+    "Historical Codex external-worker calls are separate from this review's zero calls."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "One hand-constructed fixed eight-bit echo counterexample; zero optimizer updates; no additional neural execution in manifest creation",
+  "command": "python -B experiments/spiral_neural/20261113_pro_echo_construction/construct_echo.py --out experiments/spiral_neural/20261113_pro_echo_construction/results",
+  "source_checkout_commit": "15b7788c1d50269f477b0681d64cbbd08708d65f",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5561,
+      "sha256": "9830d77397593408e96a140a28e1e5eaabb6fb8f4d7bed884eb481972abe6d9d"
+    },
+    {
+      "path": "construct_echo.py",
+      "size": 7694,
+      "sha256": "c3e16f42c85ace2c1147ef1b45fb437ee893e8a74cc1d52bba5b59c51ae1f256"
+    },
+    {
+      "path": "construction_plan.json",
+      "size": 1364,
+      "sha256": "093ed7678d6a55ffbe025e2638e39a518d572b4c2b00a8b56f00773f59fbf1a9"
+    },
+    {
+      "path": "results/constructed-state.npz",
+      "size": 4294,
+      "sha256": "f831f65f7961f8b471c430471ab4a50e255c60d733ee79aeaee88af31c27ce98"
+    },
+    {
+      "path": "results/frozen-plan.json",
+      "size": 1364,
+      "sha256": "c8fd325a25d952555423e170bfb5587e4e530f78b4e3532915c63cbc6b7309ac"
+    },
+    {
+      "path": "results/summary.json",
+      "size": 1554,
+      "sha256": "34aef70debedccc61e176166ccdde72438931fd2a881a836c23b87156366c1d0"
+    },
+    {
+      "path": "results/truth.json",
+      "size": 305596,
+      "sha256": "633ee2f82d75a228108461538684323ff9ec67c66038bc189cf29309d5fef06f"
+    }
+  ]
+}

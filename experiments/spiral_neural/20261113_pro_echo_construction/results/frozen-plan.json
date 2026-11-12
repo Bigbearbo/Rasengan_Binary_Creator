@@ -1,0 +1,23 @@
+{
+  "H": 64,
+  "L": 80,
+  "N": 8,
+  "author": "ChatGPT Pro",
+  "boundary": "s_r=x[r,0]+x[r,1]; g_i=s_(N+i-1)-s_(N+i), i=0..N",
+  "cases": "All 256 binary input questions of exactly eight bits, once each in numeric order",
+  "construction_seed": 910113,
+  "copy_hidden": "h_i=tanh(gain*(g_i+x[i,1]-1.5)), i=0..N-1",
+  "expected_scoring_only": "Q plus external STOP; expected output is constructed after generation and is never passed into forward",
+  "gain": 10.0,
+  "generation_safety_cap": 16,
+  "id": "PRO-FIXED-ECHO-CONSTRUCTION-20261113",
+  "optimization": "No step, lesson, loss_grad or optimizer call; no parameter search or alternative construction",
+  "output_logits_01S": "u=sum(h_i)+N-1; z_0=-u; z_1=u; z_STOP=2*h_STOP",
+  "reference_commit": "a309f2fc3e23255327fcab35745c27012d15ed4f",
+  "reference_path": "experiments/spiral_neural/20261112_p035/reference/p030_reference.py",
+  "reference_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+  "remaining_hidden": "All other incoming weights, biases and outgoing weights are zero",
+  "scope": "Hand-constructed representational counterexample, not learned weights, not UR1 success, not length extrapolation",
+  "stop_hidden": "h_STOP=tanh(gain*(g_N-0.5))",
+  "student_input": "Only Q plus its own generated 0/1 prefix; no delimiter, cursor, Q length or target length feature"
+}
