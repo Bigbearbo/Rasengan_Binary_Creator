@@ -24,11 +24,16 @@ For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_la
 - `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
 Do not confuse these code families, or treat historical draft documents as the current binding protocol.
 
-## Current top research priority: P032 neural learning diagnostic and width/curriculum trial (user decision, 2026-11-12)
+## Latest SLE neural research status: P032 completed; investigate P033 data-pair gap (2026-11-12)
 
-The user explicitly prioritized **P032**. At the next relevant Codex research session, **execute**, not merely restate, [docs/ai_orchestration/P032_容量與舊知識干擾對照_20261112.md](docs/ai_orchestration/P032_容量與舊知識干擾對照_20261112.md) first: inspect the real P030 experiment in PR #4 (branch `codex/sle-neural-publication-20261112` if not merged), generate full input/output diagnosis from saved checkpoints, then run matched H72/H128 × 70:30/50:50 curriculum controls. Preserve P030 archive, use separate reproducible P032 artifacts and report genuine tests. The SLE shared grade-school math corpus, NVIDIA memory/orchestration implementation, `11110` ritual, and other growth topics remain queued, not cancelled; do not mix them into the first P032 test. Before running, check the actual current PR/branch and uncommitted local work. If NVIDIA is available, delegate a bounded **read-only review of P032 confounds**, without blocking actual experiment execution.
+**Do not rerun P032 as if it is pending.** Codex completed 24 P032 controlled trials in [PR #6](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/6) (head `codex/p032-width-curriculum-20261112`), with 0–1/12 heldout answers and substantial pre/post NegEcho interference. The published training/replay checks passed; this is **not** successful novel mathematics learning. PR #5 contains the **separate** shared SLE corpus; it was not used as P032's training set. Verify current branch and PR state at each new run.
 
-This is a GitHub work-order update, **not proof that local Codex has started or that P032 tests have run**.
+Next **analytical research priority**, before increasing hidden width again: read [P033｜位元組合覆蓋與泛化干擾診斷](docs/ai_orchestration/P033_位元組合覆蓋與泛化干擾診斷_20261112.md), then:
+1. Inspect P032 existing teacher-forcing and free-run truth tables; isolate the **first wrong answer bit**, and test input-bit/output-bit counterfactual sensitivity on saved checkpoints without retraining.
+2. Test matched six-value curricula with **pairwise-complete** bit training sets versus old S0/S1 pairwise-incomplete sets under frozen budget/architecture, to test whether the gap explains the failures. Separately isolate novel value vs novel operator/value pairing.
+3. Only if required, compare a small learnable positional/attention architecture on native SLE raw 0/1; never add a teacher/parser that computes student answers.
+
+The P032 report, not the model's opinion, is evidence. The **S0/S1 bit-pair coverage gap is certain from the enumerated training data**; its causal role remains **unproven**. Keep P032/P030 historical checkpoints untouched. Delegate a bounded P033 review to NVIDIA if configured/authorized; do not block Codex test execution if unavailable. The elementary-school shared SLE math bank and input/output translators remain planned, not cancelled.
 
 ## Active Codex implementation work order (2026-11-12)
 
