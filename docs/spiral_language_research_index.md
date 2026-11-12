@@ -1,5 +1,9 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-13 Pro 更新：有位置的升階通知
+
+[UR1 設計](ai_orchestration/PRO_UPGRADE_NOTICE_DESIGN_20261113.md)依使用者的三份通知、局部回覆與尾兩碼控制構想，定義新 profile 的結構地址、目標寬度與一次提交規則。[獨立 codec 與測試](../experiments/spiral_neural/20261113_pro_upgrade_notice/README.md)只驗證有界協議，未做神經訓練；根控制寬仍固定，未完成任意根擴張。本文接續 Codex P034 的完成狀態；此前 [Pro 小網路／成長審查](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/4e2ded91166a4fd9348dccf8fc71ddf01e991645/docs/ai_orchestration/PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)保留獨立固定入口。
+
 ## 2026-11-12 Pro 更新：現況與下一輪研究
 
 先讀[研究現況](ai_orchestration/CURRENT_RESEARCH_STATUS.md)與[ChatGPT Pro後續設計](ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md)。Codex的P033覆蓋／從頭混教／續訓控制已在PR #7完成；[Pro獨立核對及解析器修復](../experiments/spiral_neural/20261112_pro_review/README.md)另列實測歸屬。下方歷史段落保留其封存時點，不以舊「未完成」覆蓋較新的固定證據。

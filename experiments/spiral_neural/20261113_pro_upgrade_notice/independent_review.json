@@ -1,0 +1,140 @@
+{
+  "profile_id": "SLE-UR1-fixed-root-c3",
+  "author": "ChatGPT Pro / independent delegated review",
+  "scope": "Exhaustive single-bit changes to eight fixture upgrade frames; alias/cycle rejection.",
+  "executed_at_utc": "2026-11-12T16:25:55.682466+00:00",
+  "command": "python -B independent_review.py --results independent_review.json",
+  "working_directory": "experiments/spiral_neural/20261113_pro_upgrade_notice",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8",
+    "independent_review.py": "e2d9fe51c947d93c983e537823ec6dbd78c067571ad202eb9d80e3b7207cdbb9"
+  },
+  "single_bit_mutations": {
+    "fixture_frames": 8,
+    "total": 340,
+    "rejected": 334,
+    "atomic_rejections": 334,
+    "rejected_by_error": {
+      "BAD_END": 49,
+      "BAD_ROOT_HEADER": 64,
+      "BAD_SUFFIX": 35,
+      "BAD_UP": 8,
+      "MIXED_UP": 145,
+      "ROOT_GROWTH_UNSUPPORTED": 7,
+      "UNKNOWN_ADDRESS": 21,
+      "UNSUPPORTED_INTERNAL_NODE": 5
+    },
+    "valid_accepted": 6,
+    "accepted_state_checks_passed": 6,
+    "accepted_cases": [
+      {
+        "source_address": [
+          0
+        ],
+        "flipped_bit_index": 13,
+        "received_address": [
+          2
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "0011110000100100111110111110111110111100"
+      },
+      {
+        "source_address": [
+          0
+        ],
+        "flipped_bit_index": 14,
+        "received_address": [
+          1
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "0011110000100010111110111110111110111100"
+      },
+      {
+        "source_address": [
+          1
+        ],
+        "flipped_bit_index": 14,
+        "received_address": [
+          0
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "0011110000100000111110111110111110111100"
+      },
+      {
+        "source_address": [
+          2
+        ],
+        "flipped_bit_index": 13,
+        "received_address": [
+          0
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "0011110000100000111110111110111110111100"
+      },
+      {
+        "source_address": [
+          5,
+          0
+        ],
+        "flipped_bit_index": 18,
+        "received_address": [
+          5,
+          1
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "00111100010010100010111110111110111110111100"
+      },
+      {
+        "source_address": [
+          5,
+          1
+        ],
+        "flipped_bit_index": 18,
+        "received_address": [
+          5,
+          0
+        ],
+        "target_n": 5,
+        "status": "upgraded",
+        "state_change_correct": true,
+        "mutated_question": "00111100010010100000111110111110111110111100"
+      }
+    ]
+  },
+  "non_tree_inputs": [
+    {
+      "case": "two_paths_share_one_node",
+      "error": "NOT_A_TREE",
+      "passed": true
+    },
+    {
+      "case": "node_points_to_itself",
+      "error": "NOT_A_TREE",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "limitations": [
+    "A single-bit address change can form a valid different notice; UR1 has no checksum.",
+    "This checks only these fixture frames and single-bit flips, not all possible corruptions.",
+    "Shared width state must use one canonical address; DAG aliases and cycles are unsupported.",
+    "Codec checks do not establish NN learning, useful transfer, or growth efficiency."
+  ],
+  "nvidia": {
+    "status": "skipped_unavailable",
+    "calls": 0,
+    "reason": "No configured NVIDIA worker tool is available in this session."
+  }
+}
