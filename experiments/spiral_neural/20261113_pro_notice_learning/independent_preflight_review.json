@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "author": "ChatGPT Pro / independent delegated preflight review",
+  "scope": "Independent preflight only: exact bit rules, split/prefix separation, costs, exposure, model size, generation adapter.",
+  "training_updates": 0,
+  "formal_students_executed": 0,
+  "heldout_neural_scores_computed": 0,
+  "engineering_model_instances_initialized_without_training": 1,
+  "non_neural_generation_fixture_forward_calls": 28,
+  "dataset_sha256": "ed891e1b3d99a0e2f694e0cd39ea311d4697580f44c7c92364bec8c8344c9f73",
+  "cases": {
+    "total": 18,
+    "train": 12,
+    "heldout": 6,
+    "train_target_prefixes": 212,
+    "heldout_target_prefixes": 106,
+    "train_heldout_prefix_overlap": 0,
+    "path_train_counts": {
+      "(0,)": 2,
+      "(1,)": 2,
+      "(2,)": 2,
+      "(5, 0)": 2,
+      "(5, 1)": 2,
+      "(5, 5, 0)": 2
+    },
+    "heldout_width_counts": {
+      "4": 2,
+      "5": 2,
+      "6": 2
+    }
+  },
+  "lengths": {
+    "max_Q": 52,
+    "max_A": 23,
+    "max_Q_plus_A": 75,
+    "max_generation_prefix_even_without_STOP": 75,
+    "max_generation_actions_including_STOP": 24,
+    "longest_case_in_train": true
+  },
+  "model": {
+    "parameters": 10499,
+    "parameter_moment_birth_array_bytes": 209980
+  },
+  "costs": {
+    "targets_per_epoch": 212,
+    "targets_per_seed": 27136,
+    "lessons_per_seed": 1536,
+    "training_dense_MAC_per_target": 21056,
+    "training_dense_MAC_per_seed": 571375616,
+    "primary_targets_all_seeds": 81408,
+    "primary_training_dense_MAC_all_seeds": 1714126848,
+    "including_replay_targets": 162816,
+    "including_replay_training_dense_MAC": 3428253696
+  },
+  "width_exposure_per_seed": [
+    {
+      "target_n": 4,
+      "train_combinations": 4,
+      "lessons_per_seed": 512,
+      "optimizer_prefixes_per_seed": 8704,
+      "question_UP_role_words_per_seed_at_lesson_level": 1536,
+      "question_END_role_words_per_seed_at_lesson_level": 512,
+      "answer_UP_role_words_per_seed_at_lesson_level": 512,
+      "question_UP_role_words_across_optimizer_prefixes_per_seed": 26112
+    },
+    {
+      "target_n": 5,
+      "train_combinations": 4,
+      "lessons_per_seed": 512,
+      "optimizer_prefixes_per_seed": 8704,
+      "question_UP_role_words_per_seed_at_lesson_level": 1536,
+      "question_END_role_words_per_seed_at_lesson_level": 512,
+      "answer_UP_role_words_per_seed_at_lesson_level": 512,
+      "question_UP_role_words_across_optimizer_prefixes_per_seed": 26112
+    },
+    {
+      "target_n": 6,
+      "train_combinations": 4,
+      "lessons_per_seed": 512,
+      "optimizer_prefixes_per_seed": 9728,
+      "question_UP_role_words_per_seed_at_lesson_level": 1536,
+      "question_END_role_words_per_seed_at_lesson_level": 512,
+      "answer_UP_role_words_per_seed_at_lesson_level": 512,
+      "question_UP_role_words_across_optimizer_prefixes_per_seed": 29184
+    }
+  ],
+  "generation_checks": {
+    "own_prefix_only": true,
+    "no_forced_STOP": true,
+    "overflow_guard": true
+  },
+  "driver_static_review": {
+    "method": "Source inspection pinned to the exact runner SHA; no formal execution invoked.",
+    "runner_sha256": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "optimizer_row_lookup_contains_only_train": true,
+    "all_three_primary_and_three_replays_finish_before_heldout": true,
+    "offline_checkpoints_per_seed": [
+      0,
+      16,
+      32,
+      64,
+      96,
+      128
+    ],
+    "offline_examples_per_checkpoint": 18,
+    "final_metrics_reuse_epoch_128": true,
+    "offline_inference_cost_is_separate_and_final_subset_not_added_twice": true,
+    "native_lesson_vs_target_loop_checks_actual_prefix_target_and_full_state": true,
+    "manifest_source_data_curriculum_runtime_checked_before_execution": true,
+    "existing_output_directory_and_files_cannot_be_overwritten": true
+  },
+  "optimized_mode_guard": {
+    "command": "python -B -O run_trial.py --help",
+    "exit_code": 1,
+    "rejected_before_training": true
+  },
+  "limitations": [
+    "Only legal k=1 notices are used; no malformed-frame or ordinary-frame classification claim.",
+    "The target width can also be inferred from Q length and address depth; ACK success does not establish control semantics.",
+    "All widths have equal lesson counts, but m=6 has more optimizer-prefix exposure because answers are longer.",
+    "No ordinary mathematics, position-specific adaptation, persistent profile state, or semantic growth is tested.",
+    "Formal driver policy is a pinned static review; this script never invokes execution or preflight runner commands."
+  ],
+  "command": "python -B independent_preflight_review.py --out independent_preflight_review.json",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "dataset.py": "ae1ef4c5130dba31e8ef20ccb1cdd9e128a67e960003ac157635cc74f8abc57a",
+    "learner.py": "94edb4dbc30b72d2d2eeebf2993cdcb37e8b85d4922d31b17fca1d04d47d7b72",
+    "run_trial.py": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "test_engineering.py": "3017ae9baa13236f4bb386b2cd44cb09ecfc592e09237987fe4b8f59f7402691",
+    "protocol.json": "6c15d6e940a0ec85d3d4ddfda6ce56e9211ac36f5facc4e86e790d6c93541b13",
+    "independent_preflight_review.py": "943886887539df79be69ff9d00f604ed4a8440d121341a5c79f76d152dd1e2d3"
+  },
+  "human_spec_sha256": "4b4d83a9a2920cd9971e39e3d157fc9d1d6ff8233972b36199bc1dc70d376c17",
+  "dependency_sha256": {
+    "UR1_codec": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8",
+    "P030_reference": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+  },
+  "nvidia": {
+    "status": "skipped_unavailable",
+    "calls": 0
+  }
+}

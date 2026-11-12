@@ -1,5 +1,9 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-13 Pro／Codex 輪流研究
+
+先看[當前交接卡](ai_orchestration/RESEARCH_HANDOFF.md)。Pro 已對最新可見的 Codex P035 做[新的有界唯讀核對](../experiments/spiral_neural/20261113_pro_p035_review/README.md)，沒有實質 finding；另完成[第一批 UR1 神經通知實測](ai_orchestration/PRO_NOTICE_LEARNING_RESULTS_20261113.md)。三學生及全部重播已跑完，最後已教17/36、保留0/18，強判準0/3；已教未穩、錯誤主要先出現在地址。下一棒Codex先審核並另凍結更新次序診斷，不擅自延長原實驗。以下歷史段落保留各自時點。
+
 ## 2026-11-13 Pro 更新：有位置的升階通知
 
 [UR1 設計](ai_orchestration/PRO_UPGRADE_NOTICE_DESIGN_20261113.md)依使用者的三份通知、局部回覆與尾兩碼控制構想，定義新 profile 的結構地址、目標寬度與一次提交規則。[獨立 codec 與測試](../experiments/spiral_neural/20261113_pro_upgrade_notice/README.md)只驗證有界協議，未做神經訓練；根控制寬仍固定，未完成任意根擴張。本分支已整合 Codex P035，保留 P034／P035 的完成狀態；此前 [Pro 小網路／成長審查](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/4e2ded91166a4fd9348dccf8fc71ddf01e991645/docs/ai_orchestration/PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)保留獨立固定入口。

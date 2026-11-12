@@ -1,0 +1,26 @@
+{
+  "preregistration_commit": "0b6de1d24481c2886833e412d173645fca98609c",
+  "approved_manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py",
+    "--execute",
+    "--manifest",
+    "experiments/spiral_neural/20261113_pro_notice_learning/frozen_manifest.json",
+    "--approved-manifest-sha",
+    "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+    "--out",
+    "experiments/spiral_neural/20261113_pro_notice_learning/formal_run"
+  ],
+  "working_directory": "repository_root",
+  "execution_count": 1,
+  "started_utc": "2026-11-12T18:56:59.792983+00:00",
+  "status": "completed",
+  "formal_output": "experiments/spiral_neural/20261113_pro_notice_learning/formal_run",
+  "stdout_file": "formal_stdout.log",
+  "exit_code": 0,
+  "finished_utc": "2026-11-12T19:00:30.370445+00:00",
+  "elapsed_seconds": 210.57702900100048,
+  "stdout_sha256": "e3f9baeeb7da72b64a0aca5351cf51df41e003ed41442a92787f447c12f82d38"
+}

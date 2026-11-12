@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "scope": "Pure-file part/ZIP/member hashes and CRC; no extraction or model execution.",
+  "publication_index_sha256": "5f70385c60cbcc3807b7350f8b6a3877491a06f8a91162926cfe59bdb8bd6dde",
+  "approved_manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "registration_commit": "0b6de1d24481c2886833e412d173645fca98609c",
+  "archives": [
+    {
+      "archive": "seed101.zip",
+      "parts": 6,
+      "members": 25,
+      "bytes": 2876356,
+      "sha256": "0a53df1b59f0af95b411d375e428bac2ed8af2e3ffd65343d9bd9a29685fcd0e"
+    },
+    {
+      "archive": "seed202.zip",
+      "parts": 6,
+      "members": 25,
+      "bytes": 2900978,
+      "sha256": "a58c088c9cf5f211b91d3769c9a34dc64076be6f282dcc68d486ffdbcae3f63d"
+    },
+    {
+      "archive": "seed303.zip",
+      "parts": 6,
+      "members": 25,
+      "bytes": 2904213,
+      "sha256": "6280c02a32e6bee1baa39361ab8ce8f3326457de2c5e617c6c2b384d9ce7dea9"
+    },
+    {
+      "archive": "run-metadata.zip",
+      "parts": 1,
+      "members": 7,
+      "bytes": 13888,
+      "sha256": "b229f76731bf1c32dbb52743d10881815c298c3f2954b86ddd0310ae781a7421"
+    }
+  ],
+  "payload_files": 19,
+  "zip_members": 82,
+  "previously_audited_formal_members": 79,
+  "external_run_metadata_members": [
+    "execution_record.json",
+    "formal_stdout.log",
+    "preflight_results.json"
+  ],
+  "payload_bytes": 8695435,
+  "uncompressed_bytes": 17548458,
+  "complete_audited_formal_artifacts_covered": true,
+  "formal_artifacts_unchanged": true,
+  "prior_neural_review_script_sha256": "4043eef52d71143fe9e3442d7f4554201e4931cee236a129a3ab3abf8102a5bd",
+  "prior_neural_review_inference_calls": 11350,
+  "prior_neural_review_inference_dense_MAC": 118403200,
+  "prior_neural_review_record_modified": false,
+  "publication_review_inference_calls": 0,
+  "publication_review_training_updates": 0,
+  "publication_review_training_replays": 0,
+  "author": "ChatGPT Pro / independent delegated publication review",
+  "command": "python -B independent_publication_review.py --out independent_publication_review.json",
+  "review_script_sha256": "35aaf324b7a5e21f20745f4081157dd02e8b3bf552b42b457b8b718f2852cee5"
+}
