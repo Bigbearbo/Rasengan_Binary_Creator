@@ -1,0 +1,850 @@
+{
+  "archive": {
+    "bytes": 152742,
+    "file": "inputs.zip",
+    "sha256": "7cd7b4d312ff944fe8c034db547b08698700002232b6ebee0bc3cddfc216324d"
+  },
+  "author": "Codex",
+  "curriculum_answer_prefix_support": {
+    "basis": "Unique current-format Echo optimizer-training examples once each, not trace-weighted and not model predictions",
+    "limit": "Shows possible answer-prefix completion shortcuts; does not identify the neural mechanism",
+    "rows": [
+      {
+        "correct_answer_prefix": "",
+        "next_bit_support_counts": {
+          "0": 4,
+          "1": 2
+        },
+        "output_data_position": 0,
+        "unique_training_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "correct_answer_prefix": "0",
+        "next_bit_support_counts": {
+          "0": 2,
+          "1": 2
+        },
+        "output_data_position": 1,
+        "unique_training_values": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "correct_answer_prefix": "1",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 1,
+        "unique_training_values": [
+          4,
+          7
+        ]
+      },
+      {
+        "correct_answer_prefix": "00",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          0,
+          1
+        ]
+      },
+      {
+        "correct_answer_prefix": "01",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          2,
+          3
+        ]
+      },
+      {
+        "correct_answer_prefix": "10",
+        "next_bit_support_counts": {
+          "0": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          4
+        ]
+      },
+      {
+        "correct_answer_prefix": "11",
+        "next_bit_support_counts": {
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          7
+        ]
+      }
+    ]
+  },
+  "external_model_calls": 0,
+  "files": {
+    "checkpoints/dynamic-101/2a_echo_op2/state.npz": {
+      "bytes": 46936,
+      "sha256": "ca9011ac192325dfe593c50060c7e686790fa8cd71c7bbd6b31210019ab70757"
+    },
+    "checkpoints/dynamic-101/2b_add_neg/state.npz": {
+      "bytes": 46936,
+      "sha256": "2de95f1d2b104a570300cd8c8e15bc76a2398527a9ee058fc2fdc7c2772306c4"
+    },
+    "checkpoints/dynamic-202/2a_echo_op2/state.npz": {
+      "bytes": 46936,
+      "sha256": "217b9db96102d048f67f079f789abf14e27fa51ff3f72b2bea20700be8faa3d7"
+    },
+    "checkpoints/dynamic-202/2b_add_neg/state.npz": {
+      "bytes": 46936,
+      "sha256": "2a15d0b5265f57933122aa053d36f4d4dea404e99d1e228ca0a52acee57943b6"
+    },
+    "checkpoints/dynamic-303/2a_echo_op2/state.npz": {
+      "bytes": 46936,
+      "sha256": "c4cb1b9cad8f1764223672cdda76f5b46154a5ebf6123c1389a689819ef64cd0"
+    },
+    "checkpoints/dynamic-303/2b_add_neg/state.npz": {
+      "bytes": 46936,
+      "sha256": "af70dd8d8f4f037438f577780b56ac520e9d8ded4b87de13375d65e1cd243d03"
+    },
+    "provenance/public-checkpoint-pins.json": {
+      "bytes": 1770,
+      "sha256": "40a07758e0a552fbd0640d768d6ca2fa0f2038118489114be7457eddbe27337e"
+    },
+    "provenance/published-checkpoints-verified.json": {
+      "bytes": 1350,
+      "sha256": "4f3322132d2bddc8b27a0186a0229ab02035a43afe3692fa77015c8e04dc1e13"
+    },
+    "reference/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    },
+    "reference/p030_reference.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    },
+    "traces/dynamic-101/0_echo_n1/trace.json": {
+      "bytes": 690,
+      "sha256": "beef6350a1d9f1a4d0cadb091272883eda23758a2127832d6047e0079f025771"
+    },
+    "traces/dynamic-101/1a_echo_n2/trace.json": {
+      "bytes": 1152,
+      "sha256": "63f88650c79e6892aa4e85e842a7be76e580a87617dc5c478e688a3b5a83629b"
+    },
+    "traces/dynamic-101/1b_echo_n3/trace.json": {
+      "bytes": 4386,
+      "sha256": "cced025eced3cdc81bb9ee7646c51b39017946903ca5a37484fe5bfd98c1b936"
+    },
+    "traces/dynamic-101/2a_echo_op2/trace.json": {
+      "bytes": 2244,
+      "sha256": "c1384be505d25ae07aaeec958620d8792e429fb14a8f4fd9d3ea69c2313656ca"
+    },
+    "traces/dynamic-101/2b_add_neg/trace.json": {
+      "bytes": 51000,
+      "sha256": "91a7a6a423d14747331562944863b201ccf3d67a832a89fca2b1a9c3cdfaf8f3"
+    },
+    "traces/dynamic-202/0_echo_n1/trace.json": {
+      "bytes": 960,
+      "sha256": "e20c5dfac1d2c69f64c08c95e28961ebd2f53bc53785fc50eb169b73251c965c"
+    },
+    "traces/dynamic-202/1a_echo_n2/trace.json": {
+      "bytes": 1088,
+      "sha256": "9a4743d33658b51a09396a2c8678977d849e9603f3bb03d2662e13fd5e74b2c7"
+    },
+    "traces/dynamic-202/1b_echo_n3/trace.json": {
+      "bytes": 4896,
+      "sha256": "e70914cbecabef0196c3aefcc27a6d45f3fb294c738beea821979071e4c71ff2"
+    },
+    "traces/dynamic-202/2a_echo_op2/trace.json": {
+      "bytes": 2652,
+      "sha256": "3c7c025ca66ead0113403047ee3c6347a471cda8a0b9af8432026ebb36d819b0"
+    },
+    "traces/dynamic-202/2b_add_neg/trace.json": {
+      "bytes": 51000,
+      "sha256": "a889926dc393b3d6dd054402c1143d05b24fcd4fb79cccec84dfc4704c131658"
+    },
+    "traces/dynamic-303/0_echo_n1/trace.json": {
+      "bytes": 900,
+      "sha256": "232e672cbbfb810389da6f820cb198818869725edc02f677f9e83d680430cf0a"
+    },
+    "traces/dynamic-303/1a_echo_n2/trace.json": {
+      "bytes": 960,
+      "sha256": "1099a3ddaabece6c798cd2612e173716cafe1838a4433c09e0cdc1036c059182"
+    },
+    "traces/dynamic-303/1b_echo_n3/trace.json": {
+      "bytes": 4080,
+      "sha256": "56bbbd297ed12a8716d9d7b56dbd28d21b57287590bf7f7bea1bc323e8db46e8"
+    },
+    "traces/dynamic-303/2a_echo_op2/trace.json": {
+      "bytes": 3060,
+      "sha256": "eba72131052c0abdb0fe9fe56092cb73291da2619558bc1ff7124cb52c4006f7"
+    },
+    "traces/dynamic-303/2b_add_neg/trace.json": {
+      "bytes": 51000,
+      "sha256": "bfdd51f5c0fdbf49d3b1c575dd91406fd9ae25459f75497d1de19850c1e0b373"
+    }
+  },
+  "formal_checkpoint_forward_calls": 0,
+  "id": "ECHO-COPY-READONLY-20261113",
+  "model_AST_sha256": {
+    "Model": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "Schedule": "263ab56b7296a6a321d13cb950ce9c342c2287ee094327700e5124838b9735b6",
+    "answer": "bdef04c338199faf203c69d49516a2e0b90dc385df2771038ca7c81e8a98933a",
+    "encode": "65849ffebc4e65c3bfa68289652faac3862481533d1b17081c7c4c6253ce90f5",
+    "split": "ff6d37c2edbbe95eb1c16c595f24b254fd131547dd73797573a4c63f8145b967"
+  },
+  "optimizer_calls": 0,
+  "protocol": {
+    "TF": "Five true-prefix logits per legal Echo question: three data bits, tail0, STOP. Cache24 data logits for all pair diagnostics; no extra pair inference",
+    "author": "Codex",
+    "checkpoint_shape": {
+      "H": 69,
+      "L": 13,
+      "parameters": 2073
+    },
+    "costs": "Record new inference calls and dense MAC H*(2L+3); pair computation adds zero inference. Historical NPZ lacks seed/events/train/inference counters, so restored learning state is exact but diagnostic counters start at0 and are not historical cost reconstruction",
+    "current_bit_pairs": "For each output position j, flip Q data bit j. Four unordered legal whole-Q pairs per j,12 total. Both sides share the same correct A[:j]. Report raw predicted-token flip separately from both-correct-and-follow",
+    "curriculum_prefix_support": "Report unique current Echo training examples' correct answer-prefix to next-bit support/count, independent of neural scores, without selecting a prediction or tie strategy",
+    "echo_format": "Q='01'+'00'+'0'+3 data bits+'0'; A=3 data bits+'0'; expected output=A+'S'",
+    "evaluated_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "excluded_primary_intervention": "Do not flip an already-output past data bit while freezing an incompatible old answer prefix",
+    "execution_gate": "Prepare input manifest and source freeze plus synthetic engineering first. Actual checkpoint inference requires explicit approved manifest SHA and a new output directory after coordinator/reviewer gate",
+    "exposure_fields": "Separate whole training Q, full teacher answer bits/answer with STOP, and per-evaluation raw-prefix label counts. Prefix categories unseen/same_only/conflict_only/mixed; include last label, first/last phase and global target index. A new whole Q does not imply every raw prefix is unseen",
+    "external_model_calls": 0,
+    "future_bit_pairs": "For every j<k, predict output bit j and flip later Q data bit k. Four unordered legal whole-Q pairs per (j,k),12 conditional pairs over8 distinct whole-Q pairs. Both sides share correct A[:j]. Report raw token invariance separately from both-correct-and-invariant",
+    "generation": "Original maximum8 actions, context13 overflow guard, STOP terminates; no forced STOP or answer-length oracle",
+    "historical_split": {
+      "optimizer_train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "test_already_viewed": [
+        6
+      ],
+      "validation_used_for_stage_gate": [
+        5
+      ]
+    },
+    "history": "Read each actual trace tuple (op,value,prediction_string), ignore prediction_string for teacher construction. Reconstruct true A and every optimizer raw prefix/next label in chronological phase/lesson/position order. Sum target occurrences must equal checkpoint.t. Validation/test probing does not count as optimizer exposure",
+    "history_order_check": "Original AST-only symbolic Schedule with seed=base seed+100*phase index must exactly reproduce every actual trace op/value pair; no optimizer replay",
+    "history_phases": [
+      {
+        "name": "0_echo_n1",
+        "nd": 1,
+        "nop": 1,
+        "ops": [
+          0
+        ],
+        "train": [
+          0,
+          1
+        ]
+      },
+      {
+        "name": "1a_echo_n2",
+        "nd": 2,
+        "nop": 1,
+        "ops": [
+          0
+        ],
+        "train": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "1b_echo_n3",
+        "nd": 3,
+        "nop": 1,
+        "ops": [
+          0
+        ],
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "name": "2a_echo_op2",
+        "nd": 3,
+        "nop": 2,
+        "ops": [
+          0
+        ],
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "name": "2b_add_neg",
+        "nd": 3,
+        "nop": 2,
+        "ops": [
+          0,
+          1
+        ],
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ]
+      }
+    ],
+    "id": "ECHO-COPY-READONLY-20261113",
+    "limits": "Eight three-bit inputs are an exposed finite domain, not proof of an unbounded copy algorithm or neural memorization. Before/after snapshots describe change only; additional updates and Echo exposure also change, so do not causally attribute the difference to Neg",
+    "pair_dependence": "Pairs reuse24 logits and overlap in questions;12 conditional future tests are not12 independent whole-question pairs or statistical samples",
+    "question": "Does this bounded Echo checkpoint behave consistently with copying input data, and what has actually been exposed to optimizer updates?",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "snapshots": [
+      "2a_echo_op2",
+      "2b_add_neg"
+    ],
+    "state_guard": "AST-only load the pinned reference Model after equality to historical Model AST. Never import either legacy module or main. Hard deny Model.step/lesson/loss_grad/grow and forward(training=True). Exact saved p/m/v/birth/t/L/H/growth_rng before/after; all source/checkpoint/trace raw hashes before/after",
+    "training_updates": 0
+  },
+  "public_checkpoint_provenance": {
+    "six_raw_checkpoint_SHA_matches": true,
+    "source_commit": "15b7788c1d50269f477b0681d64cbbd08708d65f",
+    "source_manifest": "experiments/spiral_neural/20261112_p024_p030/artifact-manifest.json",
+    "source_manifest_Git_blob": "438cd02aa060c88e531afb9aafb477ad61fb2036"
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schema": "echo-copy-input-manifest-v1",
+  "snapshots": {
+    "dynamic-101/2a_echo_op2": {
+      "learning_state_sha256": "5c7ecbb45f86a77e6bb2d621f98341e293b094b86c9d4908de3cdba0ae93475e",
+      "optimizer_targets_reconstructed": 2376,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 138,
+          "lessons": 46,
+          "op_value_lesson_counts": {
+            "0,0": 23,
+            "0,1": 23
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 101,
+          "symbolic_original_schedule_exact": true,
+          "targets": 138
+        },
+        {
+          "first_global_target_index_1based": 139,
+          "last_global_target_index_1based": 426,
+          "lessons": 72,
+          "op_value_lesson_counts": {
+            "0,0": 18,
+            "0,1": 18,
+            "0,2": 18,
+            "0,3": 18
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 201,
+          "symbolic_original_schedule_exact": true,
+          "targets": 288
+        },
+        {
+          "first_global_target_index_1based": 427,
+          "last_global_target_index_1based": 1716,
+          "lessons": 258,
+          "op_value_lesson_counts": {
+            "0,0": 43,
+            "0,1": 43,
+            "0,2": 43,
+            "0,3": 43,
+            "0,4": 43,
+            "0,7": 43
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 301,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1290
+        },
+        {
+          "first_global_target_index_1based": 1717,
+          "last_global_target_index_1based": 2376,
+          "lessons": 132,
+          "op_value_lesson_counts": {
+            "0,0": 22,
+            "0,1": 22,
+            "0,2": 22,
+            "0,3": 22,
+            "0,4": 22,
+            "0,7": 22
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 401,
+          "symbolic_original_schedule_exact": true,
+          "targets": 660
+        }
+      ]
+    },
+    "dynamic-101/2b_add_neg": {
+      "learning_state_sha256": "ed864d741e84e2b90b11192952816805078f1dba39e156fed0f22f107c49431a",
+      "optimizer_targets_reconstructed": 17376,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 138,
+          "lessons": 46,
+          "op_value_lesson_counts": {
+            "0,0": 23,
+            "0,1": 23
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 101,
+          "symbolic_original_schedule_exact": true,
+          "targets": 138
+        },
+        {
+          "first_global_target_index_1based": 139,
+          "last_global_target_index_1based": 426,
+          "lessons": 72,
+          "op_value_lesson_counts": {
+            "0,0": 18,
+            "0,1": 18,
+            "0,2": 18,
+            "0,3": 18
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 201,
+          "symbolic_original_schedule_exact": true,
+          "targets": 288
+        },
+        {
+          "first_global_target_index_1based": 427,
+          "last_global_target_index_1based": 1716,
+          "lessons": 258,
+          "op_value_lesson_counts": {
+            "0,0": 43,
+            "0,1": 43,
+            "0,2": 43,
+            "0,3": 43,
+            "0,4": 43,
+            "0,7": 43
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 301,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1290
+        },
+        {
+          "first_global_target_index_1based": 1717,
+          "last_global_target_index_1based": 2376,
+          "lessons": 132,
+          "op_value_lesson_counts": {
+            "0,0": 22,
+            "0,1": 22,
+            "0,2": 22,
+            "0,3": 22,
+            "0,4": 22,
+            "0,7": 22
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 401,
+          "symbolic_original_schedule_exact": true,
+          "targets": 660
+        },
+        {
+          "first_global_target_index_1based": 2377,
+          "last_global_target_index_1based": 17376,
+          "lessons": 3000,
+          "op_value_lesson_counts": {
+            "0,0": 150,
+            "0,1": 150,
+            "0,2": 150,
+            "0,3": 150,
+            "0,4": 150,
+            "0,7": 150,
+            "1,0": 350,
+            "1,1": 350,
+            "1,2": 350,
+            "1,3": 350,
+            "1,4": 350,
+            "1,7": 350
+          },
+          "phase": "2b_add_neg",
+          "schedule_seed": 501,
+          "symbolic_original_schedule_exact": true,
+          "targets": 15000
+        }
+      ]
+    },
+    "dynamic-202/2a_echo_op2": {
+      "learning_state_sha256": "41cae98e8b0e11cf26b01cd168ffe434dd599c4f0150dd8845a42107c0940ffc",
+      "optimizer_targets_reconstructed": 2684,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 192,
+          "lessons": 64,
+          "op_value_lesson_counts": {
+            "0,0": 32,
+            "0,1": 32
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 202,
+          "symbolic_original_schedule_exact": true,
+          "targets": 192
+        },
+        {
+          "first_global_target_index_1based": 193,
+          "last_global_target_index_1based": 464,
+          "lessons": 68,
+          "op_value_lesson_counts": {
+            "0,0": 17,
+            "0,1": 17,
+            "0,2": 17,
+            "0,3": 17
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 302,
+          "symbolic_original_schedule_exact": true,
+          "targets": 272
+        },
+        {
+          "first_global_target_index_1based": 465,
+          "last_global_target_index_1based": 1904,
+          "lessons": 288,
+          "op_value_lesson_counts": {
+            "0,0": 48,
+            "0,1": 48,
+            "0,2": 48,
+            "0,3": 48,
+            "0,4": 48,
+            "0,7": 48
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 402,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1440
+        },
+        {
+          "first_global_target_index_1based": 1905,
+          "last_global_target_index_1based": 2684,
+          "lessons": 156,
+          "op_value_lesson_counts": {
+            "0,0": 26,
+            "0,1": 26,
+            "0,2": 26,
+            "0,3": 26,
+            "0,4": 26,
+            "0,7": 26
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 502,
+          "symbolic_original_schedule_exact": true,
+          "targets": 780
+        }
+      ]
+    },
+    "dynamic-202/2b_add_neg": {
+      "learning_state_sha256": "ebbcf57ada3e24e64f153a36e1c2fd8f2e6a5472666f1f06dd6b85e330cc7f74",
+      "optimizer_targets_reconstructed": 17684,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 192,
+          "lessons": 64,
+          "op_value_lesson_counts": {
+            "0,0": 32,
+            "0,1": 32
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 202,
+          "symbolic_original_schedule_exact": true,
+          "targets": 192
+        },
+        {
+          "first_global_target_index_1based": 193,
+          "last_global_target_index_1based": 464,
+          "lessons": 68,
+          "op_value_lesson_counts": {
+            "0,0": 17,
+            "0,1": 17,
+            "0,2": 17,
+            "0,3": 17
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 302,
+          "symbolic_original_schedule_exact": true,
+          "targets": 272
+        },
+        {
+          "first_global_target_index_1based": 465,
+          "last_global_target_index_1based": 1904,
+          "lessons": 288,
+          "op_value_lesson_counts": {
+            "0,0": 48,
+            "0,1": 48,
+            "0,2": 48,
+            "0,3": 48,
+            "0,4": 48,
+            "0,7": 48
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 402,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1440
+        },
+        {
+          "first_global_target_index_1based": 1905,
+          "last_global_target_index_1based": 2684,
+          "lessons": 156,
+          "op_value_lesson_counts": {
+            "0,0": 26,
+            "0,1": 26,
+            "0,2": 26,
+            "0,3": 26,
+            "0,4": 26,
+            "0,7": 26
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 502,
+          "symbolic_original_schedule_exact": true,
+          "targets": 780
+        },
+        {
+          "first_global_target_index_1based": 2685,
+          "last_global_target_index_1based": 17684,
+          "lessons": 3000,
+          "op_value_lesson_counts": {
+            "0,0": 150,
+            "0,1": 150,
+            "0,2": 150,
+            "0,3": 150,
+            "0,4": 150,
+            "0,7": 150,
+            "1,0": 350,
+            "1,1": 350,
+            "1,2": 350,
+            "1,3": 350,
+            "1,4": 350,
+            "1,7": 350
+          },
+          "phase": "2b_add_neg",
+          "schedule_seed": 602,
+          "symbolic_original_schedule_exact": true,
+          "targets": 15000
+        }
+      ]
+    },
+    "dynamic-303/2a_echo_op2": {
+      "learning_state_sha256": "336cc42523be54714188b9955203016c221988d39615d3843884279f18c6e2a9",
+      "optimizer_targets_reconstructed": 2520,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 180,
+          "lessons": 60,
+          "op_value_lesson_counts": {
+            "0,0": 30,
+            "0,1": 30
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 303,
+          "symbolic_original_schedule_exact": true,
+          "targets": 180
+        },
+        {
+          "first_global_target_index_1based": 181,
+          "last_global_target_index_1based": 420,
+          "lessons": 60,
+          "op_value_lesson_counts": {
+            "0,0": 15,
+            "0,1": 15,
+            "0,2": 15,
+            "0,3": 15
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 403,
+          "symbolic_original_schedule_exact": true,
+          "targets": 240
+        },
+        {
+          "first_global_target_index_1based": 421,
+          "last_global_target_index_1based": 1620,
+          "lessons": 240,
+          "op_value_lesson_counts": {
+            "0,0": 40,
+            "0,1": 40,
+            "0,2": 40,
+            "0,3": 40,
+            "0,4": 40,
+            "0,7": 40
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 503,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1200
+        },
+        {
+          "first_global_target_index_1based": 1621,
+          "last_global_target_index_1based": 2520,
+          "lessons": 180,
+          "op_value_lesson_counts": {
+            "0,0": 30,
+            "0,1": 30,
+            "0,2": 30,
+            "0,3": 30,
+            "0,4": 30,
+            "0,7": 30
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 603,
+          "symbolic_original_schedule_exact": true,
+          "targets": 900
+        }
+      ]
+    },
+    "dynamic-303/2b_add_neg": {
+      "learning_state_sha256": "28c16d7f2fdb4832935290c807e8a83ed17ecc960e3d6467172bda081d6eaf7f",
+      "optimizer_targets_reconstructed": 17520,
+      "phase_exposures": [
+        {
+          "first_global_target_index_1based": 1,
+          "last_global_target_index_1based": 180,
+          "lessons": 60,
+          "op_value_lesson_counts": {
+            "0,0": 30,
+            "0,1": 30
+          },
+          "phase": "0_echo_n1",
+          "schedule_seed": 303,
+          "symbolic_original_schedule_exact": true,
+          "targets": 180
+        },
+        {
+          "first_global_target_index_1based": 181,
+          "last_global_target_index_1based": 420,
+          "lessons": 60,
+          "op_value_lesson_counts": {
+            "0,0": 15,
+            "0,1": 15,
+            "0,2": 15,
+            "0,3": 15
+          },
+          "phase": "1a_echo_n2",
+          "schedule_seed": 403,
+          "symbolic_original_schedule_exact": true,
+          "targets": 240
+        },
+        {
+          "first_global_target_index_1based": 421,
+          "last_global_target_index_1based": 1620,
+          "lessons": 240,
+          "op_value_lesson_counts": {
+            "0,0": 40,
+            "0,1": 40,
+            "0,2": 40,
+            "0,3": 40,
+            "0,4": 40,
+            "0,7": 40
+          },
+          "phase": "1b_echo_n3",
+          "schedule_seed": 503,
+          "symbolic_original_schedule_exact": true,
+          "targets": 1200
+        },
+        {
+          "first_global_target_index_1based": 1621,
+          "last_global_target_index_1based": 2520,
+          "lessons": 180,
+          "op_value_lesson_counts": {
+            "0,0": 30,
+            "0,1": 30,
+            "0,2": 30,
+            "0,3": 30,
+            "0,4": 30,
+            "0,7": 30
+          },
+          "phase": "2a_echo_op2",
+          "schedule_seed": 603,
+          "symbolic_original_schedule_exact": true,
+          "targets": 900
+        },
+        {
+          "first_global_target_index_1based": 2521,
+          "last_global_target_index_1based": 17520,
+          "lessons": 3000,
+          "op_value_lesson_counts": {
+            "0,0": 150,
+            "0,1": 150,
+            "0,2": 150,
+            "0,3": 150,
+            "0,4": 150,
+            "0,7": 150,
+            "1,0": 350,
+            "1,1": 350,
+            "1,2": 350,
+            "1,3": 350,
+            "1,4": 350,
+            "1,7": 350
+          },
+          "phase": "2b_add_neg",
+          "schedule_seed": 703,
+          "symbolic_original_schedule_exact": true,
+          "targets": 15000
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "diagnose.py": "74a3c3a38ea3deccf7f9844cd4943f566da4dd4cf78d6765cb22081b8d82ca42",
+    "protocol.json": "b03b62f8445ef081607eb7e5afe3df95f91647893aeb9c3dee7c9f0d2cbb7a8f",
+    "test_diagnose.py": "c8e15140b4776d675e758846dd90864244b2ecf5fa2dc51f2b1f67b7fca101ac"
+  },
+  "status": "prepared_before_new_checkpoint_inference"
+}
