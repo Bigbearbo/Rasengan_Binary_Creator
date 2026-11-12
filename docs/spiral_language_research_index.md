@@ -1,12 +1,18 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-13 使用者新題型：參數化多詞回音
+
+[Pro AE1設計](ai_orchestration/PRO_ADVANCED_ECHO_DESIGN_20261113.md)把「01＋回音算符＋長度參數＋多詞＋句號」具體化：固定五資訊位加尾零，先教一至四詞完整回音，再檢查同payload不同回音詞數。四詞答案24bits，另需STOP，原cap24不足；L80可用，新runner另設cap32。[codec／fixtures／檢查](../experiments/spiral_neural/20261113_pro_advanced_echo/README.md)是程式T，沒有新神經訓練。此題型成為下一優先，先前UR1地址多樣性候選保留。
+
+本輪已接續並讀取 Codex [PR #15](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/15) 的[固定Echo行為／曝光診斷](../experiments/spiral_neural/20261113_echo_copy_audit/RESULTS.md)，未重跑；其有限三位元照抄證據與後續退化不混為UR1或AE1結果。當前工作以[交接卡](ai_orchestration/RESEARCH_HANDOFF.md)為準。
+
 ## 2026-11-13 Pro／Codex 輪流研究
 
 先看[當前交接卡](ai_orchestration/RESEARCH_HANDOFF.md)及[Pro回音／八位元／UR1現況釐清](ai_orchestration/PRO_ECHO_AND_UR1_REVIEW_20261113.md)。最新 Codex [PR #13](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/13)已完成target更新次序對照：相同資料、初態、模型及訓練預算，已教17/36→34/36，保留仍0/18；新strong fit1/3。Pro本輪[唯讀審核](../experiments/spiral_neural/20261113_pro_echo_review/README.md)重算三個final共54題，scope內無finding，0新訓練。
 
 [固定回音人工構造](../experiments/spiral_neural/20261113_pro_echo_construction/README.md)在原生01 MLP以一次手工權重窮舉256題，全Q+STOP正確；只回答表達能力，非學習、非UR1成功。P027曾真正學會有限八位元回音；P029到八位元是固定網路增加資料寬度，並帶有舊`|`介面，不等於物理擴網或零樣本升階。
 
-先前的[P035有界核對](../experiments/spiral_neural/20261113_pro_p035_review/README.md)與[UR1原序神經實測](ai_orchestration/PRO_NOTICE_LEARNING_RESULTS_20261113.md)保留完整歷史；次序診斷已完成，不再當pending。下一棒Codex接續審閱，教材覆蓋候選需另立精確事前規格，沒有新訓練正在執行。以下歷史段落保留各自時點。
+先前的[P035有界核對](../experiments/spiral_neural/20261113_pro_p035_review/README.md)與[UR1原序神經實測](ai_orchestration/PRO_NOTICE_LEARNING_RESULTS_20261113.md)保留完整歷史；次序診斷已完成，不再當pending。當時下一候選為UR1教材覆蓋；本輪使用者已改提AE1，見上方最新入口，沒有新訓練正在執行。以下歷史段落保留各自時點。
 
 ## 2026-11-13 Pro 更新：有位置的升階通知
 
