@@ -1,0 +1,36 @@
+{
+  "author": "ChatGPT Pro",
+  "date": "2026-11-12",
+  "kind": "bounded_mechanism_probe",
+  "source_commit": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+  "source_sha256": "287f4c243b6c7e75a38b6b23c6833aa0064974956f16b481277ad693b14fb1de",
+  "script_sha256": "80384af5e823a84df24b4be8aa222806ce69d705d1463b5cadd508abb7619e37",
+  "results_sha256": "60b54f9be3480f2155fea12422a384523de3db25051e7cdf19ac68f579d50770",
+  "checkpoint_sha256": {
+    "101": "fac69f382dc163589c2fc1ebae8f63d7c08565c7e8a5a7ded45ce32a9350f692",
+    "202": "753ab48481910fc56775338547b0751caf055428db0539cdf02df1d91db31f82",
+    "303": "15aa4c9238d387a312ef0379e96376121cdc0c23437c16a58b88c25495fd8ece"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "execution": {
+    "saved_checkpoints": 3,
+    "same_raw_prefixes_per_seed": 40,
+    "old_and_new_generation_pairs_per_seed": 8,
+    "optimizer_steps_per_disposable_copy": 2,
+    "optimizer_steps_per_probe_execution": 6,
+    "complete_training_courses": 0,
+    "publication_replay_executions": 1,
+    "additional_agent_replay_available": true
+  },
+  "nvidia_status": "skipped_unavailable",
+  "nvidia_calls": 0,
+  "limitations": [
+    "The position-change comparison is an immediate pre-adaptation diagnostic, not a claim that zero-shot transfer was required.",
+    "Function preservation applies to identical old raw prefixes, not reencoded new-profile inputs.",
+    "Gradient nonzero checks establish learnability, not useful convergence or a growth-performance benefit.",
+    "Three checkpoints from the same tiny binary task do not establish encoding superiority or population accuracy."
+  ]
+}

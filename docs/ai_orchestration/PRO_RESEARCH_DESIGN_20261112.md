@@ -1,10 +1,12 @@
 # Pro：P033 後續研究設計
 
-作者／審查歸屬：**ChatGPT Pro**。日期：2026-11-12。原始狀態：**A，事前候選設計**；下文保留事前假說、規格與停止條件。這是Pro建議，不倒填為使用者原始構想。
+作者／審查歸屬：**ChatGPT Pro**。日期：2026-11-12。原始狀態：**A，事前候選設計**；下文保留Pro事前假說、規格與停止條件，不倒填為使用者原始構想。
 
-2026-11-12 Codex 執行更新：本文件在 PR #8 head `adca797c1afa98ed754ff616f73b691ab2925002` 的設計已凍結為[P034](../../experiments/spiral_neural/20261112_p034/README.md)。12條新E900及6條新B1均完成，E900 test12/12，B1已教27/72、val+test1/24、強判準0/6；歷史控制僅核對後引用。完整結果、成本與限制見P034。下文「尚未執行」或候選語氣是原始事前設計，不代表目前完成狀態；後續以[研究現況](CURRENT_RESEARCH_STATUS.md)為準。
+2026-11-13 Codex後續狀態：本文件的E900與一個B1配置已於[P034／PR #9](../../experiments/spiral_neural/20261112_p034/README.md)完成；擴充的輸入編碼×容量時序候選亦已完成[P035](../../experiments/spiral_neural/20261112_p035/README.md)。P034 E900 test12/12、B1強判準0/6；P035已教144/144、heldout5/48、配對interaction0/−1/0。下文未執行語氣為Pro原設計時點，當前狀態以[研究現況](CURRENT_RESEARCH_STATUS.md)為準。
 
 先讀[現況](CURRENT_RESEARCH_STATUS.md)、[Pro獨立證據](../../experiments/spiral_neural/20261112_pro_review/README.md)，以及Codex [PR #7固定報告](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e217bd0fd6cfe654062c3615ee2aa73a36d1ca71/experiments/spiral_neural/20261112_p033/P033-覆蓋與從頭混教實測結果-2026-11-12.md)。P033已跑出結果；本設計建立在結果上。
+
+適用範圍補正：本文件E900與B0/B1只隔離干擾與固定三位元表示問題，不能單獨檢驗SLE對其他編碼的優勢或跨階網路成長。使用者核心猜測的審查、onehot零值條件勘誤、Pro擴網探測與獨立編碼×成長候選比較，見[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)。不把新候選當已執行，也不改原生SLE NN／VM共同題庫主線。
 
 ## 1. 要回答的問題
 
@@ -68,6 +70,8 @@ B0是原H72 MLP，2,595參數。B1是一層、單頭、d16的causal self-attenti
 
 V1/V2（未見數值與未見算符—數值搭配）仍是獨立未完成項。B1若改善，下一步才凍結這項分流以及四／五資訊位的新holdout manifest；同時記錄每個語義值及每個(op,value)跨階是否曾出現。測試集不進訓練、不用測試正解調logit門檻。四／五位成功也須限定其profile與數學範圍。
 
+**L16不是長度外插方案。** 在op2、無END、答案為n_data個資訊位加尾零時，最大next-token prefix為`2*n_data+7`；data4需15位置，data5需17位置，已超出B1的16個位置embedding。擴位置表或改可延伸位置機制須另立規格，記錄新增初始化、舊權重／optimizer移植、生成長度上限與重算參數／MAC。不得截斷、默默沿用L16或把三位元結果稱為持續擴網成功。
+
 B1若失敗，不能推論SLE不可學或所有attention無效；也不要連續增加H、層數與新算符直到碰巧成功。先檢查已教題能否達標、首錯與前綴依賴，將下一個單一變因另立事前方案。整串輸出與去前綴內容是不同歸納偏好，須獨立記錄，不混入這一批。
 
 P031仍保留為共用教材與真NN／VM入口工程：另立啟蒙manifest，最初0和1都示教，當階沒有盲測就明說，升階不能把已見語義換碼後重新叫未見。這項建議不修改已封存題庫，更不是P032失敗原因。
@@ -79,4 +83,3 @@ P031仍保留為共用教材與真NN／VM入口工程：另立啟蒙manifest，�
 執行者以Codex T記新訓練；本文件仍為ChatGPT Pro A。使用者混合教學構想保留U歸屬。Pro本輪只讀診斷、封存核對及parser修復的T在[證據入口](../../experiments/spiral_neural/20261112_pro_review/README.md)另列。
 
 本次Pro環境`nvidia_status=skipped_unavailable`：沒有可用OpenRouter／NVIDIA工具或相應憑證環境變數，實際呼叫0次。這不否認Codex P033已有一次真API審查。執行新實驗時，若本機worker可用，派一項公開唯讀審查：檢查E900 no-op與Adam差異、B1的參數／成本公式、標籤可見性及反例。候選仍須程式驗證，不等待worker阻塞實驗，也不把模型意見當PASS。
-
