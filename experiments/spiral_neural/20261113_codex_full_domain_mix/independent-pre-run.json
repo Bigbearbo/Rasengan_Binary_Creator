@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "round_id": "FULL-DOMAIN-MIX-20261113",
+  "manifest_sha256": "dabdb58a54ffd93afa350f19876a53550bcfcfd6de9b5199ee8b3b26d2b8d658",
+  "inputs_zip_sha256": "82e5c9240d7217ee88399a4c84068715a336db208a3f942e956cb930fa5c4271",
+  "source_hashes": {
+    "protocol.json": "9e44825294777d8e48d2a5e8acea0ccb8ef3b784954ced8cc3bdf32709cce979",
+    "run_full_domain.py": "9c100c1b8d6e9d1aca4acfc0f5a89d1a4716286aae1fae44692cbb5d0066593e",
+    "test_full_domain.py": "1c1129dd6081773526060a138449745c2746214b2b21ec7079c90e07ff72d573"
+  },
+  "portable_archive_entries": 9,
+  "fresh_bundle_real_validator_passed_original_workspace_reads_blocked": true,
+  "fresh_input_files_before_after_exact": 6,
+  "complete_initial_states_independently_checked": 3,
+  "independent_frozen_schedules": 3,
+  "permutations_verified": 120,
+  "distinct_Q_per_epoch": 512,
+  "unique_consistent_teacher_prefixes_per_epoch": 5120,
+  "teacher_label_counts_per_epoch": {
+    "0": 2560,
+    "S": 512,
+    "1": 2048
+  },
+  "all_40epoch_schedules_are_fixed_before_any_score": true,
+  "source_review": {
+    "unchanged_native_P030_Model_AST": true,
+    "fresh_fixed_L23_H69_3453params_no_router_or_growth": true,
+    "only_Q_plus_prior_true_A_to_training": true,
+    "free_generation_only_Q_plus_generated_tokens": true,
+    "missing_STOP_context_overflow_explicit_no_truncation_or_forced_STOP": true,
+    "full512_exact_free_outputs_two_consecutive_epoch_stopping_else40cap": true,
+    "only_seed101_full_replay_with_independent_stop_and_full_epoch_states": true,
+    "seeds202_303_explicitly_not_planned_for_replay": true,
+    "final_TF_after_all_primary_and_planned_replay_reuses_final_free": true,
+    "primary_replay_epoch_probe_and_final_TF_costs_separate": true,
+    "per_target_prediction_loss_digest_without_per_target_statehash_claim": true
+  },
+  "synthetic_engineering_separate": {
+    "tests": 7,
+    "native_optimizer_updates": 6,
+    "native_inference_calls": 16
+  },
+  "interpretation_limits": [
+    "Full finite8-bit training-domain fit; scores control stopping and are not blind/heldout generalization.",
+    "Input width, window and parameters changed together with question count, so no pure number-of-examples causal attribution.",
+    "Finite-domain success cannot identify lookup versus copy/complement algorithm or internal routing.",
+    "No longer-width probe; n9 requires context25 beyond current23."
+  ],
+  "material_findings_remaining": [],
+  "required_root_before_formal": "Verify public Git preregistration exact raw bytes and this exact manifest/source freeze, then one fresh formal output directory.",
+  "reviewer_optimizer_calls": 0,
+  "reviewer_model_forward_calls": 0,
+  "reviewer_formal_students": 0,
+  "external_model_calls": 0
+}

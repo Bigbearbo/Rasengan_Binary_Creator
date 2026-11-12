@@ -1,0 +1,26 @@
+{
+  "answer": "Echo op0 copies8information bits, Neg op1 complements those8bits; both append syntax0 then external S",
+  "classification": "synthetic",
+  "cost": {
+    "max_updates_per_seed": 204800,
+    "targets_per_epoch": 5120,
+    "train_MAC_per_target": 6969
+  },
+  "data_domain": "All256 unsigned8bit values0..255 for each op;512distinct questions all used for training, no in-domain heldout holes",
+  "input": "Q='01'+2 operation information bits+'0'+8 numeric information bits+'0'; only Q plus answer prefix goes to the unchanged P030 tanh MLP",
+  "length_and_model": {
+    "A_bits": 9,
+    "H": 69,
+    "L": 23,
+    "Q_bits": 14,
+    "correct_next_STOP_input_bits": 23,
+    "generation_cap": 16,
+    "overflow": "contextguard,error,noforcedSTOP",
+    "parameters": 3453
+  },
+  "profile": "Fixed binary numeric operand; not an AE1 symbol dictionary or variable-length protocol",
+  "schedule": "Pre-generated seeded permutations of all512Q once per epoch, maximum40epochs, original teacher-forced CE per target",
+  "scope": "Three fresh seeds101/202/303; only seed101 designated replay. Longer9bit data would require25context at STOP and is not tested. Width and window differ from earlier3bit experiments, so no isolated data-quantity causal claim.",
+  "status": "Unexecuted prospective protocol, no neural scores supplied",
+  "stopping": "After every epoch, greedy evaluation on all512trainingQ. Stop only after2consecutive epochs with both ops256/256 full outputs including S, else stop at40. This is a training-fit gate, not a blind test."
+}

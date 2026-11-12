@@ -1,0 +1,31 @@
+{
+  "external_model_calls": 0,
+  "formal_inference_calls": 0,
+  "formal_optimizer_calls": 0,
+  "initial_states": {
+    "101": {
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "c88b2b73d98194f9d5eace079a22ed5c9c176a12e718d02f2d1420cf0ef6b15c"
+    },
+    "202": {
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "8530f42f9207409c737b797f45bcac604f8aedd607614a1ad5d49c91fd98246f"
+    },
+    "303": {
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "d934e5b76aadb47e6c4754073fc9315fa4dd78b454080c5958578fc0cc327d79"
+    }
+  },
+  "inputs_zip_sha256": "82e5c9240d7217ee88399a4c84068715a336db208a3f942e956cb930fa5c4271",
+  "manifest_sha256": "dabdb58a54ffd93afa350f19876a53550bcfcfd6de9b5199ee8b3b26d2b8d658",
+  "schedule_file_sha256": {
+    "101": "a2cf6a9503a8db99aa6649b3428aa0baf6591fd82abc3be394f4ee1861fc7e1d",
+    "202": "68d21fbfe89a13d605827db0c45e395f89b827b3cdb7079d8a8af9d966d2f794",
+    "303": "907b2fd64b5a900c2edd330f86ae77f8612626bee21ace835fcbcd012d403c7f"
+  },
+  "source_hashes": {
+    "protocol.json": "9e44825294777d8e48d2a5e8acea0ccb8ef3b784954ced8cc3bdf32709cce979",
+    "run_full_domain.py": "9c100c1b8d6e9d1aca4acfc0f5a89d1a4716286aae1fae44692cbb5d0066593e",
+    "test_full_domain.py": "1c1129dd6081773526060a138449745c2746214b2b21ec7079c90e07ff72d573"
+  }
+}

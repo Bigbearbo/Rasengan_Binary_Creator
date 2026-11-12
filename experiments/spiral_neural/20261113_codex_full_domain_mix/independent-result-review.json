@@ -1,0 +1,107 @@
+{
+  "actual_epoch_512_question_generations_verified": 67,
+  "actual_epochs_by_seed": {
+    "101": 26,
+    "202": 23,
+    "303": 18
+  },
+  "actual_full_replay_seeds": [
+    101
+  ],
+  "actual_primary_students": 3,
+  "all_exact_generation_TF_failures_curves_stops_and_costs": true,
+  "all_science_input_and_source_files_unchanged": true,
+  "audit_attempt_count": 1,
+  "audit_extra_dense_MAC": 1211750400,
+  "audit_extra_forward_calls": 358400,
+  "details": "review/post-run-details.json",
+  "each_epoch_and_student_numeric_proof_persisted": true,
+  "external_model_calls": 0,
+  "final_TF_logits_probabilities_CE_verified": 15360,
+  "final_scores_by_seed": {
+    "101": {
+      "0": {
+        "questions": 256,
+        "whole_correct": 256
+      },
+      "1": {
+        "questions": 256,
+        "whole_correct": 256
+      }
+    },
+    "202": {
+      "0": {
+        "questions": 256,
+        "whole_correct": 256
+      },
+      "1": {
+        "questions": 256,
+        "whole_correct": 256
+      }
+    },
+    "303": {
+      "0": {
+        "questions": 256,
+        "whole_correct": 256
+      },
+      "1": {
+        "questions": 256,
+        "whole_correct": 256
+      }
+    }
+  },
+  "first_full_training_epoch_by_seed": {
+    "101": 20,
+    "202": 22,
+    "303": 17
+  },
+  "formal_session": 77220,
+  "formal_wall_seconds": 245.96135050000157,
+  "frozen_initial_states_verified": 3,
+  "frozen_schedule_permutations_independently_verified": 120,
+  "independent_limit": "All archived full states, epoch free generations, final TF, grammar, schedules, aggregates, digests' form, stops and costs are checked. Raw per-target loss/prediction records and intermediate weight hashes were not archived; the auditor does not reconstruct their hidden contents or recompute gradients/optimizer trajectories.",
+  "inputs_zip_sha256": "82e5c9240d7217ee88399a4c84068715a336db208a3f942e956cb930fa5c4271",
+  "interpretation_limit": "Full finite8-bit training-domain fit with training-score stopping; not heldout/generalization or pure question-count causal evidence. Input width/window/parameters also changed; finite success does not identify an internal algorithm.",
+  "legacy_or_driver_modules_imported": false,
+  "manifest_sha256": "dabdb58a54ffd93afa350f19876a53550bcfcfd6de9b5199ee8b3b26d2b8d658",
+  "metadata": {
+    "actual_timing_trajectories": 4,
+    "epoch_progress_records": 93,
+    "preregistration_precedes_execution": true,
+    "receipt_sha256": "ad516a042c8e0f0609444faf6d7ae894162e46df946ca0db627735ecc879314d",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 11063,
+    "stdout_sha256": "4d54a9cc7cc4be54c6771c5708d2795bc24f2e941aaf45c4e97fc3e3cbb74ca1"
+  },
+  "metadata_checked_before_first_forward": true,
+  "native_final_TF_forward_calls": 15360,
+  "new_students": 0,
+  "not_replayed_seeds": [
+    202,
+    303
+  ],
+  "optimizer_calls": 0,
+  "preregistration_commit": "1d6ab7fd7fbb75525886226b10b1ed0a744ad9ff",
+  "primary_epoch_probe_forward_calls": 343040,
+  "primary_training_dense_MAC": 2390645760,
+  "primary_updates_evidenced_by_epoch_counters": 343040,
+  "replay_epoch_probe_forward_calls_seed101": 133120,
+  "replay_scope": "Frozen driver and actual exit0/timing/stdout evidence establish one independent target-loop replay of seed101, with each epoch prediction/loss digest, full arrays, generation and stop equality. Seeds202/303 are not replayed.",
+  "replay_training_dense_MAC_seed101": 927713280,
+  "replay_updates_seed101": 133120,
+  "root_confirmed_formal_exit0": true,
+  "science_fullstate_NPZ_verified": 73,
+  "source_hashes": {
+    "protocol.json": "9e44825294777d8e48d2a5e8acea0ccb8ef3b784954ced8cc3bdf32709cce979",
+    "run_full_domain.py": "9c100c1b8d6e9d1aca4acfc0f5a89d1a4716286aae1fae44692cbb5d0066593e",
+    "test_full_domain.py": "1c1129dd6081773526060a138449745c2746214b2b21ec7079c90e07ff72d573"
+  },
+  "status": "passed",
+  "stop_reasons_by_seed": {
+    "101": "two_consecutive_full_training_passes",
+    "202": "two_consecutive_full_training_passes",
+    "303": "two_consecutive_full_training_passes"
+  },
+  "whole_free_generations_verified": 34304
+}

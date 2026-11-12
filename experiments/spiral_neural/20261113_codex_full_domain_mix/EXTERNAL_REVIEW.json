@@ -1,0 +1,80 @@
+{
+  "Gemini": {
+    "calls": 0,
+    "reason": "Existing authenticated installation retained; prior analysis-only tool isolation unresolved, no resend or new login.",
+    "status": "skipped"
+  },
+  "NVIDIA": {
+    "calls": 1,
+    "candidate": {
+      "elapsed_ms": 0,
+      "evidence_refs": [
+        "context/full_domain_numeric.json"
+      ],
+      "execution_claim": "not_run",
+      "findings": [
+        {
+          "claim": "Complete fixed-domain mastery is established when both Echo and Neg operations achieve 256/256 correct outputs across all 512 distinct training questions and the context tail zero syntax is preserved.",
+          "evidence_refs": [
+            "context/full_domain_numeric.json"
+          ]
+        },
+        {
+          "claim": "The training-only stopping gate requires two consecutive epochs of full 256/256 output; full coverage IS the mastery signal, and stopping at 40 epochs without this result does not constitute a failure of the protocol.",
+          "evidence_refs": [
+            "context/full_domain_numeric.json"
+          ]
+        },
+        {
+          "claim": "Longer-length analogies (e.g., 9-bit data requiring 25 context) must be evaluated outside the current 8-bit fixed domain; treating context overflow as evidence of inability within this bounded scope is invalid per the protocol's explicit constraints.",
+          "evidence_refs": [
+            "context/full_domain_numeric.json"
+          ]
+        }
+      ],
+      "model_id": "nvidia/nemotron-3.5-lightning:free",
+      "recommended_next_step": "Validate fixed-domain 256/256 mastery across both ops using the epoch-based stopping gate; do not extend claims to unbounded lengths or invent neural scores.",
+      "status": "candidate",
+      "summary": "The protocol defines a synthetic full-domain numeric task where all 512 legal fixed 8-bit Echo/Neg questions are intentionally taught with no in-domain heldout holes. Mastery is certified by two consecutive epochs of perfect 256/256 accuracy including the S suffix, and context constraints (8-bit operands, tail-zero syntax) must be preserved. Any report claiming inability or partial failure must respect these bounded limits and the intentional full-coverage training design.",
+      "task_id": "FULL-DOMAIN-CLAIMS-001",
+      "unknowns": [],
+      "usage": null,
+      "worker": "nvidia"
+    },
+    "candidate_sha256": "d5cda5877cdc27e20390d8fbd64e28aa2bbac3a0210c7250ca4a07c78011a13d",
+    "cardinality_compliant": false,
+    "claim_reviews": [
+      {
+        "finding": 1,
+        "judgment": "Operationally correct only as a conditional definition; the actual gate additionally requires two consecutive epochs and exact STOP. No outcome exists at review time."
+      },
+      {
+        "finding": 2,
+        "judgment": "Clarify: reaching40without mastery is not a software execution failure, but the learning criterion remains failed and must be reported. Do not soften a negative learning result."
+      },
+      {
+        "finding": 3,
+        "judgment": "Length arithmetic independently checked: data9requires25context, beyond23. No longer-width claim is made."
+      }
+    ],
+    "coordinator_disposition": "Candidate scope reminders only; not independent evidence of learning or a code gate.",
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "no_retry": true,
+    "requested_findings": 2,
+    "returned_findings": 3,
+    "scientific_result_acceptance": false,
+    "seconds": 5.782,
+    "usage": {
+      "completion_tokens": 421,
+      "cost": 0,
+      "prompt_tokens": 1187,
+      "total_tokens": 1608
+    }
+  },
+  "context_ref": "context/full_domain_numeric.json",
+  "context_sha256": "822e30d3fbd53a7e697045807272d5234ddf8a7d4dd441065a14c4e9a74fb571",
+  "local_verification": "Independent protocol arithmetic and actual driver/portable-input gate; Model forward/optimizer blocked during prereview. See independent-pre-run.json.",
+  "native_OpenAI_review_is_external_worker": false,
+  "round": "FULL-DOMAIN-MIX-20261113",
+  "scope": "Prospective public synthetic finite-domain methodology only; no neural outcomes, private conversation or credentials sent."
+}

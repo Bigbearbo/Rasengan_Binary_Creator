@@ -1,0 +1,151 @@
+{
+  "all_confirmed_full_train_fit": true,
+  "array_bytes_per_student": 69060,
+  "author": "Codex",
+  "exact_full_replays": [
+    101
+  ],
+  "external_model_calls": 0,
+  "final_TF_inference_MAC": 51932160,
+  "final_TF_inference_calls": 15360,
+  "id": "FULL-DOMAIN-NUMERIC8-MIX-20261113",
+  "limits": "No heldout/generalization test or unseen operand claim. Correct finite-domain performance does not prove unbounded algorithms, internal routing, physical growth or notification semantics",
+  "manifest_sha256": "dabdb58a54ffd93afa350f19876a53550bcfcfd6de9b5199ee8b3b26d2b8d658",
+  "preregistration_commit": "1d6ab7fd7fbb75525886226b10b1ed0a744ad9ff",
+  "primary_epoch_probe_inference_MAC": 1159818240,
+  "primary_epoch_probe_inference_calls": 343040,
+  "primary_students": 3,
+  "primary_training_dense_MAC": 2390645760,
+  "primary_updates": 343040,
+  "replay_epoch_probe_inference_MAC": 450078720,
+  "replay_epoch_probe_inference_calls": 133120,
+  "replay_training_dense_MAC": 927713280,
+  "replay_updates": 133120,
+  "scope": "Full finite8-bit-domain learning and retention during mixed Echo/Neg training. Necessary context and data-width changes mean this is not a pure question-count causal comparison with the earlier3-bit experiment",
+  "status": "complete",
+  "students": [
+    {
+      "epochs": 26,
+      "final_TF_inference_MAC": 17310720,
+      "final_TF_inference_calls": 5120,
+      "final_TF_metrics": {
+        "0": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        },
+        "1": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        }
+      },
+      "final_full_state_sha256": "7d396ea73d7a274de93954a1186d2bd7e773ae68490256795829548f5e97e375",
+      "final_scores": {
+        "0": {
+          "questions": 256,
+          "whole_correct": 256
+        },
+        "1": {
+          "questions": 256,
+          "whole_correct": 256
+        }
+      },
+      "p_m_v_birth_array_bytes": 69060,
+      "probe_inference_MAC": 450078720,
+      "probe_inference_calls": 133120,
+      "replay_status": "complete_exact",
+      "seed": 101,
+      "stop_reason": "two_consecutive_full_training_passes",
+      "streak": 2,
+      "training_dense_MAC": 927713280,
+      "training_updates": 133120
+    },
+    {
+      "epochs": 23,
+      "final_TF_inference_MAC": 17310720,
+      "final_TF_inference_calls": 5120,
+      "final_TF_metrics": {
+        "0": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        },
+        "1": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        }
+      },
+      "final_full_state_sha256": "f65c680a080460ecd9eaafcfdcd4276151ee47a3552d4a6f1b8676f56dddb6a2",
+      "final_scores": {
+        "0": {
+          "questions": 256,
+          "whole_correct": 256
+        },
+        "1": {
+          "questions": 256,
+          "whole_correct": 256
+        }
+      },
+      "p_m_v_birth_array_bytes": 69060,
+      "probe_inference_MAC": 398146560,
+      "probe_inference_calls": 117760,
+      "replay_status": "not_planned",
+      "seed": 202,
+      "stop_reason": "two_consecutive_full_training_passes",
+      "streak": 2,
+      "training_dense_MAC": 820669440,
+      "training_updates": 117760
+    },
+    {
+      "epochs": 18,
+      "final_TF_inference_MAC": 17310720,
+      "final_TF_inference_calls": 5120,
+      "final_TF_metrics": {
+        "0": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        },
+        "1": {
+          "TF_STOP_correct": 256,
+          "TF_data_correct": 2048,
+          "TF_data_targets": 2048,
+          "TF_tail0_correct": 256,
+          "questions": 256
+        }
+      },
+      "final_full_state_sha256": "271f61b20290cdb6892605d0acaf573c4de8fd2c5a7f24c47e8c6c4af2528633",
+      "final_scores": {
+        "0": {
+          "questions": 256,
+          "whole_correct": 256
+        },
+        "1": {
+          "questions": 256,
+          "whole_correct": 256
+        }
+      },
+      "p_m_v_birth_array_bytes": 69060,
+      "probe_inference_MAC": 311592960,
+      "probe_inference_calls": 92160,
+      "replay_status": "not_planned",
+      "seed": 303,
+      "stop_reason": "two_consecutive_full_training_passes",
+      "streak": 2,
+      "training_dense_MAC": 642263040,
+      "training_updates": 92160
+    }
+  ]
+}
