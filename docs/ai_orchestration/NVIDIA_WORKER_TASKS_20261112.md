@@ -26,17 +26,15 @@
 
 ## 首批分工任務：按需要取用，優先前兩項
 
-### N-01｜國高中數學 → 螺旋語語義需求（立即優先，P031）
+### N-01｜國小數學入門 → SLE 題庫語義需求（目前最高優先，U 修正）
 
-**輸入**：
-- `docs/ai_orchestration/P031_數學題庫與重新編碼對照研究_20261112.md` 的 0B、3B、題庫規格；
-- `docs/references/MLP_paper4_zh_original.md` 的第 3–5 章**實際引用的原始詞典片段**；
-- `experiments/spiral_parser/README.md` 的已知 profile/解析限制；
-- 以幾個合法現有簡單算符例題建立語法參照，不塞整個倉庫給模型。
+**必讀**：[NVIDIA_ELEMENTARY_MATH_MEMORY_20261112.md](NVIDIA_ELEMENTARY_MATH_MEMORY_20261112.md)。作者要求先教國小，不從國高中起跳；兩學生（NN/倉鼠 VM）共用**同一份 SLE raw bitstream 題庫**。對照 plain binary 是另行實驗，不是 VM 的教材。
 
-**任務**：產出 24 個由簡到難的國高中數學**題型模板/例題**（四則、進位、一元方程、分數、二元方程、數列、函數等），給每種中立 `TaskCase` 題意、正解、`required_semantics`、所需運算符、作用域/型別、是否已有 SLE 合法詞碼；**不存在原始或已分配的詞碼一律標記 `pending-vocabulary`，不得自創詞碼宣稱正式**。第一輪以 2–4 bit 短整數為多數，另加至少 6 個邊界/反例；不要代替神經網路求解。
-  
-**交付**：可機器驗證的候選 JSON（或 JSONL）+ 解釋文件，標註推定與已查到的原始詞碼分開；允許 Codex 以合成案例建立 corpus，但**未經 SLE 編解碼器 round-trip 不得納入正式題庫**。
+第一輪：由 NVIDIA 設計 P0/P1/P2 共 24 個短、可驗證的**候選題**，包含讀數、Echo、Zero、比較／後繼、無進位簡單加減及必要邊界；附中立 AST、教師正解、需要的 SLE 語義、已分配/待分配詞碼狀態、舊知識保留、未見數字泛化期待。若原有 SLE 尚無合法比較/加法算子，只標 `pending-vocabulary`，**不得猜造正式原詞碼**。**24題只作實作和測試種子，不是夠訓練的資料量**。
+
+第二輪在第一輪合法性驗收後才提出 P3/P4 進位、借位、乘除；國中高中、AMC、模乘延後。Codex 執行 `TaskCase→SLE→TaskCase` 和教師 oracle、真實 NN/VM 互通驗收，不得將 NVIDIA 會算數冒充學生學會數學。
+
+**記憶規則**：NVIDIA 每次取得相關已確認的 `INDEX/current/grammar/evidence` 資料片段與 task refs，不要每天重新灌整份歷史。候選放本機 SQLite/JSON 任務日誌，Codex 確認後才提升為共用 Markdown confirmed；SNL-MEM 與 Markdown 同題等預算平行比較，不能預設 SNL 更好。見新增的記憶研究計劃。
 
 ### N-02｜SLE parser 對抗性檢查（立即優先，P030/P031）
 
