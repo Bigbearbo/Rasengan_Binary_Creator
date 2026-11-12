@@ -1,0 +1,13 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_dynamic_scaffold.cpp -o build/test_tree_dynamic_scaffold
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_dynamic_scaffold
+PASS guest adds dynamic category and operator keys, pending leaf, capacity and inheritance
+
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_vm.cpp -o build/test_vm
+ASAN_OPTIONS=detect_leaks=0 ./build/test_vm
+PASS: decoding, READ, inheritance, I/O, COPY, branching, protection, budget; 6000 random guests
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_vm.cpp -o build/test_tree_vm
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_vm
+PASS VM tree add/find, duplicate, full, missing parent, inheritance
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_pending_context.cpp -o build/test_tree_pending_context
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_pending_context
+PASS guest records paired context and learns two working tree routes

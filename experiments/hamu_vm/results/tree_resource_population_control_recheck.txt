@@ -1,0 +1,1 @@
+PASS population controls: extinction without reward, earned reproduction, idle lineage excluded, replenishment, both founder orders

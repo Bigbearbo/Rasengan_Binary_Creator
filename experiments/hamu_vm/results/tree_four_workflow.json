@@ -1,0 +1,37 @@
+{
+  "batch_start": 1793446581.1535275,
+  "first_test_start": 1793446770.899562,
+  "attempts": [
+    {
+      "kind": "initial_batch",
+      "exit_code": 0,
+      "seconds": 212.15
+    }
+  ],
+  "pretest_review_corrections": [
+    "Removed redundant pointer increment after immediate single-bit write during source review."
+  ],
+  "code_files_before_first_test": [
+    "Makefile",
+    "src/tree_four_layout.hpp",
+    "src/tree_four_learning_turn.hpp",
+    "src/tree_four_vm.hpp",
+    "src/tree_width_choice_vm.hpp",
+    "src/tree_width_pending_vm.hpp",
+    "src/tree_width_route_vm.hpp",
+    "tests/test_tree_four_learning.cpp"
+  ],
+  "lines_added": 316,
+  "lines_removed": 4,
+  "seconds_before_first_test": 189.75,
+  "test_driven_rework_cycles": 0,
+  "approximate_compile_seconds": 9.88,
+  "approximate_execution_seconds": 202.27,
+  "timing_note": "Compile/execution split estimated from executable mtime; affected regressions overlapped part of the new test, so wall times are not isolated benchmarks.",
+  "inference": "One related batch completed with no test-driven code correction. No matched small-batch control; no causal efficiency percentage claimed.",
+  "affected_regressions": {
+    "exit_code": 0,
+    "seconds": 74.29
+  },
+  "batch_verified_wall_seconds": 493.85
+}

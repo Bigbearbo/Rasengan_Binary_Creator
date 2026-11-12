@@ -1,0 +1,28 @@
+{
+  "files": [
+    "Makefile",
+    "src/tree_four_layout.hpp",
+    "src/tree_four_vm.hpp",
+    "src/tree_observed_learner.hpp",
+    "src/tree_observed_vm.hpp",
+    "src/tree_width_pending_vm.hpp",
+    "tests/test_tree_observed_learner.cpp"
+  ],
+  "added_lines": 340,
+  "deleted_lines": 4,
+  "test_attempts": [
+    {
+      "exit_code": 0,
+      "seconds": 726.71
+    }
+  ],
+  "test_driven_code_corrections": 0,
+  "affected_regressions": {
+    "targets": [
+      "tree-four-learning-test",
+      "tree-width-learning-test"
+    ],
+    "status": "PASS"
+  },
+  "limits": "Tests ran partly concurrently. No matched performance comparison; VM decoding bottleneck is a profiling hypothesis, not a measured attribution."
+}

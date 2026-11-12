@@ -1,0 +1,6 @@
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=52,vm_steps=1774,peak_steps=84,choice_steps=1119,record_steps=655,read_steps=0,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS optimized same-question same-feedback replay
+legacy,events=15,fresh=11,learned=4,vm_calls=41,vm_steps=2326,peak_steps=203,choice_steps=2097,record_steps=139,read_steps=90,used_nodes=13,used_data_bits=117,reserved_data_bits=279
+compact,events=15,fresh=11,learned=4,vm_calls=67,vm_steps=2599,peak_steps=84,choice_steps=1119,record_steps=655,read_steps=825,used_nodes=2,used_data_bits=42,reserved_data_bits=651
+PASS same-question same-feedback same-revisit differential replay

@@ -1,0 +1,13 @@
+mkdir -p build
+g++ -std=c++17 -O2 tests/test_tree_segmented_vm.cpp -o build/test_tree_segmented_vm_stress
+./build/test_tree_segmented_vm_stress --stress-10000
+PASS segmented VM 10000 paths, nodes=11431, capacity=16384, growth_events=11, pages=529, native_row_bytes=65596, program_start=350, indexed_rebuild_rows=16375, indexed_lookups=60462, linear_rows=262960871, inheritance and atomic rollback
+mkdir -p build
+g++ -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_wide_index.cpp -o build/test_tree_wide_index
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_wide_index
+PASS: VM indexed/linear differential 600 paths, 7 grows, reused ID, guest edit, inheritance, rollback/retry
+indexed scanned_rows=3744, linear scanned_rows=789958, cache_builds=9, cache_lookups=3105, cache_updates=689, live_index_entries=688, cache_bytes=4096, cache_probes=17161, next_free_id=689
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_wide_vm_growth.cpp -o build/test_tree_wide_vm_growth
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_wide_vm_growth
+PASS guest VM wide tree 600 paths, maximum handle 688, capacity 1023, 7 dynamic growth events, scanned_rows=2720, reserved_tree_bits=17391, index_slots=1024, index_allocated_bytes=4096, index_probes=14385, inheritance, action memory, layout mismatch, atomic full refusal
+PASS VM tree add/find, duplicate, full, missing parent, inheritance
