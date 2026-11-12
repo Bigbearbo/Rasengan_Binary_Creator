@@ -1,0 +1,72 @@
+{
+  "bank_unpacked": {
+    "manifest.json": {
+      "bytes": 67295,
+      "sha256": "307bc51f683668d695d923872a614529a73f567c877b2a9b418c737db1740bf6"
+    },
+    "questions.jsonl": {
+      "bytes": 109748,
+      "sha256": "33bd62fcad11dac6f4d5e5424365a48d76f40f2dbadcb47c47d9493913e21a57"
+    },
+    "teacher-labels.jsonl": {
+      "bytes": 766103,
+      "sha256": "476eb022c13e8172e93c408e0b11d46cbbf1d8381c415f2c724075c17c22a40c"
+    }
+  },
+  "experiments/spiral_teaching/math_benchmark/P031-共用題庫第一批結果-2026-11-12.md": {
+    "bytes": 4618,
+    "sha256": "8f369ac9a2d6cde2bb5aaf801649d8f87bb77a0e631ba1882cc1b398dc00fc1b"
+  },
+  "experiments/spiral_teaching/math_benchmark/README.md": {
+    "bytes": 3930,
+    "sha256": "1e651d0ef4065ef3eb74c1eaaf9bafe8f80400f2e1db679f24ab71f605456d29"
+  },
+  "experiments/spiral_teaching/math_benchmark/bank.zip": {
+    "bytes": 89172,
+    "sha256": "8c91ba725e9a2d29c38cbbf8b007d600eb75a4f7af0d89abf7b4b85c6f72ca6c"
+  },
+  "experiments/spiral_teaching/math_benchmark/checkpoint_probe.py": {
+    "bytes": 4781,
+    "sha256": "83fa4ad8abba6ce8362dd386aeccafae16e569b79487f7ce92a48da7f8ec791b"
+  },
+  "experiments/spiral_teaching/math_benchmark/evidence/compact.json": {
+    "bytes": 1684,
+    "sha256": "416db4fc07cc6affad100868acd415e2f191a82a9b608b5f881368a3f895eacd"
+  },
+  "experiments/spiral_teaching/math_benchmark/evidence/lengths.json": {
+    "bytes": 1985,
+    "sha256": "36eda505869a10921f47c276ded65715db41c1eb72dcf9e97e2221864d48b962"
+  },
+  "experiments/spiral_teaching/math_benchmark/evidence/nn-compact.json": {
+    "bytes": 2432,
+    "sha256": "c5bb69fcc2b1da98b375c3c445c04f79397a996abe31bea9cec650db1991d556"
+  },
+  "experiments/spiral_teaching/math_benchmark/evidence/nn-predictions.json": {
+    "bytes": 9332,
+    "sha256": "78ac4e8714985db10751929eec513f7de3d65b09a2c55937dddd7f82e950db94"
+  },
+  "experiments/spiral_teaching/math_benchmark/evidence/tests.txt": {
+    "bytes": 2126,
+    "sha256": "ea6e21c1aa42cc1e4f94b043b5db1b6d4fe086398050d296642c094358a151df"
+  },
+  "experiments/spiral_teaching/math_benchmark/reference_codec.py": {
+    "bytes": 12628,
+    "sha256": "56f337ee606f479ddf590d774235729d99d64ec54d5ac755822b87bd54b0afb4"
+  },
+  "experiments/spiral_teaching/math_benchmark/run_checks.py": {
+    "bytes": 3571,
+    "sha256": "c2ad86afe79cb811cdbdf7b5d0b1a50bf9aa2fa80156fee1f42a4c3b2a0a3356"
+  },
+  "experiments/spiral_teaching/math_benchmark/student_io.py": {
+    "bytes": 7501,
+    "sha256": "903ac64564a58852689283ef972e38bba3fda82f31a3ca25a45b1b0574770281"
+  },
+  "experiments/spiral_teaching/math_benchmark/teacher.py": {
+    "bytes": 8840,
+    "sha256": "b27ba59d71d3e7798170008befbef05aaadb7705fbd36f177f2070fbca36a708"
+  },
+  "experiments/spiral_teaching/math_benchmark/test_bank.py": {
+    "bytes": 9984,
+    "sha256": "1727a3ec2125ce916a290c894d05e606b553d3b75f9a46a742e17f4101f46b0d"
+  }
+}

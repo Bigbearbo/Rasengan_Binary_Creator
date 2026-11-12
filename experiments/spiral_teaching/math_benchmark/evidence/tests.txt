@@ -1,0 +1,22 @@
+test_answer_computation_cannot_change_question_encoding (test_bank.BankTests.test_answer_computation_cannot_change_question_encoding) ... ok
+test_cut_is_bare_information_bits (test_bank.BankTests.test_cut_is_bare_information_bits) ... ok
+test_exhaustive_existing_codec_parity (test_bank.BankTests.test_exhaustive_existing_codec_parity) ... ok
+test_full_round_trip_and_binary_alphabet (test_bank.BankTests.test_full_round_trip_and_binary_alphabet) ... ok
+test_highwater_survives_removed_operator_and_curriculum_never_downgrades (test_bank.BankTests.test_highwater_survives_removed_operator_and_curriculum_never_downgrades) ... ok
+test_invalid_profile_and_operand_rejected (test_bank.BankTests.test_invalid_profile_and_operand_rejected) ... ok
+test_label_free_same_raw_nn_vm_transport (test_bank.BankTests.test_label_free_same_raw_nn_vm_transport) ... ok
+test_malformed_questions_rejected (test_bank.BankTests.test_malformed_questions_rejected) ... ok
+test_native_end_equal_data_and_answer_not_stop (test_bank.BankTests.test_native_end_equal_data_and_answer_not_stop) ... ok
+test_no_split_leakage_across_width_version_layer_or_swaps (test_bank.BankTests.test_no_split_leakage_across_width_version_layer_or_swaps) ... ok
+test_paper4_startup_and_delayed_end (test_bank.BankTests.test_paper4_startup_and_delayed_end) ... ok
+test_rebuild_exact_bytes_and_no_overwrite (test_bank.BankTests.test_rebuild_exact_bytes_and_no_overwrite) ... ok
+test_reserved_and_undefined_operator_rejected (test_bank.BankTests.test_reserved_and_undefined_operator_rejected) ... ok
+test_strict_output_stop_and_exact_offline_grading (test_bank.BankTests.test_strict_output_stop_and_exact_offline_grading) ... ok
+test_tamper_questions_and_labels_rejected (test_bank.BankTests.test_tamper_questions_and_labels_rejected) ... ok
+test_version_alias_is_explicit (test_bank.BankTests.test_version_alias_is_explicit) ... ok
+test_width_growth_preserves_low_bits_and_ids (test_bank.BankTests.test_width_growth_preserves_low_bits_and_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.639s
+
+OK

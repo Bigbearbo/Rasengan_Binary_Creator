@@ -11,3 +11,11 @@
 本批保存程式原始快照、可攜副本、精簡JSON/CSV、圖與checkpoint；完整逐題trace留本機，以SHA清單供重跑比對。無私人聊天、帳號狀態、Telegram資料或憑證。
 
 P030第一批不是完整P030成功：多數學生在Neg/Zero未教值失敗，一個END驗證過關學生test仍1/3。後接神經轉碼器與P031多類數學比較尚未實作，請先讀交接再規劃。
+
+## P031 第一批實作補記
+
+- [共用 SLE 題庫與重跑工具](../../experiments/spiral_teaching/math_benchmark/README.md)
+- [本批結果與限制](../../experiments/spiral_teaching/math_benchmark/P031-共用題庫第一批結果-2026-11-12.md)
+- [完整1,342題合成題庫封存](../../experiments/spiral_teaching/math_benchmark/BANK_ARCHIVE.md)
+
+已實跑17/17題庫與介面驗收，三個既有NN透過共用輸入完成48題唯讀推論。真倉鼠VM尚未執行、新NN訓練與國高中數學／神經翻譯仍未完成，不將題庫可用等同兩路學生學會。

@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "kind": "actual-NN-inference-integration",
+  "interpretation": "P030 already-exposed truth table; bank splits differ from original P030; not new blind generalization",
+  "new_training": false,
+  "vm_status": "not_executed",
+  "model_source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+  "numpy": "2.3.5",
+  "wall_seconds": 0.24318199999834178,
+  "models": [
+    {
+      "seed": 101,
+      "checkpoint_sha256": "2de95f1d2b104a570300cd8c8e15bc76a2398527a9ee058fc2fdc7c2772306c4",
+      "shape": [
+        13,
+        69
+      ],
+      "parameters": 2073,
+      "counts": {
+        "all": {
+          "correct": 14,
+          "total": 16
+        },
+        "train": {
+          "correct": 9,
+          "total": 10
+        },
+        "val": {
+          "correct": 3,
+          "total": 3
+        },
+        "test": {
+          "correct": 2,
+          "total": 3
+        }
+      },
+      "syntactically_completed": 16,
+      "prediction_replay_equal": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "seed": 202,
+      "checkpoint_sha256": "2a15d0b5265f57933122aa053d36f4d4dea404e99d1e228ca0a52acee57943b6",
+      "shape": [
+        13,
+        69
+      ],
+      "parameters": 2073,
+      "counts": {
+        "all": {
+          "correct": 13,
+          "total": 16
+        },
+        "train": {
+          "correct": 9,
+          "total": 10
+        },
+        "val": {
+          "correct": 3,
+          "total": 3
+        },
+        "test": {
+          "correct": 1,
+          "total": 3
+        }
+      },
+      "syntactically_completed": 16,
+      "prediction_replay_equal": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "seed": 303,
+      "checkpoint_sha256": "af70dd8d8f4f037438f577780b56ac520e9d8ded4b87de13375d65e1cd243d03",
+      "shape": [
+        13,
+        69
+      ],
+      "parameters": 2073,
+      "counts": {
+        "all": {
+          "correct": 13,
+          "total": 16
+        },
+        "train": {
+          "correct": 8,
+          "total": 10
+        },
+        "val": {
+          "correct": 3,
+          "total": 3
+        },
+        "test": {
+          "correct": 2,
+          "total": 3
+        }
+      },
+      "syntactically_completed": 16,
+      "prediction_replay_equal": true,
+      "checkpoint_unchanged": true
+    }
+  ]
+}
