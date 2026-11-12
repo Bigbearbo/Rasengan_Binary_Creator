@@ -26,11 +26,11 @@ Do not confuse these code families, or treat historical draft documents as the c
 
 ## Current research status and Pro follow-up design (2026-11-12)
 
-Read [CURRENT_RESEARCH_STATUS.md](docs/ai_orchestration/CURRENT_RESEARCH_STATUS.md) before planning new SLE/NN work. It pins the separate P031/P032/P033 evidence revisions and distinguishes user direction, Codex training results, ChatGPT Pro's independent checks, and untested proposals.
+Read [CURRENT_RESEARCH_STATUS.md](docs/ai_orchestration/CURRENT_RESEARCH_STATUS.md) before planning new SLE/NN work. It pins the separate P031/P032/P033/P034 evidence revisions and distinguishes user direction, Codex training results, ChatGPT Pro's independent checks, and untested proposals.
 
 **P033 diagnosis, coverage and teaching-order controls have been executed in [PR #7](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/7). Do not rerun P032/P033 as if pending.** Mixed teaching retained taught Echo but did not repair heldout generalization; pairwise-complete coverage was not a reliable fix. Read the pinned report before choosing the next experiment.
 
-The [Pro follow-up design](docs/ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md) proposes an E900 matched-Echo-exposure control and a near-equal-parameter learned positional/attention comparison. These are **proposals, not completed training**. Freeze implementation, budget and criteria before running. Native raw 0/1 remains the student input; do not add a teacher/parser that computes answers.
+Codex has executed the E900 control and one near-equal-parameter attention configuration from the [Pro follow-up design](docs/ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md); see [P034 results and evidence](experiments/spiral_neural/20261112_p034/README.md). E900 retained Echo test 12/12 versus historical Neg70 1/12 at equal Echo exposure, with unequal optimizer steps/MAC. B1 reached taught 27/72 and heldout 1/24; all six failed the frozen strong criterion, and matrix MAC was 15.333 times B0. These are completed tests, not pending proposals or a rejection of all attention. Do not expand this failed configuration or rerun completed controls as new results; freeze a new single-variable protocol before additional training. Native raw 0/1 remains the student input; do not add a teacher/parser that computes answers.
 
 PR #5's shared corpus was not used for P032. True VM execution, neural translation and the orchestration MVP have separate completion states. Refresh relevant PR/ref status at the start of each task; keep historical reports and checkpoints unchanged. Delegate one bounded NVIDIA review when available without blocking local work if unavailable.
 
@@ -49,3 +49,4 @@ When live worker access is available and authorized, **delegate at least one gen
 ## SNL-MEM research source (2026-11-12)
 
 For work on the shared-memory orchestration MVP, also inspect [experiments/spiral_memory/research_archive_20261102/README.md](experiments/spiral_memory/research_archive_20261102/README.md). It is a **sanitized public research derivative**, with both v0.1 and v0.2 studies and tests. Do not treat it as a live memory store, a definitive bitstream SLE grammar, or a reason to automatically adopt SNL-MEM. Compare against ordinary Markdown under equal budgets, and never fetch private Library originals into this public repository without screening.
+

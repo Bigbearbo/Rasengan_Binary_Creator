@@ -1,0 +1,5602 @@
+{
+  "B1": {
+    "B0_training_kind": "historical P033 T1, no new B0 training;96 truth rows re-evaluated this session",
+    "aggregate": {
+      "B0": {
+        "test": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        },
+        "train": {
+          "all_ops_free": [
+            72,
+            72
+          ],
+          "all_ops_teacher": [
+            72,
+            72
+          ],
+          "echo": {
+            "free": [
+              36,
+              36
+            ],
+            "teacher": [
+              36,
+              36
+            ]
+          },
+          "neg": {
+            "free": [
+              36,
+              36
+            ],
+            "teacher": [
+              36,
+              36
+            ]
+          }
+        },
+        "val": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        }
+      },
+      "B1": {
+        "test": {
+          "all_ops_free": [
+            1,
+            12
+          ],
+          "all_ops_teacher": [
+            1,
+            12
+          ],
+          "echo": {
+            "free": [
+              1,
+              6
+            ],
+            "teacher": [
+              1,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        },
+        "train": {
+          "all_ops_free": [
+            27,
+            72
+          ],
+          "all_ops_teacher": [
+            27,
+            72
+          ],
+          "echo": {
+            "free": [
+              17,
+              36
+            ],
+            "teacher": [
+              17,
+              36
+            ]
+          },
+          "neg": {
+            "free": [
+              10,
+              36
+            ],
+            "teacher": [
+              10,
+              36
+            ]
+          }
+        },
+        "val": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        }
+      }
+    },
+    "all_six_final_error_analysis": {
+      "heldout": {
+        "first_wrong_free": [
+          14,
+          5,
+          4,
+          0,
+          0,
+          1
+        ],
+        "first_wrong_teacher": [
+          14,
+          5,
+          4,
+          0,
+          0,
+          1
+        ],
+        "free_STOP_position": 24,
+        "free_information_bits": [
+          10,
+          16,
+          13
+        ],
+        "free_syntax_tail": 24,
+        "free_whole": 1,
+        "rows": 24,
+        "teacher_STOP": 24,
+        "teacher_information_bits": [
+          10,
+          11,
+          8
+        ],
+        "teacher_syntax_tail": 24,
+        "teacher_whole": 1
+      },
+      "train": {
+        "first_wrong_free": [
+          22,
+          12,
+          11,
+          0,
+          0,
+          27
+        ],
+        "first_wrong_teacher": [
+          22,
+          12,
+          11,
+          0,
+          0,
+          27
+        ],
+        "free_STOP_position": 72,
+        "free_information_bits": [
+          50,
+          51,
+          47
+        ],
+        "free_syntax_tail": 72,
+        "free_whole": 27,
+        "rows": 72,
+        "teacher_STOP": 72,
+        "teacher_information_bits": [
+          50,
+          54,
+          53
+        ],
+        "teacher_syntax_tail": 72,
+        "teacher_whole": 27
+      }
+    },
+    "cost_per_learner": {
+      "B0_matrix_MACs": 78840000,
+      "B1_matrix_MACs": 1208880000,
+      "B1_to_B0_ratio": 15.333333333333334,
+      "equal_MACs": false,
+      "scope": "executed dense matmuls include masked cells; excludes LN/softmax/optimizer elementwise work, probes and replay; workload counters reported separately;array bytes are persistent arrays, not peak process memory",
+      "target_updates_both": 15000
+    },
+    "limits": [
+      "exposed three-bit mechanism domain, not new blind evaluation",
+      "B1 bundle includes learned positions/LN/attention/FFN; no single-component attribution",
+      "no holdout tuning, seed selection, extended budgets or other configurations"
+    ],
+    "new_B1_training_learners": 6,
+    "paired_heldout_differences": [
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G0",
+        "outcome": "tied",
+        "seed": 101,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          1,
+          4
+        ],
+        "difference": 1,
+        "group": "G0",
+        "outcome": "improved",
+        "seed": 202,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G0",
+        "outcome": "tied",
+        "seed": 303,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 101,
+        "split": "C1"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 202,
+        "split": "C1"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 303,
+        "split": "C1"
+      }
+    ],
+    "paired_improved": 1,
+    "paired_tied": 5,
+    "paired_worse": 0,
+    "parameters": {
+      "B0": 2595,
+      "B1": 2596,
+      "difference": 1,
+      "relative_difference_percent": 0.038535645472061654
+    },
+    "per_split_seed": [
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "0110S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "868d22b5614e315a6fcd16c073e8c88810420fdf288b51bb94ccc1cbd3471d64",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "0100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                4,
+                4,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 1,
+                "None": 3
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 1,
+                "None": 3
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 27,
+              "teacher_targets": 30,
+              "teacher_whole": 3,
+              "total": 6,
+              "whole": 3
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                6,
+                2,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1110S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 23,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "0000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "193e1f062920d5202219f47bd8e6d4edbf75ab63f833c3a687e80ea6abdadd3f",
+        "B1_curve_sha256": "fe2ede63c32ba9a31fc447a23ebe5f06b210ef1302959536ff8d4a881642446d",
+        "B1_whole": {
+          "test": 0,
+          "train": 5,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.6719775999954436,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 44210176,
+              "attention_softmax_elements": 1381568,
+              "attention_softmax_valid_elements": 752064,
+              "calls": 11072,
+              "dense_macs": 255456256,
+              "head_positions": 11072,
+              "layernorm_token_elements": 3921920,
+              "output_softmax_elements": 0,
+              "visible_tokens": 122560
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 16.319395099999383,
+          "B1_seconds_replay": 15.692528100000345,
+          "B1_seconds_training_updates": 10.129778400005307,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "cbafc505ab47fec87ad27c85f68fafd06a7a9e626729efac5275b1b104d59ae7",
+        "group": "G0",
+        "new_B0_training": false,
+        "seed": 101,
+        "split": "S0",
+        "strong_success_this_learner": false
+      },
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "0110S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "7177b65a0889ba5057f2fcba9c21d82819e203aeebc2ef71b0657b2521c174f9",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "None": 1
+              },
+              "first_wrong_position_teacher": {
+                "None": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                5,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "1": 1,
+                "None": 5
+              },
+              "first_wrong_position_teacher": {
+                "1": 1,
+                "None": 5
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1110S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 29,
+              "teacher_targets": 30,
+              "teacher_whole": 5,
+              "total": 6,
+              "whole": 5
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                6,
+                4,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1100S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1000S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 2,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 25,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1100S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1100S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "49912762c59ea2c8b976a4266e820ee0e6a420ea40103454c42b038245a10d84",
+        "B1_curve_sha256": "8ea76d010bcd00c19b0d28b07861bf10736a26744cfd3fa42b40c7a49c4c7a82",
+        "B1_whole": {
+          "test": 1,
+          "train": 7,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.6241641999949934,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 44188544,
+              "attention_softmax_elements": 1380892,
+              "attention_softmax_valid_elements": 751700,
+              "calls": 11068,
+              "dense_macs": 255347904,
+              "head_positions": 11068,
+              "layernorm_token_elements": 3920256,
+              "output_softmax_elements": 0,
+              "visible_tokens": 122508
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 16.019658600002003,
+          "B1_seconds_replay": 16.03880680000293,
+          "B1_seconds_training_updates": 9.983891300449613,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "de48ee311efeb1bc39aa4f4080cb0a0c3c04c23eea102143b6f205ca24ffe87b",
+        "group": "G0",
+        "new_B0_training": false,
+        "seed": 202,
+        "split": "S0",
+        "strong_success_this_learner": false
+      },
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "0110S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "8c0f964bca9ffbb86cf0c08d1b9468c4e364ddeeed4a9b9936bb69e847c50fc6",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1110S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                2,
+                5,
+                4,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 4,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 4,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 2,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 24,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                3,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 2,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 2,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1000S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1110S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 2,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 25,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1110S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "1efab70740c6521673ca7c2cdb7c058f09b7c1ea3cd0a07a4dd057905f53a72c",
+        "B1_curve_sha256": "4b33c89af6f6491d699a496d0f7208c97162476acdc08b181855e03edc77747a",
+        "B1_whole": {
+          "test": 0,
+          "train": 4,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.607407100003911,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 41730048,
+              "attention_softmax_elements": 1304064,
+              "attention_softmax_valid_elements": 710400,
+              "calls": 10624,
+              "dense_macs": 243320832,
+              "head_positions": 10624,
+              "layernorm_token_elements": 3735552,
+              "output_softmax_elements": 0,
+              "visible_tokens": 116736
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 15.94133139999758,
+          "B1_seconds_replay": 15.546251100000518,
+          "B1_seconds_training_updates": 9.968316400438198,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "348ded5503e14e254ba4c7595d9397d778b5a74a77ac7c2560a5495e8ea18a38",
+        "group": "G0",
+        "new_B0_training": false,
+        "seed": 303,
+        "split": "S0",
+        "strong_success_this_learner": false
+      },
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0111S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "0100S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "4c05db7f812acf7bf839bd0ab29eeb7b626a527a8da75b76e40ec97ebd092800",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                5,
+                3,
+                6
+              ],
+              "first_wrong_position_free": {
+                "1": 1,
+                "2": 2,
+                "None": 3
+              },
+              "first_wrong_position_teacher": {
+                "1": 1,
+                "2": 2,
+                "None": 3
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "0010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "0100S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 27,
+              "teacher_targets": 30,
+              "teacher_whole": 3,
+              "total": 6,
+              "whole": 3
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                3,
+                3,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 2,
+                "2": 1,
+                "None": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 2,
+                "2": 1,
+                "None": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 23,
+              "teacher_targets": 30,
+              "teacher_whole": 1,
+              "total": 6,
+              "whole": 1
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "c5256c2e1ef1739b74a6070cc12abaa6d1750046cbdf6c9aec76fd54575c127a",
+        "B1_curve_sha256": "02f95429db357313add3e5b5f47297453b91c837add19e8b1bcf0b334cf392c6",
+        "B1_whole": {
+          "test": 0,
+          "train": 4,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.7731996000002255,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 44210176,
+              "attention_softmax_elements": 1381568,
+              "attention_softmax_valid_elements": 752064,
+              "calls": 11072,
+              "dense_macs": 255456256,
+              "head_positions": 11072,
+              "layernorm_token_elements": 3921920,
+              "output_softmax_elements": 0,
+              "visible_tokens": 122560
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 15.6439279000042,
+          "B1_seconds_replay": 15.658301400006167,
+          "B1_seconds_training_updates": 9.725160799636797,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "b2404bd7d3ae7e8e373917d12695d81f2104bdec9ed5d7f7a81e6827dbd1eb7e",
+        "group": "G1",
+        "new_B0_training": false,
+        "seed": 101,
+        "split": "C1",
+        "strong_success_this_learner": false
+      },
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0111S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1011S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "a6ba04564f8d22c6e819428b0dd066cc11b4e8dbe75cd4fb53675b5b61e06bcc",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                4,
+                3,
+                3,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 1,
+                "2": 1,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 1,
+                "2": 1,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "0010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 2,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 25,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                6,
+                4,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "2": 2,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1100S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 25,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1100S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "7a9e53b8b772d035f0e8d92f0e4a185ed6b9859f0de50209ffe053188bd29c12",
+        "B1_curve_sha256": "beb3b413b7616e10d799ebd448bb264c1daf32aebcae06df3c6f6ac926b83fc2",
+        "B1_whole": {
+          "test": 0,
+          "train": 4,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.590490000002319,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 43841920,
+              "attention_softmax_elements": 1370060,
+              "attention_softmax_valid_elements": 745924,
+              "calls": 11020,
+              "dense_macs": 253848000,
+              "head_positions": 11020,
+              "layernorm_token_elements": 3897216,
+              "output_softmax_elements": 0,
+              "visible_tokens": 121788
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 17.127204500000516,
+          "B1_seconds_replay": 16.10176660000434,
+          "B1_seconds_training_updates": 10.722813700143888,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "6e9ae99f1aa47d3efb09d63e54890815381ca1cf75cbf2e4ff811490726d4843",
+        "group": "G1",
+        "new_B0_training": false,
+        "seed": 202,
+        "split": "C1",
+        "strong_success_this_learner": false
+      },
+      {
+        "B0": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0111S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0110S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "bit_correct": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "first_wrong_position_free": {
+                "None": 6
+              },
+              "first_wrong_position_teacher": {
+                "None": 6
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1110S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1100S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 1,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1000S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 3,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0100S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "0100S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0010S",
+                  "value": 6,
+                  "whole_correct": true
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B0_checkpoint_sha256": "6f911a63b64c53bedc8b0231dace3049676b10f9382982462ae4e5020fd1aeaf",
+        "B0_whole": {
+          "test": 0,
+          "train": 12,
+          "val": 0
+        },
+        "B1": {
+          "test": {
+            "echo": {
+              "bit_correct": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "1": 1
+              },
+              "first_wrong_position_teacher": {
+                "1": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 7,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 2,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "train": {
+            "echo": {
+              "bit_correct": [
+                4,
+                2,
+                3,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 2,
+                "None": 2
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 2,
+                "None": 2
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "0000S",
+                  "target": "0000S",
+                  "teacher_generated_under_correct_prefix": "0000S",
+                  "value": 0,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "0100S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "0110S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 2,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 5,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 25,
+              "teacher_targets": 30,
+              "teacher_whole": 2,
+              "total": 6,
+              "whole": 2
+            },
+            "neg": {
+              "bit_correct": [
+                4,
+                3,
+                3,
+                6
+              ],
+              "first_wrong_position_free": {
+                "0": 2,
+                "1": 2,
+                "2": 1,
+                "None": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 2,
+                "1": 2,
+                "2": 1,
+                "None": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1110S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 0,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 1,
+                  "first_wrong_position_teacher": 1,
+                  "generated": "1010S",
+                  "target": "1100S",
+                  "teacher_generated_under_correct_prefix": "1000S",
+                  "value": 1,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": null,
+                  "first_wrong_position_teacher": null,
+                  "generated": "1010S",
+                  "target": "1010S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 2,
+                  "whole_correct": true
+                },
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 3,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0100S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 5,
+                  "whole_correct": false
+                },
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0010S",
+                  "teacher_generated_under_correct_prefix": "1110S",
+                  "value": 6,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 6,
+              "teacher_STOP_correct": 6,
+              "teacher_correct": 23,
+              "teacher_targets": 30,
+              "teacher_whole": 1,
+              "total": 6,
+              "whole": 1
+            }
+          },
+          "val": {
+            "echo": {
+              "bit_correct": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "first_wrong_position_free": {
+                "2": 1
+              },
+              "first_wrong_position_teacher": {
+                "2": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 2,
+                  "first_wrong_position_teacher": 2,
+                  "generated": "1010S",
+                  "target": "1000S",
+                  "teacher_generated_under_correct_prefix": "1010S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "bit_correct": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "first_wrong_position_free": {
+                "0": 1
+              },
+              "first_wrong_position_teacher": {
+                "0": 1
+              },
+              "records": [
+                {
+                  "first_wrong_position_free": 0,
+                  "first_wrong_position_teacher": 0,
+                  "generated": "1010S",
+                  "target": "0110S",
+                  "teacher_generated_under_correct_prefix": "1100S",
+                  "value": 4,
+                  "whole_correct": false
+                }
+              ],
+              "stop": 1,
+              "teacher_STOP_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          }
+        },
+        "B1_checkpoint_sha256": "09cf35fa0dce86927f7843057fb6f17feac9adbd63b011f3eaef66cae9f4b586",
+        "B1_curve_sha256": "ac6cdec198ea36dc520f2eb2d7305799eb147cc1fcaf1f2364e24696e9a76cfd",
+        "B1_whole": {
+          "test": 0,
+          "train": 3,
+          "val": 0
+        },
+        "baseline_kind": "historical P033 T1 training; only read-only inference this session",
+        "cost": {
+          "B0_historical_seconds_training_and_probes": 2.6943702999997186,
+          "B0_parameters": 2595,
+          "B0_persistent_array_bytes": 51900,
+          "B0_target_updates": 15000,
+          "B0_train_matrix_MACs": 78840000,
+          "B1_other_workload_counters": {
+            "inference_forward": {
+              "attention_macs": 41409536,
+              "attention_softmax_elements": 1294048,
+              "attention_softmax_valid_elements": 704992,
+              "calls": 10560,
+              "dense_macs": 241653760,
+              "head_positions": 10560,
+              "layernorm_token_elements": 3709952,
+              "output_softmax_elements": 0,
+              "visible_tokens": 115936
+            },
+            "train_backward": {
+              "attention_macs": 118080000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 687840000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 45000,
+              "visible_tokens": 165000
+            },
+            "train_forward": {
+              "attention_macs": 59040000,
+              "attention_softmax_elements": 1845000,
+              "attention_softmax_valid_elements": 1005000,
+              "calls": 15000,
+              "dense_macs": 343920000,
+              "head_positions": 15000,
+              "layernorm_token_elements": 5280000,
+              "output_softmax_elements": 0,
+              "visible_tokens": 165000
+            }
+          },
+          "B1_parameters": 2596,
+          "B1_persistent_array_bytes": {
+            "adam_m": 10384,
+            "adam_v": 10384,
+            "birth_int64": 20768,
+            "parameters": 10384,
+            "total": 51920
+          },
+          "B1_seconds_primary_loop_probes_and_state_hashes": 15.800908600002003,
+          "B1_seconds_replay": 16.036554199999955,
+          "B1_seconds_training_updates": 9.896910099727393,
+          "B1_target_updates": 15000,
+          "B1_to_B0_MAC_ratio": 15.333333333333334,
+          "B1_train_matrix_MACs": 1208880000,
+          "wall_times_have_different_instrumentation": true
+        },
+        "course_sha256": "760a9902542364703f01192cfac94085f00a00956885fb96c3af3c2097180673",
+        "group": "G1",
+        "new_B0_training": false,
+        "seed": 303,
+        "split": "C1",
+        "strong_success_this_learner": false
+      }
+    ],
+    "seconds_with_replay_and_evidence": 192.61258699999598,
+    "source_baseline_sha256": "7fbe64f84c0ad1b1f098ffed0ef8752273a3bb953b7433ed6d2ebb1e5471f764",
+    "source_compact_sha256": "d5c76acea0d420abd13780d43cddb40ecaf6cd7dcc4d439fa1376e2655516c36",
+    "source_manifest_sha256": "817ab109925295b0a28749f61a9193c59e6dbd71117dfaad68352c126819f300",
+    "status": "execution_and_replay_passed",
+    "strong_success": false,
+    "strong_success_learners": 0,
+    "strong_success_required": "all six learners each12/12 train plus4/4 heldout exact free-run including STOP"
+  },
+  "E900": {
+    "comparisons_by_split": [
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          0,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          0,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "S0",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          0,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          3,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          3,
+          3
+        ],
+        "historical_Neg70_test": [
+          1,
+          3
+        ],
+        "historical_Neg70_val": [
+          2,
+          3
+        ],
+        "split": "C0",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          3,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          3,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          3,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "S1",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          3,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          0,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          0,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "C1",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          0,
+          3
+        ]
+      }
+    ],
+    "cost_per_learner": {
+      "E900": {
+        "echo_lessons": 900,
+        "neg_lessons": 0,
+        "target_updates": 4500,
+        "train_dense_MACs": 23652000
+      },
+      "MAC_scope": "Original MLP dense multiply-add convention; excludes nonlinearities, optimizer elementwise arithmetic, hashing, probes and replay. Skipped slots have zero student compute.",
+      "equal_Echo_exposure_only": true,
+      "equal_updates_or_MACs": false,
+      "historical_E3000": {
+        "echo_lessons": 3000,
+        "neg_lessons": 0,
+        "target_updates": 15000,
+        "train_dense_MACs": 78840000
+      },
+      "historical_Neg70": {
+        "echo_lessons": 900,
+        "neg_lessons": 2100,
+        "target_updates": 15000,
+        "train_dense_MACs": 78840000
+      }
+    },
+    "curve_counts": [
+      {
+        "echo_presentations": 0,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 100,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 200,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 300,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 400,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 500,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 600,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 700,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 800,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      },
+      {
+        "echo_presentations": 900,
+        "test": [
+          12,
+          12
+        ],
+        "train": [
+          72,
+          72
+        ],
+        "val": [
+          6,
+          12
+        ],
+        "val_originally_correct_cohort": [
+          6,
+          6
+        ],
+        "val_originally_wrong_cohort": [
+          0,
+          6
+        ]
+      }
+    ],
+    "historical_controls_retrained": false,
+    "initially_wrong_validation_cases_are_not_forgetting": true,
+    "limitations": [
+      "Three-bit domain and these splits have been inspected previously; mechanism comparison, not a new blind test.",
+      "Matched Echo exposure is not matched optimizer age, target updates or dense MACs (4500 versus 15000 updates).",
+      "A difference identifies the total effect of inserted Neg updates; semantics, shared-parameter competition and optimizer age are not separately identified.",
+      "Historical Neg70 and E3000 are pinned archived controls; they were evaluated read-only, not retrained."
+    ],
+    "new_training_learners": 12,
+    "per_split_seed": [
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 101,
+        "split": "S0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 202,
+        "split": "S0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 303,
+        "split": "S0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 101,
+        "split": "C0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 202,
+        "split": "C0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 303,
+        "split": "C0",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 101,
+        "split": "S1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 202,
+        "split": "S1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "retained"
+        },
+        "seed": 303,
+        "split": "S1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            1,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": false
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 101,
+        "split": "C1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 202,
+        "split": "C1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      },
+      {
+        "E900": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_E3000": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "historical_Neg70": {
+          "test": [
+            0,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "outcome_from_warm": {
+          "test": "retained",
+          "val": "initially_wrong_still_wrong"
+        },
+        "seed": 303,
+        "split": "C1",
+        "warm": {
+          "test": [
+            1,
+            1
+          ],
+          "train": [
+            6,
+            6
+          ],
+          "val": [
+            0,
+            1
+          ]
+        },
+        "warm_validation_initially_wrong": true
+      }
+    ],
+    "primary": {
+      "E900_test_correct": 12,
+      "E900_test_lost": 0,
+      "E900_test_retained": 12,
+      "E900_val_lost": 0,
+      "E900_val_retained": 6,
+      "historical_E3000_test_correct": 12,
+      "historical_Neg70_test_correct": 1,
+      "total_paired_tests": 12,
+      "warm_test_correct": 12,
+      "warm_validation_initially_wrong": 6
+    },
+    "source_audit_SHA_unchanged": true,
+    "source_manifest_sha256": "09ed37afa16ac9ffc85e39e022baf5f89aec88c8af00bcce21e3014147ffc9b1",
+    "source_results_sha256": "1a0e0ab0438569155be3dcc1d753f0c41766ca8ade1b4516aa14db91f0fabe6a",
+    "status": "execution_and_replay_passed",
+    "wall_seconds_including_source_checks_and_replay": 55.001814600000216
+  },
+  "aggregation_source_sha256": "f0ea66e32ad76cdebb650cc6dc162ebc0a264c1cd131bd4bd2a48c0e8edc86fd",
+  "id": "P034-fixed-result-aggregation",
+  "scope": "read-only results aggregation; no model calls or new training"
+}

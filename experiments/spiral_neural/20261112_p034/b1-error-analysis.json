@@ -1,0 +1,91 @@
+{
+  "first_wrong_order": [
+    "bit0",
+    "bit1",
+    "bit2",
+    "syntax_tail",
+    "STOP",
+    "whole_correct"
+  ],
+  "scope": "all six fixed final truth tables; no new inference or training",
+  "sets": {
+    "heldout": {
+      "first_wrong_free": [
+        14,
+        5,
+        4,
+        0,
+        0,
+        1
+      ],
+      "first_wrong_teacher": [
+        14,
+        5,
+        4,
+        0,
+        0,
+        1
+      ],
+      "free_STOP_position": 24,
+      "free_information_bits": [
+        10,
+        16,
+        13
+      ],
+      "free_syntax_tail": 24,
+      "free_whole": 1,
+      "rows": 24,
+      "teacher_STOP": 24,
+      "teacher_information_bits": [
+        10,
+        11,
+        8
+      ],
+      "teacher_syntax_tail": 24,
+      "teacher_whole": 1
+    },
+    "train": {
+      "first_wrong_free": [
+        22,
+        12,
+        11,
+        0,
+        0,
+        27
+      ],
+      "first_wrong_teacher": [
+        22,
+        12,
+        11,
+        0,
+        0,
+        27
+      ],
+      "free_STOP_position": 72,
+      "free_information_bits": [
+        50,
+        51,
+        47
+      ],
+      "free_syntax_tail": 72,
+      "free_whole": 27,
+      "rows": 72,
+      "teacher_STOP": 72,
+      "teacher_information_bits": [
+        50,
+        54,
+        53
+      ],
+      "teacher_syntax_tail": 72,
+      "teacher_whole": 27
+    }
+  },
+  "sources": {
+    "b1/G0-seed101/truth-table-3000.json": "5def0327d37f371ecb6da8b5d824598c6b2448105bf9a79d619eed33a2d8f547",
+    "b1/G0-seed202/truth-table-3000.json": "d06d486cb9f154090f3a7a404c33f33e0966f3ee8a9f7be71aa5d99706a18b2e",
+    "b1/G0-seed303/truth-table-3000.json": "40b70a5259cb00e10601a3761bf82e76810ddbc6d047124303d314d7f69e1588",
+    "b1/G1-seed101/truth-table-3000.json": "2ddb82fe6685bd5ad94c36dddf61ee312043a01bed08ab2774bdf2dee18e9114",
+    "b1/G1-seed202/truth-table-3000.json": "ed3704a6a85aa571e49d5c8f6551cb77c3fd0dc58801995fc8527e10369e1a2f",
+    "b1/G1-seed303/truth-table-3000.json": "e48693fc9df41bace0ecbd88d45f5edb4c3e59c32f7a2df8fa203e77dc99b644"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "review_id": "P034-independent-integration-review-20261112",
+  "status": "final_protocol_and_artifact_review_pass",
+  "scientific_B1_strong_success": false,
+  "scope": "Read-only E900 and B1 runner/artifact review with bounded existing-checkpoint inference; no learner/runner edits, scientific training/replay, model gradient reruns or new external API calls.",
+  "final_source_sha256": {
+    "e900.py": "13b68fccaf335de71ccc21e09d69c5981c48de9970814afc1f3a3b0ede1346c4",
+    "b1_trial.py": "9992e32b2f21b23b3dfd3eeacb04d2d60662b3db4654d53cce5d179f22e7cc0a",
+    "attention_model.py": "d0bd2432354e90709f2aad11d542055e991580c6a86e7ae850e1f5fdb2154e79",
+    "test_attention.py": "6e205b425af1cfbd1bcb45e328638401634160173e5657c10960fdafa56a6730"
+  },
+  "actionable_implementation_findings": [],
+  "E900": {
+    "status": "pass",
+    "learners": 12,
+    "actual_original_Echo_subsequence_verified": true,
+    "Echo_per_learner": 900,
+    "per_train_value": 150,
+    "target_updates_per_learner": 4500,
+    "initial_t": 8736,
+    "final_t": 13236,
+    "complete_initial_arrays_optimizer_birth_RNG_equal_pinned_warm": true,
+    "skipped_neg_slots_step_and_state_unchanged_checked": 25200,
+    "target_prefix_label_step_records_checked": 54000,
+    "actual_checkpoint_group_signatures_verified": 108,
+    "actual_warm_final_and_historical_control_truth_rows_recomputed_equal": 384,
+    "test_correct": {
+      "warm": [
+        12,
+        12
+      ],
+      "E900": [
+        12,
+        12
+      ],
+      "historical_Neg70": [
+        1,
+        12
+      ],
+      "historical_E3000": [
+        12,
+        12
+      ]
+    },
+    "evidence": "work/sle-p034/integration-review/e900_artifact_checks.json",
+    "manifest_sha256": "09ed37afa16ac9ffc85e39e022baf5f89aec88c8af00bcce21e3014147ffc9b1",
+    "compact_sha256": "7bc41c3685b333d83de5332549d662f54b21631baa0a2109a6d4de38938b8d88"
+  },
+  "B1": {
+    "status": "pass",
+    "learners": 6,
+    "exact_historical_T1_courses_and_frozen_hashes_verified": true,
+    "target_prefix_label_step_records_checked": 90000,
+    "all_seeded_initial_states_and24_snapshot_full_state_digests_verified": true,
+    "actual_snapshot_truth_rows_logits_probabilities_recomputed_equal": 384,
+    "full_replay": "Reviewed actual source/evidence: each15000 target record has complete p/m/v/birth/step/RNG digest, with direct snapshot/final arrays and counters equality; no independent scientific replay was run.",
+    "teacher_visibility": "Training uses onlyQ+earlier correct answer prefix; free-run usesgenerate(Q) and own prefix. Parser/oracle remains outside learner.",
+    "holdout_controls_budget": false,
+    "fresh_model_prevents_engineering_or_preflight_cost_charge": true,
+    "primary_MACs": 7253280000,
+    "primary_MACs_per_learner": 1208880000,
+    "forward_backward_and_element_count_counters_match_actual_fixed_budget": true,
+    "correct": {
+      "train": [
+        27,
+        72
+      ],
+      "val": [
+        0,
+        12
+      ],
+      "test": [
+        1,
+        12
+      ],
+      "strong_learners": [
+        0,
+        6
+      ]
+    },
+    "evidence": "work/sle-p034/integration-review/b1_artifact_checks.json",
+    "manifest_sha256": "817ab109925295b0a28749f61a9193c59e6dbd71117dfaad68352c126819f300",
+    "compact_sha256": "d5c76acea0d420abd13780d43cddb40ecaf6cd7dcc4d439fa1376e2655516c36"
+  },
+  "interpretation": [
+    "E900 is equal Echo exposure only. The contrast supports the total effect of inserted Neg updates for this fixed cohort, without separating semantics, parameter competition or optimizer age.",
+    "B1 failed the preregistered stable-repair criterion and fitted only27/72 taught pairs. One correct test pair does not establish stable generalization or isolate attention as the causal factor.",
+    "Near-equal parameter counts and equal lesson/target budgets are not equal compute. Full dense B1 matrix training MAC is15.333333333333334times B0; replay and evaluation are separate.",
+    "The three-bit domain was previously viewed. These results are mechanism comparisons, not fresh blind tests. Preserve fixed budget and all failures; do not tune or extend this configuration from these holdout scores."
+  ],
+  "external_model_calls_this_extension": 0
+}

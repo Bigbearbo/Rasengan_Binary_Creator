@@ -1,0 +1,65 @@
+{
+  "B1_original_preflight_courses": 6,
+  "E900_original_guard_courses": 12,
+  "E900_original_immutable_inputs_checked": 145,
+  "archives_unchanged": {
+    "evidence.zip": {
+      "bytes": 2468651,
+      "git_blob": "12871a6b3e5cf95238b3dc617974da25fd028388",
+      "sha256": "8f49ba18138d9c8ea357b0d945f9259ddb7e09788bfd33544be946abc957dfb4"
+    },
+    "input-supplement.zip": {
+      "bytes": 93427,
+      "git_blob": "14e2becb70a9ddca883ad04c194b74094c5b6e15",
+      "sha256": "286d939d5799b80ad97122770997b603f69fe7746a0db358fa562e714382a4f2"
+    }
+  },
+  "commands": [
+    "python -X utf8 -B PACKAGE/prepare_public_inputs.py --package-root PACKAGE --pr7-evidence PR7/evidence.zip --workspace NEW_WORKSPACE",
+    "python -X utf8 -B PACKAGE/reproduce.py --workspace NEW_WORKSPACE --output NEW_OUTPUT"
+  ],
+  "engineering_gradients_rerun": false,
+  "existing_public_ZIPs_or_sources_modified": false,
+  "input_paths": {
+    "package_root": "PUBLIC_PACKAGE",
+    "pinned_PR7_evidence": "PR7/evidence.zip"
+  },
+  "new_scientific_training": false,
+  "only_runtime_binding": {
+    "B1.OUT": "NEW_OUTPUT/b1"
+  },
+  "original_frozen_source_sha256": {
+    "attention_model.py": "d0bd2432354e90709f2aad11d542055e991580c6a86e7ae850e1f5fdb2154e79",
+    "b1_trial.py": "9992e32b2f21b23b3dfd3eeacb04d2d60662b3db4654d53cce5d179f22e7cc0a",
+    "e900.py": "13b68fccaf335de71ccc21e09d69c5981c48de9970814afc1f3a3b0ede1346c4",
+    "reference/diagnostic.py": "45082eaf549348fc70ffa440b6d1a4ceea3b5152d3898d0bfeed293bbb547a99",
+    "reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "reference/p032_reference.py": "e20b74fcf5b9e6af3c78ac2ab7419613de7987a28426018266c26196bea67c95",
+    "reference/p033.py": "6e7445b8824b781f6e00356bfbcb6678c099299157b6baddb216d733e5379b48",
+    "test_attention.py": "6e205b425af1cfbd1bcb45e328638401634160173e5657c10960fdafa56a6730"
+  },
+  "output_paths": {
+    "fresh_workspace": "NEW_WORKSPACE",
+    "new_output": "NEW_OUTPUT"
+  },
+  "package_files_hash_size_git_blob_reverified_after_preflight": 37,
+  "package_manifest_sha256": "217a02996dba70c5e1264218f250fc627622f5111bdb54244df437b7856f0c8a",
+  "preflight_learning_calls": 0,
+  "public_PR7_git_blob": "7bf5d28cd3d06a94afa903780694e4ef344671ba",
+  "public_PR7_sha256": "bab2291add697b4d57593c7410633d976c4eb926132bf349c75e6581b46c7564",
+  "reads_confined_to_prepared_inputs_runtime_public_wrappers": true,
+  "record_policy": "This final check is a separate Git delivery record; existing ZIPs/manifests were not rewritten",
+  "schema": "P034-final-public-portability-v1",
+  "scientific_source_bytes_changed": false,
+  "scientific_updates": 0,
+  "staged_original_inputs_unchanged": 193,
+  "status": "passed",
+  "unchanged_existing_draft_check_sha256": "0e1c9896b181ace7c6b7cdd3dc8820d92d3995173130491b411f73acb7d9ce97",
+  "validated_final_public_export": true,
+  "wrapper_sha256": {
+    "prepare_public_inputs.py": "63db3ac3d9258249221af1da230d03ee7951217038fb4e2973f3a3d4a6debc8b",
+    "reproduce.py": "d226807fc04e6ed891fc8c71c5c8bf5507f9c806db24c92413eb20a3397df1df"
+  },
+  "writes_confined_to_NEW_output": true,
+  "public_record_normalization": "Only machine-local input/output path labels replaced; validation values unchanged. Original local record retained."
+}
