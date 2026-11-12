@@ -30,6 +30,12 @@ The user requested a shared-memory / multi-model coordination MVP for their loca
 
 Start with the P0 environment audit, then P1 memory index and P2 mock/dry-run dispatcher. Keep the original SLE/Hamster code unchanged. The repository is public: never commit API keys, private ChatGPT Library contents, personal chats, or runtime state. Other workers are advisory/read-only; Codex validates and integrates. Report real test results, not anticipated ones. See the matching GitHub Issue for task tracking. This work order does not automatically start any desktop process.
 
+## NVIDIA worker delegation rule (2026-11-12; applies to relevant new research tasks)
+
+**Do not forget the NVIDIA worker.** Before substantial SLE mathematics, shared question-bank, parser, compression-baseline, NN growth, or Hamster VM research, read [docs/ai_orchestration/NVIDIA_WORKER_TASKS_20261112.md](docs/ai_orchestration/NVIDIA_WORKER_TASKS_20261112.md) and check whether the configured OpenRouter NVIDIA worker can receive at least one bounded, read-only, nontrivial analytical subtask. Prefer independent math task decomposition and parser edge-case review; Codex retains coding, test execution, and final decisions.
+
+When live worker access is available and authorized, **delegate at least one genuinely useful review/research task** rather than doing all analysis inside Codex. If unavailable or the work is trivial, continue locally and record `nvidia_status=skipped` with a reason. Each research result must briefly say which NVIDIA task was delegated, its result, and how Codex verified or rejected it. Never claim a model call occurred without a real API response. Do not send secrets, private Library notes, or unpublished user content to free endpoints. Daily free-tier allowance is an account-level maximum, not a quota to consume for its own sake.
+
 ## SNL-MEM research source (2026-11-12)
 
 For work on the shared-memory orchestration MVP, also inspect [experiments/spiral_memory/research_archive_20261102/README.md](experiments/spiral_memory/research_archive_20261102/README.md). It is a **sanitized public research derivative**, with both v0.1 and v0.2 studies and tests. Do not treat it as a live memory store, a definitive bitstream SLE grammar, or a reason to automatically adopt SNL-MEM. Compare against ordinary Markdown under equal budgets, and never fetch private Library originals into this public repository without screening.
