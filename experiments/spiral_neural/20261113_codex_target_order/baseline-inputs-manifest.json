@@ -1,0 +1,95 @@
+{
+  "Pro_NPZ_or_truth_byte_identity_claimed": false,
+  "archives": [
+    {
+      "Git_blob": "304b851af5285cc2467503919e85dc0db50029d5",
+      "NPZ_finite_verified": 3,
+      "bytes": 140217,
+      "entries": [
+        {
+          "Git_blob": "ade6435afb311a0d38351d2c9f72d787da8b0267",
+          "bytes": 2102,
+          "path": "baseline/codex-execution-provenance.json",
+          "sha256": "2c2c138562a817b916ac3ae2b52314c7e08d9092e114c3a627c4a6e4d1c132ff"
+        },
+        {
+          "Git_blob": "7fe49fe27cef45ddf9585e6db0e4e391b9ae9d60",
+          "bytes": 113343,
+          "path": "baseline/manifest.json",
+          "sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0"
+        },
+        {
+          "Git_blob": "e411253fd24db1b8476013c86a580fbd564098d8",
+          "bytes": 3289,
+          "path": "baseline/seed101/curve.json",
+          "sha256": "25bb17469c754d16f77fb85e882935b2addd369fd68c93e1a78a597761f1a163"
+        },
+        {
+          "Git_blob": "e8ef51a1157babcef524c20012327ed9aa1e3d66",
+          "bytes": 216804,
+          "path": "baseline/seed101/initial-state.npz",
+          "sha256": "e5c3421c566108c04c9a3aa4d09916bc33a2b80848589da70e4d884296401f8a"
+        },
+        {
+          "Git_blob": "27dc107ab972c3c5b51e36dfbbcc58c64d672f16",
+          "bytes": 6360,
+          "path": "baseline/seed101/offline-curve.json",
+          "sha256": "fbddb51f9f1afaa9272b6827a272ddd233840ddc2a9d50a2b540113128ba2eef"
+        },
+        {
+          "Git_blob": "c17f797439a5514ad645b9ecfe5c204b29ed29e8",
+          "bytes": 3289,
+          "path": "baseline/seed202/curve.json",
+          "sha256": "6094cfe6086f47eda40704a543c04ace9cb0b20d7166f304ac510980724be3ee"
+        },
+        {
+          "Git_blob": "b7c0c0dd54d00f724068eab267c222580e5cd966",
+          "bytes": 216804,
+          "path": "baseline/seed202/initial-state.npz",
+          "sha256": "4258233a8616a98851e1e2977d8fffa7bd21fc081eb532ba5511e891b3aa180b"
+        },
+        {
+          "Git_blob": "dfde7cb704cc425bac0d2915be87865088ab3c80",
+          "bytes": 6359,
+          "path": "baseline/seed202/offline-curve.json",
+          "sha256": "539d73ff42949a50de92785f80ccf85f09f75a006a47bacf4050edfa689f34ed"
+        },
+        {
+          "Git_blob": "cfcacc966e203954f774ee2435f28a9a77a90b9c",
+          "bytes": 3290,
+          "path": "baseline/seed303/curve.json",
+          "sha256": "84ae033902983501a96d160c7734d4bd424c7590064105a4ead1bc1ffd3e9bbf"
+        },
+        {
+          "Git_blob": "d3ad53580851306d36d7ea2ff6c5afebf90b6bc9",
+          "bytes": 216800,
+          "path": "baseline/seed303/initial-state.npz",
+          "sha256": "474039f1775d77b993d3414989362ce456e6b9b5a6b72827d0cd7c599649b805"
+        },
+        {
+          "Git_blob": "c3459579f3ee8da6b975bc0d6b018a350b01f0ff",
+          "bytes": 6360,
+          "path": "baseline/seed303/offline-curve.json",
+          "sha256": "379ba6ce945bbd3eae6750f2e9fa58ad13477e6a39f332db62115d5a7def2d07"
+        },
+        {
+          "Git_blob": "ce46150bdc1a96d92040f1a4ecaf21474e5de550",
+          "bytes": 4366,
+          "path": "baseline/summary.json",
+          "sha256": "748d5557402ca57f2cdfbec10c1b3af1c5ad417dd5ca42f9e16617e14e9cd0da"
+        }
+      ],
+      "entry_count": 12,
+      "file": "baseline-inputs.zip",
+      "sha256": "e710b85ca847312c5a4b4d9d4988daa54ee22135519e2fbce0ecc6eeb706c884"
+    }
+  ],
+  "control_raw_bytes_preserved": true,
+  "full_control_target_trace_republished": false,
+  "layout": "baseline/<original science-relative path>",
+  "new_independent_control_seeds": 0,
+  "original_manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "restore": "Extract baseline-inputs.zip into a new directory; pass its baseline/ directory as --control-root.",
+  "schema": "sle-target-order-baseline-inputs-v1",
+  "source_kind": "Windows replication of Pro fixed control"
+}

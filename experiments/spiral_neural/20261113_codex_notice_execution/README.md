@@ -1,4 +1,4 @@
-# Codex 接手 UR1 固定通知學習
+# Codex：UR1 固定課程的 Windows 重現
 
 設計、原學生與課程程式：ChatGPT Pro，固定 PR #12 commit `0b6de1d24481c2886833e412d173645fca98609c`。本次實際執行、Windows 可攜入口與新增驗收：Codex／受指派 reviewer。使用者於2026-11-13要求繼續實驗，沿用原先挑選成果與紀錄上 Git 的授權。
 
@@ -29,3 +29,7 @@ python -B experiments/spiral_neural/20261113_codex_notice_execution/run_codex.py
 Gemini本輪明列skip：既有agy登入存在，但先前analysis-only初始化工具清單未驗證，未知收據不重送。NVIDIA另以公開18題長度表真派一次有界反例審查；只通過report結構，未提供要求的JSON反例，語義仍需本機核對；本輪不追加模型請求。
 
 正式結果在執行後另提交，凍結提交不預寫分數。歷史P035及dirty checkouts不改、不重跑，不合併既有PR。
+
+## 後續已完成狀態
+
+這份原課程已完成Windows重現，三seed已教7/12、5/12、5/12，保留皆0/6。執行期間Pro另提交同規格結果19ece2819c6c2c1d7ef9fdb2389efaa045b1c35e；這個重現不計為新獨立seed或新條件。主要summary除NPZ容器SHA外全部數值相符，三份curve的完整state digests相同，但不宣稱所有raw truth/NPZ容器byte相同；詳replication-comparison.json和independent-post-run.json。實際成本另列，完整本機證據留存。真正下一變因在../20261113_codex_target_order/，原控制不再訓練。

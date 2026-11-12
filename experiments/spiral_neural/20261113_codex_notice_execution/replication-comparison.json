@@ -1,0 +1,229 @@
+{
+  "Codex_physical_primary_targets": 81408,
+  "Codex_physical_replay_targets": 81408,
+  "Codex_preregistration_commit": "47175a513f4fb08c5231cdb354f99f18c2936938",
+  "NPZ_container_SHA_equality_claimed": false,
+  "Pro_result_commit": "19ece2819c6c2c1d7ef9fdb2389efaa045b1c35e",
+  "complete_curve_truth_failure_JSON_bytes_match_Pro_public_index": 4,
+  "conclusion": "Windows reproduction of the same fixed control; reuse the Pro control for the new target-order contrast, never retrain the control again",
+  "curve_full_state_digests_match_at_all_18_checkpoints": true,
+  "exact_all_payload_or_NPZ_container_identity_claimed": false,
+  "execution_overlap": "Pro result commit appeared after the Codex reproduction had already started; both retained, not independent seeds or an extra condition",
+  "matched_public_entry_hashes": [
+    {
+      "Codex_sha256": "25bb17469c754d16f77fb85e882935b2addd369fd68c93e1a78a597761f1a163",
+      "Pro_sha256": "25bb17469c754d16f77fb85e882935b2addd369fd68c93e1a78a597761f1a163",
+      "path": "seed101/curve.json"
+    },
+    {
+      "Codex_sha256": "6094cfe6086f47eda40704a543c04ace9cb0b20d7166f304ac510980724be3ee",
+      "Pro_sha256": "6094cfe6086f47eda40704a543c04ace9cb0b20d7166f304ac510980724be3ee",
+      "path": "seed202/curve.json"
+    },
+    {
+      "Codex_sha256": "f9b3d3f53e0a6e901877dbd17103b3c5c8da984d23008cfb2748e22bcdd3cd77",
+      "Pro_sha256": "f9b3d3f53e0a6e901877dbd17103b3c5c8da984d23008cfb2748e22bcdd3cd77",
+      "path": "seed202/final-failures.json"
+    },
+    {
+      "Codex_sha256": "84ae033902983501a96d160c7734d4bd424c7590064105a4ead1bc1ffd3e9bbf",
+      "Pro_sha256": "84ae033902983501a96d160c7734d4bd424c7590064105a4ead1bc1ffd3e9bbf",
+      "path": "seed303/curve.json"
+    }
+  ],
+  "new_statistically_independent_seeds": 0,
+  "raw_curve_truth_payloads_with_different_bytes": [
+    {
+      "Codex_sha256": "638384ac10ed15f9db631a80b1f15b7fdc288f4e92f3d48347178f0dc111173c",
+      "Pro_sha256": "af879c9ee3ba193f68846f0bfc368470c3cecd46de633f9759b347cc31cfdf86",
+      "path": "seed101/final-truth.json"
+    },
+    {
+      "Codex_sha256": "31092cc9a19601fd61f7a649a109cd79dec64681c0b5aa680657826e86c26fec",
+      "Pro_sha256": "dd298ee951d0d8f067340c2e35d0b754764cafc45cdb1ee0637720a2f9b8314e",
+      "path": "seed101/final-failures.json"
+    },
+    {
+      "Codex_sha256": "ac62507f11f3b0cfae9b4513ff89a03f87f0d5d555683a37af2f13a39fe95f11",
+      "Pro_sha256": "a4ea7b1f24b6faa6d7cc2537aef793379393be6f4357cf7bd4a03bdc7ae6b056",
+      "path": "seed101/train-truth-000.json"
+    },
+    {
+      "Codex_sha256": "1fd84eb150e5f650d9c33762ab0fd53578988f862caab2fd6d91efa60f7f1707",
+      "Pro_sha256": "82215de3b92e7a30c9b0c5f6e84c02d8ac9ceb9074f09c363e3a8db2fa6f609b",
+      "path": "seed101/train-truth-016.json"
+    },
+    {
+      "Codex_sha256": "b937ec27a191828c1abb793f5ad6a0e0f1f018c75eb12c2bffd1f8279fab37a4",
+      "Pro_sha256": "6bd7b48e11b4f824450875be011df0da5613948c20c21e04b0488f1f37d5e3ec",
+      "path": "seed101/train-truth-032.json"
+    },
+    {
+      "Codex_sha256": "c3ebb3f6d23496f506de7e5cf995b4876ceafb846acf3af4eee24d5e820b3f78",
+      "Pro_sha256": "d1fdad53d98ed2950844251be9bfe2b4ade43da440d33d285fd45d134a9d00ec",
+      "path": "seed101/train-truth-064.json"
+    },
+    {
+      "Codex_sha256": "0e84e6be143df8fd16987e88ee025892d8d9f9c33395707abafb0e8f5aff6665",
+      "Pro_sha256": "ba98cdcd15b406e20ee5c8ab7bf66960488de838c25299bcd0e5dc4a73fac2a9",
+      "path": "seed101/train-truth-096.json"
+    },
+    {
+      "Codex_sha256": "a6d9d257f082a30e0fcd03484b2679a068e4273e9ebd9f4545e6eae44745bda1",
+      "Pro_sha256": "9d54f87caacefc082539cb881e9bcf450eaa6aac026f6540782eea2acf8f22f5",
+      "path": "seed101/train-truth-128.json"
+    },
+    {
+      "Codex_sha256": "787736f186116d68351611229feb2f8528265af9228c565902df2d19c2c99703",
+      "Pro_sha256": "ddf189bf726404b2ce91b49416e7517dd09f954677dfcd2fa5b9557c870ee6d1",
+      "path": "seed101/offline-truth-000.json"
+    },
+    {
+      "Codex_sha256": "760910c3bb2c87b8d2461e44b9583ee9ca3ab7797485c0e71bf2b34dbe781644",
+      "Pro_sha256": "0264979146804d771d5482e15805c487283a87d393c7dd3f44671d64311ce47a",
+      "path": "seed101/offline-truth-016.json"
+    },
+    {
+      "Codex_sha256": "1fcc1324a104715cf1c360a285a8469c77484a87c8435953990b0317ca2ff6da",
+      "Pro_sha256": "0756f7b6dff812b880dd147525650cabfa20d45a5bc1a1986af7557426ff37cd",
+      "path": "seed101/offline-truth-032.json"
+    },
+    {
+      "Codex_sha256": "5d612470990ec418683f83f455055f1c9bebe7ba2f9167687ae9c23329b47560",
+      "Pro_sha256": "c58737e1c43971096e590419012e8854b1027f174eb6526b47b24496c3902c1b",
+      "path": "seed101/offline-truth-064.json"
+    },
+    {
+      "Codex_sha256": "618e6ac31ce3d6636c0c2771e11b0c775fea9bd34e0a59f6a3300bd7f5d5e7c4",
+      "Pro_sha256": "937f06faccebf48a352d57aca1069e2bcf2ccf57929eb9e12a0b7289834572a4",
+      "path": "seed101/offline-truth-096.json"
+    },
+    {
+      "Codex_sha256": "d3b9dd53f1a32cf6608ece50a3eab2e3f4c7bf3e84afd3c781781d1805c82329",
+      "Pro_sha256": "e57eebb73bab4aa578699827a0e2d4050a08b557a5b6f7f66721a9b17cefd0a0",
+      "path": "seed202/final-truth.json"
+    },
+    {
+      "Codex_sha256": "073bfaf4413f17cfa7fed54f3d87cd8e522da19e4a6d6984a4e398d45ca5ab07",
+      "Pro_sha256": "d04916427268d6527f46b529840e6072f1dd6732c5ea8e6fe4d1c3f116722040",
+      "path": "seed202/train-truth-000.json"
+    },
+    {
+      "Codex_sha256": "a2acd60a5fb43025580cf86e24bc745548a8a16b0eb7be40e23f574cf2e851c8",
+      "Pro_sha256": "71f75e8098736e062a4be542c5bd990a26405f103a30237c9d249f472ea62395",
+      "path": "seed202/train-truth-016.json"
+    },
+    {
+      "Codex_sha256": "44a236293c8afbdbeb2e0f2d52b1b1e73ef6f147bdfa794bd8246c5c7ff90cf8",
+      "Pro_sha256": "db958558db4b845ea02c1331250ecb639f6c3901cfc397b103f253bfbd9bea23",
+      "path": "seed202/train-truth-032.json"
+    },
+    {
+      "Codex_sha256": "d1b5e4765b87f1a080d77c244fb09df1b8cf99c34f690b57c124f339066e8ac2",
+      "Pro_sha256": "86462389c88048dce10e119d299bb94ba40c5f41e18d5b64b60710c5d07d91ac",
+      "path": "seed202/train-truth-064.json"
+    },
+    {
+      "Codex_sha256": "207a433c2f1a3e3d9aef8efebb1b3283c45bdbd7e2cd65fbcec743ad39fe10fa",
+      "Pro_sha256": "8ebef29d36a1050282b8ddf2997469c897717e5a57318431cfa894365fd4b1fc",
+      "path": "seed202/train-truth-096.json"
+    },
+    {
+      "Codex_sha256": "076cdf6faac99c9b1c0cbd773b9ff478bdaab24c088048344c2d8e86d9dda3ad",
+      "Pro_sha256": "ca08fca31fe5ef64c3abcb29f4b654e8472523dcabeaf58cbe2ff5830c39176c",
+      "path": "seed202/train-truth-128.json"
+    },
+    {
+      "Codex_sha256": "1871957d1ac26cd51af7836692ded85b36dfe31c8cce2b3a2fac080ae269ba92",
+      "Pro_sha256": "038ca0044263a4910bfae2711a182fd1cef5d98d578d5982e9db7fc4d8b8317b",
+      "path": "seed202/offline-truth-000.json"
+    },
+    {
+      "Codex_sha256": "97a2cd12326ec9261fb0f7e08557bacaa12433b5caa9ac422724f6d245c87abd",
+      "Pro_sha256": "a6c1e9060d00b6a7fc869ad2ae54e06e5dce7e6685f91d7dadf313e11e41071d",
+      "path": "seed202/offline-truth-016.json"
+    },
+    {
+      "Codex_sha256": "a06ee7c3f946abb96f001afb48be9195dfc966475fe28f592934c0fb6d1ef141",
+      "Pro_sha256": "d8fed5d2e66dddb6c2423834a4f4376046bf7d94404db906290286478cafdd6b",
+      "path": "seed202/offline-truth-032.json"
+    },
+    {
+      "Codex_sha256": "29b68e819d81f290c1aa13915a8ac556086b4d3fa1e1d4d8d664e195c4be944e",
+      "Pro_sha256": "080da0846c17008dcc941babfebe0bbb6ed723fce52bbf6a9ccdd513a8500c8d",
+      "path": "seed202/offline-truth-064.json"
+    },
+    {
+      "Codex_sha256": "3f98f77d6a966cc9e29a4c0b5115d63ebf2f19025e37002b2105e72af12cdd32",
+      "Pro_sha256": "e3a387a90e7aa17e40f4c96b3223220a729155686f59245803b7e8d33d9dec59",
+      "path": "seed202/offline-truth-096.json"
+    },
+    {
+      "Codex_sha256": "15505e375368df9282255f9fd66c731f5cb418d39e8296da53d42f2247a2f5d3",
+      "Pro_sha256": "bb62eb9282a06a0465164d3a863733b3ec209cbba32ed0544bc2519738c17961",
+      "path": "seed303/final-truth.json"
+    },
+    {
+      "Codex_sha256": "72c9e67e1214cfe3b8d9f644533e1ce05ebde46fade2faed5bb9b41695105ee0",
+      "Pro_sha256": "acca3faadcb683068d506023739132c2bd98beca78abb7ce749c7456261d6c2a",
+      "path": "seed303/final-failures.json"
+    },
+    {
+      "Codex_sha256": "fdee4cb65465dc468973f7c5b745bc5c831e728d0ac84bf582e15fc212c8e0c2",
+      "Pro_sha256": "8db3860c8c4b7b0522b12977c933e57cbf90c0bce3bf6684cfcfe89c8de08cd5",
+      "path": "seed303/train-truth-000.json"
+    },
+    {
+      "Codex_sha256": "0946dbcb2bd97f29e95b9da1fe5258a7dc2965524b750c2b04ac484dd0d19406",
+      "Pro_sha256": "993285b87b3d0fa0347fcb97b3c2f7d2be7e1ced457b8804f84542338c89b562",
+      "path": "seed303/train-truth-016.json"
+    },
+    {
+      "Codex_sha256": "80f1465f5b64f07a124ea6779ea133e2a7485f3a356230e3dd21e399d133b3fc",
+      "Pro_sha256": "252a1751eedb9c58ff0708281979921d1c9eba7e47b9ddf0d0375baed5470d93",
+      "path": "seed303/train-truth-032.json"
+    },
+    {
+      "Codex_sha256": "401a28c1ca9fc3d405c16d3c12b02b5f1c0a183646a0ddabf66e5fe65bc1480d",
+      "Pro_sha256": "2211824c21f2d871c8ef2b1165838eba65917716014ffcda2d759a3529feae86",
+      "path": "seed303/train-truth-064.json"
+    },
+    {
+      "Codex_sha256": "553a22889d20e2f80c39c6365edc6b1d7e4497edae13d093f64fe2945186574d",
+      "Pro_sha256": "afb5d74a4005e233eb90631dd9f4a76b7b7813244a7bff4b09178da7d2765002",
+      "path": "seed303/train-truth-096.json"
+    },
+    {
+      "Codex_sha256": "04cfb5986ce2ca03d56a6beee99db7c7d9a840320b2419c8196805ff6dc4a604",
+      "Pro_sha256": "5cdb170e8246e03609c8ef240a77facef6a957f18e6b4f7a44ae352eda71931f",
+      "path": "seed303/train-truth-128.json"
+    },
+    {
+      "Codex_sha256": "b37494de68ee931c711c8a2b592781c9b272f80b1cb62240b993142452074fc3",
+      "Pro_sha256": "bfbffe5ec0de11f8c8b034398771851b0eb6859193c2a315e289142926c51f4f",
+      "path": "seed303/offline-truth-000.json"
+    },
+    {
+      "Codex_sha256": "24225a9ba64bcfa09c781385425bf3e483939142fab22164c75dfb0d0d98f420",
+      "Pro_sha256": "e8ebcad3e0f5fea1ab9dc80f73a6bc0536ef2f30c8af060239139552bb1c9b26",
+      "path": "seed303/offline-truth-016.json"
+    },
+    {
+      "Codex_sha256": "bdee1ad6c8f549ae9be4593f97cb5bade67dafbf5fbb81a22b0a7db79c56e8bc",
+      "Pro_sha256": "c19f73ab0daf211d7a48cde6dd574bc42c39159df7ee45ea223c5e190b7ddbd7",
+      "path": "seed303/offline-truth-032.json"
+    },
+    {
+      "Codex_sha256": "87b23babbbcf8df93fb84f211a4b5a2791a669621e884e1d94e514f7d9b6a6d9",
+      "Pro_sha256": "500a01623e2c305715d5f6bf8f3e11469cd5d49a25f23b59bdc8562424b11ca6",
+      "path": "seed303/offline-truth-064.json"
+    },
+    {
+      "Codex_sha256": "90d6e570d0fca885287d0ed89d2f0390a17db0c159b3ec1c967225895ef42c60",
+      "Pro_sha256": "684e898f6bd37bbebfbca35004e88b21b49fab463356a5fe72d1e050430f38fe",
+      "path": "seed303/offline-truth-096.json"
+    }
+  ],
+  "status": "passed",
+  "summary_all_values_except_NPZ_container_SHA_exact": true
+}

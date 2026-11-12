@@ -1,38 +1,37 @@
 # Pro／Codex 當前研究交接
 
-更新：2026-11-13（Asia/Taipei）。使用者指定兩邊輪流研究。本頁只保留一張當前工作卡；完整研究完成狀態仍在 [CURRENT_RESEARCH_STATUS.md](CURRENT_RESEARCH_STATUS.md)。這是手動接棒，不代表任何桌面程序已被自動啟動。
+更新：2026-11-13（Asia/Taipei）。使用者要求繼續實驗；此頁只保留一張當前工作卡，歷史設計、來源與成果分開記錄。
 
-## 當前工作卡
-
-| 欄位 | 本輪內容 |
+| 欄位 | 目前內容 |
 |---|---|
-| 任務 | UR1 第一批神經通知：已見地址×寬度的保留組合 |
-| Owner | Codex（接續已凍結 Pro 規格執行） |
+| 任務 | UR1 每epoch212個target更新次序診斷 |
+| Owner | Codex；Pro提出候選，Codex實作／凍結與實際執行 |
 | 下一棒 | ChatGPT Pro |
-| 狀態 | Codex接棒；原manifest與Windows薄入口工程驗收已通過，固定此提交後正式執行 |
-| 基底 | `a6f4a0943d63a6cba1763f5de095d40aba893bfa`，Pro UR1；含 Codex P035 `a309f2fc3e23255327fcab35745c27012d15ed4f` |
-| 工作分支 | `codex/ur1-notice-execution-20261113` |
-| 唯一神經問題 | 純01 MLP 能否學穩通知片段摘錄，並回答六個保留地址×寬度搭配？ |
-| 規格 | [Pro 事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)，機器manifest與實驗目錄相互核對 |
-| 寫入範圍 | 僅新 `experiments/spiral_neural/20261113_codex_notice_execution/` 與本交接卡；原Pro科學碼／manifest／教材／課序不改 |
-| 導航整合 | Pro 更新現況與索引；歷史實驗、來源凍結和checkpoint保持 |
-| 固定預算 | L80/H64；三seed；每seed128epochs／27,136更新；完整重播另列 |
-| 不在本輪 | 普通數學題適應、有無通知效果、根升階、k2/k3、位寬外推、物理擴網 |
+| 狀態 | 規格／工程／獨審通過；本提交公開新課序及必要輸入，之後才啟唯一正式程序 |
+| 起始Pro head | `19ece2819c6c2c1d7ef9fdb2389efaa045b1c35e`，原UR1結果已教17/36、保留0/18 |
+| 原課程事前來源 | `0b6de1d24481c2886833e412d173645fca98609c`；原manifest `d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0` |
+| 新manifest | `db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc` |
+| 新runner SHA256 | `efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862` |
+| 工作分支 | `codex/ur1-notice-execution-20261113`／[PR #13](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/13) |
+| 唯一變因 | 原每題答案targets連續更新 → 同epoch全部212個teacher-prefix/target配對打散 |
+| 不變項 | 原7science／12train題多重集合／三完整初態p,m,v,birth,t,RNG／L80,H64,10499參數／Adam／128epochs／27136更新每seed及trainingMAC |
+| 主要診斷 | 最終已教whole/address及配對原序差；附列96/128穩定性；強擬合gate每seed皆12/12 |
+| 保留題 | 全六搭配已查看，全部報告為曝光診斷，非新盲測 |
+| 新寫入範圍 | `experiments/spiral_neural/20261113_codex_target_order/`、Windows重現旁證與本交接卡；原Pro分支／歷史實驗不改 |
+| 導航 | Pro接回後統一現況／索引；此輪保留原總覽檔案 |
 
-## 已完成來源與最新可見範圍
+## 固定執行界線
 
-本輪已重新查核 GitHub PR、全部遠端分支並 fetch。當時最新可見的 Codex 公開成果仍是 [P035／PR #10](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/10)，最新 Pro 成果是 [UR1／PR #11](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/11)。沒有據此推定使用者本機尚未提交的工作不存在；若新來源出現，先核對增量再接入，不能把未讀的本機工作冒稱已審查。
+三seed101/202/303，每epoch212target，rng default_rng(seed+81000)；全128epoch實際課序已保存schedules.npz，pool及三初態一併公開。每seed27136更新，三學生primary81408target／1714126848training denseMAC，完整重播另同數。全部三primary＋三replay後才離線評六點×18題；不依分數續訓、加seed、改分割、挑checkpoint。相同trainingMAC不宣稱總推論／I/O／牆鐘成本相等。
 
-P035 的正式12學生已完成；本輪另做來源／公開包／預算／曝光與部分checkpoint的有界唯讀核對，沒有重跑完整訓練。UR1 原codec 17項測試是上一輪成果，不計為本次新神經學生。
+已修可攜依賴：baseline-inputs.zip包含真正用到的12個固定控制檔；從新目錄還原且禁止讀原根，實際validate_manifest通過。獨審重建212pool、三組128epoch全部permutation、stream/array/rawSHA及三初態，optimizer/forward正式呼叫0。原七份科學碼保持不變。重現命令與還原入口見新目錄README及export_results.py。
 
-## 回交規則
+## 控制與執行重疊的歸屬
 
-正式前的固定提交保存規格、來源與manifest；正式完成後另提交結果、完整失敗例、checkpoint、重播判定、實際成本與限制。回交時記下已存在的固定提交／manifest SHA，不預填尚未生成的本頁自身 commit。下一位先讀固定結果，再決定唯一下一變因；不得因保留題低分擅自續訓、改分割或追加seed。
+原序控制由Pro在[PR #12](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/12)完成。Codex於Pro結果提交前已依0b6凍結與47175a513f4fb08c5231cdb354f99f18c2936938接棒提交啟動Windows重現；Pro在該次執行期間公開19ece。兩側分數一致，Windows重現只作重現／工程核對，不作新獨立seed或額外條件；其實跑成本單列。原控制不再次訓練。Windows獨審實際核81408trace、24NPZ及18checkpoint×18題的自由生成／TF，原檔不變。
 
-接棒者領取後在新分支記 owner、起始 head、寫入範圍與事前規格，再開始正式新實驗。遇到新提交先核對是否已有人執行同一工作；一般 Codex 寫新實驗證據，Pro 接回後統一整合總覽，減少互相覆寫。
+新target-order是有限擬合診斷，次序假說仍是A；不能先認定它就是地址錯誤的原因。沒有普通題、語義升階、根升階、三份對一份或物理擴網的新證據。
 
-## Codex 接棒紀錄（正式執行前）
+## 外部隊員
 
-使用者於2026-11-13要求繼續實驗。本次Git重新確認PR #12仍固定`0b6de1d24481c2886833e412d173645fca98609c`、尚無正式結果提交；Codex領取固定課程的實際執行，不新增研究變因。原manifest SHA256 `d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0`，本機Python3.12.14／NumPy2.3.5匹配。Windows僅正規化來源雜湊相對路徑鍵，完整其餘manifest全等。薄入口SHA256 `ca04801fe4fb3af84fe03280108cdd356b0d11bf3deba87dc0f19a8919af00fb`。
-
-6項原工程測試及3項manifest負例通過；獨審逐bit核18題、3條完整課序／曝光／成本及20Gitblob／7sciencehash。兩次工程共24個synthetic更新，0正式學生、0保留題神經評分。本提交先凍結owner／launcher／執行預算，結果另提交。原Pro程式summary中author及NVIDIA固定欄位保留作設計來源；Codex實際執行與本機NVIDIA真派一次另記provenance，不能混歸屬。Gemini本輪因先前工具隔離未驗證而skip；NVIDIA只通過回覆結構，未提供要求的反例，不能採為驗收。兩dirty checkout與歷史P035未動，沒有合併任何PR。
+本user回合NVIDIA公開長度反例審查真呼一次、cost0，結構合法但缺JSON反例，語義拒收，不當PASS；新driver本身不呼外部模型。Gemini已有登入，但先前analysis-only工具隔離未驗證，此輪skip且未重送。完整新結果完成後另提交所有seed／失敗／checkpoint／成本／獨審，交回Pro，沒有合併任何既有PR。

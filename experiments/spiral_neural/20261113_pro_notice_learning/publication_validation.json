@@ -1,0 +1,54 @@
+{
+  "additional_neural_inference_calls": 0,
+  "additional_neural_updates": 0,
+  "archive_layout": [
+    {
+      "archive": "seed101.zip",
+      "bytes": 2876356,
+      "distributed_files": 6,
+      "max_distributed_file_bytes": 524288
+    },
+    {
+      "archive": "seed202.zip",
+      "bytes": 2900978,
+      "distributed_files": 6,
+      "max_distributed_file_bytes": 524288
+    },
+    {
+      "archive": "seed303.zip",
+      "bytes": 2904213,
+      "distributed_files": 6,
+      "max_distributed_file_bytes": 524288
+    },
+    {
+      "archive": "run-metadata.zip",
+      "bytes": 13888,
+      "distributed_files": 1,
+      "max_distributed_file_bytes": 13888
+    }
+  ],
+  "distributed_payload_bytes": 8695435,
+  "published_files_including_index": 20,
+  "published_payload_files": 19,
+  "restore": {
+    "files": 82,
+    "index_sha256": "5f70385c60cbcc3807b7350f8b6a3877491a06f8a91162926cfe59bdb8bd6dde",
+    "mode": "restore",
+    "model_inference_calls": 0,
+    "model_updates": 0,
+    "status": "PASS",
+    "uncompressed_bytes": 17548458
+  },
+  "results_summary_byte_identical": true,
+  "results_summary_sha256": "649033ae8f965a53b237fb857efb3bcb5fa1eaef37cb3f690519960c1ac02092",
+  "status": "PASS",
+  "verify": {
+    "files": 82,
+    "index_sha256": "5f70385c60cbcc3807b7350f8b6a3877491a06f8a91162926cfe59bdb8bd6dde",
+    "mode": "verify",
+    "model_inference_calls": 0,
+    "model_updates": 0,
+    "status": "PASS",
+    "uncompressed_bytes": 17548458
+  }
+}

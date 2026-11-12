@@ -1,0 +1,28 @@
+{
+  "author": "Codex",
+  "external_model_calls": 0,
+  "formal_updates": 0,
+  "local_source_hashes": {
+    "protocol.json": "134a944394172f52f76f1c44aa6c0ad011cc6c61b0214dd3ac024af0cce140e6",
+    "run_target_order.py": "efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862",
+    "test_target_order.py": "00286e3731010b787661fcb68edbd1b505908819d24104d6f89983683df37615"
+  },
+  "manifest_sha256": "db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc",
+  "original_source_hashes": {
+    "experiments/spiral_neural/20261112_p035/reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "experiments/spiral_neural/20261113_pro_notice_learning/dataset.py": "ae1ef4c5130dba31e8ef20ccb1cdd9e128a67e960003ac157635cc74f8abc57a",
+    "experiments/spiral_neural/20261113_pro_notice_learning/learner.py": "94edb4dbc30b72d2d2eeebf2993cdcb37e8b85d4922d31b17fca1d04d47d7b72",
+    "experiments/spiral_neural/20261113_pro_notice_learning/protocol.json": "6c15d6e940a0ec85d3d4ddfda6ce56e9211ac36f5facc4e86e790d6c93541b13",
+    "experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "experiments/spiral_neural/20261113_pro_notice_learning/test_engineering.py": "3017ae9baa13236f4bb386b2cd44cb09ecfc592e09237987fe4b8f59f7402691",
+    "experiments/spiral_neural/20261113_pro_upgrade_notice/notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8"
+  },
+  "schedule_stream_sha256": {
+    "101": "0d03c59463e7f26e095b0f21ac15340b85d342f3ae400c8ccff9071c86561523",
+    "202": "292c14d45f17073d16e331c92ab14d411718533c1b48af7898681dbc6409d161",
+    "303": "429638cb8d55804e16e3464c7abc565d9f2a6ca37a93fed6f4e35e690563ab55"
+  },
+  "schedules_file_sha256": "1f103c1d35d611effeac60a196ee3cd9f5d39a9f279899ec5b18c3ba43422776",
+  "target_pool_file_sha256": "b2927d7a52bb5c7b15e0b63b5cc6404f56f42a3e0f53f632e5600cd7334f51ee",
+  "target_pool_sha256": "6983759f1080ef9d5811945db94c54ca39d607af88b6537d1ae56bdfa37c9d32"
+}

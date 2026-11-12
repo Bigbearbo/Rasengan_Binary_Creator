@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "manifest_sha256": "db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc",
+  "launcher_sha256": "efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862",
+  "source_hashes": {
+    "protocol.json": "134a944394172f52f76f1c44aa6c0ad011cc6c61b0214dd3ac024af0cce140e6",
+    "run_target_order.py": "efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862",
+    "test_target_order.py": "00286e3731010b787661fcb68edbd1b505908819d24104d6f89983683df37615"
+  },
+  "original_source_hashes": {
+    "experiments/spiral_neural/20261112_p035/reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "experiments/spiral_neural/20261113_pro_notice_learning/dataset.py": "ae1ef4c5130dba31e8ef20ccb1cdd9e128a67e960003ac157635cc74f8abc57a",
+    "experiments/spiral_neural/20261113_pro_notice_learning/learner.py": "94edb4dbc30b72d2d2eeebf2993cdcb37e8b85d4922d31b17fca1d04d47d7b72",
+    "experiments/spiral_neural/20261113_pro_notice_learning/protocol.json": "6c15d6e940a0ec85d3d4ddfda6ce56e9211ac36f5facc4e86e790d6c93541b13",
+    "experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "experiments/spiral_neural/20261113_pro_notice_learning/test_engineering.py": "3017ae9baa13236f4bb386b2cd44cb09ecfc592e09237987fe4b8f59f7402691",
+    "experiments/spiral_neural/20261113_pro_upgrade_notice/notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8"
+  },
+  "sole_variable": "Within-epoch order of the same212 teacher-prefix/target occurrences.",
+  "pool_occurrences": 212,
+  "epochs_per_seed": 128,
+  "schedules_verified": [
+    101,
+    202,
+    303
+  ],
+  "all384epochs_multisets_and_exact_frozen_RNG_orders_verified": true,
+  "same_initial_raw_bytes_and_all_state_exact": [
+    {
+      "seed": 101,
+      "raw_sha256": "e5c3421c566108c04c9a3aa4d09916bc33a2b80848589da70e4d884296401f8a",
+      "full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6"
+    },
+    {
+      "seed": 202,
+      "raw_sha256": "4258233a8616a98851e1e2977d8fffa7bd21fc081eb532ba5511e891b3aa180b",
+      "full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c"
+    },
+    {
+      "seed": 303,
+      "raw_sha256": "474039f1775d77b993d3414989362ce456e6b9b5a6b72827d0cd7c599649b805",
+      "full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21"
+    }
+  ],
+  "baseline_package_sha256": "e710b85ca847312c5a4b4d9d4988daa54ee22135519e2fbce0ecc6eeb706c884",
+  "baseline_package_index_sha256": "51253e19dd24e69594b5233ec601dac94b30126a9be186d7bced2c3b3191e015",
+  "baseline_public_inputs": 12,
+  "portable_restored_validation": "passed",
+  "relocated_input_files_unchanged": 30,
+  "original_roots_read_during_validation": 0,
+  "optimizer_forward_or_evaluation_calls": 0,
+  "formal_students_started": 0,
+  "external_model_calls": 0,
+  "scientific_review": {
+    "same_original7source_and_raw_interface": true,
+    "same_optimizer_weights_budget": true,
+    "targets_per_seed": 27136,
+    "training_dense_MAC_per_seed": 571375616,
+    "heldout_training_targets": 0,
+    "all3primary_then3replays_before_offline_heldout": true,
+    "fixed_endpoints_no_selection_or_extension": true,
+    "heldout_is_exposed_diagnostic": true,
+    "primary_endpoint": "Final train whole/address and per-seed paired control differences;96/128 stability retained.",
+    "control_role": "Reuse audited Windows replication metadata, not new independent control evidence."
+  },
+  "resolved_findings": [
+    {
+      "severity": "P1",
+      "issue": "Unpublished69-file local baseline dependency with only3 initial copies.",
+      "resolution": "Exactly12 required public raw inputs; restored ZIP plus relocated source/prereg validated with original roots blocked."
+    }
+  ],
+  "material_findings_remaining": [],
+  "engineering_updates_reported_by_implementer": {
+    "dev01": 7,
+    "final": 7,
+    "total": 14
+  },
+  "required_root_pre_formal_gate": "Commit and verify exact protocol/driver/manifest/schedules/three initial states plus baseline ZIP/index before the one formal run; do not retrain the fixed control.",
+  "evidence": "review/pre-run-details.json"
+}

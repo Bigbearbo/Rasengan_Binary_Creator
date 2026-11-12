@@ -1,0 +1,39 @@
+{
+  "author": "Codex",
+  "control_input_files_verified_unchanged": 12,
+  "each_epoch_original_multiset_exact": true,
+  "external_model_calls": 0,
+  "formal_heldout_neural_evaluations": 0,
+  "formal_student_updates": 0,
+  "generation_STOP_overflow_cap": "PASS",
+  "initial_match_scope": "All p/m/v/birth arrays, t, shape, seed, growth RNG, events, train/inference counters",
+  "local_source_hashes": {
+    "protocol.json": "134a944394172f52f76f1c44aa6c0ad011cc6c61b0214dd3ac024af0cce140e6",
+    "run_target_order.py": "efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862",
+    "test_target_order.py": "00286e3731010b787661fcb68edbd1b505908819d24104d6f89983683df37615"
+  },
+  "orders_per_seed": {
+    "seed101": [
+      128,
+      212
+    ],
+    "seed202": [
+      128,
+      212
+    ],
+    "seed303": [
+      128,
+      212
+    ]
+  },
+  "original_initial_states_fully_loaded_and_matched": 3,
+  "original_source_files_verified_unchanged": 7,
+  "protocol_sha256": "134a944394172f52f76f1c44aa6c0ad011cc6c61b0214dd3ac024af0cce140e6",
+  "schedule_bytes_deterministic": true,
+  "schema": "target-order-engineering-v1",
+  "status": "PASS",
+  "synthetic_checkpoint_resume": "exact",
+  "synthetic_full_trace_replay": "exact",
+  "synthetic_native_optimizer_update_calls": 7,
+  "target_pool_size": 212
+}

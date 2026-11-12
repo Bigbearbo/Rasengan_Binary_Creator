@@ -1,0 +1,19 @@
+{
+  "dependency_entries": 12,
+  "dependency_zip_sha256": "e710b85ca847312c5a4b4d9d4988daa54ee22135519e2fbce0ecc6eeb706c884",
+  "external_model_calls": 0,
+  "formal_neural_evaluations": 0,
+  "formal_targets": 0,
+  "fresh_input_files_verified_unchanged": 31,
+  "fresh_root": "portable-prereg",
+  "manifest_sha256": "db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc",
+  "original_locations_read_attempts_during_validation": 0,
+  "schema": "target-order-portable-prereg-v1",
+  "scientific_learning_call_counts": {
+    "Model.lesson": 0,
+    "Model.loss_grad": 0,
+    "Model.step": 0
+  },
+  "scope": "Actual frozen manifest guard, copied seven original sources, exact initial-state copies, schedules, and 12-file baseline ZIP; original input locations denied during validation",
+  "status": "PASS"
+}
