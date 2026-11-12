@@ -151,7 +151,7 @@ class Tests(unittest.TestCase):
         self.assertNotIn('progress',x)
 
     def test_real_v03_student_tree_snapshot(self):
-        source=Path(__file__).parent/'spiral_dialogue_v03_run'/'student_tree.json'
+        source=Path(__file__).parent/'fixtures'/'v03_student_tree.json'
         tree=json.loads(source.read_text('utf-8'))
         obj=public_tree(tree)
         validate_tree(obj)

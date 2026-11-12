@@ -13,7 +13,7 @@ from spiral_tree_packet_v05 import (
     highwater_details,allocate_operator,delta_package,snapshot_package,
     wire_package,TreeSyncReceiver, public_fingerprint)
 
-BASE = Path(__file__).parent/'spiral_dialogue_v03_run'/'teacher_tree.json'
+BASE = Path(__file__).parent/'fixtures'/'v03_teacher_tree.json'
 
 def transmit(receiver,envelope,pid,chunk_bytes=180,skip=None):
     manifest,chunks,stat=wire_package(envelope,pid,chunk_bytes)
