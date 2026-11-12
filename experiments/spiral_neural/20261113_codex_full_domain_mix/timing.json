@@ -1,0 +1,26 @@
+{
+  "scope": "Training, all epoch probes/state IO, planned seed101 replay, input guards and final TF; not pure kernels",
+  "total_seconds": 245.96135050000157,
+  "trajectories": [
+    {
+      "mode": "primary",
+      "seconds": 64.65467400000489,
+      "seed": 101
+    },
+    {
+      "mode": "primary",
+      "seconds": 61.778593999988516,
+      "seed": 202
+    },
+    {
+      "mode": "primary",
+      "seconds": 48.35741469998902,
+      "seed": 303
+    },
+    {
+      "mode": "replay",
+      "seconds": 69.92016320000403,
+      "seed": 101
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "author": "Codex",
+  "auto_retry": false,
+  "commit_scope": "Coordinator supplied, runner performs no Git operations",
+  "manifest_sha256": "dabdb58a54ffd93afa350f19876a53550bcfcfd6de9b5199ee8b3b26d2b8d658",
+  "preregistration_commit": "1d6ab7fd7fbb75525886226b10b1ed0a744ad9ff"
+}
