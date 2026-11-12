@@ -1,0 +1,38 @@
+{
+  "id": "P035-source-freeze-v1",
+  "frozen_before_first_scientific_update_UTC": "2026-11-12T15:59:03.347835+00:00",
+  "formal_students_started": 0,
+  "formal_student_updates": 0,
+  "source_plan_commit": "4e2ded91166a4fd9348dccf8fc71ddf01e991645",
+  "source_plan_path": "docs/ai_orchestration/PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md",
+  "P034_historical_result_commit": "5e6a25c8bb809f8130b60c257280aa72225a5f89",
+  "sources_sha256": {
+    "P035-事前規格-2026-11-12.md": "3f8d7327eb84f12a472f08a32c4923239bc1fdd2d977529225d7477bc998a03f",
+    "codec_course.py": "0f38c76789f19cad6cc0ca4967b30fdb69b09416b48f77f5c3669b84babd19b2",
+    "protocol.json": "68dac62882e8983945beb9b705cca6c34817f605d7f97b711dff345310c988ec",
+    "reference/lineage.json": "038a0d76cb911fc21da1d16655ecf0961f4f6ea165e3a09ee59cd955d02d8788",
+    "reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "reference/reference_codec.py": "56f337ee606f479ddf590d774235729d99d64ec54d5ac755822b87bd54b0afb4",
+    "reference/student_io.py": "903ac64564a58852689283ef972e38bba3fda82f31a3ca25a45b1b0574770281",
+    "reference/teacher.py": "b27ba59d71d3e7798170008befbef05aaadb7705fbd36f177f2070fbca36a708",
+    "run_p035.py": "0428f5ce96acc3e60d28abcb23ba96585df5bdce3f80ebc6e269df9e2464fe69"
+  },
+  "engineering": {
+    "work/sle-p035/codec-final-gate/checks.json": {
+      "sha256": "066054f71b5fd589cee0e6dcdb795b2ed81c55aba74c4fd2b04475996130c0f7",
+      "status": "passed"
+    },
+    "work/sle-p035/runner-engineering-final/checks.json": {
+      "sha256": "1fe879e3fffdf87d52632d8e9a782f35a829551271ef93f36b13ff1e0a922aaf",
+      "status": "passed"
+    },
+    "work/sle-p035/independent-engineering/checks.json": {
+      "sha256": "a1e633ddef53a156c6a680e09464ab4acc67d4987efbd99fcf1d168cd79c40a9",
+      "status": "pass"
+    }
+  },
+  "output": "work/sle-p035/science-20261112",
+  "authorization": "User requested continuation and agent coordination; coordinator verified public Git plan, preregistration and independent engineering gate.",
+  "execution": "one fixed12-student run and independent target-loop replay; no scientific parameter/codec/budget changes after this record",
+  "scope": "shared-response input-codec x capacity-timing screening; known tiny domain, no native-output codec or broad superiority claim"
+}

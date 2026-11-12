@@ -1,0 +1,247 @@
+{
+  "id": "P035",
+  "version": 1,
+  "status": "preregistered before scientific training; implementation hashes appended at engineering gate",
+  "source_plan": {
+    "pr": 8,
+    "commit": "4e2ded91166a4fd9348dccf8fc71ddf01e991645",
+    "document": "docs/ai_orchestration/PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md",
+    "section": 6,
+    "author": "ChatGPT Pro",
+    "historical_results": "Codex P030-P034, unchanged"
+  },
+  "purpose": "Input codec by capacity timing comparison in the published tiny unary domain; shared response grammar. Not a complete native-output codec/system-cost benchmark.",
+  "students": 12,
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "codecs": [
+    "SLE-Original",
+    "Flat-Hierarchical-unary-v1"
+  ],
+  "policies": [
+    "F",
+    "G"
+  ],
+  "stages": [
+    {
+      "id": "s0_echo_d1",
+      "n_op": 1,
+      "n_data": 1,
+      "ops": [
+        "echo"
+      ],
+      "L": 8,
+      "H": 64,
+      "train": [
+        0,
+        1
+      ],
+      "val": [],
+      "test": [],
+      "targets_per_lesson": 3,
+      "training_MAC_cap": 37881000
+    },
+    {
+      "id": "s1_echo_d2",
+      "n_op": 1,
+      "n_data": 2,
+      "ops": [
+        "echo"
+      ],
+      "L": 10,
+      "H": 66,
+      "train": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "val": [],
+      "test": [],
+      "targets_per_lesson": 4,
+      "training_MAC_cap": 50508000
+    },
+    {
+      "id": "s2_echo_d3",
+      "n_op": 1,
+      "n_data": 3,
+      "ops": [
+        "echo"
+      ],
+      "L": 12,
+      "H": 68,
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "val": [
+        4
+      ],
+      "test": [
+        6
+      ],
+      "targets_per_lesson": 5,
+      "training_MAC_cap": 63135000
+    },
+    {
+      "id": "s3_op2",
+      "n_op": 2,
+      "n_data": 3,
+      "ops": [
+        "echo"
+      ],
+      "L": 13,
+      "H": 69,
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "val": [
+        4
+      ],
+      "test": [
+        6
+      ],
+      "targets_per_lesson": 5,
+      "training_MAC_cap": 63135000
+    },
+    {
+      "id": "s4_neg",
+      "n_op": 2,
+      "n_data": 3,
+      "ops": [
+        "echo",
+        "neg"
+      ],
+      "L": 13,
+      "H": 69,
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "val": [
+        4
+      ],
+      "test": [
+        6
+      ],
+      "targets_per_lesson": 5,
+      "training_MAC_cap": 63135000
+    }
+  ],
+  "curriculum": {
+    "fixed_external_stage_clock": true,
+    "promotion_not_conditioned_on_success": true,
+    "failures_retained": true,
+    "return_to_old_profile": false,
+    "order": "np.default_rng(seed+350000+1000*stage.index); repeatedly shuffle the whole(op,value) block then truncate at a full-lesson MAC boundary, identical ordinal stream across arms",
+    "student_features": "only actual raw binary question concatenated with current answer prefix; no profile, AST, role, length, boundary or answer oracle feature",
+    "answer": "shared P031 native SLE data word: n_data information bits + 0; external model action S terminates generation",
+    "teacher_forcing": "correct answer prefix in training; own prior outputs in free generation",
+    "holdout_use": "predeclared diagnostics only; no budget, curriculum, stopping or parameter decisions"
+  },
+  "model": {
+    "source_commit": "5e6a25c8bb809f8130b60c257280aa72225a5f89",
+    "source_path": "experiments/spiral_neural/20261112_p034/reference/p030_reference.py",
+    "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "class": "Model",
+    "input": "two-channel onehot 0=[1,0],1=[0,1],padding=[0,0]",
+    "hidden": "tanh",
+    "output": "0/1/S shared three-class head",
+    "initialization": "original P030: W_in N(0,.2), W_out N(0,.15), biases0, float32",
+    "optimizer": "original P030 Adam lr=.003 betas .9/.999 eps1e-8; global norm clip1; per-coordinate birth age",
+    "parameters": "H*(2L+4)+3",
+    "final_parameter_cap": 2073,
+    "growth": "original P030: preserve old p/m/v/birth/t; random incoming, zero new hidden outgoing; all coordinates trainable after growth",
+    "F_initialization": "same seed/minimum student, replay the entire prescribed L/H growth sequence at t0 before any training",
+    "G_initialization": "same seed/minimum student, grow only on entry to each prescribed semantic stage",
+    "codecs_paired_initial_state": true,
+    "max_generation_actions": 8,
+    "no_forced_correct_STOP": true
+  },
+  "budget": {
+    "unit": "training dense matrix MAC; not hardware total FLOPs",
+    "forward_per_token": "H*(2L+3)",
+    "backward_per_token": "H*(2L+6)",
+    "training_per_target": "H*(4L+9)",
+    "per_student_cap": 277794000,
+    "per_stage": "exactly 3000 Fixed-final lessons equivalent; use stage caps, no carry",
+    "boundary": "complete lessons only; next lesson not executed if it would exceed cap; leftover recorded, no fake optimizer/no-op updates",
+    "F_lessons": [
+      3000,
+      3000,
+      3000,
+      3000,
+      3000
+    ],
+    "G_expected_lessons": [
+      4812,
+      3904,
+      3257,
+      3000,
+      3000
+    ],
+    "G_expected_MAC": 277772868,
+    "G_expected_target_updates": 76337,
+    "F_expected_target_updates": 66000,
+    "primary_and_replay_separate": true,
+    "inference_and_engineering_costs": "recorded separately; excluded from primary training MAC cap",
+    "wall_time": "record only; no hardware-dependent scientific stopping rule"
+  },
+  "primary": {
+    "evaluation_profile": "final op2/data3, no END, current format for all prior semantics",
+    "milestones": [
+      "Echo values 0,1 all correct",
+      "Echo values 0..3 all correct",
+      "Echo values 0..7 all correct",
+      "Echo and Neg values 0..7 all correct"
+    ],
+    "score": "highest consecutive cumulative milestone passed, integer0..4; whole free generation including correct S and no overflow",
+    "representation_transition": "op1->op2 is diagnosed separately, not counted again as a semantic skill",
+    "all_12_students": true,
+    "interaction": "per-seed (S-G - S-F) - (H-G - H-F)",
+    "interpretation": "three paired seeds are descriptive, nested milestones are not independent skills; SG-best alone does not show encoding-specific growth benefit"
+  },
+  "diagnostics": {
+    "stage_MAC_fraction_snapshots": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "training_fit": "each100 complete lessons, plus stage endpoint; first observed three consecutive train/val all-correct checks, diagnostic only",
+    "checkpoint": "all p/m/v/birth,t,L,H,growth_rng; exact trace and complete independent deterministic replay",
+    "growth": "same raw old valid prefixes logit preservation plus old arrays/moments/age equality; current-format adaptation measured separately",
+    "predictions": "per-op/train/val/test whole, teacher-forcing, free-run bits/STOP/first-error, logits, malformed/overflow",
+    "drift": "old overlapping parameter and optimizer blocks before/after each stage, joint with functional retention",
+    "exposure": "value,op-value,width-sensitive semantics and cross-stage ledger; no recoded-seen cases called novel",
+    "snapshot_boundary": "last completed lesson at or below each stage-MAC fraction, with requested threshold and actual spent MAC recorded"
+  },
+  "limitations": [
+    "same published 1..3-bit domain, not new blind evaluation",
+    "d1/d2 exhaustive teaching has no holdout",
+    "H supports a declared compact unary hierarchical slice, not arbitrary recursive grammar",
+    "common response grammar deliberately controls output-side learning; not H's shortest possible native output",
+    "equal MAC lets G see more lessons, an intentional capacity-policy resource effect; not an isolated parameter-copy mechanism",
+    "no attention tuning, new operations, ritual, neural translation or real VM execution"
+  ],
+  "engineering_gate": "codec/oracle/invalid-input/tensor audit plus runner state/growth/MAC/replay checks and independent review; freeze source hashes before all12",
+  "nvidia": "one public read-only review; actual response and deterministic acceptance/rejection recorded separately; no opinion treated as PASS",
+  "stop": "complete the12 frozen runs once plus deterministic replays; no outcome-driven changes, added seeds or extensions"
+}

@@ -1,0 +1,79 @@
+{
+  "Git_record": "Root records the eventual Git publication separately after sealing; account state and doc-updates are not part of this science package.",
+  "ZIP_coverage": {
+    "evidence-02.zip": {
+      "bytes": 1958376,
+      "entries": 291,
+      "git_blob": "0875c658f641f0f4a9134b26c480c3905584d97b",
+      "sha256": "ccf7ce25d59c8f827a4140f2124f403e1d2731c75e6e25d4a827bd5c228e3581"
+    },
+    "evidence.zip": {
+      "bytes": 2952895,
+      "entries": 455,
+      "git_blob": "5e870b3c6833a8aecddb826600ceca7c133fe24d",
+      "sha256": "5a74dcd45c9d6291f6cd293eb065386fca3d134700021b23d27ece0ad2bf724b"
+    }
+  },
+  "all_fixed_quarter_truth_tables_included": true,
+  "author": "Codex",
+  "checks": {
+    "base64_chunk_characters": 12000,
+    "every_ZIP_entry_exact_byte_roundtrip": true,
+    "every_selected_NPZ_numeric_array_finite": true,
+    "max_ZIP_bytes": 3000000
+  },
+  "full_target_traces_local_only": {
+    "bytes": 54465048,
+    "exact_source_SHA_list": "local-artifact-hashes.json",
+    "files": 60
+  },
+  "id": "P035-PUBLICATION-RECORD",
+  "integration_review_sha256": "e76b87cf1695c750aaa22db96c35aa2149f8af7a77b4e38a1ddfeede7283fb75",
+  "no_P033_checkpoint_or_private_account_dependency": true,
+  "original_private_metadata_policy": "Unmodified originals remain local; only the listed public-copy fields are removed, never scientific numbers or source code.",
+  "private_PUBLIC_copy_redactions": {
+    "review_notes.json": {
+      "redactions": [
+        {
+          "json_pointer": "/NVIDIA/private_raw_api_record",
+          "original_value_sha256": "3848da7d44d9cd8ca4ada013d66e513f31be29225ecdca265d940cd99913864b",
+          "reason": "Private machine/API/account metadata removed only from PUBLIC copy"
+        }
+      ],
+      "sha256": "bc7fb804b8acf71affd795507b8abd0b26a43e205c58c7c832d19065f8c8b66e",
+      "source": "outputs/sle-p035/review_notes.json",
+      "source_sha256": "dea6aa3bbc453cfb133f62f70922f0768d6ea55565b19de4edabd387efd5a570"
+    },
+    "reviews/public_candidate.json": {
+      "redactions": [
+        {
+          "json_pointer": "/raw_api_path",
+          "original_value_sha256": "3848da7d44d9cd8ca4ada013d66e513f31be29225ecdca265d940cd99913864b",
+          "reason": "Private machine/API/account metadata removed only from PUBLIC copy"
+        }
+      ],
+      "sha256": "eca6bd87423820a24ce4139d3494237fba6e3bc6a4e704709cc342b3b520b057",
+      "source": "work/sle-p035/nvidia-review/public_candidate.json",
+      "source_sha256": "b254c6b6d89d8018b98b447df4f1fc6cdf6cd3558789f0a8f622a760cdde6be8"
+    }
+  },
+  "published_NPZ_files": 145,
+  "scientific_and_engineering_file_guards": {
+    "P035-事前規格-2026-11-12.md": "3f8d7327eb84f12a472f08a32c4923239bc1fdd2d977529225d7477bc998a03f",
+    "codec_course.py": "0f38c76789f19cad6cc0ca4967b30fdb69b09416b48f77f5c3669b84babd19b2",
+    "protocol.json": "68dac62882e8983945beb9b705cca6c34817f605d7f97b711dff345310c988ec",
+    "reference/lineage.json": "038a0d76cb911fc21da1d16655ecf0961f4f6ea165e3a09ee59cd955d02d8788",
+    "reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "reference/reference_codec.py": "56f337ee606f479ddf590d774235729d99d64ec54d5ac755822b87bd54b0afb4",
+    "reference/student_io.py": "903ac64564a58852689283ef972e38bba3fda82f31a3ca25a45b1b0574770281",
+    "reference/teacher.py": "b27ba59d71d3e7798170008befbef05aaadb7705fbd36f177f2070fbca36a708",
+    "run_p035.py": "0428f5ce96acc3e60d28abcb23ba96585df5bdce3f80ebc6e269df9e2464fe69",
+    "work/sle-p035/codec-final-gate/checks.json": "066054f71b5fd589cee0e6dcdb795b2ed81c55aba74c4fd2b04475996130c0f7",
+    "work/sle-p035/independent-engineering/checks.json": "a1e633ddef53a156c6a680e09464ab4acc67d4987efbd99fcf1d168cd79c40a9",
+    "work/sle-p035/runner-engineering-final/checks.json": "1fe879e3fffdf87d52632d8e9a782f35a829551271ef93f36b13ff1e0a922aaf"
+  },
+  "scientific_source_freeze_sha256": "f2b6ad6ef4b26bda02a20376f534a16d26cffece4527457fc102bd51b6b6f702",
+  "scope": "Whitelist-only new P035 input-codec/capacity-timing package. No Git operation, old experiment modification or new scientific execution during export.",
+  "selected_states": "Every student initial/final and every stage0/100percent full state; intermediate quarter states stay local with SHA.",
+  "source_newline_policy": "read_bytes().decode(UTF-8) for API text; preserve original CRLF and raw source bytes."
+}
