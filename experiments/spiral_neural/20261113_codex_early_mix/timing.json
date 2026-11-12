@@ -1,0 +1,78 @@
+{
+  "scope": "Primary, full replay, state/trace IO, guards and offline diagnostics, not pure kernels",
+  "total_seconds": 108.75773800000024,
+  "trajectories": [
+    {
+      "arm": "early",
+      "mode": "primary",
+      "seconds": 3.5657513000041945,
+      "seed": 101
+    },
+    {
+      "arm": "late",
+      "mode": "primary",
+      "seconds": 9.943363300000783,
+      "seed": 101
+    },
+    {
+      "arm": "early",
+      "mode": "primary",
+      "seconds": 9.614435699986643,
+      "seed": 202
+    },
+    {
+      "arm": "late",
+      "mode": "primary",
+      "seconds": 9.465486399989459,
+      "seed": 202
+    },
+    {
+      "arm": "early",
+      "mode": "primary",
+      "seconds": 9.799013899988495,
+      "seed": 303
+    },
+    {
+      "arm": "late",
+      "mode": "primary",
+      "seconds": 9.47377620000043,
+      "seed": 303
+    },
+    {
+      "arm": "early",
+      "mode": "replay",
+      "seconds": 9.473870000001625,
+      "seed": 101
+    },
+    {
+      "arm": "late",
+      "mode": "replay",
+      "seconds": 9.575597399991238,
+      "seed": 101
+    },
+    {
+      "arm": "early",
+      "mode": "replay",
+      "seconds": 9.549109999992652,
+      "seed": 202
+    },
+    {
+      "arm": "late",
+      "mode": "replay",
+      "seconds": 9.409099900003639,
+      "seed": 202
+    },
+    {
+      "arm": "early",
+      "mode": "replay",
+      "seconds": 9.165508299993235,
+      "seed": 303
+    },
+    {
+      "arm": "late",
+      "mode": "replay",
+      "seconds": 9.226287099998444,
+      "seed": 303
+    }
+  ]
+}
