@@ -24,16 +24,11 @@ For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_la
 - `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
 Do not confuse these code families, or treat historical draft documents as the current binding protocol.
 
-## Latest SLE neural research status: P032 completed; investigate P033 data-pair gap (2026-11-12)
+## Current Git research routing (2026-11-13; check live PRs every time)
 
-**Do not rerun P032 as if it is pending.** Codex completed 24 P032 controlled trials in [PR #6](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/6) (head `codex/p032-width-curriculum-20261112`), with 0–1/12 heldout answers and substantial pre/post NegEcho interference. The published training/replay checks passed; this is **not** successful novel mathematics learning. PR #5 contains the **separate** shared SLE corpus; it was not used as P032's training set. Verify current branch and PR state at each new run.
+**Start with [Git research handoff](docs/ai_orchestration/GIT_RESEARCH_HANDOFF_20261113.md), not the older P032/P033 work-order prose.** As last checked, Codex had already completed P031–P035 experiments, Pro completed UR1 notification codec, and a new UR1 neural-ACK trial was at the frozen pre-training stage in the stacked PR #8 → #9 → #10 → #11 → #12 chain. Those PRs are **not automatically merged into main**. Check latest open/merged PRs, their actual bases, and the branch-specific `docs/ai_orchestration/RESEARCH_HANDOFF.md` / `CURRENT_RESEARCH_STATUS.md` before selecting new work. Do not rerun completed P032/P033/P034/P035 solely because historical plans or main still call them next.
 
-Next **analytical research priority**, before increasing hidden width again: read [P033｜位元組合覆蓋與泛化干擾診斷](docs/ai_orchestration/P033_位元組合覆蓋與泛化干擾診斷_20261112.md), then:
-1. Inspect P032 existing teacher-forcing and free-run truth tables; isolate the **first wrong answer bit**, and test input-bit/output-bit counterfactual sensitivity on saved checkpoints without retraining.
-2. Test matched six-value curricula with **pairwise-complete** bit training sets versus old S0/S1 pairwise-incomplete sets under frozen budget/architecture, to test whether the gap explains the failures. Separately isolate novel value vs novel operator/value pairing.
-3. Only if required, compare a small learnable positional/attention architecture on native SLE raw 0/1; never add a teacher/parser that computes student answers.
-
-The P032 report, not the model's opinion, is evidence. The **S0/S1 bit-pair coverage gap is certain from the enumerated training data**; its causal role remains **unproven**. Keep P032/P030 historical checkpoints untouched. Delegate a bounded P033 review to NVIDIA if configured/authorized; do not block Codex test execution if unavailable. The elementary-school shared SLE math bank and input/output translators remain planned, not cancelled.
+For any new experiment, distinguish existing F/T evidence, new T results, user-authored U hypotheses, and A proposals; preserve the verified corpus/manifest, negative results and immutable checkpoints. Work in isolated branches and make a concise evidence-backed handoff; do not merge stacked PRs or claim NVIDIA/Codex execution without actual results. The shared-memory dispatcher remains a separate engineering MVP and must not delay the active experimental PR's next responsible owner.
 
 ## Active Codex implementation work order (2026-11-12)
 
