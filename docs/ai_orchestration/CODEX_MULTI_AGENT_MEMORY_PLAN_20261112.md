@@ -89,6 +89,16 @@ ai_orchestration/
 - 使用**相同任務集**比較原始 Codex 單獨工作與共享記憶／分工方案，統計任務成功率、人工修正、牆鐘時間、輸入/輸出 token（若可得）、實付費用、錯誤率。不預設共用記憶必然省錢。
 - 完成一項 end-to-end demo：`任務建立 → NVIDIA 靜態分析 → Gemini 獨立檢查 → Codex 人/程式驗證 → 產生報告 → 提議記憶更新`。先不允許自動合併未驗證結論。
 
+## 1A. [更新] NVIDIA 任務路由必須能由程式提醒，不只靠 Codex 記住（2026-11-12）
+
+使用者回報：即使已連接 OpenRouter NVIDIA Agent，Codex 仍經常忘記調用；使用者有每天約 1,000 次的可用額度。現在的核心工作是**把派工變成可觀察的流程步驟**。閱讀 [NVIDIA_WORKER_TASKS_20261112.md](NVIDIA_WORKER_TASKS_20261112.md) 的 N-01 至 N-05 首批任務。
+
+- 先在 `dispatch.py` 建立**不耗 API 的 preflight/plan 模式**：根據 `project`, `goal`, `task_kind` 與可讀檔案，產生至少一個候選 NVIDIA 唯讀子任務及其 `task_id`，即使本機沒有 key 也能在 mock mode 看到派工計劃。
+- 對 `research / review / parser / math_corpus / encoding_benchmark / training_analysis` 工作，優先回傳 NVIDIA 子任務候選；對純機械操作不強制，記 `skip_reason`。真正執行仍需合法 API 憑證/授權和服務可用，不能假設 1,000 次一定能用。
+- 開始主要 Codex 研究工作前，若 worker 可用，實際派 **至少一項** 有效子任務；若未派，**回報中必須有 `nvidia_status` 及 `skip_reason`**。記錄 `planned / attempted / returned / accepted / rejected` 狀態，避免把「已經計劃」冒充「已呼叫」。
+- 設定預算：單任務 max_calls、每分鐘速率、每日帳號級上限及剩餘緩衝；遇 429/無額度/不受支援端點立即降級，不因追求用滿額度而循環重試。模型回傳 JSON 必須自己 validate，因免費 Nemotron 端點未必支援強制 response_format。
+- 這個**程序上的 gate** 才是真正解決 Codex 經常忘記 NVIDIA 的方法；`AGENTS.md` 的提醒只是入口，不能替代自動產生任務與紀錄。
+
 ## 2. 本輪 Codex 執行順序（請優先完成最小可用版）
 
 1. 讀本計畫與根目錄 `AGENTS.md`，檢查已有未合併 PR／分支與同名程式，勿踩到其他進行中作業。
