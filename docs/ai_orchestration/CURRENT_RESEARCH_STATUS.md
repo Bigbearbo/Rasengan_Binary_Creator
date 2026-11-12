@@ -1,6 +1,6 @@
 # 研究現況與下一步
 
-更新：2026-11-13。整理與後續研究設計：**ChatGPT Pro**；P034／P035實測及該部分結果更新：**Codex／受指派agent**。歷史 main 查核基底為 `9118abf4e895204588f7c5aa1bfc2615d0ab52b8`；本次通知分支已整合 P035 `a309f2fc3e23255327fcab35745c27012d15ed4f`。成果分別位於下列 PR／分支，不能假設 main 已經包含它們。新工作開始時重新查核相關 ref。
+更新：2026-11-13。整理、後續研究設計及本輪UR1-ACK實測：**ChatGPT Pro／受指派agent**；P034／P035實測及該部分結果更新：**Codex／受指派agent**。歷史 main 查核基底為 `9118abf4e895204588f7c5aa1bfc2615d0ab52b8`；本次通知分支已整合 P035 `a309f2fc3e23255327fcab35745c27012d15ed4f`。成果分別位於下列 PR／分支，不能假設 main 已經包含它們。新工作開始時重新查核相關 ref。
 
 U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是實際執行結果，需註明執行者；A 是模型分析與未驗設計。使用者提出混合教學方向，Codex 執行 P031–P033，Pro 負責本次獨立審查、解析器修復與下一輪設計。這些歸屬分開記錄。
 
@@ -8,7 +8,7 @@ U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是�
 
 2026-11-13 Pro 接續更新：依使用者的三份通知、局部回覆及尾兩碼控制構想，新增 [UR1 有位置的升階通知設計](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)與獨立 codec。這是新 profile 的 A 設計和有界程式 T，沒有神經升階訓練。已讀並整合 Codex P035 的固定報告與成果，未重跑其訓練／稽核；P035 未包含這次通知儀式。本分支亦保留先前 Pro 小網路／成長審查及其實測歸屬。
 
-2026-11-13 Pro 輪流接棒：重新查核遠端後，最新可見 Codex 公開成果仍是 P035。已另做[有界唯讀審核](../../experiments/spiral_neural/20261113_pro_p035_review/README.md)，沒有實質 finding；核對746個公開ZIP項目、60個學生×階段預算，實際重算64題及4次grow副本，0次訓練更新。新的[UR1 神經通知實驗](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)已定義六個位置、12個已教／6個保留搭配，現為正式訓練前凍結階段。進度與下一棒以[當前交接卡](RESEARCH_HANDOFF.md)為準；尚未產生新神經成果。
+2026-11-13 Pro 輪流接棒已完成：[P035有界唯讀審核](../../experiments/spiral_neural/20261113_pro_p035_review/README.md)沒有實質 finding；最新可見Codex成果仍是P035。新的[UR1神經通知實測](PRO_NOTICE_LEARNING_RESULTS_20261113.md)已先提交事前規格，再跑三個學生及全部重播。最後已教7/12、5/12、5/12，保留各0/6，強判準0/3；37個失敗中35個首錯在地址。這是新的Pro神經T，不能只說未教組合泛化失敗。下一棒依[當前交接卡](RESEARCH_HANDOFF.md)先審核，再另凍結target次序診斷。
 
 ## 固定證據與完成狀態
 
@@ -23,7 +23,7 @@ U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是�
 | Pro 小網路／成長審查 | [核心假說審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)；[可重播探測](../../experiments/spiral_neural/20261112_pro_growth_review/README.md) | 三checkpoint各40舊prefix擴網logit差0；同raw8/8，op2同義題未適應0/8；每次執行在三個副本合計六次除錯更新確認梯度通路 | 該次Pro探測沒有完整課程或編碼對照；其後P035已完成一個有限對照。合法零token不是padding，不能直接沿用scalar-zero保函數條件 |
 | Pro 有位置升階通知 UR1 | [設計](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)；[codec／結果入口](../../experiments/spiral_neural/20261113_pro_upgrade_notice/README.md) | 17/17程式測試；八個fixture位置、73個拒絕子案例；獨立340個單bit變異中334拒絕、6個合法改址 | 固定控制根c3；無NN訓練，根升階僅A候選；回覆配對不等於已學會新寬度，沒有完整傳輸防錯 |
 | Pro P035 接棒審核 | [實際唯讀證據](../../experiments/spiral_neural/20261113_pro_p035_review/README.md) | 凍結來源9/9、公開檔案26/26、ZIP項目746/746、30課序、24曝光帳、60預算；64實際題與4 grow副本吻合 | 有界重算，0新學生／0訓練更新／0完整重播；不冒稱重跑Codex全部300 checkpoint |
-| Pro UR1 神經通知 | [事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)；[實作入口](../../experiments/spiral_neural/20261113_pro_notice_learning/README.md) | 正式前教材、程式與預算工程驗收；需先將manifest提交Git再執行 | 正式訓練尚未開始；只測合法通知ACK摘錄與已見地址×寬度組合，不測實際升階作用或儀式收益 |
+| Pro UR1 神經通知 | [結果](PRO_NOTICE_LEARNING_RESULTS_20261113.md)；[事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)；[完整證據入口](../../experiments/spiral_neural/20261113_pro_notice_learning/README.md) | 三學生各128epochs／27,136更新＋完整重播；最後已教17/36、保留0/18；獨立18checkpoint／324完整回覆重算一致 | 固定10,499參數，只測合法k1通知ACK；已教未學穩，37錯中35地址先錯。無實際語義升階、物理擴網或三份相對一份收益證據 |
 | 共用記憶與調度 | [原有MVP計畫](CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md) | 規格已公開；P032/P033各有Codex實際NVIDIA審查紀錄 | 本次已fetch的origin分支未見dispatcher／記憶MVP程式；不能推定使用者Windows本機未實作 |
 
 P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶系統完成。既有VM線應以[停止原因分支44d23b9](https://github.com/Bigbearbo/Rasengan_Binary_Creator/tree/44d23b934dbea141e436c24e52b60a500d09e162/experiments/hamu_vm)為本次已讀參考，不能只看較舊PR #2；Pro本輪沒有重跑VM測試。
@@ -78,11 +78,11 @@ P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶
 
 ## 下一步入口
 
-使用者目前要求的通知方案已另存 [UR1](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)。當前 Pro 接棒先執行[有限ACK學習事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)，檢查六個位置的局部回覆能否學穩；更後面的普通題作用與有無通知適應成本需依結果另立配對比較，不能把P035結果歸因於缺少通知。分開驗收確認回覆、實際作用位置、新階普通題及舊能力保留；分輸入／回覆角色記曝光。P034的L16和P035的最高L13、既有八步生成上限均放不下最短通知確認；本次因此另設L80/H64和24步上限，不能沿用原小模型參數量。本次不追加既有失敗配置的訓練。
+使用者目前要求的通知方案已另存 [UR1](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)。Pro已完成[有限ACK學習](PRO_NOTICE_LEARNING_RESULTS_20261113.md)，本配置已教通知仍未學穩。下一棒Codex先審核，再只改同一批target的更新次序：保持資料多重集合、初始state、模型、Adam、更新數與training MAC，另凍結洗牌target-stream；既有結果作原序配對控制，無需重訓。這是已查看題域的診斷，不再稱新盲測。普通題作用與有無通知適應成本需另立配對比較，不能把P035結果歸因於缺少通知。分開驗收確認回覆、實際作用位置、新階普通題及舊能力保留；分輸入／回覆角色記曝光。P034的L16和P035的最高L13、既有八步生成上限均放不下最短通知確認；本次因此另設L80/H64和24步上限，不能沿用原小模型參數量。本次不追加既有失敗配置的訓練。
 
 [Pro 後續研究設計](PRO_RESEARCH_DESIGN_20261112.md)的E900及一個近等參數attention配置已於P034完成；[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)第6節候選已以P035具體化並完成。不要把這些當待跑或擴張失敗配置。若接續，先依固定證據區分輸入格式適應、prefix依賴與新語義干擾，下一個單一變因／預算／判準另立事前規格；不因本批分數追加seed、擴容或延長。
 
-[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)保留P030局部遷移正面結果。P035完成其一個有限候選版本，控制共同答案文法與容量時序；最短native-output／全系統編碼成本、獨立V1/V2、4/5bit新域、儀式、神經翻譯、新算符及真VM仍未完成。P035不改原生SLE NN／VM主線或既有benchmark分割。
+[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)保留P030局部遷移正面結果。P035完成其一個有限候選版本，控制共同答案文法與容量時序；最短native-output／全系統編碼成本、獨立V1/V2、4/5bit新域、儀式的實際語義作用、神經翻譯、新算符及真VM仍未完成；有限ACK實測已完成，結果如上。P035不改原生SLE NN／VM主線或既有benchmark分割。
 
 P031啟蒙課程應另立教學manifest，讓最初0／1都有教學例，保存跨階曝光台帳；不要重寫既有benchmark分割。共用記憶工程沿用既有計畫，先盤點本機，再驗收一條「讀來源→候選審查→驗證→保存→重啟找回」流程；這份現況頁本身不是dispatcher實作。
 

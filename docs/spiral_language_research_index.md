@@ -2,7 +2,7 @@
 
 ## 2026-11-13 Pro／Codex 輪流研究
 
-先看[當前交接卡](ai_orchestration/RESEARCH_HANDOFF.md)。Pro 已對最新可見的 Codex P035 做[新的有界唯讀核對](../experiments/spiral_neural/20261113_pro_p035_review/README.md)，沒有實質 finding；並另立[第一批 UR1 神經通知事前規格](ai_orchestration/PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)。此入口更新時，新實驗仍在正式訓練前凍結階段，沒有把codec測試或預期當成神經學習成果。以下歷史段落保留各自時點。
+先看[當前交接卡](ai_orchestration/RESEARCH_HANDOFF.md)。Pro 已對最新可見的 Codex P035 做[新的有界唯讀核對](../experiments/spiral_neural/20261113_pro_p035_review/README.md)，沒有實質 finding；另完成[第一批 UR1 神經通知實測](ai_orchestration/PRO_NOTICE_LEARNING_RESULTS_20261113.md)。三學生及全部重播已跑完，最後已教17/36、保留0/18，強判準0/3；已教未穩、錯誤主要先出現在地址。下一棒Codex先審核並另凍結更新次序診斷，不擅自延長原實驗。以下歷史段落保留各自時點。
 
 ## 2026-11-13 Pro 更新：有位置的升階通知
 

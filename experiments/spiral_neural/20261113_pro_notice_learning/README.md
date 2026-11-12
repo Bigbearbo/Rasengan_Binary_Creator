@@ -1,6 +1,19 @@
 # Pro：UR1 神經確認回覆的組合保留測試
 
-設計／實作歸屬：**ChatGPT Pro**。本目錄將 UR1 的合法通知實際交給神經學生學習，與先前 scripted codec 驗收分開。正式訓練須先凍結並提交 preregistration，再以指定 manifest SHA 明確啟動；本 README 不把尚未執行的訓練寫成成果。
+設計／實作／本輪訓練歸屬：**ChatGPT Pro**。已在事前登記 commit `0b6de1d24481c2886833e412d173645fca98609c` 發布後，依核准 manifest 完成一次固定正式執行。三個學生、三條完整獨立 replay 全部完成，沒有追加 seed、延長或挑選 checkpoint；與先前 scripted codec 驗收分開。
+
+## 已完成結果
+
+| seed | 最終 train | 最終組合 heldout | 強 gate |
+|---|---:|---:|---|
+| 101 | 7/12 | 0/6 | 未通過 |
+| 202 | 5/12 | 0/6 | 未通過 |
+| 303 | 5/12 | 0/6 | 未通過 |
+| 合計 | **17/36** | **0/18** | **0/3 學生** |
+
+已教題也尚未學穩，因此不能只把失敗歸因於未教組合。最終 heldout 地址全錯；所有最終輸出均未碰到 context overflow 或 generation cap。固定 epochs0/16/32/64/96/128 的 train 全串分數依序為：seed101 `0/0/1/1/3/7`、seed202 `0/0/0/3/3/5`、seed303 `0/0/1/0/2/5`。heldout 只有 seed303 在 epoch32 曾為1/6，其餘固定點皆0；這些分數全部在正式訓練與 replay 完成後離線評估，沒有用來改變課程或改選最終 checkpoint。
+
+[results_summary.json](results_summary.json)是正式 summary 的逐 byte 副本；[execution_record.json](execution_record.json)與[formal_stdout.log](formal_stdout.log)記錄唯一正式命令、事前 commit、核准 SHA、進度及 exit0。程序主體含 replay／評估約210.15秒，外層執行記錄約210.58秒，不是純 kernel 時間。主要與 replay 各81,408 updates／1,714,126,848 training dense MAC；兩者訓練診斷各79,470,976 MAC，離線六點評估118,403,200 MAC。這只支持本配置未通過確認回覆 gate，不否定所有通知學習，更不是語義升階或儀式收益的測試。
 
 ## 本輪問題與限制
 
@@ -63,3 +76,19 @@ python -B experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py \
 輸出包括初始／固定 epoch／最後完整 checkpoint、訓練曲線及 truth、最終全 18 題 free-run/TF/logits、所有失敗、成本、時序及壓縮逐 target trace。大型 trace 可不加入公開 Git，但保留檔案／未壓縮內容 hash；上述固定命令可在新目錄完整重建。技術中止會保存失敗 state，學習分數不佳不會中止或延長課程。
 
 本輪沒有可用 NVIDIA worker，`nvidia_status=skipped_unavailable`，實際呼叫 0；不將一般模型建議或歷史 Codex 呼叫列為本次成果。
+
+## 完整公開證據與還原
+
+[public_evidence/evidence_index.json](public_evidence/evidence_index.json)列出所有 ZIP、分片及解壓後各檔案的尺寸與 SHA256。每 seed 為一個邏輯 ZIP，包含**全部 checkpoint、truth、曲線及完整逐 target trace**；run-metadata.zip 另含共同 manifest、成本、時序與執行記錄。大於1MiB的 ZIP 分為每片最多512KiB的 `.partNNNN`，較小者直接保存 ZIP；不是缺失的 trace 或只保留摘要。原始 formal_run 留在本機，不和封存重複加入 Git。
+
+以下命令只讀取／重建檔案，不載入神經模型、不訓練或推論：
+
+```bash
+python -B experiments/spiral_neural/20261113_pro_notice_learning/evidence_bundle.py verify \
+  --index experiments/spiral_neural/20261113_pro_notice_learning/public_evidence/evidence_index.json
+python -B experiments/spiral_neural/20261113_pro_notice_learning/evidence_bundle.py restore \
+  --index experiments/spiral_neural/20261113_pro_notice_learning/public_evidence/evidence_index.json \
+  --out <new-restore-directory>
+```
+
+還原程序先核對分片，再重建 ZIP、核對完整 ZIP 與每個解壓 entry 的 SHA256，拒絕覆寫既有輸出目錄。[publication_validation.json](publication_validation.json)記錄本次真正執行的 verify 和新暫存目錄 restore 結果。
