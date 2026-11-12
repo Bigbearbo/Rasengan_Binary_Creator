@@ -5,6 +5,8 @@
 主要執行環境：使用者的 Windows 電腦、已安裝的 Codex。  
 既有倉庫：`Bigbearbo/Rasengan_Binary_Creator`；這是**公開倉庫**，不得放入秘密、私人對話、未授權資料。
 
+> **最新任務入口（2026-11-12）**：NVIDIA 首輪先研究**國小** SLE 數學 P0–P2，而不是國高中題型；雙學生共用 SLE 題庫。記憶選型暫定 **Git/Markdown 共享已核實知識 + 本機 SQLite/FTS5 任務與候選索引**，SNL-MEM 是可比較的影子實驗，不能取代權威記憶。見 [NVIDIA_ELEMENTARY_MATH_MEMORY_20261112.md](NVIDIA_ELEMENTARY_MATH_MEMORY_20261112.md)。本機 Codex 的 live NVIDIA/OpenRouter API 能否成功仍需現場驗證；不能因本文件存在而稱已實作。
+
 ## 0. 任務與權限界線
 
 目標不是把三個模型的所有歷史塞進每次提示，而是讓 Codex 能以「索引 → 相關專案現況 → 必要證據」按需載入，並以單一任務格式呼叫 OpenRouter 上的 NVIDIA 模型與 Gemini，最後留下可重現的工作回報。
