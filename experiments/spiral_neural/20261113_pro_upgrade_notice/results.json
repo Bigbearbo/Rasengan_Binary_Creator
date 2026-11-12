@@ -1,0 +1,713 @@
+{
+  "profile_id": "SLE-UR1-fixed-root-c3",
+  "author": "ChatGPT Pro",
+  "scope": "code/protocol tests only; no NN training; no learnability or training-benefit claim",
+  "command": "python test_notice_codec.py --results results.json",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8",
+    "test_notice_codec.py": "d3e65bd4185ffaa241dceeca8d64a07cae8ef69555651000741b7da12e9e0793"
+  },
+  "unittest": {
+    "tests_run": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "test_names": [
+      "test_address_capacity_and_numeric_top_values",
+      "test_bad_address_suffix_rejected_without_commit",
+      "test_control_words_and_k_are_not_trailing_zero_run",
+      "test_every_truncation_rejected_without_commit",
+      "test_exact_wire_examples_and_fixture_prefix_bound",
+      "test_explicit_profile_and_notice_entry",
+      "test_fixture_roundtrips_commit_once_and_replay",
+      "test_low_bits_stable_child_ids_and_highwater_preserved",
+      "test_mixed_triples_rejected_without_commit",
+      "test_reply_is_one_UP_without_END_or_in_band_STOP",
+      "test_reply_pairing_requires_matching_address_and_target",
+      "test_role_scoped_reservations_and_full_data_values",
+      "test_shared_node_alias_and_cycle_are_not_trees",
+      "test_small_control_capacities",
+      "test_stale_jump_and_current_confirmation",
+      "test_unknown_address_internal_node_and_root_rejected",
+      "test_wrong_end_extra_bits_and_repeat_count_rejected"
+    ]
+  },
+  "fixture_max_question_plus_answer_bits": 70,
+  "fixture_path_count": 8,
+  "rejection_case_count": 73,
+  "evidence": {
+    "fixture_roundtrips": [
+      {
+        "address": [
+          0
+        ],
+        "name": "operator",
+        "role": "operator",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "00100000",
+        "up": "111110",
+        "end": "111100",
+        "question": "0011110000100000111110111110111110111100",
+        "answer": "00100000111110",
+        "question_bits": 40,
+        "answer_bits": 14,
+        "question_plus_answer_bits": 54,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          1
+        ],
+        "name": "dataA",
+        "role": "data",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "00100010",
+        "up": "111110",
+        "end": "111100",
+        "question": "0011110000100010111110111110111110111100",
+        "answer": "00100010111110",
+        "question_bits": 40,
+        "answer_bits": 14,
+        "question_plus_answer_bits": 54,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          2
+        ],
+        "name": "dataB",
+        "role": "data",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "00100100",
+        "up": "111110",
+        "end": "111100",
+        "question": "0011110000100100111110111110111110111100",
+        "answer": "00100100111110",
+        "question_bits": 40,
+        "answer_bits": 14,
+        "question_plus_answer_bits": 54,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          3
+        ],
+        "name": "category",
+        "role": "control",
+        "current_n": 3,
+        "target_n": 4,
+        "k": 2,
+        "address_bits": "00100110",
+        "up": "111100",
+        "end": "111000",
+        "question": "0011110000100110111100111100111100111000",
+        "answer": "00100110111100",
+        "question_bits": 40,
+        "answer_bits": 14,
+        "question_plus_answer_bits": 54,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          4
+        ],
+        "name": "version",
+        "role": "control",
+        "current_n": 3,
+        "target_n": 4,
+        "k": 3,
+        "address_bits": "00101000",
+        "up": "1111000",
+        "end": "1110000",
+        "question": "00111100001010001111000111100011110001110000",
+        "answer": "001010001111000",
+        "question_bits": 44,
+        "answer_bits": 15,
+        "question_plus_answer_bits": 59,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          5,
+          0
+        ],
+        "name": "geometry.operator",
+        "role": "operator",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "010010100000",
+        "up": "111110",
+        "end": "111100",
+        "question": "00111100010010100000111110111110111110111100",
+        "answer": "010010100000111110",
+        "question_bits": 44,
+        "answer_bits": 18,
+        "question_plus_answer_bits": 62,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          5,
+          1
+        ],
+        "name": "geometry.dataA",
+        "role": "data",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "010010100010",
+        "up": "111110",
+        "end": "111100",
+        "question": "00111100010010100010111110111110111110111100",
+        "answer": "010010100010111110",
+        "question_bits": 44,
+        "answer_bits": 18,
+        "question_plus_answer_bits": 62,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      },
+      {
+        "address": [
+          5,
+          5,
+          0
+        ],
+        "name": "nested.operator",
+        "role": "operator",
+        "current_n": 4,
+        "target_n": 5,
+        "k": 1,
+        "address_bits": "0110101010100000",
+        "up": "111110",
+        "end": "111100",
+        "question": "001111000110101010100000111110111110111110111100",
+        "answer": "0110101010100000111110",
+        "question_bits": 48,
+        "answer_bits": 22,
+        "question_plus_answer_bits": 70,
+        "external_stop": true,
+        "transition_count_after_replay": 1
+      }
+    ],
+    "rejected_notices": [
+      {
+        "case": "address_suffix_at_11",
+        "bits": 40,
+        "error": "BAD_SUFFIX",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "address_suffix_at_15",
+        "bits": 40,
+        "error": "BAD_SUFFIX",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_0",
+        "bits": 0,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_1",
+        "bits": 1,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_2",
+        "bits": 2,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_3",
+        "bits": 3,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_4",
+        "bits": 4,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_5",
+        "bits": 5,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_6",
+        "bits": 6,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_7",
+        "bits": 7,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_8",
+        "bits": 8,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_9",
+        "bits": 9,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_10",
+        "bits": 10,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_11",
+        "bits": 11,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_12",
+        "bits": 12,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_13",
+        "bits": 13,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_14",
+        "bits": 14,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_15",
+        "bits": 15,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_16",
+        "bits": 16,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_17",
+        "bits": 17,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_18",
+        "bits": 18,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_19",
+        "bits": 19,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_20",
+        "bits": 20,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_21",
+        "bits": 21,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_22",
+        "bits": 22,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_23",
+        "bits": 23,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_24",
+        "bits": 24,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_25",
+        "bits": 25,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_26",
+        "bits": 26,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_27",
+        "bits": 27,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_28",
+        "bits": 28,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_29",
+        "bits": 29,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_30",
+        "bits": 30,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_31",
+        "bits": 31,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_32",
+        "bits": 32,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_33",
+        "bits": 33,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_34",
+        "bits": 34,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_35",
+        "bits": 35,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_36",
+        "bits": 36,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_37",
+        "bits": 37,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_38",
+        "bits": 38,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_39",
+        "bits": 39,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_40",
+        "bits": 40,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_41",
+        "bits": 41,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_42",
+        "bits": 42,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_43",
+        "bits": 43,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_44",
+        "bits": 44,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_45",
+        "bits": 45,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_46",
+        "bits": 46,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "truncate_at_47",
+        "bits": 47,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "legacy_profile",
+        "bits": 40,
+        "error": "UNKNOWN_PROFILE",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "ordinary_31_is_not_a_notice",
+        "bits": 6,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "ordinary_30_is_not_a_notice",
+        "bits": 6,
+        "error": "TRUNCATED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "wrong_root_UP",
+        "bits": 40,
+        "error": "BAD_ROOT_HEADER",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "root_width_growth",
+        "bits": 41,
+        "error": "BAD_ROOT_HEADER",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "STOP_is_not_a_wire_token",
+        "bits": 44,
+        "error": "NON_BINARY",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "second_is_old_width",
+        "bits": 39,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "second_is_wider",
+        "bits": 41,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "third_is_old_width",
+        "bits": 39,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "END_inside_triple",
+        "bits": 40,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "first_is_old_width",
+        "bits": 39,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "target_3_from_4",
+        "bits": 32,
+        "error": "STALE_TARGET",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "target_6_from_4",
+        "bits": 44,
+        "error": "JUMP_TARGET",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "replay_5_after_growing_to_6",
+        "bits": 40,
+        "error": "STALE_TARGET",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "unknown_child",
+        "bits": 40,
+        "error": "UNKNOWN_ADDRESS",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "unknown_nested_child",
+        "bits": 44,
+        "error": "UNKNOWN_ADDRESS",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "internal_node",
+        "bits": 40,
+        "error": "UNSUPPORTED_INTERNAL_NODE",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "root_itself",
+        "bits": 36,
+        "error": "ROOT_GROWTH_UNSUPPORTED",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "UP_instead_of_END",
+        "bits": 40,
+        "error": "BAD_END",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "zero_instead_of_END",
+        "bits": 40,
+        "error": "BAD_END",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "two_UP_copies",
+        "bits": 34,
+        "error": "MIXED_UP",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "four_UP_copies",
+        "bits": 46,
+        "error": "BAD_END",
+        "tree_and_commit_count_unchanged": true
+      },
+      {
+        "case": "trailing_bit",
+        "bits": 41,
+        "error": "EXTRA_BITS",
+        "tree_and_commit_count_unchanged": true
+      }
+    ],
+    "data_control_collisions": [
+      {
+        "role": "data",
+        "value": 30,
+        "word": "111100",
+        "accepted_as_number": true
+      },
+      {
+        "role": "data",
+        "value": 31,
+        "word": "111110",
+        "accepted_as_number": true
+      },
+      {
+        "role": "address",
+        "value": 30,
+        "word": "111100",
+        "accepted_as_number": true
+      },
+      {
+        "role": "address",
+        "value": 31,
+        "word": "111110",
+        "accepted_as_number": true
+      }
+    ],
+    "ordinary_capacities": [
+      {
+        "n": 1,
+        "ordinary_operator_slots": 0
+      },
+      {
+        "n": 2,
+        "ordinary_operator_slots": 2
+      },
+      {
+        "n": 3,
+        "ordinary_operator_slots": 6
+      }
+    ],
+    "tree_shape_rejections": [
+      {
+        "case": "two_paths_one_node",
+        "error": "NOT_A_TREE"
+      },
+      {
+        "case": "cycle",
+        "error": "NOT_A_TREE"
+      }
+    ]
+  },
+  "limitations": [
+    "Root c=3/k=2 is fixed; root growth and unbounded-header replay are not implemented.",
+    "Address depth is 1..7 and each stable child ID is 0..7; only configured targets resolve.",
+    "The 70-bit Q+A maximum covers the eight fixture upgrades, not every legal future frame.",
+    "The 001 prefix selects UR1 root syntax, not the maximum k of every target branch.",
+    "profile_id and the syntax tree are oracle context, not additional NN input features.",
+    "Single-process in-memory commit only; no persistent/distributed handshake or root migration.",
+    "Only trees are supported: repeated Node identities and cycles are rejected at construction.",
+    "Legacy parsers, model checkpoints, and training remain unchanged."
+  ],
+  "nvidia": {
+    "status": "skipped_unavailable",
+    "calls": 0,
+    "reason": "No NVIDIA/OpenRouter worker tool is available in this execution environment."
+  }
+}
