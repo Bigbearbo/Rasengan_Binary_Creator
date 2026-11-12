@@ -1,0 +1,122 @@
+{
+  "id": "Pro-two-phase-workflow-observation-20261113",
+  "author": "ChatGPT Pro",
+  "timezone": "Asia/Taipei",
+  "measurement_start_utc": "2026-11-12T21:55:54Z",
+  "measurement_start_basis": "First explicit clock reading this turn; excludes unmeasured initial response and prior-turn AE1 design effort.",
+  "prior_design_commit": "685c6f92d9e5a335a2f2a7193d9b501918d90b00",
+  "method": "Phase1: review and freeze the question, data, budgets, outputs and checks. Phase2: run only the frozen protocol, verify and report. Keep protocol changes and execution defects distinct.",
+  "comparison": "Observational pilot only; no matched one-phase control, no claim of measured speedup.",
+  "events": [
+    {
+      "utc": "2026-11-12T21:55:54Z",
+      "phase": "design",
+      "event": "Started explicit timing after repository/skill discovery; visible prior design sufficient, no additional personal-context retrieval."
+    },
+    {
+      "utc": "2026-11-12T21:57:32Z",
+      "phase": "design",
+      "event": "Verified PR16 open/unmerged at685c6f9, no newer Codex branch; isolated new worktree created. Runtime NumPy2.3.5 available."
+    },
+    {
+      "utc": "2026-11-12T21:58:13Z",
+      "phase": "design",
+      "event": "No callable external worker or repository adapter found; continued local bounded reviews."
+    },
+    {
+      "utc": "2026-11-12T22:05:05Z",
+      "phase": "design",
+      "event": "Completed core runner and read-only reviews; explicitly split already-taught rows from future curriculum rows, and added early/late/no-STOP summaries before freeze. No scientific budget or dataset changed; no neural execution."
+    },
+    {
+      "utc": "2026-11-12T22:09:05.772039+00:00",
+      "phase": "design",
+      "event": "Prepared exact three initial states and all168 epoch orders. Gzip publication packaging reduced dataset from3,318,141 to190,306 bytes without changing scientific data; metadata producer hash changed. All three host-loop preflights and two pure-data builds had0 NN forward/optimizer."
+    },
+    {
+      "utc": "2026-11-12T22:11:02.389710+00:00",
+      "phase": "execution",
+      "event": "Public preregistration verified and local HEAD synchronized. Starting three fixed primary trajectories concurrently, one BLAS thread each; no test scores evaluated."
+    },
+    {
+      "utc": "2026-11-12T22:11:56.493757+00:00",
+      "phase": "execution",
+      "event": "Launched the prespecified replay concurrently to reduce sequential wait. Only progress/update counts have been read; no performance evaluation. Scientific budgets, samples and schedules unchanged."
+    },
+    {
+      "utc": "2026-11-12T22:18:54.128245+00:00",
+      "phase": "execution",
+      "event": "All three primary trajectories and one replay completed; five seed101 endpoints and epoch statistics exact. Offline18-checkpoint evaluation and468-case independent inference audit passed. Frozen screening0/3; no extra seeds/epochs or discarded formal runs."
+    },
+    {
+      "utc": "2026-11-12T22:29:15.470188+00:00",
+      "phase": "report_and_handoff",
+      "event": "Completed report, current status/index/handoff, four evidence ZIPs and66-member clean extraction,106 local links and frozen bytes verified. Final Git result publication follows this timing cutoff; response/LLM token and platform costs unmeasured."
+    }
+  ],
+  "pre_execution_decisions": [
+    {
+      "decision": "Use a single three-seed curriculum arm.",
+      "reason": "The present question is acquisition of AE1, not causal superiority of a curriculum; an extra six-student comparison is unnecessary for this first screen."
+    },
+    {
+      "decision": "Use cumulative review and a fixed target-shuffle schedule, not consecutive targets from each whole question.",
+      "reason": "Preserve shorter tasks and make the intended exposure order explicit, informed by existing UR1 order evidence without claiming transfer is established."
+    },
+    {
+      "decision": "No validation split or checkpoint selection.",
+      "reason": "All budgets/checkpoints are fixed; save evaluation effort and report every seed/phase. Test results cannot decide training."
+    },
+    {
+      "decision": "Measure exact count quartets, information bits and STOP separately.",
+      "reason": "Full Echo alone permits ignoring count; suffix zeros and stopping can inflate easier metrics."
+    },
+    {
+      "decision": "Describe heldout complete-payload questions, with a fragment-exposure ledger.",
+      "reason": "Symbols and answer fragments may occur elsewhere in training; exact split disjointness does not imply all-role novelty."
+    },
+    {
+      "decision": "Prespecify one full seed101 replay rather than all-seed replays.",
+      "reason": "Check deterministic integration end-to-end while bounding verification cost; independently audit outputs from every saved seed checkpoint."
+    }
+  ],
+  "post_freeze_protocol_amendments": [],
+  "post_freeze_implementation_repairs": [],
+  "discarded_formal_runs": [],
+  "efficiency_conclusion": "This pilot shows an executable design/execution separation and zero post-freeze scientific changes or discarded formal runs. It does not estimate speedup: no matched one-phase control, prior-turn design effort excluded, and initial pre-clock work/LLM token costs unmeasured.",
+  "design_engineering_preflight_runs": 3,
+  "pure_data_generation_runs": 2,
+  "actual_design_NN_forwards": 0,
+  "actual_design_optimizer_updates": 0,
+  "actual_design_synthetic_logit_calls": 174,
+  "public_preregistration_commit": "beb6dd7d4ce78d4f79e61164f838aaa881eafcd5",
+  "preregistration_published_utc": "2026-11-12T22:10:19Z",
+  "design_phase_finished_utc": "2026-11-12T22:11:02.389710+00:00",
+  "execution_and_verification_finished_utc": "2026-11-12T22:18:54.128245+00:00",
+  "timings_seconds": {
+    "design_review_implementation_preflight_and_preregistration": 908.38971,
+    "formal_execution_through_independent_audit_and_postprocess": 471.738535,
+    "primary_training_trajectory_seconds_sum": 899.4087715839996,
+    "seed101_replay_seconds": 277.5244120310008,
+    "formal_evaluation_seconds": 14.133131441999467,
+    "independent_audit_seconds": 0.6635108979999131,
+    "report_packaging_delivery_checks_to_publication_preparation": 621.341943
+  },
+  "post_freeze_analysis_tool_adjustments": [
+    {
+      "type": "before_first_use",
+      "detail": "Mapped independent-audit cost field names in the new exporter and rejected duplicate audit inputs; no scientific runner/data/budget change and no discarded neural execution."
+    }
+  ],
+  "report_packaging_and_delivery_checks_finished_utc": "2026-11-12T22:29:15.470188+00:00",
+  "efficiency_observations": {
+    "post_freeze_scientific_changes": 0,
+    "discarded_formal_training_runs": 0,
+    "extra_seed_or_budget_extensions": 0,
+    "prespecified_verification_replays": 1,
+    "blind_test_driven_training_decisions": 0,
+    "counterfactual_one_phase_baseline": "not_measured",
+    "first_stage_limit": "Fixed24-epoch first stage yielded11/30,9/30,30/30; this curriculum did not require mastery before advancement.",
+    "next_candidate_after_independent_review": "Separate one-variable lr0.003 to0.001 diagnostic; mastery-gated teaching remains an unexecuted policy comparison."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "seed": 101,
+  "phase_endpoints_compared": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "epoch_statistics_exact": true,
+  "complete_learning_and_metadata_states_exact": true,
+  "replay_updates": 201840,
+  "replay_train_dense_MAC": 4249943040,
+  "finished_utc": "2026-11-12T22:16:51.141055+00:00",
+  "scope": "Only seed101 full replay; no new independent student."
+}

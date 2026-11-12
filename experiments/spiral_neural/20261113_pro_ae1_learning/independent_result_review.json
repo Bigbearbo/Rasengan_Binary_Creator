@@ -1,0 +1,3069 @@
+{
+  "status": "PASS",
+  "actor": "ChatGPT Pro / neural_review",
+  "started_utc": "2026-11-12T22:18:11.924688+00:00",
+  "audit_source_sha256": "93a3479cc921f99a2f680a5b6e77e4facf76008ff408bcce3739e478ad582879",
+  "manifest_sha256": "460b52e7439a4645b06872c015677f530ffd2760c523f80ffb77cc2998722265",
+  "preregistration_commit": "beb6dd7d4ce78d4f79e61164f838aaa881eafcd5",
+  "actual_cost": {
+    "neural_forward_calls": 14294,
+    "optimizer_updates": 0,
+    "Model_imports": 0,
+    "dense_forward_MAC": 149115008
+  },
+  "scope": "Independent raw-array free/TF inference on first/last row per split/N/r at all18 checkpoints; archived state/replay/file bindings and full eval cost arithmetic. No training or parameter search. Other prediction rows are not independently re-inferred.",
+  "selection": {
+    "rule": "First and last dataset row in every split/N/r cell",
+    "rows_per_checkpoint": 26,
+    "cells": 13,
+    "row_ids": [
+      "N2-test-b04-i00-r2",
+      "N2-test-b05-i29-r2",
+      "N3-test-b04-i00-r3",
+      "N3-test-b05-i29-r3",
+      "N4-test-b04-i00-r1",
+      "N4-test-b05-i29-r1",
+      "N4-test-b04-i00-r2",
+      "N4-test-b05-i29-r2",
+      "N4-test-b04-i00-r3",
+      "N4-test-b05-i29-r3",
+      "N4-test-b04-i00-r4",
+      "N4-test-b05-i29-r4",
+      "N1-train-b00-i00-r1",
+      "N1-train-b00-i29-r1",
+      "N2-train-b00-i00-r2",
+      "N2-train-b03-i29-r2",
+      "N3-train-b00-i00-r3",
+      "N3-train-b03-i29-r3",
+      "N4-train-b00-i00-r1",
+      "N4-train-b03-i29-r1",
+      "N4-train-b00-i00-r2",
+      "N4-train-b03-i29-r2",
+      "N4-train-b00-i00-r3",
+      "N4-train-b03-i29-r3",
+      "N4-train-b00-i00-r4",
+      "N4-train-b03-i29-r4"
+    ]
+  },
+  "checkpoints": [
+    {
+      "seed": 101,
+      "phase": 0,
+      "updates": 0,
+      "checkpoint_sha256": "05a380c700303e2112ef649019b9a0ddec0159d0ca614c8b606d8cc371f94687",
+      "full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "S10S000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "S",
+          "tf_predictions": "S0000SS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 424
+    },
+    {
+      "seed": 101,
+      "phase": 1,
+      "updates": 5040,
+      "checkpoint_sha256": "b64d21fb16f8aaf2d892a4f032edbe0aa1a4320c1df59c881a72d77d1f2ae192",
+      "full_state_sha256": "db9dbee67099e469c63dcf93f534a474ee60a7298ace87d6cdf778b982e180f5",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "S00000000SSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "00000000000SSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "11111S",
+          "tf_predictions": "111SSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "11111S",
+          "tf_predictions": "111SSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "11111111111111S",
+          "tf_predictions": "111SSSSSSSSSSS11111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "11111111111111S",
+          "tf_predictions": "111SSSSSSSSSSS1SSSS111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111100S",
+          "tf_predictions": "111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSS0SSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 722
+    },
+    {
+      "seed": 101,
+      "phase": 2,
+      "updates": 19200,
+      "checkpoint_sha256": "28e2565acd0368e9629f7e6f5be22f86276db424f4fb45227f614676da07bdbf",
+      "full_state_sha256": "f7406581aaa7ac6e7948fc7882db3d4233be0a559f4046c2b61e499d92b8d455",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "100110110010S",
+          "tf_predictions": "100110100010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "0000S",
+          "tf_predictions": "000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "0000S",
+          "tf_predictions": "0000S0SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000000000S",
+          "tf_predictions": "00000SSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00S",
+          "tf_predictions": "0SSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "000SS0SSSSSSSSS0000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "00000000000SS000000000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 701
+    },
+    {
+      "seed": 101,
+      "phase": 3,
+      "updates": 51600,
+      "checkpoint_sha256": "62731098542a9bed4be437f744ff244b33e22c85c34a442107e0aa513cd7ee24",
+      "full_state_sha256": "f35c2e3520f5b5c5c086a30f484e8b30af8b25be136d442ff369e91cea9cb505",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010010100111110S",
+          "tf_predictions": "011010010110111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001110010100110100S",
+          "tf_predictions": "001110101110111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "000010001000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS11SSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "000010000010S",
+          "tf_predictions": "000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SS111111111SSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000010001010S",
+          "tf_predictions": "000000000010SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "000S",
+          "tf_predictions": "000000000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010101100101100S",
+          "tf_predictions": "000010101110111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "101100000000111010S",
+          "tf_predictions": "101100000000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000S",
+          "tf_predictions": "000SS0S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00S",
+          "tf_predictions": "00SSS0S00000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00S",
+          "tf_predictions": "000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "0000S",
+          "tf_predictions": "0000S01111S0SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "000100110010S",
+          "tf_predictions": "000000000000SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000S",
+          "tf_predictions": "000SS0S0S000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "000S",
+          "tf_predictions": "000000000000SSSSSSS000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 627
+    },
+    {
+      "seed": 101,
+      "phase": 4,
+      "updates": 108000,
+      "checkpoint_sha256": "2ca772477836d958b58efd3bc101f38437f07feaaff0f7e38c97af9a7a071695",
+      "full_state_sha256": "47009a8ce6b6b0e76c1cd82bfa1fc49428c317106dbeed42fffd77ecbc194e0c",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110110100S",
+          "tf_predictions": "101110111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010010010110110S",
+          "tf_predictions": "011010010010110110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001110100100110100S",
+          "tf_predictions": "001110101110110100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "111100010000010000000010S",
+          "tf_predictions": "1111101",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "0000100100000011001110S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "111110110000000000000000S",
+          "tf_predictions": "111111111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "0001100001000S",
+          "tf_predictions": "0000100001000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "111110000000S",
+          "tf_predictions": "111111111110SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000100110110000000S",
+          "tf_predictions": "00000000000000S000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "110110010000000010001000S",
+          "tf_predictions": "111110111110000000001000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "000110000000001100011000S",
+          "tf_predictions": "000000000000000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100110100S",
+          "tf_predictions": "000100110010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010110100010010S",
+          "tf_predictions": "000010111110011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "101100000000110110S",
+          "tf_predictions": "101100000000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "001000001110S",
+          "tf_predictions": "0011101",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "010010101100111000111110S",
+          "tf_predictions": "0000001",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00S",
+          "tf_predictions": "00S110100000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "011010000110S",
+          "tf_predictions": "000010000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000110010100S",
+          "tf_predictions": "000110100000SSSS00S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "001010101110S",
+          "tf_predictions": "000000100100SSS0001",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000100110100010100010000S",
+          "tf_predictions": "000110111100101000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "101000101000101010011100S",
+          "tf_predictions": "101000101110000000111100S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 839
+    },
+    {
+      "seed": 101,
+      "phase": 5,
+      "updates": 201840,
+      "checkpoint_sha256": "26bcb3bb715493bff40c6b7bfc9307840efd1f8624f6ea713d5caaae64c81b24",
+      "full_state_sha256": "2e34e2dd0472d9484cf3c5ab482f7b1d5762f773a6c5988b758ef21ab8e7c700",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101010111000S",
+          "tf_predictions": "101000100010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "010010011010101110S",
+          "tf_predictions": "010000010010110110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "000100101110011110S",
+          "tf_predictions": "000000100100100000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "100110S",
+          "tf_predictions": "100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "010010S",
+          "tf_predictions": "010010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "100110110100S",
+          "tf_predictions": "100110110100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "010000001010000100S",
+          "tf_predictions": "010000000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "101100111010000000S",
+          "tf_predictions": "101110110100000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "010000001010001010S",
+          "tf_predictions": "010000000010011110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "110100110100000000010000S",
+          "tf_predictions": "111110110100000010010000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "010000001010001010011010S",
+          "tf_predictions": "010000000010011110011100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100000100110S",
+          "tf_predictions": "100000101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010100100101010S",
+          "tf_predictions": "000010100100011110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "010100010000101010S",
+          "tf_predictions": "001100000000101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000110S",
+          "tf_predictions": "000110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "101000S",
+          "tf_predictions": "101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000010101100S",
+          "tf_predictions": "000010101100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "101000100110S",
+          "tf_predictions": "101000100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000100110100101010S",
+          "tf_predictions": "000110101100111100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "101000100110101010S",
+          "tf_predictions": "101000100110101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000010101100110010010010S",
+          "tf_predictions": "000010101100111100000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "101000100110101010110010S",
+          "tf_predictions": "101000100110101000111100S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 802
+    },
+    {
+      "seed": 202,
+      "phase": 0,
+      "updates": 0,
+      "checkpoint_sha256": "89a2de2a4cc267fb29d3d96012cb98310625a0f22e11a6a0f4c375e112cc128e",
+      "full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "00000000000101111111111111111111",
+          "tf_predictions": "0000000000011",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "00000000000101111111111111111111",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "00000001111111111111111S",
+          "tf_predictions": "0000111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "11111111111111111S",
+          "tf_predictions": "1111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "11111111111111111S",
+          "tf_predictions": "111S111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "11111111111111111111S",
+          "tf_predictions": "1111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "S1SSS1SS11S11111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "11111111111111111111S",
+          "tf_predictions": "1111S11111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "S1SSS11SS1S11111111111SSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "00110001111000010101111111111111",
+          "tf_predictions": "0011111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "00000000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "00000000001111111111111111111111",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "00000000000101111111111111111111",
+          "tf_predictions": "0000000000011",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "00001111111111111111111S",
+          "tf_predictions": "0000111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "00000000000000001000111000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000011111111010111111111111111",
+          "tf_predictions": "0111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00000011111111010111111111111111",
+          "tf_predictions": "0011111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "00000011111000111111111111111111",
+          "tf_predictions": "0001111111110011111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "11000111111111111S",
+          "tf_predictions": "1111111111111111111111111",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 1065
+    },
+    {
+      "seed": 202,
+      "phase": 1,
+      "updates": 5040,
+      "checkpoint_sha256": "b3a17efb034beec64d76e0364ca804001d76060cdebc44ae33b2e95023ab8fc0",
+      "full_state_sha256": "2e430dfd1b41cd0ecc040231b298d4f4a457045b9d20e14e1c2a423cebf20782",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSS0S0SSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "000000000000000S",
+          "tf_predictions": "00000000000SSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "110100S",
+          "tf_predictions": "110000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 854
+    },
+    {
+      "seed": 202,
+      "phase": 2,
+      "updates": 19200,
+      "checkpoint_sha256": "4e893528b7b3c3519befe288c1eab145738ad82f112fa1c844605b177d25e147",
+      "full_state_sha256": "09ef6c05b2a9f6e413c25fa5201719047e846d26cff5ea7315db0ae986c1e519",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "000010S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111100101010110100S",
+          "tf_predictions": "111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010S",
+          "tf_predictions": "000010SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 768
+    },
+    {
+      "seed": 202,
+      "phase": 3,
+      "updates": 51600,
+      "checkpoint_sha256": "b4dd9f78556fbef0be4899c6c9161472cb3fc87fc91808f327f8f3a33a60a5ac",
+      "full_state_sha256": "e7505d68931efb5162082de30fedf6d27d695988bd872f65e2b51d12c0152829",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010001010110110S",
+          "tf_predictions": "011010000010110110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001010010100110010S",
+          "tf_predictions": "001000100110100100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "0000000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "SS111SSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "0001001111S",
+          "tf_predictions": "000010001110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "11111S",
+          "tf_predictions": "11111SSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000010001110S",
+          "tf_predictions": "000010000110SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "0S",
+          "tf_predictions": "0SS0S0000SS0SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111110S",
+          "tf_predictions": "111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010010110101010S",
+          "tf_predictions": "000010000110011110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "100100010000110100S",
+          "tf_predictions": "100000000000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "0S",
+          "tf_predictions": "0SSSS0S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00S",
+          "tf_predictions": "00SS00S0SSS0S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "0000000011S",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000S",
+          "tf_predictions": "000SS000SSS0SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "000000001110S",
+          "tf_predictions": "000000000000SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00S",
+          "tf_predictions": "00SSS0S0SSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "00000000S",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 637
+    },
+    {
+      "seed": 202,
+      "phase": 4,
+      "updates": 108000,
+      "checkpoint_sha256": "dbe482a3bd28b0472b8db471d38f121155efa6679d75d3e88f8dbce76d3d5464",
+      "full_state_sha256": "20ebec7dfcb10679a0d5d2d4bbfcc0055fa324f5afbc867c69017685b18c0442",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "010110100010101100S",
+          "tf_predictions": "010010000010100000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001010101000110000S",
+          "tf_predictions": "001000100100110000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "101110000010S",
+          "tf_predictions": "1011100",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "000010000000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "111100110000000000000000S",
+          "tf_predictions": "1111101000100",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "000100100000111110001000S",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "111100010000S",
+          "tf_predictions": "111110000000SSSSS00",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000010000100S",
+          "tf_predictions": "00000000000000SSS00",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "101010100010001000010100S",
+          "tf_predictions": "101110100010000000000100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "000110000010001100011000S",
+          "tf_predictions": "000010000010001000010000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111110S",
+          "tf_predictions": "111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010100100101010S",
+          "tf_predictions": "000010100100010000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "110100000000101010S",
+          "tf_predictions": "111100000000101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000000111000S",
+          "tf_predictions": "0000001",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "010000101100110000111000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000010011000110000100000S",
+          "tf_predictions": "0000100010001",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "001000101110010010110100S",
+          "tf_predictions": "0000000001100",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000010101000S",
+          "tf_predictions": "000010101000SSSSS00",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "001000101010S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000000111000101100011010S",
+          "tf_predictions": "000000111100111100000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "011100001100101100110000S",
+          "tf_predictions": "001000000100101000111100S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 856
+    },
+    {
+      "seed": 202,
+      "phase": 5,
+      "updates": 201840,
+      "checkpoint_sha256": "e2795133d6d276b779c3e27c3f659f6ee7e36c951853a1aab97b2dc7ca9abf3d",
+      "full_state_sha256": "8bc2219804c787ee8c3a6e79cab5092e1fe1e0445bb24b33f2df592101f4dc47",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101100110110S",
+          "tf_predictions": "101100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010001010110010S",
+          "tf_predictions": "011010000010110010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001100101000110110S",
+          "tf_predictions": "001100101100000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "100110S",
+          "tf_predictions": "100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "010010S",
+          "tf_predictions": "010010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "100110110110S",
+          "tf_predictions": "100110110110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "010010000110S",
+          "tf_predictions": "010010000110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "110010110110000000S",
+          "tf_predictions": "110110110110000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "010010000110000000S",
+          "tf_predictions": "010010000110000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "100110110110000000000100S",
+          "tf_predictions": "100110110110000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "010010000110000000011010S",
+          "tf_predictions": "010010000110000000010000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010110110S",
+          "tf_predictions": "100010111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100110100S",
+          "tf_predictions": "000100110000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010011010100110S",
+          "tf_predictions": "000010000010011100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "010100000000110010S",
+          "tf_predictions": "000000000000001000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000100S",
+          "tf_predictions": "000110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "101000S",
+          "tf_predictions": "101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000110110100S",
+          "tf_predictions": "000110111100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "101000100110S",
+          "tf_predictions": "101000100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000100110100011000S",
+          "tf_predictions": "000110111100101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "101000100110101100S",
+          "tf_predictions": "101000100110101100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000110110100011000010110S",
+          "tf_predictions": "000110111100101000001110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "101000100110101100111100S",
+          "tf_predictions": "101000100110101100111110S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 796
+    },
+    {
+      "seed": 303,
+      "phase": 0,
+      "updates": 0,
+      "checkpoint_sha256": "a31791bf950dc73bed8d78fa0978eaeea1141a0450fc8285a31e411a4ccfc314",
+      "full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000100000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "11010000100000000000000000000000",
+          "tf_predictions": "1100000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "01111111111111110111111110110111",
+          "tf_predictions": "0100001111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "10100110000000000000000000011100",
+          "tf_predictions": "1111111110000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000100000000000111111111111111",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "11100000000000000111111111111111",
+          "tf_predictions": "1111111110000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 1230
+    },
+    {
+      "seed": 303,
+      "phase": 1,
+      "updates": 5040,
+      "checkpoint_sha256": "a48ec31230d3617415564ee961f29961840192950a24d76aa277cd8c0af10550",
+      "full_state_sha256": "1490bb81efe2bd45b7b01e9fc9914931e8921b6016a4c537005d6229f78e8b5e",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "0S",
+          "tf_predictions": "0SSSSSSSSS0S0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "S",
+          "tf_predictions": "S11SSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "0000000000S",
+          "tf_predictions": "000000000SSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "00000000000000000000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSS0SS00S0",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 687
+    },
+    {
+      "seed": 303,
+      "phase": 2,
+      "updates": 19200,
+      "checkpoint_sha256": "444bfba233c0b6bad9ec3552d507173d0f38b1c6ea16c3c1d0432369efd0da45",
+      "full_state_sha256": "2fa14e69a0d5c8c0db0df443d33c146bf3cbe48364e47c7ec3894d9446e86e17",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "000110011010S",
+          "tf_predictions": "000010010010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110100110S",
+          "tf_predictions": "101110100010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "S",
+          "tf_predictions": "SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "11111111111111111111111111111111",
+          "tf_predictions": "1111111111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "1111111111111S",
+          "tf_predictions": "111SSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "S",
+          "tf_predictions": "SSSSSSSSSSSSSSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "011010011010S",
+          "tf_predictions": "000010000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000010110110S",
+          "tf_predictions": "000000111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000000S",
+          "tf_predictions": "000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "000000S",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "00000000000000000000000000000000",
+          "tf_predictions": "0000000000000000000000000",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 924
+    },
+    {
+      "seed": 303,
+      "phase": 3,
+      "updates": 51600,
+      "checkpoint_sha256": "1c9dfb22690c409c37462e29d26a13eb86e1eb80736ed1121e74602a2258323e",
+      "full_state_sha256": "93192a7af5441ecb2fd552153ad92803292a6636332a737c8b745fdbb87008cb",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011000101010110110S",
+          "tf_predictions": "011000000010111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "010000011100010000S",
+          "tf_predictions": "011000100110110100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "1111100001S",
+          "tf_predictions": "1111111",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "000000001010S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "111100001010S",
+          "tf_predictions": "111111111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "000000010110S",
+          "tf_predictions": "000000000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "111110000110S",
+          "tf_predictions": "111111110100SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000010001010S",
+          "tf_predictions": "000000000110SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "111100001000S",
+          "tf_predictions": "111111111110SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "000S",
+          "tf_predictions": "000000000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111010S",
+          "tf_predictions": "000100111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010100110011110S",
+          "tf_predictions": "000010100110011110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "101000000000110110S",
+          "tf_predictions": "101000000000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000000010000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "000000000S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000000010000S",
+          "tf_predictions": "000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "000S",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000100111000S",
+          "tf_predictions": "000110111100SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "000010111000S",
+          "tf_predictions": "000000000000SSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "0000S",
+          "tf_predictions": "0000S0000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "0000S",
+          "tf_predictions": "000000000000SSSSSSSSSSSSS",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 709
+    },
+    {
+      "seed": 303,
+      "phase": 4,
+      "updates": 108000,
+      "checkpoint_sha256": "bae5cef80b45979205cd305b8a4cf4bb845d977e80dc2bc3950d43a3a43f3416",
+      "full_state_sha256": "0bf86ef57748bd002e5a9d5eaacc1436861dac854912f967fe1a5193a754e1d4",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "101110101010S",
+          "tf_predictions": "101110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010010110101010S",
+          "tf_predictions": "011010010110100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001100101010101010S",
+          "tf_predictions": "001100101110110100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "111010100110S",
+          "tf_predictions": "1111101",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "000100000110010000001110S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "111000100110001000001000S",
+          "tf_predictions": "1111100000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "000100000010100100111000S",
+          "tf_predictions": "0000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "111010010100S",
+          "tf_predictions": "1111101000000000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "000010000110100000111000S",
+          "tf_predictions": "0000000000000011101",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "111010101100000000000000S",
+          "tf_predictions": "111110110110000000000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "001100000110000000001100S",
+          "tf_predictions": "000110000110000000011000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111010S",
+          "tf_predictions": "111010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100101110S",
+          "tf_predictions": "000100100010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010101010010110S",
+          "tf_predictions": "000010101110011110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "011000000010101110S",
+          "tf_predictions": "001000000000101110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000010111000110000010110S",
+          "tf_predictions": "0000101",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "001000101100S",
+          "tf_predictions": "0000000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000010110100001110111000S",
+          "tf_predictions": "0000101111001",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "0S",
+          "tf_predictions": "0000000001000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000110011100S",
+          "tf_predictions": "0001101111101111000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "010010101100S",
+          "tf_predictions": "000000000100SS00000",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000010110110110100000110S",
+          "tf_predictions": "000010111100111100000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "100010011100111000000110S",
+          "tf_predictions": "100000001110111110110100S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 857
+    },
+    {
+      "seed": 303,
+      "phase": 5,
+      "updates": 201840,
+      "checkpoint_sha256": "4914812596b56f6156aba7b00564325fa3009cbd63ede0ea882a6e8bed4639ad",
+      "full_state_sha256": "e4a4214f3fba9522f10d3491f2cf5f4e1d6fef95616b0b843be72ab9976d3a6b",
+      "checkpoint_binding_matches": true,
+      "audited_rows": [
+        {
+          "id": "N2-test-b04-i00-r2",
+          "generated": "001010011010S",
+          "tf_predictions": "001010011010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-test-b05-i29-r2",
+          "generated": "100111101000S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b04-i00-r3",
+          "generated": "011010010010111010S",
+          "tf_predictions": "011010010010111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-test-b05-i29-r3",
+          "generated": "001010101000111000S",
+          "tf_predictions": "001000100110110100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r1",
+          "generated": "100110S",
+          "tf_predictions": "100110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r1",
+          "generated": "010010S",
+          "tf_predictions": "010010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r2",
+          "generated": "100110111100S",
+          "tf_predictions": "100110111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r2",
+          "generated": "010010000100S",
+          "tf_predictions": "010010000110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r3",
+          "generated": "100110111100000000S",
+          "tf_predictions": "100110111110000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r3",
+          "generated": "010010000100001010S",
+          "tf_predictions": "010010000110001010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b04-i00-r4",
+          "generated": "100110111010000010110000S",
+          "tf_predictions": "100110111110000010011100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-test-b05-i29-r4",
+          "generated": "010010000110000100110110S",
+          "tf_predictions": "010010000110001010111000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i00-r1",
+          "generated": "000000S",
+          "tf_predictions": "000000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N1-train-b00-i29-r1",
+          "generated": "111110S",
+          "tf_predictions": "111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b00-i00-r2",
+          "generated": "100010101010S",
+          "tf_predictions": "100010101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N2-train-b03-i29-r2",
+          "generated": "000100111000S",
+          "tf_predictions": "000100111000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b00-i00-r3",
+          "generated": "000010100110110010S",
+          "tf_predictions": "000010100110110010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N3-train-b03-i29-r3",
+          "generated": "101100000000110010S",
+          "tf_predictions": "101100000000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r1",
+          "generated": "000010S",
+          "tf_predictions": "000010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r1",
+          "generated": "110010S",
+          "tf_predictions": "111000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r2",
+          "generated": "000010101100S",
+          "tf_predictions": "000010101100S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r2",
+          "generated": "110010011000S",
+          "tf_predictions": "111010110110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r3",
+          "generated": "000010110100101010S",
+          "tf_predictions": "000010111100101000S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r3",
+          "generated": "110010011000110010S",
+          "tf_predictions": "111010111110101010S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b00-i00-r4",
+          "generated": "000010101100101010010110S",
+          "tf_predictions": "000010101100101000111110S",
+          "all_fields_match": true
+        },
+        {
+          "id": "N4-train-b03-i29-r4",
+          "generated": "110010011000110010111010S",
+          "tf_predictions": "111000111110101010111110S",
+          "all_fields_match": true
+        }
+      ],
+      "independent_forward_calls": 796
+    }
+  ],
+  "checkpoints_checked": 18,
+  "question_evaluations_checked": 468,
+  "teacher_targets_recomputed": 7164,
+  "maximum_absolute_CE_difference": 0.0,
+  "all_input_file_hashes_unchanged": true,
+  "input_files_hashed": 76,
+  "archived_seed101_replay_states_match": true,
+  "full_evaluation_cost_accounting_matches": {
+    "calls": 585466,
+    "dense_MAC": 6107581312
+  },
+  "seconds": 0.6635108979999131,
+  "finished_utc": "2026-11-12T22:18:12.588201+00:00"
+}

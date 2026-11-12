@@ -1,0 +1,263 @@
+{
+  "status": "PASS",
+  "actor": "ChatGPT Pro / neural_review",
+  "finished_utc": "2026-11-12T22:09:02.630151+00:00",
+  "manifest_sha256": "460b52e7439a4645b06872c015677f530ffd2760c523f80ffb77cc2998722265",
+  "source_and_artifact_files": [
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/protocol.json",
+      "sha256": "8cc9f15bf78144c2b50e3cb0e781ecede779c63dbe0e4b5e71fdc54d23d6a08f",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/dataset.py",
+      "sha256": "ba050a315f9b16f2a3bad63714f770b205aa3abc4ccc602ba445be8405ed7577",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/dataset.json.gz",
+      "sha256": "087411b1369eef0fda7e06468371294a0af5df275895814c95e35144069dd828",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/data_checks.json",
+      "sha256": "367e5676da7a22afdbdacee272b8dc54eaaf901df260a07acf4d505bc9458bee",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/learner.py",
+      "sha256": "6d2e284d30b9cf4f45cd7a17d37df9764718882d29f6322cdeb21d02b7db7876",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/run_trial.py",
+      "sha256": "b491a8d32e653917527f191299eaeae436b61783bb1ca961ea2e7d36a010054c",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/preflight.py",
+      "sha256": "bacada51a6fd522f796f45cd8514540037723b10312c9a59c89f838e8c10415e",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/preflight_checks.json",
+      "sha256": "082a2a17cdd4c13254fec10425e344da85bbc4c65477aaea0e3e0ad500b827d1",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261112_p035/reference/p030_reference.py",
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_advanced_echo/codec.py",
+      "sha256": "6e66271791a9dbc090260d5ef4c7de142ff905b074d9ce1003d24d20de6715cd",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed101.npz",
+      "sha256": "05a380c700303e2112ef649019b9a0ddec0159d0ca614c8b606d8cc371f94687",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed101.npz",
+      "sha256": "70c251fa2452e981d37dcc63958257cb4982422917c6fe9343cce99fd2d1c990",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed202.npz",
+      "sha256": "89a2de2a4cc267fb29d3d96012cb98310625a0f22e11a6a0f4c375e112cc128e",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed202.npz",
+      "sha256": "47c828343dc0cac634c074978b2218779600cd77f2fcdccc8c8ef13c3bf4611e",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed303.npz",
+      "sha256": "a31791bf950dc73bed8d78fa0978eaeea1141a0450fc8285a31e411a4ccfc314",
+      "matched": true
+    },
+    {
+      "path": "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed303.npz",
+      "sha256": "f7a31abcd3bb8876382c6d56d744f82753ecd298f39ff1d04cd32cd75f6204ad",
+      "matched": true
+    }
+  ],
+  "target_pool_checks": {
+    "global_targets": 11730,
+    "phase_semantic_routing": "exact cumulative full N<=1..4, then all train rows",
+    "test_targets_in_training": 0,
+    "phase_pool_counts": [
+      210,
+      1770,
+      4050,
+      7050,
+      11730
+    ]
+  },
+  "initial_states": [
+    {
+      "seed": 101,
+      "L": 80,
+      "H": 64,
+      "parameters": 10499,
+      "t": 0,
+      "optimizer_and_birth_zero": true,
+      "cost_counters_zero": true,
+      "events_empty": true,
+      "growth_rng_exact": true,
+      "full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6"
+    },
+    {
+      "seed": 202,
+      "L": 80,
+      "H": 64,
+      "parameters": 10499,
+      "t": 0,
+      "optimizer_and_birth_zero": true,
+      "cost_counters_zero": true,
+      "events_empty": true,
+      "growth_rng_exact": true,
+      "full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c"
+    },
+    {
+      "seed": 303,
+      "L": 80,
+      "H": 64,
+      "parameters": 10499,
+      "t": 0,
+      "optimizer_and_birth_zero": true,
+      "cost_counters_zero": true,
+      "events_empty": true,
+      "growth_rng_exact": true,
+      "full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21"
+    }
+  ],
+  "schedules": [
+    {
+      "seed": 101,
+      "phases": [
+        {
+          "phase": 1,
+          "epochs": 24,
+          "pool_size": 210,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 2,
+          "epochs": 8,
+          "pool_size": 1770,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 3,
+          "epochs": 8,
+          "pool_size": 4050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 4,
+          "epochs": 8,
+          "pool_size": 7050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 5,
+          "epochs": 8,
+          "pool_size": 11730,
+          "permutations_and_rng_exact": true
+        }
+      ]
+    },
+    {
+      "seed": 202,
+      "phases": [
+        {
+          "phase": 1,
+          "epochs": 24,
+          "pool_size": 210,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 2,
+          "epochs": 8,
+          "pool_size": 1770,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 3,
+          "epochs": 8,
+          "pool_size": 4050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 4,
+          "epochs": 8,
+          "pool_size": 7050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 5,
+          "epochs": 8,
+          "pool_size": 11730,
+          "permutations_and_rng_exact": true
+        }
+      ]
+    },
+    {
+      "seed": 303,
+      "phases": [
+        {
+          "phase": 1,
+          "epochs": 24,
+          "pool_size": 210,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 2,
+          "epochs": 8,
+          "pool_size": 1770,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 3,
+          "epochs": 8,
+          "pool_size": 4050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 4,
+          "epochs": 8,
+          "pool_size": 7050,
+          "permutations_and_rng_exact": true
+        },
+        {
+          "phase": 5,
+          "epochs": 8,
+          "pool_size": 11730,
+          "permutations_and_rng_exact": true
+        }
+      ]
+    }
+  ],
+  "preflight_source_current": {
+    "preflight.py": true,
+    "run_trial.py": true,
+    "learner.py": true
+  },
+  "data_check_artifact_current": true,
+  "training_updates_per_student": 201840,
+  "training_MAC_per_student": 4249943040,
+  "primary_training_MAC_all_seeds": 12749829120,
+  "read_only_source_artifact_hashes_unchanged": true,
+  "actual_cost": {
+    "neural_forward_calls": 0,
+    "optimizer_updates": 0,
+    "learner_imports": 0,
+    "random_model_instances": 0
+  },
+  "scope": "Independent JSON/gzip/NumPy-array checks only. No network forward, gradient, training, performance score or inference was executed. Static review did not identify target-routing or heldout-training leakage. Does not prove future training success.",
+  "seconds": 0.233892007000577
+}

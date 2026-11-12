@@ -1,0 +1,110 @@
+{
+  "id": "Pro-AE1-learning-20261113-v1",
+  "created_utc": "2026-11-12T22:07:51.721211+00:00",
+  "base_commit": "685c6f92d9e5a335a2f2a7193d9b501918d90b00",
+  "files_sha256": {
+    "experiments/spiral_neural/20261113_pro_ae1_learning/protocol.json": "8cc9f15bf78144c2b50e3cb0e781ecede779c63dbe0e4b5e71fdc54d23d6a08f",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/dataset.py": "ba050a315f9b16f2a3bad63714f770b205aa3abc4ccc602ba445be8405ed7577",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/dataset.json.gz": "087411b1369eef0fda7e06468371294a0af5df275895814c95e35144069dd828",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/data_checks.json": "367e5676da7a22afdbdacee272b8dc54eaaf901df260a07acf4d505bc9458bee",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/learner.py": "6d2e284d30b9cf4f45cd7a17d37df9764718882d29f6322cdeb21d02b7db7876",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/run_trial.py": "b491a8d32e653917527f191299eaeae436b61783bb1ca961ea2e7d36a010054c",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/preflight.py": "bacada51a6fd522f796f45cd8514540037723b10312c9a59c89f838e8c10415e",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/preflight_checks.json": "082a2a17cdd4c13254fec10425e344da85bbc4c65477aaea0e3e0ad500b827d1",
+    "experiments/spiral_neural/20261112_p035/reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "experiments/spiral_neural/20261113_pro_advanced_echo/codec.py": "6e66271791a9dbc090260d5ef4c7de142ff905b074d9ce1003d24d20de6715cd",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed101.npz": "05a380c700303e2112ef649019b9a0ddec0159d0ca614c8b606d8cc371f94687",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed101.npz": "70c251fa2452e981d37dcc63958257cb4982422917c6fe9343cce99fd2d1c990",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed202.npz": "89a2de2a4cc267fb29d3d96012cb98310625a0f22e11a6a0f4c375e112cc128e",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed202.npz": "47c828343dc0cac634c074978b2218779600cd77f2fcdccc8c8ef13c3bf4611e",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/initial_seed303.npz": "a31791bf950dc73bed8d78fa0978eaeea1141a0450fc8285a31e411a4ccfc314",
+    "experiments/spiral_neural/20261113_pro_ae1_learning/frozen/schedule_seed303.npz": "f7a31abcd3bb8876382c6d56d744f82753ecd298f39ff1d04cd32cd75f6204ad"
+  },
+  "initial_full_state_sha256": {
+    "101": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6",
+    "202": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c",
+    "303": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21"
+  },
+  "schedule_shapes": {
+    "101": {
+      "phase1": [
+        24,
+        210
+      ],
+      "phase2": [
+        8,
+        1770
+      ],
+      "phase3": [
+        8,
+        4050
+      ],
+      "phase4": [
+        8,
+        7050
+      ],
+      "phase5": [
+        8,
+        11730
+      ]
+    },
+    "202": {
+      "phase1": [
+        24,
+        210
+      ],
+      "phase2": [
+        8,
+        1770
+      ],
+      "phase3": [
+        8,
+        4050
+      ],
+      "phase4": [
+        8,
+        7050
+      ],
+      "phase5": [
+        8,
+        11730
+      ]
+    },
+    "303": {
+      "phase1": [
+        24,
+        210
+      ],
+      "phase2": [
+        8,
+        1770
+      ],
+      "phase3": [
+        8,
+        4050
+      ],
+      "phase4": [
+        8,
+        7050
+      ],
+      "phase5": [
+        8,
+        11730
+      ]
+    }
+  },
+  "global_train_targets": 11730,
+  "consistent_train_test_teacher_prefixes": 17490,
+  "source_preflight": "PASS",
+  "preparation_seconds": 1.4492074750005486,
+  "actual_neural_forward_calls": 0,
+  "actual_optimizer_updates": 0,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "note": "Initial states are instantiated and serialized; no neural inference or learning in prepare."
+}
