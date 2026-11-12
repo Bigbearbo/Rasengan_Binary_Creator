@@ -24,6 +24,10 @@ For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_la
 - `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
 Do not confuse these code families, or treat historical draft documents as the current binding protocol.
 
+## Scheduled research worker separation (2026-11-13)
+
+For recurring research tasks and Codex/Pro handoffs, read [Scheduled research role contract](docs/ai_orchestration/SCHEDULE_ROLE_CONTRACT_20261113.md) before choosing a write path. Syntax/protocol, Hamster VM, neural training, Git coordination, and memory index maintenance have distinct owners; do not duplicate completed experiments or treat the public repo as a copy of private Project Library. The live schedule and enabled state exist in ChatGPT Automations, **not in this file**.
+
 ## Current Git research routing (2026-11-13; check live PRs every time)
 
 **Start with [Git research handoff](docs/ai_orchestration/GIT_RESEARCH_HANDOFF_20261113.md), not the older P032/P033 work-order prose.** As last checked, Codex had already completed P031–P035 experiments, Pro completed UR1 notification codec, and a new UR1 neural-ACK trial was at the frozen pre-training stage in the stacked PR #8 → #9 → #10 → #11 → #12 chain. Those PRs are **not automatically merged into main**. Check latest open/merged PRs, their actual bases, and the branch-specific `docs/ai_orchestration/RESEARCH_HANDOFF.md` / `CURRENT_RESEARCH_STATUS.md` before selecting new work. Do not rerun completed P032/P033/P034/P035 solely because historical plans or main still call them next.
