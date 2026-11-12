@@ -101,6 +101,7 @@ class PublishedRefs {
   std::unordered_map<uint64_t,DurableRegistry::Ref> published_;
 };
 
+#ifndef HAMU_PUBLICATION_NO_MAIN
 int main(){
  Hamster h(8501,extended());DurableRegistry d(h,8501);RevisionRegistry rev(d);
  FullStateEnvelope tx{h,d,rev};PublishedRefs pub(d);
@@ -133,3 +134,5 @@ int main(){
  require(!pub.valid(PublishedRefs::Token{UINT64_MAX}),"unissued ticket valid");
  std::cout << "PASS raw aborted-handle ABA reproduced; publication-gated host token tests passed\n";
 }
+
+#endif // HAMU_PUBLICATION_NO_MAIN
