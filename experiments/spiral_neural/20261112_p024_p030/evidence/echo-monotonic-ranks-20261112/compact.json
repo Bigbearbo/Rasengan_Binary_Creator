@@ -1,0 +1,5445 @@
+{
+  "plan": {
+    "id": "P029",
+    "upstream_work_order": "P028 at55d1037",
+    "user_override": "No old-rank training/probes/retention after promotion; no mixedlengthC; only A+B. Stop a failedseed, never decrease n.",
+    "profile": "paper4_echo_op1_dataN_v1",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "rank_caps": [
+      500,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      3000,
+      5000
+    ],
+    "stage_wall_cap_seconds": 120,
+    "checkpoints": "Given POINTS plus complete current training rounds and cap; zero is diagnostic only.3new-training-separated passes promotes.",
+    "promotion": "n<=4 all legalwords100%; n>=5 heldout-validation whole+STOP>=95%. Preserve parameters and Adam. First newlypromoted questionv1 trainonly.",
+    "model": "Unchanged1171param DirectMLP/CE teacherprefix; freegreedy evaluations. No extra n orposition labels.",
+    "budget_comparison": "Count ALL lower-rank cost. Save n8-only exact1000update anchors; compare A/B only existing common globalupdate anchors. If no commonobservedbudget or A never reaches8, reportmissing; do not force trainingpastmastery.",
+    "data": {
+      "1": {
+        "train": [
+          0,
+          1
+        ],
+        "val": [
+          0,
+          1
+        ],
+        "test": [],
+        "promotion_train_swap": null
+      },
+      "2": {
+        "train": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "val": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "test": [],
+        "promotion_train_swap": null
+      },
+      "3": {
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "val": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "test": [],
+        "promotion_train_swap": null
+      },
+      "4": {
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "val": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "test": [],
+        "promotion_train_swap": null
+      },
+      "5": {
+        "train": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20,
+          22,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "val": [
+          2,
+          8,
+          17,
+          23
+        ],
+        "test": [
+          6,
+          21,
+          24,
+          31
+        ],
+        "promotion_train_swap": null
+      },
+      "6": {
+        "train": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          21,
+          23,
+          26,
+          28,
+          30,
+          34,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "val": [
+          0,
+          5,
+          8,
+          17,
+          29,
+          32,
+          33,
+          43
+        ],
+        "test": [
+          12,
+          20,
+          22,
+          24,
+          25,
+          27,
+          31,
+          35
+        ],
+        "promotion_train_swap": null
+      },
+      "7": {
+        "train": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          16,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          38,
+          39,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          52,
+          54,
+          55,
+          57,
+          59,
+          60,
+          61,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          70,
+          73,
+          74,
+          75,
+          76,
+          78,
+          79,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          91,
+          92,
+          93,
+          94,
+          95,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          112,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          123,
+          125,
+          126,
+          127
+        ],
+        "val": [
+          5,
+          15,
+          17,
+          18,
+          20,
+          35,
+          53,
+          62,
+          69,
+          77,
+          81,
+          90,
+          96,
+          97,
+          113,
+          122
+        ],
+        "test": [
+          2,
+          14,
+          19,
+          40,
+          41,
+          50,
+          51,
+          56,
+          58,
+          71,
+          72,
+          80,
+          104,
+          110,
+          121,
+          124
+        ],
+        "promotion_train_swap": null
+      },
+      "8": {
+        "train": [
+          0,
+          1,
+          3,
+          4,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          32,
+          36,
+          37,
+          38,
+          41,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          51,
+          52,
+          53,
+          54,
+          55,
+          57,
+          58,
+          59,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          89,
+          92,
+          94,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          106,
+          107,
+          108,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          118,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          131,
+          132,
+          133,
+          134,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          147,
+          148,
+          149,
+          150,
+          151,
+          153,
+          155,
+          156,
+          157,
+          159,
+          160,
+          161,
+          163,
+          164,
+          165,
+          166,
+          167,
+          169,
+          170,
+          171,
+          172,
+          174,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          185,
+          186,
+          187,
+          190,
+          191,
+          192,
+          195,
+          196,
+          197,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          207,
+          208,
+          209,
+          210,
+          212,
+          213,
+          214,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          226,
+          227,
+          228,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "val": [
+          2,
+          5,
+          6,
+          7,
+          14,
+          18,
+          34,
+          39,
+          40,
+          42,
+          60,
+          68,
+          88,
+          90,
+          93,
+          119,
+          129,
+          130,
+          168,
+          173,
+          175,
+          176,
+          184,
+          189,
+          193,
+          198,
+          206,
+          211,
+          216,
+          224,
+          238,
+          241
+        ],
+        "test": [
+          30,
+          31,
+          33,
+          35,
+          43,
+          50,
+          56,
+          61,
+          86,
+          87,
+          91,
+          95,
+          104,
+          105,
+          109,
+          110,
+          117,
+          120,
+          135,
+          146,
+          152,
+          154,
+          158,
+          162,
+          188,
+          194,
+          215,
+          225,
+          229,
+          239,
+          240,
+          248
+        ],
+        "promotion_train_swap": null
+      }
+    },
+    "sources": {
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_monotonic_curriculum.py": "bb4841a5c755745be334264ce0b9c4e19040e84093deac03b2fa7c42d835b41c",
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_teaching_comparison.py": "a3e127230204c4825c73d6ca00f2871d8d70c14385e35cc26d495068a08500cd",
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_prefix_direct.py": "0475ad769cef1c87db430485839928da8caac371ab7f76b0897f00224091af0a",
+      "LOCAL_WORKSPACE/work\\sle-research-review\\rank-source-55d1037\\source\\docs\\references\\MLP_paper4_zh_original.md": "0921b100bbe52c7efdee09e277d5a95b069e59d12a756ed01f1ea0cd18d20a00",
+      "LOCAL_WORKSPACE/work\\sle-research-review\\rank-source-55d1037\\source\\experiments\\spiral_parser\\spiral_parser.py": "ea5eae0eb7e58ca2b42a3d495c33768e5af009cd1f7f4bdd6b6bafcf962af8a7"
+    }
+  },
+  "oracle": {
+    "oracle_roundtrips": 510,
+    "paper_fixtures": [
+      [
+        1,
+        0,
+        "010000",
+        "00"
+      ],
+      [
+        1,
+        1,
+        "010010",
+        "10"
+      ],
+      [
+        2,
+        1,
+        "0100010",
+        "010"
+      ],
+      [
+        2,
+        2,
+        "0100100",
+        "100"
+      ],
+      [
+        3,
+        5,
+        "01001010",
+        "1010"
+      ]
+    ],
+    "neg_profile_fixture": [
+      "01010100",
+      "010"
+    ],
+    "invalid_rejected": 4,
+    "splits_and_one_per_round": true,
+    "promotion_tail_trigger": true,
+    "no_future_prefix_labels": true,
+    "23slot_STOP_boundary": true,
+    "validation_threshold_ceil": true
+  },
+  "runs": [
+    {
+      "arm": "curriculum",
+      "seed": 101,
+      "stages": [
+        {
+          "n": 1,
+          "presentations": 134,
+          "global_presentations": 134,
+          "updates_before": 0,
+          "updates_after": 402,
+          "stage_updates": 402,
+          "unique_presented": 2,
+          "train_size": 2,
+          "exposure_min": 67,
+          "exposure_max": 67,
+          "first_pass": 130,
+          "confirmation_points": [
+            130,
+            132,
+            134
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.04970170000001417,
+          "probe_inference_calls": 1175,
+          "validation": {
+            "n": 1,
+            "total": 2,
+            "whole_correct": 2,
+            "stop_correct": 2,
+            "bit_correct_by_position": [
+              2,
+              2
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 6,
+            "teacher_targets": 6,
+            "ce_mean": 0.15796006723647762,
+            "inference_calls": 12
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000",
+          "initial_state_sha": "93919ec71d790a0f8ded4c2a088bfa2d2183292bcc621b7661c42ce11822aef5"
+        },
+        {
+          "n": 2,
+          "presentations": 100,
+          "global_presentations": 234,
+          "updates_before": 402,
+          "updates_after": 802,
+          "stage_updates": 400,
+          "unique_presented": 4,
+          "train_size": 4,
+          "exposure_min": 25,
+          "exposure_max": 25,
+          "first_pass": 92,
+          "confirmation_points": [
+            92,
+            96,
+            100
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.044092200000022785,
+          "probe_inference_calls": 984,
+          "validation": {
+            "n": 2,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 16,
+            "teacher_targets": 16,
+            "ce_mean": 0.0922157771289991,
+            "inference_calls": 32
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "0100010",
+          "initial_state_sha": "7cb5e9f8d2a2c38a3468a18589922dd149746bc953a661343eecd36e74434bcc"
+        },
+        {
+          "n": 3,
+          "presentations": 440,
+          "global_presentations": 674,
+          "updates_before": 802,
+          "updates_after": 3002,
+          "stage_updates": 2200,
+          "unique_presented": 8,
+          "train_size": 8,
+          "exposure_min": 55,
+          "exposure_max": 55,
+          "first_pass": 424,
+          "confirmation_points": [
+            424,
+            432,
+            440
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.20850180000002183,
+          "probe_inference_calls": 5076,
+          "validation": {
+            "n": 3,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 40,
+            "teacher_targets": 40,
+            "ce_mean": 0.02335170728973429,
+            "inference_calls": 80
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "01000010",
+          "initial_state_sha": "d82e6a335c7d34770af882e4b864d1dbf245adcc21cb73b569db22d7a1b83864"
+        },
+        {
+          "n": 4,
+          "presentations": 304,
+          "global_presentations": 978,
+          "updates_before": 3002,
+          "updates_after": 4826,
+          "stage_updates": 1824,
+          "unique_presented": 16,
+          "train_size": 16,
+          "exposure_min": 19,
+          "exposure_max": 19,
+          "first_pass": 224,
+          "confirmation_points": [
+            272,
+            288,
+            304
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.17822430000001077,
+          "probe_inference_calls": 5168,
+          "validation": {
+            "n": 4,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 96,
+            "teacher_targets": 96,
+            "ce_mean": 0.009389204521653585,
+            "inference_calls": 192
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000010",
+          "initial_state_sha": "bd00e4cf2c40a98938359a758a8a54db4171739603797c15ffad80b0ab159b59"
+        },
+        {
+          "n": 5,
+          "presentations": 512,
+          "global_presentations": 1490,
+          "updates_before": 4826,
+          "updates_after": 8410,
+          "stage_updates": 3584,
+          "unique_presented": 24,
+          "train_size": 24,
+          "exposure_min": 21,
+          "exposure_max": 22,
+          "first_pass": 408,
+          "confirmation_points": [
+            480,
+            504,
+            512
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.3826859999999215,
+          "probe_inference_calls": 12996,
+          "validation": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 28,
+            "teacher_targets": 28,
+            "ce_mean": 0.03503234301776242,
+            "inference_calls": 56
+          },
+          "final_test": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 28,
+            "teacher_targets": 28,
+            "ce_mean": 0.017716840089946468,
+            "inference_calls": 56
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000010",
+          "initial_state_sha": "0ee2155c47e5a808a41b5d0f2e2e61422d593aafa81a2b34560a67eefa3edc6b"
+        },
+        {
+          "n": 6,
+          "presentations": 1008,
+          "global_presentations": 2498,
+          "updates_before": 8410,
+          "updates_after": 16474,
+          "stage_updates": 8064,
+          "unique_presented": 48,
+          "train_size": 48,
+          "exposure_min": 21,
+          "exposure_max": 21,
+          "first_pass": 672,
+          "confirmation_points": [
+            960,
+            1000,
+            1008
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.8721980999999914,
+          "probe_inference_calls": 30776,
+          "validation": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 64,
+            "teacher_targets": 64,
+            "ce_mean": 0.005047827127555055,
+            "inference_calls": 128
+          },
+          "final_test": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 7,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              7,
+              7,
+              8,
+              8,
+              8,
+              7,
+              8
+            ],
+            "bit_accuracy": 0.9464285714285714,
+            "teacher_correct": 63,
+            "teacher_targets": 64,
+            "ce_mean": 0.02463819605295329,
+            "inference_calls": 128
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "01000000010",
+          "initial_state_sha": "afcda0d7233ce5159d0311d025701e0ed6741bf6c514bb09a20fcd3848aed980"
+        },
+        {
+          "n": 7,
+          "presentations": 864,
+          "global_presentations": 3362,
+          "updates_before": 16474,
+          "updates_after": 24250,
+          "stage_updates": 7776,
+          "unique_presented": 96,
+          "train_size": 96,
+          "exposure_min": 9,
+          "exposure_max": 9,
+          "first_pass": 672,
+          "confirmation_points": [
+            672,
+            768,
+            864
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.9705096999999796,
+          "probe_inference_calls": 43345,
+          "validation": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 144,
+            "teacher_targets": 144,
+            "ce_mean": 0.0036422670718152896,
+            "inference_calls": 288
+          },
+          "final_test": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 144,
+            "teacher_targets": 144,
+            "ce_mean": 0.007022933130939655,
+            "inference_calls": 288
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "010000000010",
+          "initial_state_sha": "1bd0e9c5ec119302018bda2788824ebe894100518efd1132653ef6d419fa5cde"
+        },
+        {
+          "n": 8,
+          "presentations": 960,
+          "global_presentations": 4322,
+          "updates_before": 24250,
+          "updates_after": 33850,
+          "stage_updates": 9600,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 5,
+          "exposure_max": 5,
+          "first_pass": 576,
+          "confirmation_points": [
+            576,
+            768,
+            960
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 1.4455490999999938,
+          "probe_inference_calls": 76712,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0024326867133563344,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0026020094755576156,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "ac25f759d1c61e790540057daa6e128f9cf7093153656c745a6aeabaaa3521db"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 4322,
+      "total_updates": 33850,
+      "total_training_and_probe_seconds": 4.151462899999956,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 1,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 2,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 3,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 4,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 5,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 6,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 7,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 25000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 4,
+            "stop_correct": 23,
+            "bit_correct_by_position": [
+              31,
+              27,
+              25,
+              25,
+              25,
+              22,
+              19,
+              16,
+              23
+            ],
+            "bit_accuracy": 0.7395833333333334,
+            "teacher_correct": 280,
+            "teacher_targets": 320,
+            "ce_mean": 0.3769303016085477,
+            "inference_calls": 623
+          }
+        },
+        {
+          "updates": 26000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 17,
+            "stop_correct": 23,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              28,
+              27,
+              28,
+              22,
+              21,
+              23
+            ],
+            "bit_accuracy": 0.84375,
+            "teacher_correct": 304,
+            "teacher_targets": 320,
+            "ce_mean": 0.13298558410660624,
+            "inference_calls": 631
+          }
+        },
+        {
+          "updates": 27000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 29,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              27,
+              27,
+              30,
+              28,
+              29,
+              29
+            ],
+            "bit_accuracy": 0.9201388888888888,
+            "teacher_correct": 313,
+            "teacher_targets": 320,
+            "ce_mean": 0.06758666021486782,
+            "inference_calls": 637
+          }
+        },
+        {
+          "updates": 28000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              31,
+              31,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.028406566623974033,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 29000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.011035477776910694,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 30000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              31,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.017273278891337163,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 31000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003312731596745809,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 32000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0018291786856520977,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 33000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.009680916724495827,
+            "inference_calls": 640
+          }
+        }
+      ]
+    },
+    {
+      "arm": "curriculum",
+      "seed": 202,
+      "stages": [
+        {
+          "n": 1,
+          "presentations": 144,
+          "global_presentations": 144,
+          "updates_before": 0,
+          "updates_after": 432,
+          "stage_updates": 432,
+          "unique_presented": 2,
+          "train_size": 2,
+          "exposure_min": 72,
+          "exposure_max": 72,
+          "first_pass": 140,
+          "confirmation_points": [
+            140,
+            142,
+            144
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.051469500000052903,
+          "probe_inference_calls": 1112,
+          "validation": {
+            "n": 1,
+            "total": 2,
+            "whole_correct": 2,
+            "stop_correct": 2,
+            "bit_correct_by_position": [
+              2,
+              2
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 6,
+            "teacher_targets": 6,
+            "ce_mean": 0.1477690738217452,
+            "inference_calls": 12
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000",
+          "initial_state_sha": "ccbe46c1c4467b76f2510d0b6d98b69c71e24f9ad6df8b0c42ec8cca00c5facd"
+        },
+        {
+          "n": 2,
+          "presentations": 68,
+          "global_presentations": 212,
+          "updates_before": 432,
+          "updates_after": 704,
+          "stage_updates": 272,
+          "unique_presented": 4,
+          "train_size": 4,
+          "exposure_min": 17,
+          "exposure_max": 17,
+          "first_pass": 60,
+          "confirmation_points": [
+            60,
+            64,
+            68
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.02779529999997976,
+          "probe_inference_calls": 652,
+          "validation": {
+            "n": 2,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 16,
+            "teacher_targets": 16,
+            "ce_mean": 0.1110220573262008,
+            "inference_calls": 32
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "0100010",
+          "initial_state_sha": "088dc9bdbcad66647a36655ca12453d252ea801169769e1d5623275182bf2a4d"
+        },
+        {
+          "n": 3,
+          "presentations": 400,
+          "global_presentations": 612,
+          "updates_before": 704,
+          "updates_after": 2704,
+          "stage_updates": 2000,
+          "unique_presented": 8,
+          "train_size": 8,
+          "exposure_min": 50,
+          "exposure_max": 50,
+          "first_pass": 384,
+          "confirmation_points": [
+            384,
+            392,
+            400
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.18728229999999257,
+          "probe_inference_calls": 4638,
+          "validation": {
+            "n": 3,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 40,
+            "teacher_targets": 40,
+            "ce_mean": 0.02255839076709304,
+            "inference_calls": 80
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "01000010",
+          "initial_state_sha": "205f3ef89eefc5cd9c87c02bc07f2456a7b62908f4e6b89c9bfb26a7a47e98f5"
+        },
+        {
+          "n": 4,
+          "presentations": 288,
+          "global_presentations": 900,
+          "updates_before": 2704,
+          "updates_after": 4432,
+          "stage_updates": 1728,
+          "unique_presented": 16,
+          "train_size": 16,
+          "exposure_min": 18,
+          "exposure_max": 18,
+          "first_pass": 256,
+          "confirmation_points": [
+            256,
+            272,
+            288
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.17088590000003023,
+          "probe_inference_calls": 5019,
+          "validation": {
+            "n": 4,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 96,
+            "teacher_targets": 96,
+            "ce_mean": 0.021299903162054684,
+            "inference_calls": 192
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000010",
+          "initial_state_sha": "b2bcfbad42413f4b6814d4ad9874ea530fd33122dcc100e2ff6801868d9374df"
+        },
+        {
+          "n": 5,
+          "presentations": 360,
+          "global_presentations": 1260,
+          "updates_before": 4432,
+          "updates_after": 6952,
+          "stage_updates": 2520,
+          "unique_presented": 24,
+          "train_size": 24,
+          "exposure_min": 15,
+          "exposure_max": 15,
+          "first_pass": 312,
+          "confirmation_points": [
+            312,
+            336,
+            360
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.2809714999999642,
+          "probe_inference_calls": 10298,
+          "validation": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 28,
+            "teacher_targets": 28,
+            "ce_mean": 0.022723316972684943,
+            "inference_calls": 56
+          },
+          "final_test": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 28,
+            "teacher_targets": 28,
+            "ce_mean": 0.020049450720910966,
+            "inference_calls": 56
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000010",
+          "initial_state_sha": "b868cfce17bb720152dd3e8efced45d3a43dd84f713465bdd9b139d2b1265273"
+        },
+        {
+          "n": 6,
+          "presentations": 720,
+          "global_presentations": 1980,
+          "updates_before": 6952,
+          "updates_after": 12712,
+          "stage_updates": 5760,
+          "unique_presented": 48,
+          "train_size": 48,
+          "exposure_min": 15,
+          "exposure_max": 15,
+          "first_pass": 432,
+          "confirmation_points": [
+            624,
+            672,
+            720
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.667892199999983,
+          "probe_inference_calls": 24387,
+          "validation": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 64,
+            "teacher_targets": 64,
+            "ce_mean": 0.004934332733341179,
+            "inference_calls": 128
+          },
+          "final_test": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 64,
+            "teacher_targets": 64,
+            "ce_mean": 0.008984191486119522,
+            "inference_calls": 128
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "01000000010",
+          "initial_state_sha": "a10f8446da48b02ab9594af3d403866b4e9704f3c9350eb27005a12f44e89313"
+        },
+        {
+          "n": 7,
+          "presentations": 480,
+          "global_presentations": 2460,
+          "updates_before": 12712,
+          "updates_after": 17032,
+          "stage_updates": 4320,
+          "unique_presented": 96,
+          "train_size": 96,
+          "exposure_min": 5,
+          "exposure_max": 5,
+          "first_pass": 288,
+          "confirmation_points": [
+            288,
+            384,
+            480
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.644881899999973,
+          "probe_inference_calls": 32609,
+          "validation": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 144,
+            "teacher_targets": 144,
+            "ce_mean": 0.005234883616768475,
+            "inference_calls": 288
+          },
+          "final_test": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 144,
+            "teacher_targets": 144,
+            "ce_mean": 0.004631871045940715,
+            "inference_calls": 288
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "010000000010",
+          "initial_state_sha": "7ce38c45711578186beb32b0517b4326df642550c9c0622939c32a69eea23bcb"
+        },
+        {
+          "n": 8,
+          "presentations": 768,
+          "global_presentations": 3228,
+          "updates_before": 17032,
+          "updates_after": 24712,
+          "stage_updates": 7680,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 4,
+          "exposure_max": 4,
+          "first_pass": 512,
+          "confirmation_points": [
+            512,
+            576,
+            768
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 1.3776781999999912,
+          "probe_inference_calls": 73376,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.004357266248511649,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              31,
+              31,
+              32,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9826388888888888,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.009654559955168096,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "9bf7d3ad7579cf13f1eb9dbc1647614693954ff2cf2998229696bc349036e483"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 3228,
+      "total_updates": 24712,
+      "total_training_and_probe_seconds": 3.408856799999967,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 1,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 2,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 3,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 4,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 5,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 6,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 7,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 18000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 12,
+            "stop_correct": 28,
+            "bit_correct_by_position": [
+              31,
+              31,
+              29,
+              27,
+              30,
+              25,
+              22,
+              21,
+              28
+            ],
+            "bit_accuracy": 0.8472222222222222,
+            "teacher_correct": 296,
+            "teacher_targets": 320,
+            "ce_mean": 0.17192400678373845,
+            "inference_calls": 632
+          }
+        },
+        {
+          "updates": 19000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 19,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              29,
+              27,
+              25,
+              25,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.90625,
+            "teacher_correct": 305,
+            "teacher_targets": 320,
+            "ce_mean": 0.10462531496035976,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              29,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9652777777777778,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.042549670779405246,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              27,
+              27,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 313,
+            "teacher_targets": 320,
+            "ce_mean": 0.04088086089319187,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              31,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.025595893270277233,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.009772317962724425,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 24000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.005267266458096215,
+            "inference_calls": 640
+          }
+        }
+      ]
+    },
+    {
+      "arm": "curriculum",
+      "seed": 303,
+      "stages": [
+        {
+          "n": 1,
+          "presentations": 100,
+          "global_presentations": 100,
+          "updates_before": 0,
+          "updates_after": 300,
+          "stage_updates": 300,
+          "unique_presented": 2,
+          "train_size": 2,
+          "exposure_min": 50,
+          "exposure_max": 50,
+          "first_pass": 96,
+          "confirmation_points": [
+            96,
+            98,
+            100
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.03751529999999548,
+          "probe_inference_calls": 1056,
+          "validation": {
+            "n": 1,
+            "total": 2,
+            "whole_correct": 2,
+            "stop_correct": 2,
+            "bit_correct_by_position": [
+              2,
+              2
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 6,
+            "teacher_targets": 6,
+            "ce_mean": 0.30087674574354223,
+            "inference_calls": 12
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000",
+          "initial_state_sha": "ab7a5ce8e3eac3cc020e727a2c4f123604bb7126598d35e30d078cfb467974e6"
+        },
+        {
+          "n": 2,
+          "presentations": 100,
+          "global_presentations": 200,
+          "updates_before": 300,
+          "updates_after": 700,
+          "stage_updates": 400,
+          "unique_presented": 4,
+          "train_size": 4,
+          "exposure_min": 25,
+          "exposure_max": 25,
+          "first_pass": 92,
+          "confirmation_points": [
+            92,
+            96,
+            100
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.04101449999996021,
+          "probe_inference_calls": 963,
+          "validation": {
+            "n": 2,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 16,
+            "teacher_targets": 16,
+            "ce_mean": 0.09723315941418591,
+            "inference_calls": 32
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "0100010",
+          "initial_state_sha": "5a718eaa17090f7efe4a71046bb7623fbb6723fd545813e63fd1ef75309d3692"
+        },
+        {
+          "n": 3,
+          "presentations": 520,
+          "global_presentations": 720,
+          "updates_before": 700,
+          "updates_after": 3300,
+          "stage_updates": 2600,
+          "unique_presented": 8,
+          "train_size": 8,
+          "exposure_min": 65,
+          "exposure_max": 65,
+          "first_pass": 504,
+          "confirmation_points": [
+            504,
+            512,
+            520
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.2366200999999819,
+          "probe_inference_calls": 5765,
+          "validation": {
+            "n": 3,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 40,
+            "teacher_targets": 40,
+            "ce_mean": 0.019663453185143696,
+            "inference_calls": 80
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "01000010",
+          "initial_state_sha": "cdae05b070e7648c3fd7880e4149d68d3f401bc9c22b5e341ee6dac74c79c691"
+        },
+        {
+          "n": 4,
+          "presentations": 352,
+          "global_presentations": 1072,
+          "updates_before": 3300,
+          "updates_after": 5412,
+          "stage_updates": 2112,
+          "unique_presented": 16,
+          "train_size": 16,
+          "exposure_min": 22,
+          "exposure_max": 22,
+          "first_pass": 288,
+          "confirmation_points": [
+            320,
+            336,
+            352
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.20446199999992132,
+          "probe_inference_calls": 5837,
+          "validation": {
+            "n": 4,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 96,
+            "teacher_targets": 96,
+            "ce_mean": 0.022433466425885496,
+            "inference_calls": 192
+          },
+          "final_test": null,
+          "test_type": "no_independent_test_all_words_taught",
+          "first_question": "010000010",
+          "initial_state_sha": "b37b7fecee674e6ba173700118af6575bd4b716cf01085a343f353effe9cfc04"
+        },
+        {
+          "n": 5,
+          "presentations": 288,
+          "global_presentations": 1360,
+          "updates_before": 5412,
+          "updates_after": 7428,
+          "stage_updates": 2016,
+          "unique_presented": 24,
+          "train_size": 24,
+          "exposure_min": 12,
+          "exposure_max": 12,
+          "first_pass": 128,
+          "confirmation_points": [
+            256,
+            264,
+            288
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.22979469999995672,
+          "probe_inference_calls": 9065,
+          "validation": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 4,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 28,
+            "teacher_targets": 28,
+            "ce_mean": 0.04547141806979473,
+            "inference_calls": 56
+          },
+          "final_test": {
+            "n": 5,
+            "total": 4,
+            "whole_correct": 3,
+            "stop_correct": 4,
+            "bit_correct_by_position": [
+              4,
+              4,
+              4,
+              3,
+              3,
+              4
+            ],
+            "bit_accuracy": 0.9166666666666666,
+            "teacher_correct": 27,
+            "teacher_targets": 28,
+            "ce_mean": 0.042450459004966655,
+            "inference_calls": 56
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000010",
+          "initial_state_sha": "0dc2d5f58ae02d0352f1b6c6c4be08d0c18814191958821507ea741db39897b9"
+        },
+        {
+          "n": 6,
+          "presentations": 624,
+          "global_presentations": 1984,
+          "updates_before": 7428,
+          "updates_after": 12420,
+          "stage_updates": 4992,
+          "unique_presented": 48,
+          "train_size": 48,
+          "exposure_min": 13,
+          "exposure_max": 13,
+          "first_pass": 480,
+          "confirmation_points": [
+            528,
+            576,
+            624
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.5765503000000081,
+          "probe_inference_calls": 22763,
+          "validation": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 8,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 64,
+            "teacher_targets": 64,
+            "ce_mean": 0.013852078216798687,
+            "inference_calls": 128
+          },
+          "final_test": {
+            "n": 6,
+            "total": 8,
+            "whole_correct": 6,
+            "stop_correct": 8,
+            "bit_correct_by_position": [
+              8,
+              8,
+              6,
+              6,
+              8,
+              8,
+              8
+            ],
+            "bit_accuracy": 0.9285714285714286,
+            "teacher_correct": 62,
+            "teacher_targets": 64,
+            "ce_mean": 0.03489691028659104,
+            "inference_calls": 128
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "01000000010",
+          "initial_state_sha": "a031146e7f0ea304de82314a259d00d49fd16c5165697ca82c4bda102d71f980"
+        },
+        {
+          "n": 7,
+          "presentations": 512,
+          "global_presentations": 2496,
+          "updates_before": 12420,
+          "updates_after": 17028,
+          "stage_updates": 4608,
+          "unique_presented": 96,
+          "train_size": 96,
+          "exposure_min": 5,
+          "exposure_max": 6,
+          "first_pass": 384,
+          "confirmation_points": [
+            384,
+            480,
+            512
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 0.6719219000000294,
+          "probe_inference_calls": 34962,
+          "validation": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 16,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 144,
+            "teacher_targets": 144,
+            "ce_mean": 0.007671229928075715,
+            "inference_calls": 288
+          },
+          "final_test": {
+            "n": 7,
+            "total": 16,
+            "whole_correct": 15,
+            "stop_correct": 16,
+            "bit_correct_by_position": [
+              16,
+              16,
+              15,
+              15,
+              15,
+              15,
+              16,
+              16
+            ],
+            "bit_accuracy": 0.96875,
+            "teacher_correct": 143,
+            "teacher_targets": 144,
+            "ce_mean": 0.016603848450807764,
+            "inference_calls": 288
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "010000000010",
+          "initial_state_sha": "83246a494d52a34c2e91c5848e2eda2160847719e23db0d234ef2374f5895df8"
+        },
+        {
+          "n": 8,
+          "presentations": 768,
+          "global_presentations": 3264,
+          "updates_before": 17028,
+          "updates_after": 24708,
+          "stage_updates": 7680,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 4,
+          "exposure_max": 4,
+          "first_pass": 512,
+          "confirmation_points": [
+            512,
+            576,
+            768
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 1.2890621999999894,
+          "probe_inference_calls": 73260,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003914927144844792,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.004711906016617401,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "0aa3b8a59ac58d668496ca0415eea132129cd9d045972641694906945a085161"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 3264,
+      "total_updates": 24708,
+      "total_training_and_probe_seconds": 3.2869409999998425,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 1,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 2,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 3,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 4,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 5,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 6,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 7,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        },
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 18000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 9,
+            "stop_correct": 20,
+            "bit_correct_by_position": [
+              32,
+              29,
+              24,
+              23,
+              25,
+              26,
+              18,
+              17,
+              20
+            ],
+            "bit_accuracy": 0.7430555555555556,
+            "teacher_correct": 288,
+            "teacher_targets": 320,
+            "ce_mean": 0.26541193316681144,
+            "inference_calls": 626
+          }
+        },
+        {
+          "updates": 19000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 17,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              26,
+              24,
+              23,
+              28,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8576388888888888,
+            "teacher_correct": 297,
+            "teacher_targets": 320,
+            "ce_mean": 0.13519678615791966,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              30,
+              31,
+              29,
+              29,
+              30,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.9479166666666666,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.048123292328663025,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 29,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 317,
+            "teacher_targets": 320,
+            "ce_mean": 0.03248252362704658,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              28,
+              28,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.03907561275714612,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.0207846565833397,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 24000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02755871309222648,
+            "inference_calls": 640
+          }
+        }
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 101,
+      "stages": [
+        {
+          "n": 8,
+          "presentations": 2304,
+          "global_presentations": 2304,
+          "updates_before": 0,
+          "updates_after": 23040,
+          "stage_updates": 23040,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 12,
+          "exposure_max": 12,
+          "first_pass": 2000,
+          "confirmation_points": [
+            2000,
+            2112,
+            2304
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 2.811062600000014,
+          "probe_inference_calls": 119233,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0024646031661523854,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0008609336216256203,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "93919ec71d790a0f8ded4c2a088bfa2d2183292bcc621b7661c42ce11822aef5"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 2304,
+      "total_updates": 23040,
+      "total_training_and_probe_seconds": 2.811062600000014,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 1000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              21,
+              23,
+              20,
+              20,
+              22,
+              17,
+              15,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6597222222222222,
+            "teacher_correct": 237,
+            "teacher_targets": 320,
+            "ce_mean": 0.560993176721071,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 2000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 1,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              24,
+              21,
+              19,
+              17,
+              18,
+              20,
+              18,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.65625,
+            "teacher_correct": 252,
+            "teacher_targets": 320,
+            "ce_mean": 0.5211368083830414,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 3000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 3,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              24,
+              23,
+              22,
+              17,
+              17,
+              26,
+              17,
+              19,
+              32
+            ],
+            "bit_accuracy": 0.6840277777777778,
+            "teacher_correct": 263,
+            "teacher_targets": 320,
+            "ce_mean": 0.505843194485255,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 4000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 1,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              26,
+              24,
+              20,
+              19,
+              19,
+              20,
+              14,
+              19,
+              32
+            ],
+            "bit_accuracy": 0.6701388888888888,
+            "teacher_correct": 261,
+            "teacher_targets": 320,
+            "ce_mean": 0.47169835536346544,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 5000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 5,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              28,
+              24,
+              20,
+              20,
+              14,
+              25,
+              12,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6770833333333334,
+            "teacher_correct": 276,
+            "teacher_targets": 320,
+            "ce_mean": 0.40167436177746724,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 6000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 1,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              25,
+              21,
+              23,
+              16,
+              22,
+              11,
+              18,
+              32
+            ],
+            "bit_accuracy": 0.6840277777777778,
+            "teacher_correct": 277,
+            "teacher_targets": 320,
+            "ce_mean": 0.3645369871149529,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 7000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 2,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              24,
+              23,
+              17,
+              15,
+              23,
+              20,
+              21,
+              32
+            ],
+            "bit_accuracy": 0.7083333333333334,
+            "teacher_correct": 279,
+            "teacher_targets": 320,
+            "ce_mean": 0.2742421837556442,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 8000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 5,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              26,
+              25,
+              20,
+              16,
+              27,
+              16,
+              24,
+              32
+            ],
+            "bit_accuracy": 0.7465277777777778,
+            "teacher_correct": 287,
+            "teacher_targets": 320,
+            "ce_mean": 0.25391481462959803,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 9000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 14,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              29,
+              28,
+              21,
+              22,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8541666666666666,
+            "teacher_correct": 300,
+            "teacher_targets": 320,
+            "ce_mean": 0.1458527745143412,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 10000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 13,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              30,
+              29,
+              28,
+              20,
+              21,
+              25,
+              28,
+              32
+            ],
+            "bit_accuracy": 0.8472222222222222,
+            "teacher_correct": 301,
+            "teacher_targets": 320,
+            "ce_mean": 0.12794578725264005,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 11000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 15,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              30,
+              30,
+              29,
+              22,
+              25,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8680555555555556,
+            "teacher_correct": 302,
+            "teacher_targets": 320,
+            "ce_mean": 0.11140674606593641,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 12000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 19,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              30,
+              28,
+              22,
+              23,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.8993055555555556,
+            "teacher_correct": 306,
+            "teacher_targets": 320,
+            "ce_mean": 0.08164309800372775,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 13000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 22,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              26,
+              26,
+              27,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9305555555555556,
+            "teacher_correct": 309,
+            "teacher_targets": 320,
+            "ce_mean": 0.10478490026105466,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 14000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 12,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              30,
+              26,
+              25,
+              27,
+              27,
+              21,
+              24,
+              32
+            ],
+            "bit_accuracy": 0.84375,
+            "teacher_correct": 295,
+            "teacher_targets": 320,
+            "ce_mean": 0.17571457805560833,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 15000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 29,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              32,
+              31,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9756944444444444,
+            "teacher_correct": 317,
+            "teacher_targets": 320,
+            "ce_mean": 0.04051975318448862,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 16000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 20,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              28,
+              26,
+              25,
+              27,
+              29,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.8993055555555556,
+            "teacher_correct": 308,
+            "teacher_targets": 320,
+            "ce_mean": 0.09793969225392243,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 17000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              31,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.009538449122600203,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 18000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              30,
+              31,
+              28,
+              29,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9583333333333334,
+            "teacher_correct": 314,
+            "teacher_targets": 320,
+            "ce_mean": 0.034191290554045774,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.008502119560106386,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              31,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.010866181381763516,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              31,
+              32,
+              32,
+              32,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9895833333333334,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.008332597025382677,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.004833158653696763,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.002217570823272967,
+            "inference_calls": 640
+          }
+        }
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 202,
+      "stages": [
+        {
+          "n": 8,
+          "presentations": 2304,
+          "global_presentations": 2304,
+          "updates_before": 0,
+          "updates_after": 23040,
+          "stage_updates": 23040,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 12,
+          "exposure_max": 12,
+          "first_pass": 2000,
+          "confirmation_points": [
+            2000,
+            2112,
+            2304
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 2.7887564999999768,
+          "probe_inference_calls": 120246,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              31,
+              31,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.011743738738925688,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              31,
+              31,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.017288674968787957,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "ccbe46c1c4467b76f2510d0b6d98b69c71e24f9ad6df8b0c42ec8cca00c5facd"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 2304,
+      "total_updates": 23040,
+      "total_training_and_probe_seconds": 2.7887564999999768,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 1000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              22,
+              22,
+              22,
+              21,
+              21,
+              21,
+              17,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6875,
+            "teacher_correct": 239,
+            "teacher_targets": 320,
+            "ce_mean": 0.5304119105868603,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 2000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              24,
+              21,
+              20,
+              20,
+              17,
+              14,
+              12,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.625,
+            "teacher_correct": 250,
+            "teacher_targets": 320,
+            "ce_mean": 0.5624901712086003,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 3000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 1,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              26,
+              22,
+              21,
+              15,
+              17,
+              14,
+              19,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6458333333333334,
+            "teacher_correct": 264,
+            "teacher_targets": 320,
+            "ce_mean": 0.5437367191785061,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 4000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 3,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              26,
+              24,
+              20,
+              18,
+              10,
+              24,
+              13,
+              22,
+              32
+            ],
+            "bit_accuracy": 0.65625,
+            "teacher_correct": 274,
+            "teacher_targets": 320,
+            "ce_mean": 0.46723876433901124,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 5000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 2,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              28,
+              23,
+              20,
+              20,
+              13,
+              26,
+              12,
+              21,
+              32
+            ],
+            "bit_accuracy": 0.6770833333333334,
+            "teacher_correct": 270,
+            "teacher_targets": 320,
+            "ce_mean": 0.4761014413135406,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 6000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              22,
+              21,
+              19,
+              12,
+              24,
+              22,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6979166666666666,
+            "teacher_correct": 271,
+            "teacher_targets": 320,
+            "ce_mean": 0.36446147078802194,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 7000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 3,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              24,
+              21,
+              16,
+              19,
+              16,
+              22,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6909722222222222,
+            "teacher_correct": 278,
+            "teacher_targets": 320,
+            "ce_mean": 0.34410823551329156,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 8000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 7,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              27,
+              23,
+              23,
+              17,
+              23,
+              22,
+              22,
+              32
+            ],
+            "bit_accuracy": 0.7604166666666666,
+            "teacher_correct": 285,
+            "teacher_targets": 320,
+            "ce_mean": 0.37375145526957326,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 9000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 10,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              24,
+              23,
+              19,
+              18,
+              25,
+              24,
+              24,
+              32
+            ],
+            "bit_accuracy": 0.7569444444444444,
+            "teacher_correct": 293,
+            "teacher_targets": 320,
+            "ce_mean": 0.1762519781445009,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 10000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 18,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              29,
+              26,
+              21,
+              27,
+              23,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.8680555555555556,
+            "teacher_correct": 306,
+            "teacher_targets": 320,
+            "ce_mean": 0.10128471585750942,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 11000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 13,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              29,
+              27,
+              24,
+              22,
+              24,
+              23,
+              24,
+              32
+            ],
+            "bit_accuracy": 0.8159722222222222,
+            "teacher_correct": 297,
+            "teacher_targets": 320,
+            "ce_mean": 0.16101517652935246,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 12000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 20,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              29,
+              29,
+              29,
+              28,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.9097222222222222,
+            "teacher_correct": 308,
+            "teacher_targets": 320,
+            "ce_mean": 0.08311882124895968,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 13000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 3,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              27,
+              21,
+              13,
+              25,
+              18,
+              24,
+              23,
+              32
+            ],
+            "bit_accuracy": 0.7430555555555556,
+            "teacher_correct": 271,
+            "teacher_targets": 320,
+            "ce_mean": 0.5650962565296181,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 14000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              30,
+              28,
+              27,
+              31,
+              29,
+              29,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9270833333333334,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.06469739093037455,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 15000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 9,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              27,
+              21,
+              24,
+              23,
+              20,
+              23,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.7638888888888888,
+            "teacher_correct": 285,
+            "teacher_targets": 320,
+            "ce_mean": 0.3244126305349474,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 16000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 22,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              29,
+              28,
+              28,
+              30,
+              26,
+              28,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8958333333333334,
+            "teacher_correct": 308,
+            "teacher_targets": 320,
+            "ce_mean": 0.08048275157043926,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 17000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.007453848721808272,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 18000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              30,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.012670000152139125,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              29,
+              25,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 309,
+            "teacher_targets": 320,
+            "ce_mean": 0.07141029961118706,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              31,
+              31,
+              32,
+              32,
+              31,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.013262052659290147,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003908356214058386,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 24,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              30,
+              28,
+              28,
+              29,
+              28,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9236111111111112,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.056645146884077804,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0010673085328955488,
+            "inference_calls": 640
+          }
+        }
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 303,
+      "stages": [
+        {
+          "n": 8,
+          "presentations": 2880,
+          "global_presentations": 2880,
+          "updates_before": 0,
+          "updates_after": 28800,
+          "stage_updates": 28800,
+          "unique_presented": 192,
+          "train_size": 192,
+          "exposure_min": 15,
+          "exposure_max": 15,
+          "first_pass": 2000,
+          "confirmation_points": [
+            2496,
+            2688,
+            2880
+          ],
+          "stop_reason": "three_validation_passes",
+          "training_and_probe_seconds": 3.335289200000034,
+          "probe_inference_calls": 134073,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.00127802718973156,
+            "inference_calls": 640
+          },
+          "final_test": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0011183511082583143,
+            "inference_calls": 640
+          },
+          "test_type": "unseen_at_this_rank_fixed_split",
+          "first_question": "0100000000010",
+          "initial_state_sha": "ab7a5ce8e3eac3cc020e727a2c4f123604bb7126598d35e30d078cfb467974e6"
+        }
+      ],
+      "highest_rank": 8,
+      "reached_n8": true,
+      "passed_n8": true,
+      "total_presentations": 2880,
+      "total_updates": 28800,
+      "total_training_and_probe_seconds": 3.335289200000034,
+      "old_rank_training_or_probes_after_promotion": false,
+      "replay": [
+        {
+          "n": 8,
+          "all_actions_curve_optimizer_and_final_test_equal": true
+        }
+      ],
+      "n8_budget_anchors": [
+        {
+          "updates": 1000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              23,
+              24,
+              22,
+              21,
+              18,
+              17,
+              16,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6701388888888888,
+            "teacher_correct": 230,
+            "teacher_targets": 320,
+            "ce_mean": 0.6160301095971472,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 2000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 0,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              23,
+              21,
+              17,
+              17,
+              19,
+              13,
+              17,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6215277777777778,
+            "teacher_correct": 255,
+            "teacher_targets": 320,
+            "ce_mean": 0.49317589868602163,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 3000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 3,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              25,
+              22,
+              22,
+              16,
+              16,
+              20,
+              14,
+              22,
+              32
+            ],
+            "bit_accuracy": 0.65625,
+            "teacher_correct": 268,
+            "teacher_targets": 320,
+            "ce_mean": 0.475221999256061,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 4000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 2,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              26,
+              23,
+              21,
+              15,
+              15,
+              18,
+              17,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6493055555555556,
+            "teacher_correct": 267,
+            "teacher_targets": 320,
+            "ce_mean": 0.5028805921990631,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 5000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 2,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              27,
+              23,
+              21,
+              19,
+              11,
+              23,
+              16,
+              22,
+              32
+            ],
+            "bit_accuracy": 0.6736111111111112,
+            "teacher_correct": 273,
+            "teacher_targets": 320,
+            "ce_mean": 0.4378589377402694,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 6000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 4,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              28,
+              21,
+              22,
+              23,
+              14,
+              19,
+              23,
+              23,
+              32
+            ],
+            "bit_accuracy": 0.7118055555555556,
+            "teacher_correct": 284,
+            "teacher_targets": 320,
+            "ce_mean": 0.3073397623934272,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 7000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 1,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              23,
+              22,
+              14,
+              11,
+              23,
+              22,
+              20,
+              32
+            ],
+            "bit_accuracy": 0.6805555555555556,
+            "teacher_correct": 276,
+            "teacher_targets": 320,
+            "ce_mean": 0.3104765973849696,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 8000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 9,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              25,
+              23,
+              18,
+              16,
+              25,
+              28,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.7708333333333334,
+            "teacher_correct": 296,
+            "teacher_targets": 320,
+            "ce_mean": 0.18911522625757854,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 9000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 13,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              26,
+              21,
+              16,
+              19,
+              29,
+              26,
+              27,
+              32
+            ],
+            "bit_accuracy": 0.78125,
+            "teacher_correct": 298,
+            "teacher_targets": 320,
+            "ce_mean": 0.1496194510793728,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 10000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 10,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              29,
+              28,
+              27,
+              21,
+              18,
+              28,
+              24,
+              24,
+              32
+            ],
+            "bit_accuracy": 0.8020833333333334,
+            "teacher_correct": 298,
+            "teacher_targets": 320,
+            "ce_mean": 0.15908669140686327,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 11000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 15,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              29,
+              28,
+              22,
+              22,
+              27,
+              29,
+              27,
+              32
+            ],
+            "bit_accuracy": 0.8541666666666666,
+            "teacher_correct": 301,
+            "teacher_targets": 320,
+            "ce_mean": 0.1556975337667016,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 12000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 19,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              29,
+              26,
+              26,
+              25,
+              27,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.8993055555555556,
+            "teacher_correct": 307,
+            "teacher_targets": 320,
+            "ce_mean": 0.08169785647230386,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 13000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 24,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              27,
+              24,
+              28,
+              29,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9236111111111112,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.06104711024891866,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 14000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 24,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              26,
+              25,
+              29,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9236111111111112,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.04444961095393376,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 15000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              31,
+              31,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.020168792162157265,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 16000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 29,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              31,
+              32,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 317,
+            "teacher_targets": 320,
+            "ce_mean": 0.036358826181433934,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 17000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.006226184967029763,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 18000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.008123018113593191,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003643377535844732,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0011319544367363085,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              30,
+              29,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.96875,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02863221449195911,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.000666594016973221,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003235785476961518,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 24000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.004105443613696576,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 25000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0014610616166884805,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 26000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0005568115762077483,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 27000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              30,
+              29,
+              31,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9756944444444444,
+            "teacher_correct": 314,
+            "teacher_targets": 320,
+            "ce_mean": 0.056958724364916405,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 28000,
+          "validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.00016731577308704143,
+            "inference_calls": 640
+          }
+        }
+      ]
+    }
+  ],
+  "matched_update_comparisons": [
+    {
+      "seed": 101,
+      "common_global_update_points": [],
+      "curriculum_entered_n8_after_updates": 24250,
+      "curriculum_total_updates": 33850,
+      "direct_total_updates": 23040
+    },
+    {
+      "seed": 202,
+      "common_global_update_points": [
+        {
+          "updates": 18000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 12,
+            "stop_correct": 28,
+            "bit_correct_by_position": [
+              31,
+              31,
+              29,
+              27,
+              30,
+              25,
+              22,
+              21,
+              28
+            ],
+            "bit_accuracy": 0.8472222222222222,
+            "teacher_correct": 296,
+            "teacher_targets": 320,
+            "ce_mean": 0.17192400678373845,
+            "inference_calls": 632
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              30,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.012670000152139125,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 19,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              29,
+              27,
+              25,
+              25,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.90625,
+            "teacher_correct": 305,
+            "teacher_targets": 320,
+            "ce_mean": 0.10462531496035976,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              29,
+              25,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 309,
+            "teacher_targets": 320,
+            "ce_mean": 0.07141029961118706,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              29,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9652777777777778,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.042549670779405246,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              31,
+              31,
+              32,
+              32,
+              31,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.013262052659290147,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              27,
+              27,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 313,
+            "teacher_targets": 320,
+            "ce_mean": 0.04088086089319187,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003908356214058386,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              31,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.025595893270277233,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 24,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              30,
+              28,
+              28,
+              29,
+              28,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9236111111111112,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.056645146884077804,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.009772317962724425,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0010673085328955488,
+            "inference_calls": 640
+          }
+        }
+      ],
+      "curriculum_entered_n8_after_updates": 17032,
+      "curriculum_total_updates": 24712,
+      "direct_total_updates": 23040
+    },
+    {
+      "seed": 303,
+      "common_global_update_points": [
+        {
+          "updates": 18000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 9,
+            "stop_correct": 20,
+            "bit_correct_by_position": [
+              32,
+              29,
+              24,
+              23,
+              25,
+              26,
+              18,
+              17,
+              20
+            ],
+            "bit_accuracy": 0.7430555555555556,
+            "teacher_correct": 288,
+            "teacher_targets": 320,
+            "ce_mean": 0.26541193316681144,
+            "inference_calls": 626
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.008123018113593191,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 17,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              26,
+              24,
+              23,
+              28,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8576388888888888,
+            "teacher_correct": 297,
+            "teacher_targets": 320,
+            "ce_mean": 0.13519678615791966,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003643377535844732,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              30,
+              31,
+              29,
+              29,
+              30,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.9479166666666666,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.048123292328663025,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0011319544367363085,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 29,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 317,
+            "teacher_targets": 320,
+            "ce_mean": 0.03248252362704658,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              30,
+              29,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.96875,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02863221449195911,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              28,
+              28,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.03907561275714612,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.000666594016973221,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.0207846565833397,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003235785476961518,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 24000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02755871309222648,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.004105443613696576,
+            "inference_calls": 640
+          }
+        }
+      ],
+      "curriculum_entered_n8_after_updates": 17028,
+      "curriculum_total_updates": 24708,
+      "direct_total_updates": 28800
+    }
+  ]
+}

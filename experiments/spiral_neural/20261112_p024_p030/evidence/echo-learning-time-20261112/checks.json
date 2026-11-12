@@ -1,0 +1,5 @@
+{
+  "two_consecutive_train_only_checks": true,
+  "imperfect_resets_streak": true,
+  "probe_nonmutation_and_matches_full_evaluator": true
+}

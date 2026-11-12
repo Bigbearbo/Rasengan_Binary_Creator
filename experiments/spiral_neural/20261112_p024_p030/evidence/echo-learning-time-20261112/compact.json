@@ -1,0 +1,595 @@
+{
+  "plan": {
+    "id": "P028",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "arms": [
+      "ce_shuffle",
+      "reward_shuffle"
+    ],
+    "fixed_model_and_learning": "Exactly P027 learners,1171params, same192/64split,seeds/init/RNG/schedule. Fresh training. No repeat-blocked arm rerun; it did not learn in P027.",
+    "measurement": "Every192presentations, greedy freegeneration on192TRAIN only. Stop after two consecutive full-round checks192/192. Recordfirst90/95/100percent crossing and confirmedperfectpair; interval width192 not exact first-ever mastery.",
+    "caps": "10000presentations or120sec includingtrainprobes, no tuning or continuation aftercap. Final partialround probe cannotconfirm stability.",
+    "heldout": "No heldout inspect until stopped; finalheldout result may differ fromtrainmastery. Not newblinddata or arbitrarylength.",
+    "sources": {
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_learning_time.py": "911c3d553443eb2514d7c1c5a4e6a8a880eb2f6aaf641d0233716c516294b29b",
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_teaching_comparison.py": "a3e127230204c4825c73d6ca00f2871d8d70c14385e35cc26d495068a08500cd",
+      "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_bit_feedback.py": "4a4abfdea59300046bb94e914a9b3d12832cda657e3ddbad5186aa58effd85f1"
+    }
+  },
+  "checks": {
+    "two_consecutive_train_only_checks": true,
+    "imperfect_resets_streak": true,
+    "probe_nonmutation_and_matches_full_evaluator": true
+  },
+  "runs": [
+    {
+      "arm": "ce_shuffle",
+      "seed": 101,
+      "presentations": 2496,
+      "unique_presented": 192,
+      "complete_rounds": 13,
+      "token_updates": 24960,
+      "seconds_including_train_probes": 1.8661107998341322,
+      "stop_reason": "two_perfect_train_rounds",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 1344,
+          "first_measured_presentations": 1536,
+          "updates": 15360
+        },
+        "95percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        },
+        "100percent": {
+          "previous_measured_presentations": 1728,
+          "first_measured_presentations": 1920,
+          "updates": 19200
+        }
+      },
+      "confirmed_perfect_pair": [
+        2304,
+        2496
+      ],
+      "train": {
+        "whole_correct": 192,
+        "total": 192,
+        "bit_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 1.0,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 64,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 1.0,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    },
+    {
+      "arm": "ce_shuffle",
+      "seed": 202,
+      "presentations": 2304,
+      "unique_presented": 192,
+      "complete_rounds": 12,
+      "token_updates": 23040,
+      "seconds_including_train_probes": 1.7404712000861764,
+      "stop_reason": "two_perfect_train_rounds",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        },
+        "95percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        },
+        "100percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        }
+      },
+      "confirmed_perfect_pair": [
+        2112,
+        2304
+      ],
+      "train": {
+        "whole_correct": 192,
+        "total": 192,
+        "bit_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 1.0,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 64,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 1.0,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    },
+    {
+      "arm": "ce_shuffle",
+      "seed": 303,
+      "presentations": 2688,
+      "unique_presented": 192,
+      "complete_rounds": 14,
+      "token_updates": 26880,
+      "seconds_including_train_probes": 2.017779099754989,
+      "stop_reason": "two_perfect_train_rounds",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        },
+        "95percent": {
+          "previous_measured_presentations": 1536,
+          "first_measured_presentations": 1728,
+          "updates": 17280
+        },
+        "100percent": {
+          "previous_measured_presentations": 2304,
+          "first_measured_presentations": 2496,
+          "updates": 24960
+        }
+      },
+      "confirmed_perfect_pair": [
+        2496,
+        2688
+      ],
+      "train": {
+        "whole_correct": 192,
+        "total": 192,
+        "bit_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 1.0,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 64,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 1.0,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    },
+    {
+      "arm": "reward_shuffle",
+      "seed": 101,
+      "presentations": 7104,
+      "unique_presented": 192,
+      "complete_rounds": 37,
+      "token_updates": 57176,
+      "seconds_including_train_probes": 5.075898400042206,
+      "stop_reason": "two_perfect_train_rounds",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 4224,
+          "first_measured_presentations": 4416,
+          "updates": 35565
+        },
+        "95percent": {
+          "previous_measured_presentations": 4992,
+          "first_measured_presentations": 5184,
+          "updates": 41737
+        },
+        "100percent": {
+          "previous_measured_presentations": 6720,
+          "first_measured_presentations": 6912,
+          "updates": 55624
+        }
+      },
+      "confirmed_perfect_pair": [
+        6912,
+        7104
+      ],
+      "train": {
+        "whole_correct": 192,
+        "total": 192,
+        "bit_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 1.0,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 64,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 1.0,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    },
+    {
+      "arm": "reward_shuffle",
+      "seed": 202,
+      "presentations": 10000,
+      "unique_presented": 192,
+      "complete_rounds": 52,
+      "token_updates": 79796,
+      "seconds_including_train_probes": 7.195629599969834,
+      "stop_reason": "presentation_cap",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 6336,
+          "first_measured_presentations": 6528,
+          "updates": 52043
+        },
+        "95percent": null,
+        "100percent": null
+      },
+      "confirmed_perfect_pair": null,
+      "train": {
+        "whole_correct": 172,
+        "total": 192,
+        "bit_correct_by_position": [
+          191,
+          180,
+          190,
+          187,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 0.9884259259259259,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          191,
+          180,
+          190,
+          187,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 57,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          60,
+          64,
+          61,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 0.9878472222222222,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          60,
+          64,
+          61,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    },
+    {
+      "arm": "reward_shuffle",
+      "seed": 303,
+      "presentations": 5184,
+      "unique_presented": 192,
+      "complete_rounds": 27,
+      "token_updates": 41667,
+      "seconds_including_train_probes": 3.7037194999866188,
+      "stop_reason": "two_perfect_train_rounds",
+      "first_thresholds": {
+        "90percent": {
+          "previous_measured_presentations": 3840,
+          "first_measured_presentations": 4032,
+          "updates": 32386
+        },
+        "95percent": {
+          "previous_measured_presentations": 3840,
+          "first_measured_presentations": 4032,
+          "updates": 32386
+        },
+        "100percent": {
+          "previous_measured_presentations": 4800,
+          "first_measured_presentations": 4992,
+          "updates": 40118
+        }
+      },
+      "confirmed_perfect_pair": [
+        4992,
+        5184
+      ],
+      "train": {
+        "whole_correct": 192,
+        "total": 192,
+        "bit_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "bit_denominator_per_position": 192,
+        "bit_accuracy": 1.0,
+        "any_stop": 192,
+        "stop_at_correct_position": 192,
+        "teacher_prefix_correct_by_position": [
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192,
+          192
+        ],
+        "order_invariance": true
+      },
+      "heldout": {
+        "whole_correct": 63,
+        "total": 64,
+        "bit_correct_by_position": [
+          64,
+          64,
+          63,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "bit_denominator_per_position": 64,
+        "bit_accuracy": 0.9982638888888888,
+        "any_stop": 64,
+        "stop_at_correct_position": 64,
+        "teacher_prefix_correct_by_position": [
+          64,
+          64,
+          63,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "order_invariance": true
+      },
+      "all_actions_optimizer_learning_curve_and_stop_replay_equal": true
+    }
+  ]
+}

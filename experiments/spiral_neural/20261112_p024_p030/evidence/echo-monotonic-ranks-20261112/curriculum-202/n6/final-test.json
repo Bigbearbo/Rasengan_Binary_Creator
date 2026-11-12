@@ -1,0 +1,78 @@
+{
+  "n": 6,
+  "total": 8,
+  "whole_correct": 8,
+  "stop_correct": 8,
+  "bit_correct_by_position": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "bit_accuracy": 1.0,
+  "teacher_correct": 64,
+  "teacher_targets": 64,
+  "ce_mean": 0.008984191486119522,
+  "inference_calls": 128,
+  "records": [
+    [
+      12,
+      "0011000S",
+      true,
+      true,
+      "0011000S"
+    ],
+    [
+      20,
+      "0101000S",
+      true,
+      true,
+      "0101000S"
+    ],
+    [
+      22,
+      "0101100S",
+      true,
+      true,
+      "0101100S"
+    ],
+    [
+      24,
+      "0110000S",
+      true,
+      true,
+      "0110000S"
+    ],
+    [
+      25,
+      "0110010S",
+      true,
+      true,
+      "0110010S"
+    ],
+    [
+      27,
+      "0110110S",
+      true,
+      true,
+      "0110110S"
+    ],
+    [
+      31,
+      "0111110S",
+      true,
+      true,
+      "0111110S"
+    ],
+    [
+      35,
+      "1000110S",
+      true,
+      true,
+      "1000110S"
+    ]
+  ]
+}

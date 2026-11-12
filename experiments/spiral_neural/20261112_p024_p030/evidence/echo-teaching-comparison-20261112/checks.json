@@ -1,0 +1,53 @@
+{
+  "crossentropy_finite_differences": [
+    {
+      "target": "0",
+      "checked": 27,
+      "max_error": 1.3608844953716392e-11
+    },
+    {
+      "target": "1",
+      "checked": 27,
+      "max_error": 1.3007261934205872e-11
+    },
+    {
+      "target": "S",
+      "checked": 27,
+      "max_error": 2.2273516364634816e-11
+    }
+  ],
+  "correct_prefix_and_stop_targets": true,
+  "initial_weights_identical_across_arms": true,
+  "reward_checks_rerun": {
+    "wrong_prefix_kept": true,
+    "update_after_every_token": true,
+    "early_stop_and_cap": true,
+    "local_vs_whole_reward_distinguished": true,
+    "finite_difference": [
+      {
+        "action": "0",
+        "reward": -1,
+        "checked": 27,
+        "max_error": 2.4780344443087188e-11
+      },
+      {
+        "action": "1",
+        "reward": 1,
+        "checked": 27,
+        "max_error": 1.3793327591216098e-11
+      },
+      {
+        "action": "S",
+        "reward": -1,
+        "checked": 27,
+        "max_error": 2.7925869949818605e-11
+      },
+      {
+        "action": "S",
+        "reward": 1,
+        "checked": 27,
+        "max_error": 2.1515844661479377e-11
+      }
+    ]
+  }
+}

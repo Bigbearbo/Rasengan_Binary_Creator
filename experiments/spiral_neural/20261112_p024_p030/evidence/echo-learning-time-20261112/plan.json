@@ -1,0 +1,21 @@
+{
+  "id": "P028",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "arms": [
+    "ce_shuffle",
+    "reward_shuffle"
+  ],
+  "fixed_model_and_learning": "Exactly P027 learners,1171params, same192/64split,seeds/init/RNG/schedule. Fresh training. No repeat-blocked arm rerun; it did not learn in P027.",
+  "measurement": "Every192presentations, greedy freegeneration on192TRAIN only. Stop after two consecutive full-round checks192/192. Recordfirst90/95/100percent crossing and confirmedperfectpair; interval width192 not exact first-ever mastery.",
+  "caps": "10000presentations or120sec includingtrainprobes, no tuning or continuation aftercap. Final partialround probe cannotconfirm stability.",
+  "heldout": "No heldout inspect until stopped; finalheldout result may differ fromtrainmastery. Not newblinddata or arbitrarylength.",
+  "sources": {
+    "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_learning_time.py": "911c3d553443eb2514d7c1c5a4e6a8a880eb2f6aaf641d0233716c516294b29b",
+    "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_teaching_comparison.py": "a3e127230204c4825c73d6ca00f2871d8d70c14385e35cc26d495068a08500cd",
+    "LOCAL_WORKSPACE/outputs\\sle-research-review\\echo_bit_feedback.py": "4a4abfdea59300046bb94e914a9b3d12832cda657e3ddbad5186aa58effd85f1"
+  }
+}

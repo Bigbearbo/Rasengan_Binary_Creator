@@ -1,0 +1,77 @@
+{
+  "profile": {
+    "name": "1a_echo_n2",
+    "nop": 1,
+    "nd": 2,
+    "ops": [
+      0
+    ],
+    "end": false,
+    "new": null
+  },
+  "presentations": 52,
+  "token_updates": 208,
+  "global_updates": 328,
+  "parameters": 2595,
+  "L": 16,
+  "H": 72,
+  "unique_train_questions": 4,
+  "unique_possible_train": 4,
+  "stop_reason": "three_train_validation_passes",
+  "first_pass": 48,
+  "confirmed_points": [
+    48,
+    50,
+    52
+  ],
+  "train_validation": {
+    "presentations": 52,
+    "updates": 328,
+    "L": 16,
+    "H": 72,
+    "parameters": 2595,
+    "train": {
+      "by_op": {
+        "echo": {
+          "whole": 4,
+          "stop": 4,
+          "total": 4,
+          "overflow": 0,
+          "bit_correct": [
+            4,
+            4,
+            4
+          ],
+          "teacher_correct": 16,
+          "teacher_targets": 16
+        }
+      },
+      "ce_mean": 0.08865903268801192,
+      "teacher_correct": 16,
+      "teacher_targets": 16
+    },
+    "validation": {
+      "by_op": {
+        "echo": {
+          "whole": 4,
+          "stop": 4,
+          "total": 4,
+          "overflow": 0,
+          "bit_correct": [
+            4,
+            4,
+            4
+          ],
+          "teacher_correct": 16,
+          "teacher_targets": 16
+        }
+      },
+      "ce_mean": 0.08865903268801192,
+      "teacher_correct": 16,
+      "teacher_targets": 16
+    },
+    "passed": true
+  },
+  "final_test": null,
+  "seconds_training_and_probes": 0.03784619999987626
+}

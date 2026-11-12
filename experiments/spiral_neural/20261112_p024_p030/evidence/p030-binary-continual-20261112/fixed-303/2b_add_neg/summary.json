@@ -1,0 +1,142 @@
+{
+  "profile": {
+    "name": "2b_add_neg",
+    "nop": 2,
+    "nd": 3,
+    "ops": [
+      0,
+      1
+    ],
+    "end": false,
+    "new": 1
+  },
+  "presentations": 804,
+  "token_updates": 4020,
+  "global_updates": 6490,
+  "parameters": 2595,
+  "L": 16,
+  "H": 72,
+  "unique_train_questions": 12,
+  "unique_possible_train": 12,
+  "stop_reason": "three_train_validation_passes",
+  "first_pass": 612,
+  "confirmed_points": [
+    780,
+    792,
+    804
+  ],
+  "train_validation": {
+    "presentations": 804,
+    "updates": 6490,
+    "L": 16,
+    "H": 72,
+    "parameters": 2595,
+    "train": {
+      "by_op": {
+        "echo": {
+          "whole": 6,
+          "stop": 6,
+          "total": 6,
+          "overflow": 0,
+          "bit_correct": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "teacher_correct": 30,
+          "teacher_targets": 30
+        },
+        "neg": {
+          "whole": 6,
+          "stop": 6,
+          "total": 6,
+          "overflow": 0,
+          "bit_correct": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "teacher_correct": 30,
+          "teacher_targets": 30
+        }
+      },
+      "ce_mean": 0.0077295738631237764,
+      "teacher_correct": 60,
+      "teacher_targets": 60
+    },
+    "validation": {
+      "by_op": {
+        "echo": {
+          "whole": 1,
+          "stop": 1,
+          "total": 1,
+          "overflow": 0,
+          "bit_correct": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "teacher_correct": 5,
+          "teacher_targets": 5
+        },
+        "neg": {
+          "whole": 1,
+          "stop": 1,
+          "total": 1,
+          "overflow": 0,
+          "bit_correct": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "teacher_correct": 5,
+          "teacher_targets": 5
+        }
+      },
+      "ce_mean": 0.09027814252186936,
+      "teacher_correct": 10,
+      "teacher_targets": 10
+    },
+    "passed": true
+  },
+  "final_test": {
+    "by_op": {
+      "echo": {
+        "whole": 0,
+        "stop": 1,
+        "total": 1,
+        "overflow": 0,
+        "bit_correct": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "neg": {
+        "whole": 0,
+        "stop": 1,
+        "total": 1,
+        "overflow": 0,
+        "bit_correct": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      }
+    },
+    "ce_mean": 0.5436475974955957,
+    "teacher_correct": 8,
+    "teacher_targets": 10
+  },
+  "seconds_training_and_probes": 0.7321246999999858
+}

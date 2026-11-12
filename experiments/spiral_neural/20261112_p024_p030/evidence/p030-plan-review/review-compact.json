@@ -1,0 +1,67 @@
+{
+  "training_run": false,
+  "numeric_ID_low_bits_preservation_cases": 254,
+  "input_symbols": [
+    "0",
+    "1"
+  ],
+  "output_symbols": [
+    "0",
+    "1",
+    "STOP"
+  ],
+  "no_separator_context_lengths": [
+    {
+      "example": "Q1/Q2",
+      "Q": 6,
+      "max_answer_prefix": 2,
+      "context": 8
+    },
+    {
+      "example": "Q3",
+      "Q": 7,
+      "max_answer_prefix": 3,
+      "context": 10
+    },
+    {
+      "example": "op2 unary before END",
+      "Q": 8,
+      "max_answer_prefix": 3,
+      "context": 11
+    },
+    {
+      "example": "Q6 END enabled",
+      "Q": 11,
+      "max_answer_prefix": 3,
+      "context": 14
+    },
+    {
+      "example": "op3 unary with4bitdata andEND",
+      "Q": 14,
+      "max_answer_prefix": 4,
+      "context": 18
+    },
+    {
+      "example": "op3 binary with4bitdata andEND",
+      "Q": 18,
+      "max_answer_prefix": 4,
+      "context": 22
+    },
+    {
+      "example": "two-layer Zero example",
+      "Q": 23,
+      "max_answer_prefix": 4,
+      "context": 27
+    }
+  ],
+  "candidate_dynamic_MLP_arithmetic": {
+    "L8_H64": 1283,
+    "L32_H88": 5987
+  },
+  "same_old_prefix_growth_test_max_logit_error": 0.0,
+  "growth_test_limit": "Tests only the identical old prefix padded into larger shape; NOT the changed raw stream after inserting high bits, and NOT a trained capacity comparison.",
+  "sources": {
+    "LOCAL_WORKSPACE/work\\sle-research-review\\plan-review-ad6281c\\source\\docs\\ai_orchestration\\P028_螺旋語Echo短題漸進升階與保留測試_20261112.md": "19622b87acde60a71c03cb94a87e94b52967d87cf7d8e5ec92d0b1e6864d28a2",
+    "LOCAL_WORKSPACE/work\\sle-research-review\\plan-review-ad6281c\\source\\docs\\ai_orchestration\\P030_小模型連續學習與句號保留_教學計劃_20261112.md": "a9e73aab87c9287b113660e2fff2618c377d117344dc2b59f1e4e6421ffbb68b"
+  }
+}

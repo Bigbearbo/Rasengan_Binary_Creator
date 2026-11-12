@@ -1,0 +1,1406 @@
+{
+  "runs": [
+    {
+      "run": "dynamic-101",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3508,
+      "updates": 17376,
+      "parameters": 2073,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        1,
+        2
+      ],
+      "last_test": [
+        1,
+        2
+      ],
+      "train_MACs": 72206484,
+      "inference_MACs": 82117399,
+      "parameter_optimizer_arrays_bytes": 41460
+    },
+    {
+      "run": "dynamic-202",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3576,
+      "updates": 17684,
+      "parameters": 2073,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        1,
+        2
+      ],
+      "last_test": [
+        0,
+        2
+      ],
+      "train_MACs": 73382916,
+      "inference_MACs": 83370257,
+      "parameter_optimizer_arrays_bytes": 41460
+    },
+    {
+      "run": "dynamic-303",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3540,
+      "updates": 17520,
+      "parameters": 2073,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        0,
+        2
+      ],
+      "last_test": [
+        1,
+        2
+      ],
+      "train_MACs": 72822780,
+      "inference_MACs": 82784651,
+      "parameter_optimizer_arrays_bytes": 41460
+    },
+    {
+      "run": "fixed-101",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3542,
+      "updates": 17578,
+      "parameters": 2595,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        1,
+        2
+      ],
+      "last_test": [
+        0,
+        2
+      ],
+      "train_MACs": 92389968,
+      "inference_MACs": 106304720,
+      "parameter_optimizer_arrays_bytes": 51900
+    },
+    {
+      "run": "fixed-202",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3490,
+      "updates": 17276,
+      "parameters": 2595,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        0,
+        2
+      ],
+      "last_test": [
+        1,
+        2
+      ],
+      "train_MACs": 90802656,
+      "inference_MACs": 104570960,
+      "parameter_optimizer_arrays_bytes": 51900
+    },
+    {
+      "run": "fixed-303",
+      "last": "3_enable_end",
+      "passed": true,
+      "presentations": 3490,
+      "updates": 17290,
+      "parameters": 2595,
+      "last_train": [
+        18,
+        18
+      ],
+      "last_validation": [
+        3,
+        3
+      ],
+      "last_test": [
+        1,
+        3
+      ],
+      "train_MACs": 90876240,
+      "inference_MACs": 111317000,
+      "parameter_optimizer_arrays_bytes": 51900
+    },
+    {
+      "run": "bottleneck-101",
+      "last": "2c_add_zero",
+      "passed": false,
+      "presentations": 5686,
+      "updates": 28266,
+      "parameters": 2163,
+      "last_train": [
+        18,
+        18
+      ],
+      "last_validation": [
+        1,
+        3
+      ],
+      "last_test": [
+        1,
+        3
+      ],
+      "train_MACs": 122149920,
+      "inference_MACs": 141239140,
+      "parameter_optimizer_arrays_bytes": 43260
+    },
+    {
+      "run": "bottleneck-202",
+      "last": "2b_add_neg",
+      "passed": false,
+      "presentations": 3566,
+      "updates": 17626,
+      "parameters": 2163,
+      "last_train": [
+        12,
+        12
+      ],
+      "last_validation": [
+        1,
+        2
+      ],
+      "last_test": [
+        0,
+        2
+      ],
+      "train_MACs": 75352072,
+      "inference_MACs": 85586024,
+      "parameter_optimizer_arrays_bytes": 43260
+    },
+    {
+      "run": "bottleneck-303",
+      "last": "2c_add_zero",
+      "passed": false,
+      "presentations": 4504,
+      "updates": 22348,
+      "parameters": 2163,
+      "last_train": [
+        18,
+        18
+      ],
+      "last_validation": [
+        2,
+        3
+      ],
+      "last_test": [
+        1,
+        3
+      ],
+      "train_MACs": 96202408,
+      "inference_MACs": 112451976,
+      "parameter_optimizer_arrays_bytes": 43260
+    }
+  ],
+  "stages": [
+    {
+      "run": "dynamic-101",
+      "phase": "0_echo_n1",
+      "presentations": 46,
+      "first_pass": 42,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-101",
+      "phase": "1a_echo_n2",
+      "presentations": 72,
+      "first_pass": 64,
+      "parameters": 1587,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-101",
+      "phase": "1b_echo_n3",
+      "presentations": 258,
+      "first_pass": 138,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-101",
+      "phase": "2a_echo_op2",
+      "presentations": 132,
+      "first_pass": 102,
+      "parameters": 2073,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-101",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": null,
+      "parameters": 2073,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        1,
+        2
+      ],
+      "test": [
+        1,
+        2
+      ]
+    },
+    {
+      "run": "dynamic-202",
+      "phase": "0_echo_n1",
+      "presentations": 64,
+      "first_pass": 60,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-202",
+      "phase": "1a_echo_n2",
+      "presentations": 68,
+      "first_pass": 60,
+      "parameters": 1587,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-202",
+      "phase": "1b_echo_n3",
+      "presentations": 288,
+      "first_pass": 150,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-202",
+      "phase": "2a_echo_op2",
+      "presentations": 156,
+      "first_pass": 108,
+      "parameters": 2073,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-202",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": null,
+      "parameters": 2073,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        1,
+        2
+      ],
+      "test": [
+        0,
+        2
+      ]
+    },
+    {
+      "run": "dynamic-303",
+      "phase": "0_echo_n1",
+      "presentations": 60,
+      "first_pass": 56,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-303",
+      "phase": "1a_echo_n2",
+      "presentations": 60,
+      "first_pass": 52,
+      "parameters": 1587,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "dynamic-303",
+      "phase": "1b_echo_n3",
+      "presentations": 240,
+      "first_pass": 180,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-303",
+      "phase": "2a_echo_op2",
+      "presentations": 180,
+      "first_pass": 150,
+      "parameters": 2073,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "dynamic-303",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": null,
+      "parameters": 2073,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        0,
+        2
+      ],
+      "test": [
+        1,
+        2
+      ]
+    },
+    {
+      "run": "fixed-101",
+      "phase": "0_echo_n1",
+      "presentations": 40,
+      "first_pass": 36,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-101",
+      "phase": "1a_echo_n2",
+      "presentations": 52,
+      "first_pass": 48,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-101",
+      "phase": "1b_echo_n3",
+      "presentations": 264,
+      "first_pass": 228,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-101",
+      "phase": "2a_echo_op2",
+      "presentations": 186,
+      "first_pass": 90,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-101",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": 684,
+      "parameters": 2595,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        1,
+        2
+      ],
+      "test": [
+        0,
+        2
+      ]
+    },
+    {
+      "run": "fixed-202",
+      "phase": "0_echo_n1",
+      "presentations": 62,
+      "first_pass": 58,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-202",
+      "phase": "1a_echo_n2",
+      "presentations": 50,
+      "first_pass": 44,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-202",
+      "phase": "1b_echo_n3",
+      "presentations": 258,
+      "first_pass": 234,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-202",
+      "phase": "2a_echo_op2",
+      "presentations": 120,
+      "first_pass": 78,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-202",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": null,
+      "parameters": 2595,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        0,
+        2
+      ],
+      "test": [
+        1,
+        2
+      ]
+    },
+    {
+      "run": "fixed-303",
+      "phase": "0_echo_n1",
+      "presentations": 54,
+      "first_pass": 50,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-303",
+      "phase": "1a_echo_n2",
+      "presentations": 52,
+      "first_pass": 40,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "fixed-303",
+      "phase": "1b_echo_n3",
+      "presentations": 270,
+      "first_pass": 228,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-303",
+      "phase": "2a_echo_op2",
+      "presentations": 150,
+      "first_pass": 102,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "fixed-303",
+      "phase": "2b_add_neg",
+      "presentations": 804,
+      "first_pass": 612,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": [
+        0,
+        2
+      ]
+    },
+    {
+      "run": "fixed-303",
+      "phase": "2c_add_zero",
+      "presentations": 1440,
+      "first_pass": 1008,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        18,
+        18
+      ],
+      "validation": [
+        3,
+        3
+      ],
+      "test": [
+        1,
+        3
+      ]
+    },
+    {
+      "run": "fixed-303",
+      "phase": "3_enable_end",
+      "presentations": 720,
+      "first_pass": 192,
+      "parameters": 2595,
+      "reason": "three_train_validation_passes",
+      "train": [
+        18,
+        18
+      ],
+      "validation": [
+        3,
+        3
+      ],
+      "test": [
+        1,
+        3
+      ]
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "0_echo_n1",
+      "presentations": 46,
+      "first_pass": 42,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "1a_echo_n2",
+      "presentations": 72,
+      "first_pass": 64,
+      "parameters": 1539,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "1b_echo_n3",
+      "presentations": 258,
+      "first_pass": 186,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "2a_echo_op2",
+      "presentations": 186,
+      "first_pass": 108,
+      "parameters": 2043,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "2b_add_neg",
+      "presentations": 2124,
+      "first_pass": 984,
+      "parameters": 2163,
+      "reason": "three_train_validation_passes",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": [
+        1,
+        2
+      ]
+    },
+    {
+      "run": "bottleneck-101",
+      "phase": "2c_add_zero",
+      "presentations": 3000,
+      "first_pass": 2142,
+      "parameters": 2163,
+      "reason": "presentation_cap",
+      "train": [
+        18,
+        18
+      ],
+      "validation": [
+        1,
+        3
+      ],
+      "test": [
+        1,
+        3
+      ]
+    },
+    {
+      "run": "bottleneck-202",
+      "phase": "0_echo_n1",
+      "presentations": 64,
+      "first_pass": 60,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-202",
+      "phase": "1a_echo_n2",
+      "presentations": 76,
+      "first_pass": 68,
+      "parameters": 1539,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-202",
+      "phase": "1b_echo_n3",
+      "presentations": 270,
+      "first_pass": 162,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-202",
+      "phase": "2a_echo_op2",
+      "presentations": 156,
+      "first_pass": 132,
+      "parameters": 2043,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-202",
+      "phase": "2b_add_neg",
+      "presentations": 3000,
+      "first_pass": 912,
+      "parameters": 2163,
+      "reason": "presentation_cap",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        1,
+        2
+      ],
+      "test": [
+        0,
+        2
+      ]
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "0_echo_n1",
+      "presentations": 60,
+      "first_pass": 56,
+      "parameters": 1283,
+      "reason": "three_train_validation_passes",
+      "train": [
+        2,
+        2
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "1a_echo_n2",
+      "presentations": 52,
+      "first_pass": 48,
+      "parameters": 1539,
+      "reason": "three_train_validation_passes",
+      "train": [
+        4,
+        4
+      ],
+      "validation": [
+        4,
+        4
+      ],
+      "test": null
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "1b_echo_n3",
+      "presentations": 282,
+      "first_pass": 180,
+      "parameters": 1907,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "2a_echo_op2",
+      "presentations": 150,
+      "first_pass": 120,
+      "parameters": 2043,
+      "reason": "three_train_validation_passes",
+      "train": [
+        6,
+        6
+      ],
+      "validation": [
+        1,
+        1
+      ],
+      "test": [
+        1,
+        1
+      ]
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "2b_add_neg",
+      "presentations": 960,
+      "first_pass": 792,
+      "parameters": 2163,
+      "reason": "three_train_validation_passes",
+      "train": [
+        12,
+        12
+      ],
+      "validation": [
+        2,
+        2
+      ],
+      "test": [
+        0,
+        2
+      ]
+    },
+    {
+      "run": "bottleneck-303",
+      "phase": "2c_add_zero",
+      "presentations": 3000,
+      "first_pass": 288,
+      "parameters": 2163,
+      "reason": "presentation_cap",
+      "train": [
+        18,
+        18
+      ],
+      "validation": [
+        2,
+        3
+      ],
+      "test": [
+        1,
+        3
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "seed": 101,
+      "phase": "2a_echo_op2",
+      "continuous_presentations": 132,
+      "continuous_passed": true,
+      "scratch_presentations": 288,
+      "scratch_passed": true,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 101,
+      "phase": "2b_add_neg",
+      "continuous_presentations": 3000,
+      "continuous_passed": false,
+      "scratch_presentations": 1236,
+      "scratch_passed": true,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 202,
+      "phase": "2a_echo_op2",
+      "continuous_presentations": 156,
+      "continuous_passed": true,
+      "scratch_presentations": 276,
+      "scratch_passed": true,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 202,
+      "phase": "2b_add_neg",
+      "continuous_presentations": 3000,
+      "continuous_passed": false,
+      "scratch_presentations": 3000,
+      "scratch_passed": false,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 303,
+      "phase": "2a_echo_op2",
+      "continuous_presentations": 180,
+      "continuous_passed": true,
+      "scratch_presentations": 288,
+      "scratch_passed": true,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 303,
+      "phase": "2b_add_neg",
+      "continuous_presentations": 3000,
+      "continuous_passed": false,
+      "scratch_presentations": 3000,
+      "scratch_passed": false,
+      "same_shape": [
+        13,
+        69
+      ],
+      "scratch_test": [
+        0,
+        2
+      ]
+    }
+  ],
+  "echo_before_after_neg": [
+    {
+      "run": "dynamic-101",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1000S"
+    },
+    {
+      "run": "dynamic-101",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1100S"
+    },
+    {
+      "run": "dynamic-202",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1000S"
+    },
+    {
+      "run": "dynamic-202",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "dynamic-303",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1000S"
+    },
+    {
+      "run": "dynamic-303",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1100S"
+    },
+    {
+      "run": "fixed-101",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1000S"
+    },
+    {
+      "run": "fixed-101",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1110S"
+    },
+    {
+      "run": "fixed-202",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1000S"
+    },
+    {
+      "run": "fixed-202",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1100S"
+    },
+    {
+      "run": "fixed-303",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "fixed-303",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "bottleneck-101",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "bottleneck-101",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1100S"
+    },
+    {
+      "run": "bottleneck-202",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1100S"
+    },
+    {
+      "run": "bottleneck-202",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "bottleneck-303",
+      "value": 5,
+      "subset": "validation",
+      "Q": "010001010",
+      "expected": "1010S",
+      "before_neg": "1010S",
+      "after_neg": "1010S"
+    },
+    {
+      "run": "bottleneck-303",
+      "value": 6,
+      "subset": "test",
+      "Q": "010001100",
+      "expected": "1100S",
+      "before_neg": "1100S",
+      "after_neg": "1010S"
+    }
+  ],
+  "total_continual_presentations": 34902,
+  "total_continual_updates": 172964,
+  "total_control_presentations": 8088,
+  "total_control_updates": 40440,
+  "all_replay_passed": true
+}

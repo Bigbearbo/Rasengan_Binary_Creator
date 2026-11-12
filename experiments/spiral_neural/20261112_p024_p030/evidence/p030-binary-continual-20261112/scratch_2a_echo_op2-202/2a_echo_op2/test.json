@@ -1,0 +1,31 @@
+{
+  "by_op": {
+    "echo": {
+      "whole": 1,
+      "stop": 1,
+      "total": 1,
+      "overflow": 0,
+      "bit_correct": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "teacher_correct": 5,
+      "teacher_targets": 5
+    }
+  },
+  "ce_mean": 0.12468156683687318,
+  "teacher_correct": 5,
+  "teacher_targets": 5,
+  "records": [
+    [
+      0,
+      6,
+      "1100S",
+      false,
+      true,
+      true
+    ]
+  ]
+}

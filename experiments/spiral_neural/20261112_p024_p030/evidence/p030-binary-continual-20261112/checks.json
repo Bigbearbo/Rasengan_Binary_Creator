@@ -1,0 +1,28 @@
+{
+  "roundtrips": 86,
+  "consistent_teacher_labels": 422,
+  "Q1_Q6_fixtures": true,
+  "data_END_collision_valid": true,
+  "missing_END_and_unknown_profile_rejected": true,
+  "pure_binary_context_overflow": true,
+  "growth_old_weights_moments_birth_and_function_preserved": true,
+  "new_parameter_age_starts_fresh": true,
+  "per10_new_task70percent": true,
+  "finite_differences": [
+    {
+      "target": "0",
+      "checked": 27,
+      "max_error": 2.619685024463081e-11
+    },
+    {
+      "target": "1",
+      "checked": 27,
+      "max_error": 2.01713437619766e-11
+    },
+    {
+      "target": "S",
+      "checked": 27,
+      "max_error": 1.972713312148322e-11
+    }
+  ]
+}

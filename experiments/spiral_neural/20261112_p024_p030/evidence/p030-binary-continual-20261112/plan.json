@@ -1,0 +1,238 @@
+{
+  "id": "P030-first-pilot",
+  "manifest": {
+    "profiles": [
+      {
+        "name": "0_echo_n1",
+        "nop": 1,
+        "nd": 1,
+        "ops": [
+          0
+        ],
+        "end": false,
+        "new": null,
+        "Q_length": 6,
+        "context": 8,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          []
+        ]
+      },
+      {
+        "name": "1a_echo_n2",
+        "nop": 1,
+        "nd": 2,
+        "ops": [
+          0
+        ],
+        "end": false,
+        "new": null,
+        "Q_length": 7,
+        "context": 10,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          []
+        ]
+      },
+      {
+        "name": "1b_echo_n3",
+        "nop": 1,
+        "nd": 3,
+        "ops": [
+          0
+        ],
+        "end": false,
+        "new": null,
+        "Q_length": 8,
+        "context": 12,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "name": "2a_echo_op2",
+        "nop": 2,
+        "nd": 3,
+        "ops": [
+          0
+        ],
+        "end": false,
+        "new": null,
+        "Q_length": 9,
+        "context": 13,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "name": "2b_add_neg",
+        "nop": 2,
+        "nd": 3,
+        "ops": [
+          0,
+          1
+        ],
+        "end": false,
+        "new": 1,
+        "Q_length": 9,
+        "context": 13,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "name": "2c_add_zero",
+        "nop": 2,
+        "nd": 3,
+        "ops": [
+          0,
+          1,
+          2
+        ],
+        "end": false,
+        "new": 2,
+        "Q_length": 9,
+        "context": 13,
+        "reserved_END_codes": [],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "name": "3_enable_end",
+        "nop": 2,
+        "nd": 3,
+        "ops": [
+          0,
+          1,
+          2
+        ],
+        "end": true,
+        "new": null,
+        "Q_length": 12,
+        "context": 16,
+        "reserved_END_codes": [
+          "110"
+        ],
+        "split": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      }
+    ],
+    "input_alphabet": [
+      "0",
+      "1"
+    ],
+    "output_alphabet": [
+      "0",
+      "1",
+      "STOP"
+    ],
+    "max_context": 16,
+    "source_commit": "ad6281c"
+  },
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "arms": [
+    "dynamic",
+    "fixed",
+    "bottleneck"
+  ],
+  "scope": "Only planned0-3,7subphases. NoONE/CUT/AND/twolayer/versions yet. New student, no claimed P029 weight transplant.",
+  "budget": "3000presentations/120sec perphase;3train+val passes perop95percent,STOP99percent. Test onlyafterstop.",
+  "optimizer": "Adam.003 norm1clip; globalsteps preserved; entrybirthstep preserves oldage and gives newentries freshbiascorrection.",
+  "source_sha": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+  "numpy": "2.3.5",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

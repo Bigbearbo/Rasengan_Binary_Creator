@@ -1,0 +1,53 @@
+{
+  "by_op": {
+    "echo": {
+      "whole": 0,
+      "stop": 1,
+      "total": 1,
+      "overflow": 0,
+      "bit_correct": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "teacher_correct": 4,
+      "teacher_targets": 5
+    },
+    "neg": {
+      "whole": 0,
+      "stop": 1,
+      "total": 1,
+      "overflow": 0,
+      "bit_correct": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "teacher_correct": 4,
+      "teacher_targets": 5
+    }
+  },
+  "ce_mean": 0.5156217638731432,
+  "teacher_correct": 8,
+  "teacher_targets": 10,
+  "records": [
+    [
+      0,
+      6,
+      "1110S",
+      false,
+      false,
+      true
+    ],
+    [
+      1,
+      6,
+      "0110S",
+      false,
+      false,
+      true
+    ]
+  ]
+}

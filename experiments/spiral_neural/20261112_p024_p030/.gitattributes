@@ -1,0 +1,6 @@
+# Immutable checksummed research archive: preserve bytes on every platform.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Historical source bytes may retain historical formatting.
+source_snapshot/** -whitespace
+# Matplotlib path data intentionally includes spaces at line boundaries.
+*.svg -whitespace

@@ -1,0 +1,1567 @@
+{
+  "seed": 101,
+  "parameters": 1171,
+  "episodes": 20000,
+  "token_updates": 160640,
+  "training_seconds": 12.608071099966764,
+  "positive_token_rewards": 86987,
+  "negative_token_rewards": 73653,
+  "sampled_whole_correct": 7,
+  "unique_presented": 8,
+  "complete_rounds": 0,
+  "train_probe": {
+    "correct": 1,
+    "total": 192,
+    "stopped": 192,
+    "length9": 192,
+    "order_invariance": true,
+    "records": [
+      {
+        "value": 0,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 1,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 2,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 4,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 5,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 6,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 7,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 8,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 10,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 11,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 12,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 13,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 14,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 15,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 16,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 17,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 18,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 20,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 21,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 22,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 25,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 27,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 28,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 31,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 32,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 33,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 34,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 37,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 39,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 40,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 41,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 42,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 43,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 44,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 45,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 47,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 49,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 50,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 52,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 53,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 55,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 56,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 59,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 60,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 61,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 62,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 63,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 64,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 65,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 66,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 67,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 68,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 69,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 70,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 71,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 74,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 75,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 76,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 78,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 80,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 83,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 84,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 86,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 89,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 90,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 91,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 93,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 95,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 97,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 98,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 99,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 100,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 101,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 102,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 103,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 104,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 105,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 106,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 107,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 108,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 109,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 111,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 112,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 113,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 114,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 115,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 116,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 117,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 119,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 120,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 121,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 122,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 124,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 125,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 126,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 127,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 129,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 131,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 132,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 133,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 137,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 138,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 139,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 140,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 141,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 142,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 143,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 144,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 145,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 146,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 147,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 148,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 149,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 150,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 153,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 154,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 157,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 158,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 160,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 161,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 162,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 163,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 164,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 165,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 166,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 167,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 169,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 171,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 173,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 174,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 175,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 177,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 178,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 179,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 181,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 182,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 184,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 185,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 186,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 187,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 191,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 193,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 194,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 195,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 196,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 197,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 199,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 200,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 201,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 202,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 203,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 208,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 209,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 210,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 211,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 212,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 213,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 216,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 218,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 219,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 220,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 221,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 222,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 223,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 224,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 225,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 226,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 227,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 228,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 229,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 230,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 231,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 232,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 233,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 234,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 235,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 236,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 237,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 238,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 239,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 240,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 241,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 242,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 243,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 246,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 249,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 250,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 251,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 252,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 253,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 254,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 255,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": true
+      }
+    ]
+  },
+  "heldout_probe": {
+    "correct": 0,
+    "total": 64,
+    "stopped": 64,
+    "length9": 64,
+    "order_invariance": true,
+    "records": [
+      {
+        "value": 3,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 9,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 19,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 23,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 24,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 26,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 29,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 30,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 35,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 36,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 38,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 46,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 48,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 51,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 54,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 57,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 58,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 72,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 73,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 77,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 79,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 81,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 82,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 85,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 87,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 88,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 92,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 94,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 96,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 110,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 118,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 123,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 128,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 130,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 134,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 135,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 136,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 151,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 152,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 155,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 156,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 159,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 168,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 170,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 172,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 176,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 180,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 183,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 188,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 189,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 190,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 192,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 198,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 204,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 205,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 206,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 207,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 214,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 215,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 217,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 244,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 245,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 247,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      },
+      {
+        "value": 248,
+        "answer": "111111110",
+        "stopped": true,
+        "correct": false
+      }
+    ]
+  },
+  "full_token_reward_optimizer_replay_equal": true
+}

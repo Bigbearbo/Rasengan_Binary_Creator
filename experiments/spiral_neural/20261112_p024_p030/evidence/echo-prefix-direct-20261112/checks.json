@@ -1,0 +1,65 @@
+{
+  "user_example_forced_fixture": [
+    {
+      "input": "010010110100|",
+      "forced_output": "1"
+    },
+    {
+      "input": "010010110100|1",
+      "forced_output": "0"
+    },
+    {
+      "input": "010010110100|10",
+      "forced_output": "1"
+    },
+    {
+      "input": "010010110100|101",
+      "forced_output": "1"
+    },
+    {
+      "input": "010010110100|1011",
+      "forced_output": "0"
+    },
+    {
+      "input": "010010110100|10110",
+      "forced_output": "1"
+    },
+    {
+      "input": "010010110100|101101",
+      "forced_output": "0"
+    },
+    {
+      "input": "010010110100|1011010",
+      "forced_output": "0"
+    },
+    {
+      "input": "010010110100|10110100",
+      "forced_output": "S"
+    }
+  ],
+  "not_a_learned_example": true,
+  "prior_hidden_ignored": true,
+  "stop_cap_no_stop_reward": true,
+  "finite_difference": [
+    {
+      "tokens": "S",
+      "checked": 27,
+      "max_error": 5.2734136501975115e-12
+    },
+    {
+      "tokens": "01S",
+      "checked": 27,
+      "max_error": 4.567155681423074e-11
+    },
+    {
+      "tokens": "101001010S",
+      "checked": 27,
+      "max_error": 6.748703332282169e-11
+    },
+    {
+      "tokens": "1111111111",
+      "checked": 27,
+      "max_error": 1.0908335346115905e-10
+    }
+  ]
+}

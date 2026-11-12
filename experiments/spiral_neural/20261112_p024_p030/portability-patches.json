@@ -1,0 +1,221 @@
+[
+  {
+    "file": "mlp_echo_trial.py",
+    "changes": [
+      {
+        "old": "ROOT=Path(__file__).resolve().parents[1]",
+        "new": "ROOT=ARCHIVE_ROOT",
+        "count": 1
+      },
+      {
+        "old": "CHECKOUT=ROOT.parent/'work/sle-research-review/checkout'",
+        "new": "CHECKOUT=REPO_ROOT",
+        "count": 1
+      },
+      {
+        "old": "str(ROOT/'spiral-blank-model')",
+        "new": "str(SRC_DIR)",
+        "count": 1
+      },
+      {
+        "old": "OUT=ROOT.parent/'work/sle-research-review/paper4-echo-reward'",
+        "new": "OUT=RUNS_ROOT/'paper4-echo-reward'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_8bit_trial.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-8bit-20261112')",
+        "new": "RUNS_ROOT/'echo-8bit-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_serial_stop.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-serial-stop-20261112')",
+        "new": "RUNS_ROOT/'echo-serial-stop-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_prefix_separator.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-prefix-separator-20261112')",
+        "new": "RUNS_ROOT/'echo-prefix-separator-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_prefix_direct.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-prefix-direct-20261112')",
+        "new": "RUNS_ROOT/'echo-prefix-direct-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_bit_feedback.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-bit-feedback-20261112')",
+        "new": "RUNS_ROOT/'echo-bit-feedback-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_teaching_comparison.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-teaching-comparison-20261112')",
+        "new": "RUNS_ROOT/'echo-teaching-comparison-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_learning_time.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-learning-time-20261112')",
+        "new": "RUNS_ROOT/'echo-learning-time-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "echo_monotonic_curriculum.py",
+    "changes": [
+      {
+        "old": "ROOT=Path('D:/Codex用')",
+        "new": "ROOT=REPO_ROOT",
+        "count": 1
+      },
+      {
+        "old": "ROOT/'work/sle-research-review/echo-monotonic-ranks-20261112'",
+        "new": "RUNS_ROOT/'echo-monotonic-ranks-20261112'",
+        "count": 1
+      },
+      {
+        "old": "SOURCE=ROOT/'work/sle-research-review/rank-source-55d1037/source'",
+        "new": "SOURCE=REPO_ROOT",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "p030_binary_continual.py",
+    "changes": [
+      {
+        "old": "ROOT=Path('D:/Codex用')",
+        "new": "ROOT=REPO_ROOT",
+        "count": 1
+      },
+      {
+        "old": "ROOT/'work/sle-research-review/p030-binary-continual-20261112'",
+        "new": "RUNS_ROOT/'p030-binary-continual-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "p030_summarize.py",
+    "changes": [
+      {
+        "old": "OUT=exp.ROOT/'outputs/sle-research-review'",
+        "new": "OUT=PLOTS_ROOT",
+        "count": 1
+      },
+      {
+        "old": "sys.path.insert(0,str(exp.ROOT/'work/sle-research-review/plot-deps'))",
+        "new": "# Optional matplotlib comes from the caller environment.",
+        "count": 1
+      },
+      {
+        "old": "",
+        "new": "OUT.mkdir(parents=True,exist_ok=True) at plot main entry",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "summarize_teaching_comparison.py",
+    "changes": [
+      {
+        "old": "Path('D:/Codex用/work/sle-research-review/echo-teaching-comparison-20261112')",
+        "new": "RUNS_ROOT/'echo-teaching-comparison-20261112'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "summarize_monotonic_curriculum.py",
+    "changes": [
+      {
+        "old": "ROOT=Path('D:/Codex用')",
+        "new": "ROOT=REPO_ROOT",
+        "count": 1
+      },
+      {
+        "old": "ROOT/'work/sle-research-review/echo-monotonic-ranks-20261112'",
+        "new": "RUNS_ROOT/'echo-monotonic-ranks-20261112'",
+        "count": 1
+      },
+      {
+        "old": "OUT=ROOT/'outputs/sle-research-review'",
+        "new": "OUT=PLOTS_ROOT",
+        "count": 1
+      },
+      {
+        "old": "sys.path.insert(0,str(ROOT/'work/sle-research-review/plot-deps'))",
+        "new": "# Optional matplotlib comes from the caller environment.",
+        "count": 1
+      },
+      {
+        "old": "",
+        "new": "OUT.mkdir(parents=True,exist_ok=True) at plot main entry",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  },
+  {
+    "file": "gated_curriculum.py",
+    "changes": [
+      {
+        "old": "ROOT=Path(__file__).resolve().parent",
+        "new": "ROOT=ARCHIVE_ROOT",
+        "count": 1
+      },
+      {
+        "old": "OUT=ROOT.parents[1]/'work/spiral-blank-model/gated-curriculum-20261111'",
+        "new": "OUT=RUNS_ROOT/'gated-reference'",
+        "count": 1
+      }
+    ],
+    "extra_import": "_archive_paths (filesystem only)"
+  }
+]
