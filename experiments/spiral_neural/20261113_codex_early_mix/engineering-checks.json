@@ -1,0 +1,14 @@
+{
+  "external_model_calls": 0,
+  "formal_inference_calls": 0,
+  "formal_optimizer_updates": 0,
+  "source_hashes": {
+    "protocol.json": "ed07f9e9ba5a4a00d4c71fb00dbd2da02ec53b1612355c496fcfc129e6be8203",
+    "run_early_mix.py": "decbb4e6b843433c446fed067f806c5d586768067e306a7341692dd08e9130be",
+    "test_early_mix.py": "157b386c29ba30a54db962688b1ba8b3f03b5404e49d61ec9cdf69976a1ab1fc"
+  },
+  "status": "PASS",
+  "synthetic_native_inference_calls": 3,
+  "synthetic_native_optimizer_updates": 6,
+  "tests": 5
+}

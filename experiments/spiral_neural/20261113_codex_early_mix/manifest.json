@@ -1,0 +1,522 @@
+{
+  "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+  "archive": {
+    "bytes": 51680,
+    "file": "inputs.zip",
+    "sha256": "3dd9be905ec50e2069c2fc1bd3c70616d6272218a11faa4a397e5a19400a471c"
+  },
+  "author": "Codex",
+  "external_model_calls": 0,
+  "files": {
+    "initial/seed101.npz": {
+      "bytes": 48284,
+      "sha256": "5f8ba11460868b4bd8f941920471bc19e234f021b32aed3d7ae25683e9e6babe"
+    },
+    "initial/seed202.npz": {
+      "bytes": 48284,
+      "sha256": "67e53b6f6cc5d7344865365a629a6bf5e07702e9808266bf452bc2839b3a36c4"
+    },
+    "initial/seed303.npz": {
+      "bytes": 48280,
+      "sha256": "74e1588a70acf5fd60a89bb31f2036354b8111dfdd04a4118f7b01300b7a1352"
+    },
+    "plan.json": {
+      "bytes": 4993,
+      "sha256": "ed07f9e9ba5a4a00d4c71fb00dbd2da02ec53b1612355c496fcfc129e6be8203"
+    },
+    "schedules/early-seed101.npy": {
+      "bytes": 38528,
+      "sha256": "d0cf47ee8642d037348f90f2a66af7e8aec9ff90f2cce5beb024c3a99d50dc78"
+    },
+    "schedules/early-seed202.npy": {
+      "bytes": 38528,
+      "sha256": "c844168cfbcb88c38a62a0397b30bf199fe60ab70569d47a3eb2b609ac7f9e75"
+    },
+    "schedules/early-seed303.npy": {
+      "bytes": 38528,
+      "sha256": "0aaa8772e243f8b18904e3a4d915ba94d06431f1267f47a866ef31a6adbc7dd0"
+    },
+    "schedules/late-seed101.npy": {
+      "bytes": 38528,
+      "sha256": "7e4448b61c6c6b465e48ee49e49b6faa045a7d55a274ea9e7ead7befdaafee48"
+    },
+    "schedules/late-seed202.npy": {
+      "bytes": 38528,
+      "sha256": "385e661b7f3da72fabc76a8c263fd1d3993abdc1f0ec2024531bc249b21d05a5"
+    },
+    "schedules/late-seed303.npy": {
+      "bytes": 38528,
+      "sha256": "2db6225563a240650a47a154302ac4d503a789409d609e454c94906dafbc8f1c"
+    },
+    "source/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    }
+  },
+  "formal_inference_calls_before_freeze": 0,
+  "formal_optimizer_calls_before_freeze": 0,
+  "id": "EARLY-MIX-MATCHED-20261113",
+  "initial_states": {
+    "101": {
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "e73fee5aff1633b19b68c5f7ad378a6b989d63bcda68a4ff6b0131770a98281c"
+    },
+    "202": {
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "bdbb6d849eb86fa7874628eb6fdb517022c60191f10c1ce4b6eb6ddf3eed7ef9"
+    },
+    "303": {
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "470138213cb21dde56a590af3ab182dda903f4522a3dc119b240137ab7fd8000"
+    }
+  },
+  "local_source_hashes": {
+    "protocol.json": "ed07f9e9ba5a4a00d4c71fb00dbd2da02ec53b1612355c496fcfc129e6be8203",
+    "run_early_mix.py": "decbb4e6b843433c446fed067f806c5d586768067e306a7341692dd08e9130be",
+    "test_early_mix.py": "157b386c29ba30a54db962688b1ba8b3f03b5404e49d61ec9cdf69976a1ab1fc"
+  },
+  "original_source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+  "protocol": {
+    "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "answer": "Echo op0 copies three information bits; Neg op1 flips those bits; both append tail0, then external target S",
+    "arms": [
+      "early",
+      "late"
+    ],
+    "author": "Codex",
+    "checkpoint_lessons": [
+      0,
+      300,
+      1200,
+      2400
+    ],
+    "costs": "Training dense MAC matched. Offline inference MAC/calls, replay, p/m/v/birth array bytes, trace/storage and walltime separately reported; equal training MAC is not equal total cost",
+    "diagnostic_status": "Both values already exposed in prior research. Neither is a training input operand here, but their bit patterns occur in Neg teacher answers: input1 gives110, input2 gives101. Report heldout as exposed diagnostics, not a new blind test",
+    "diagnostic_values": [
+      5,
+      6
+    ],
+    "execution_order": "Finish all six primary trajectories, then six complete replays from the same frozen initial states, then offline inference for all16 legal Q at all four checkpoints. Training points store state only; no scores influence training",
+    "external_model_calls_by_runner": 0,
+    "gate": "Only synthetic engineering and preparation before source/input review and Git preregistration. Formal execute requires exact approved manifest SHA, supplied preregistration commit and a new output directory",
+    "generation": "Original8-action cap, L13 overflow guard, no forced STOP, no answer length supplied",
+    "id": "EARLY-MIX-MATCHED-20261113",
+    "initialization": "Fresh original Model(seed,L13,H69), all full p/m/v/birth/t/growth_rng plus seed/events/counters frozen in the input ZIP and shared by early/late",
+    "input": "Q='01'+two op information bits+'0'+three value information bits+'0'; only binary Q plus current answer prefix enters Model",
+    "lessons_per_op": 1200,
+    "lessons_per_op_value": 200,
+    "lessons_per_student": 2400,
+    "limits": "A bounded three-bit timing policy comparison on an already examined domain. Does not establish unbounded copying/flipping, task routing, general growth, causal isolation of Neg semantics or a new blind generalization result",
+    "model": {
+      "H": 69,
+      "L": 13,
+      "parameters": 2073
+    },
+    "opcode_probe": "At first output (empty A prefix), compare each value's two full legal Q differing only in opcode bit. Reuse the cached first TF logits; raw predicted-token flip and both-correct-and-flip separately. This is conditional behavior, not evidence of an internal router",
+    "optimizer": "Original Model.lesson/step/loss_grad/forward unchanged: Adam lr.003 beta.9/.999 eps1e-8, global gradient norm clip1, float32 parameters/moments and original birth-age correction; no growth, router, separator or extra task",
+    "primary_endpoint": "Final per-op train and diagnostic whole generation, TF data bits, tail0 and STOP; same-payload both-ops whole correct; exact wrong output equal to the other op's full answer including STOP. Retain all three paired seeds and both arms",
+    "primary_students": 6,
+    "primary_targets": 72000,
+    "primary_training_dense_MAC": 303048000,
+    "publication_base": "PR18 9ba6209; parallel to Pro PR19 AE1 background, both follow PR16. AE1 is not rerun or pooled as independent evidence here",
+    "replay": "Primary original Model.lesson is observed per target; replay independently calls original Model.step on the fixed true prefixes. Exact target metadata/prediction/loss/fullstate hash/counters each update, and direct p/m/v/birth/t/RNG/events/counters at every checkpoint and final state",
+    "replay_targets": 72000,
+    "replay_training_dense_MAC": 303048000,
+    "schedule": {
+      "control": "Prefix totals each E600/N600, final E1200/N1200; within-op whole value order, per-op/value exposure, initial fullstate and final1200 actual lessons are exactly paired. Only prefix opcode timing differs",
+      "early_prefix": "default_rng(seed+122000): first rng.permutation([0,1]), then rng.permutation([0]*599+[1]*599), concatenate to1200 lessons",
+      "late_prefix": "300 Echo, then default_rng(seed+123000).permutation([0]*300+[1]*600)",
+      "shared_tail": "default_rng(seed+124000).permutation([0]*600+[1]*600),1200 lessons. Both arms have consumed600 values per op at entry, so actual tail(op,value) streams match exactly",
+      "value_stream": "For each seed/op, default_rng(seed+121000+op), concatenate200 independently permuted complete cycles of [0,1,2,3,4,7]. Both arms use exactly this same1200-value stream per op"
+    },
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "source": "Unmodified P030 Model class AST extracted from the pinned public source, without executing/importing its old main",
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "stop": "Exactly2400 lessons/12000 updates for every student. No early stop, score-based extension, extra seed, best checkpoint selection, restart or config change",
+    "targets_per_lesson": 5,
+    "targets_per_student": 12000,
+    "train_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "training_dense_MAC_per_student": 50508000,
+    "training_dense_MAC_per_target": 4209
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schedules": {
+    "early-seed101": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 204779921373169454775184523245646635783,
+            "state": 48233208455856714012087364303127974575
+          },
+          "uinteger": 1930303599
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 38980994505286175796287153801302001615,
+            "state": 204579081131769964650622433320857539275
+          },
+          "uinteger": 3603265105
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 279675666614056025236756111555016500857,
+            "state": 330081025745088245108566785488201786751
+          },
+          "uinteger": 1060881581
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 28362382767496280515969280350944005247,
+              "state": 168000254397927291138379065269435997381
+            },
+            "uinteger": 596430187
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 1,
+            "state": {
+              "inc": 73005846812483633728833275381672621355,
+              "state": 292958498137772092998798222797731103756
+            },
+            "uinteger": 4222918664
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/early-seed101.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "eebda17661d94ea904ebceed1c7e2fdee416378ecc6d234d8e93a4cada8453d8",
+      "shape": [
+        2400,
+        2
+      ]
+    },
+    "early-seed202": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 326911069041835070654555183777349660795,
+            "state": 2058567848400124051129851982252796
+          },
+          "uinteger": 1082213576
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 45131411755814684847846425216769432719,
+            "state": 37126567939620286155593940992261326194
+          },
+          "uinteger": 330466407
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 42159584657491473246022291981438529799,
+            "state": 116487469631507098229725683728071015134
+          },
+          "uinteger": 3017148453
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 199060890547752653019339653521695128343,
+              "state": 71232327506753911848161027335365698321
+            },
+            "uinteger": 2990565045
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 320426741440518447431129386049443659131,
+              "state": 318442381204179052857632901008448095569
+            },
+            "uinteger": 3821017055
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/early-seed202.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "ecdde1504a9e2129b9a06d0f09a1b4c1a30ffd2e5268a85716c01388714969bb",
+      "shape": [
+        2400,
+        2
+      ]
+    },
+    "early-seed303": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 234202502106670351750367734195315479149,
+            "state": 336495657282004829032785264821534078549
+          },
+          "uinteger": 1546326255
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 304465591091899859344058854970816394767,
+            "state": 36683106887418414807527080925649456726
+          },
+          "uinteger": 4206692173
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 248587529669409268391087100226621833377,
+            "state": 144523607352081197320814378322351579820
+          },
+          "uinteger": 2215950731
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 1,
+            "state": {
+              "inc": 337191450799863756128568564533321599235,
+              "state": 65262434069826784008887351329492362141
+            },
+            "uinteger": 1456729488
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 221972061761436369319330718843782814679,
+              "state": 75222846742387239430356256418793265198
+            },
+            "uinteger": 4161888733
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/early-seed303.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "2b242767ca2c76ecdb8288fb91b74ac8c6c653e456ab5dff30015dcc9a9c4be5",
+      "shape": [
+        2400,
+        2
+      ]
+    },
+    "late-seed101": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 204779921373169454775184523245646635783,
+            "state": 48233208455856714012087364303127974575
+          },
+          "uinteger": 1930303599
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 38980994505286175796287153801302001615,
+            "state": 204579081131769964650622433320857539275
+          },
+          "uinteger": 3603265105
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 279675666614056025236756111555016500857,
+            "state": 330081025745088245108566785488201786751
+          },
+          "uinteger": 1060881581
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 28362382767496280515969280350944005247,
+              "state": 168000254397927291138379065269435997381
+            },
+            "uinteger": 596430187
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 1,
+            "state": {
+              "inc": 73005846812483633728833275381672621355,
+              "state": 292958498137772092998798222797731103756
+            },
+            "uinteger": 4222918664
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/late-seed101.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "d5572e06586dc6ef8d94155e128ecf3ada4bb8db55becc62466b923c66ecb38a",
+      "shape": [
+        2400,
+        2
+      ]
+    },
+    "late-seed202": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 326911069041835070654555183777349660795,
+            "state": 2058567848400124051129851982252796
+          },
+          "uinteger": 1082213576
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 45131411755814684847846425216769432719,
+            "state": 37126567939620286155593940992261326194
+          },
+          "uinteger": 330466407
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 42159584657491473246022291981438529799,
+            "state": 116487469631507098229725683728071015134
+          },
+          "uinteger": 3017148453
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 199060890547752653019339653521695128343,
+              "state": 71232327506753911848161027335365698321
+            },
+            "uinteger": 2990565045
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 320426741440518447431129386049443659131,
+              "state": 318442381204179052857632901008448095569
+            },
+            "uinteger": 3821017055
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/late-seed202.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "9bb2421b479062b665bd29f3a8659d8cfaf7e57dcb709bed676a618054b27d19",
+      "shape": [
+        2400,
+        2
+      ]
+    },
+    "late-seed303": {
+      "RNG_states_after_build": {
+        "early_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 234202502106670351750367734195315479149,
+            "state": 336495657282004829032785264821534078549
+          },
+          "uinteger": 1546326255
+        },
+        "late_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 304465591091899859344058854970816394767,
+            "state": 36683106887418414807527080925649456726
+          },
+          "uinteger": 4206692173
+        },
+        "tail_op_RNG_final": {
+          "bit_generator": "PCG64",
+          "has_uint32": 1,
+          "state": {
+            "inc": 248587529669409268391087100226621833377,
+            "state": 144523607352081197320814378322351579820
+          },
+          "uinteger": 2215950731
+        },
+        "value_RNG_final": {
+          "0": {
+            "bit_generator": "PCG64",
+            "has_uint32": 1,
+            "state": {
+              "inc": 337191450799863756128568564533321599235,
+              "state": 65262434069826784008887351329492362141
+            },
+            "uinteger": 1456729488
+          },
+          "1": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 221972061761436369319330718843782814679,
+              "state": 75222846742387239430356256418793265198
+            },
+            "uinteger": 4161888733
+          }
+        }
+      },
+      "dtype": "<i8",
+      "file": "schedules/late-seed303.npy",
+      "lessons": 2400,
+      "raw_teacher_target_stream_sha256": "cf2675de8f072759b07b18504f40554f5184c6dfa714813f822a5e092d4ab95c",
+      "shape": [
+        2400,
+        2
+      ]
+    }
+  },
+  "schema": "early-mix-manifest-v1",
+  "status": "frozen_before_formal_training",
+  "teacher_label_counts_per_student": {
+    "0": 6000,
+    "1": 3600,
+    "S": 2400
+  }
+}
