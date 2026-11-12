@@ -1,0 +1,29 @@
+{
+  "files": {
+    "review_notes.json": {
+      "redactions": [
+        {
+          "json_pointer": "/NVIDIA/private_raw_api_record",
+          "original_value_sha256": "3848da7d44d9cd8ca4ada013d66e513f31be29225ecdca265d940cd99913864b",
+          "reason": "Private machine/API/account metadata removed only from PUBLIC copy"
+        }
+      ],
+      "sha256": "bc7fb804b8acf71affd795507b8abd0b26a43e205c58c7c832d19065f8c8b66e",
+      "source": "outputs/sle-p035/review_notes.json",
+      "source_sha256": "dea6aa3bbc453cfb133f62f70922f0768d6ea55565b19de4edabd387efd5a570"
+    },
+    "reviews/public_candidate.json": {
+      "redactions": [
+        {
+          "json_pointer": "/raw_api_path",
+          "original_value_sha256": "3848da7d44d9cd8ca4ada013d66e513f31be29225ecdca265d940cd99913864b",
+          "reason": "Private machine/API/account metadata removed only from PUBLIC copy"
+        }
+      ],
+      "sha256": "eca6bd87423820a24ce4139d3494237fba6e3bc6a4e704709cc342b3b520b057",
+      "source": "work/sle-p035/nvidia-review/public_candidate.json",
+      "source_sha256": "b254c6b6d89d8018b98b447df4f1fc6cdf6cd3558789f0a8f622a760cdde6be8"
+    }
+  },
+  "policy": "Only listed machine/private metadata fields removed from PUBLIC JSON copies; scientific arrays/numbers/source unchanged. Originals remain local."
+}

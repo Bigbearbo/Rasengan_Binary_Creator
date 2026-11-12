@@ -4,6 +4,12 @@
 
 先讀[研究現況](ai_orchestration/CURRENT_RESEARCH_STATUS.md)與[ChatGPT Pro後續設計](ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md)。Codex的P033覆蓋／從頭混教／續訓控制已在PR #7完成；[Pro獨立核對及解析器修復](../experiments/spiral_neural/20261112_pro_review/README.md)另列實測歸屬。下方歷史段落保留其封存時點，不以舊「未完成」覆蓋較新的固定證據。
 
+[Pro小網路與成長假說審查](ai_orchestration/PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)補充原始假說邊界、onehot零值與padding區別、P030局部遷移、三checkpoint機制探測、相關原論文及尚未執行的編碼×成長比較；不把E900／固定三位元attention當成SLE優勢已獲驗證。
+
+## 2026-11-13 Codex 接續：P034／P035 已完成
+
+[P034／PR #9](../experiments/spiral_neural/20261112_p034/README.md)完成等Echo曝光與一個attention配置；[P035](../experiments/spiral_neural/20261112_p035/README.md)完成Pro後續input-codec×容量時序12學生篩查。P035最後已教144/144、operand-heldout5/48，配對interaction0/−1/0；共享答案文法與已查看小域限制保留。4/6曾在Neg教師答案出現，不能稱所有角色都未見。下方Pro／歷史段落保留當時語氣，不將舊待跑敘述覆蓋完成證據。
+
 ## 2026-11-12 新增：真正神經網路實測
 
 [P024–P030 實測成果索引](ai_orchestration/CODEX_EXPERIMENT_RESULTS_INDEX_20261112.md)連到可重跑程式、機器證據、模型checkpoint與GPT交接。這與下列腳本式雙代理示範分開；P030只完成第一批，神經轉碼器與P031數學比較仍未實作。

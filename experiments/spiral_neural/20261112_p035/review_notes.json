@@ -1,0 +1,136 @@
+{
+  "NVIDIA": {
+    "account_quota_or_credentials_exported": false,
+    "actual_calls": 1,
+    "api_response_id": "gen-1794497671-xRoQ1NOaHm1YgEpdSo8S",
+    "cost": 0,
+    "finish_reason": "stop",
+    "local_assessment": "work/sle-p035/nvidia-review/local_checks.json",
+    "model_id": "nvidia/nemotron-3.5-lightning:free",
+    "public_candidate": "work/sle-p035/nvidia-review/public_candidate.json",
+    "retries": 0,
+    "status": "complete_candidate_schema_valid_but_numeric_claims_rejected",
+    "task_id": "P035-NVIDIA-REVIEW-001",
+    "usage": {
+      "completion_tokens": 747,
+      "cost": 0,
+      "prompt_tokens": 3207,
+      "total_tokens": 3954
+    }
+  },
+  "actionable_implementation_findings": [],
+  "codec_review": {
+    "counts": {
+      "actual_model_input_tensors": 364,
+      "course_budgets_and_seed_streams": 30,
+      "exhaustive_final_outcome_patterns": 65536,
+      "exhaustive_question_decodes": 6614,
+      "exhaustive_response_decodes": 705,
+      "legal_roundtrips": 76
+    },
+    "evidence": "work/sle-p035/nvidia-review/codec_independent_checks.json",
+    "source_sha256": "0f38c76789f19cad6cc0ca4967b30fdb69b09416b48f77f5c3669b84babd19b2",
+    "status": "pass",
+    "zero_gradient_updates": true
+  },
+  "final_source_sha256": {
+    "P035-事前規格-2026-11-12.md": "3f8d7327eb84f12a472f08a32c4923239bc1fdd2d977529225d7477bc998a03f",
+    "codec_course.py": "0f38c76789f19cad6cc0ca4967b30fdb69b09416b48f77f5c3669b84babd19b2",
+    "protocol.json": "68dac62882e8983945beb9b705cca6c34817f605d7f97b711dff345310c988ec",
+    "reference/lineage.json": "038a0d76cb911fc21da1d16655ecf0961f4f6ea165e3a09ee59cd955d02d8788",
+    "reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "reference/reference_codec.py": "56f337ee606f479ddf590d774235729d99d64ec54d5ac755822b87bd54b0afb4",
+    "reference/student_io.py": "903ac64564a58852689283ef972e38bba3fda82f31a3ca25a45b1b0574770281",
+    "reference/teacher.py": "b27ba59d71d3e7798170008befbef05aaadb7705fbd36f177f2070fbca36a708",
+    "run_p035.py": "0428f5ce96acc3e60d28abcb23ba96585df5bdce3f80ebc6e269df9e2464fe69"
+  },
+  "implementation_review": {
+    "actionable_findings": [],
+    "actual_cost_scope": "Primary trainingMAC excludes probes/init/growth/replay; total inference explicitly includes initialization and growth diagnostics, and each stage reports post-growth diagnostics.",
+    "author_bounded_preflight_fixes": "Native sequential loss accumulation replaces Python3.12compensatedsum comparison; canonicalJSON normalizes tuple/list metadata during replay. Both fixed before scientific launch, no learner/protocol change.",
+    "author_native_synthetic_evidence": "work/sle-p035/runner-engineering-final/checks.json",
+    "author_native_synthetic_sha256": "1fe879e3fffdf87d52632d8e9a782f35a829551271ef93f36b13ff1e0a922aaf",
+    "author_scientific_updates": 0,
+    "independent_counts": {
+      "actual_gradient_calls": 0,
+      "all_four_arms_times_five_stages": 20,
+      "direct_snapshot_roundtrips": 100,
+      "mock_primary_targets": 474,
+      "mock_replay_targets": 474
+    },
+    "independent_evidence": "work/sle-p035/independent-engineering/checks.json",
+    "independent_evidence_sha256": "a1e633ddef53a156c6a680e09464ab4acc67d4987efbd99fcf1d168cd79c40a9",
+    "scope": "Read-only code review plus zero-gradient mocked-step orchestration on nonofficialseed; no scientific training or repeated P030 gradient suite.",
+    "status": "pass",
+    "verified": "Fixed common semantic stream/caps, wholelesson floor/no carry, no holdout budget decisions/all12, final current-format cumulative milestones/interaction, F t0 sequential grow, old parameter/moment/birth/step preservation and same-raw logits, no teacher in free generation, native lesson observer vs persisted target-loop replay, exact snapshot/state/counter replay."
+  },
+  "must_freeze": [
+    {
+      "criterion": "Freeze both codecs/profiles/raw01NN tensors and equal external translation rights. SameTaskCase/order; strict roundtrip/collision/invalid/profile/no-answer-leak tests. P035common answer nddata+tail0+STOP explicitly limits claim to inputcodec, not native compact output or total system encoding superiority.",
+      "id": 1,
+      "risk": "Codec or output/profile asymmetry prevents input-codec attribution"
+    },
+    {
+      "criterion": "CommonstageL/H and sameGgrowthshapes acrossS/H; F seesfinalL13/H69 fromstart via same sequentialgrow. Freezebaseinit/growthRNG and all-parameter trainability. Preserveold p/m/v/birth/step,RNG and same-raw logits atgrow; do not demand automatic same-semantic-newraw invariance.",
+      "id": 2,
+      "risk": "Encoding-dependent capacity or initialization changes the treatment"
+    },
+    {
+      "criterion": "Freeze actualdenseMAC formula(4L+9)H/target, stagecaps/totalcap, wholelessonfloor/no carry and counterreset scope. Reportlessons/targets/MAC perstage; Gmoreexposure is part ofcapacity-timing policy. Separateinference/replay/codec/system costs; do not call MAC hardwareFLOPs.",
+      "id": 3,
+      "risk": "Equal parameter counts, MAC caps and lesson exposure are conflated"
+    },
+    {
+      "criterion": "All12 follow fixed external5stageclock, all failures advance and remain. Joint-retention milestones scored in finalcurrentformat; operatorwidth-only event not newskill. Semanticvalue/opvalue/crossstage ledger; viewed3bit domain never calledblind; no holdout-budget or seed selection.",
+      "id": 4,
+      "risk": "Grade-dependent promotion, survivor selection or recoded seen semantics creates a false gain"
+    },
+    {
+      "criterion": "Primaryordinalscore0..4 and pairedinteraction(SG-SF)-(HG-HF) frozen; reportallcells/perseed/subsets and failures. Three seeds are a smallscreen; no worker-inventedpvalue or posthoc endpoint. Stop this configuration at its fixed budget, register anynewvariable separately.",
+      "id": 5,
+      "risk": "SG-best or an encoding main effect is mistaken for growth-specific SLE benefit"
+    }
+  ],
+  "prospective_budget_checks": {
+    "F_targets": 66000,
+    "F_total_MAC": 277794000,
+    "G_lessons_by_stage": [
+      4812,
+      3904,
+      3257,
+      3000,
+      3000
+    ],
+    "G_targets": 76337,
+    "G_total_MAC": 277772868,
+    "G_unused_MAC_by_stage": [
+      936,
+      5856,
+      14340,
+      0,
+      0
+    ],
+    "final_parameters": 2073,
+    "final_target_MACs": 4209
+  },
+  "public_export_redaction": {
+    "never_export": "account quota, credential/key/account metadata, private chats or machine raw API record paths",
+    "preserve": "original artifact SHA, stripped public request/candidate/usage and local acceptance/rejection; redaction statement",
+    "private_raw_records_remain_local": true,
+    "remove_fields_recursively": [
+      "private_raw_api_record",
+      "raw_api_path"
+    ]
+  },
+  "result_review": "Pending actual complete fixed12 results; separate fixed entry outputs/sle-p035/integration_review.json. Engineering acceptance is not scientific success.",
+  "review_id": "P035-independent-prereg-review-20261112",
+  "root_design_review": "The specified5stages,commonoutputs,commonL/H,caps,wholelesson/no-carry,fixedclock,finalmilestones andinteraction satisfy these prereg requirements in principle. Actualcodec/runner/hashes and result audit remain pending.",
+  "scientific_ready_under_frozen_protocol": true,
+  "scope": "Read-only public plan review, one bounded NVIDIA candidate and deterministic arithmetic; no scientific training or Git operations.",
+  "source_freeze": {
+    "path": "outputs/sle-p035/source-freeze.json",
+    "registered_before_scientific_updates": true,
+    "sha256": "f2b6ad6ef4b26bda02a20376f534a16d26cffece4527457fc102bd51b6b6f702"
+  },
+  "status": "final_pre_science_engineering_review_pass"
+}

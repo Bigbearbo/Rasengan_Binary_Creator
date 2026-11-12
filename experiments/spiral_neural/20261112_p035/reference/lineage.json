@@ -1,0 +1,6 @@
+{
+  "main_source_sha256": "287f4c243b6c7e75a38b6b23c6833aa0064974956f16b481277ad693b14fb1de",
+  "reference_source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+  "Model_AST_identical": true,
+  "difference_scope": "archive-path import/ROOT/OUT integration; frozen student Model identical"
+}

@@ -1,0 +1,12 @@
+{
+  "MPLCONFIGDIR": "publication/mpl-cache (local only)",
+  "all_fixed_endpoints_included": true,
+  "figures": [
+    "P035-paired-milestones.png",
+    "P035-stage-curves.png"
+  ],
+  "matplotlib": "3.11.2",
+  "scope": "stored-result plotting only; no training or inference",
+  "status": "passed",
+  "students": 12
+}

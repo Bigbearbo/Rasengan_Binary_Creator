@@ -1,0 +1,161 @@
+{
+  "review_id": "P035-independent-integration-review",
+  "status": "final_protocol_artifact_and_inference_review_pass",
+  "actionable_implementation_findings": [],
+  "source_sha256": {
+    "P035-事前規格-2026-11-12.md": "3f8d7327eb84f12a472f08a32c4923239bc1fdd2d977529225d7477bc998a03f",
+    "codec_course.py": "0f38c76789f19cad6cc0ca4967b30fdb69b09416b48f77f5c3669b84babd19b2",
+    "protocol.json": "68dac62882e8983945beb9b705cca6c34817f605d7f97b711dff345310c988ec",
+    "reference/lineage.json": "038a0d76cb911fc21da1d16655ecf0961f4f6ea165e3a09ee59cd955d02d8788",
+    "reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "reference/reference_codec.py": "56f337ee606f479ddf590d774235729d99d64ec54d5ac755822b87bd54b0afb4",
+    "reference/student_io.py": "903ac64564a58852689283ef972e38bba3fda82f31a3ca25a45b1b0574770281",
+    "reference/teacher.py": "b27ba59d71d3e7798170008befbef05aaadb7705fbd36f177f2070fbca36a708",
+    "run_p035.py": "0428f5ce96acc3e60d28abcb23ba96585df5bdce3f80ebc6e269df9e2464fe69"
+  },
+  "manifest_sha256": "2f99116a11697a2d21d585cb2bfe9256a142cb7ed832990099e84c53d07a2d7b",
+  "compact_sha256": "d146e43b6901bae7bcc291fbb4d29d3cb225ece4800cab0a3a977866705f4088",
+  "evidence": "work/sle-p035/integration-review/checks.json",
+  "totals": {
+    "actual_checkpoint_truth_rows": 2280,
+    "snapshot_full_state_checks": 300,
+    "target_prefix_label_step_MAC_records": 854022,
+    "primary_lessons_checked": 197838,
+    "primary_targets_checked": 854022,
+    "primary_training_MACs": 3333401208,
+    "primary_inference_MACs": 398980204
+  },
+  "per_seed_interactions": [
+    {
+      "seed": 101,
+      "scores": {
+        "SF": 2,
+        "SG": 2,
+        "HF": 2,
+        "HG": 2
+      },
+      "S_growth_minus_fixed": 0,
+      "H_growth_minus_fixed": 0,
+      "interaction": 0
+    },
+    {
+      "seed": 202,
+      "scores": {
+        "SF": 3,
+        "SG": 2,
+        "HF": 2,
+        "HG": 2
+      },
+      "S_growth_minus_fixed": -1,
+      "H_growth_minus_fixed": 0,
+      "interaction": -1
+    },
+    {
+      "seed": 303,
+      "scores": {
+        "SF": 2,
+        "SG": 2,
+        "HF": 2,
+        "HG": 2
+      },
+      "S_growth_minus_fixed": 0,
+      "H_growth_minus_fixed": 0,
+      "interaction": 0
+    }
+  ],
+  "students": [
+    {
+      "student": "S-F-seed101",
+      "score": 2,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 13
+    },
+    {
+      "student": "S-F-seed202",
+      "score": 3,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 14
+    },
+    {
+      "student": "S-F-seed303",
+      "score": 2,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "S-G-seed101",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 13
+    },
+    {
+      "student": "S-G-seed202",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "S-G-seed303",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 13
+    },
+    {
+      "student": "H-F-seed101",
+      "score": 2,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "H-F-seed202",
+      "score": 2,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "H-F-seed303",
+      "score": 2,
+      "target_updates": 66000,
+      "training_MACs": 277794000,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "H-G-seed101",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "H-G-seed202",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 12
+    },
+    {
+      "student": "H-G-seed303",
+      "score": 2,
+      "target_updates": 76337,
+      "training_MACs": 277772868,
+      "actual_final_whole_correct": 12
+    }
+  ],
+  "scope": "Read-only final artifact audit and existing-checkpoint inference/growth copies; Model.step/lesson/loss_grad forbidden. No scientific training or independent training replay.",
+  "original_replay_evidence": "Reviewed frozen native observer/persisted target-loop implementation; every target full-state digest checked by actual original replay, direct snapshots and final arrays checked. This audit does not repeat optimizer updates.",
+  "interpretation_limits": [
+    "Inputcodec by capacitytiming only, with shared output grammar; not native-output or complete systemcodec superiority.",
+    "Equal denseMAC caps giveG more semantic exposure. This is the declared capacitypolicy resource effect, not an isolated parameter-copy mechanism.",
+    "Three paired seeds and nested ordinalmilestones are descriptive; SGbest alone does not establish SLEgrowth interaction.",
+    "Previously viewed1..3bit domain; no blind generalization, no outcome-driven tuning or extra seeds."
+  ],
+  "external_API_calls_this_audit": 0
+}

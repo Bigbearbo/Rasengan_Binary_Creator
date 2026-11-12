@@ -1,0 +1,2687 @@
+{
+  "additional_replay_training_dense_MACs": 3333401208,
+  "aggregation_source_sha256": "7f3a09e500f0390cd416d9738966841c8bd594e91b9284858c050caaa29b5434",
+  "all_failures_retained": true,
+  "all_primary_and_replay_completed": true,
+  "id": "P035-fixed-result-aggregation",
+  "limitations": [
+    "same published 1..3-bit domain, not new blind evaluation",
+    "d1/d2 exhaustive teaching has no holdout",
+    "H supports a declared compact unary hierarchical slice, not arbitrary recursive grammar",
+    "common response grammar deliberately controls output-side learning; not H's shortest possible native output",
+    "equal MAC lets G see more lessons, an intentional capacity-policy resource effect; not an isolated parameter-copy mechanism",
+    "no attention tuning, new operations, ritual, neural translation or real VM execution"
+  ],
+  "new_students": 12,
+  "primary": {
+    "nested_milestones_are_independent_skills": false,
+    "per_arm": [
+      {
+        "arm": "SF",
+        "final_by_subset": {
+          "all": [
+            39,
+            48
+          ],
+          "test": [
+            2,
+            6
+          ],
+          "train": [
+            36,
+            36
+          ],
+          "val": [
+            1,
+            6
+          ]
+        },
+        "mean_ordinal_score_descriptive_only": 2.3333333333333335,
+        "milestone_pass_counts": [
+          3,
+          3,
+          1,
+          0
+        ],
+        "scores_by_seed": {
+          "101": 2,
+          "202": 3,
+          "303": 2
+        }
+      },
+      {
+        "arm": "SG",
+        "final_by_subset": {
+          "all": [
+            38,
+            48
+          ],
+          "test": [
+            2,
+            6
+          ],
+          "train": [
+            36,
+            36
+          ],
+          "val": [
+            0,
+            6
+          ]
+        },
+        "mean_ordinal_score_descriptive_only": 2.0,
+        "milestone_pass_counts": [
+          3,
+          3,
+          0,
+          0
+        ],
+        "scores_by_seed": {
+          "101": 2,
+          "202": 2,
+          "303": 2
+        }
+      },
+      {
+        "arm": "HF",
+        "final_by_subset": {
+          "all": [
+            36,
+            48
+          ],
+          "test": [
+            0,
+            6
+          ],
+          "train": [
+            36,
+            36
+          ],
+          "val": [
+            0,
+            6
+          ]
+        },
+        "mean_ordinal_score_descriptive_only": 2.0,
+        "milestone_pass_counts": [
+          3,
+          3,
+          0,
+          0
+        ],
+        "scores_by_seed": {
+          "101": 2,
+          "202": 2,
+          "303": 2
+        }
+      },
+      {
+        "arm": "HG",
+        "final_by_subset": {
+          "all": [
+            36,
+            48
+          ],
+          "test": [
+            0,
+            6
+          ],
+          "train": [
+            36,
+            36
+          ],
+          "val": [
+            0,
+            6
+          ]
+        },
+        "mean_ordinal_score_descriptive_only": 2.0,
+        "milestone_pass_counts": [
+          3,
+          3,
+          0,
+          0
+        ],
+        "scores_by_seed": {
+          "101": 2,
+          "202": 2,
+          "303": 2
+        }
+      }
+    ],
+    "per_seed_interactions": [
+      {
+        "H_growth_minus_fixed": 0,
+        "S_growth_minus_fixed": 0,
+        "interaction": 0,
+        "scores": {
+          "HF": 2,
+          "HG": 2,
+          "SF": 2,
+          "SG": 2
+        },
+        "seed": 101
+      },
+      {
+        "H_growth_minus_fixed": 0,
+        "S_growth_minus_fixed": -1,
+        "interaction": -1,
+        "scores": {
+          "HF": 2,
+          "HG": 2,
+          "SF": 3,
+          "SG": 2
+        },
+        "seed": 202
+      },
+      {
+        "H_growth_minus_fixed": 0,
+        "S_growth_minus_fixed": 0,
+        "interaction": 0,
+        "scores": {
+          "HF": 2,
+          "HG": 2,
+          "SF": 2,
+          "SG": 2
+        },
+        "seed": 303
+      }
+    ],
+    "scale": "highest consecutive cumulative milestone0..4, exact free-run+STOP in final current format"
+  },
+  "primary_inference_dense_MACs": 398980204,
+  "primary_target_updates": 854022,
+  "primary_training_dense_MACs": 3333401208,
+  "scope": "read-only fixed aggregation; no new model inference, training, seed/checkpoint selection",
+  "source_compact_sha256": "d146e43b6901bae7bcc291fbb4d29d3cb225ece4800cab0a3a977866705f4088",
+  "source_manifest_sha256": "2f99116a11697a2d21d585cb2bfe9256a142cb7ed832990099e84c53d07a2d7b",
+  "status": "passed",
+  "student_rows": [
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.25201942354083035,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                8
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 39,
+              "teacher_targets": 40,
+              "teacher_whole": 7,
+              "total": 8,
+              "whole": 7
+            },
+            "neg": {
+              "CE_mean": 0.37447443355645393,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                6,
+                7
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 13
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.1300673780695618,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "CE_mean": 0.4719472853977316,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 1
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.5796285281292437e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.5134528605974537e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.8860785324859122,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.523833102336736,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 7
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 13
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 101,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.02522713193886872,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                8,
+                8,
+                8
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 40,
+              "teacher_targets": 40,
+              "teacher_whole": 8,
+              "total": 8,
+              "whole": 8
+            },
+            "neg": {
+              "CE_mean": 0.6084453314245131,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                7,
+                7
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 36,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 14
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.13976431586779725,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "CE_mean": 2.018258658433454,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 1
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.6703195670449608e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.208621322689434e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.06204271772575023,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "CE_mean": 2.8492907412347144,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 1
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": true,
+            "total": 8,
+            "whole": 8
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 14
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 3
+      },
+      "seed": 202,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.1174328685482386,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.544485281977082,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 36,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.16365343687767614,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.0752347850377715,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.4238956825174398e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.1386945747122374e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.7758009681341376,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 3.2806346386114362,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 303,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.12394205291305535,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                8
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 39,
+              "teacher_targets": 40,
+              "teacher_whole": 7,
+              "total": 8,
+              "whole": 7
+            },
+            "neg": {
+              "CE_mean": 0.4941304176899151,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 13
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.0026470937374444502,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "CE_mean": 1.258839990772269,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 1
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.3671054790146779e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.1178845244366568e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.9888811269341243,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.694190643439905,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 7
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 13
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 101,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    },
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.23492459052796294,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.48639475559304757,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 36,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.491457852299645,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.5955021470381063,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.4943126665537912e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.0719112317083938e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.387929906048059,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.2956434662388836,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 202,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    },
+    {
+      "codec": "S",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.1934014254701722,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                8
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 7,
+              "total": 8,
+              "whole": 7
+            },
+            "neg": {
+              "CE_mean": 0.6511865014391803,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 36,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 13
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.07740118268705878,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                1,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 5,
+              "teacher_targets": 5,
+              "teacher_whole": 1,
+              "total": 1,
+              "whole": 1
+            },
+            "neg": {
+              "CE_mean": 3.063556654424885,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 1
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.2958899757128014e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 2.0211161712246906e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.4698024457344645,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                0,
+                1
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.1459232303915305,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 7
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 13
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 303,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.3070875850319367,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.24135535346695605,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.0315975611337427,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 0.4764350826425554,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 8.557180719274508e-07,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.2240359480960214e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.4250979848133196,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.4544004008774043,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 101,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.3568210581173043,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.6772568357090882,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 37,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.3667814076869373,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 3.2679153808792463,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.0470422474521493e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.3608148036858836e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.4877807749980125,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.1501311399046363,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 202,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277794000,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.3489731086080201,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.5355393929041943,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 37,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.078425317991678,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.9751974869803248,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 9.684489089186361e-07,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.3571779705401354e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.7133537401790293,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.309109513185407,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "F",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 303,
+      "target_updates": 66000,
+      "unused_training_MACs_not_carried": 0
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.29724254696369856,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.42278069649583544,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 37,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.44829529525331,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.344087469531026,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 7.441669747384101e-07,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.1358492913042066e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.9296406154544302,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.0381512873399097,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 101,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.36433834662618286,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.8714046166632589,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 37,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 1.9381688612460732,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 4.576004224728067,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 7.863025016282185e-07,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.1898144234597415e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.9765331939483801,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 2.395225569691464,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 202,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    },
+    {
+      "codec": "H",
+      "executed_training_dense_MACs": 277772868,
+      "final_metrics": {
+        "all": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.3342579740126232,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                7,
+                7,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 38,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 0.3610775528768876,
+              "STOP_position_correct": 8,
+              "information_bit_correct": [
+                6,
+                8,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 8,
+              "teacher_correct": 37,
+              "teacher_targets": 40,
+              "teacher_whole": 6,
+              "total": 8,
+              "whole": 6
+            }
+          },
+          "total": 16,
+          "whole": 12
+        },
+        "test": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 0.45872170656730643,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                1,
+                0,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.4915833771530633,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 3,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        },
+        "train": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 9.334180451977166e-07,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            },
+            "neg": {
+              "CE_mean": 1.3569983374909592e-06,
+              "STOP_position_correct": 6,
+              "information_bit_correct": [
+                6,
+                6,
+                6
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 6,
+              "teacher_correct": 30,
+              "teacher_targets": 30,
+              "teacher_whole": 6,
+              "total": 6,
+              "whole": 6
+            }
+          },
+          "total": 12,
+          "whole": 12
+        },
+        "val": {
+          "by_op": {
+            "echo": {
+              "CE_mean": 2.215336485025408,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            },
+            "neg": {
+              "CE_mean": 1.3970289038720127,
+              "STOP_position_correct": 1,
+              "information_bit_correct": [
+                0,
+                1,
+                0
+              ],
+              "malformed": 0,
+              "overflow": 0,
+              "syntax_tail_correct": 1,
+              "teacher_correct": 4,
+              "teacher_targets": 5,
+              "teacher_whole": 0,
+              "total": 1,
+              "whole": 0
+            }
+          },
+          "total": 2,
+          "whole": 0
+        }
+      },
+      "policy": "G",
+      "primary": {
+        "blocks": [
+          {
+            "milestone": 1,
+            "name": "Echo_0_1",
+            "passed": true,
+            "total": 2,
+            "whole": 2
+          },
+          {
+            "milestone": 2,
+            "name": "Echo_0_3",
+            "passed": true,
+            "total": 4,
+            "whole": 4
+          },
+          {
+            "milestone": 3,
+            "name": "Echo_0_7",
+            "passed": false,
+            "total": 8,
+            "whole": 6
+          },
+          {
+            "milestone": 4,
+            "name": "Echo_and_Neg_0_7",
+            "passed": false,
+            "total": 16,
+            "whole": 12
+          }
+        ],
+        "format": "s4_neg",
+        "includes_STOP": true,
+        "maximum": 4,
+        "operator_width_event_is_not_an_extra_skill": true,
+        "score": 2
+      },
+      "seed": 303,
+      "target_updates": 76337,
+      "unused_training_MACs_not_carried": 21132
+    }
+  ],
+  "summary_table_sha256": "f09a4209f7e4e6bc18126a79a427cefefa1aaefc7847db22300b0f3074c74b39",
+  "wall_seconds_primary_replay_evidence": 476.3289857999989
+}
