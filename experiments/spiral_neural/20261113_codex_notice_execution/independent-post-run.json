@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "scope": "Independent read-only artifact and fixed-checkpoint inference audit; no optimizer replay or new student.",
+  "source_head": "0b6de1d24481c2886833e412d173645fca98609c",
+  "manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "launcher_sha256": "ca04801fe4fb3af84fe03280108cdd356b0d11bf3deba87dc0f19a8919af00fb",
+  "ownership_preregistration_commit": "47175a513f4fb08c5231cdb354f99f18c2936938",
+  "root_confirmed_formal_exit0": true,
+  "source_Git_blobs_verified": 20,
+  "scientific_source_hashes_verified": 7,
+  "primary_target_records_verified": 81408,
+  "full_checkpoints_independently_evaluated": 18,
+  "NPZ_archives_loaded_including_boundary_copies": 24,
+  "whole_truth_examples_independently_recomputed": 324,
+  "training_truth_examples_verified_by_reusing_recomputed_rows": 216,
+  "checkpoint_state_boundary_anchors": 18,
+  "independent_pre_update_prediction_loss_anchors": 15,
+  "all_free_and_TF_tokens_logits_probabilities_CE_and_curves_exact": true,
+  "all_failures_retained_and_final_epoch128_reused": true,
+  "formal_scores": [
+    {
+      "seed": 101,
+      "train_whole_correct": 7,
+      "train_total": 12,
+      "heldout_whole_correct": 0,
+      "heldout_total": 6,
+      "strong_gate": false
+    },
+    {
+      "seed": 202,
+      "train_whole_correct": 5,
+      "train_total": 12,
+      "heldout_whole_correct": 0,
+      "heldout_total": 6,
+      "strong_gate": false
+    },
+    {
+      "seed": 303,
+      "train_whole_correct": 5,
+      "train_total": 12,
+      "heldout_whole_correct": 0,
+      "heldout_total": 6,
+      "strong_gate": false
+    }
+  ],
+  "pooled_final_train": {
+    "correct": 17,
+    "total": 36
+  },
+  "pooled_final_heldout": {
+    "correct": 0,
+    "total": 18
+  },
+  "strong_gate_all_three": false,
+  "costs": {
+    "primary_targets": 81408,
+    "replay_targets": 81408,
+    "primary_training_dense_MAC": 1714126848,
+    "replay_training_dense_MAC": 1714126848,
+    "primary_training_diagnostic_dense_MAC": 79470976,
+    "replay_training_diagnostic_dense_MAC": 79470976,
+    "offline_evaluation_inference_calls": 11350,
+    "offline_evaluation_dense_MAC": 118403200,
+    "p_m_v_birth_array_bytes_per_student": 209980
+  },
+  "audit_extra_inference_calls": 11350,
+  "audit_extra_inference_dense_MAC": 118403200,
+  "audit_seconds": 1.6271560999957728,
+  "formal_walltime_seconds": 254.11240079999698,
+  "science_files_unchanged": true,
+  "science_inventory_files": 80,
+  "science_inventory_sha256": "e12f200c49f3d634ecbd8e55b1741c8593d8cc55d88159c341180615d7efb8d9",
+  "attribution": "ChatGPT Pro design/implementation; Codex actual execution; native author/NVIDIA fields preserve original design metadata.",
+  "current_external_review": "One actual NVIDIA review, cost0, independently semantic_rejected; Gemini skipped for the existing unverified runtime path.",
+  "replay_evidence": "Original fixed driver completed3 full target-loop replays and checked every recorded full-state/prediction/loss plus direct checkpoints; six trajectory logs and completion verified.",
+  "independent_audit_limit": "Every primary target metadata/cost/digest was checked. Intermediate weights were not recomputed: optimizer calls are prohibited. Saved-state boundary hashes and15 pre-update predictions/losses were independently anchored.",
+  "new_students": 0,
+  "optimizer_step_lesson_loss_grad_calls": 0,
+  "external_model_calls": 0,
+  "scientific_modules_imported": false,
+  "results_selected_or_extended": false,
+  "details": "review/post-run-details.json"
+}

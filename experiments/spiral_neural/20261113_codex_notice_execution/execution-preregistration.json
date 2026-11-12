@@ -1,0 +1,32 @@
+{
+  "actual_engineering_synthetic_updates_including_first_encoding_failure": 24,
+  "adaptation": "source_hashes relative path key separators only",
+  "design_author": "ChatGPT Pro",
+  "epochs": 128,
+  "execution_owner": "Codex",
+  "formal_heldout_scores_seen": 0,
+  "formal_students_started": 0,
+  "launcher_sha256": "ca04801fe4fb3af84fe03280108cdd356b0d11bf3deba87dc0f19a8919af00fb",
+  "manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "primary_targets": 81408,
+  "primary_training_dense_MAC": 1714126848,
+  "replay_targets": 81408,
+  "replay_training_dense_MAC": 1714126848,
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schema": "CODEX-UR1-EXECUTION-PREREG-v1",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "source_hashes_unchanged": 7,
+  "source_head": "0b6de1d24481c2886833e412d173645fca98609c",
+  "stop": "All three fixed students and replays; no score-based stopping, extension or selection",
+  "user_authorization": "Continue experiments and preserve selected results/records on Git",
+  "writes": "Only new codex execution artifacts and handoff card on a new branch; no original science-file changes"
+}

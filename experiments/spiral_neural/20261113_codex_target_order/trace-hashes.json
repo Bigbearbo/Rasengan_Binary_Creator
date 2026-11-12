@@ -1,0 +1,32 @@
+[
+  {
+    "Git_blob": "808dcfa48dba68132e3cf13d0822eaea1f3e5aa2",
+    "bytes": 2049968,
+    "path": "seed101/targets.jsonl.gz",
+    "public": false,
+    "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+    "sha256": "2fa5bc30361b6108c99f85ee1b253d78c6ab30d744842c1068bc61d363218b8a",
+    "targets": 27136,
+    "uncompressed_stream_sha256": "2f3d70aad855dc315a4108986a45d180de8a7780c1ebc9556e6012abd3af648e"
+  },
+  {
+    "Git_blob": "f4658a22f9d0745b09b97b393c7b583804495fcf",
+    "bytes": 2049265,
+    "path": "seed202/targets.jsonl.gz",
+    "public": false,
+    "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+    "sha256": "c69d97a079ec4a3d2c404a5d076ec697658d328326a693b31b82336d601b0118",
+    "targets": 27136,
+    "uncompressed_stream_sha256": "415515bc70a863f920a6b9d99d849309384238c25eb60a9f693af79ef24e9d73"
+  },
+  {
+    "Git_blob": "5a3c8ed778a7af9eb455580c78689447b44ded77",
+    "bytes": 2048896,
+    "path": "seed303/targets.jsonl.gz",
+    "public": false,
+    "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+    "sha256": "79c5b894075757e894f87d74a1cfe7a18bc92abc259019c9726e1b41dbb8fb51",
+    "targets": 27136,
+    "uncompressed_stream_sha256": "acc7abdddead970f020fab9783bb770c42f265a97c05e97d9a56979950589b33"
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "author": "Codex",
+  "coverage": "All three students, all fixed checkpoints, free/TF truth and final failures; three full replay evidence summaries",
+  "historical_control": "Reuse Pro fixed original order; Windows reproduction is an extra physical run, not new independent seeds",
+  "local_source_hashes": {
+    "protocol.json": "134a944394172f52f76f1c44aa6c0ad011cc6c61b0214dd3ac024af0cce140e6",
+    "run_target_order.py": "efd3966a93793d68ee6ba02111bfdcc67f67e8bdf40c96940352d9e5bbe17862",
+    "test_target_order.py": "00286e3731010b787661fcb68edbd1b505908819d24104d6f89983683df37615"
+  },
+  "manifest_sha256": "db37000543b4e8e7ef4b294883ad2346fddfd61b771a17857a1c525f1df189cc",
+  "metadata_public_copies": [
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "reviews/pre-run.json",
+      "public_sha256": "831c1d043e07ca999a2d136c210cf03e3a4118351a88fcc92c3d6aa22c9f9335",
+      "scientific_values_changed": false,
+      "source_sha256": "edd99b3d0b516b8bf4cbb4be3816bff1caf92522822b1c102ea630de3b685707"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "reviews/pre-run-details.json",
+      "public_sha256": "ed831a82439619edc49bb103e860f8326b2dea69a940ebb39d00e1fce63118a7",
+      "scientific_values_changed": false,
+      "source_sha256": "685251f560a6a1a9013ec021dff439404d5ea39950d87ce1fea3c9d51d73582e"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "reviews/post-run.json",
+      "public_sha256": "bf183d314fe90e5838c5d78356cfcb3423afbfcb491ee051987cd2c06dfd4110",
+      "scientific_values_changed": false,
+      "source_sha256": "70c306f187c4be6c366042bf48af9581f7679ce19696e39b13f302e72df48745"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "reviews/post-run-details.json",
+      "public_sha256": "bebef719035567ac0b2010678c22708e20a0b3164a0d38e71d4c5e2f90b4221a",
+      "scientific_values_changed": false,
+      "source_sha256": "19cebd7f4b38406b2760975245abc6bdbb32a7185a167befde2435ec958ff0a7"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "engineering/checks.json",
+      "public_sha256": "4ec0345a0e247fe8003c7e55730cc254fada519f6368e5f3a9e6b382a22a230f",
+      "scientific_values_changed": false,
+      "source_sha256": "4ec0345a0e247fe8003c7e55730cc254fada519f6368e5f3a9e6b382a22a230f"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "engineering/portable-prereg.json",
+      "public_sha256": "97dc825938e7909e32c5b9457515270f622d459a4fca59e4d7f2337f3b0e1d14",
+      "scientific_values_changed": false,
+      "source_sha256": "97dc825938e7909e32c5b9457515270f622d459a4fca59e4d7f2337f3b0e1d14"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "baseline-replication/execution-provenance.json",
+      "public_sha256": "2c2c138562a817b916ac3ae2b52314c7e08d9092e114c3a627c4a6e4d1c132ff",
+      "scientific_values_changed": false,
+      "source_sha256": "2c2c138562a817b916ac3ae2b52314c7e08d9092e114c3a627c4a6e4d1c132ff"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "baseline-replication/replication-comparison.json",
+      "public_sha256": "16c2ac724107935a797f0740843923b6d50386dbf2ee2064164be1a0a0626415",
+      "scientific_values_changed": false,
+      "source_sha256": "2c03fef5f0935b63aa2b5a881195307867ddebfd48fdbb1a4c96ee06c1f3164a"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "baseline-replication/independent-pre-run.json",
+      "public_sha256": "cb8e13d81518f50ca6b36effb30af5dd0effc23209e277212ebb2abeb391c3aa",
+      "scientific_values_changed": false,
+      "source_sha256": "a43649117888a1e4668f4161699e480b252fd4e72b0f3b188f786ace3a7b890a"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "baseline-replication/independent-post-run.json",
+      "public_sha256": "faa2315fafe86caf46df552a0d76dd73605146a3293d301a7ffb2b4cfc8b9b2a",
+      "scientific_values_changed": false,
+      "source_sha256": "ff22d98c0bf19a3fadb5bb48bf89fed5cf0e4b243e9d897269e8b333d4352459"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "baseline-replication/independent-post-run-details.json",
+      "public_sha256": "913b685d886accf1408fcad7d9aa6e683fa68df05a74f2d380723c8beaac144d",
+      "scientific_values_changed": false,
+      "source_sha256": "ca3f584c4b69315c5e75351c26bfeeacd90be1502360218d6ec849c7dc7bc7f2"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "run/prereg-git.json",
+      "public_sha256": "09d1e6a9d9c5e66d683b8c73c3f039add6f9fe71d809803c34284a05afabd74b",
+      "scientific_values_changed": false,
+      "source_sha256": "3e43c1a694d0a207e94f3bbbc068fa28780a4410ac5e96f6910bbf7a6e396799"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "run/formal-root-gate.json",
+      "public_sha256": "a871a82a532d4f749f2ed1e33c95c3882bd4001f3eb1ffc3684209f8383ee161",
+      "scientific_values_changed": false,
+      "source_sha256": "388a6f34fb281e8f6a1c751c9b6afba0ef6984c65ba979ba0bcd64aaaeddc6a0"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "run/formal-receipt.json",
+      "public_sha256": "befd4114c9509568c524ecd33463e30cc653d556e798563f2850eada4b6af732",
+      "scientific_values_changed": false,
+      "source_sha256": "da7a88339b60e7090c59d8a8d972bd89e4302f8aa66cdd3c1c7eef9998e69ca2"
+    },
+    {
+      "LF_JSON_serialization": true,
+      "changes": [],
+      "public_path": "run/approved-input-restore-checks.json",
+      "public_sha256": "d1252f42540d7b6bef587c7eb83fcc65bf719e0385595dbfb0b5e1aee7d85a32",
+      "scientific_values_changed": false,
+      "source_sha256": "d1252f42540d7b6bef587c7eb83fcc65bf719e0385595dbfb0b5e1aee7d85a32"
+    }
+  ],
+  "omitted_large_target_traces": [
+    {
+      "Git_blob": "808dcfa48dba68132e3cf13d0822eaea1f3e5aa2",
+      "bytes": 2049968,
+      "path": "seed101/targets.jsonl.gz",
+      "public": false,
+      "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+      "sha256": "2fa5bc30361b6108c99f85ee1b253d78c6ab30d744842c1068bc61d363218b8a",
+      "targets": 27136,
+      "uncompressed_stream_sha256": "2f3d70aad855dc315a4108986a45d180de8a7780c1ebc9556e6012abd3af648e"
+    },
+    {
+      "Git_blob": "f4658a22f9d0745b09b97b393c7b583804495fcf",
+      "bytes": 2049265,
+      "path": "seed202/targets.jsonl.gz",
+      "public": false,
+      "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+      "sha256": "c69d97a079ec4a3d2c404a5d076ec697658d328326a693b31b82336d601b0118",
+      "targets": 27136,
+      "uncompressed_stream_sha256": "415515bc70a863f920a6b9d99d849309384238c25eb60a9f693af79ef24e9d73"
+    },
+    {
+      "Git_blob": "5a3c8ed778a7af9eb455580c78689447b44ded77",
+      "bytes": 2048896,
+      "path": "seed303/targets.jsonl.gz",
+      "public": false,
+      "reason": "Complete trace stays local; frozen input stream and full checkpoints are public.",
+      "sha256": "79c5b894075757e894f87d74a1cfe7a18bc92abc259019c9726e1b41dbb8fb51",
+      "targets": 27136,
+      "uncompressed_stream_sha256": "acc7abdddead970f020fab9783bb770c42f265a97c05e97d9a56979950589b33"
+    }
+  ],
+  "original_source_hashes": {
+    "experiments/spiral_neural/20261112_p035/reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "experiments/spiral_neural/20261113_pro_notice_learning/dataset.py": "ae1ef4c5130dba31e8ef20ccb1cdd9e128a67e960003ac157635cc74f8abc57a",
+    "experiments/spiral_neural/20261113_pro_notice_learning/learner.py": "94edb4dbc30b72d2d2eeebf2993cdcb37e8b85d4922d31b17fca1d04d47d7b72",
+    "experiments/spiral_neural/20261113_pro_notice_learning/protocol.json": "6c15d6e940a0ec85d3d4ddfda6ce56e9211ac36f5facc4e86e790d6c93541b13",
+    "experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "experiments/spiral_neural/20261113_pro_notice_learning/test_engineering.py": "3017ae9baa13236f4bb386b2cd44cb09ecfc592e09237987fe4b8f59f7402691",
+    "experiments/spiral_neural/20261113_pro_upgrade_notice/notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8"
+  },
+  "prepublished_baseline_inputs": {
+    "already_published_for_preregistration": true,
+    "archives": [
+      {
+        "Git_blob": "304b851af5285cc2467503919e85dc0db50029d5",
+        "NPZ_finite_verified": 3,
+        "bytes": 140217,
+        "entry_count": 12,
+        "file": "baseline-inputs.zip",
+        "sha256": "e710b85ca847312c5a4b4d9d4988daa54ee22135519e2fbce0ecc6eeb706c884"
+      }
+    ],
+    "manifest_path": "experiments/spiral_neural/20261113_codex_target_order/baseline-inputs-manifest.json",
+    "manifest_sha256": "51253e19dd24e69594b5233ec601dac94b30126a9be186d7bced2c3b3191e015",
+    "republished_in_result_archives": false
+  },
+  "raw_API_account_quota_or_autonomous_state_selected": false,
+  "schema": "sle-target-order-publication-record-v1",
+  "scientific_source_bytes_changed": false
+}
