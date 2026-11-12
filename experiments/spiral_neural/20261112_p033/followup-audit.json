@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "controls_audited": 12,
+  "same_initial_checkpoint_and_Adam": "loaded full coverage warm-3 state",
+  "Echo_value_stream_prefix_equal_to_Neg70": true,
+  "each_train_value_Echo_only_exposure": 500,
+  "Echo_only_test_correct": 12,
+  "ordinary_continuation_did_not_lose_correct_val_or_test": true,
+  "main_trials": 30,
+  "supplemental_Echo_only_controls": 12,
+  "total_presentations": 147888,
+  "total_token_updates": 734832,
+  "including_replay_token_updates": 1469664
+}

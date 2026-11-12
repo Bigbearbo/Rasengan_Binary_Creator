@@ -1,0 +1,58 @@
+{
+  "task_id": "N05-P033-20261112",
+  "findings": [
+    {
+      "id": "F01",
+      "claim": "The '3000 lessons' budget with 1500 Echo + 1500 Neg creates an implicit capacity bottleneck for H72 when trained on balanced 5/5 interleaved data (T1 schedule), leading to systematic underfitting of the Neg phase that explains the heldout 2/48 failures observed in P032.",
+      "concrete_check": "Compare test accuracy of H72 trained on T0 (1500E+1500N) versus T1 (balanced 5/5 interleaved) at the 3000th step. Specifically measure the gradient norm of the Neg phase embeddings. If T1 shows significantly lower Neg-gradient magnitude than T0 at identical step counts, the hypothesis is supported.",
+      "classification": "hypothesis",
+      "recommendation": "Add ablation: Hold total steps constant at 3000 but change schedule to T0-only vs T1-only vs T0B. If T1 consistently underperforms on heldout pairs, the capacity issue is confirmed."
+    },
+    {
+      "id": "F02",
+      "claim": "The 'same multiset for T0/T1/T0B' design constraint combined with 'per-op shuffled 1500 item value streams' creates a distribution shift between training schedules that invalidates direct trace comparison between P032 and P033 fresh runs, because P032 used a fixed ordering of op/value pairs while P033 shuffles per schedule.",
+      "concrete_check": "Extract the exact RNG seed state and value stream ordering from the P032 checkpoint at step 3000. Run the P033 G0 (S0) schedule with the identical RNG seed and compare the first-layer weight trajectories. If trajectories diverge despite identical seeds, the shuffling constraint is the causal limit.",
+      "classification": "design_limit",
+      "recommendation": "Freeze the value stream shuffle order across all three schedules (T0, T1, T0B) or log the exact permutation used per schedule to enable valid cross-schedule trace comparison."
+    },
+    {
+      "id": "F03",
+      "claim": "The counterfactual probe in P033-D (flipping Q data bits via xor4/xor2/xor1 against frozen weights) will produce meaningless delta metrics if the MLP's hidden state dimension (H72) is insufficient to store the parity information for all 4 data bits simultaneously, causing the probe to saturate at maximum delta regardless of actual causal effect.",
+      "concrete_check": "Run the xor-flip probe on a held-out batch with H72 and record the distribution of p(outputbit1) deltas. Then repeat with H128. If the delta distribution width (variance) increases with hidden size while mean stays near zero, the hypothesis is supported—H72 is saturating the probe.",
+      "classification": "hypothesis",
+      "recommendation": "Report probe results stratified by hidden size (H72 vs H128). If H72 shows collapsed variance, the design limit is confirmed and larger hidden sizes are required for meaningful counterfactual measurement."
+    },
+    {
+      "id": "F04",
+      "claim": "The 'pairwisecomplete' split design (C0: train[0,1,2,3,4,7] val[5] test[6]; C1: train[0,1,2,3,5,6] val[4] test[7]) introduces a semantic leak where test pair 7 in C0 and test pair 7 in C1 share identical op/profile features but opposite training exposure, causing the model to learn test-specific heuristics rather than task generalization.",
+      "concrete_check": "Measure the intra-class similarity of model activations for test pair 7 across C0 and C1. If activation cosine similarity > 0.8 despite opposite training labels, the leak is confirmed. Additionally, ablate by swapping test sets between C0 and C1 while keeping train/val fixed.",
+      "classification": "design_limit",
+      "recommendation": "Replace the pairwisecomplete splits with truly independent splits (e.g., random 70/15/15 per schedule) or add a regularization term that penalizes activation similarity across swapped test sets."
+    },
+    {
+      "id": "F05",
+      "claim": "The instruction to 'keep original correct answer prefix fixed and measure p(outputbit1) delta' in P033-D combined with the 'diagonal vs offdiagonal bit-flip' distinction creates a probe that cannot distinguish between weight-based counterfactual effects and input-feature collinearity effects, because diagonal flips preserve the prefix while offdiagonal flips may not, and the prefix-fixing constraint itself alters the loss landscape.",
+      "concrete_check": "Run the probe with three conditions: (1) diagonal flips only, (2) offdiagonal flips only, (3) offdiagonal flips with prefix explicitly broken. Compare the delta magnitudes. If condition (3) shows dramatically larger deltas than (1), the prefix-fixing constraint is the dominant variable, not the weight flips.",
+      "classification": "hypothesis",
+      "recommendation": "Decouple the prefix-fixing from the bit-flip operation. Measure counterfactual effects on unfixed prefixes first, then apply the prefix-fixing as a separate ablation layer."
+    }
+  ],
+  "execution_claim": "not_run",
+  "calls": 1,
+  "model_id": "nvidia/nemotron-3.5-lightning:free",
+  "seconds": 18.922,
+  "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 1243,
+    "total_tokens": 2078,
+    "cost": 0
+  },
+  "format_note": "5findings exceeded requested3; still bounded one response, all treated as candidates",
+  "codex_assessment": {
+    "F01": "Reject capacity attribution and nonexistent Neg embeddings. Timing outcomes do not establish capacity causality; trained Neg is perfect.",
+    "F02": "Reject conflation of fresh timing runs and exact P032 coverage control. Same multisets/per-op streams verified.",
+    "F03": "Reject claim that small H invalidates probes; conditional p1 effects are finite and stratified by H.",
+    "F04": "Reject: C0 test is6, not7; independent student initializations do not share learned labels.",
+    "F05": "Prefix consistency is explicitly stratified; no weights or loss landscape changed during frozen probes."
+  }
+}
