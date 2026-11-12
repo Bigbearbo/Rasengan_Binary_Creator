@@ -1,0 +1,42 @@
+{
+  "status": "protocol_arithmetic_passed_code_gate_pending",
+  "round_id": "FULL-DOMAIN-MIX-20261113",
+  "scope": "Pre-inference arithmetic and interpretation review only. This does not authorize formal execution or certify unread implementation.",
+  "computed": {
+    "Q_length": 14,
+    "A_actions_including_tail0_STOP": 10,
+    "maximum_legal_teacher_prefix_length": 23,
+    "L": 23,
+    "H": 69,
+    "parameters": 3453,
+    "dense_forward_MAC": 3381,
+    "dense_training_MAC_per_target": 6969,
+    "unique_Q_per_epoch": 512,
+    "targets_per_epoch": 5120,
+    "dense_training_MAC_per_epoch": 35681280,
+    "max_targets_per_seed": 204800,
+    "max_training_MAC_per_seed": 1427251200,
+    "max_primary_targets_three_seeds": 614400,
+    "max_primary_training_MAC_three_seeds": 4281753600,
+    "max_replay_training_MAC_seed101_only": 1427251200
+  },
+  "required_code_gates": [
+    "Freeze full initial state and all40 RNG(seed+221000) permutations of all512 distinct Q for each seed before training; no legacy trained state import.",
+    "Use native P030 learning AST and exact8 information bits plus fixed tail0 plus external STOP; neither complement the tail0 nor confuse numeric bit strings with an AE1 lexicon.",
+    "Greedy wrapper calls no forward aboveL23. A missing STOP at the limit is an explicit context failure, not truncated success or a synthetic STOP; cap16 is only an additional ceiling.",
+    "Stop only after both ops each have256 exact free answers including STOP at two consecutive epoch-end evaluations, or after epoch40; count all training and generation costs separately.",
+    "Only predesignated seed101 receives full replay. Its independent target stream, epoch state, probe, streak and stopping decision must match; do not claim seed202 or303 were replayed.",
+    "Audit metadata paths before trained forward, then persist independently computed numerical proof before optional presentation checks."
+  ],
+  "interpretation_limits": [
+    "This measures fitting all512 Q in a fixed finite domain. The full-domain training score controls stopping and is not a heldout or blind generalization score.",
+    "This is a single policy. Q width, fixed window and parameter count change from the earlier3bit experiment, so differences cannot be attributed to adding examples alone.",
+    "All three seeds answer the same512 Q; seed repetitions are not1536 distinct domain examples.",
+    "Complete success is consistent with either a finite lookup or a copy/complement algorithm and does not identify internal mechanism.",
+    "No longer-width probe is included: n9 would require STOP prefix25, outsideL23. A context limit must not be presented as a general learning failure."
+  ],
+  "model_forward_calls": 0,
+  "optimizer_calls": 0,
+  "formal_students": 0,
+  "external_model_calls": 0
+}
