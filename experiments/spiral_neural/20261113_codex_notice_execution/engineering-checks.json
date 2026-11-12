@@ -1,0 +1,44 @@
+{
+  "adaptation": "source_hashes relative path key separators only",
+  "base_head": "0b6de1d24481c2886833e412d173645fca98609c",
+  "engineering_tests": 6,
+  "formal_heldout_neural_evaluations": 0,
+  "formal_students_started": 0,
+  "imported_Git_blobs_verified": 20,
+  "launcher_sha256": "ca04801fe4fb3af84fe03280108cdd356b0d11bf3deba87dc0f19a8919af00fb",
+  "manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "metadata_rejection_checks": 3,
+  "native_manifest_exact": false,
+  "normalized_manifest_exact": true,
+  "preflight": {
+    "complete_state_save_load": "exact",
+    "data": {
+      "all_symbols_and_maximum_prefix_length_seen_in_train": true,
+      "consistent_teacher_prefix_labels": 318,
+      "heldout": 6,
+      "heldout_targets": 106,
+      "max_generation_steps_including_STOP": 24,
+      "max_prefix": 75,
+      "rows": 18,
+      "train": 12,
+      "train_targets_per_epoch": 212
+    },
+    "formal_heldout_neural_evaluations": 0,
+    "formal_student_updates": 0,
+    "generation_cap_and_overflow": "PASS",
+    "native_lesson_vs_independent_target_loop": "exact",
+    "status": "PASS",
+    "synthetic_optimizer_update_calls": 6,
+    "synthetic_seed": 910013
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "scientific_source_hashes_verified": 7,
+  "seconds": 1.2134197000050335,
+  "status": "PASS",
+  "synthetic_optimizer_update_calls": 12
+}
