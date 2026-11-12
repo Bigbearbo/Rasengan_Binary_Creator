@@ -8,6 +8,8 @@ U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是�
 
 2026-11-13 Pro 接續更新：依使用者的三份通知、局部回覆及尾兩碼控制構想，新增 [UR1 有位置的升階通知設計](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)與獨立 codec。這是新 profile 的 A 設計和有界程式 T，沒有神經升階訓練。已讀並整合 Codex P035 的固定報告與成果，未重跑其訓練／稽核；P035 未包含這次通知儀式。本分支亦保留先前 Pro 小網路／成長審查及其實測歸屬。
 
+2026-11-13 Pro 輪流接棒：重新查核遠端後，最新可見 Codex 公開成果仍是 P035。已另做[有界唯讀審核](../../experiments/spiral_neural/20261113_pro_p035_review/README.md)，沒有實質 finding；核對746個公開ZIP項目、60個學生×階段預算，實際重算64題及4次grow副本，0次訓練更新。新的[UR1 神經通知實驗](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)已定義六個位置、12個已教／6個保留搭配，現為正式訓練前凍結階段。進度與下一棒以[當前交接卡](RESEARCH_HANDOFF.md)為準；尚未產生新神經成果。
+
 ## 固定證據與完成狀態
 
 | 研究線 | 固定版本與來源 | 已完成 | 尚未完成或適用限制 |
@@ -20,6 +22,8 @@ U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是�
 | Pro 獨立審查與修復 | [Pro 證據與重跑入口](../../experiments/spiral_neural/20261112_pro_review/README.md) | P032唯讀36 checkpoint／480題／4,320探測；P031分割審查；解析器乾淨副本75/75及demo驗證 | 沒有新神經訓練；不能把Codex的P033訓練歸為Pro訓練 |
 | Pro 小網路／成長審查 | [核心假說審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)；[可重播探測](../../experiments/spiral_neural/20261112_pro_growth_review/README.md) | 三checkpoint各40舊prefix擴網logit差0；同raw8/8，op2同義題未適應0/8；每次執行在三個副本合計六次除錯更新確認梯度通路 | 該次Pro探測沒有完整課程或編碼對照；其後P035已完成一個有限對照。合法零token不是padding，不能直接沿用scalar-zero保函數條件 |
 | Pro 有位置升階通知 UR1 | [設計](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)；[codec／結果入口](../../experiments/spiral_neural/20261113_pro_upgrade_notice/README.md) | 17/17程式測試；八個fixture位置、73個拒絕子案例；獨立340個單bit變異中334拒絕、6個合法改址 | 固定控制根c3；無NN訓練，根升階僅A候選；回覆配對不等於已學會新寬度，沒有完整傳輸防錯 |
+| Pro P035 接棒審核 | [實際唯讀證據](../../experiments/spiral_neural/20261113_pro_p035_review/README.md) | 凍結來源9/9、公開檔案26/26、ZIP項目746/746、30課序、24曝光帳、60預算；64實際題與4 grow副本吻合 | 有界重算，0新學生／0訓練更新／0完整重播；不冒稱重跑Codex全部300 checkpoint |
+| Pro UR1 神經通知 | [事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)；[實作入口](../../experiments/spiral_neural/20261113_pro_notice_learning/README.md) | 正式前教材、程式與預算工程驗收；需先將manifest提交Git再執行 | 正式訓練尚未開始；只測合法通知ACK摘錄與已見地址×寬度組合，不測實際升階作用或儀式收益 |
 | 共用記憶與調度 | [原有MVP計畫](CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md) | 規格已公開；P032/P033各有Codex實際NVIDIA審查紀錄 | 本次已fetch的origin分支未見dispatcher／記憶MVP程式；不能推定使用者Windows本機未實作 |
 
 P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶系統完成。既有VM線應以[停止原因分支44d23b9](https://github.com/Bigbearbo/Rasengan_Binary_Creator/tree/44d23b934dbea141e436c24e52b60a500d09e162/experiments/hamu_vm)為本次已讀參考，不能只看較舊PR #2；Pro本輪沒有重跑VM測試。
@@ -74,7 +78,7 @@ P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶
 
 ## 下一步入口
 
-使用者目前要求的通知方案已另存 [UR1](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)。下一個學習實驗應單獨測通知能否降低指定分支的新格式適應成本，不能把P035結果歸因於缺少通知。先凍結新profile／課程、足夠context／生成上限與成本預算，分開驗收確認回覆、實際作用位置、新階普通題及舊能力保留；分輸入／回覆角色記曝光。P034的L16和P035的最高L13、既有八步生成上限均放不下最短通知確認。本次不追加既有失敗配置的訓練。
+使用者目前要求的通知方案已另存 [UR1](PRO_UPGRADE_NOTICE_DESIGN_20261113.md)。當前 Pro 接棒先執行[有限ACK學習事前規格](PRO_NOTICE_LEARNING_PROTOCOL_20261113.md)，檢查六個位置的局部回覆能否學穩；更後面的普通題作用與有無通知適應成本需依結果另立配對比較，不能把P035結果歸因於缺少通知。分開驗收確認回覆、實際作用位置、新階普通題及舊能力保留；分輸入／回覆角色記曝光。P034的L16和P035的最高L13、既有八步生成上限均放不下最短通知確認；本次因此另設L80/H64和24步上限，不能沿用原小模型參數量。本次不追加既有失敗配置的訓練。
 
 [Pro 後續研究設計](PRO_RESEARCH_DESIGN_20261112.md)的E900及一個近等參數attention配置已於P034完成；[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)第6節候選已以P035具體化並完成。不要把這些當待跑或擴張失敗配置。若接續，先依固定證據區分輸入格式適應、prefix依賴與新語義干擾，下一個單一變因／預算／判準另立事前規格；不因本批分數追加seed、擴容或延長。
 

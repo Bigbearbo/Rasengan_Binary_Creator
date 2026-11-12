@@ -1,0 +1,18 @@
+{
+  "curriculum_sha256": {
+    "101": "20d10e56749a9eeff9acbe55d7af8974092a8e24c52bf21617efeb39f8c73560",
+    "202": "d8623414de357d41504074c25b1f558aab4feb48ed2a14450b2887007adc4eb4",
+    "303": "a10f21d1f92c66c81605d7ea9a8dc86fb3549bd6b932ed74f12c4e123a752cad"
+  },
+  "data_sha256": "ed891e1b3d99a0e2f694e0cd39ea311d4697580f44c7c92364bec8c8344c9f73",
+  "manifest_sha256": "d74dedb0627d79a8c41057a1625a3e83ab3c5b2edfbb675fccd902e94929a7b0",
+  "source_hashes": {
+    "experiments/spiral_neural/20261112_p035/reference/p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "experiments/spiral_neural/20261113_pro_notice_learning/dataset.py": "ae1ef4c5130dba31e8ef20ccb1cdd9e128a67e960003ac157635cc74f8abc57a",
+    "experiments/spiral_neural/20261113_pro_notice_learning/learner.py": "94edb4dbc30b72d2d2eeebf2993cdcb37e8b85d4922d31b17fca1d04d47d7b72",
+    "experiments/spiral_neural/20261113_pro_notice_learning/protocol.json": "6c15d6e940a0ec85d3d4ddfda6ce56e9211ac36f5facc4e86e790d6c93541b13",
+    "experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+    "experiments/spiral_neural/20261113_pro_notice_learning/test_engineering.py": "3017ae9baa13236f4bb386b2cd44cb09ecfc592e09237987fe4b8f59f7402691",
+    "experiments/spiral_neural/20261113_pro_upgrade_notice/notice_codec.py": "2e2078fb3782156d91dd7c43ade69d42ee20ac7d19d2aeed8ad812d06d9a5ed8"
+  }
+}

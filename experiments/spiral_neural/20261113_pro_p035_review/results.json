@@ -1,0 +1,323 @@
+{
+  "schema": "PRO-P035-READONLY-REVIEW-v1",
+  "author": "ChatGPT Pro",
+  "status": "passed_no_findings_in_scope",
+  "source": {
+    "codex_commit": "a309f2fc3e23255327fcab35745c27012d15ed4f",
+    "package": "experiments/spiral_neural/20261112_p035",
+    "source_freeze_sha256": "f2b6ad6ef4b26bda02a20376f534a16d26cffece4527457fc102bd51b6b6f702",
+    "package_manifest_sha256": "999b3d2ccb302613874b0f04a2efc67934847b33c88c5320b7ceb709492e4a8d"
+  },
+  "reproduction": {
+    "working_directory": "experiments/spiral_neural/20261113_pro_p035_review",
+    "command": "python -B audit_p035.py --out results.json",
+    "output": "results.json",
+    "source_package_relative_to_review": "../20261112_p035"
+  },
+  "audit_script_sha256": "6ada168898e32f554f631790ef7152870f14fa42b56d35230900819b0fda8dd2",
+  "scope": "Bounded read-only public artifact audit; four final checkpoint inferences and four growth copies; zero training/replay.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_freeze_hashes_verified": 9,
+  "package_file_hashes_verified": 26,
+  "zip_entry_hashes_verified": 746,
+  "engineering_freeze_hashes_verified": 3,
+  "published_freeze_precedes_manifest": true,
+  "courses_regenerated": 30,
+  "student_exposure_ledgers_verified": 12,
+  "student_interface_ledgers_verified": 12,
+  "stage_budgets_verified": 60,
+  "budget_rows": {
+    "F": [
+      {
+        "lessons": 3000,
+        "target_updates": 9000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 12627,
+        "MAC_cap": 37881000,
+        "executed_train_MACs": 37881000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 12000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 16836,
+        "MAC_cap": 50508000,
+        "executed_train_MACs": 50508000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 15000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 21045,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63135000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 15000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 21045,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63135000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 15000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 21045,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63135000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      }
+    ],
+    "G": [
+      {
+        "lessons": 4812,
+        "target_updates": 14436,
+        "L": 8,
+        "H": 64,
+        "MAC_per_target": 2624,
+        "MAC_per_lesson": 7872,
+        "MAC_cap": 37881000,
+        "executed_train_MACs": 37880064,
+        "unused_MACs": 936,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3904,
+        "target_updates": 15616,
+        "L": 10,
+        "H": 66,
+        "MAC_per_target": 3234,
+        "MAC_per_lesson": 12936,
+        "MAC_cap": 50508000,
+        "executed_train_MACs": 50502144,
+        "unused_MACs": 5856,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3257,
+        "target_updates": 16285,
+        "L": 12,
+        "H": 68,
+        "MAC_per_target": 3876,
+        "MAC_per_lesson": 19380,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63120660,
+        "unused_MACs": 14340,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 15000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 21045,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63135000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      },
+      {
+        "lessons": 3000,
+        "target_updates": 15000,
+        "L": 13,
+        "H": 69,
+        "MAC_per_target": 4209,
+        "MAC_per_lesson": 21045,
+        "MAC_cap": 63135000,
+        "executed_train_MACs": 63135000,
+        "unused_MACs": 0,
+        "unused_MACs_carry": false
+      }
+    ]
+  },
+  "actual_primary_totals_from_stage_summaries": {
+    "lessons": 197838,
+    "updates": 854022,
+    "MAC": 3333401208
+  },
+  "archived_final_truth_rows_reaggregated": 192,
+  "archived_final_train": [
+    144,
+    144
+  ],
+  "archived_final_operand_heldout": [
+    5,
+    48
+  ],
+  "interactions": [
+    0,
+    -1,
+    0
+  ],
+  "paired_initial_states_verified": 6,
+  "seed202_initializations_recreated_without_updates": 2,
+  "actual_final_checkpoint_rows": 64,
+  "actual_final_checkpoint_examples": [
+    {
+      "student": "S-F-seed202",
+      "whole_correct": 14,
+      "of": 16
+    },
+    {
+      "student": "S-G-seed202",
+      "whole_correct": 12,
+      "of": 16
+    },
+    {
+      "student": "H-F-seed202",
+      "whole_correct": 12,
+      "of": 16
+    },
+    {
+      "student": "H-G-seed202",
+      "whole_correct": 12,
+      "of": 16
+    }
+  ],
+  "max_actual_vs_archived_TF_logit_difference": 0.0,
+  "actual_growth_copy_checks": [
+    {
+      "student": "S-G-seed202",
+      "target_stage": "s1_echo_d2",
+      "probes": 6,
+      "max_same_raw_logit_difference": 0.0,
+      "published_difference": 0.0,
+      "old_arrays_moments_birth_t_exact": true,
+      "result_equals_published_entry_state": true
+    },
+    {
+      "student": "H-G-seed101",
+      "target_stage": "s2_echo_d3",
+      "probes": 16,
+      "max_same_raw_logit_difference": 1.9073486328125e-06,
+      "published_difference": 1.9073486328125e-06,
+      "old_arrays_moments_birth_t_exact": true,
+      "result_equals_published_entry_state": true
+    },
+    {
+      "student": "S-G-seed202",
+      "target_stage": "s3_op2",
+      "probes": 40,
+      "max_same_raw_logit_difference": 0.0,
+      "published_difference": 0.0,
+      "old_arrays_moments_birth_t_exact": true,
+      "result_equals_published_entry_state": true
+    },
+    {
+      "student": "H-G-seed202",
+      "target_stage": "s3_op2",
+      "probes": 40,
+      "max_same_raw_logit_difference": 0.0,
+      "published_difference": 0.0,
+      "old_arrays_moments_birth_t_exact": true,
+      "result_equals_published_entry_state": true
+    }
+  ],
+  "largest_published_growth_difference": {
+    "student": "S-G-seed101",
+    "stage": "s2_echo_d3",
+    "difference": 1.9073486328125e-06
+  },
+  "answer_role_exposure": [
+    {
+      "student": "S-F-seed101",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "S-F-seed202",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "S-F-seed303",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "S-G-seed101",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "S-G-seed202",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "S-G-seed303",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-F-seed101",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-F-seed202",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-F-seed303",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-G-seed101",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-G-seed202",
+      "answer_value4": 250,
+      "answer_value6": 250
+    },
+    {
+      "student": "H-G-seed303",
+      "answer_value4": 250,
+      "answer_value6": 250
+    }
+  ],
+  "gradient_update_calls": 0,
+  "repo_package_unchanged": true,
+  "new_students": 0,
+  "new_training_target_updates": 0,
+  "full_training_replays": 0,
+  "forbidden_methods": [
+    "Model.step",
+    "Model.lesson",
+    "Model.loss_grad"
+  ],
+  "NVIDIA_calls_this_review": 0,
+  "findings_in_scope": [],
+  "limitations": [
+    "Full target traces and intermediate quarter-state arrays are not all public; no independent full training replay is claimed.",
+    "Published preregistration timestamps are checked for internal order, not independently authenticated.",
+    "Input-codec by capacity-timing and shared response grammar only; equal MAC intentionally gives G more exposure."
+  ]
+}

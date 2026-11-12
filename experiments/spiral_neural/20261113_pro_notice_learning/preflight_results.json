@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Engineering only; final verification used synthetic seed 910013; no formal student training or formal heldout neural score",
+  "run_trial_sha256": "4b6e70445a75c206b1bc61acfc1183a866a932f6e528b656e917345fef5e09cb",
+  "unit_test_command": "python -B -m unittest discover -s experiments/spiral_neural/20261113_pro_notice_learning -p test_engineering.py -v",
+  "unit_test_output": "test_bounded_synthetic_replay (test_engineering.Engineering.test_bounded_synthetic_replay) ... ok\ntest_dataset_legality_and_split (test_engineering.Engineering.test_dataset_legality_and_split) ... ok\ntest_default_cap_is_not_eight (test_engineering.Engineering.test_default_cap_is_not_eight) ... ok\ntest_evaluation_does_not_train (test_engineering.Engineering.test_evaluation_does_not_train) ... ok\ntest_exact_covers_and_budget (test_engineering.Engineering.test_exact_covers_and_budget) ... ok\ntest_optimized_python_is_rejected (test_engineering.Engineering.test_optimized_python_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.949s\n\nOK\n",
+  "cli_preflight_command": "python -B experiments/spiral_neural/20261113_pro_notice_learning/run_trial.py --preflight",
+  "cli_preflight": {
+    "complete_state_save_load": "exact",
+    "data": {
+      "all_symbols_and_maximum_prefix_length_seen_in_train": true,
+      "consistent_teacher_prefix_labels": 318,
+      "heldout": 6,
+      "heldout_targets": 106,
+      "max_generation_steps_including_STOP": 24,
+      "max_prefix": 75,
+      "rows": 18,
+      "train": 12,
+      "train_targets_per_epoch": 212
+    },
+    "formal_heldout_neural_evaluations": 0,
+    "formal_student_updates": 0,
+    "generation_cap_and_overflow": "PASS",
+    "native_lesson_vs_independent_target_loop": "exact",
+    "status": "PASS",
+    "synthetic_optimizer_update_calls": 6,
+    "synthetic_seed": 910013
+  },
+  "synthetic_optimizer_update_calls_this_final_verification_batch": 12,
+  "earlier_development_preflight_update_calls_by_implementation_agent": 12,
+  "cumulative_synthetic_optimizer_update_calls_by_implementation_agent": 24,
+  "formal_student_updates": 0,
+  "formal_heldout_neural_evaluations": 0,
+  "notes": [
+    "Four preflight invocations in total by implementation agent: two through unit tests and two through CLI; each has three native and three replay synthetic updates.",
+    "Independent read-only reviews may have separate records; this count covers the implementation agent's executed commands."
+  ]
+}
