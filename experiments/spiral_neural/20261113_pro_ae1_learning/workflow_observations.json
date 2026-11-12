@@ -1,0 +1,72 @@
+{
+  "id": "Pro-two-phase-workflow-observation-20261113",
+  "author": "ChatGPT Pro",
+  "timezone": "Asia/Taipei",
+  "measurement_start_utc": "2026-11-12T21:55:54Z",
+  "measurement_start_basis": "First explicit clock reading this turn; excludes unmeasured initial response and prior-turn AE1 design effort.",
+  "prior_design_commit": "685c6f92d9e5a335a2f2a7193d9b501918d90b00",
+  "method": "Phase1: review and freeze the question, data, budgets, outputs and checks. Phase2: run only the frozen protocol, verify and report. Keep protocol changes and execution defects distinct.",
+  "comparison": "Observational pilot only; no matched one-phase control, no claim of measured speedup.",
+  "events": [
+    {
+      "utc": "2026-11-12T21:55:54Z",
+      "phase": "design",
+      "event": "Started explicit timing after repository/skill discovery; visible prior design sufficient, no additional personal-context retrieval."
+    },
+    {
+      "utc": "2026-11-12T21:57:32Z",
+      "phase": "design",
+      "event": "Verified PR16 open/unmerged at685c6f9, no newer Codex branch; isolated new worktree created. Runtime NumPy2.3.5 available."
+    },
+    {
+      "utc": "2026-11-12T21:58:13Z",
+      "phase": "design",
+      "event": "No callable external worker or repository adapter found; continued local bounded reviews."
+    },
+    {
+      "utc": "2026-11-12T22:05:05Z",
+      "phase": "design",
+      "event": "Completed core runner and read-only reviews; explicitly split already-taught rows from future curriculum rows, and added early/late/no-STOP summaries before freeze. No scientific budget or dataset changed; no neural execution."
+    },
+    {
+      "utc": "2026-11-12T22:09:05.772039+00:00",
+      "phase": "design",
+      "event": "Prepared exact three initial states and all168 epoch orders. Gzip publication packaging reduced dataset from3,318,141 to190,306 bytes without changing scientific data; metadata producer hash changed. All three host-loop preflights and two pure-data builds had0 NN forward/optimizer."
+    }
+  ],
+  "pre_execution_decisions": [
+    {
+      "decision": "Use a single three-seed curriculum arm.",
+      "reason": "The present question is acquisition of AE1, not causal superiority of a curriculum; an extra six-student comparison is unnecessary for this first screen."
+    },
+    {
+      "decision": "Use cumulative review and a fixed target-shuffle schedule, not consecutive targets from each whole question.",
+      "reason": "Preserve shorter tasks and make the intended exposure order explicit, informed by existing UR1 order evidence without claiming transfer is established."
+    },
+    {
+      "decision": "No validation split or checkpoint selection.",
+      "reason": "All budgets/checkpoints are fixed; save evaluation effort and report every seed/phase. Test results cannot decide training."
+    },
+    {
+      "decision": "Measure exact count quartets, information bits and STOP separately.",
+      "reason": "Full Echo alone permits ignoring count; suffix zeros and stopping can inflate easier metrics."
+    },
+    {
+      "decision": "Describe heldout complete-payload questions, with a fragment-exposure ledger.",
+      "reason": "Symbols and answer fragments may occur elsewhere in training; exact split disjointness does not imply all-role novelty."
+    },
+    {
+      "decision": "Prespecify one full seed101 replay rather than all-seed replays.",
+      "reason": "Check deterministic integration end-to-end while bounding verification cost; independently audit outputs from every saved seed checkpoint."
+    }
+  ],
+  "post_freeze_protocol_amendments": [],
+  "post_freeze_implementation_repairs": [],
+  "discarded_formal_runs": [],
+  "efficiency_conclusion": "pending execution; no quantified speedup claimed",
+  "design_engineering_preflight_runs": 3,
+  "pure_data_generation_runs": 2,
+  "actual_design_NN_forwards": 0,
+  "actual_design_optimizer_updates": 0,
+  "actual_design_synthetic_logit_calls": 174
+}

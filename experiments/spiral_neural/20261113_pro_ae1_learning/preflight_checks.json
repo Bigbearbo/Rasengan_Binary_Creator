@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "teacher_targets_compared": 11730,
+  "phase_pool_sizes": [
+    210,
+    1770,
+    4050,
+    7050,
+    11730
+  ],
+  "host_loop_cases": [
+    {
+      "actions": 1,
+      "cap_exhausted": false,
+      "max_prefix": 39
+    },
+    {
+      "actions": 25,
+      "cap_exhausted": false,
+      "max_prefix": 63
+    },
+    {
+      "actions": 32,
+      "cap_exhausted": true,
+      "max_prefix": 70
+    }
+  ],
+  "untouched_initial_full_state_roundtrip": true,
+  "checkpoint_overwrite_rejected": true,
+  "actual_neural_forward_calls": 0,
+  "actual_optimizer_updates": 0,
+  "synthetic_logit_host_calls": 58,
+  "external_model_calls": 0,
+  "source_sha256": {
+    "preflight.py": "bacada51a6fd522f796f45cd8514540037723b10312c9a59c89f838e8c10415e",
+    "run_trial.py": "b491a8d32e653917527f191299eaeae436b61783bb1ca961ea2e7d36a010054c",
+    "learner.py": "6d2e284d30b9cf4f45cd7a17d37df9764718882d29f6322cdeb21d02b7db7876"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "Pro-AE1-learning-20261113-v1",
+  "author": "ChatGPT Pro and assigned local agents",
+  "base_commit": "685c6f92d9e5a335a2f2a7193d9b501918d90b00",
+  "profile": "SLE-AE1-n5-v1",
+  "question": "Can the existing raw-binary dense learner acquire diverse multiword Echo and count-controlled stopping within a fixed curriculum budget?",
+  "arms": ["cumulative_full_echo_then_count"],
+  "seeds": [101, 202, 303],
+  "data_seed": 20261113,
+  "model": {
+    "reference": "experiments/spiral_neural/20261112_p035/reference/p030_reference.py",
+    "reference_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "L": 80,
+    "H": 64,
+    "parameters": 10499,
+    "generation_cap_including_STOP": 32,
+    "train_dense_MAC_per_target": 21056,
+    "inference_dense_MAC_per_forward": 10432,
+    "optimizer": "Unchanged reference Model.step: Adam lr0.003, beta0.9/0.999, epsilon1e-8, gradient norm clipping1; original float32 weights and per-entry age.",
+    "growth": false,
+    "initialization": "New random reference Model for each frozen seed; no historical trained or manually constructed weights."
+  },
+  "dataset": {
+    "ordinary_symbol_ids": [0, 29],
+    "N1_train_payloads": 30,
+    "N2_N3_N4_train_payloads_each": 120,
+    "N2_N3_N4_test_payloads_each": 60,
+    "test_split_unit": "Complete ordered payload, including its length; all r versions of one payload remain together.",
+    "balance": "For each N>=2, independent column permutations of all30 IDs form blocks of30 payloads; four accepted train blocks and two accepted test blocks. Reject a whole block on duplicate/prohibited complete payload to retain exact position marginals.",
+    "excluded_public_fixture": [1, 6, 11, 17],
+    "row_types": [[1, 1], [2, 2], [3, 3], [4, 1], [4, 2], [4, 3], [4, 4]],
+    "train_questions": 750,
+    "test_questions": 360,
+    "validation_questions": 0,
+    "validation_reason": "Fixed budgets and all frozen checkpoints are reported; no early stopping, checkpoint selection or hyperparameter tuning.",
+    "novelty_scope": "Test complete payload questions were not trained. Symbols and shorter/longer answer fragments can have prior exposure; a role-specific ledger reports it. This is not all-role content novelty."
+  },
+  "curriculum": {
+    "phase_definitions": ["full_echo_N_le_1", "full_echo_N_le_2", "full_echo_N_le_3", "full_echo_N_le_4", "full_echo_all_plus_N4_r1_r2_r3"],
+    "epochs": [24, 8, 8, 8, 8],
+    "targets_per_epoch": [210, 1770, 4050, 7050, 11730],
+    "phase_updates": [5040, 14160, 32400, 56400, 93840],
+    "cumulative_updates": [5040, 19200, 51600, 108000, 201840],
+    "target_order": "Shuffle the complete teacher-target pool once per epoch with a dedicated frozen PCG64 generator for each seed/phase: seed+81000+1000*phase_index. Each target occurs once per epoch. No online score-dependent resampling.",
+    "state_transfer": "Carry all weights, moments, ages and update count across phases; no optimizer reset.",
+    "training_updates_per_student": 201840,
+    "primary_students": 3,
+    "primary_updates_total": 605520,
+    "primary_train_dense_MAC_total": 12749829120,
+    "phase_selection": "Always execute all five phases unless infrastructure or a nonfinite-state guard aborts. Never extend the budget based on scores."
+  },
+  "evaluation": {
+    "checkpoints": ["initial", "phase1", "phase2", "phase3", "phase4", "phase5"],
+    "timing": "No actual neural train/test performance evaluation until all three primary trajectories and the prespecified seed101 replay finish or are explicitly recorded as failed. Frozen checkpoint files are then evaluated read-only.",
+    "primary_checkpoint": "phase5 (final), fixed before training",
+    "primary_metric": "N4 test exact generated answer including self-emitted STOP: 240 questions grouped into60 payload quartets.",
+    "secondary_metrics": ["Same-payload N4 all-four-r exact quartet success", "Same-payload all-four-r STOP-position success", "Per-N/r whole-answer fit and generalization", "Free-run information-bit accuracy excluding mandatory zero word suffixes", "Teacher-forced information-bit accuracy and CE", "Full Echo retention at final vs phase4", "Early/late STOP, generation-cap exhaustion and context overflow"],
+    "screening_success_per_seed": {
+      "final_train_whole_fraction_at_least_each_N_r": 0.95,
+      "final_N4_test_whole_fraction_at_least": 0.95,
+      "final_N4_test_all_four_r_exact_quartet_fraction_at_least": 0.90,
+      "final_N4_test_STOP_position_fraction_at_least": 0.99
+    },
+    "three_seed_success": "All three seeds meet the prespecified screening criteria; this is descriptive, not a statistical population guarantee.",
+    "host_generation": "The generator receives only Q, uses Q+its own emitted bits, and stops only on the model STOP action or fixed cap32. No parsed r, payload boundary, expected answer, teacher token, length oracle, truncation to r, or forced STOP enters generation.",
+    "shortcut_control": "Report the exact teacher-free copy-all-payload baseline: perfect on full Echo but only one of four count variants correct per N4 quartet. It is a scoring diagnostic, not another neural student."
+  },
+  "verification": {
+    "full_replay_seeds": [101],
+    "replay_updates": 201840,
+    "replay_train_dense_MAC": 4249943040,
+    "replay_scope": "Exactly one complete seed101 replay, all five phase endpoint learning states and epoch loss/prediction statistics must match. Seed202/303 are not fully retrained for verification.",
+    "bounded_independent_evaluation": "At every saved checkpoint for every seed, independently encode raw prefix into two channels and recompute all generation/TF targets for the first and last row in each split/N/r cell. No model tuning from audit outputs.",
+    "preflight": "Data grouping/coverage/labels, resource arithmetic, complete frozen schedule permutations, state serialization and pure host-loop fake-logit STOP/cap cases. No exploratory neural optimization.",
+    "source_freeze": "Publish exact protocol, dataset, schedules, initial full states and source hashes in Git before primary training. Runner verifies them and the supplied preregistration commit."
+  },
+  "interpretation_limits": [
+    "One curriculum arm does not estimate curriculum advantage over direct mixed teaching or the previous UR1 task.",
+    "n5 is fixed and all tested N/r types receive training; this is neither width extrapolation nor physical network expansion.",
+    "Count-conditioned success can support use of count in this bounded task, not a unique internal algorithm or arbitrary arithmetic count understanding.",
+    "Failure is a result for this learner/data/budget, not a proof that dense networks cannot copy or that SLE is inferior.",
+    "This run does not test SLE against an alternative input code, the upgrade ritual's transfer benefit, or a VM.",
+    "A single observed design-then-experiment workflow cannot establish causal speedup; record elapsed time, rework, corrections, discarded runs and costs without inventing a control."
+  ],
+  "external_workers": {"nvidia_status": "skipped_unavailable", "reason": "No callable NVIDIA/OpenRouter worker in this environment; no repository worker adapter found.", "actual_external_model_calls": 0}
+}
