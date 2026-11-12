@@ -1,0 +1,54 @@
+{
+  "task_id": "N05-P032-20261112",
+  "findings": [
+    {
+      "id": "N05-P032-F1",
+      "severity": "HIGH",
+      "claim": "The proposed experimental design lacks a deterministic mechanism for prefix initialization across width variants, risking divergent logits at the start of training.",
+      "source_ref": "P030 plan; repository Bigbearbo/Rasengan_Binary_Creator, P032 plan at a1881a3",
+      "concrete_counterexample_or_check": "The plan states 'use prefixH72 for smaller arm so common incoming blocks agree and initial logits equal'. However, L16/H128 and L8/H64 blocks have different parameterization. Without explicit weight tying or a proven projection identity, initializing H72 from H128 weights via slicing or reshape does not guarantee logit equivalence, especially across seeds 101/202/303 where RNG states diverge.",
+      "recommendation": "Either (a) enforce strict weight tying where H72 weights are a subset/submanifold of H128 with verified forward equivalence, or (b) randomize prefixes independently per width and treat width comparison as a confounded ablation rather than a fair scale experiment."
+    },
+    {
+      "id": "N05-P032-F2",
+      "severity": "HIGH",
+      "claim": "The split definition introduces data leakage between train/val/test due to the 'heldout >=4 are not present at earlier data' rule conflicting with the n3 dataset structure [0,1,2,3,4,7].",
+      "source_ref": "P030 report merge16a26e1; P032 plan at a1881a3",
+      "concrete_counterexample_or_check": "P030 n3 train[0,1,2,3,4,7] val[5] test[6]. P032 proposes S0: val[4]/test[6], S1: val[5]/test[7], train[0,1,2,3,6,7,...]. Under this scheme, index 4 moves from train (P030) to val (P032), and index 7 moves from train (P030) to train (P032) but was test (P030). The 'heldout >=4' rule reshuffles the semantic meaning of the original test set (6) into val for S1, invalidating direct comparison with P030 metrics.",
+      "recommendation": "Freeze the original P030 split mapping (train[0-4], val[5], test[6]) for all subsequent experiments, or explicitly document and verify that the new splits maintain the same input-output distribution invariants per subset."
+    },
+    {
+      "id": "N05-P032-F3",
+      "severity": "MEDIUM",
+      "claim": "The equal MAC accounting (H128 after 1687 episodes vs H72 at 3000) assumes static episode counts but the specification includes stochastic Neg counts per 10-episode block (7 or 5 Neg) and independent shuffle cycles.",
+      "source_ref": "P032 plan: 'Each 10episode block has exactly 7 or 5 Neg; per-op values independent shuffle cycles.'",
+      "concrete_counterexample_or_check": "If seed 101 produces 7 Neg/block and seed 202 produces 5 Neg/block, the total Neg count after 3000 episodes varies by seed. H72 at 3000 episodes does not consume the same total Neg budget as H128 at 1687 episodes if Neg density differs. The claim 'equal total cost including warm 8736 token updates: H128 after 923Neg vs H72 at 3000' collapses variable Neg counts into a single token count, masking per-width optimization trajectory differences.",
+      "recommendation": "Track actual Neg episode counts per seed and width. Report results normalized per actual Neg budget consumed, not episode count. If equal MAC is a hard constraint, fix the Neg count per block (e.g., exactly 6 Neg per 10-episode block) and verify total episodes adjust accordingly."
+    },
+    {
+      "id": "N05-P032-F4",
+      "severity": "MEDIUM",
+      "claim": "Warm start budget allocation (data1=96, data2=192, data3=768, op2/data3=768) assumes a fixed total token budget that may not scale linearly across H72/H128 width variants when initialized from a common L8/H64 block.",
+      "source_ref": "P032 plan: 'Warm Echo phases fixed budgets data1=96,data2=192,data3=768,op2/data3=768.'",
+      "concrete_counterexample_or_check": "The warm phase specifies exact token counts (96+192+768+768=1824 tokens). For H72, this represents a high relative parameter-update ratio (1824 tokens vs 2595 params ≈ 0.7x parameters per token). For H128 (4611 params), the ratio is ≈0.4x. The plan claims 'Carry same weights/Adam into Neg3000 episodes' but does not verify whether the warm phase's gradient updates saturate or underutilize the wider capacity. Divergent warm-phase convergence behavior between widths will confound the subsequent Neg3000 comparison.",
+      "recommendation": "Log warm-phase loss trajectories per width. If H128 does not converge within the fixed 1824 warm tokens while H72 does, adjust warm budgets proportionally (e.g., scale data3 by 128/72) or cap warm steps at the point of convergence per width before entering Neg3000."
+    }
+  ],
+  "unknowns": [],
+  "execution_claim": "not_run",
+  "verified_usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 1383,
+    "total_tokens": 2122,
+    "cost": 0
+  },
+  "model_id": "nvidia/nemotron-3.5-lightning:free",
+  "calls": 1,
+  "seconds": 27.953,
+  "codex_assessment": {
+    "F1": "Claim rejected; forward-equivalence check adopted and passed at <=5.96e-8.",
+    "F2": "Rejected: confuses independent P032 initialization with original P030 split and misstates original value7.",
+    "F3": "Rejected: both operations have5targettokens per lesson; exact ratio and per-op exposure verified.",
+    "F4": "1824presentations are8736targetupdates, not1824tokens. Unequal warm convergence limitation disclosed; do not change frozen budgets."
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "status": "verified",
+  "groups": [
+    {
+      "H": 72,
+      "new_percent": 70,
+      "learners": 6,
+      "train": [
+        72,
+        72
+      ],
+      "validation": [
+        0,
+        12
+      ],
+      "test": [
+        0,
+        12
+      ],
+      "test_median_of_2": 0.0,
+      "test_worst_of_2": 0,
+      "both_test_correct_learners": 0,
+      "confirmed_train_val_learners": 0,
+      "test_echo_before": 6,
+      "test_echo_after": 0,
+      "logical_train_MACs_per_learner": 124756416
+    },
+    {
+      "H": 72,
+      "new_percent": 50,
+      "learners": 6,
+      "train": [
+        72,
+        72
+      ],
+      "validation": [
+        0,
+        12
+      ],
+      "test": [
+        1,
+        12
+      ],
+      "test_median_of_2": 0.0,
+      "test_worst_of_2": 0,
+      "both_test_correct_learners": 0,
+      "confirmed_train_val_learners": 0,
+      "test_echo_before": 6,
+      "test_echo_after": 1,
+      "logical_train_MACs_per_learner": 124756416
+    },
+    {
+      "H": 128,
+      "new_percent": 70,
+      "learners": 6,
+      "train": [
+        72,
+        72
+      ],
+      "validation": [
+        0,
+        12
+      ],
+      "test": [
+        1,
+        12
+      ],
+      "test_median_of_2": 0.0,
+      "test_worst_of_2": 0,
+      "both_test_correct_learners": 0,
+      "confirmed_train_val_learners": 0,
+      "test_echo_before": 6,
+      "test_echo_after": 1,
+      "logical_train_MACs_per_learner": 221789184
+    },
+    {
+      "H": 128,
+      "new_percent": 50,
+      "learners": 6,
+      "train": [
+        72,
+        72
+      ],
+      "validation": [
+        0,
+        12
+      ],
+      "test": [
+        0,
+        12
+      ],
+      "test_median_of_2": 0.0,
+      "test_worst_of_2": 0,
+      "both_test_correct_learners": 0,
+      "confirmed_train_val_learners": 0,
+      "test_echo_before": 6,
+      "test_echo_after": 0,
+      "logical_train_MACs_per_learner": 221789184
+    }
+  ],
+  "equal_MAC": [
+    {
+      "new_percent": 70,
+      "comparison": "same_Neg_MAC",
+      "H72_Neg_presentations": 3000,
+      "H128_Neg_presentations": 1687,
+      "H72_test": [
+        0,
+        12
+      ],
+      "H128_test": [
+        1,
+        12
+      ],
+      "cost_H72": 78840000,
+      "cost_H128": 78816640
+    },
+    {
+      "new_percent": 70,
+      "comparison": "same_total_train_MAC",
+      "H72_Neg_presentations": 3000,
+      "H128_Neg_presentations": 923,
+      "H72_test": [
+        0,
+        12
+      ],
+      "H128_test": [
+        2,
+        12
+      ],
+      "cost_H72": 124756416,
+      "cost_H128": 124751744
+    },
+    {
+      "new_percent": 50,
+      "comparison": "same_Neg_MAC",
+      "H72_Neg_presentations": 3000,
+      "H128_Neg_presentations": 1687,
+      "H72_test": [
+        1,
+        12
+      ],
+      "H128_test": [
+        0,
+        12
+      ],
+      "cost_H72": 78840000,
+      "cost_H128": 78816640
+    },
+    {
+      "new_percent": 50,
+      "comparison": "same_total_train_MAC",
+      "H72_Neg_presentations": 3000,
+      "H128_Neg_presentations": 923,
+      "H72_test": [
+        1,
+        12
+      ],
+      "H128_test": [
+        1,
+        12
+      ],
+      "cost_H72": 124756416,
+      "cost_H128": 124751744
+    }
+  ],
+  "split_pair_coverage": {
+    "S0": {
+      "train_values": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "heldout": [
+        4,
+        6
+      ],
+      "missing_pairwise_bit_combinations_in_train": [
+        {
+          "information_bit_positions_msb_first": [
+            0,
+            2
+          ],
+          "absent_pairs": [
+            "10"
+          ]
+        }
+      ],
+      "interpretation": "valid preregistered splits; structured missing combinations limit broader conclusions"
+    },
+    "S1": {
+      "train_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "heldout": [
+        5,
+        7
+      ],
+      "missing_pairwise_bit_combinations_in_train": [
+        {
+          "information_bit_positions_msb_first": [
+            0,
+            2
+          ],
+          "absent_pairs": [
+            "11"
+          ]
+        }
+      ],
+      "interpretation": "valid preregistered splits; structured missing combinations limit broader conclusions"
+    }
+  },
+  "P030_same_Q_echo_reproduced": [
+    {
+      "seed": 101,
+      "Q": "010001010",
+      "before": "1010S",
+      "after": "1000S",
+      "same_input_shape": true
+    },
+    {
+      "seed": 202,
+      "Q": "010001010",
+      "before": "1010S",
+      "after": "1000S",
+      "same_input_shape": true
+    },
+    {
+      "seed": 303,
+      "Q": "010001010",
+      "before": "1010S",
+      "after": "1000S",
+      "same_input_shape": true
+    }
+  ],
+  "test_STOP_position_correct": [
+    47,
+    48
+  ],
+  "test_bit_correct": [
+    40,
+    10,
+    9,
+    47
+  ],
+  "physical_train_presentations_without_replay": 93888,
+  "logical_total_presentations": 115776,
+  "physical_target_updates_without_replay": 464832,
+  "logical_target_updates": 569664,
+  "physical_target_updates_including_replay": 929664,
+  "B_growth": "not executed: A does not support larger capacity as the present remedy"
+}

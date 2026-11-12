@@ -1,0 +1,22 @@
+{
+  "initialization": [
+    {
+      "maximum_logit_error": 5.960464477539063e-08,
+      "seed": 101,
+      "shared_initial_blocks_equal": true
+    },
+    {
+      "maximum_logit_error": 0.0,
+      "seed": 202,
+      "shared_initial_blocks_equal": true
+    },
+    {
+      "maximum_logit_error": 5.960464477539063e-08,
+      "seed": 303,
+      "shared_initial_blocks_equal": true
+    }
+  ],
+  "per10_exact_new_old_and_train_coverage": true,
+  "shared_P030_learning_code": true,
+  "split_predeclared_disjoint": true
+}
