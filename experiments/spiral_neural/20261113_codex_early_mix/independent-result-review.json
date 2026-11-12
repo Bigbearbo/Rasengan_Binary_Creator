@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "root_confirmed_formal_exit0": true,
+  "formal_session": 32331,
+  "manifest_sha256": "c97a49f84e85ad801c9c4e93fbbd1194c217382b23bb16b9afeab0711d9080c7",
+  "inputs_zip_sha256": "3dd9be905ec50e2069c2fc1bd3c70616d6272218a11faa4a397e5a19400a471c",
+  "preregistration_commit": "b5cb521e0c0864bff88609370f451f4c701be7c4",
+  "source_hashes": {
+    "protocol.json": "ed07f9e9ba5a4a00d4c71fb00dbd2da02ec53b1612355c496fcfc129e6be8203",
+    "run_early_mix.py": "decbb4e6b843433c446fed067f806c5d586768067e306a7341692dd08e9130be",
+    "test_early_mix.py": "157b386c29ba30a54db962688b1ba8b3f03b5404e49d61ec9cdf69976a1ab1fc"
+  },
+  "primary_target_records_verified": 72000,
+  "full_checkpoints_independently_evaluated": 24,
+  "science_NPZ_archives_loaded_including6final_copies": 30,
+  "whole_free_generations_verified": 384,
+  "TF_logits_probabilities_CE_verified": 1920,
+  "opcode_conditional_pairs_verified": 192,
+  "exact_all_truth_metrics_STOP_other_op_curves_and_paired_final_differences": true,
+  "state_boundary_anchors": 24,
+  "independent_next_update_prediction_loss_anchors": 18,
+  "same_full_initial_states_and_multisets_peroporders_common_tail_verified": true,
+  "final_whole_correct_totals_by_arm_op_split": {
+    "early": {
+      "0": {
+        "train": 18,
+        "diagnostic_heldout_exposed": 2
+      },
+      "1": {
+        "train": 18,
+        "diagnostic_heldout_exposed": 1
+      }
+    },
+    "late": {
+      "0": {
+        "train": 18,
+        "diagnostic_heldout_exposed": 1
+      },
+      "1": {
+        "train": 18,
+        "diagnostic_heldout_exposed": 1
+      }
+    }
+  },
+  "paired_final_differences": [
+    {
+      "seed": 101,
+      "difference": "early-minus-late",
+      "whole_correct_by_op_split": {
+        "0": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 1
+        },
+        "1": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 0
+        }
+      },
+      "same_payload_both_ops_correct": {
+        "train": 0,
+        "diagnostic_heldout_exposed": 1
+      }
+    },
+    {
+      "seed": 202,
+      "difference": "early-minus-late",
+      "whole_correct_by_op_split": {
+        "0": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 0
+        },
+        "1": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 0
+        }
+      },
+      "same_payload_both_ops_correct": {
+        "train": 0,
+        "diagnostic_heldout_exposed": 0
+      }
+    },
+    {
+      "seed": 303,
+      "difference": "early-minus-late",
+      "whole_correct_by_op_split": {
+        "0": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 0
+        },
+        "1": {
+          "train": 0,
+          "diagnostic_heldout_exposed": 0
+        }
+      },
+      "same_payload_both_ops_correct": {
+        "train": 0,
+        "diagnostic_heldout_exposed": 0
+      }
+    }
+  ],
+  "final_opcode_both_correct_per_student": [
+    {
+      "arm": "early",
+      "seed": 101,
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "arm": "late",
+      "seed": 101,
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "arm": "early",
+      "seed": 202,
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "arm": "late",
+      "seed": 202,
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "arm": "early",
+      "seed": 303,
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "arm": "late",
+      "seed": 303,
+      "correct": 8,
+      "total": 8
+    }
+  ],
+  "native_offline_forward_calls": 3546,
+  "native_offline_dense_MAC": 7095546,
+  "audit_extra_forward_calls": 7092,
+  "audit_extra_dense_MAC": 14191092,
+  "primary_training_dense_MAC": 303048000,
+  "replay_training_dense_MAC": 303048000,
+  "training_inference_calls": 0,
+  "array_bytes_per_student": 41460,
+  "all_science_input_and_source_files_unchanged": true,
+  "formal_wall_seconds": 108.75773800000024,
+  "audit_seconds": 1.3721045999991475,
+  "replay_scope": "Fixed driver completed6 independent target-loop replays,checking each prediction/loss/fullstate/counters and every saved full checkpoint/final state;12 trajectories/36 progress records and exit0 completion verified.",
+  "independent_limit": "All primary trace metadata and aggregate/per-state fingerprints were checked with24 saved-state and18 numeric prediction/loss anchors. No intermediate gradient or stepwise weight recomputation was performed.",
+  "interpretation_limit": "Three paired seeds in an exposed3bit domain;one diagnostic difference is not a general earlymix superiority,blind-test or internal routing claim.",
+  "new_students": 0,
+  "optimizer_calls": 0,
+  "external_model_calls": 0,
+  "legacy_or_driver_modules_imported": false,
+  "details": "review/post-run-details.json",
+  "audit_attempt_count": 2,
+  "audit_metadata_failure_count": 1,
+  "audit_successful_pass_forward_calls": 3546,
+  "audit_successful_pass_dense_MAC": 7095546,
+  "audit_prior_metadata_failed_pass_forward_calls": 3546,
+  "audit_prior_metadata_failed_pass_dense_MAC": 7095546,
+  "audit_extra_cost_scope": "Total of two actual independent readonly passes. Attempt1 completed numerical comparisons but failed opening a misnamed formal log before writing durable numeric details. Root authorized exactly one corrected full pass; attempt2 passed and wrote the numeric details. No zero-forward reconstruction of lost numeric buffers was claimed.",
+  "audit_attempts": [
+    "review/attempt-01/attempt.json",
+    "review/attempt-02/attempt.json"
+  ],
+  "audit_successful_single_invocation_result": "review/attempt-02/post-run.single-invocation.json",
+  "metadata_only_finalization": {
+    "status": "passed",
+    "helper": "review/finalize_accounting.py",
+    "helper_sha256": "345366e34a177a6cbb43f2605599409b9f18f5b6e6d0281775249d2b7324bfd0",
+    "forward_calls": 0,
+    "optimizer_calls": 0,
+    "execution_receipt_sha256": "56f5ff5b1874aa7586f330003b93232800d0a3901023363fe8bfd9d81f9984e5",
+    "formal_stdout_bytes": 93891,
+    "formal_stdout_sha256": "de65d1111ac9636fd7946cf1d852b13f7b230040979a9a82f4ab0dff3f9d20cd",
+    "formal_stderr_bytes": 0,
+    "formal_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prereg_PR_created_before_execution_start": true
+  }
+}

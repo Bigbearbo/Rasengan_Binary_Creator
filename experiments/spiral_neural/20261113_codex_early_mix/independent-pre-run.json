@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "manifest_sha256": "c97a49f84e85ad801c9c4e93fbbd1194c217382b23bb16b9afeab0711d9080c7",
+  "inputs_zip_sha256": "3dd9be905ec50e2069c2fc1bd3c70616d6272218a11faa4a397e5a19400a471c",
+  "source_hashes": {
+    "protocol.json": "ed07f9e9ba5a4a00d4c71fb00dbd2da02ec53b1612355c496fcfc129e6be8203",
+    "run_early_mix.py": "decbb4e6b843433c446fed067f806c5d586768067e306a7341692dd08e9130be",
+    "test_early_mix.py": "157b386c29ba30a54db962688b1ba8b3f03b5404e49d61ec9cdf69976a1ab1fc"
+  },
+  "portable_input_entries": 11,
+  "fresh_bundle_real_validator_passed_original_roots_blocked": true,
+  "same_seed_full_initial_states_exact": 3,
+  "independent_schedules_verified": 6,
+  "exact_matching_final1200_stream_and_prefix1200_multisets": [
+    {
+      "seed": 101,
+      "early_first300_op_counts": {
+        "1": 146,
+        "0": 154
+      },
+      "same_prefix1200_multiset": true,
+      "identical_final1200_stream": true
+    },
+    {
+      "seed": 202,
+      "early_first300_op_counts": {
+        "1": 142,
+        "0": 158
+      },
+      "same_prefix1200_multiset": true,
+      "identical_final1200_stream": true
+    },
+    {
+      "seed": 303,
+      "early_first300_op_counts": {
+        "1": 143,
+        "0": 157
+      },
+      "same_prefix1200_multiset": true,
+      "identical_final1200_stream": true
+    }
+  ],
+  "each_arm_op_value_exposures": 200,
+  "each_arm_target_count": 12000,
+  "each_arm_training_dense_MAC": 50508000,
+  "primary_targets": 72000,
+  "replay_targets": 72000,
+  "primary_training_dense_MAC": 303048000,
+  "replay_training_dense_MAC": 303048000,
+  "teacher_label_counts_per_student": {
+    "0": 6000,
+    "1": 3600,
+    "S": 2400
+  },
+  "source_review": {
+    "original_Model_AST_unmodified": true,
+    "only_binary_Q_plus_true_answer_prefix_to_training": true,
+    "no_router_growth_or_feature_added": true,
+    "checkpoint0_300_1200_2400_store_only_no_scores": true,
+    "all6primary_and6replay_finish_before_any16Q_eval": true,
+    "native_lesson_vs_independent_target_loop_fullstate_replay": true,
+    "other_op_wrong_requires_full_answer_and_STOP": true,
+    "opcode_probe_reuses_first_TF_logits_no_extra_case_or_forward": true,
+    "all_seeds_and_exact_endpoints_no_extension_or_selection": true
+  },
+  "historical_scope": "P033 already tested matched multiset/per-op order earlymix. New fixed2073,C0,2400lesson/common finalstream comparison is bounded;5/6 are exposed diagnostics.",
+  "engineering_native_calls_separate": {
+    "optimizer_updates": 6,
+    "inference_calls": 3
+  },
+  "material_findings_remaining": [],
+  "required_root_before_formal": "Verify exact public Git preregistration and archived bytes,then one fresh formal output;no control/course rerun.",
+  "reviewer_optimizer_calls": 0,
+  "reviewer_model_forward_calls": 0,
+  "reviewer_new_students": 0,
+  "external_model_calls": 0
+}

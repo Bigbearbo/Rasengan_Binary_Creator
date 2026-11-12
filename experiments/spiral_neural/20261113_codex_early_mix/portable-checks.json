@@ -1,0 +1,44 @@
+{
+  "archive_entries": 11,
+  "external_model_calls": 0,
+  "formal_inference_calls": 0,
+  "formal_training_updates": 0,
+  "fresh_files_verified_unchanged": 7,
+  "frozen_schedule_shapes": {
+    "early-seed101": [
+      2400,
+      2
+    ],
+    "early-seed202": [
+      2400,
+      2
+    ],
+    "early-seed303": [
+      2400,
+      2
+    ],
+    "late-seed101": [
+      2400,
+      2
+    ],
+    "late-seed202": [
+      2400,
+      2
+    ],
+    "late-seed303": [
+      2400,
+      2
+    ]
+  },
+  "input_archive_sha256": "3dd9be905ec50e2069c2fc1bd3c70616d6272218a11faa4a397e5a19400a471c",
+  "manifest_sha256": "c97a49f84e85ad801c9c4e93fbbd1194c217382b23bb16b9afeab0711d9080c7",
+  "model_call_counts": {
+    "forward": 0,
+    "grow": 0,
+    "lesson": 0,
+    "loss_grad": 0,
+    "step": 0
+  },
+  "old_input_locations_denied_during_validation": true,
+  "status": "PASS"
+}

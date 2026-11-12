@@ -1,0 +1,65 @@
+{
+  "Gemini": {
+    "calls": 0,
+    "reason": "Existing authenticated installation retained; prior analysis-only tool isolation unresolved, no resend or new login.",
+    "status": "skipped"
+  },
+  "NVIDIA": {
+    "calls": 1,
+    "candidate": {
+      "elapsed_ms": 214,
+      "evidence_refs": [
+        "context/echo_prefix_grammar.json",
+        "context/review_exact_new_synthetic_functions.py"
+      ],
+      "execution_claim": "not_run",
+      "findings": [
+        {
+          "claim": "Op0 copies exactly 3 information bits unchanged; Op1 complements only those 3 bits preserving syntax tail0 then appends external S as next target, matching the grammar's train_values TRAIN=(0,1,2,3,4,7).",
+          "evidence_refs": [
+            "context/echo_prefix_grammar.json",
+            "context/review_exact_new_synthetic_functions.py"
+          ]
+        },
+        {
+          "claim": "metric() aggregation preserves data-bit correctness distinction but whole_correct and free_STOP_position_correct conflate answer-matching with preserved-syntax-zero routing, risking overinterpretation as learned routing when only finite prefix behavior exists.",
+          "evidence_refs": [
+            "context/echo_prefix_grammar.json",
+            "context/review_exact_new_synthetic_functions.py"
+          ]
+        }
+      ],
+      "model_id": "nvidia/nemotron-3.5-lightning:free",
+      "recommended_next_step": "Validate that whole_correct compares full answer strings including trailing S versus TF_data_bits_correct limited to first 3 bits to confirm the distinction is preserved and not collapsed into a single metric.",
+      "status": "candidate",
+      "summary": "Op0 copies 3 bits unchanged; Op1 complements only those 3 bits then appends external S. metric() preserves data-bit counts but aggregates whole-answer and tail-zero scores together, which could conflate finite prefix matching with learned routing under whole-answer versus fixed STOP comparison.",
+      "task_id": "EARLY-MIX-SOURCE-001",
+      "unknowns": [],
+      "usage": null,
+      "worker": "nvidia"
+    },
+    "candidate_sha256": "d2133329c9115831b1e785867621ccb1311f396541fb031674c6af66cc9fd87c",
+    "main_agent_check": "answer() flips only3information bits and appends0; caller supplies external S. metric() reports separate TF_data_bits/TF_tail0/TF_STOP/free_STOP/full-answer fields. Full-string comparison is independently checked; neither metric alone identifies neural routing.",
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "no_retry": true,
+    "rejection_reasons": [
+      "Report cites invented unavailable source context/review_exact_new_synthetic_functions.py.",
+      "Claim that distinct whole/STOP metrics conflate them or establish syntax-zero routing is not supported by the supplied code."
+    ],
+    "scientific_acceptance": false,
+    "seconds": 9.922,
+    "status": "candidate_rejected",
+    "usage": {
+      "completion_tokens": 367,
+      "cost": 0,
+      "prompt_tokens": 1373,
+      "total_tokens": 1740
+    }
+  },
+  "native_OpenAI_reviewers_are_external_workers": false,
+  "preparation_note": "First prepare rejected locally because goal exceeded2000characters, externalcalls0. Narrowed to two exact functions before successful prepare; the single live call was not retried.",
+  "prepared_prompt_sha256": "80e6228bc6902baf380138f560fb13c347c62ae28d58f6e7dbdc54d989613253",
+  "request_scope": "Only explicitly selected synthetic answer/metric functions and public grammar; no private dialogue or neural scores.",
+  "round": "EARLY-MIX-EXEC-20261113",
+  "task_id": "EARLY-MIX-SOURCE-001"
+}

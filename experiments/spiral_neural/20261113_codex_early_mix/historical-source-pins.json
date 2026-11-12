@@ -1,0 +1,33 @@
+{
+  "NN_forward_calls": 0,
+  "candidate_PR18_commit": "9ba6209fd0fcc016c694762521a2ce1a7287dc5c",
+  "files": {
+    "outputs/sle-p033/P033-事前執行規格-2026-11-12.md": {
+      "bytes": 4306,
+      "sha256": "d4e430df21160a95f441c0a4f9840d3c8bc192c1cd22d3cd6605e2a39377b34f"
+    },
+    "outputs/sle-p033/P033-覆蓋與從頭混教實測結果-2026-11-12.md": {
+      "bytes": 8353,
+      "sha256": "7abf06cd6baa2bc03f898a1ce496dd137e5d71f5df04d801bb735b0899535a5c"
+    },
+    "outputs/sle-research-review/P027-修正教學方式與教材覆蓋-2026-11-12.md": {
+      "bytes": 6921,
+      "sha256": "21ed7eb2777cd16f11b7fc8f05138de82f0b95af533ffd4f0e44592b4941de67"
+    },
+    "outputs/sle-research-review/P029-論文四逐階不退回實測-2026-11-12.md": {
+      "bytes": 7746,
+      "sha256": "9ae5bdec2dd86fce09872c4290dcf6fdec46f57b303f3e26e50443ba81f8aef8"
+    },
+    "outputs/sle-research-review/P030-純二元動態網路第一批結果-2026-11-12.md": {
+      "bytes": 8267,
+      "sha256": "b76a0130ac1f5c60adb7a0a5c034a34983c78bc382ac43439bcfe23d5ea5e586"
+    },
+    "outputs/sle-research-review/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    }
+  },
+  "latest_Pro_AE1_commit": "1d8db6b6d265d4a6b059437444178e87edbb9808",
+  "optimizer_calls": 0,
+  "scope": "Historical source read-only hashes, not new training or re-evaluation"
+}

@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "scope": "Historical reports,source inspection and existing result metadata only;no old experiments rerun.",
+  "small1171": {
+    "P027_P028": "Neural Echo training succeeded in the fixed8bit192/64 domain;not Neg training;external question/answer separator present.",
+    "P029": "Same1171 model,neural curriculum onlyEcho;Neg fixture is explicit host oracle,not an input to the main model.",
+    "conclusion": "No1171-parameter Neg learning result in these studies;absence of that test does not establish inability or a minimum capacity."
+  },
+  "P030_dynamic2073": [
+    {
+      "seed": 101,
+      "Echo_train": 6,
+      "Neg_train": 6,
+      "Neg_validation": 1,
+      "Neg_test": 0,
+      "source_sha256": "fb3ba857e3e86208755fff7185467ecd308c8c5cd9be5084272d807e44938407"
+    },
+    {
+      "seed": 202,
+      "Echo_train": 6,
+      "Neg_train": 6,
+      "Neg_validation": 1,
+      "Neg_test": 0,
+      "source_sha256": "ca5c210e7bdc51ba63656869906003ab6ddf7a88c9a27ecb781c143879a01a06"
+    },
+    {
+      "seed": 303,
+      "Echo_train": 6,
+      "Neg_train": 6,
+      "Neg_validation": 0,
+      "Neg_test": 0,
+      "source_sha256": "626e0d173d0b5778fd5b18f22226ea6548fda82ac64ccdb261ae1a17e4d15e84"
+    }
+  ],
+  "P033_fixed2595": {
+    "T1": {
+      "Echo_train": 36,
+      "Neg_train": 36,
+      "Echo_validation": 0,
+      "Neg_validation": 0,
+      "Echo_test": 0,
+      "Neg_test": 0
+    },
+    "T0B": {
+      "Echo_train": 36,
+      "Neg_train": 36,
+      "Echo_validation": 0,
+      "Neg_validation": 0,
+      "Echo_test": 0,
+      "Neg_test": 1
+    }
+  },
+  "P033_scope": "Already matched complete initialization,total lesson multiset and per-op value streams forT0/T1/T0B. T1 unseen val+test0/24;T0B1/24.",
+  "new_design_difference": "Smaller fixedL13/H69 model,C0 six-value split,2400lesson budget,matched prefix multisets by1200,and identical final1200lesson suffix;not a first-ever earlymix or matched-multiset study.",
+  "new_schedule_review_notes": [
+    "Freeze the root-approved122000/123000/124000 op RNG streams,not the supersededEN/NNE illustration.",
+    "At1200 each arm hasE600/N600,each(op,value)100;at2400 E1200/N1200,each(op,value)200.",
+    "First300Early op counts are random rather than necessarily150/150;Late has300Echo. This is the intended timing-policy contrast.",
+    "Same final suffix and matched total budgets support this policy comparison,not a unique biological/internal failure mechanism or blind heldout claim."
+  ],
+  "report_hashes": {
+    "P027-修正教學方式與教材覆蓋-2026-11-12.md": "21ed7eb2777cd16f11b7fc8f05138de82f0b95af533ffd4f0e44592b4941de67",
+    "P028-學習所需題次與提前停止-2026-11-12.md": "8b0ae97f34343b10e42768be836f5b83caeb5ecc2b14481823f44a4c828bb373",
+    "P029-論文四逐階不退回實測-2026-11-12.md": "9ae5bdec2dd86fce09872c4290dcf6fdec46f57b303f3e26e50443ba81f8aef8",
+    "P030-純二元動態網路第一批結果-2026-11-12.md": "b76a0130ac1f5c60adb7a0a5c034a34983c78bc382ac43439bcfe23d5ea5e586",
+    "P033-覆蓋與從頭混教實測結果-2026-11-12.md": "7abf06cd6baa2bc03f898a1ce496dd137e5d71f5df04d801bb735b0899535a5c"
+  },
+  "code_hashes": {
+    "echo_teaching_comparison.py": "a3e127230204c4825c73d6ca00f2871d8d70c14385e35cc26d495068a08500cd",
+    "echo_learning_time.py": "911c3d553443eb2514d7c1c5a4e6a8a880eb2f6aaf641d0233716c516294b29b",
+    "echo_monotonic_curriculum.py": "bb4841a5c755745be334264ce0b9c4e19040e84093deac03b2fa7c42d835b41c",
+    "p030_binary_continual.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "p033.py": "6e7445b8824b781f6e00356bfbcb6678c099299157b6baddb216d733e5379b48"
+  },
+  "existing_P033_result_sha256": "531eed2e1a715f80819d8aa33f50fa1d7fbd1feb915bedfa493bde92020ed1c3",
+  "new_optimizer_calls": 0,
+  "new_model_forward_calls": 0,
+  "external_model_calls": 0
+}
