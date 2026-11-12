@@ -4,6 +4,8 @@
 
 先讀[現況](CURRENT_RESEARCH_STATUS.md)、[Pro獨立證據](../../experiments/spiral_neural/20261112_pro_review/README.md)，以及Codex [PR #7固定報告](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e217bd0fd6cfe654062c3615ee2aa73a36d1ca71/experiments/spiral_neural/20261112_p033/P033-覆蓋與從頭混教實測結果-2026-11-12.md)。P033已跑出結果；本設計建立在結果上。
 
+適用範圍補正：本文件E900與B0/B1只隔離干擾與固定三位元表示問題，不能單獨檢驗SLE對其他編碼的優勢或跨階網路成長。使用者核心猜測的審查、onehot零值條件勘誤、Pro擴網探測與獨立編碼×成長候選比較，見[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)。不把新候選當已執行，也不改原生SLE NN／VM共同題庫主線。
+
 ## 1. 要回答的問題
 
 混教已保住已教Echo，未教組合仍失敗；全pair覆蓋也未穩定修復。下一輪要分辨「插入Neg更新的總效果」與「目前表示方式能否支撐可泛化的copy/flip」，而不是同時更換教材、容量、語法與算符。
@@ -65,6 +67,8 @@ B0是原H72 MLP，2,595參數。B1是一層、單頭、d16的causal self-attenti
 ## 4. 後續分流與停止條件
 
 V1/V2（未見數值與未見算符—數值搭配）仍是獨立未完成項。B1若改善，下一步才凍結這項分流以及四／五資訊位的新holdout manifest；同時記錄每個語義值及每個(op,value)跨階是否曾出現。測試集不進訓練、不用測試正解調logit門檻。四／五位成功也須限定其profile與數學範圍。
+
+**L16不是長度外插方案。** 在op2、無END、答案為n_data個資訊位加尾零時，最大next-token prefix為`2*n_data+7`；data4需15位置，data5需17位置，已超出B1的16個位置embedding。擴位置表或改可延伸位置機制須另立規格，記錄新增初始化、舊權重／optimizer移植、生成長度上限與重算參數／MAC。不得截斷、默默沿用L16或把三位元結果稱為持續擴網成功。
 
 B1若失敗，不能推論SLE不可學或所有attention無效；也不要連續增加H、層數與新算符直到碰巧成功。先檢查已教題能否達標、首錯與前綴依賴，將下一個單一變因另立事前方案。整串輸出與去前綴內容是不同歸納偏好，須獨立記錄，不混入這一批。
 

@@ -12,6 +12,7 @@ U 是使用者構想與方向；F 是指定版本的原始碼／資料；T 是�
 | P032 容量與後期混教 | [PR #6](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/6)；[f003980 實驗入口](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/f003980f719f84b366cda13601091ecf8c256d51/experiments/spiral_neural/20261112_p032/README.md) | Codex完成24條Neg分支及完整重播；加寬／改比例未穩定修復未教題 | 不代表容量永遠無關；這一批測的是暖身後混教 |
 | P033 覆蓋、從頭混教、續訓控制 | [PR #7](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/7)；[e217bd0 實驗入口](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e217bd0fd6cfe654062c3615ee2aa73a36d1ca71/experiments/spiral_neural/20261112_p033/README.md) | Codex完成D、A、3A：30條主／補充時序試驗；另12條Echo-only控制；完整重播 | V1/V2算符—資料搭配、表示／attention、整串輸出、更大位寬、新算符、升階儀式均未跑 |
 | Pro 獨立審查與修復 | [Pro 證據與重跑入口](../../experiments/spiral_neural/20261112_pro_review/README.md) | P032唯讀36 checkpoint／480題／4,320探測；P031分割審查；解析器乾淨副本75/75及demo驗證 | 沒有新神經訓練；不能把Codex的P033訓練歸為Pro訓練 |
+| Pro 小網路／成長審查 | [核心假說審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)；[可重播探測](../../experiments/spiral_neural/20261112_pro_growth_review/README.md) | 三checkpoint各40舊prefix擴網logit差0；同raw8/8，op2同義題未適應0/8；每次執行在三個副本合計六次除錯更新確認梯度通路 | 沒有新完整課程訓練；SLE相對其他編碼的優勢未驗；合法零token不是padding，不能直接沿用scalar-zero保函數條件 |
 | 共用記憶與調度 | [原有MVP計畫](CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md) | 規格已公開；P032/P033各有Codex實際NVIDIA審查紀錄 | 本次已fetch的origin分支未見dispatcher／記憶MVP程式；不能推定使用者Windows本機未實作 |
 
 P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶系統完成。既有VM線應以[停止原因分支44d23b9](https://github.com/Bigbearbo/Rasengan_Binary_Creator/tree/44d23b934dbea141e436c24e52b60a500d09e162/experiments/hamu_vm)為本次已讀參考，不能只看較舊PR #2；Pro本輪沒有重跑VM測試。
@@ -44,7 +45,9 @@ P031題庫沒有用於P032訓練。NVIDIA單次呼叫成功不等於共用記憶
 
 ## 下一步入口
 
-[Pro 後續研究設計](PRO_RESEARCH_DESIGN_20261112.md)：先用E900補等Echo曝光控制，再做近等參數MLP／小型可學位置attention比較。這是A，尚未執行。保存來源、凍結預算與判準後，才交由Codex實作／驗證；不重做已完成的P033當作新發現。
+[Pro 後續研究設計](PRO_RESEARCH_DESIGN_20261112.md)：先用E900補等Echo曝光控制，再做近等參數MLP／小型可學位置attention比較。這是A，尚未執行，且只屬干擾與固定三位元表示診斷。B1的L16無法原樣承載op2/data5所需17位置，後續擴域須另凍結規格與成本。保存來源、凍結預算與判準後，才交由Codex實作／驗證；不重做已完成的P033當作新發現。
+
+[小網路與成長審查](PRO_SLE_SMALL_NETWORK_REVIEW_20261112.md)保留P030局部遷移正面結果，區分函數保持、同義新格式適應、後續新任務干擾與SLE編碼額外收益。另提出SLE／緊湊階層binary × 固定最終容量／共同階段成長的12學生小型候選比較；沿用P031獨立編碼對照定位，尚未實作或訓練，不變更原生SLE NN／VM主線。
 
 P031啟蒙課程應另立教學manifest，讓最初0／1都有教學例，保存跨階曝光台帳；不要重寫既有benchmark分割。共用記憶工程沿用既有計畫，先盤點本機，再驗收一條「讀來源→候選審查→驗證→保存→重啟找回」流程；這份現況頁本身不是dispatcher實作。
 
