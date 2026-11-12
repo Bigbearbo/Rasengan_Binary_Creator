@@ -1,0 +1,173 @@
+{
+  "id": "AE1-20261113-archived-prefix-audit",
+  "profile": "SLE-AE1-n5-v1",
+  "factor": "inference prefix conditioning: correct teacher prefix vs self-generated prefix",
+  "scope": "saved aggregate readout only; no new neural forward, optimizer, or held-out test",
+  "source_head": "1d8db6b6d265d4a6b059437444178e87edbb9808",
+  "evaluation_blob_sha1": "929fb940098259ce3b8c75c4cdb3a3aae1b9bb14",
+  "results_blob_sha1": "3ba95dce72a82de83977bfd74c1085787ad8ab73",
+  "gate": "PASS: six frozen checkpoints, 24 N4-r cells, denominator, whole<=STOP, PR19 two-file final consistency and final global totals",
+  "rows": [
+    {
+      "phase": 4,
+      "N": 4,
+      "r": 1,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 900,
+      "tf_correct": 594,
+      "free_correct": 506,
+      "teacher_accuracy": 0.66,
+      "free_accuracy": 0.562222222,
+      "gap_percentage_points": 9.777778,
+      "whole_correct": 0,
+      "stop_correct": 0
+    },
+    {
+      "phase": 4,
+      "N": 4,
+      "r": 2,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 1800,
+      "tf_correct": 1131,
+      "free_correct": 783,
+      "teacher_accuracy": 0.628333333,
+      "free_accuracy": 0.435,
+      "gap_percentage_points": 19.333333,
+      "whole_correct": 0,
+      "stop_correct": 34
+    },
+    {
+      "phase": 4,
+      "N": 4,
+      "r": 3,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 2700,
+      "tf_correct": 1504,
+      "free_correct": 925,
+      "teacher_accuracy": 0.557037037,
+      "free_accuracy": 0.342592593,
+      "gap_percentage_points": 21.444444,
+      "whole_correct": 0,
+      "stop_correct": 3
+    },
+    {
+      "phase": 4,
+      "N": 4,
+      "r": 4,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 3600,
+      "tf_correct": 2574,
+      "free_correct": 2223,
+      "teacher_accuracy": 0.715,
+      "free_accuracy": 0.6175,
+      "gap_percentage_points": 9.75,
+      "whole_correct": 0,
+      "stop_correct": 177
+    },
+    {
+      "phase": 5,
+      "N": 4,
+      "r": 1,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 900,
+      "tf_correct": 832,
+      "free_correct": 790,
+      "teacher_accuracy": 0.924444444,
+      "free_accuracy": 0.877777778,
+      "gap_percentage_points": 4.666667,
+      "whole_correct": 122,
+      "stop_correct": 177
+    },
+    {
+      "phase": 5,
+      "N": 4,
+      "r": 2,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 1800,
+      "tf_correct": 1605,
+      "free_correct": 1455,
+      "teacher_accuracy": 0.891666667,
+      "free_accuracy": 0.808333333,
+      "gap_percentage_points": 8.333333,
+      "whole_correct": 56,
+      "stop_correct": 175
+    },
+    {
+      "phase": 5,
+      "N": 4,
+      "r": 3,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 2700,
+      "tf_correct": 2309,
+      "free_correct": 2029,
+      "teacher_accuracy": 0.855185185,
+      "free_accuracy": 0.751481481,
+      "gap_percentage_points": 10.37037,
+      "whole_correct": 16,
+      "stop_correct": 178
+    },
+    {
+      "phase": 5,
+      "N": 4,
+      "r": 4,
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "responses": 180,
+      "bits": 3600,
+      "tf_correct": 2967,
+      "free_correct": 2587,
+      "teacher_accuracy": 0.824166667,
+      "free_accuracy": 0.718611111,
+      "gap_percentage_points": 10.555556,
+      "whole_correct": 3,
+      "stop_correct": 180
+    }
+  ],
+  "new_neural_forward": 0,
+  "optimizer_updates": 0,
+  "new_neural_MAC": 0,
+  "nvidia": {
+    "status": "skipped_unavailable",
+    "actual_calls": 0,
+    "reason": "No callable OpenRouter/NVIDIA or external worker tool exposed in this run"
+  },
+  "next_owner": "Pro or Codex (new preregistration of LR-only 0.003 vs 0.001 paired diagnostic)"
+}
