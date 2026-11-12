@@ -1,0 +1,14 @@
+{
+  "LF_text_Git_bytes_exact": true,
+  "NPZ_finite_verified": 28,
+  "archive_members_byte_verified": 106,
+  "complete_science_inventory_verified_against_independent_audit": 79,
+  "full_target_traces_public": false,
+  "local_traces_SHA_verified": 3,
+  "metadata_redactions_listed": true,
+  "new_learning_inference_replay_or_external_calls": 0,
+  "original_files_SHA_verified_unchanged": 113,
+  "privacy_checked_all_members_and_top_level_text": true,
+  "review_gate_checked_before_new_results_read": true,
+  "status": "PASS"
+}
