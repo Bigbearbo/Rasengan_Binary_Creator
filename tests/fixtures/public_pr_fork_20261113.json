@@ -1,0 +1,56 @@
+{
+  "repository": "Bigbearbo/Rasengan_Binary_Creator",
+  "observed_at": "2026-11-13T07:22:00+08:00",
+  "main_sha": "a28d6fa582bf60bd051c78897f7aa900d863c6e7",
+  "prs": [
+    {
+      "number": 16,
+      "head_ref": "pro/advanced-echo-design-20261113",
+      "head_sha": "685c6f92d9e5a335a2f2a7193d9b501918d90b00",
+      "base_ref": "codex/echo-copy-audit-20261113",
+      "base_sha": "365c5fbf3324d3decb625f9d04ddd1bc91af4d93"
+    },
+    {
+      "number": 18,
+      "head_ref": "codex/early-mix-routing-20261113",
+      "head_sha": "9ba6209fd0fcc016c694762521a2ce1a7287dc5c",
+      "base_ref": "pro/advanced-echo-design-20261113",
+      "base_sha": "685c6f92d9e5a335a2f2a7193d9b501918d90b00"
+    },
+    {
+      "number": 19,
+      "head_ref": "pro/advanced-echo-learning-20261113",
+      "head_sha": "1d8db6b6d265d4a6b059437444178e87edbb9808",
+      "base_ref": "pro/advanced-echo-design-20261113",
+      "base_sha": "685c6f92d9e5a335a2f2a7193d9b501918d90b00"
+    },
+    {
+      "number": 20,
+      "head_ref": "codex/early-mix-matched-20261113",
+      "head_sha": "3fe2a9aa945512c8510222c13b769b2fbb2cc859",
+      "base_ref": "codex/early-mix-routing-20261113",
+      "base_sha": "9ba6209fd0fcc016c694762521a2ce1a7287dc5c"
+    },
+    {
+      "number": 21,
+      "head_ref": "research/scheduled-nn-ae1-prefix-audit-20261113",
+      "head_sha": "0ba6d37bd97d5d406e8f49438e2119760307f735",
+      "base_ref": "pro/advanced-echo-learning-20261113",
+      "base_sha": "1d8db6b6d265d4a6b059437444178e87edbb9808"
+    },
+    {
+      "number": 17,
+      "head_ref": "research/window-gpt/hamu-handle-publication-20261113",
+      "head_sha": "dea34fe62601979e055b52e7f11e343b493956d6",
+      "base_ref": "codex/hamu-stop-reasons-20261110",
+      "base_sha": "44d23b934dbea141e436c24e52b60a500d09e162"
+    },
+    {
+      "number": 22,
+      "head_ref": "research/window-gpt/hamu-ticket-epoch-20261113",
+      "head_sha": "ba8aa1cd7e4fd0be0f8ebed7f84d8b95241401fa",
+      "base_ref": "research/window-gpt/hamu-handle-publication-20261113",
+      "base_sha": "dea34fe62601979e055b52e7f11e343b493956d6"
+    }
+  ]
+}
