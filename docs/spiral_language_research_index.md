@@ -1,5 +1,9 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-12 Pro 更新：現況與下一輪研究
+
+先讀[研究現況](ai_orchestration/CURRENT_RESEARCH_STATUS.md)與[ChatGPT Pro後續設計](ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md)。Codex的P033覆蓋／從頭混教／續訓控制已在PR #7完成；[Pro獨立核對及解析器修復](../experiments/spiral_neural/20261112_pro_review/README.md)另列實測歸屬。下方歷史段落保留其封存時點，不以舊「未完成」覆蓋較新的固定證據。
+
 ## 2026-11-12 新增：真正神經網路實測
 
 [P024–P030 實測成果索引](ai_orchestration/CODEX_EXPERIMENT_RESULTS_INDEX_20261112.md)連到可重跑程式、機器證據、模型checkpoint與GPT交接。這與下列腳本式雙代理示範分開；P030只完成第一批，神經轉碼器與P031數學比較仍未實作。

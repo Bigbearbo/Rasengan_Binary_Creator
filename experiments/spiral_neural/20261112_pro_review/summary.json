@@ -1,0 +1,138 @@
+{
+  "producer": "ChatGPT Pro",
+  "date": "2026-11-12",
+  "source_commits": {
+    "main": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+    "P031": "cee9fb7c331f23d9b7495f7240cc45060c19838d",
+    "P032": "f003980f719f84b366cda13601091ecf8c256d51",
+    "P033": "e217bd0fd6cfe654062c3615ee2aa73a36d1ca71"
+  },
+  "new_neural_training": false,
+  "P031": {
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "cases": 1342,
+    "profiles": 15,
+    "semantic_groups": 288,
+    "transport_status": "recording-sinks-only; actual VM student not executed"
+  },
+  "P032_prior_Pro_inference": {
+    "checkpoints_unchanged": 36,
+    "rows": 480,
+    "bit_flip_probes": 4320,
+    "published_post_checkpoints_reproduced": 24,
+    "post_test": {
+      "n": 48,
+      "first_wrong": {
+        "1": 38,
+        "0": 8,
+        "None": 2
+      },
+      "free_middle_bit_correct": 10,
+      "teacher_forced_middle_bit_correct": 2
+    },
+    "post_validation": {
+      "n": 48,
+      "teacher_forced_middle_bit_correct": 48
+    },
+    "middle_bit_pairs": {
+      "n": 48,
+      "correct_logodds_direction": 48,
+      "decision_changes": 2,
+      "median_correct_direction_logodds_shift": 12.925808429718018,
+      "all_prefixes_consistent_for_both_inputs": true
+    }
+  },
+  "P033_Pro_archival_audit": {
+    "status": "PASS",
+    "training_results_origin": "Codex P033",
+    "training_run": false,
+    "checkpoint_inference_run": false,
+    "regraded_final_prediction_rows": 480,
+    "echo_only_result_records_checked": 12,
+    "headline": {
+      "T0": {
+        "train_Echo": [
+          1,
+          36
+        ],
+        "heldout_both_ops": [
+          7,
+          24
+        ]
+      },
+      "T1": {
+        "train_Echo": [
+          36,
+          36
+        ],
+        "heldout_both_ops": [
+          0,
+          24
+        ]
+      },
+      "T0B": {
+        "train_Echo": [
+          36,
+          36
+        ],
+        "heldout_both_ops": [
+          1,
+          24
+        ]
+      }
+    },
+    "echo_only_test": [
+      12,
+      12
+    ],
+    "Neg70_Echo_test": [
+      1,
+      12
+    ],
+    "scope": [
+      "Recomputed exact-match counts from 30 saved final truth tables, independently checking binary Q/target construction.",
+      "Cross-checked per-run results, summary-table.json and the exact numerical Markdown report rows.",
+      "Echo-only archive supplies aggregate test metrics, not per-test generated strings; these were cross-checked with per-run results and compact.json, not independently inferred.",
+      "Echo-only warm checkpoint hashes were verified as bytes; no NPZ was parsed or executed.",
+      "No training/replay, model inference, diagnostic probe rerun, or new blind testing."
+    ]
+  },
+  "parser_repair": {
+    "base_commit": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+    "attribution": "ChatGPT Pro parser reproducibility repair, 2026-11-12",
+    "tests": 75,
+    "test_exit_code": 0,
+    "demo_exit_code": 0,
+    "legacy_v03_run_required": false,
+    "teacher_fixture_sha256": "139dd05ba0abcbcf343c27131c014e7c22e339683a96af3a9e3b27782791a730",
+    "tracked_input_hashes_unchanged": true,
+    "demo_trace_matches_archived_fixture": true,
+    "demo_student_matches_archived_fixture": true,
+    "demo_highwater": 32,
+    "demo_active_version": 3,
+    "demo_generated_files": [
+      "student.json",
+      "teacher.json",
+      "trace.json"
+    ],
+    "worktree_runtime_dirs_created": false
+  },
+  "next_design": {
+    "author": "ChatGPT Pro",
+    "status": "proposed_not_run",
+    "E900_new_controls": 12,
+    "MLP_parameters": 2595,
+    "attention_parameters": 2596,
+    "attention_FFN_width": 33,
+    "parameter_count_is_design_arithmetic_not_instantiated_model": true
+  },
+  "nvidia": {
+    "task_id": "PRO-RESEARCH-REVIEW-20261112",
+    "status": "skipped_unavailable",
+    "model_id": null,
+    "calls": 0,
+    "reason": "No configured OpenRouter/NVIDIA callable tools or corresponding credential environment variables in this environment."
+  }
+}

@@ -1,5 +1,7 @@
 #  倉鼠極簡操作記憶體式遊戲分散式擴容擴層螺旋語世界
 
+2026-11-12研究入口：[目前狀態與固定證據](docs/ai_orchestration/CURRENT_RESEARCH_STATUS.md)／[ChatGPT Pro後續設計](docs/ai_orchestration/PRO_RESEARCH_DESIGN_20261112.md)。Codex的P033已完成實跑，Pro的新增設計與獨立驗證分開標註。
+
 This document is structured from simple to complex, allowing for gradual understanding of the Hamster World design. If you’re short on time, feel free to input sections (e.g., lines 100–300) into an AI tool for translation, summarization, or key point extraction.
 
 **Hierarchical Spiral Language and Memory-Based AI: Design and Analysis of a Distributed Evolutionary System**
