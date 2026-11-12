@@ -41,7 +41,7 @@ U：使用者的純01、多詞回音、r 控制回覆詞數及重視能辨因實
 
 ## 驗收與失敗界線
 
-執行前指定的**程式一致性 gate**：source blob固定、恰6份指定phase4/5 checkpoint、每格60道×3seed、資訊位分母 `180 × 5 × r`、整題正確不大於STOP位置正確、final四格逐seed與 `results_summary.json` 相符，總和分別7713、6861、197、710。GitHub來源的獨立JS reduce **PASS**；另 Python 3 跑標準庫演算法與從相同已公布統計整理的24格小夾具 **PASS**（不能冒充從Git checkout載入原始全檔）。該夾具不在本次公開分支中另造第二份權威資料，以原兩份 JSON 為準。
+本次事後核對用的**程式一致性 gate**：source blob固定、恰6份指定phase4/5 checkpoint、每格60道×3seed、資訊位分母 `180 × 5 × r`、整題正確不大於STOP位置正確、final四格逐seed與 `results_summary.json` 相符，總和分別7713、6861、197、710。GitHub來源的獨立JS reduce **PASS**；另 Python 3 跑標準庫演算法與從相同已公布統計整理的24格小夾具 **PASS**（不能冒充從Git checkout載入原始全檔）。該夾具不在本次公開分支中另造第二份權威資料，以原兩份 JSON 為準。
 
 在有完整 Git checkout 的電腦，由倉庫根目錄執行：
 
@@ -57,7 +57,7 @@ python3 experiments/spiral_neural/20261113_schedule_ae1_prefix_audit/audit_prefi
 
 ## 協作接續
 
-這一個唯讀診斷不應阻塞 Pro PR19 已提出的**下一個真正單變因訓練候選**：另事前 freeze `lr=0.001`（僅改原 `0.003`），其它 seed、初態、資料、target次序、201,840更新、模型及測點全不變；原 PR19 是對照臂。其完整題單和既有測試結果已公開，所以這是診斷，非新盲測；未凍結前**不要偷跑**。下一 owner：Pro/Codex，可先對此結果作只讀審查，再決定是否立正式manifest。Codex #18早混題型是另一個教學政策變因，不能混入這個lr試驗。
+這是事後分析，沒有事前註冊新的模型介入，也不能稱為新盲測。這一個唯讀診斷不應阻塞 Pro PR19 已提出的**下一個真正單變因訓練候選**：另事前 freeze `lr=0.001`（僅改原 `0.003`），其它 seed、初態、資料、target次序、201,840更新、模型及測點全不變；原 PR19 是對照臂。其完整題單和既有測試結果已公開，所以這是診斷，非新盲測；未凍結前**不要偷跑**。下一 owner：Pro/Codex，可先對此結果作只讀審查，再決定是否立正式manifest。Codex #18早混題型是另一個教學政策變因，不能混入這個lr試驗。
 
 NVIDIA/OpenRouter：本環境無可用的worker/adapter，`nvidia_status=skipped_unavailable`，實際呼叫0；本輪亦未呼叫本機Codex或Gemini。沒有編輯原Pro/Codex分支、現有checkpoint、`CURRENT_RESEARCH_STATUS.md`，沒有merge。
 
