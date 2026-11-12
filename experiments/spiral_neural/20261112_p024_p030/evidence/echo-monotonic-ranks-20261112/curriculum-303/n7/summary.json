@@ -1,0 +1,66 @@
+{
+  "n": 7,
+  "presentations": 512,
+  "global_presentations": 2496,
+  "updates_before": 12420,
+  "updates_after": 17028,
+  "stage_updates": 4608,
+  "unique_presented": 96,
+  "train_size": 96,
+  "exposure_min": 5,
+  "exposure_max": 6,
+  "first_pass": 384,
+  "confirmation_points": [
+    384,
+    480,
+    512
+  ],
+  "stop_reason": "three_validation_passes",
+  "training_and_probe_seconds": 0.6719219000000294,
+  "probe_inference_calls": 34962,
+  "validation": {
+    "n": 7,
+    "total": 16,
+    "whole_correct": 16,
+    "stop_correct": 16,
+    "bit_correct_by_position": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "bit_accuracy": 1.0,
+    "teacher_correct": 144,
+    "teacher_targets": 144,
+    "ce_mean": 0.007671229928075715,
+    "inference_calls": 288
+  },
+  "final_test": {
+    "n": 7,
+    "total": 16,
+    "whole_correct": 15,
+    "stop_correct": 16,
+    "bit_correct_by_position": [
+      16,
+      16,
+      15,
+      15,
+      15,
+      15,
+      16,
+      16
+    ],
+    "bit_accuracy": 0.96875,
+    "teacher_correct": 143,
+    "teacher_targets": 144,
+    "ce_mean": 0.016603848450807764,
+    "inference_calls": 288
+  },
+  "test_type": "unseen_at_this_rank_fixed_split",
+  "first_question": "010000000010",
+  "initial_state_sha": "83246a494d52a34c2e91c5848e2eda2160847719e23db0d234ef2374f5895df8"
+}

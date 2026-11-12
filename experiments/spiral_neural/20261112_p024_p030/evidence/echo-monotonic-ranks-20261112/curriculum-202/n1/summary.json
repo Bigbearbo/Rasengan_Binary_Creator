@@ -1,0 +1,40 @@
+{
+  "n": 1,
+  "presentations": 144,
+  "global_presentations": 144,
+  "updates_before": 0,
+  "updates_after": 432,
+  "stage_updates": 432,
+  "unique_presented": 2,
+  "train_size": 2,
+  "exposure_min": 72,
+  "exposure_max": 72,
+  "first_pass": 140,
+  "confirmation_points": [
+    140,
+    142,
+    144
+  ],
+  "stop_reason": "three_validation_passes",
+  "training_and_probe_seconds": 0.051469500000052903,
+  "probe_inference_calls": 1112,
+  "validation": {
+    "n": 1,
+    "total": 2,
+    "whole_correct": 2,
+    "stop_correct": 2,
+    "bit_correct_by_position": [
+      2,
+      2
+    ],
+    "bit_accuracy": 1.0,
+    "teacher_correct": 6,
+    "teacher_targets": 6,
+    "ce_mean": 0.1477690738217452,
+    "inference_calls": 12
+  },
+  "final_test": null,
+  "test_type": "no_independent_test_all_words_taught",
+  "first_question": "010000",
+  "initial_state_sha": "ccbe46c1c4467b76f2510d0b6d98b69c71e24f9ad6df8b0c42ec8cca00c5facd"
+}

@@ -1,0 +1,700 @@
+{
+  "arm": "curriculum",
+  "seed": 101,
+  "stages": [
+    {
+      "n": 1,
+      "presentations": 134,
+      "global_presentations": 134,
+      "updates_before": 0,
+      "updates_after": 402,
+      "stage_updates": 402,
+      "unique_presented": 2,
+      "train_size": 2,
+      "exposure_min": 67,
+      "exposure_max": 67,
+      "first_pass": 130,
+      "confirmation_points": [
+        130,
+        132,
+        134
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.04970170000001417,
+      "probe_inference_calls": 1175,
+      "validation": {
+        "n": 1,
+        "total": 2,
+        "whole_correct": 2,
+        "stop_correct": 2,
+        "bit_correct_by_position": [
+          2,
+          2
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 6,
+        "teacher_targets": 6,
+        "ce_mean": 0.15796006723647762,
+        "inference_calls": 12
+      },
+      "final_test": null,
+      "test_type": "no_independent_test_all_words_taught",
+      "first_question": "010000",
+      "initial_state_sha": "93919ec71d790a0f8ded4c2a088bfa2d2183292bcc621b7661c42ce11822aef5"
+    },
+    {
+      "n": 2,
+      "presentations": 100,
+      "global_presentations": 234,
+      "updates_before": 402,
+      "updates_after": 802,
+      "stage_updates": 400,
+      "unique_presented": 4,
+      "train_size": 4,
+      "exposure_min": 25,
+      "exposure_max": 25,
+      "first_pass": 92,
+      "confirmation_points": [
+        92,
+        96,
+        100
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.044092200000022785,
+      "probe_inference_calls": 984,
+      "validation": {
+        "n": 2,
+        "total": 4,
+        "whole_correct": 4,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          4,
+          4
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 16,
+        "teacher_targets": 16,
+        "ce_mean": 0.0922157771289991,
+        "inference_calls": 32
+      },
+      "final_test": null,
+      "test_type": "no_independent_test_all_words_taught",
+      "first_question": "0100010",
+      "initial_state_sha": "7cb5e9f8d2a2c38a3468a18589922dd149746bc953a661343eecd36e74434bcc"
+    },
+    {
+      "n": 3,
+      "presentations": 440,
+      "global_presentations": 674,
+      "updates_before": 802,
+      "updates_after": 3002,
+      "stage_updates": 2200,
+      "unique_presented": 8,
+      "train_size": 8,
+      "exposure_min": 55,
+      "exposure_max": 55,
+      "first_pass": 424,
+      "confirmation_points": [
+        424,
+        432,
+        440
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.20850180000002183,
+      "probe_inference_calls": 5076,
+      "validation": {
+        "n": 3,
+        "total": 8,
+        "whole_correct": 8,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 40,
+        "teacher_targets": 40,
+        "ce_mean": 0.02335170728973429,
+        "inference_calls": 80
+      },
+      "final_test": null,
+      "test_type": "no_independent_test_all_words_taught",
+      "first_question": "01000010",
+      "initial_state_sha": "d82e6a335c7d34770af882e4b864d1dbf245adcc21cb73b569db22d7a1b83864"
+    },
+    {
+      "n": 4,
+      "presentations": 304,
+      "global_presentations": 978,
+      "updates_before": 3002,
+      "updates_after": 4826,
+      "stage_updates": 1824,
+      "unique_presented": 16,
+      "train_size": 16,
+      "exposure_min": 19,
+      "exposure_max": 19,
+      "first_pass": 224,
+      "confirmation_points": [
+        272,
+        288,
+        304
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.17822430000001077,
+      "probe_inference_calls": 5168,
+      "validation": {
+        "n": 4,
+        "total": 16,
+        "whole_correct": 16,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 96,
+        "teacher_targets": 96,
+        "ce_mean": 0.009389204521653585,
+        "inference_calls": 192
+      },
+      "final_test": null,
+      "test_type": "no_independent_test_all_words_taught",
+      "first_question": "010000010",
+      "initial_state_sha": "bd00e4cf2c40a98938359a758a8a54db4171739603797c15ffad80b0ab159b59"
+    },
+    {
+      "n": 5,
+      "presentations": 512,
+      "global_presentations": 1490,
+      "updates_before": 4826,
+      "updates_after": 8410,
+      "stage_updates": 3584,
+      "unique_presented": 24,
+      "train_size": 24,
+      "exposure_min": 21,
+      "exposure_max": 22,
+      "first_pass": 408,
+      "confirmation_points": [
+        480,
+        504,
+        512
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.3826859999999215,
+      "probe_inference_calls": 12996,
+      "validation": {
+        "n": 5,
+        "total": 4,
+        "whole_correct": 4,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 28,
+        "teacher_targets": 28,
+        "ce_mean": 0.03503234301776242,
+        "inference_calls": 56
+      },
+      "final_test": {
+        "n": 5,
+        "total": 4,
+        "whole_correct": 4,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 28,
+        "teacher_targets": 28,
+        "ce_mean": 0.017716840089946468,
+        "inference_calls": 56
+      },
+      "test_type": "unseen_at_this_rank_fixed_split",
+      "first_question": "0100000010",
+      "initial_state_sha": "0ee2155c47e5a808a41b5d0f2e2e61422d593aafa81a2b34560a67eefa3edc6b"
+    },
+    {
+      "n": 6,
+      "presentations": 1008,
+      "global_presentations": 2498,
+      "updates_before": 8410,
+      "updates_after": 16474,
+      "stage_updates": 8064,
+      "unique_presented": 48,
+      "train_size": 48,
+      "exposure_min": 21,
+      "exposure_max": 21,
+      "first_pass": 672,
+      "confirmation_points": [
+        960,
+        1000,
+        1008
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.8721980999999914,
+      "probe_inference_calls": 30776,
+      "validation": {
+        "n": 6,
+        "total": 8,
+        "whole_correct": 8,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 64,
+        "teacher_targets": 64,
+        "ce_mean": 0.005047827127555055,
+        "inference_calls": 128
+      },
+      "final_test": {
+        "n": 6,
+        "total": 8,
+        "whole_correct": 7,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          7,
+          7,
+          8,
+          8,
+          8,
+          7,
+          8
+        ],
+        "bit_accuracy": 0.9464285714285714,
+        "teacher_correct": 63,
+        "teacher_targets": 64,
+        "ce_mean": 0.02463819605295329,
+        "inference_calls": 128
+      },
+      "test_type": "unseen_at_this_rank_fixed_split",
+      "first_question": "01000000010",
+      "initial_state_sha": "afcda0d7233ce5159d0311d025701e0ed6741bf6c514bb09a20fcd3848aed980"
+    },
+    {
+      "n": 7,
+      "presentations": 864,
+      "global_presentations": 3362,
+      "updates_before": 16474,
+      "updates_after": 24250,
+      "stage_updates": 7776,
+      "unique_presented": 96,
+      "train_size": 96,
+      "exposure_min": 9,
+      "exposure_max": 9,
+      "first_pass": 672,
+      "confirmation_points": [
+        672,
+        768,
+        864
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 0.9705096999999796,
+      "probe_inference_calls": 43345,
+      "validation": {
+        "n": 7,
+        "total": 16,
+        "whole_correct": 16,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 144,
+        "teacher_targets": 144,
+        "ce_mean": 0.0036422670718152896,
+        "inference_calls": 288
+      },
+      "final_test": {
+        "n": 7,
+        "total": 16,
+        "whole_correct": 16,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 144,
+        "teacher_targets": 144,
+        "ce_mean": 0.007022933130939655,
+        "inference_calls": 288
+      },
+      "test_type": "unseen_at_this_rank_fixed_split",
+      "first_question": "010000000010",
+      "initial_state_sha": "1bd0e9c5ec119302018bda2788824ebe894100518efd1132653ef6d419fa5cde"
+    },
+    {
+      "n": 8,
+      "presentations": 960,
+      "global_presentations": 4322,
+      "updates_before": 24250,
+      "updates_after": 33850,
+      "stage_updates": 9600,
+      "unique_presented": 192,
+      "train_size": 192,
+      "exposure_min": 5,
+      "exposure_max": 5,
+      "first_pass": 576,
+      "confirmation_points": [
+        576,
+        768,
+        960
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 1.4455490999999938,
+      "probe_inference_calls": 76712,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0024326867133563344,
+        "inference_calls": 640
+      },
+      "final_test": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0026020094755576156,
+        "inference_calls": 640
+      },
+      "test_type": "unseen_at_this_rank_fixed_split",
+      "first_question": "0100000000010",
+      "initial_state_sha": "ac25f759d1c61e790540057daa6e128f9cf7093153656c745a6aeabaaa3521db"
+    }
+  ],
+  "highest_rank": 8,
+  "reached_n8": true,
+  "passed_n8": true,
+  "total_presentations": 4322,
+  "total_updates": 33850,
+  "total_training_and_probe_seconds": 4.151462899999956,
+  "old_rank_training_or_probes_after_promotion": false,
+  "replay": [
+    {
+      "n": 1,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 2,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 3,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 4,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 5,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 6,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 7,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    },
+    {
+      "n": 8,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    }
+  ],
+  "n8_budget_anchors": [
+    {
+      "updates": 25000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 4,
+        "stop_correct": 23,
+        "bit_correct_by_position": [
+          31,
+          27,
+          25,
+          25,
+          25,
+          22,
+          19,
+          16,
+          23
+        ],
+        "bit_accuracy": 0.7395833333333334,
+        "teacher_correct": 280,
+        "teacher_targets": 320,
+        "ce_mean": 0.3769303016085477,
+        "inference_calls": 623
+      }
+    },
+    {
+      "updates": 26000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 17,
+        "stop_correct": 23,
+        "bit_correct_by_position": [
+          32,
+          32,
+          30,
+          28,
+          27,
+          28,
+          22,
+          21,
+          23
+        ],
+        "bit_accuracy": 0.84375,
+        "teacher_correct": 304,
+        "teacher_targets": 320,
+        "ce_mean": 0.13298558410660624,
+        "inference_calls": 631
+      }
+    },
+    {
+      "updates": 27000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 25,
+        "stop_correct": 29,
+        "bit_correct_by_position": [
+          32,
+          32,
+          31,
+          27,
+          27,
+          30,
+          28,
+          29,
+          29
+        ],
+        "bit_accuracy": 0.9201388888888888,
+        "teacher_correct": 313,
+        "teacher_targets": 320,
+        "ce_mean": 0.06758666021486782,
+        "inference_calls": 637
+      }
+    },
+    {
+      "updates": 28000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 30,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          31,
+          31,
+          31,
+          31,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.9861111111111112,
+        "teacher_correct": 318,
+        "teacher_targets": 320,
+        "ce_mean": 0.028406566623974033,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 29000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.011035477776910694,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 30000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 31,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          31,
+          31,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.9930555555555556,
+        "teacher_correct": 319,
+        "teacher_targets": 320,
+        "ce_mean": 0.017273278891337163,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 31000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.003312731596745809,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 32000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0018291786856520977,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 33000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.009680916724495827,
+        "inference_calls": 640
+      }
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "arm": "ce_shuffle",
+  "seed": 101,
+  "question_presentations": 20000,
+  "token_updates": 200000,
+  "training_seconds": 13.06412550015375,
+  "unique_presented": 192,
+  "complete_rounds": 104,
+  "exposure_min": 104,
+  "exposure_max": 105,
+  "all_trajectory_optimizer_and_anchor_replay_equal": true,
+  "probes": {
+    "train": {
+      "whole_correct": 192,
+      "total": 192,
+      "bit_correct_by_position": [
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192
+      ],
+      "bit_denominator_per_position": 192,
+      "bit_accuracy": 1.0,
+      "any_stop": 192,
+      "stop_at_correct_position": 192,
+      "teacher_prefix_correct_by_position": [
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192
+      ],
+      "order_invariance": true
+    },
+    "heldout": {
+      "whole_correct": 64,
+      "total": 64,
+      "bit_correct_by_position": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "bit_denominator_per_position": 64,
+      "bit_accuracy": 1.0,
+      "any_stop": 64,
+      "stop_at_correct_position": 64,
+      "teacher_prefix_correct_by_position": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "order_invariance": true
+    }
+  },
+  "at_equal_100000_updates": {
+    "train": {
+      "whole_correct": 192,
+      "total": 192,
+      "bit_correct_by_position": [
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192
+      ],
+      "bit_denominator_per_position": 192,
+      "bit_accuracy": 1.0,
+      "any_stop": 192,
+      "stop_at_correct_position": 192,
+      "teacher_prefix_correct_by_position": [
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192,
+        192
+      ],
+      "order_invariance": true
+    },
+    "heldout": {
+      "whole_correct": 64,
+      "total": 64,
+      "bit_correct_by_position": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "bit_denominator_per_position": 64,
+      "bit_accuracy": 1.0,
+      "any_stop": 64,
+      "stop_at_correct_position": 64,
+      "teacher_prefix_correct_by_position": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "order_invariance": true
+    }
+  }
+}

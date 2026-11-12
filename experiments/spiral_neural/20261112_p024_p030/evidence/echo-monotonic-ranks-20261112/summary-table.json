@@ -1,0 +1,1998 @@
+{
+  "runs": [
+    {
+      "arm": "curriculum",
+      "seed": 101,
+      "total_presentations": 4322,
+      "total_updates": 33850,
+      "seconds_train_plus_probes": 4.151462899999956,
+      "n8_presentations": 960,
+      "n8_first_pass": 576,
+      "n8_entry_updates": 24250,
+      "n8_validation": [
+        32,
+        32
+      ],
+      "n8_final_test": [
+        32,
+        32
+      ]
+    },
+    {
+      "arm": "curriculum",
+      "seed": 202,
+      "total_presentations": 3228,
+      "total_updates": 24712,
+      "seconds_train_plus_probes": 3.408856799999967,
+      "n8_presentations": 768,
+      "n8_first_pass": 512,
+      "n8_entry_updates": 17032,
+      "n8_validation": [
+        32,
+        32
+      ],
+      "n8_final_test": [
+        30,
+        32
+      ]
+    },
+    {
+      "arm": "curriculum",
+      "seed": 303,
+      "total_presentations": 3264,
+      "total_updates": 24708,
+      "seconds_train_plus_probes": 3.2869409999998425,
+      "n8_presentations": 768,
+      "n8_first_pass": 512,
+      "n8_entry_updates": 17028,
+      "n8_validation": [
+        32,
+        32
+      ],
+      "n8_final_test": [
+        31,
+        32
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 101,
+      "total_presentations": 2304,
+      "total_updates": 23040,
+      "seconds_train_plus_probes": 2.811062600000014,
+      "n8_presentations": 2304,
+      "n8_first_pass": 2000,
+      "n8_entry_updates": 0,
+      "n8_validation": [
+        32,
+        32
+      ],
+      "n8_final_test": [
+        32,
+        32
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 202,
+      "total_presentations": 2304,
+      "total_updates": 23040,
+      "seconds_train_plus_probes": 2.7887564999999768,
+      "n8_presentations": 2304,
+      "n8_first_pass": 2000,
+      "n8_entry_updates": 0,
+      "n8_validation": [
+        31,
+        32
+      ],
+      "n8_final_test": [
+        31,
+        32
+      ]
+    },
+    {
+      "arm": "direct8",
+      "seed": 303,
+      "total_presentations": 2880,
+      "total_updates": 28800,
+      "seconds_train_plus_probes": 3.335289200000034,
+      "n8_presentations": 2880,
+      "n8_first_pass": 2000,
+      "n8_entry_updates": 0,
+      "n8_validation": [
+        32,
+        32
+      ],
+      "n8_final_test": [
+        32,
+        32
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "n": 1,
+      "presentations": 134,
+      "global_presentations": 134,
+      "updates_before": 0,
+      "updates_after": 402,
+      "stage_updates": 402,
+      "unique_presented": 2,
+      "train_size": 2,
+      "first_pass": 130,
+      "confirmation_points": [
+        130,
+        132,
+        134
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 6,
+        "0.9": 130,
+        "0.95": 130,
+        "1.0": 130
+      },
+      "at100": {
+        "n": 1,
+        "total": 2,
+        "whole_correct": 1,
+        "stop_correct": 2,
+        "bit_correct_by_position": [
+          1,
+          2
+        ],
+        "bit_accuracy": 0.75,
+        "teacher_correct": 5,
+        "teacher_targets": 6,
+        "ce_mean": 0.29077677135890523,
+        "inference_calls": 12
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 2,
+      "presentations": 100,
+      "global_presentations": 234,
+      "updates_before": 402,
+      "updates_after": 802,
+      "stage_updates": 400,
+      "unique_presented": 4,
+      "train_size": 4,
+      "first_pass": 92,
+      "confirmation_points": [
+        92,
+        96,
+        100
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 24,
+        "0.9": 92,
+        "0.95": 92,
+        "1.0": 92
+      },
+      "at100": {
+        "n": 2,
+        "total": 4,
+        "whole_correct": 4,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          4,
+          4
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 16,
+        "teacher_targets": 16,
+        "ce_mean": 0.0922157771289991,
+        "inference_calls": 32
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 3,
+      "presentations": 440,
+      "global_presentations": 674,
+      "updates_before": 802,
+      "updates_after": 3002,
+      "stage_updates": 2200,
+      "unique_presented": 8,
+      "train_size": 8,
+      "first_pass": 424,
+      "confirmation_points": [
+        424,
+        432,
+        440
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 40,
+        "0.9": 424,
+        "0.95": 424,
+        "1.0": 424
+      },
+      "at100": {
+        "n": 3,
+        "total": 8,
+        "whole_correct": 6,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          7,
+          6,
+          6,
+          8
+        ],
+        "bit_accuracy": 0.84375,
+        "teacher_correct": 38,
+        "teacher_targets": 40,
+        "ce_mean": 0.13516676361927696,
+        "inference_calls": 80
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 4,
+      "presentations": 304,
+      "global_presentations": 978,
+      "updates_before": 3002,
+      "updates_after": 4826,
+      "stage_updates": 1824,
+      "unique_presented": 16,
+      "train_size": 16,
+      "first_pass": 224,
+      "confirmation_points": [
+        272,
+        288,
+        304
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 50,
+        "0.9": 224,
+        "0.95": 224,
+        "1.0": 224
+      },
+      "at100": {
+        "n": 4,
+        "total": 16,
+        "whole_correct": 11,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          15,
+          13,
+          11,
+          14,
+          16
+        ],
+        "bit_accuracy": 0.8625,
+        "teacher_correct": 91,
+        "teacher_targets": 96,
+        "ce_mean": 0.12239007858976823,
+        "inference_calls": 192
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 5,
+      "presentations": 512,
+      "global_presentations": 1490,
+      "updates_before": 4826,
+      "updates_after": 8410,
+      "stage_updates": 3584,
+      "unique_presented": 24,
+      "train_size": 24,
+      "first_pass": 408,
+      "confirmation_points": [
+        480,
+        504,
+        512
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 96,
+        "0.9": 408,
+        "0.95": 408,
+        "1.0": 408
+      },
+      "at100": {
+        "n": 5,
+        "total": 4,
+        "whole_correct": 0,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          2,
+          1,
+          3,
+          2,
+          4
+        ],
+        "bit_accuracy": 0.6666666666666666,
+        "teacher_correct": 23,
+        "teacher_targets": 28,
+        "ce_mean": 0.24005197793305463,
+        "inference_calls": 56
+      },
+      "at100_note": "measured",
+      "final_test": [
+        4,
+        4
+      ]
+    },
+    {
+      "n": 6,
+      "presentations": 1008,
+      "global_presentations": 2498,
+      "updates_before": 8410,
+      "updates_after": 16474,
+      "stage_updates": 8064,
+      "unique_presented": 48,
+      "train_size": 48,
+      "first_pass": 672,
+      "confirmation_points": [
+        960,
+        1000,
+        1008
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 192,
+        "0.9": 672,
+        "0.95": 672,
+        "1.0": 672
+      },
+      "at100": {
+        "n": 6,
+        "total": 8,
+        "whole_correct": 3,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          5,
+          5,
+          7,
+          6,
+          7,
+          8,
+          8
+        ],
+        "bit_accuracy": 0.8214285714285714,
+        "teacher_correct": 59,
+        "teacher_targets": 64,
+        "ce_mean": 0.17741379981022828,
+        "inference_calls": 128
+      },
+      "at100_note": "measured",
+      "final_test": [
+        7,
+        8
+      ]
+    },
+    {
+      "n": 7,
+      "presentations": 864,
+      "global_presentations": 3362,
+      "updates_before": 16474,
+      "updates_after": 24250,
+      "stage_updates": 7776,
+      "unique_presented": 96,
+      "train_size": 96,
+      "first_pass": 672,
+      "confirmation_points": [
+        672,
+        768,
+        864
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 256,
+        "0.9": 512,
+        "0.95": 672,
+        "1.0": 672
+      },
+      "at100": {
+        "n": 7,
+        "total": 16,
+        "whole_correct": 7,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          13,
+          12,
+          12,
+          14,
+          12,
+          10,
+          11,
+          16
+        ],
+        "bit_accuracy": 0.78125,
+        "teacher_correct": 131,
+        "teacher_targets": 144,
+        "ce_mean": 0.18937615246610667,
+        "inference_calls": 288
+      },
+      "at100_note": "measured",
+      "final_test": [
+        16,
+        16
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 960,
+      "global_presentations": 4322,
+      "updates_before": 24250,
+      "updates_after": 33850,
+      "stage_updates": 9600,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 576,
+      "confirmation_points": [
+        576,
+        768,
+        960
+      ],
+      "arm": "curriculum",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 192,
+        "0.9": 384,
+        "0.95": 576,
+        "1.0": 768
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 10,
+        "stop_correct": 26,
+        "bit_correct_by_position": [
+          32,
+          30,
+          29,
+          28,
+          27,
+          25,
+          21,
+          18,
+          26
+        ],
+        "bit_accuracy": 0.8194444444444444,
+        "teacher_correct": 294,
+        "teacher_targets": 320,
+        "ce_mean": 0.1960655222428421,
+        "inference_calls": 633
+      },
+      "at100_note": "measured",
+      "final_test": [
+        32,
+        32
+      ]
+    },
+    {
+      "n": 1,
+      "presentations": 144,
+      "global_presentations": 144,
+      "updates_before": 0,
+      "updates_after": 432,
+      "stage_updates": 432,
+      "unique_presented": 2,
+      "train_size": 2,
+      "first_pass": 140,
+      "confirmation_points": [
+        140,
+        142,
+        144
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 54,
+        "0.9": 140,
+        "0.95": 140,
+        "1.0": 140
+      },
+      "at100": {
+        "n": 1,
+        "total": 2,
+        "whole_correct": 1,
+        "stop_correct": 2,
+        "bit_correct_by_position": [
+          1,
+          2
+        ],
+        "bit_accuracy": 0.75,
+        "teacher_correct": 5,
+        "teacher_targets": 6,
+        "ce_mean": 0.28030340440652535,
+        "inference_calls": 12
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 2,
+      "presentations": 68,
+      "global_presentations": 212,
+      "updates_before": 432,
+      "updates_after": 704,
+      "stage_updates": 272,
+      "unique_presented": 4,
+      "train_size": 4,
+      "first_pass": 60,
+      "confirmation_points": [
+        60,
+        64,
+        68
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 16,
+        "0.9": 60,
+        "0.95": 60,
+        "1.0": 60
+      },
+      "at100": null,
+      "at100_note": "promoted_before_100_no_return",
+      "final_test": null
+    },
+    {
+      "n": 3,
+      "presentations": 400,
+      "global_presentations": 612,
+      "updates_before": 704,
+      "updates_after": 2704,
+      "stage_updates": 2000,
+      "unique_presented": 8,
+      "train_size": 8,
+      "first_pass": 384,
+      "confirmation_points": [
+        384,
+        392,
+        400
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 25,
+        "0.9": 384,
+        "0.95": 384,
+        "1.0": 384
+      },
+      "at100": {
+        "n": 3,
+        "total": 8,
+        "whole_correct": 5,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          7,
+          5,
+          5,
+          8
+        ],
+        "bit_accuracy": 0.78125,
+        "teacher_correct": 37,
+        "teacher_targets": 40,
+        "ce_mean": 0.15275526721886878,
+        "inference_calls": 80
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 4,
+      "presentations": 288,
+      "global_presentations": 900,
+      "updates_before": 2704,
+      "updates_after": 4432,
+      "stage_updates": 1728,
+      "unique_presented": 16,
+      "train_size": 16,
+      "first_pass": 256,
+      "confirmation_points": [
+        256,
+        272,
+        288
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 80,
+        "0.9": 256,
+        "0.95": 256,
+        "1.0": 256
+      },
+      "at100": {
+        "n": 4,
+        "total": 16,
+        "whole_correct": 9,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          15,
+          13,
+          9,
+          10,
+          16
+        ],
+        "bit_accuracy": 0.7875,
+        "teacher_correct": 89,
+        "teacher_targets": 96,
+        "ce_mean": 0.12605408423260536,
+        "inference_calls": 192
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 5,
+      "presentations": 360,
+      "global_presentations": 1260,
+      "updates_before": 4432,
+      "updates_after": 6952,
+      "stage_updates": 2520,
+      "unique_presented": 24,
+      "train_size": 24,
+      "first_pass": 312,
+      "confirmation_points": [
+        312,
+        336,
+        360
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 120,
+        "0.9": 312,
+        "0.95": 312,
+        "1.0": 312
+      },
+      "at100": {
+        "n": 5,
+        "total": 4,
+        "whole_correct": 1,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        "bit_accuracy": 0.6666666666666666,
+        "teacher_correct": 24,
+        "teacher_targets": 28,
+        "ce_mean": 0.2749485630028889,
+        "inference_calls": 56
+      },
+      "at100_note": "measured",
+      "final_test": [
+        4,
+        4
+      ]
+    },
+    {
+      "n": 6,
+      "presentations": 720,
+      "global_presentations": 1980,
+      "updates_before": 6952,
+      "updates_after": 12712,
+      "stage_updates": 5760,
+      "unique_presented": 48,
+      "train_size": 48,
+      "first_pass": 432,
+      "confirmation_points": [
+        624,
+        672,
+        720
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 75,
+        "0.9": 432,
+        "0.95": 432,
+        "1.0": 432
+      },
+      "at100": {
+        "n": 6,
+        "total": 8,
+        "whole_correct": 4,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          6,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8
+        ],
+        "bit_accuracy": 0.8571428571428571,
+        "teacher_correct": 59,
+        "teacher_targets": 64,
+        "ce_mean": 0.20659530666749942,
+        "inference_calls": 128
+      },
+      "at100_note": "measured",
+      "final_test": [
+        8,
+        8
+      ]
+    },
+    {
+      "n": 7,
+      "presentations": 480,
+      "global_presentations": 2460,
+      "updates_before": 12712,
+      "updates_after": 17032,
+      "stage_updates": 4320,
+      "unique_presented": 96,
+      "train_size": 96,
+      "first_pass": 288,
+      "confirmation_points": [
+        288,
+        384,
+        480
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 100,
+        "0.9": 288,
+        "0.95": 288,
+        "1.0": 288
+      },
+      "at100": {
+        "n": 7,
+        "total": 16,
+        "whole_correct": 12,
+        "stop_correct": 14,
+        "bit_correct_by_position": [
+          16,
+          15,
+          14,
+          15,
+          12,
+          12,
+          14,
+          14
+        ],
+        "bit_accuracy": 0.875,
+        "teacher_correct": 138,
+        "teacher_targets": 144,
+        "ce_mean": 0.13940593585824665,
+        "inference_calls": 285
+      },
+      "at100_note": "measured",
+      "final_test": [
+        16,
+        16
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 768,
+      "global_presentations": 3228,
+      "updates_before": 17032,
+      "updates_after": 24712,
+      "stage_updates": 7680,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 512,
+      "confirmation_points": [
+        512,
+        576,
+        768
+      ],
+      "arm": "curriculum",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 192,
+        "0.9": 512,
+        "0.95": 512,
+        "1.0": 576
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 12,
+        "stop_correct": 31,
+        "bit_correct_by_position": [
+          31,
+          31,
+          28,
+          26,
+          29,
+          25,
+          23,
+          22,
+          31
+        ],
+        "bit_accuracy": 0.8541666666666666,
+        "teacher_correct": 296,
+        "teacher_targets": 320,
+        "ce_mean": 0.16942878917340082,
+        "inference_calls": 638
+      },
+      "at100_note": "measured",
+      "final_test": [
+        30,
+        32
+      ]
+    },
+    {
+      "n": 1,
+      "presentations": 100,
+      "global_presentations": 100,
+      "updates_before": 0,
+      "updates_after": 300,
+      "stage_updates": 300,
+      "unique_presented": 2,
+      "train_size": 2,
+      "first_pass": 96,
+      "confirmation_points": [
+        96,
+        98,
+        100
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 72,
+        "0.9": 96,
+        "0.95": 96,
+        "1.0": 96
+      },
+      "at100": {
+        "n": 1,
+        "total": 2,
+        "whole_correct": 2,
+        "stop_correct": 2,
+        "bit_correct_by_position": [
+          2,
+          2
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 6,
+        "teacher_targets": 6,
+        "ce_mean": 0.30087674574354223,
+        "inference_calls": 12
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 2,
+      "presentations": 100,
+      "global_presentations": 200,
+      "updates_before": 300,
+      "updates_after": 700,
+      "stage_updates": 400,
+      "unique_presented": 4,
+      "train_size": 4,
+      "first_pass": 92,
+      "confirmation_points": [
+        92,
+        96,
+        100
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 24,
+        "0.9": 92,
+        "0.95": 92,
+        "1.0": 92
+      },
+      "at100": {
+        "n": 2,
+        "total": 4,
+        "whole_correct": 4,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          4,
+          4
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 16,
+        "teacher_targets": 16,
+        "ce_mean": 0.09723315941418591,
+        "inference_calls": 32
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 3,
+      "presentations": 520,
+      "global_presentations": 720,
+      "updates_before": 700,
+      "updates_after": 3300,
+      "stage_updates": 2600,
+      "unique_presented": 8,
+      "train_size": 8,
+      "first_pass": 504,
+      "confirmation_points": [
+        504,
+        512,
+        520
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 40,
+        "0.9": 504,
+        "0.95": 504,
+        "1.0": 504
+      },
+      "at100": {
+        "n": 3,
+        "total": 8,
+        "whole_correct": 5,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          7,
+          5,
+          5,
+          8
+        ],
+        "bit_accuracy": 0.78125,
+        "teacher_correct": 37,
+        "teacher_targets": 40,
+        "ce_mean": 0.18327756853148178,
+        "inference_calls": 80
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 4,
+      "presentations": 352,
+      "global_presentations": 1072,
+      "updates_before": 3300,
+      "updates_after": 5412,
+      "stage_updates": 2112,
+      "unique_presented": 16,
+      "train_size": 16,
+      "first_pass": 288,
+      "confirmation_points": [
+        320,
+        336,
+        352
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 48,
+        "0.9": 288,
+        "0.95": 288,
+        "1.0": 288
+      },
+      "at100": {
+        "n": 4,
+        "total": 16,
+        "whole_correct": 9,
+        "stop_correct": 16,
+        "bit_correct_by_position": [
+          15,
+          13,
+          9,
+          12,
+          16
+        ],
+        "bit_accuracy": 0.8125,
+        "teacher_correct": 89,
+        "teacher_targets": 96,
+        "ce_mean": 0.1649546368925983,
+        "inference_calls": 192
+      },
+      "at100_note": "measured",
+      "final_test": null
+    },
+    {
+      "n": 5,
+      "presentations": 288,
+      "global_presentations": 1360,
+      "updates_before": 5412,
+      "updates_after": 7428,
+      "stage_updates": 2016,
+      "unique_presented": 24,
+      "train_size": 24,
+      "first_pass": 128,
+      "confirmation_points": [
+        256,
+        264,
+        288
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 72,
+        "0.9": 128,
+        "0.95": 128,
+        "1.0": 128
+      },
+      "at100": {
+        "n": 5,
+        "total": 4,
+        "whole_correct": 2,
+        "stop_correct": 4,
+        "bit_correct_by_position": [
+          4,
+          3,
+          4,
+          3,
+          2,
+          4
+        ],
+        "bit_accuracy": 0.8333333333333334,
+        "teacher_correct": 26,
+        "teacher_targets": 28,
+        "ce_mean": 0.21578832806679332,
+        "inference_calls": 56
+      },
+      "at100_note": "measured",
+      "final_test": [
+        3,
+        4
+      ]
+    },
+    {
+      "n": 6,
+      "presentations": 624,
+      "global_presentations": 1984,
+      "updates_before": 7428,
+      "updates_after": 12420,
+      "stage_updates": 4992,
+      "unique_presented": 48,
+      "train_size": 48,
+      "first_pass": 480,
+      "confirmation_points": [
+        528,
+        576,
+        624
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 96,
+        "0.9": 480,
+        "0.95": 480,
+        "1.0": 480
+      },
+      "at100": {
+        "n": 6,
+        "total": 8,
+        "whole_correct": 4,
+        "stop_correct": 8,
+        "bit_correct_by_position": [
+          8,
+          7,
+          6,
+          6,
+          7,
+          6,
+          8
+        ],
+        "bit_accuracy": 0.8571428571428571,
+        "teacher_correct": 59,
+        "teacher_targets": 64,
+        "ce_mean": 0.16155171699425327,
+        "inference_calls": 128
+      },
+      "at100_note": "measured",
+      "final_test": [
+        6,
+        8
+      ]
+    },
+    {
+      "n": 7,
+      "presentations": 512,
+      "global_presentations": 2496,
+      "updates_before": 12420,
+      "updates_after": 17028,
+      "stage_updates": 4608,
+      "unique_presented": 96,
+      "train_size": 96,
+      "first_pass": 384,
+      "confirmation_points": [
+        384,
+        480,
+        512
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 128,
+        "0.9": 256,
+        "0.95": 384,
+        "1.0": 384
+      },
+      "at100": {
+        "n": 7,
+        "total": 16,
+        "whole_correct": 6,
+        "stop_correct": 15,
+        "bit_correct_by_position": [
+          15,
+          15,
+          12,
+          12,
+          13,
+          13,
+          12,
+          15
+        ],
+        "bit_accuracy": 0.8359375,
+        "teacher_correct": 130,
+        "teacher_targets": 144,
+        "ce_mean": 0.2476784692844768,
+        "inference_calls": 287
+      },
+      "at100_note": "measured",
+      "final_test": [
+        15,
+        16
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 768,
+      "global_presentations": 3264,
+      "updates_before": 17028,
+      "updates_after": 24708,
+      "stage_updates": 7680,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 512,
+      "confirmation_points": [
+        512,
+        576,
+        768
+      ],
+      "arm": "curriculum",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 128,
+        "0.9": 384,
+        "0.95": 512,
+        "1.0": 576
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 10,
+        "stop_correct": 23,
+        "bit_correct_by_position": [
+          31,
+          28,
+          25,
+          22,
+          25,
+          26,
+          20,
+          17,
+          23
+        ],
+        "bit_accuracy": 0.7534722222222222,
+        "teacher_correct": 290,
+        "teacher_targets": 320,
+        "ce_mean": 0.23188131854490387,
+        "inference_calls": 630
+      },
+      "at100_note": "measured",
+      "final_test": [
+        31,
+        32
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 2304,
+      "global_presentations": 2304,
+      "updates_before": 0,
+      "updates_after": 23040,
+      "stage_updates": 23040,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 2000,
+      "confirmation_points": [
+        2000,
+        2112,
+        2304
+      ],
+      "arm": "direct8",
+      "seed": 101,
+      "first_measured_fraction": {
+        "0.5": 1152,
+        "0.9": 2000,
+        "0.95": 2000,
+        "1.0": 2112
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 0,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          21,
+          23,
+          20,
+          20,
+          22,
+          17,
+          15,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6597222222222222,
+        "teacher_correct": 237,
+        "teacher_targets": 320,
+        "ce_mean": 0.560993176721071,
+        "inference_calls": 640
+      },
+      "at100_note": "measured",
+      "final_test": [
+        32,
+        32
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 2304,
+      "global_presentations": 2304,
+      "updates_before": 0,
+      "updates_after": 23040,
+      "stage_updates": 23040,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 2000,
+      "confirmation_points": [
+        2000,
+        2112,
+        2304
+      ],
+      "arm": "direct8",
+      "seed": 202,
+      "first_measured_fraction": {
+        "0.5": 960,
+        "0.9": 1728,
+        "0.95": 2000,
+        "1.0": 2112
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 0,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          22,
+          22,
+          22,
+          21,
+          21,
+          21,
+          17,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6875,
+        "teacher_correct": 239,
+        "teacher_targets": 320,
+        "ce_mean": 0.5304119105868603,
+        "inference_calls": 640
+      },
+      "at100_note": "measured",
+      "final_test": [
+        31,
+        32
+      ]
+    },
+    {
+      "n": 8,
+      "presentations": 2880,
+      "global_presentations": 2880,
+      "updates_before": 0,
+      "updates_after": 28800,
+      "stage_updates": 28800,
+      "unique_presented": 192,
+      "train_size": 192,
+      "first_pass": 2000,
+      "confirmation_points": [
+        2496,
+        2688,
+        2880
+      ],
+      "arm": "direct8",
+      "seed": 303,
+      "first_measured_fraction": {
+        "0.5": 1152,
+        "0.9": 1728,
+        "0.95": 2000,
+        "1.0": 2000
+      },
+      "at100": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 0,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          23,
+          24,
+          22,
+          21,
+          18,
+          17,
+          16,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6701388888888888,
+        "teacher_correct": 230,
+        "teacher_targets": 320,
+        "ce_mean": 0.6160301095971472,
+        "inference_calls": 640
+      },
+      "at100_note": "measured",
+      "final_test": [
+        32,
+        32
+      ]
+    }
+  ],
+  "total_presentations": 18302,
+  "total_updates": 158150,
+  "matched_update_comparisons": [
+    {
+      "seed": 101,
+      "common_global_update_points": [],
+      "curriculum_entered_n8_after_updates": 24250,
+      "curriculum_total_updates": 33850,
+      "direct_total_updates": 23040
+    },
+    {
+      "seed": 202,
+      "common_global_update_points": [
+        {
+          "updates": 18000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 12,
+            "stop_correct": 28,
+            "bit_correct_by_position": [
+              31,
+              31,
+              29,
+              27,
+              30,
+              25,
+              22,
+              21,
+              28
+            ],
+            "bit_accuracy": 0.8472222222222222,
+            "teacher_correct": 296,
+            "teacher_targets": 320,
+            "ce_mean": 0.17192400678373845,
+            "inference_calls": 632
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              30,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.012670000152139125,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 19,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              30,
+              29,
+              27,
+              25,
+              25,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.90625,
+            "teacher_correct": 305,
+            "teacher_targets": 320,
+            "ce_mean": 0.10462531496035976,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              31,
+              31,
+              29,
+              25,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 309,
+            "teacher_targets": 320,
+            "ce_mean": 0.07141029961118706,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              29,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9652777777777778,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.042549670779405246,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              31,
+              31,
+              31,
+              32,
+              32,
+              31,
+              31,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.013262052659290147,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 25,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              27,
+              27,
+              32
+            ],
+            "bit_accuracy": 0.9513888888888888,
+            "teacher_correct": 313,
+            "teacher_targets": 320,
+            "ce_mean": 0.04088086089319187,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003908356214058386,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 31,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              31,
+              31,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9930555555555556,
+            "teacher_correct": 319,
+            "teacher_targets": 320,
+            "ce_mean": 0.025595893270277233,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 24,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              30,
+              30,
+              28,
+              28,
+              29,
+              28,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.9236111111111112,
+            "teacher_correct": 312,
+            "teacher_targets": 320,
+            "ce_mean": 0.056645146884077804,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.009772317962724425,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0010673085328955488,
+            "inference_calls": 640
+          }
+        }
+      ],
+      "curriculum_entered_n8_after_updates": 17032,
+      "curriculum_total_updates": 24712,
+      "direct_total_updates": 23040
+    },
+    {
+      "seed": 303,
+      "common_global_update_points": [
+        {
+          "updates": 18000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 9,
+            "stop_correct": 20,
+            "bit_correct_by_position": [
+              32,
+              29,
+              24,
+              23,
+              25,
+              26,
+              18,
+              17,
+              20
+            ],
+            "bit_accuracy": 0.7430555555555556,
+            "teacher_correct": 288,
+            "teacher_targets": 320,
+            "ce_mean": 0.26541193316681144,
+            "inference_calls": 626
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.008123018113593191,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 19000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 17,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              30,
+              26,
+              24,
+              23,
+              28,
+              26,
+              26,
+              32
+            ],
+            "bit_accuracy": 0.8576388888888888,
+            "teacher_correct": 297,
+            "teacher_targets": 320,
+            "ce_mean": 0.13519678615791966,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003643377535844732,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 20000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 27,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              31,
+              30,
+              31,
+              29,
+              29,
+              30,
+              29,
+              32
+            ],
+            "bit_accuracy": 0.9479166666666666,
+            "teacher_correct": 315,
+            "teacher_targets": 320,
+            "ce_mean": 0.048123292328663025,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.0011319544367363085,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 21000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 29,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              29,
+              29,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9791666666666666,
+            "teacher_correct": 317,
+            "teacher_targets": 320,
+            "ce_mean": 0.03248252362704658,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              31,
+              30,
+              29,
+              30,
+              31,
+              32
+            ],
+            "bit_accuracy": 0.96875,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02863221449195911,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 22000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              28,
+              28,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.03907561275714612,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.000666594016973221,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 23000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 30,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9861111111111112,
+            "teacher_correct": 318,
+            "teacher_targets": 320,
+            "ce_mean": 0.0207846565833397,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.003235785476961518,
+            "inference_calls": 640
+          }
+        },
+        {
+          "updates": 24000,
+          "curriculum_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 28,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              30,
+              30,
+              30,
+              30,
+              32
+            ],
+            "bit_accuracy": 0.9722222222222222,
+            "teacher_correct": 316,
+            "teacher_targets": 320,
+            "ce_mean": 0.02755871309222648,
+            "inference_calls": 640
+          },
+          "direct_validation": {
+            "n": 8,
+            "total": 32,
+            "whole_correct": 32,
+            "stop_correct": 32,
+            "bit_correct_by_position": [
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32
+            ],
+            "bit_accuracy": 1.0,
+            "teacher_correct": 320,
+            "teacher_targets": 320,
+            "ce_mean": 0.004105443613696576,
+            "inference_calls": 640
+          }
+        }
+      ],
+      "curriculum_entered_n8_after_updates": 17028,
+      "curriculum_total_updates": 24708,
+      "direct_total_updates": 28800
+    }
+  ],
+  "training_python": "3.12.14",
+  "training_numpy": "2.3.5",
+  "plot_matplotlib": "3.11.2",
+  "plot_numpy": "2.5.4"
+}

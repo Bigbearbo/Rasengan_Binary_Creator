@@ -1,0 +1,32 @@
+{
+  "wrong_prefix_kept": true,
+  "update_after_every_token": true,
+  "early_stop_and_cap": true,
+  "local_vs_whole_reward_distinguished": true,
+  "finite_difference": [
+    {
+      "action": "0",
+      "reward": -1,
+      "checked": 27,
+      "max_error": 2.4780344443087188e-11
+    },
+    {
+      "action": "1",
+      "reward": 1,
+      "checked": 27,
+      "max_error": 1.3793327591216098e-11
+    },
+    {
+      "action": "S",
+      "reward": -1,
+      "checked": 27,
+      "max_error": 2.7925869949818605e-11
+    },
+    {
+      "action": "S",
+      "reward": 1,
+      "checked": 27,
+      "max_error": 2.1515844661479377e-11
+    }
+  ]
+}

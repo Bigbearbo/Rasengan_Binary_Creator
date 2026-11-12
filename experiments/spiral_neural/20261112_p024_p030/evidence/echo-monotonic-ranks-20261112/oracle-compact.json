@@ -1,0 +1,45 @@
+{
+  "oracle_roundtrips": 510,
+  "paper_fixtures": [
+    [
+      1,
+      0,
+      "010000",
+      "00"
+    ],
+    [
+      1,
+      1,
+      "010010",
+      "10"
+    ],
+    [
+      2,
+      1,
+      "0100010",
+      "010"
+    ],
+    [
+      2,
+      2,
+      "0100100",
+      "100"
+    ],
+    [
+      3,
+      5,
+      "01001010",
+      "1010"
+    ]
+  ],
+  "neg_profile_fixture": [
+    "01010100",
+    "010"
+  ],
+  "invalid_rejected": 4,
+  "splits_and_one_per_round": true,
+  "promotion_tail_trigger": true,
+  "no_future_prefix_labels": true,
+  "23slot_STOP_boundary": true,
+  "validation_threshold_ceil": true
+}

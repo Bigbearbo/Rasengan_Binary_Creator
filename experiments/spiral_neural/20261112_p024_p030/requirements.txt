@@ -1,0 +1,2 @@
+# Exact historical training version. Matplotlib is optional for replotting only.
+numpy==2.3.5

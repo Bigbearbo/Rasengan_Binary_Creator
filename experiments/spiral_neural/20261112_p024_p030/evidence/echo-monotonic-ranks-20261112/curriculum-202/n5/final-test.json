@@ -1,0 +1,49 @@
+{
+  "n": 5,
+  "total": 4,
+  "whole_correct": 4,
+  "stop_correct": 4,
+  "bit_correct_by_position": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "bit_accuracy": 1.0,
+  "teacher_correct": 28,
+  "teacher_targets": 28,
+  "ce_mean": 0.020049450720910966,
+  "inference_calls": 56,
+  "records": [
+    [
+      6,
+      "001100S",
+      true,
+      true,
+      "001100S"
+    ],
+    [
+      21,
+      "101010S",
+      true,
+      true,
+      "101010S"
+    ],
+    [
+      24,
+      "110000S",
+      true,
+      true,
+      "110000S"
+    ],
+    [
+      31,
+      "111110S",
+      true,
+      true,
+      "111110S"
+    ]
+  ]
+}

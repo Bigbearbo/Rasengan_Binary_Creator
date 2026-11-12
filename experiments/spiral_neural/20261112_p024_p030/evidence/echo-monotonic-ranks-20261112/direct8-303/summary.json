@@ -1,0 +1,789 @@
+{
+  "arm": "direct8",
+  "seed": 303,
+  "stages": [
+    {
+      "n": 8,
+      "presentations": 2880,
+      "global_presentations": 2880,
+      "updates_before": 0,
+      "updates_after": 28800,
+      "stage_updates": 28800,
+      "unique_presented": 192,
+      "train_size": 192,
+      "exposure_min": 15,
+      "exposure_max": 15,
+      "first_pass": 2000,
+      "confirmation_points": [
+        2496,
+        2688,
+        2880
+      ],
+      "stop_reason": "three_validation_passes",
+      "training_and_probe_seconds": 3.335289200000034,
+      "probe_inference_calls": 134073,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.00127802718973156,
+        "inference_calls": 640
+      },
+      "final_test": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0011183511082583143,
+        "inference_calls": 640
+      },
+      "test_type": "unseen_at_this_rank_fixed_split",
+      "first_question": "0100000000010",
+      "initial_state_sha": "ab7a5ce8e3eac3cc020e727a2c4f123604bb7126598d35e30d078cfb467974e6"
+    }
+  ],
+  "highest_rank": 8,
+  "reached_n8": true,
+  "passed_n8": true,
+  "total_presentations": 2880,
+  "total_updates": 28800,
+  "total_training_and_probe_seconds": 3.335289200000034,
+  "old_rank_training_or_probes_after_promotion": false,
+  "replay": [
+    {
+      "n": 8,
+      "all_actions_curve_optimizer_and_final_test_equal": true
+    }
+  ],
+  "n8_budget_anchors": [
+    {
+      "updates": 1000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 0,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          23,
+          24,
+          22,
+          21,
+          18,
+          17,
+          16,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6701388888888888,
+        "teacher_correct": 230,
+        "teacher_targets": 320,
+        "ce_mean": 0.6160301095971472,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 2000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 0,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          23,
+          21,
+          17,
+          17,
+          19,
+          13,
+          17,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6215277777777778,
+        "teacher_correct": 255,
+        "teacher_targets": 320,
+        "ce_mean": 0.49317589868602163,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 3000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 3,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          25,
+          22,
+          22,
+          16,
+          16,
+          20,
+          14,
+          22,
+          32
+        ],
+        "bit_accuracy": 0.65625,
+        "teacher_correct": 268,
+        "teacher_targets": 320,
+        "ce_mean": 0.475221999256061,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 4000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 2,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          26,
+          23,
+          21,
+          15,
+          15,
+          18,
+          17,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6493055555555556,
+        "teacher_correct": 267,
+        "teacher_targets": 320,
+        "ce_mean": 0.5028805921990631,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 5000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 2,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          27,
+          23,
+          21,
+          19,
+          11,
+          23,
+          16,
+          22,
+          32
+        ],
+        "bit_accuracy": 0.6736111111111112,
+        "teacher_correct": 273,
+        "teacher_targets": 320,
+        "ce_mean": 0.4378589377402694,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 6000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 4,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          28,
+          21,
+          22,
+          23,
+          14,
+          19,
+          23,
+          23,
+          32
+        ],
+        "bit_accuracy": 0.7118055555555556,
+        "teacher_correct": 284,
+        "teacher_targets": 320,
+        "ce_mean": 0.3073397623934272,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 7000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 1,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          29,
+          23,
+          22,
+          14,
+          11,
+          23,
+          22,
+          20,
+          32
+        ],
+        "bit_accuracy": 0.6805555555555556,
+        "teacher_correct": 276,
+        "teacher_targets": 320,
+        "ce_mean": 0.3104765973849696,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 8000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 9,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          29,
+          25,
+          23,
+          18,
+          16,
+          25,
+          28,
+          26,
+          32
+        ],
+        "bit_accuracy": 0.7708333333333334,
+        "teacher_correct": 296,
+        "teacher_targets": 320,
+        "ce_mean": 0.18911522625757854,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 9000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 13,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          29,
+          26,
+          21,
+          16,
+          19,
+          29,
+          26,
+          27,
+          32
+        ],
+        "bit_accuracy": 0.78125,
+        "teacher_correct": 298,
+        "teacher_targets": 320,
+        "ce_mean": 0.1496194510793728,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 10000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 10,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          29,
+          28,
+          27,
+          21,
+          18,
+          28,
+          24,
+          24,
+          32
+        ],
+        "bit_accuracy": 0.8020833333333334,
+        "teacher_correct": 298,
+        "teacher_targets": 320,
+        "ce_mean": 0.15908669140686327,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 11000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 15,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          30,
+          29,
+          28,
+          22,
+          22,
+          27,
+          29,
+          27,
+          32
+        ],
+        "bit_accuracy": 0.8541666666666666,
+        "teacher_correct": 301,
+        "teacher_targets": 320,
+        "ce_mean": 0.1556975337667016,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 12000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 19,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          30,
+          29,
+          26,
+          26,
+          25,
+          27,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.8993055555555556,
+        "teacher_correct": 307,
+        "teacher_targets": 320,
+        "ce_mean": 0.08169785647230386,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 13000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 24,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          30,
+          27,
+          24,
+          28,
+          29,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.9236111111111112,
+        "teacher_correct": 312,
+        "teacher_targets": 320,
+        "ce_mean": 0.06104711024891866,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 14000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 24,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          30,
+          26,
+          25,
+          29,
+          30,
+          30,
+          32
+        ],
+        "bit_accuracy": 0.9236111111111112,
+        "teacher_correct": 312,
+        "teacher_targets": 320,
+        "ce_mean": 0.04444961095393376,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 15000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 31,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          31,
+          31,
+          31,
+          31,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.9861111111111112,
+        "teacher_correct": 319,
+        "teacher_targets": 320,
+        "ce_mean": 0.020168792162157265,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 16000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 29,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          29,
+          31,
+          32,
+          30,
+          32
+        ],
+        "bit_accuracy": 0.9791666666666666,
+        "teacher_correct": 317,
+        "teacher_targets": 320,
+        "ce_mean": 0.036358826181433934,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 17000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.006226184967029763,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 18000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.008123018113593191,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 19000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.003643377535844732,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 20000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0011319544367363085,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 21000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 28,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          31,
+          30,
+          29,
+          30,
+          31,
+          32
+        ],
+        "bit_accuracy": 0.96875,
+        "teacher_correct": 316,
+        "teacher_targets": 320,
+        "ce_mean": 0.02863221449195911,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 22000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.000666594016973221,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 23000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.003235785476961518,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 24000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.004105443613696576,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 25000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0014610616166884805,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 26000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.0005568115762077483,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 27000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 27,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          31,
+          30,
+          29,
+          31,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 0.9756944444444444,
+        "teacher_correct": 314,
+        "teacher_targets": 320,
+        "ce_mean": 0.056958724364916405,
+        "inference_calls": 640
+      }
+    },
+    {
+      "updates": 28000,
+      "validation": {
+        "n": 8,
+        "total": 32,
+        "whole_correct": 32,
+        "stop_correct": 32,
+        "bit_correct_by_position": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "bit_accuracy": 1.0,
+        "teacher_correct": 320,
+        "teacher_targets": 320,
+        "ce_mean": 0.00016731577308704143,
+        "inference_calls": 640
+      }
+    }
+  ]
+}

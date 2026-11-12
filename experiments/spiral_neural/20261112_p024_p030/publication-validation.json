@@ -1,0 +1,322 @@
+{
+  "status": "passed",
+  "publication_date": "2026-11-12",
+  "portable_full_reproduction": {
+    "status": "passed",
+    "training_numpy": "2.3.5",
+    "portable_learning_AST_equivalence_count": 14,
+    "portable_learning_AST_equivalence_files": [
+      "echo_8bit_trial.py",
+      "echo_bit_feedback.py",
+      "echo_learning_time.py",
+      "echo_monotonic_curriculum.py",
+      "echo_prefix_direct.py",
+      "echo_prefix_separator.py",
+      "echo_serial_stop.py",
+      "echo_teaching_comparison.py",
+      "gated_curriculum.py",
+      "mlp_echo_trial.py",
+      "p030_binary_continual.py",
+      "p030_summarize.py",
+      "summarize_monotonic_curriculum.py",
+      "summarize_teaching_comparison.py"
+    ],
+    "AST_exclusions": [
+      "filesystem bindings ROOT/OUT/WORK/SOURCE/CHECKOUT",
+      "filesystem helper import",
+      "sys.path lookup",
+      "plot output mkdir"
+    ],
+    "P030_full_fresh_reproduction": {
+      "continual_students": 9,
+      "scratch_controls": 6,
+      "trace_hashes_exact": 55,
+      "checkpoint_arrays_exact": 64,
+      "all_recorded_scientific_metrics_and_internal_replays_equal": true,
+      "time_and_source_location_expected_to_differ": true,
+      "question_presentations": 42990,
+      "token_updates": 213404,
+      "includes_its_own_full_replay": true
+    }
+  },
+  "current_publication_inference_validation": {
+    "status": "passed",
+    "integrity": {
+      "manifest_files_verified": 632,
+      "finite_nonpickle_checkpoints": 227,
+      "high_confidence_secret_scan": "passed",
+      "cache_path_exclusion": "passed",
+      "machine_home_and_font_path_scan": "passed",
+      "python_parse": "passed"
+    },
+    "numpy": "2.3.5",
+    "inference_and_contracts": {
+      "checkpoint_metric_checks": 121,
+      "checkpoints": [
+        "P024/serial-101",
+        "P024/serial-202",
+        "P024/serial-303",
+        "P024/parallel-101",
+        "P024/parallel-202",
+        "P024/parallel-303",
+        "echo-prefix-separator-20261112/101",
+        "echo-prefix-separator-20261112/202",
+        "echo-prefix-separator-20261112/303",
+        "echo-prefix-direct-20261112/101",
+        "echo-prefix-direct-20261112/202",
+        "echo-prefix-direct-20261112/303",
+        "P026/101",
+        "P026/202",
+        "P026/303",
+        "P027/ce_shuffle-101/state.npz",
+        "P027/ce_shuffle-101/equal-update-100000.npz",
+        "P027/ce_shuffle-202/state.npz",
+        "P027/ce_shuffle-202/equal-update-100000.npz",
+        "P027/ce_shuffle-303/state.npz",
+        "P027/ce_shuffle-303/equal-update-100000.npz",
+        "P027/reward_shuffle-101/state.npz",
+        "P027/reward_shuffle-101/equal-update-100000.npz",
+        "P027/reward_shuffle-202/state.npz",
+        "P027/reward_shuffle-202/equal-update-100000.npz",
+        "P027/reward_shuffle-303/state.npz",
+        "P027/reward_shuffle-303/equal-update-100000.npz",
+        "P027/reward_repeat-101/state.npz",
+        "P027/reward_repeat-101/equal-update-100000.npz",
+        "P027/reward_repeat-202/state.npz",
+        "P027/reward_repeat-202/equal-update-100000.npz",
+        "P027/reward_repeat-303/state.npz",
+        "P027/reward_repeat-303/equal-update-100000.npz",
+        "P028/ce_shuffle-101",
+        "P028/ce_shuffle-202",
+        "P028/ce_shuffle-303",
+        "P028/reward_shuffle-101",
+        "P028/reward_shuffle-202",
+        "P028/reward_shuffle-303",
+        "P029/curriculum-101/n1",
+        "P029/curriculum-101/n2",
+        "P029/curriculum-101/n3",
+        "P029/curriculum-101/n4",
+        "P029/curriculum-101/n5",
+        "P029/curriculum-101/n6",
+        "P029/curriculum-101/n7",
+        "P029/curriculum-101/n8",
+        "P029/curriculum-202/n1",
+        "P029/curriculum-202/n2",
+        "P029/curriculum-202/n3",
+        "P029/curriculum-202/n4",
+        "P029/curriculum-202/n5",
+        "P029/curriculum-202/n6",
+        "P029/curriculum-202/n7",
+        "P029/curriculum-202/n8",
+        "P029/curriculum-303/n1",
+        "P029/curriculum-303/n2",
+        "P029/curriculum-303/n3",
+        "P029/curriculum-303/n4",
+        "P029/curriculum-303/n5",
+        "P029/curriculum-303/n6",
+        "P029/curriculum-303/n7",
+        "P029/curriculum-303/n8",
+        "P029/direct8-101/n8",
+        "P029/direct8-202/n8",
+        "P029/direct8-303/n8",
+        "P030/dynamic-101/0_echo_n1",
+        "P030/dynamic-101/1a_echo_n2",
+        "P030/dynamic-101/1b_echo_n3",
+        "P030/dynamic-101/2a_echo_op2",
+        "P030/dynamic-101/2b_add_neg",
+        "P030/dynamic-202/0_echo_n1",
+        "P030/dynamic-202/1a_echo_n2",
+        "P030/dynamic-202/1b_echo_n3",
+        "P030/dynamic-202/2a_echo_op2",
+        "P030/dynamic-202/2b_add_neg",
+        "P030/dynamic-303/0_echo_n1",
+        "P030/dynamic-303/1a_echo_n2",
+        "P030/dynamic-303/1b_echo_n3",
+        "P030/dynamic-303/2a_echo_op2",
+        "P030/dynamic-303/2b_add_neg",
+        "P030/fixed-101/0_echo_n1",
+        "P030/fixed-101/1a_echo_n2",
+        "P030/fixed-101/1b_echo_n3",
+        "P030/fixed-101/2a_echo_op2",
+        "P030/fixed-101/2b_add_neg",
+        "P030/fixed-202/0_echo_n1",
+        "P030/fixed-202/1a_echo_n2",
+        "P030/fixed-202/1b_echo_n3",
+        "P030/fixed-202/2a_echo_op2",
+        "P030/fixed-202/2b_add_neg",
+        "P030/fixed-303/0_echo_n1",
+        "P030/fixed-303/1a_echo_n2",
+        "P030/fixed-303/1b_echo_n3",
+        "P030/fixed-303/2a_echo_op2",
+        "P030/fixed-303/2b_add_neg",
+        "P030/fixed-303/2c_add_zero",
+        "P030/fixed-303/3_enable_end",
+        "P030/bottleneck-101/0_echo_n1",
+        "P030/bottleneck-101/1a_echo_n2",
+        "P030/bottleneck-101/1b_echo_n3",
+        "P030/bottleneck-101/2a_echo_op2",
+        "P030/bottleneck-101/2b_add_neg",
+        "P030/bottleneck-101/2c_add_zero",
+        "P030/bottleneck-202/0_echo_n1",
+        "P030/bottleneck-202/1a_echo_n2",
+        "P030/bottleneck-202/1b_echo_n3",
+        "P030/bottleneck-202/2a_echo_op2",
+        "P030/bottleneck-202/2b_add_neg",
+        "P030/bottleneck-303/0_echo_n1",
+        "P030/bottleneck-303/1a_echo_n2",
+        "P030/bottleneck-303/1b_echo_n3",
+        "P030/bottleneck-303/2a_echo_op2",
+        "P030/bottleneck-303/2b_add_neg",
+        "P030/bottleneck-303/2c_add_zero",
+        "P030/scratch_2a_echo_op2-101/2a_echo_op2",
+        "P030/scratch_2b_add_neg-101/2b_add_neg",
+        "P030/scratch_2a_echo_op2-202/2a_echo_op2",
+        "P030/scratch_2b_add_neg-202/2b_add_neg",
+        "P030/scratch_2a_echo_op2-303/2a_echo_op2",
+        "P030/scratch_2b_add_neg-303/2b_add_neg"
+      ],
+      "current_contracts": {
+        "P027_CE_and_reward": {
+          "crossentropy_finite_differences": [
+            {
+              "target": "0",
+              "checked": 27,
+              "max_error": 1.3608844953716392E-11
+            },
+            {
+              "target": "1",
+              "checked": 27,
+              "max_error": 1.3007261934205872E-11
+            },
+            {
+              "target": "S",
+              "checked": 27,
+              "max_error": 2.2273516364634816E-11
+            }
+          ],
+          "correct_prefix_and_stop_targets": true,
+          "initial_weights_identical_across_arms": true,
+          "reward_checks_rerun": {
+            "wrong_prefix_kept": true,
+            "update_after_every_token": true,
+            "early_stop_and_cap": true,
+            "local_vs_whole_reward_distinguished": true,
+            "finite_difference": [
+              {
+                "action": "0",
+                "reward": -1,
+                "checked": 27,
+                "max_error": 2.4780344443087188E-11
+              },
+              {
+                "action": "1",
+                "reward": 1,
+                "checked": 27,
+                "max_error": 1.3793327591216098E-11
+              },
+              {
+                "action": "S",
+                "reward": -1,
+                "checked": 27,
+                "max_error": 2.7925869949818605E-11
+              },
+              {
+                "action": "S",
+                "reward": 1,
+                "checked": 27,
+                "max_error": 2.1515844661479377E-11
+              }
+            ]
+          }
+        },
+        "P028_stopping": {
+          "two_consecutive_train_only_checks": true,
+          "imperfect_resets_streak": true,
+          "probe_nonmutation_and_matches_full_evaluator": true
+        },
+        "P029_oracle": {
+          "oracle_roundtrips": 510,
+          "paper_fixtures": [
+            [
+              1,
+              0,
+              "010000",
+              "00"
+            ],
+            [
+              1,
+              1,
+              "010010",
+              "10"
+            ],
+            [
+              2,
+              1,
+              "0100010",
+              "010"
+            ],
+            [
+              2,
+              2,
+              "0100100",
+              "100"
+            ],
+            [
+              3,
+              5,
+              "01001010",
+              "1010"
+            ]
+          ],
+          "neg_profile_fixture": [
+            "01010100",
+            "010"
+          ],
+          "invalid_rejected": 4,
+          "splits_and_one_per_round": true,
+          "promotion_tail_trigger": true,
+          "no_future_prefix_labels": true,
+          "23slot_STOP_boundary": true,
+          "validation_threshold_ceil": true
+        },
+        "P030_binary_growth": {
+          "roundtrips": 86,
+          "consistent_teacher_labels": 422,
+          "Q1_Q6_fixtures": true,
+          "data_END_collision_valid": true,
+          "missing_END_and_unknown_profile_rejected": true,
+          "pure_binary_context_overflow": true,
+          "growth_old_weights_moments_birth_and_function_preserved": true,
+          "new_parameter_age_starts_fresh": true,
+          "per10_new_task70percent": true,
+          "finite_differences": [
+            {
+              "target": "0",
+              "checked": 27,
+              "max_error": 2.619685024463081E-11
+            },
+            {
+              "target": "1",
+              "checked": 27,
+              "max_error": 2.01713437619766E-11
+            },
+            {
+              "target": "S",
+              "checked": 27,
+              "max_error": 1.972713312148322E-11
+            }
+          ]
+        }
+      },
+      "dataset_equivalence": "256 P021 rows equal independent n8 oracle",
+      "full_retraining_performed": false
+    }
+  },
+  "privacy_revision": {
+    "removed_cache_artifacts": 2,
+    "all_cache_paths_excluded": true,
+    "machine_home_and_font_paths_scan": "passed",
+    "main_was_not_updated_before_revision": true,
+    "rejected_tree_not_used_as_base": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "finite_difference": [
+    {
+      "tokens": "S",
+      "checked": 27,
+      "max_error": 1.1082232354020505e-11
+    },
+    {
+      "tokens": "01S",
+      "checked": 27,
+      "max_error": 3.721631423175831e-11
+    },
+    {
+      "tokens": "101001010S",
+      "checked": 27,
+      "max_error": 7.874691149807253e-11
+    },
+    {
+      "tokens": "1111111111",
+      "checked": 27,
+      "max_error": 2.526685527470818e-10
+    }
+  ],
+  "stop_cap_and_no_stop_reward_guards": true
+}

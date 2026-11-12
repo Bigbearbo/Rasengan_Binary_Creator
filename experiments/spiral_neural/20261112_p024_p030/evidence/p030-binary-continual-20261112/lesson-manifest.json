@@ -1,0 +1,219 @@
+{
+  "profiles": [
+    {
+      "name": "0_echo_n1",
+      "nop": 1,
+      "nd": 1,
+      "ops": [
+        0
+      ],
+      "end": false,
+      "new": null,
+      "Q_length": 6,
+      "context": 8,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        []
+      ]
+    },
+    {
+      "name": "1a_echo_n2",
+      "nop": 1,
+      "nd": 2,
+      "ops": [
+        0
+      ],
+      "end": false,
+      "new": null,
+      "Q_length": 7,
+      "context": 10,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        []
+      ]
+    },
+    {
+      "name": "1b_echo_n3",
+      "nop": 1,
+      "nd": 3,
+      "ops": [
+        0
+      ],
+      "end": false,
+      "new": null,
+      "Q_length": 8,
+      "context": 12,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "name": "2a_echo_op2",
+      "nop": 2,
+      "nd": 3,
+      "ops": [
+        0
+      ],
+      "end": false,
+      "new": null,
+      "Q_length": 9,
+      "context": 13,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "name": "2b_add_neg",
+      "nop": 2,
+      "nd": 3,
+      "ops": [
+        0,
+        1
+      ],
+      "end": false,
+      "new": 1,
+      "Q_length": 9,
+      "context": 13,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "name": "2c_add_zero",
+      "nop": 2,
+      "nd": 3,
+      "ops": [
+        0,
+        1,
+        2
+      ],
+      "end": false,
+      "new": 2,
+      "Q_length": 9,
+      "context": 13,
+      "reserved_END_codes": [],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "name": "3_enable_end",
+      "nop": 2,
+      "nd": 3,
+      "ops": [
+        0,
+        1,
+        2
+      ],
+      "end": true,
+      "new": null,
+      "Q_length": 12,
+      "context": 16,
+      "reserved_END_codes": [
+        "110"
+      ],
+      "split": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    }
+  ],
+  "input_alphabet": [
+    "0",
+    "1"
+  ],
+  "output_alphabet": [
+    "0",
+    "1",
+    "STOP"
+  ],
+  "max_context": 16,
+  "source_commit": "ad6281c"
+}
