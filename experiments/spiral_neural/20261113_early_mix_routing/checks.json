@@ -1,0 +1,39 @@
+{
+  "NN_forward_calls": 0,
+  "example_schedule": {
+    "Echo_each": 1200,
+    "Neg_each": 1200,
+    "demo_task_order_seeds": [
+      731,
+      732,
+      733
+    ],
+    "early_first_Neg_lesson_1based": 3,
+    "identical_final_mixed_lessons": 1200,
+    "late_Echo_only_prefix_lessons": 300,
+    "lessons_each_condition": 2400,
+    "presentations_per_operation_value": 200,
+    "same_full_multiset": true,
+    "same_per_operation_data_order": true,
+    "targets_each_condition": 12000
+  },
+  "grammar": {
+    "changed_raw_position_zero_based": 3,
+    "contradictory_labels": 0,
+    "legal_first_token_opcode_pairs": 8,
+    "questions": 16,
+    "unique_teacher_inputs": 80
+  },
+  "mechanism_counterexample": {
+    "flat_lookup_matches_all_80_oracle_targets": true,
+    "flat_lookup_passes_all_8_first_token_opcode_pairs": true,
+    "later_position_limit": "Correct earlier answers differ across Echo and Neg; use empty A prefix for the clean opcode-only intervention",
+    "meaning": "Opcode-dependent correctness alone does not identify an explicit learned neural router"
+  },
+  "new_students": 0,
+  "optimizer_calls": 0,
+  "scope": "Synthetic design checks only; not a neural experiment",
+  "source_sha256": "5c69417e577f7d6530eec57d3179f7aa9ddd13b3956692a59cc8ac42645221ce",
+  "status": "PASS",
+  "training_protocol_frozen": false
+}
