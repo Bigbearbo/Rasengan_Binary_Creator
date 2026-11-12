@@ -6,7 +6,7 @@ from spiral_tree_nodes_v06 import (migrate,highwater,allocate_operator,encode_op
     decode_operator,snapshot_package,delta_package,TreeNodeReceiver)
 from spiral_tree_packet_v05 import wire_package
 ROOT=Path(__file__).parent
-base=json.loads((ROOT/'spiral_dialogue_v03_run'/'teacher_tree.json').read_text('utf-8'))
+base=json.loads((ROOT/'fixtures'/'v03_teacher_tree.json').read_text('utf-8'))
 with tempfile.TemporaryDirectory() as td:
     recv=TreeNodeReceiver(Path(td)/'student.json')
     current=migrate(base)

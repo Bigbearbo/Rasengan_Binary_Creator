@@ -4,7 +4,7 @@ from spiral_tree_packet_v05 import wire_package
 from spiral_dialogue_v02 import encode_data
 from spiral_tree_nodes_v06 import (migrate,highwater,allocate_operator,encode_operator,
     decode_operator,snapshot_package,delta_package,TreeNodeReceiver,TreeNodeCurriculumParser,public_fingerprint)
-BASE=Path(__file__).parent/'spiral_dialogue_v03_run'/'teacher_tree.json'
+BASE=Path(__file__).parent/'fixtures'/'v03_teacher_tree.json'
 
 def deliver(recv,envelope,pid):
     manifest,chunks,_=wire_package(envelope,pid,chunk_bytes=125)

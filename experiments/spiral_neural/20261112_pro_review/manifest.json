@@ -1,0 +1,39 @@
+{
+  "producer": "ChatGPT Pro",
+  "source_commits": {
+    "main": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+    "P031": "cee9fb7c331f23d9b7495f7240cc45060c19838d",
+    "P032": "f003980f719f84b366cda13601091ecf8c256d51",
+    "P033": "e217bd0fd6cfe654062c3615ee2aa73a36d1ca71"
+  },
+  "scope": "Independent checks, public synthetic evidence, parser fixture repair and unexecuted follow-up design; no new neural training.",
+  "files_sha256": {
+    "README.md": "017a7ad3aee29cfb5df78fcb27ba4977f1be381959783f443de78bebdf78d056",
+    "audit_bank.py": "57c0210937439e02ec7e0273ce15e275b7c0db978d4643ca3ccd263fa5a87267",
+    "review_probe.py": "6512e3ffea66c8ba9fcc5e9bd970483c7faf143284a82ca94096efab11df1a9b",
+    "audit_p033.py": "b13e817218fb93bb8af0f0fd0de21ba5ebac7168cecdbbab9442d8e2e462a723",
+    "summary.json": "42aa6caf6ee96877820a7d306f670d04a3a7d5dd618d2b94700297ef3b029bc9",
+    "evidence.zip": "1cce4468329e86f682c5b587e59bd20339c9eeb9d50e6a78cb76f91d2417c0d7"
+  },
+  "evidence_members_sha256": {
+    "historical-review-before-p033.md": "bdf6f572d7bde385ef8d420713e547d19b0ccdc013d3a6a7323b5f05967df62e",
+    "p031/compact.json": "caf4b0ed6798b7b583f036c91274d0b876b62966bcbdcc77074f33994bd727ea",
+    "p031/split_audit.json": "c8195ba3acba0823a54dafc0079e598b3a8856067992387802424fba64b1dc9a",
+    "p031/tests.txt": "dbf10cd3eb6b6ad486a4af69909d4c22f7ddce1231f85631f541d0f92f1422b8",
+    "p032/bit_flip_probes.json": "1acad9d4fcd2f87831c4f8a4d3ebc616c71b16dfda0cec8998295fbd895deb17",
+    "p032/checkpoint_sha256.json": "75501b37c07b4348467975ffbdc2cc5485e3f709b6e4eb332f499ff281e1a945",
+    "p032/manifest.json": "578c23d349f8adbbb9893d7ad1cdaea39c1e97de4973f43d496d5baf31d573ca",
+    "p032/second_bit_counterfactual.json": "13979a6ed47e0ef2bcfe899d09dcc662c1a42613da0157e9d4b49bf3e8acda3d",
+    "p032/summary.json": "1f2ef4ecd6e2c54ddb2f77b2f7ed2ca3a36a129eb849746a01cf20d70398efa9",
+    "p032/truth_rows.json": "73ded95257a90f37a008bff340e2b51f03b360d9a93737bba7003e2ac0541175",
+    "p033/manifest.json": "97fc7a7f1b01be38acc4324effe5d70a87a0ea70466a72a8f491b60cdad80bc6",
+    "p033/per_learner.json": "54d66cdf03018a8ce873cc7b5eac834d51ba5fa559dd6d038de95eed6c25ca83",
+    "p033/summary.json": "bb0fca3e62eff9a8676d095e3ff8da2cad951fb70634817867aad3fd74cd642f",
+    "parser/summary.json": "37b48475c793ff6bfd38006848ec81d6267b331843330a183d8c7a5b4f4953fa",
+    "parser/unittest.log": "c3e694cea522afde75fe376289d1b4c6efd9fe436df2a1b7caf0e4b9d9ff22bd"
+  },
+  "evidence_members": 15,
+  "archive_round_trip_bytes_equal": true,
+  "historical_report_status": "before PR7; superseded pending-work statements retained for provenance",
+  "publication_scan": "Included text scanned for known local runtime/home paths and credential markers; only public source-derived synthetic results included."
+}

@@ -1,5 +1,7 @@
 # NVIDIA／Nemotron 研究員派工規則（2026-11-12）
 
+> 2026-11-12 ChatGPT Pro現況更新：Codex已完成P033-D／A／3A及另12條Echo-only控制，並有真實NVIDIA審查紀錄。即時任務以[研究現況](CURRENT_RESEARCH_STATUS.md)及[Pro後續設計](PRO_RESEARCH_DESIGN_20261112.md)為準；下方P032／P033派工順序保留歷史，不再當作首次待做。Pro這輪環境無可用worker，實際呼叫0次，與Codex先前的成功呼叫分開記。
+
 狀態：**立即採用的調度規格與首輪任務包；未聲稱 OpenRouter live 呼叫已成功或 Codex 本機 worker 已存在**。
 
 ## 目的與角色

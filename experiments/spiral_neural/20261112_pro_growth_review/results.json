@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "source_commit": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+  "source_sha256": "287f4c243b6c7e75a38b6b23c6833aa0064974956f16b481277ad693b14fb1de",
+  "scope": "Original saved checkpoints; no complete retraining; two gradient-flow optimizer steps per seed on disposable in-memory copies only.",
+  "limitations": [
+    "The position-change comparison is an immediate pre-adaptation diagnostic, not a claim that zero-shot transfer was required.",
+    "Function preservation applies to identical old raw prefixes, not reencoded new-profile inputs.",
+    "Gradient nonzero checks establish learnability, not useful convergence or a growth-performance benefit.",
+    "Three checkpoints from the same tiny binary task do not establish encoding superiority or population accuracy."
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "results": [
+    {
+      "seed": 101,
+      "checkpoint_relative_path": "evidence/p030-binary-continual-20261112/dynamic-101/1b_echo_n3/state.npz",
+      "checkpoint_sha256": "fac69f382dc163589c2fc1ebae8f63d7c08565c7e8a5a7ded45ce32a9350f692",
+      "from_shape": [
+        12,
+        68
+      ],
+      "to_shape": [
+        13,
+        69
+      ],
+      "old_prefix_count": 40,
+      "same_prefix_max_logit_delta": 0.0,
+      "old_weights_moments_birth_preserved": true,
+      "global_step_preserved_on_growth": true,
+      "old_correct": 8,
+      "new_profile_correct_before_relearning": 0,
+      "generation_rows": [
+        {
+          "value": 0,
+          "expected": "0000S",
+          "old_q": "01000000",
+          "new_q": "010000000",
+          "old_tokens": "0000S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 1,
+          "expected": "0010S",
+          "old_q": "01000010",
+          "new_q": "010000010",
+          "old_tokens": "0010S",
+          "old_overflow": false,
+          "new_tokens": "0000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 2,
+          "expected": "0100S",
+          "old_q": "01000100",
+          "new_q": "010000100",
+          "old_tokens": "0100S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 3,
+          "expected": "0110S",
+          "old_q": "01000110",
+          "new_q": "010000110",
+          "old_tokens": "0110S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 4,
+          "expected": "1000S",
+          "old_q": "01001000",
+          "new_q": "010001000",
+          "old_tokens": "1000S",
+          "old_overflow": false,
+          "new_tokens": "100S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 5,
+          "expected": "1010S",
+          "old_q": "01001010",
+          "new_q": "010001010",
+          "old_tokens": "1010S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 6,
+          "expected": "1100S",
+          "old_q": "01001100",
+          "new_q": "010001100",
+          "old_tokens": "1100S",
+          "old_overflow": false,
+          "new_tokens": "110S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 7,
+          "expected": "1110S",
+          "old_q": "01001110",
+          "new_q": "010001110",
+          "old_tokens": "1110S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        }
+      ],
+      "gradient_probe": {
+        "q": "01000010",
+        "target": "0",
+        "optimizer_updates_on_disposable_copy": 2,
+        "new_hidden_first_incoming_grad_norm": 0.0,
+        "new_hidden_first_outgoing_grad_norm": 1.5202540453174151e-06,
+        "new_hidden_second_incoming_grad_norm": 6.360094673141248e-09,
+        "old_weights_changed_by_two_steps": true,
+        "new_incoming_weights_changed_by_two_steps": true
+      },
+      "original_file_unchanged": true
+    },
+    {
+      "seed": 202,
+      "checkpoint_relative_path": "evidence/p030-binary-continual-20261112/dynamic-202/1b_echo_n3/state.npz",
+      "checkpoint_sha256": "753ab48481910fc56775338547b0751caf055428db0539cdf02df1d91db31f82",
+      "from_shape": [
+        12,
+        68
+      ],
+      "to_shape": [
+        13,
+        69
+      ],
+      "old_prefix_count": 40,
+      "same_prefix_max_logit_delta": 0.0,
+      "old_weights_moments_birth_preserved": true,
+      "global_step_preserved_on_growth": true,
+      "old_correct": 8,
+      "new_profile_correct_before_relearning": 0,
+      "generation_rows": [
+        {
+          "value": 0,
+          "expected": "0000S",
+          "old_q": "01000000",
+          "new_q": "010000000",
+          "old_tokens": "0000S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 1,
+          "expected": "0010S",
+          "old_q": "01000010",
+          "new_q": "010000010",
+          "old_tokens": "0010S",
+          "old_overflow": false,
+          "new_tokens": "00000",
+          "new_overflow": true,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 2,
+          "expected": "0100S",
+          "old_q": "01000100",
+          "new_q": "010000100",
+          "old_tokens": "0100S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 3,
+          "expected": "0110S",
+          "old_q": "01000110",
+          "new_q": "010000110",
+          "old_tokens": "0110S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 4,
+          "expected": "1000S",
+          "old_q": "01001000",
+          "new_q": "010001000",
+          "old_tokens": "1000S",
+          "old_overflow": false,
+          "new_tokens": "100S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 5,
+          "expected": "1010S",
+          "old_q": "01001010",
+          "new_q": "010001010",
+          "old_tokens": "1010S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 6,
+          "expected": "1100S",
+          "old_q": "01001100",
+          "new_q": "010001100",
+          "old_tokens": "1100S",
+          "old_overflow": false,
+          "new_tokens": "110S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 7,
+          "expected": "1110S",
+          "old_q": "01001110",
+          "new_q": "010001110",
+          "old_tokens": "1110S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        }
+      ],
+      "gradient_probe": {
+        "q": "01000010",
+        "target": "0",
+        "optimizer_updates_on_disposable_copy": 2,
+        "new_hidden_first_incoming_grad_norm": 0.0,
+        "new_hidden_first_outgoing_grad_norm": 3.90365045177532e-07,
+        "new_hidden_second_incoming_grad_norm": 8.64410587553266e-09,
+        "old_weights_changed_by_two_steps": true,
+        "new_incoming_weights_changed_by_two_steps": true
+      },
+      "original_file_unchanged": true
+    },
+    {
+      "seed": 303,
+      "checkpoint_relative_path": "evidence/p030-binary-continual-20261112/dynamic-303/1b_echo_n3/state.npz",
+      "checkpoint_sha256": "15aa4c9238d387a312ef0379e96376121cdc0c23437c16a58b88c25495fd8ece",
+      "from_shape": [
+        12,
+        68
+      ],
+      "to_shape": [
+        13,
+        69
+      ],
+      "old_prefix_count": 40,
+      "same_prefix_max_logit_delta": 0.0,
+      "old_weights_moments_birth_preserved": true,
+      "global_step_preserved_on_growth": true,
+      "old_correct": 8,
+      "new_profile_correct_before_relearning": 0,
+      "generation_rows": [
+        {
+          "value": 0,
+          "expected": "0000S",
+          "old_q": "01000000",
+          "new_q": "010000000",
+          "old_tokens": "0000S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 1,
+          "expected": "0010S",
+          "old_q": "01000010",
+          "new_q": "010000010",
+          "old_tokens": "0010S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 2,
+          "expected": "0100S",
+          "old_q": "01000100",
+          "new_q": "010000100",
+          "old_tokens": "0100S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 3,
+          "expected": "0110S",
+          "old_q": "01000110",
+          "new_q": "010000110",
+          "old_tokens": "0110S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 4,
+          "expected": "1000S",
+          "old_q": "01001000",
+          "new_q": "010001000",
+          "old_tokens": "1000S",
+          "old_overflow": false,
+          "new_tokens": "100S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 5,
+          "expected": "1010S",
+          "old_q": "01001010",
+          "new_q": "010001010",
+          "old_tokens": "1010S",
+          "old_overflow": false,
+          "new_tokens": "000S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 6,
+          "expected": "1100S",
+          "old_q": "01001100",
+          "new_q": "010001100",
+          "old_tokens": "1100S",
+          "old_overflow": false,
+          "new_tokens": "110S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        },
+        {
+          "value": 7,
+          "expected": "1110S",
+          "old_q": "01001110",
+          "new_q": "010001110",
+          "old_tokens": "1110S",
+          "old_overflow": false,
+          "new_tokens": "010S",
+          "new_overflow": false,
+          "old_correct": true,
+          "new_correct": false
+        }
+      ],
+      "gradient_probe": {
+        "q": "01000010",
+        "target": "0",
+        "optimizer_updates_on_disposable_copy": 2,
+        "new_hidden_first_incoming_grad_norm": 0.0,
+        "new_hidden_first_outgoing_grad_norm": 1.5985066283974447e-06,
+        "new_hidden_second_incoming_grad_norm": 7.531764545376518e-09,
+        "old_weights_changed_by_two_steps": true,
+        "new_incoming_weights_changed_by_two_steps": true
+      },
+      "original_file_unchanged": true
+    }
+  ]
+}
