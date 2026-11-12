@@ -1,5 +1,11 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-13 Pro AE1正式訓練完成
+
+[AE1實測報告](ai_orchestration/PRO_ADVANCED_ECHO_RESULTS_20261113.md)與[完整程式／checkpoint／重現入口](../experiments/spiral_neural/20261113_pro_ae1_learning/README.md)：事前公開`beb6dd7`後跑三個固定seed，各201,840更新，加唯一指定seed101重播。已教815/2250；四詞主測整串197/720、STOP710/720、四r全對1/180組次；強判準0/3。三模型重用同一240道主測題，非720道獨特題目。468題獨立raw-array推論吻合；四ZIP／66成員完整公開。
+
+課程是固定課時增加N，不是每階達標才前進；兩seed首階未熟、第三seed先全會仍後來退化，不能唯一歸因。下一候選是單一lr對照，達標課程保留為政策比較；均未執行。先研究再實驗的耗時／返工已記錄，沒有因果效率比較。[最新交接卡](ai_orchestration/RESEARCH_HANDOFF.md)優先於下方較早時點的「未訓練」文字。
+
 ## 2026-11-13 使用者新題型：參數化多詞回音
 
 [Pro AE1設計](ai_orchestration/PRO_ADVANCED_ECHO_DESIGN_20261113.md)把「01＋回音算符＋長度參數＋多詞＋句號」具體化：固定五資訊位加尾零，先教一至四詞完整回音，再檢查同payload不同回音詞數。四詞答案24bits，另需STOP，原cap24不足；L80可用，新runner另設cap32。[codec／fixtures／檢查](../experiments/spiral_neural/20261113_pro_advanced_echo/README.md)是程式T，沒有新神經訓練。此題型成為下一優先，先前UR1地址多樣性候選保留。

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "author": "ChatGPT Pro",
+  "finished_utc": "2026-11-12T22:28:13.231870+00:00",
+  "frozen_source_and_data_hashes_match_local_and_public_commit": 16,
+  "reported_primary_numerators_recomputed": true,
+  "documentation_files_checked": 5,
+  "existing_local_markdown_links_checked": 106,
+  "clean_temporary_archive_restore_files": 66,
+  "restored_bytes_equal_original_runtime_files": true,
+  "neural_forward_calls": 0,
+  "optimizer_updates": 0,
+  "scope": "Frozen source/artifact integrity, quoted principal numerators, local links and one complete clean evidence extraction; no additional neural testing."
+}

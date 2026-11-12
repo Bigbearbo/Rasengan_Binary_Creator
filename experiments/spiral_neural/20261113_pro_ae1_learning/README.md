@@ -2,9 +2,15 @@
 
 日期：2026-11-13（Asia/Taipei）。作者：ChatGPT Pro／受指派本機 agent。
 
-這一輪承接 [AE1 格式設計](../../../../docs/ai_orchestration/PRO_ADVANCED_ECHO_DESIGN_20261113.md)，回答固定五階、多詞回音能否被現有純 01 小網路學會，並檢查回覆詞數是否能控制 STOP。使用者提出多詞回音與先研究後實驗的工作方式；以下精確資料、課程、預算及判準是 Pro 的具體設計。
+這一輪承接 [AE1 格式設計](../../../docs/ai_orchestration/PRO_ADVANCED_ECHO_DESIGN_20261113.md)，回答固定五階、多詞回音能否被現有純 01 小網路學會，並檢查回覆詞數是否能控制 STOP。使用者提出多詞回音與先研究後實驗的工作方式；以下精確資料、課程、預算及判準是 Pro 的具體設計。
 
 本次是一個課程、三個 seed 的能力篩查。沒有直接混教比較臂，不估計課程優越性；流程耗時另作觀察，不把單次執行當成效率提升的因果證據。
+
+## 已完成結果
+
+[完整 Pro 實測報告](../../../docs/ai_orchestration/PRO_ADVANCED_ECHO_RESULTS_20261113.md)與[機器摘要](results_summary.json)：三seed最後已教整題294/750、242/750、279/750；N4測試整題68/240、62/240、67/240；STOP位置239/240、235/240、236/240；四r全對0/60、1/60、0/60，完整強判準0/3。限定count與停止長度有明顯對應，內容複製及舊能力保持未學穩。
+
+事前公開commit為`beb6dd7d4ce78d4f79e61164f838aaa881eafcd5`；三學生和指定seed101重播皆完成。全18checkpoint共19,980題評分，獨立468題raw-array推論及來源／成本核對PASS。沒有追加seed、加長課程、丟棄失敗或改舊科學碼。[完整證據清單](evidence_manifest.json)提供四ZIP共66成員，所有bytes／SHA／CRC已核對。
 
 ## 事前固定內容
 
@@ -38,7 +44,7 @@
 
 ## 可重現入口
 
-所有命令從 repository root 執行。正式使用時，`PREREG_SHA` 應填入已公開的事前凍結 commit 完整 SHA。輸出採 exclusive create；請在新副本／新結果目錄重現，避免覆蓋既有證據。
+所有命令從 repository root 執行。`PREREG_SHA` 應填入`beb6dd7d4ce78d4f79e61164f838aaa881eafcd5`。下方前三個命令記錄本輪事前準備，已產生並公開資料、preflight與frozen；新clone若要重現訓練，直接用Git中的frozen檔案，從train命令開始，無需再次prepare。輸出採exclusive create；不要先解開歷史runs再在同一位置重訓，請用另一個乾淨副本。
 
 ```bash
 python -B experiments/spiral_neural/20261113_pro_ae1_learning/dataset.py
@@ -62,4 +68,12 @@ python -B experiments/spiral_neural/20261113_pro_ae1_learning/run_trial.py evalu
 
 NVIDIA／OpenRouter worker 在本環境沒有可呼叫工具或現成 adapter，記為 `skipped_unavailable`，外部模型真實呼叫0。本機平行 agent 負責資料與 learner／研究審查，歸 Pro；與先前 Codex／NVIDIA 的實測分開。
 
-當前此文件為訓練前版本；完成後新增固定結果報告、執行／重播／獨立推論核對與公開封存。歷史 learner、checkpoint、UR1／AE1 codec 和舊研究結果保持原貌。
+若只要讀取或驗收已公開證據，可在新clone執行：
+
+```bash
+python -B experiments/spiral_neural/20261113_pro_ae1_learning/package_evidence.py unpack
+```
+
+它先核對每個archive與member的SHA，再恢復runs／evaluation／logs；相同檔案可保留，遇到不同現存證據則拒絕覆蓋。自行重跑獨立audit應指定新的`--out`檔名並計入額外推論成本；現有audit紀錄不覆寫。
+
+本輪實際命令在[execution_record.json](execution_record.json)，當輪已執行的[獨立結果驗收](independent_result_review.json)、[重播核對](replay_check.json)和[流程觀察](workflow_observations.json)各有明確範圍。模型checkpoint內含全部p/m/v/birth/t與RNG；沒有逐target中間state／loss trace，不冒稱逐target state都已獨立核對。歷史learner、checkpoint、UR1／AE1 codec與舊研究結果保持原貌。
