@@ -24,6 +24,12 @@ For **all** SLE research tasks (not just ICFP comparisons), read [docs/spiral_la
 - `experiments/spiral_memory/`: separately scoped SNL-MEM human-readable grammar with synthetic tests.
 Do not confuse these code families, or treat historical draft documents as the current binding protocol.
 
+## Current top research priority: P032 neural learning diagnostic and width/curriculum trial (user decision, 2026-11-12)
+
+The user explicitly prioritized **P032**. At the next relevant Codex research session, **execute**, not merely restate, [docs/ai_orchestration/P032_容量與舊知識干擾對照_20261112.md](docs/ai_orchestration/P032_容量與舊知識干擾對照_20261112.md) first: inspect the real P030 experiment in PR #4 (branch `codex/sle-neural-publication-20261112` if not merged), generate full input/output diagnosis from saved checkpoints, then run matched H72/H128 × 70:30/50:50 curriculum controls. Preserve P030 archive, use separate reproducible P032 artifacts and report genuine tests. The SLE shared grade-school math corpus, NVIDIA memory/orchestration implementation, `11110` ritual, and other growth topics remain queued, not cancelled; do not mix them into the first P032 test. Before running, check the actual current PR/branch and uncommitted local work. If NVIDIA is available, delegate a bounded **read-only review of P032 confounds**, without blocking actual experiment execution.
+
+This is a GitHub work-order update, **not proof that local Codex has started or that P032 tests have run**.
+
 ## Active Codex implementation work order (2026-11-12)
 
 The user requested a shared-memory / multi-model coordination MVP for their local Codex, OpenRouter NVIDIA worker, and Gemini worker. Read [docs/ai_orchestration/CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md](docs/ai_orchestration/CODEX_MULTI_AGENT_MEMORY_PLAN_20261112.md) before working on this specific task.
