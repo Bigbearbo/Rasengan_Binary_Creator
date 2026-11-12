@@ -1,0 +1,57 @@
+{
+  "Gemini": {
+    "calls": 0,
+    "reason": "Existing authenticated installation retained; prior analysis-only tool isolation not validated, so no resend or new login.",
+    "status": "skipped"
+  },
+  "NVIDIA": {
+    "calls": 1,
+    "candidate_sha256": "cdc07528886afde3ba54c3ff9e24c6b6b920147e7cdb805c7120a02817d46385",
+    "candidate_status": "rejected",
+    "finish_reason": "stop",
+    "no_retry": true,
+    "parse_error": {
+      "column": 413,
+      "line": 1,
+      "position": 412,
+      "type": "JSONDecodeError"
+    },
+    "request_scope": "Selected public synthetic grammar only; no neural scores, private handoff, chat, credentials or quota sent.",
+    "requested_model": "nvidia/nemotron-3.5-lightning:free",
+    "response_model": "nvidia/nemotron-3.5-lightning:free",
+    "semantic_check": {
+      "equal": false,
+      "new_raw_prefix": "010001010",
+      "old_raw_prefix": "01001110",
+      "proposed_collision": {
+        "new_p": 0,
+        "new_value": 5,
+        "old_p": 0,
+        "old_value": 7
+      }
+    },
+    "task_id": "ECHO-PREFIX-ALIAS-001",
+    "transport_seconds": 5.875,
+    "usage": {
+      "completion_tokens": 286,
+      "cost": 0,
+      "prompt_tokens": 1030,
+      "total_tokens": 1316
+    }
+  },
+  "author": "Codex",
+  "native_OpenAI_agents_are_external_workers": false,
+  "new_schedulers_or_unbounded_retries": false,
+  "root_separate_symbolic_counterexample": {
+    "new_next_label": "0",
+    "new_p": 3,
+    "new_value": 6,
+    "old_next_label": "S",
+    "old_p": 4,
+    "old_value": 3,
+    "raw_prefix": "010001100110",
+    "source": "Main-agent symbolic calculation independently checked against actual historical teacher exposure; not an accepted NVIDIA result."
+  },
+  "round": "ECHO-COPY-DIAG-20261113",
+  "semantic_acceptance": false
+}

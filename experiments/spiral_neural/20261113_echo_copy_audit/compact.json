@@ -1,0 +1,290 @@
+{
+  "author": "Codex",
+  "curriculum_answer_prefix_support": {
+    "basis": "Unique current-format Echo optimizer-training examples once each, not trace-weighted and not model predictions",
+    "limit": "Shows possible answer-prefix completion shortcuts; does not identify the neural mechanism",
+    "rows": [
+      {
+        "correct_answer_prefix": "",
+        "next_bit_support_counts": {
+          "0": 4,
+          "1": 2
+        },
+        "output_data_position": 0,
+        "unique_training_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "correct_answer_prefix": "0",
+        "next_bit_support_counts": {
+          "0": 2,
+          "1": 2
+        },
+        "output_data_position": 1,
+        "unique_training_values": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "correct_answer_prefix": "1",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 1,
+        "unique_training_values": [
+          4,
+          7
+        ]
+      },
+      {
+        "correct_answer_prefix": "00",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          0,
+          1
+        ]
+      },
+      {
+        "correct_answer_prefix": "01",
+        "next_bit_support_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          2,
+          3
+        ]
+      },
+      {
+        "correct_answer_prefix": "10",
+        "next_bit_support_counts": {
+          "0": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          4
+        ]
+      },
+      {
+        "correct_answer_prefix": "11",
+        "next_bit_support_counts": {
+          "1": 1
+        },
+        "output_data_position": 2,
+        "unique_training_values": [
+          7
+        ]
+      }
+    ]
+  },
+  "external_model_calls": 0,
+  "id": "ECHO-COPY-READONLY-20261113",
+  "inference_calls": 480,
+  "inference_dense_MAC": 960480,
+  "input_manifest_sha256": "7a691fcf1b55e49cb01bef5c4f6debb3b72cbed0ca39733eb8588170b639f54d",
+  "learning_state_all_exact_unchanged": true,
+  "limits": "Eight three-bit inputs are an exposed finite domain, not proof of an unbounded copy algorithm or neural memorization. Before/after snapshots describe change only; additional updates and Echo exposure also change, so do not causally attribute the difference to Neg",
+  "optimizer_call_guards": {
+    "forward_training": 0,
+    "grow": 0,
+    "lesson": 0,
+    "loss_grad": 0,
+    "step": 0
+  },
+  "pair_extra_forward_calls": 0,
+  "snapshot_count": 6,
+  "snapshots": [
+    {
+      "TF_all_correct": 40,
+      "TF_all_targets": 40,
+      "TF_data_correct": 24,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 12,
+      "current_raw_flip": 12,
+      "future_both_correct_and_invariant": 12,
+      "future_raw_invariant": 12,
+      "history_optimizer_targets": 2376,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "5c7ecbb45f86a77e6bb2d621f98341e293b094b86c9d4908de3cdba0ae93475e",
+      "learning_state_before_sha256": "5c7ecbb45f86a77e6bb2d621f98341e293b094b86c9d4908de3cdba0ae93475e",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 101,
+      "snapshot": "dynamic-101/2a_echo_op2",
+      "test6_whole_correct": true,
+      "validation5_whole_correct": true,
+      "whole_correct": 8,
+      "whole_total": 8
+    },
+    {
+      "TF_all_correct": 39,
+      "TF_all_targets": 40,
+      "TF_data_correct": 23,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 11,
+      "current_raw_flip": 11,
+      "future_both_correct_and_invariant": 12,
+      "future_raw_invariant": 12,
+      "history_optimizer_targets": 17376,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "ed864d741e84e2b90b11192952816805078f1dba39e156fed0f22f107c49431a",
+      "learning_state_before_sha256": "ed864d741e84e2b90b11192952816805078f1dba39e156fed0f22f107c49431a",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 101,
+      "snapshot": "dynamic-101/2b_add_neg",
+      "test6_whole_correct": true,
+      "validation5_whole_correct": false,
+      "whole_correct": 7,
+      "whole_total": 8
+    },
+    {
+      "TF_all_correct": 40,
+      "TF_all_targets": 40,
+      "TF_data_correct": 24,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 12,
+      "current_raw_flip": 12,
+      "future_both_correct_and_invariant": 12,
+      "future_raw_invariant": 12,
+      "history_optimizer_targets": 2684,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "41cae98e8b0e11cf26b01cd168ffe434dd599c4f0150dd8845a42107c0940ffc",
+      "learning_state_before_sha256": "41cae98e8b0e11cf26b01cd168ffe434dd599c4f0150dd8845a42107c0940ffc",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 202,
+      "snapshot": "dynamic-202/2a_echo_op2",
+      "test6_whole_correct": true,
+      "validation5_whole_correct": true,
+      "whole_correct": 8,
+      "whole_total": 8
+    },
+    {
+      "TF_all_correct": 38,
+      "TF_all_targets": 40,
+      "TF_data_correct": 22,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 10,
+      "current_raw_flip": 10,
+      "future_both_correct_and_invariant": 11,
+      "future_raw_invariant": 11,
+      "history_optimizer_targets": 17684,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "ebbcf57ada3e24e64f153a36e1c2fd8f2e6a5472666f1f06dd6b85e330cc7f74",
+      "learning_state_before_sha256": "ebbcf57ada3e24e64f153a36e1c2fd8f2e6a5472666f1f06dd6b85e330cc7f74",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 202,
+      "snapshot": "dynamic-202/2b_add_neg",
+      "test6_whole_correct": false,
+      "validation5_whole_correct": false,
+      "whole_correct": 6,
+      "whole_total": 8
+    },
+    {
+      "TF_all_correct": 40,
+      "TF_all_targets": 40,
+      "TF_data_correct": 24,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 12,
+      "current_raw_flip": 12,
+      "future_both_correct_and_invariant": 12,
+      "future_raw_invariant": 12,
+      "history_optimizer_targets": 2520,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "336cc42523be54714188b9955203016c221988d39615d3843884279f18c6e2a9",
+      "learning_state_before_sha256": "336cc42523be54714188b9955203016c221988d39615d3843884279f18c6e2a9",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 303,
+      "snapshot": "dynamic-303/2a_echo_op2",
+      "test6_whole_correct": true,
+      "validation5_whole_correct": true,
+      "whole_correct": 8,
+      "whole_total": 8
+    },
+    {
+      "TF_all_correct": 39,
+      "TF_all_targets": 40,
+      "TF_data_correct": 23,
+      "TF_data_targets": 24,
+      "TF_prefix_exposure_categories": {
+        "conflict_only": 1,
+        "mixed": 4,
+        "same_only": 29,
+        "unseen": 6
+      },
+      "current_both_correct_and_follow": 11,
+      "current_raw_flip": 11,
+      "future_both_correct_and_invariant": 12,
+      "future_raw_invariant": 12,
+      "history_optimizer_targets": 17520,
+      "inference_calls": 80,
+      "inference_dense_MAC": 160080,
+      "learning_state_after_sha256": "28c16d7f2fdb4832935290c807e8a83ed17ecc960e3d6467172bda081d6eaf7f",
+      "learning_state_before_sha256": "28c16d7f2fdb4832935290c807e8a83ed17ecc960e3d6467172bda081d6eaf7f",
+      "optimizer_calls": 0,
+      "optimizer_train_whole_correct": 6,
+      "seed": 303,
+      "snapshot": "dynamic-303/2b_add_neg",
+      "test6_whole_correct": true,
+      "validation5_whole_correct": false,
+      "whole_correct": 7,
+      "whole_total": 8
+    }
+  ],
+  "source_checkpoint_trace_hashes_unchanged": true,
+  "status": "complete",
+  "wall_seconds": 0.07349799999792594
+}
