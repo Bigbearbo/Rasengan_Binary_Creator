@@ -1,0 +1,487 @@
+{
+  "B1": {
+    "B0_training_kind": "historical P033 T1, no new B0 training;96 truth rows re-evaluated this session",
+    "aggregate": {
+      "B0": {
+        "test": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        },
+        "train": {
+          "all_ops_free": [
+            72,
+            72
+          ],
+          "all_ops_teacher": [
+            72,
+            72
+          ],
+          "echo": {
+            "free": [
+              36,
+              36
+            ],
+            "teacher": [
+              36,
+              36
+            ]
+          },
+          "neg": {
+            "free": [
+              36,
+              36
+            ],
+            "teacher": [
+              36,
+              36
+            ]
+          }
+        },
+        "val": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        }
+      },
+      "B1": {
+        "test": {
+          "all_ops_free": [
+            1,
+            12
+          ],
+          "all_ops_teacher": [
+            1,
+            12
+          ],
+          "echo": {
+            "free": [
+              1,
+              6
+            ],
+            "teacher": [
+              1,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        },
+        "train": {
+          "all_ops_free": [
+            27,
+            72
+          ],
+          "all_ops_teacher": [
+            27,
+            72
+          ],
+          "echo": {
+            "free": [
+              17,
+              36
+            ],
+            "teacher": [
+              17,
+              36
+            ]
+          },
+          "neg": {
+            "free": [
+              10,
+              36
+            ],
+            "teacher": [
+              10,
+              36
+            ]
+          }
+        },
+        "val": {
+          "all_ops_free": [
+            0,
+            12
+          ],
+          "all_ops_teacher": [
+            0,
+            12
+          ],
+          "echo": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          },
+          "neg": {
+            "free": [
+              0,
+              6
+            ],
+            "teacher": [
+              0,
+              6
+            ]
+          }
+        }
+      }
+    },
+    "cost_per_learner": {
+      "B0_matrix_MACs": 78840000,
+      "B1_matrix_MACs": 1208880000,
+      "B1_to_B0_ratio": 15.333333333333334,
+      "equal_MACs": false,
+      "scope": "executed dense matmuls include masked cells; excludes LN/softmax/optimizer elementwise work, probes and replay; workload counters reported separately;array bytes are persistent arrays, not peak process memory",
+      "target_updates_both": 15000
+    },
+    "paired_heldout_differences": [
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G0",
+        "outcome": "tied",
+        "seed": 101,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          1,
+          4
+        ],
+        "difference": 1,
+        "group": "G0",
+        "outcome": "improved",
+        "seed": 202,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G0",
+        "outcome": "tied",
+        "seed": 303,
+        "split": "S0"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 101,
+        "split": "C1"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 202,
+        "split": "C1"
+      },
+      {
+        "B0_heldout": [
+          0,
+          4
+        ],
+        "B1_heldout": [
+          0,
+          4
+        ],
+        "difference": 0,
+        "group": "G1",
+        "outcome": "tied",
+        "seed": 303,
+        "split": "C1"
+      }
+    ],
+    "paired_improved": 1,
+    "paired_tied": 5,
+    "paired_worse": 0,
+    "parameters": {
+      "B0": 2595,
+      "B1": 2596,
+      "difference": 1,
+      "relative_difference_percent": 0.038535645472061654
+    },
+    "strong_success": false,
+    "strong_success_learners": 0,
+    "strong_success_required": "all six learners each12/12 train plus4/4 heldout exact free-run including STOP"
+  },
+  "E900": {
+    "comparisons_by_split": [
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          0,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          0,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "S0",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          0,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          3,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          3,
+          3
+        ],
+        "historical_Neg70_test": [
+          1,
+          3
+        ],
+        "historical_Neg70_val": [
+          2,
+          3
+        ],
+        "split": "C0",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          3,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          3,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          3,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "S1",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          3,
+          3
+        ]
+      },
+      {
+        "E900_test": [
+          3,
+          3
+        ],
+        "E900_val": [
+          0,
+          3
+        ],
+        "historical_E3000_test": [
+          3,
+          3
+        ],
+        "historical_E3000_val": [
+          0,
+          3
+        ],
+        "historical_Neg70_test": [
+          0,
+          3
+        ],
+        "historical_Neg70_val": [
+          0,
+          3
+        ],
+        "split": "C1",
+        "warm_test": [
+          3,
+          3
+        ],
+        "warm_val": [
+          0,
+          3
+        ]
+      }
+    ],
+    "cost_per_learner": {
+      "E900": {
+        "echo_lessons": 900,
+        "neg_lessons": 0,
+        "target_updates": 4500,
+        "train_dense_MACs": 23652000
+      },
+      "MAC_scope": "Original MLP dense multiply-add convention; excludes nonlinearities, optimizer elementwise arithmetic, hashing, probes and replay. Skipped slots have zero student compute.",
+      "equal_Echo_exposure_only": true,
+      "equal_updates_or_MACs": false,
+      "historical_E3000": {
+        "echo_lessons": 3000,
+        "neg_lessons": 0,
+        "target_updates": 15000,
+        "train_dense_MACs": 78840000
+      },
+      "historical_Neg70": {
+        "echo_lessons": 900,
+        "neg_lessons": 2100,
+        "target_updates": 15000,
+        "train_dense_MACs": 78840000
+      }
+    },
+    "primary": {
+      "E900_test_correct": 12,
+      "E900_test_lost": 0,
+      "E900_test_retained": 12,
+      "E900_val_lost": 0,
+      "E900_val_retained": 6,
+      "historical_E3000_test_correct": 12,
+      "historical_Neg70_test_correct": 1,
+      "total_paired_tests": 12,
+      "warm_test_correct": 12,
+      "warm_validation_initially_wrong": 6
+    }
+  },
+  "new_blind_test": false,
+  "scope": "read-only results aggregation; no model calls or new training",
+  "source_aggregation_sha256": "f0ea66e32ad76cdebb650cc6dc162ebc0a264c1cd131bd4bd2a48c0e8edc86fd",
+  "status": "passed",
+  "summary_table_sha256": "70f4bb220cc4e3efa6063c3b0dddcd86f3130f4f0c22c5105a06971617ffd54f"
+}

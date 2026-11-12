@@ -1,6 +1,8 @@
 # Pro：P033 後續研究設計
 
-作者／審查歸屬：**ChatGPT Pro**。日期：2026-11-12。狀態：**A，事前候選設計，尚未實作或訓練**；可作下一輪P034的工作規格，編號以執行者凍結manifest為準。這是Pro建議，不倒填為使用者原始構想。
+作者／審查歸屬：**ChatGPT Pro**。日期：2026-11-12。原始狀態：**A，事前候選設計**；下文保留事前假說、規格與停止條件。這是Pro建議，不倒填為使用者原始構想。
+
+2026-11-12 Codex 執行更新：本文件在 PR #8 head `adca797c1afa98ed754ff616f73b691ab2925002` 的設計已凍結為[P034](../../experiments/spiral_neural/20261112_p034/README.md)。12條新E900及6條新B1均完成，E900 test12/12，B1已教27/72、val+test1/24、強判準0/6；歷史控制僅核對後引用。完整結果、成本與限制見P034。下文「尚未執行」或候選語氣是原始事前設計，不代表目前完成狀態；後續以[研究現況](CURRENT_RESEARCH_STATUS.md)為準。
 
 先讀[現況](CURRENT_RESEARCH_STATUS.md)、[Pro獨立證據](../../experiments/spiral_neural/20261112_pro_review/README.md)，以及Codex [PR #7固定報告](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e217bd0fd6cfe654062c3615ee2aa73a36d1ca71/experiments/spiral_neural/20261112_p033/P033-覆蓋與從頭混教實測結果-2026-11-12.md)。P033已跑出結果；本設計建立在結果上。
 
@@ -77,3 +79,4 @@ P031仍保留為共用教材與真NN／VM入口工程：另立啟蒙manifest，�
 執行者以Codex T記新訓練；本文件仍為ChatGPT Pro A。使用者混合教學構想保留U歸屬。Pro本輪只讀診斷、封存核對及parser修復的T在[證據入口](../../experiments/spiral_neural/20261112_pro_review/README.md)另列。
 
 本次Pro環境`nvidia_status=skipped_unavailable`：沒有可用OpenRouter／NVIDIA工具或相應憑證環境變數，實際呼叫0次。這不否認Codex P033已有一次真API審查。執行新實驗時，若本機worker可用，派一項公開唯讀審查：檢查E900 no-op與Adam差異、B1的參數／成本公式、標籤可見性及反例。候選仍須程式驗證，不等待worker阻塞實驗，也不把模型意見當PASS。
+

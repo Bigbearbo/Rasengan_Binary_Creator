@@ -1,0 +1,374 @@
+{
+  "complete_local_inventory": "local-artifact-hashes.json",
+  "execution_author": "Codex",
+  "historical_code_guards": "Public P033 expected Git blobs, immutable source SHA256, original18 trace inventory SHA256, historical checkpoint/result/read-only truth equality all enforced; source files unchanged.",
+  "id": "P034-PUBLICATION-RECORD",
+  "large_trace_bytes": 42260340,
+  "large_trace_count": 48,
+  "large_traces_local_only": {
+    "work/sle-p034/b1/G0-seed101/token-trace.json": {
+      "bytes": 3087025,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "88d96bb05fe322ce073aa6a52735abdd2075e5bcc4bb99bc4296b1e6209a63ef"
+    },
+    "work/sle-p034/b1/G0-seed101/trace.json": {
+      "bytes": 176786,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "244fe2628baed592a86302cc2235ae13874792460c49e6c8e5ff37f79da3db74"
+    },
+    "work/sle-p034/b1/G0-seed202/token-trace.json": {
+      "bytes": 3068949,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "46911e228d9195498a397141d8d8b3e96dcb62538ae174f469eb97ef3c2ba9b6"
+    },
+    "work/sle-p034/b1/G0-seed202/trace.json": {
+      "bytes": 177542,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "c6b512869d87f801e4babb3073751bc8872d1485d16d9790dd67d61a5e95a2a8"
+    },
+    "work/sle-p034/b1/G0-seed303/token-trace.json": {
+      "bytes": 3105955,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "8819364d5e73d841785687cc6102c0d369a8190e044fd141caffd2743f614323"
+    },
+    "work/sle-p034/b1/G0-seed303/trace.json": {
+      "bytes": 175835,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "85a20dab617f044a1e864bce6dd6eb6373715184425b9ac9fd3ee83294ef99d4"
+    },
+    "work/sle-p034/b1/G1-seed101/token-trace.json": {
+      "bytes": 3069266,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "fe7284a41593d154fe42cd08b957e24536613d4135bd58ad25f1a692c876ef8b"
+    },
+    "work/sle-p034/b1/G1-seed101/trace.json": {
+      "bytes": 177035,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "32aebda2babd8a7031c2c1c437bbf47d75280c58eef91c4b8ed560aef17a4c69"
+    },
+    "work/sle-p034/b1/G1-seed202/token-trace.json": {
+      "bytes": 3097539,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "8dc0f059cdb89f1c26f6a919db417f8e9076f1cce383109bacd84fea03f21d98"
+    },
+    "work/sle-p034/b1/G1-seed202/trace.json": {
+      "bytes": 176264,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "19337b36f15a9a315843b4abce59b0a3fc1b5fd3b59d85da5d53fdae28a33f52"
+    },
+    "work/sle-p034/b1/G1-seed303/token-trace.json": {
+      "bytes": 3103129,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "082ed3c97140861ca31c56916e3c9f2f5fb33597af813ca6a8e691c32955dde2"
+    },
+    "work/sle-p034/b1/G1-seed303/trace.json": {
+      "bytes": 177628,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "9165101545c58d9df5d53afc75b5d4c093f8c6277af0a970f70df0a7f6e452fb"
+    },
+    "work/sle-p034/e900/C0-seed101/slot-trace.json": {
+      "bytes": 847899,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "296b35f3f4f7dce392cabce361bd724843e748cfbeb799932f00c7cf11815593"
+    },
+    "work/sle-p034/e900/C0-seed101/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "ae35cd65e0161ac568b4949cdc3908a6be56d3abe33435ab8b4895b7857bd22b"
+    },
+    "work/sle-p034/e900/C0-seed101/update-trace.json.gz": {
+      "bytes": 1005983,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "3db8378dc305990dcbf0a580b314d264f570f0accee5b38da816bb5c50cc6ee3"
+    },
+    "work/sle-p034/e900/C0-seed202/slot-trace.json": {
+      "bytes": 847922,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "7b23f01943f9a5c7f99ea41996a8c543be3fe76885fb690dbcfcd1430b619acc"
+    },
+    "work/sle-p034/e900/C0-seed202/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "e2c8c0029c4ef9a0fe4df3acdf47681a7f4590e6241f6751644b8ec14fe83006"
+    },
+    "work/sle-p034/e900/C0-seed202/update-trace.json.gz": {
+      "bytes": 1003553,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "a69f332896ce8a123327d127b016827aa8a7e65525120566ad9d914de79ae460"
+    },
+    "work/sle-p034/e900/C0-seed303/slot-trace.json": {
+      "bytes": 847899,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "da0441be582500315bde83ec589ecee7ef71e8e8e1e6aee780467c98c8763d44"
+    },
+    "work/sle-p034/e900/C0-seed303/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "67be8faa95cfc3bc500810d26a4b4a8feda8f5157fb7b75d0844d89dc3e9d143"
+    },
+    "work/sle-p034/e900/C0-seed303/update-trace.json.gz": {
+      "bytes": 1005924,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "c33f81aed621c0a55ce5ddd1b8343d8e49c761e4af5a62e37cd2d33aa56147b0"
+    },
+    "work/sle-p034/e900/C1-seed101/slot-trace.json": {
+      "bytes": 847920,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "f06a2e1175aad50e8ad6e7f84721ee4115fe507cc069545c4ca60c6b0b40ff23"
+    },
+    "work/sle-p034/e900/C1-seed101/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "a60ed176c4ec6a37ff74b331c623bf33a5901729d6ce15b1686260c6c3a16db6"
+    },
+    "work/sle-p034/e900/C1-seed101/update-trace.json.gz": {
+      "bytes": 1004847,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "edc5a0fbeaf691f7526fad5d8c3a0cf56bbabcacd22fe80e06ecaebbaa9d4811"
+    },
+    "work/sle-p034/e900/C1-seed202/slot-trace.json": {
+      "bytes": 847883,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "bc831ee666c2b5feb5f549f76173190b20c026927c8c0ac17e71e9ee76559013"
+    },
+    "work/sle-p034/e900/C1-seed202/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "82504501d9d885989d02e34d883c101a70d950982295a073a7812d723e54841f"
+    },
+    "work/sle-p034/e900/C1-seed202/update-trace.json.gz": {
+      "bytes": 1004260,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "b0a4f5abb835495ec2ba6398b75eb10caf52363b3bc90d6728cb7fe34c9fc8c9"
+    },
+    "work/sle-p034/e900/C1-seed303/slot-trace.json": {
+      "bytes": 847940,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "4a78e88edecd5d31b12f2eec57704e31d08cc0eefe26e96e4fa96e2df09f98b8"
+    },
+    "work/sle-p034/e900/C1-seed303/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "542eb25088aebfa1506222e89aa78ff9f4d3cc3c3f715ea27552bfd85fde8c3b"
+    },
+    "work/sle-p034/e900/C1-seed303/update-trace.json.gz": {
+      "bytes": 1005310,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "01b505100fe071c9b5c03044ce44d0ea113b883df7cedfe45a7bad2b177784d7"
+    },
+    "work/sle-p034/e900/S0-seed101/slot-trace.json": {
+      "bytes": 847929,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "6966c8901a3f7f8e35b01b33de12c4fe8b6f327bc6b9ab84f360211a8f64774e"
+    },
+    "work/sle-p034/e900/S0-seed101/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "61da5199014947cda05929afcef0cf78e4368a08a10f0f09baabb3e35962815f"
+    },
+    "work/sle-p034/e900/S0-seed101/update-trace.json.gz": {
+      "bytes": 1004680,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "5fd29423d8e19b8c502619519eb3e0de4ab9bed6851e4e8be7d45d5166049057"
+    },
+    "work/sle-p034/e900/S0-seed202/slot-trace.json": {
+      "bytes": 847931,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "0d93cee0467fa08a0a818e950714b5a4748658a225e8648164e481c2698b0b9f"
+    },
+    "work/sle-p034/e900/S0-seed202/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "89e6c7ef5e6ffcc4f65106d8c016fa8346dc3f1af8c804b64dfcae672d9a60ae"
+    },
+    "work/sle-p034/e900/S0-seed202/update-trace.json.gz": {
+      "bytes": 1004295,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "dd83a0a7ebd11a3fe970fd4a0fe89d98e187026cbe1d787ec9c0e72cd3d0ce04"
+    },
+    "work/sle-p034/e900/S0-seed303/slot-trace.json": {
+      "bytes": 847921,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "017db9898aadcc694983f990cf54a3d9dd6548d23e0d04e5fc4642989c4d61a6"
+    },
+    "work/sle-p034/e900/S0-seed303/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "38914184197a9a470fb8c46d38ac4fc4dac689d8e41ccb63186fbc9c3878e4c9"
+    },
+    "work/sle-p034/e900/S0-seed303/update-trace.json.gz": {
+      "bytes": 1004819,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "224375d1ad7d01a5b61070a2cbff35f1d58201d4915213bee5e1950cb8f58236"
+    },
+    "work/sle-p034/e900/S1-seed101/slot-trace.json": {
+      "bytes": 847914,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "fa4db1422df8a3fa8330f73ea2eaaeabbe9d727a3a1b5343d593489ea21fe4e0"
+    },
+    "work/sle-p034/e900/S1-seed101/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "b56041dda7eec2269c64ffde77659d6f12dc85193a791b04cdb9f2b47e2ffdcb"
+    },
+    "work/sle-p034/e900/S1-seed101/update-trace.json.gz": {
+      "bytes": 1006812,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "c996184ded8ad24a461073683d0e4df9ca51dc69703d5d5280c1637ccff5d1bf"
+    },
+    "work/sle-p034/e900/S1-seed202/slot-trace.json": {
+      "bytes": 847928,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "a4806e2f617116461816a37aed65abd8456563f585a516958c144659eb360b61"
+    },
+    "work/sle-p034/e900/S1-seed202/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "924012bbaffca12fb1e92339aef4f36fd88cee494c9eaa6e9b4a9337cc266599"
+    },
+    "work/sle-p034/e900/S1-seed202/update-trace.json.gz": {
+      "bytes": 1004082,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "18ca99cb8b6a052da7b8288552e1c18b77a55d602fc11576f4b0159574d2f722"
+    },
+    "work/sle-p034/e900/S1-seed303/slot-trace.json": {
+      "bytes": 847925,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "c718558a29d85283b48e4f1b929e559d224c89ab7022d5f615aadcaceca6bfc5"
+    },
+    "work/sle-p034/e900/S1-seed303/trace.json": {
+      "bytes": 36003,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "7cb70ede55809cbd110d8c9ee8b89025da11a64b6027c5ce03c0b169061f143e"
+    },
+    "work/sle-p034/e900/S1-seed303/update-trace.json.gz": {
+      "bytes": 1005775,
+      "policy": "local-only complete trace/checkpoint; retained, not uploaded",
+      "published": false,
+      "sha256": "c2d927f10b0b26ff0ad3b42dc767ce2ab67e6568899da9361ccdff5feef184bc"
+    }
+  },
+  "private_original_metadata_policy": "Unmodified originals remain local; only the listed public-copy fields are removed.",
+  "public_file_count_including_record_and_manifest": 38,
+  "public_metadata_redactions": {
+    "review_notes.json": {
+      "fields": [
+        {
+          "json_pointer": "/NVIDIA/raw_api_path",
+          "original_value_sha256": "74e27c1d3cbc14e11858726922ec13b417ede03c19e0f18adae06066cda56152",
+          "reason": "private local path metadata removed from PUBLIC copy only"
+        }
+      ],
+      "public_sha256": "a43c5ece2436771fbabfeab6615cf76bf1a4e32c4b520e8dd8def6a85c0e86e2",
+      "source": "outputs/sle-p034/review_notes.json",
+      "source_sha256": "168591e72391f5e43979497a98e94352b8209124972712e889044fcbb80fa1b7"
+    },
+    "work/sle-p034/nvidia-review/candidate_assessment.json": {
+      "fields": [
+        {
+          "json_pointer": "/raw_api_path",
+          "original_value_sha256": "74e27c1d3cbc14e11858726922ec13b417ede03c19e0f18adae06066cda56152",
+          "reason": "private local path metadata removed from PUBLIC copy only"
+        }
+      ],
+      "public_sha256": "ce240b6dc1da3464a0b9fedca274dcab308ed2e19007b47e14144b89c6822ae3",
+      "source": "work/sle-p034/nvidia-review/candidate_assessment.json",
+      "source_sha256": "9239781c4be10645f0322dc4e74b9be269c6db293d34f62a7158c6ac6adf238d"
+    },
+    "work/sle-p034/nvidia-review/public_candidate.json": {
+      "fields": [
+        {
+          "json_pointer": "/raw_api_path",
+          "original_value_sha256": "74e27c1d3cbc14e11858726922ec13b417ede03c19e0f18adae06066cda56152",
+          "reason": "private local path metadata removed from PUBLIC copy only"
+        }
+      ],
+      "public_sha256": "70cf49bf5445eccf186d40f089d7e9fdc84b0c101af79269ab0e20558b26eee6",
+      "source": "work/sle-p034/nvidia-review/public_candidate.json",
+      "source_sha256": "30e1eaefd46a1214aaf7e410356b0c7e55202d995ca0ab39c370eb5764848004"
+    }
+  },
+  "root_source_pins": {
+    "B1_frozen_manifest_sha256": "817ab109925295b0a28749f61a9193c59e6dbd71117dfaad68352c126819f300",
+    "E900_frozen_manifest_sha256": "09ed37afa16ac9ffc85e39e022baf5f89aec88c8af00bcce21e3014147ffc9b1",
+    "P033_PR7_head": "e217bd0fd6cfe654062c3615ee2aa73a36d1ca71",
+    "P033_evidence_zip_git_blob": "7bf5d28cd3d06a94afa903780694e4ef344671ba",
+    "Pro_plan_PR8_head": "adca797c1afa98ed754ff616f73b691ab2925002",
+    "integrated_review_sha256": "d1cb27ea4f81521b6984de0e28b235a3b7abf09c368d0d7e9e2999e10fdcde5a"
+  },
+  "roundtrip": {
+    "NPZ_numeric_arrays_finite": true,
+    "ZIP_size_cap": 3000000,
+    "base64_chunk_characters": 12000,
+    "every_ZIP_entry_exact_bytes": true
+  },
+  "scientific_limits": [
+    "E900 has4500 vs historicalNeg70 15000 updates; unequal MAC.",
+    "B1 parameters2596 vs B0 2595; equal updates but15.333333x matrixMAC.",
+    "B0/Neg70/E3000 training is historical, not retrained here.",
+    "B1 strong_success=false; engineering/replay PASS is not scientific success."
+  ],
+  "scope": "New P034 result package; no Git operation, merge or alteration of PR7/PR8 sources.",
+  "text_newline_policy": "Source bytes UTF-8 decoded directly for tree entries; CRLF preserved, no newline normalization.",
+  "zip_coverage": {
+    "evidence.zip": {
+      "bytes": 2468651,
+      "entries": 185,
+      "git_blob": "12871a6b3e5cf95238b3dc617974da25fd028388",
+      "sha256": "8f49ba18138d9c8ea357b0d945f9259ddb7e09788bfd33544be946abc957dfb4"
+    },
+    "input-supplement.zip": {
+      "bytes": 93427,
+      "entries": 20,
+      "git_blob": "14e2becb70a9ddca883ad04c194b74094c5b6e15",
+      "sha256": "286d939d5799b80ad97122770997b603f69fe7746a0db358fa562e714382a4f2"
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "NVIDIA": {
+    "actual_model_calls": 1,
+    "api_response_id": "gen-1794492897-lmKhzJYHOscOzExOtbgp",
+    "assessments": [
+      {
+        "assertion": "Complete structured report supplied",
+        "evidence": "public_candidate.json",
+        "id": "NV-SCHEMA",
+        "reason": "finish_reason=length; candidate text is truncated invalid JSON. No repair model call or retry.",
+        "severity": "P2",
+        "status": "rejected"
+      },
+      {
+        "assertion": "B0 has2659 parameters and2595 is unexplained",
+        "evidence": "design_checks.json:B0_total",
+        "id": "NV-B0-PARAMS",
+        "reason": "An extra64 weights are invented. Fixed input one-hot is not a learned embedding:32*72+72+72*3+3=2595.",
+        "severity": "P1",
+        "status": "rejected"
+      },
+      {
+        "assertion": "B1 breakdown is ambiguous or four projections have only4 scalar biases",
+        "evidence": "design_checks.json:B1_parts;independent_code_checks.json:actual_parameter_arrays",
+        "id": "NV-B1-PARAMS",
+        "reason": "Each16->16 projection has16 bias parameters:4*(256+16)=1088. Embedding32+position256+attention1088+FFN1105+LN64+head51=2596; instantiated arrays confirm2596.",
+        "severity": "P2",
+        "status": "rejected"
+      },
+      {
+        "assertion": "With nonzero moments, a zero-gradient Adam step leaves p unchanged immediately; design semantics undefined",
+        "evidence": "design_checks.json:Adam_counterexample",
+        "id": "NV-ADAM",
+        "reason": "Design explicitly forbids optimizer calls at Neg slots. Synthetic p=1,m=.1,v=.001,t=1:zero-gradient step p=.9979898252660256,m=.09,v=.000999,t=2; no-op retains all four original values.",
+        "severity": "P1",
+        "status": "rejected"
+      },
+      {
+        "assertion": "Masking only after softmax changes normalization and can leak future-token dependence",
+        "evidence": "candidate_assessment.json:mask_counterexample;independent_code_checks.json:all_cutoffs_causal_and_truncated_prefix_invariance",
+        "id": "NV-MASK-RISK",
+        "reason": "Synthetic logits[0,0] give pre-mask softmax[1,0] versus post-mask[.5,0]. Current learner masks logits to-inf before softmax and all15 causal-prefix tests pass; no present bug.",
+        "severity": "P2",
+        "status": "accepted_as_test_recommendation_not_implementation_finding"
+      },
+      {
+        "assertion": "A usable MAC derivation was returned",
+        "evidence": "design_checks.json;independent_code_checks.json:instrumented_actual_matmul_shapes_and_reported_cost",
+        "id": "NV-MAC",
+        "reason": "No complete forward/backward formula returned. Independent local derivation and actual matmul-dimension instrumentation provide the formula.",
+        "severity": "P2",
+        "status": "not_accepted_missing_due_truncation"
+      }
+    ],
+    "local_evidence": [
+      "design_checks.json",
+      "independent_code_checks.json"
+    ],
+    "mask_counterexample": {
+      "post_softmax_mask": [
+        0.5,
+        0.0
+      ],
+      "pre_softmax_mask": [
+        1.0,
+        0.0
+      ]
+    },
+    "model_id": "nvidia/nemotron-3.5-lightning:free",
+    "no_further_cloud_calls": true,
+    "schema_status": "rejected_truncated_invalid_json",
+    "seconds": 29.781,
+    "status": "candidate_reviewed_major_claims_rejected",
+    "task_id": "P034-NVIDIA-REVIEW-001",
+    "usage": {
+      "completion_tokens": 2000,
+      "cost": 0,
+      "prompt_tokens": 744,
+      "total_tokens": 2744
+    }
+  },
+  "actionable_implementation_findings": [],
+  "design_facts": {
+    "B0_parameters": 2595,
+    "B0_training_MAC_3000_lessons": 78840000,
+    "B1_parameters": 2596,
+    "E900": "Exact Echo subsequence/full initial state; no optimizer, moment/step, or RNG changes at filtered Neg slots. Estimates total insertion effect only.",
+    "dense_backward_MAC": "4160N+64N^2+96",
+    "dense_forward_MAC": "2080N+32N^2+48",
+    "dense_training_MAC_3000_lessons": 1208880000,
+    "interpretation": "Near-equal parameters and equal lesson/target budgets;15.3333x dense matrix training MAC. Shared seed is pairing, not shared initialization. Previously viewed3bit domain is mechanistic diagnostic, not blind generalization.",
+    "visible_prefix_N": [
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "engineering_snapshot": {
+    "checks": [
+      {
+        "arrays": 20,
+        "name": "actual_parameter_arrays",
+        "status": "pass",
+        "total": 2596
+      },
+      {
+        "checked": 2596,
+        "epsilon": 1e-06,
+        "loss": 0.5418804233776074,
+        "max_abs_error": 3.1813218726028936e-09,
+        "name": "full_parameter_finite_difference_float64_N13",
+        "status": "pass",
+        "tolerance": 2e-07,
+        "worst": [
+          "embedding",
+          5,
+          6.876993648929908,
+          6.87699365211123
+        ]
+      },
+      {
+        "cutoffs": 15,
+        "max_mutated_future_error": 0.0,
+        "max_truncation_error": 1.2212453270876722e-15,
+        "name": "all_cutoffs_causal_and_truncated_prefix_invariance",
+        "status": "pass"
+      },
+      {
+        "generation_prefixes": 5,
+        "name": "teacher_prefix_and_free_generated_prefix_spies",
+        "status": "pass",
+        "training_prefixes": 5
+      },
+      {
+        "clip_scale": 0.02154649794101715,
+        "max_reference_parameter_error": 7.614187103044401e-08,
+        "name": "float32_clipping_and_independent_first_Adam_update",
+        "status": "pass",
+        "unclipped_gradient_norm": 46.411256216339304
+      },
+      {
+        "name": "checkpoint_exact_optimizer_RNG_continuation_and_eval_no_mutation",
+        "status": "pass",
+        "synthetic_updates": 6
+      },
+      {
+        "by_N": [
+          {
+            "N": 1,
+            "actual_forward_backward_matrix_MAC": 6480,
+            "actual_forward_matmul_MAC": 2160
+          },
+          {
+            "N": 9,
+            "actual_forward_backward_matrix_MAC": 64080,
+            "actual_forward_matmul_MAC": 21360
+          },
+          {
+            "N": 10,
+            "actual_forward_backward_matrix_MAC": 72144,
+            "actual_forward_matmul_MAC": 24048
+          },
+          {
+            "N": 11,
+            "actual_forward_backward_matrix_MAC": 80400,
+            "actual_forward_matmul_MAC": 26800
+          },
+          {
+            "N": 12,
+            "actual_forward_backward_matrix_MAC": 88848,
+            "actual_forward_matmul_MAC": 29616
+          },
+          {
+            "N": 13,
+            "actual_forward_backward_matrix_MAC": 97488,
+            "actual_forward_matmul_MAC": 32496
+          },
+          {
+            "N": 16,
+            "actual_forward_backward_matrix_MAC": 124560,
+            "actual_forward_matmul_MAC": 41520
+          }
+        ],
+        "convention": "head weight outer product includes48multiply equivalents; nonlinear/optimizer work excluded",
+        "name": "instrumented_actual_matmul_shapes_and_reported_cost",
+        "status": "pass"
+      }
+    ],
+    "scope": "synthetic engineering checks only; no scientific holdout or training run",
+    "seconds": 0.923,
+    "source_path": "D:\\Codex用\\outputs\\sle-p034\\attention_model.py",
+    "source_sha256": "d0bd2432354e90709f2aad11d542055e991580c6a86e7ae850e1f5fdb2154e79",
+    "status": "pass"
+  },
+  "final_source_sha256": {
+    "attention_model.py": "d0bd2432354e90709f2aad11d542055e991580c6a86e7ae850e1f5fdb2154e79",
+    "test_attention.py": "6e205b425af1cfbd1bcb45e328638401634160173e5657c10960fdafa56a6730"
+  },
+  "limits": [
+    "Engineering acceptance is not scientific success or evidence of heldout rule learning.",
+    "Independent review covers the Pro design and B1 learner/tests; root owns experiment runner, frozen manifest, curriculum/archive matching, E900 replay and result interpretation.",
+    "Cost formulas count executed dense matrix multiplication and head outer-product multiply equivalents; additional normalization,softmax,optimizer and memory/time costs must retain their explicit labels.",
+    "NVIDIA response was truncated and unreliable; only the masking regression recommendation is retained after independent verification. Exactly one model call; no retry."
+  ],
+  "recommendations": [
+    "Freeze final code/config/course hashes before scientific runs; final read-only review tied to source SHA.",
+    "Preserve exact full-sequence+STOP free-run versus teacher-forced results and all six paired seed/split rows; no holdout-driven configuration changes.",
+    "Use executed dense N-specific MACs; mask does not skip upper-triangle matmuls. Keep LN/softmax/elementwise/Adam work and persistent-array bytes explicitly separate.",
+    "Reference E900/Echo+Neg as equal Echo exposure, not equal updates/MACs or isolated Neg semantics."
+  ],
+  "review_id": "P034-independent-review-20261112",
+  "scope": "read-only design/learner review; independent synthetic engineering checks; no scientific holdout tuning or training",
+  "status": "final_read_only_design_and_B1_learner_review_pass",
+  "test_review": {
+    "author_executed_suite": {
+      "evidence": "work/sle-p034/attention-engineering/checks.json",
+      "gradient_coordinates": 7788,
+      "max_gradient_absolute_error": 2.669317211712041e-09,
+      "passed": true,
+      "tests": 8
+    },
+    "coverage": "All three target gradients2596each, causal future mutations/prefix equivalence, binary/STOP/overflow guards, float32clip/Adam, checkpoint replay, free-run teacher access spies, N1..16 cost checks.",
+    "reviewer_executed_independent_checks": {
+      "checks": 7,
+      "evidence": "work/sle-p034/nvidia-review/independent_code_checks.json"
+    },
+    "same_SHA_suite_not_repeated": true,
+    "status": "read_only_final_test_design_review_pass"
+  }
+}

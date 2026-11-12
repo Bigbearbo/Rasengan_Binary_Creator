@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "figures": [
+    "P034-E900-paired.png",
+    "P034-E900-paired.svg",
+    "P034-attention-paired.png",
+    "P034-attention-paired.svg"
+  ],
+  "matplotlib": "3.11.2",
+  "scope": "saved-result plotting only; no scientific training or inference",
+  "MPLCONFIGDIR": "publication/mpl-cache (local only)"
+}

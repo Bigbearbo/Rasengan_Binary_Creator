@@ -1,0 +1,154 @@
+{
+  "id": "P034-E900-and-parameter-matched-attention",
+  "source_plan": {
+    "PR": 8,
+    "head": "adca797c1afa98ed754ff616f73b691ab2925002",
+    "author": "ChatGPT Pro",
+    "status_at_read": "proposal not trained"
+  },
+  "execution_author": "Codex with scoped agents; parent validates",
+  "historical_baseline": {
+    "PR": 7,
+    "head": "e217bd0fd6cfe654062c3615ee2aa73a36d1ca71",
+    "mode": "T1",
+    "params": 2595,
+    "policy": "source/course/checkpoint and read-only inference verification; retrain only if incompatibility"
+  },
+  "E900": {
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "splits": [
+      "S0",
+      "C0",
+      "S1",
+      "C1"
+    ],
+    "warm_source": "P033 coverage warm-3, full optimizer/RNG",
+    "course": "actual original Neg70 trace filtered op0; 900 in original order, eachvalue150",
+    "updates": 4500,
+    "skip_neg": "no call/no step/no moment decay/no RNG",
+    "comparisons": "historical Neg70/E3000; unequal MAC and optimizer age stated",
+    "measure_echo": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900
+    ],
+    "replay": "all token updates and no-op invariants"
+  },
+  "B1": {
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "groups": {
+      "G0": "S0",
+      "G1": "C1"
+    },
+    "train_values": {
+      "S0": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "C1": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    "val": {
+      "S0": [
+        4
+      ],
+      "C1": [
+        4
+      ]
+    },
+    "test": {
+      "S0": [
+        6
+      ],
+      "C1": [
+        7
+      ]
+    },
+    "L": 16,
+    "d": 16,
+    "head_count": 1,
+    "FFN": 33,
+    "blocks": 1,
+    "pre_LN": 2,
+    "residual": true,
+    "dropout": 0,
+    "final_LN": false,
+    "params": 2596,
+    "init": {
+      "embeddings": "normal(0,.02)",
+      "dense": "Glorot uniform +/-sqrt(6/(fan_in+fan_out))",
+      "bias": 0,
+      "LN_scale": 1,
+      "LN_bias": 0,
+      "LN_epsilon": 0.00001
+    },
+    "dtype": "float32 blocks, float64 finite difference engineering",
+    "optimizer": {
+      "Adam_lr": 0.003,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-8,
+      "global_grad_clip": 1
+    },
+    "input": "native Q+current answer prefix, external alphabet01 only; no BOS,boundary,profile,parser outputs",
+    "output": "01S, last visible shared head",
+    "course": "exact P033 multiset_lessons(train_values,seed,T1)",
+    "presentations": 3000,
+    "target_updates": 15000,
+    "per_op": 1500,
+    "per_op_value": 250,
+    "measure_presentations": "0,every100,3000; no test-controlled decisions",
+    "snapshots": [
+      0,
+      1000,
+      1500,
+      3000
+    ],
+    "generation": "greedy own prefix,max8 actions and L16 overflow; never force correct STOP",
+    "strong_success": "all6 learners each12train and4heldout exact; otherwise report partial",
+    "training_MAC_formula": "F(N)=2080N+32N^2+48;B(N)=2F; total per lesson402960 atN9..13, 1208880000 per3000",
+    "not_MAC": "softmax,LN,ReLU,Adam/clip elementwise counters separately",
+    "not_equal_MAC": true,
+    "relative_dense_MAC_to_B0": 15.3333333333333,
+    "engineering_gate": [
+      "full parameter-group finite-diff",
+      "causal suffix perturbation",
+      "generation no teacher",
+      "state restore and complete replay",
+      "independent reviewer acceptance"
+    ],
+    "replay": "every actual token update, trace/curves/states/RNG exact; fixed budget all6 once"
+  },
+  "limits": [
+    "same exposed3-bit domain mechanism study not blind proof",
+    "B1 success supports architecture bundle not attention alone",
+    "no new widths,math,ritual,VM,translation",
+    "no holdout tuning,extended runs or seed selection",
+    "no merge of any PR without new authorization"
+  ]
+}
