@@ -1,0 +1,3 @@
+# Pre-neural arithmetic correction — R13
+
+Before any R13 NN training or inference, rechecked the FROZEN_PROTOCOL.md human-written training-MAC constant. It incorrectly states 6,919,488,000. The exact arithmetic is `1408 targets/epoch × 150 epochs × 3 newly trained students × 10920 forward MAC/target = 6,918,912,000`, not 6,919,488,000. The pre-run `prereg.json` generated locally already contains the **correct** value `6918912000`, so this correction changes NO script, data, split, seed, budget, acceptance gate or experimental variable. All original source SHA256 values from the first freeze remain fixed; the original line is deliberately retained for provenance. Status: BEFORE optimizer and neural inference; static gate PASS, 0 NN calls. No private data.
