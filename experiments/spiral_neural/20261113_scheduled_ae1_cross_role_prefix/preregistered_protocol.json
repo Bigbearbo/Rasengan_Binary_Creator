@@ -1,0 +1,58 @@
+{
+  "work_id": "AE1-CROSS-ROLE-PREFIX-20261113",
+  "date": "2026-11-13",
+  "owner": "independent scheduled small-NN researcher",
+  "baseline_ref": "research/scheduled-nn-ae1-suffix-exposure-20261113",
+  "baseline_commit": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000",
+  "input_file": "experiments/spiral_neural/20261113_scheduled_suffix_exposure/results.json",
+  "input_git_blob": "7d87bfc417564c4af08892534d15b1b3af96e104",
+  "profile": "SLE-AE1-n5-v1 / raw 01+010+r(3bits+0)+4*(5bits+0)+END111100; answer first r six-bit words + external S; r1 and r2 Q differ only in parameter bits",
+  "single_research_question": "Does adding the second echoed word disrupt correctness of the first echoed word on identical (a,b,c,d), or are heldout errors localized to the second word?",
+  "comparison": "Archived r1 versus r2 inference for the identical 4-word payload, each model/split/suffix. New variable is r parameter only; no new training or interventions.",
+  "model": "4 archived 10,499-parameter tanh raw-bit NN, torch batched Adam 0.003",
+  "training_seed": [
+    101,
+    202
+  ],
+  "training_modes": [
+    "fixed",
+    "varied"
+  ],
+  "training_epochs": 200,
+  "prior_optimizer_steps_per_student": 1600,
+  "new_updates": 0,
+  "new_nn_forwards": 0,
+  "splits": "same frozen PR29 24 train, 6 val, 6 test pairs by (a+b)%6; no resampling",
+  "evaluation_regimes": [
+    "seen",
+    "changed_low",
+    "unseen_high"
+  ],
+  "counts": "4 models x (24+6+6) pairs x 3 suffix variants = 432 paired queries / 864 archived outputs",
+  "preregistered_metrics": [
+    "r1 exact",
+    "r2 exact",
+    "r2 first word exact",
+    "r2 second word exact",
+    "r1-v-r2 first six bits consistency",
+    "first-word-only / second-word-only / both / stop-only error breakdown",
+    "incorrect second word matches a/c/d or other",
+    "information and terminator bit errors of second word"
+  ],
+  "frozen_gate": "Git blob SHA of archived result, protocol SHA and exact 4 student keys; verify all 864 outputs, per-model published exact/bit/STOP tallies, unique r1/r2 matching a:b:c:d and no train/test leak; abort on mismatch",
+  "acceptance": "publish all 36 breakdown cells with failures and an aggregate; no claim of mechanism proof or new NN training; all tests descriptive post hoc on already exposed eval outputs",
+  "resources": "zero NN updates/forwards, script checks archive only; SLE learner original ~10,499 params each and per-target reference dense MAC 21,056",
+  "next_owner": "NN coordinator reviews archival consistency before choosing new, independently frozen heldout-answer-bearing NN training or r3/r4 curriculum",
+  "nvidia": {
+    "delegated": false,
+    "reason": "No authorized OpenRouter worker accessible to this automation; audit handles public data deterministically",
+    "calls": 0
+  },
+  "scope": "No VM code, syntax tree, UR1 authorization or other branch changes",
+  "provenance": {
+    "U": "User requested strict small-NN SLE bit-level learning experiments",
+    "F": "PR29 frozen checkpoint outputs, PR26 profile, PR28 newer trained results are separate",
+    "T": "Audit will be run only after this protocol/script are committed",
+    "A": "Loss of r2 correctness could be localized to answer second-word, not command routing"
+  }
+}
