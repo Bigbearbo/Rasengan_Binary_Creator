@@ -1,0 +1,89 @@
+{
+  "work_id": "SLE-AE1-ANSWER-ROLE-SWAP-PILOT-20261113",
+  "registered": "2026-11-13",
+  "status": "preregistered; no NN work done at freeze",
+  "parent_pr": 29,
+  "parent_head_sha": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000",
+  "question": "Does placing identical novel numeric tokens in first vs second answer-word role in matched raw-01 AE1 teaching determine heldout second-word accuracy?",
+  "single_variable": "Assignment of high IDs 6..14 to a (first answer word) or b (second answer word) in supplemental r2 teaching; base and all budgets held fixed",
+  "profile": {
+    "name": "SLE-AE1-n5-v1",
+    "Q": "01+010+r(3 information bits+0)+four 6bit payload words+END111100",
+    "answer": "first r complete 6bit data words + external S",
+    "ordinary_ids": "0..29",
+    "reserved": "30 END/31 UP",
+    "r": [
+      1,
+      2
+    ],
+    "Q_length": 39,
+    "context_L": 80,
+    "hidden_H": 64,
+    "generation_cap": 32
+  },
+  "data": {
+    "base": "a,b in 0..5, train iff (a+b)%6 not in {0,1}; both r=1,2; c=d=0",
+    "base_train_pairs": 24,
+    "base_validation_pairs": 6,
+    "base_test_pairs": 6,
+    "supplement": "v in6..14,s in0..3; orientation HIGH_FIRST=(v,s), HIGH_SECOND=(s,v); r=2 only; c=d=0",
+    "supplement_train_pairs": 36,
+    "heldout": "v in6..14,s in4..5 (18 per orientation), r=2; never trained",
+    "nuisance": "c,d=0 fixed in every condition; no suffix-generalization claim",
+    "example": {
+      "Q_second": "010100100000000001100000000000000111100",
+      "expected_second": "000000001100S",
+      "Q_first": "010100100001100000000000000000000111100",
+      "expected_first": "001100000000S"
+    }
+  },
+  "model": {
+    "architecture": "160 one-hot input slots ->64 tanh ->3 logits [0,1,S]",
+    "parameters": 10499,
+    "optimizer": "Adam lr0.003 batch64 clip_grad_norm1",
+    "initial_seeds": [
+      101,
+      202
+    ],
+    "initial_state": "same torch.manual_seed per paired arm",
+    "split_shuffling": "numpy.default_rng(seed+87000+epoch).permutation(948); same index permutation both arms"
+  },
+  "budget": {
+    "epochs": 250,
+    "train_targets_per_epoch": 948,
+    "optimizer_steps_per_model": 3750,
+    "models": 4,
+    "optimizer_steps_total": 15000,
+    "new_training_targets_total": 948000,
+    "early_stop": false,
+    "one_formal_run": true
+  },
+  "primary": "per-seed r2 exact on 18 heldout HIGH_SECOND (s4/5,v6..14), compare trained HIGH_SECOND vs HIGH_FIRST orientation",
+  "secondary": "heldout HIGH_FIRST, seen supplemental in-role and crossed-role, base train/val/test, per-word accuracy, STOP location and high-bit activation",
+  "pre_run_gates": [
+    "All 39-bit questions decode to legal 5-info-bit+terminal0 words, reserved END 111100, STOP external S only",
+    "Exactly base 24 train and 6 val/6 test pairs, plus 36 supplement train and 18 heldout per orientation",
+    "Same 948 teacher-prefix targets per epoch in both arms and identical seed-specific permutations and initial weights",
+    "New-word v6..14 appears equally often as target in either arm, once in first or second position per r2 supplement; target multiset differs in ordering, intended variable",
+    "Metrics and budget frozen before examining outputs; do not cherry-pick checkpoint/seed or extend budget",
+    "Interpret heldout results only if in-role train fit >=90% per arm, otherwise learning-capacity failure"
+  ],
+  "interpretation_limits": [
+    "This is a new fresh-model matched curriculum pilot, not a continuation of PR29 checkpoints; cannot attribute results to SLE versus other encodings",
+    "Swapping a/b position necessarily changes raw-question positions and target-prefix contexts: tests role-transfer under coupled position changes, not isolated latent representation",
+    "Two seeds only; descriptive, not statistical significance",
+    "No large-model teacher oracle; scripted math only generates labels offline"
+  ],
+  "provenance": {
+    "U": "Small NN native-01 learning, math progression, generalization and causal controls",
+    "F": "PR26 SLE-AE1-n5-v1; PR29 matched teaching implementation; PR34/35 post-hoc new b failure",
+    "T": "pending",
+    "A": "A role-specific first vs second answer-word teaching effect may explain failed b>=6 transfer; not established"
+  },
+  "external": {
+    "nvidia_calls": 0,
+    "reason": "No authorized NVIDIA/OpenRouter worker available in this run",
+    "codex_local_calls": 0
+  },
+  "next_owner": "NN reviewer: check exact source/budgets/splits, then seek independent seeds or new word-domain holdout without retuning these four runs"
+}
