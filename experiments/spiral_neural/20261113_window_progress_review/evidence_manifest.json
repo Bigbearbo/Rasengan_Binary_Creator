@@ -1,0 +1,25 @@
+{
+  "ZIP_roundtrip": "PASS",
+  "archive": "evidence.zip",
+  "author": "視窗GPT",
+  "bytes": 247568,
+  "members": {
+    "f2_results.json": {
+      "bytes": 5664923,
+      "sha256": "4c7b4d75af87906b81e66b713c4971d81b869d327dd9e3600f5ce1233de1e45a"
+    },
+    "pr29_correction_results.json": {
+      "bytes": 417687,
+      "sha256": "d219785d65d3e50df0f86d302793001e4f80bfb46d31c7ca695cbf02608cdc97"
+    }
+  },
+  "schema": "window-review-evidence-v1",
+  "sha256": "6cba94196a6cb8cb60a70d675ec5cab148ada5937eeada03c56f34760dbf5285",
+  "source_refs": {
+    "F2_prereg": "bdf15a1ffeebbc3b439f0ed203d4e4fde959d2d2",
+    "PR28": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+    "PR29": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000"
+  },
+  "summary_reconciliation": "PASS; full generated outputs retained, no new inference during packaging",
+  "total_new_optimizer_updates": 0
+}

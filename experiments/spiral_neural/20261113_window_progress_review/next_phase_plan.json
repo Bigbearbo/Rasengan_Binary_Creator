@@ -1,0 +1,162 @@
+{
+  "author": "視窗GPT",
+  "candidate_profile": "SLE-AEM2-n5-v1; preserve E1/E2/F1 bytes and extend Flip100 to r2; complement info bits only; literal answer IDs30/31 allowed; S stops",
+  "continuation_gate": "All3 parents must reproduce all old E1/E2/F1 before first optimizer. Abort on mismatch; never repair by resetting model. Reuse recorded baseline when code/input/state unchanged.",
+  "evaluation": [
+    "full-string includingS per class",
+    "each word and STOP separately",
+    "first error position",
+    "correct-to-wrong and wrong-to-correct transitions by exactQ",
+    "inherited counters separately from new target/probe costs"
+  ],
+  "excluded_changes": [
+    "manual weight editing",
+    "fresh student initialization",
+    "architecture change",
+    "new answer-generating parser inside student",
+    "retrospectively relabeling exposed pairs as heldout",
+    "altering existing frozen reports/checkpoints"
+  ],
+  "formal_freeze_needed": "Implement learner adapter, verify byte-equivalent old Q/A and full parent carry, freeze manifest and all actual schedules in new experiment folder before training. This plan does not launch a local Codex process.",
+  "future_capacity": {
+    "N5_r5": {
+      "Q_bits": 45,
+      "correct_prefix_bits": 75,
+      "fits_L80_cap32": true,
+      "generation_actions": 31
+    },
+    "N6_r6": {
+      "Q_bits": 51,
+      "correct_prefix_bits": 87,
+      "fits_L80_cap32": false,
+      "generation_actions": 37
+    },
+    "scope": "Arithmetic for proposed extended profile only; current profile N5/N6 not yet adopted."
+  },
+  "id": "WINDOW-AE1-CONTINUATION-PLAN-20261113",
+  "immediate_next_stage": "F2",
+  "model": {
+    "H": 64,
+    "L": 80,
+    "generation_cap": 32,
+    "input": "raw Q plus model-generated answer prefix; one-hot binary slots with zero padding, no extra semantic features",
+    "parameters": 10499,
+    "unchanged_P030_AST": true
+  },
+  "optimizer": "Original P030 per-target Adam lr.003, beta.9/.999, eps1e-8, normclip1; full p/m/v/birth/t/RNG continued",
+  "optional_future_probe": "After E3, change answer-relevant c by fixed deltas1/7/13 while holding a,b,d. Do not use the exposed scores as stopping or checkpoint-selection gates; suffix-only tests remain nuisance invariance.",
+  "parent_PR": 28,
+  "parent_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "parent_full_state_sha256": {
+    "101": "3d0010cc2c489cc7636c6c6e2dd4fd88406db211b7776ab0bf9e1a92537d96a9",
+    "202": "21c3573dab389f614a64ea7617c196eb21d75ac8a319281de3133b6c1318e0c6",
+    "303": "10232db67e9c75315973d8a1b2ae59848940dfd770863ad9198a837dd8c535d1"
+  },
+  "parent_t": {
+    "101": 297000,
+    "202": 400500,
+    "303": 441900
+  },
+  "payload_count": 900,
+  "payload_sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee",
+  "payload_source": "PR28 inputs.zip:payloads.json",
+  "provenance": "A: next-stage design informed by pinned Codex F and this round read-only T; not an already executed or user-specified detailed protocol",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "stages": [
+    {
+      "class_order": [
+        "E1",
+        "E2",
+        "F1",
+        "F2"
+      ],
+      "max_epochs_per_seed": 40,
+      "maximum_correct_generation_actions": 13,
+      "maximum_correct_prefix_length": 51,
+      "maximum_training_dense_MAC_all_three": 90961920000,
+      "maximum_training_dense_MAC_per_seed": 30320640000,
+      "maximum_training_updates_per_seed": 1440000,
+      "questions_per_class": 900,
+      "questions_per_epoch": 3600,
+      "schedule_rng_seed_offset": 555000,
+      "stage": "F2",
+      "status": "design_only_not_trained",
+      "target_counts_by_class": {
+        "E1": 6300,
+        "E2": 11700,
+        "F1": 6300,
+        "F2": 11700
+      },
+      "targets_per_epoch": 36000,
+      "training_dense_MAC_per_epoch": 758016000
+    },
+    {
+      "class_order": [
+        "E1",
+        "E2",
+        "F1",
+        "F2",
+        "E3"
+      ],
+      "max_epochs_per_seed": 40,
+      "maximum_correct_generation_actions": 19,
+      "maximum_correct_prefix_length": 57,
+      "maximum_training_dense_MAC_all_three": 134168832000,
+      "maximum_training_dense_MAC_per_seed": 44722944000,
+      "maximum_training_updates_per_seed": 2124000,
+      "questions_per_class": 900,
+      "questions_per_epoch": 4500,
+      "schedule_rng_seed_offset": 666000,
+      "stage": "E3",
+      "status": "design_only_not_trained",
+      "target_counts_by_class": {
+        "E1": 6300,
+        "E2": 11700,
+        "E3": 17100,
+        "F1": 6300,
+        "F2": 11700
+      },
+      "targets_per_epoch": 53100,
+      "training_dense_MAC_per_epoch": 1118073600
+    },
+    {
+      "class_order": [
+        "E1",
+        "E2",
+        "F1",
+        "F2",
+        "E3",
+        "E4"
+      ],
+      "max_epochs_per_seed": 40,
+      "maximum_correct_generation_actions": 25,
+      "maximum_correct_prefix_length": 63,
+      "maximum_training_dense_MAC_all_three": 191020032000,
+      "maximum_training_dense_MAC_per_seed": 63673344000,
+      "maximum_training_updates_per_seed": 3024000,
+      "questions_per_class": 900,
+      "questions_per_epoch": 5400,
+      "schedule_rng_seed_offset": 777000,
+      "stage": "E4",
+      "status": "design_only_not_trained",
+      "target_counts_by_class": {
+        "E1": 6300,
+        "E2": 11700,
+        "E3": 17100,
+        "E4": 22500,
+        "F1": 6300,
+        "F2": 11700
+      },
+      "targets_per_epoch": 75600,
+      "training_dense_MAC_per_epoch": 1591833600
+    }
+  ],
+  "status": "design_ready_no_training",
+  "stopping_rule": "After complete epoch all active classes each900/900 exact including S for2 consecutive epochs; any failure resets streak0. Maximum40 epochs per seed, no result-dependent extension, replacement seed or best-checkpoint selection.",
+  "target_order": "pair_id ascending, then class_order, then answer target position including S; global shuffle each epoch from frozen actual schedules",
+  "vocabulary": "ordinary input IDs0..29; all30x30 first pairs; fixed third/fourth words, not all30^4 inputs"
+}

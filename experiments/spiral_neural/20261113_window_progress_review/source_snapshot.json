@@ -1,0 +1,107 @@
+{
+  "queried_at": "2026-11-13T10:50:11+08:00",
+  "source_url": "https://api.github.com/repos/Bigbearbo/Rasengan_Binary_Creator/pulls?state=open&sort=updated&direction=desc&per_page=10",
+  "scope": "10 most recently updated open PRs; remote evidence only, no assertion about local unpushed processes",
+  "pull_requests": [
+    {
+      "number": 28,
+      "title": "[Codex] 三模型學會混合回音1/2與翻轉：各900/900，舊能力恢復",
+      "head": "codex/ae1-mixed-flip-20261113",
+      "sha": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+      "base": "codex/ae1-parameter-curriculum-20261113",
+      "updated_at": "2026-11-13T02:13:04Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 29,
+      "title": "[NN研究] AE1 無關後綴訓練暴露控制：四個真正小網路＋864筆 checkpoint 回放",
+      "head": "research/scheduled-nn-ae1-suffix-exposure-20261113",
+      "sha": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000",
+      "base": "codex/ae1-parameter-curriculum-20261113",
+      "updated_at": "2026-11-13T01:53:12Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 26,
+      "title": "[Codex] 新回音學會參數1、2：三seed各900/900並保持r1",
+      "head": "codex/ae1-parameter-curriculum-20261113",
+      "sha": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+      "base": "codex/full-domain-mix-20261113",
+      "updated_at": "2026-11-13T01:06:50Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 27,
+      "title": "[NN研究] AE1 後兩詞變更不能識別複製：162萬合法bit題查表反例",
+      "head": "research/scheduled-nn-ae1-suffix-identifiability-20261113",
+      "sha": "cb5f6e8654b7f443cde1746c12442c8bd07f31b0",
+      "base": "codex/ae1-parameter-curriculum-20261113",
+      "updated_at": "2026-11-13T00:46:41Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 24,
+      "title": "[Codex] 完整八資訊位題域學會：三seed回音／翻轉各256/256",
+      "head": "codex/full-domain-mix-20261113",
+      "sha": "2a073c96869bbd0820ab3295ff3622b52ea881f2",
+      "base": "codex/early-mix-matched-20261113",
+      "updated_at": "2026-11-12T23:58:27Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 25,
+      "title": "[NN研究] numeric8 完整題域事前核准邊界唯讀稽核（0 NN 訓練）",
+      "head": "research/scheduled-nn-full-domain-prereg-gate-20261113",
+      "sha": "9e969a9f4b31364eec4716264784158b123c07a4",
+      "base": "codex/full-domain-mix-20261113",
+      "updated_at": "2026-11-12T23:54:33Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 23,
+      "title": "[Coordinator] PR DAG 分叉／SHA 交接預檢（離線 mock）",
+      "head": "research/orchestration/pr-dag-preflight-20261113",
+      "sha": "7da2a7ae16ba127a595be287f838e1cf357c8f4a",
+      "base": "main",
+      "updated_at": "2026-11-12T23:32:43Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 20,
+      "title": "[Codex] 早混／晚混實測：已教兩操作全會，未教翻轉均1/6",
+      "head": "codex/early-mix-matched-20261113",
+      "sha": "3fe2a9aa945512c8510222c13b769b2fbb2cc859",
+      "base": "codex/early-mix-routing-20261113",
+      "updated_at": "2026-11-12T23:11:04Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 22,
+      "title": "[視窗GPT] Host 引用票據跨發行器重用與 epoch 高水位回歸",
+      "head": "research/window-gpt/hamu-ticket-epoch-20261113",
+      "sha": "ba8aa1cd7e4fd0be0f8ebed7f84d8b95241401fa",
+      "base": "research/window-gpt/hamu-handle-publication-20261113",
+      "updated_at": "2026-11-12T22:57:39Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 21,
+      "title": "[NN研究] AE1 長回音的正確前綴 vs 自行生成差額（唯讀）",
+      "head": "research/scheduled-nn-ae1-prefix-audit-20261113",
+      "sha": "0ba6d37bd97d5d406e8f49438e2119760307f735",
+      "base": "pro/advanced-echo-learning-20261113",
+      "updated_at": "2026-11-12T22:54:37Z",
+      "state": "open",
+      "draft": true
+    }
+  ]
+}
