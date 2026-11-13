@@ -1,0 +1,23 @@
+{
+  "elapsed_ms": 42,
+  "evidence_refs": [
+    "context/ae1_flip2_fixtures.json"
+  ],
+  "execution_claim": "not_run",
+  "findings": [
+    {
+      "claim": "{\"examples\":[{\"id\":\"zero_one\",\"A\":\"011101110100S\"},{\"id\":\"one_six\",\"A\":\"101101110100S\"},{\"id\":\"six_last\",\"A\":\"111101110100S\"},{\"id\":\"last_zero\",\"A\":\"111100110100S\"}],\"syntax_zero_positions\":[2,7],\"S_position\":8,\"actions_including_S\":9,\"STOP_input_prefix_bits\":5}",
+      "evidence_refs": [
+        "context/ae1_flip2_fixtures.json"
+      ]
+    }
+  ],
+  "model_id": "nvidia/nemotron-3.5-lightning:free",
+  "recommended_next_step": "Submit for coordinator local validation against fixture grammar and answer patterns",
+  "status": "candidate",
+  "summary": "Derived four literal F2 answers from fixture payload bits, two syntax0 positions at zero-based indices 2 and 7, and the S/action boundaries defined in the supplied grammar",
+  "task_id": "AE1-FLIP2-FIXTURES-001",
+  "unknowns": [],
+  "usage": null,
+  "worker": "nvidia"
+}

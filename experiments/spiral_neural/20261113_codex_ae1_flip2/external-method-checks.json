@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "expected": {
+    "examples": [
+      {
+        "id": "zero_one",
+        "A": "111110111100S"
+      },
+      {
+        "id": "one_six",
+        "A": "111100110010S"
+      },
+      {
+        "id": "six_last",
+        "A": "110010000100S"
+      },
+      {
+        "id": "last_zero",
+        "A": "000100111110S"
+      }
+    ],
+    "syntax_zero_positions": [
+      5,
+      11
+    ],
+    "S_position": 12,
+    "actions_including_S": 13,
+    "STOP_input_prefix_bits": 51
+  },
+  "candidate_matches": false,
+  "candidate_disposition": "rejected",
+  "mismatches": [
+    {
+      "field": "examples[0]",
+      "expected": {
+        "id": "zero_one",
+        "A": "111110111100S"
+      },
+      "actual": {
+        "id": "zero_one",
+        "A": "011101110100S"
+      }
+    },
+    {
+      "field": "examples[1]",
+      "expected": {
+        "id": "one_six",
+        "A": "111100110010S"
+      },
+      "actual": {
+        "id": "one_six",
+        "A": "101101110100S"
+      }
+    },
+    {
+      "field": "examples[2]",
+      "expected": {
+        "id": "six_last",
+        "A": "110010000100S"
+      },
+      "actual": {
+        "id": "six_last",
+        "A": "111101110100S"
+      }
+    },
+    {
+      "field": "examples[3]",
+      "expected": {
+        "id": "last_zero",
+        "A": "000100111110S"
+      },
+      "actual": {
+        "id": "last_zero",
+        "A": "111100110100S"
+      }
+    },
+    {
+      "field": "syntax_zero_positions",
+      "expected": [
+        5,
+        11
+      ],
+      "actual": [
+        2,
+        7
+      ]
+    },
+    {
+      "field": "S_position",
+      "expected": 12,
+      "actual": 8
+    },
+    {
+      "field": "actions_including_S",
+      "expected": 13,
+      "actual": 9
+    },
+    {
+      "field": "STOP_input_prefix_bits",
+      "expected": 51,
+      "actual": 5
+    }
+  ],
+  "source_ref": "context/ae1_flip2_fixtures.json",
+  "extra_NN_calls": 0,
+  "extra_optimizer_calls": 0
+}

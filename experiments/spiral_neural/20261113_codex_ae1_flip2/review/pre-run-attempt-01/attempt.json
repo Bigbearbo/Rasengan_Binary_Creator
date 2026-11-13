@@ -1,0 +1,13 @@
+{
+  "status": "metadata_failed_after_all_zero_NN_checks",
+  "exit_code": 1,
+  "error_type": "KeyError",
+  "missing_key": "synthetic_native_forward_calls",
+  "actual_author_metadata_key": "synthetic_native_inference_calls",
+  "error_line": 327,
+  "all_provenance_data_orders_portable_validator_and_pure_metric_assertions_preceded_failure": true,
+  "model_forward_calls": 0,
+  "optimizer_calls": 0,
+  "science_source_changed": false,
+  "correction": "Use actual engineering metadata keys and a fresh portable-gate-final directory; repeat bounded zero-NN checks, no scientific run."
+}

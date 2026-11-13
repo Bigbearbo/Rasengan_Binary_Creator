@@ -1,0 +1,24 @@
+{
+  "schema":"external-candidate-disposition-v1",
+  "round_id":"AE1-FLIP2-20261113",
+  "gemini":{"actual_calls":0,"decision":"skipped","reason":"Existing agy installation/login retained. Prior analysis-only tool isolation and unknown provider outcome unresolved; no resend/relogin/global setting change."},
+  "nvidia":{
+    "task_id":"AE1-FLIP2-FIXTURES-001",
+    "actual_calls":1,
+    "model":"nvidia/nemotron-3.5-lightning:free",
+    "prompt_sha256":"b10b21c9d7b47ea1dc6f1c0d35326ecc029408fe645d79247d8f49ac3188800a",
+    "context_sha256":"29ded9e29d499728957ea3e183bccc073033df02a5e2d520832adbf7a6a7ff45",
+    "seconds":4.266,
+    "usage":{"prompt_tokens":1122,"completion_tokens":307,"total_tokens":1429,"cost":0},
+    "finish_reason":"stop",
+    "no_retry":true,
+    "transport_status":"candidate_locally_checked",
+    "semantic_status":"candidate_rejected",
+    "accepted_research_claims":0,
+    "local_checks":"external-method-checks.json compares all four literal answers plus both syntax positions, S position, action count and STOP-input length. All eight fields are wrong. Correct tails5/11, S12, actions13, STOP-prefix51.0NN/optimizer. Candidate labels never feed training.",
+    "expected_A":["111110111100S","111100110010S","110010000100S","000100111110S"],
+    "limits":"Schema/exit0 do not establish correctness. No learning success or mechanism fact was accepted. Original free catalog, quota reserve, lock, no retry and DPAPI retained by legacy worker; no secret/quota copying."
+  },
+  "native_OpenAI_agents":"Separate local implementation/package/independent review, never renamed external workers",
+  "private_data_exported":false
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "synthetic",
+  "purpose": "Four prospective teacher fixtures only; no neural results or private data",
+  "profile": "SLE-AEM2-n5-v1, fixed four-word Q. Ordinary input IDs0..29, each word five information bits plus syntax0. Existing Echo010/r1,r2 and Flip100/r1 remain unchanged; new F2 is Flip100/r2.",
+  "grammar": "Q=01+100+0100+four complete6-bit words+END111100,39bits. F2 answer complements the first TWO words'5 information bits independently, retains each tail0, then external S. Binary answer patterns111100/111110 are literal and never executed as END/UP. Generate outputs using raw bits and independent external S.",
+  "fixtures": [
+    {"id":"zero_one","payload_ids":[0,1,23,11]},
+    {"id":"one_six","payload_ids":[1,6,23,11]},
+    {"id":"six_last","payload_ids":[6,29,23,11]},
+    {"id":"last_zero","payload_ids":[29,0,23,11]}
+  ],
+  "requested_claim_shape": {"examples":[{"id":"fixture id","A":"12 binary answer bits then S"}],"syntax_zero_positions":["zero based positions of both syntax0 in the12 answerbits"],"S_position":"zero based action position","actions_including_S":"integer","STOP_input_prefix_bits":"integer"},
+  "trial_scope": "Three existing parent models will continue mixed E1/E2/F1/F2 on the same900payloadbank, original Model/Adam/L80H64.40epoch cap, fourclass all900/900 withS for2epochs stop. No formal whole-training replay planned; prior learner verified, bounded synthetic engineering plus complete independent rawNumPy baseline/epoch/finalTF validation. This fixture task must not predict learning or claim execution."
+}

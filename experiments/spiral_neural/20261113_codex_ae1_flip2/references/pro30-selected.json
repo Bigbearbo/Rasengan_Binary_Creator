@@ -1,0 +1,93 @@
+{
+  "source_commit": "1e4812bd48404c8c03f659ed8a8d86dd5aa5852e",
+  "source_PR": 30,
+  "source_file": "experiments/spiral_neural/20261113_window_progress_review/results_summary.json",
+  "source_Git_blob": "0cfba1b56393c5a81a4c9ee1d5cffd5e30c1eb62",
+  "source_parent": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "reported_F2": [
+    {
+      "seed": 101,
+      "parent_state_sha256": "3d0010cc2c489cc7636c6c6e2dd4fd88406db211b7776ab0bf9e1a92537d96a9",
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 0,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 0,
+          "flip_then_echo": 10
+        },
+        "error_categories": {
+          "cap_exhausted": 50,
+          "correct_stop_wrong_content": 838,
+          "early_stop": 9,
+          "late_stop": 3
+        },
+        "first_word_correct": 82,
+        "questions": 900,
+        "second_word_correct": 2,
+        "stop_position_correct": 838,
+        "whole_correct": 0
+      }
+    },
+    {
+      "seed": 202,
+      "parent_state_sha256": "21c3573dab389f614a64ea7617c196eb21d75ac8a319281de3133b6c1318e0c6",
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 9,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 1,
+          "flip_then_echo": 11
+        },
+        "error_categories": {
+          "cap_exhausted": 26,
+          "correct_stop_wrong_content": 838,
+          "early_stop": 32,
+          "late_stop": 4
+        },
+        "first_word_correct": 116,
+        "questions": 900,
+        "second_word_correct": 7,
+        "stop_position_correct": 838,
+        "whole_correct": 0
+      }
+    },
+    {
+      "seed": 303,
+      "parent_state_sha256": "10232db67e9c75315973d8a1b2ae59848940dfd770863ad9198a837dd8c535d1",
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 0,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 0,
+          "flip_then_echo": 14
+        },
+        "error_categories": {
+          "cap_exhausted": 34,
+          "correct_stop_wrong_content": 853,
+          "early_stop": 11,
+          "late_stop": 1
+        },
+        "first_word_correct": 231,
+        "questions": 900,
+        "second_word_correct": 5,
+        "stop_position_correct": 854,
+        "whole_correct": 1
+      }
+    }
+  ],
+  "reported_probe_cost": {
+    "all_state_arrays_unchanged": true,
+    "baseline_gate": {
+      "all_three_passed_before_F2": true,
+      "archive_outputs_exact": 8100
+    },
+    "inference_dense_MAC": 1147801664,
+    "manual_parameter_updates": 0,
+    "neural_forward_calls": 110027,
+    "optimizer_calls": 0,
+    "source_files_unchanged": true,
+    "wall_seconds": 2.9845036000006075
+  },
+  "scope": "External published readonly result, not rerun by this task. Own fresh once-per-trial baseline will be measured without using these values as gates.",
+  "decision": "Adopt F2-only followed separately by possible E3/E4; preserve current learner and bank; add zero-extra-forward word/error/churn readouts; zero formal whole-training replays preplanned."
+}

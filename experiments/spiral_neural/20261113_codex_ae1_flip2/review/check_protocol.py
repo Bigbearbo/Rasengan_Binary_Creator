@@ -1,0 +1,80 @@
+"""Independent F2 continuation arithmetic and prospective readout definitions, no NN."""
+from collections import Counter
+import json
+from pathlib import Path
+
+
+def main():
+    labels = {name: Counter() for name in ("E1", "E2", "F1", "F2")}
+    word = lambda value: format(value, "05b") + "0"
+    flip = lambda value: "".join(str(1 - int(bit)) for bit in format(value, "05b")) + "0"
+    control_cases = set()
+    for a in range(30):
+        for b in range(30):
+            answers = {"E1": word(a), "E2": word(a) + word(b), "F1": flip(a), "F2": flip(a) + flip(b)}
+            for name, answer in answers.items():
+                labels[name].update(answer + "S")
+            if a < 2 or b < 2:
+                control_cases.add((a, b))
+    totals = sum(labels.values(), Counter())
+    assert dict(totals) == {"0": 18900, "1": 13500, "S": 3600}
+    assert len(control_cases) == 116
+    assert flip(0) + flip(1) + "S" == "111110111100S"
+    updates = 900 * (7 + 13 + 7 + 13)
+    assert updates == 36000 and updates * 21056 == 758016000
+    assert updates * 40 == 1440000 and updates * 40 * 21056 == 30320640000
+    result = {
+        "status": "protocol_arithmetic_passed_code_gate_pending",
+        "parent_result_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+        "parent_publication_manifest_sha256": "dcf039bf53bcc39669d06daced174dffb133fa75c93e52acbc2fd59433b45a11",
+        "parent_publication_manifest_Git_blob": "2f90e963b31486a4ba568b8361976cd2f23f8145",
+        "computed": {
+            "Q_length": 39,
+            "STOP_prefix_by_output_word_count": {"1": 45, "2": 51},
+            "model_L_H_parameters": [80, 64, 10499],
+            "training_dense_MAC_per_target": 21056,
+            "forward_dense_MAC": 10432,
+            "class_targets_per_epoch": {"E1": 6300, "E2": 11700, "F1": 6300, "F2": 11700},
+            "targets_per_epoch": updates,
+            "training_MAC_per_epoch": updates * 21056,
+            "maximum_new_updates_per_seed": updates * 40,
+            "maximum_new_training_MAC_per_seed": updates * 40 * 21056,
+            "maximum_3primary_new_updates_no_formal_replay": updates * 40 * 3,
+            "maximum_3primary_new_training_MAC_no_formal_replay": updates * 40 * 3 * 21056,
+            "replay_seeds": [],
+            "all_replay_costs": 0,
+            "class_teacher_label_counts": {name: dict(value) for name, value in labels.items()},
+            "all_teacher_label_counts": dict(totals),
+            "F2_questions_with_at_least_one_literal_control_like_output_word": 116,
+            "F2_literal_answer_for_input_first_pair0_1": "111110111100S",
+            "parent_global_t": {"101": 297000, "202": 400500, "303": 441900},
+        },
+        "required_code_gates": [
+            "Exact public PR28 parent NPZ bytes, moments, birth, t, RNG and all old counters retained; old2700 Q/A remain bitidentical.",
+            "All3 parent old E1/E2/F1 baseline integrity scores must be900/900 before the first new optimizer. F2 baseline is observed diagnostic, never an asserted0/0/1 cohort filter or streak input.",
+            "F2 flips both words'5 information bits and preserves each tail0; literal30/31 answer patterns remain legal bits, only externalS stops generation.",
+            "Freeze40 full36000-target arrays for each seed using rng(seed+555000), with all4 classes900Q and unequal6300/11700/6300/11700 target counts.",
+            "Stop only after all4 classes900 exact+STOP in two consecutive epoch probes or cap40; no formal optimizer trajectory replay and no claims of absent raw loss/gradient reconstruction.",
+            "Every saved baseline/epoch readout derives word-specific info/tail0 and STOP from the same generated tokens. F2 first word can fail and must be scored independently.",
+            "First error is0-based over actual versus expectedA+S using max lengths, with correct=None and missing/earlyS/extra/cap/context explicitly distinguished.",
+            "Per-class whole-answer transitions compare exact QID identity; baseline churn isnull and epoch1 uses baseline as previous. Net score difference cannot substitute for both directional counts.",
+        ],
+        "interpretation_limits": [
+            "Continuation of3 existing PR28 models on an exposed900-payload bank; no fresh-cohort or heldout/new-suffix claim.",
+            "Prior Pro30 F2 baseline is existing background; the required new wire/restore baseline is not new independent discovery evidence.",
+            "No control isolates the effect of F2 versus changed practice/target weighting; no arbitrary-r/length or internal generic algorithm conclusion.",
+            "No full formal training replay is planned. Evidence is frozen source/orders, complete archived checkpoints/outputs/aggregate metadata and one independent forward audit.",
+        ],
+        "reviewer_model_forward_calls": 0,
+        "reviewer_optimizer_calls": 0,
+        "formal_students": 0,
+        "external_model_calls": 0,
+    }
+    with Path(__file__).with_name("protocol-review.json").open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(result, stream, ensure_ascii=False, indent=2)
+        stream.write("\n")
+    print(json.dumps({"status": result["status"], "updates_per_epoch": updates, "max_new_primary_MAC": updates * 40 * 3 * 21056, "formal_replays": 0, "NN_calls": 0}))
+
+
+if __name__ == "__main__":
+    main()
