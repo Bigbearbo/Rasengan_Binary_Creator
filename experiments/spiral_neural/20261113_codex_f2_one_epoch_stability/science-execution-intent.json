@@ -1,0 +1,18 @@
+{
+  "all_baselines_before_any_optimizer": true,
+  "approved_manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "auto_retry": false,
+  "new_updates_all_primary": 108000,
+  "preregistration_commit": "dbebad71af32ea208dd85171347a4185e2e7e23d",
+  "primary_seeds": [
+    101,
+    202,
+    303
+  ],
+  "replay_seeds": [],
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  }
+}

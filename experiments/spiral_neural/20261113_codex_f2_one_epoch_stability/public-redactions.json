@@ -1,0 +1,24 @@
+{
+  "all_science_prereg_source_and_numeric_values_unchanged": true,
+  "records": [
+    {
+      "JSON_pointer": "/command/0",
+      "archive_member": "execution/formal-command-result.json",
+      "local_original_modified": false,
+      "original_bytes": 700,
+      "original_sha256": "5c589c6ebbad598a823ebb8d0c4265cb5c500348bb6cd861ebff238890683739",
+      "original_value_disclosed": false,
+      "other_argv_exit_time_invocation_fields_exact": true,
+      "public_bytes": {
+        "Git_blob": "89c63eca350efda7574a8eb81cc8c401d7075507",
+        "bytes": 578,
+        "sha256": "a2a3aa8555c493866a0926e3c9bb2a9df8f55be1b36d82169b340f9628684aa8"
+      },
+      "public_file": "formal-command-result.json",
+      "public_file_byte_identical_to_local_original": false,
+      "reason": "machine-userpath",
+      "replacement": "<python>"
+    }
+  ],
+  "schema": "machine-userpath-public-copy-v1"
+}

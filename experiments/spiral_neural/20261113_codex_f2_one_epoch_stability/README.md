@@ -1,13 +1,17 @@
-# F2首次全對後：降低一步學習率的CPU配對實驗
+# F2 CPU：學會後降學習率，下一輪三模型全對
 
-2026-11-13，Codex，事前設計；尚未執行正式新推論／訓練。
+2026-11-13，Codex，正式執行與獨立驗收完成。從PR33三個首次四類全對的完整存檔，沿用各自既有下一輪課序，只把Adam學習率0.003改為0.001。模型仍為10499參數、L80/H64，原NumPy CPU；每人恰36000逐bit更新。
 
-從PR33三個原學生各自首次四類各900全對的完整state作新分支，只教既有凍結課序的下一輪：101的19→20、202的22→23、303的19→20。新分支只把Adam步幅0.003改為0.001，其餘模型／梯度／float32參數與FP64部分／clip1／birth-age／p-m-v-t-RNG-events及原900bank全部保留。使用原NumPy CPU，不切換GPU或Numba。
+|Seed|舊0.003下一輪流失|新0.001下一輪流失|新E1/E2/F1/F2|
+|---|---:|---:|---|
+|101|7|0|900/900/900/900|
+|202|5|0|900/900/900/900|
+|303|52|0|900/900/900/900|
 
-歷史原步幅下一輪已完整公開，從保存tokens重算流失7／5／52題。新分支每人恰36000逐bit更新，合計108000，training dense MAC 2274048000；固定一輪，不追到滿分或依結果換學習率。新全3先核baseline四類全對，之後才任何optimizer。
+事前主要假說「三個seed都嚴格少流失」通過。正式單次命令197.79秒，新增108000更新、2274048000training dense MAC；baseline／新生成／最終TF另計324000forward。獨立一次純NumPy重算32400自由生成題及108000最終TF targets，432038forward、0optimizer，strict exact。
 
-主要假說是三個seed的新流失總題數都嚴格少於各自歷史控制；持平不算支持。另保存每類整串、逐詞／資訊位／尾零／STOP、首錯與逐QID兩臂正錯交集，不能用pooled總分掩蓋seed或題型退步。
+這只證實三個已接觸900payload題庫的選定state能把滿分保持到下一輪，不代表未見題泛化或長期最佳學習率。原PR33終點不變；E3/E4尚未執行。完整optimizer重播事前設定為0，中間gradient／loss軌跡未獨立重建。
 
-此起點選擇來自已查看的舊結果，歷史控制不是新跑學生。它只檢驗這三個已會state接著一次教學的局部影響，不代表新教材學習速度、未見題泛化或長期最佳學習率。原PR33正式終點保持原樣；這是另立受控分支，語法／編碼寬度未降階。E3/E4留待後續。
+先讀[RESULTS.md](RESULTS.md)與[HANDOFF.md](HANDOFF.md)，設計見[protocol.json](protocol.json)。完整state、答案、TF、課序、原source、前後驗收與成本收在各ZIP及publication-manifest.json；原prereg23檔逐byte快照在preregistration.zip。
 
-父結果commit f9d41eb28f067a222682e02c85c7371297bddde9，pubmanifest SHA193d2c49ccf052c55db808014cb837f80204789fc93388fd3955c4205720e9a4。正式前需source/input凍結、可攜gate、Git actual-byte回讀。最後以獨立raw NumPy核baseline、新臂、歷史control全部輸出及新臂TF；完整optimizer訓練重播事前設為0，不宣稱未保存的中間gradient／逐target loss軌跡已重建。
+事前封存commit dbebad71af32ea208dd85171347a4185e2e7e23d，manifest SHA1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c。公開副本的機器個人路徑處理見public-redactions.json，其他科學資料保留原bytes。

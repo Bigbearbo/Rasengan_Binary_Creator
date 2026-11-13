@@ -1,0 +1,28 @@
+{
+  "schema": "f2-stability-independent-audit-execution-v1",
+  "status": "exit0",
+  "audit_source_sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc",
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "formal_session_id": 68762,
+  "audit_tool_session_id": 85755,
+  "audit_tool_session_closed": true,
+  "audit_process_closed": true,
+  "audit_exit_code": 0,
+  "audit_seconds": 24.825394800005597,
+  "command_invocations": 1,
+  "started_UTC": "2026-11-13T12:43:44.456830+00:00",
+  "audit_stdout": "audit.stdout.log",
+  "audit_stderr": "audit.stderr.log",
+  "command_scope": "one frozen rawNumPy audit of32400freeQ+108000TF; no optimizer or external calls",
+  "ended_UTC": "2026-11-13T12:44:09.284742+00:00",
+  "audit.stdout.log": {
+    "bytes": 1167,
+    "sha256": "4599475a13ca4265c9763f69b1ad99af6ad5a74e9a4c5eb6e6e663702137734f"
+  },
+  "audit.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit_tool_exit_code": 0,
+  "actual_tool_exit0_observed": true
+}

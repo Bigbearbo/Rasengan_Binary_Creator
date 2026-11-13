@@ -1,0 +1,23 @@
+{
+  "attempts": 1,
+  "calls_by_phase": {
+    "final_TF": 108000,
+    "seed101_baseline": 36000,
+    "seed101_control": 36038,
+    "seed101_new": 36000,
+    "seed202_baseline": 36000,
+    "seed202_control": 36000,
+    "seed202_new": 36000,
+    "seed303_baseline": 36000,
+    "seed303_control": 36000,
+    "seed303_new": 36000
+  },
+  "dense_MAC": 4507020416,
+  "external_model_calls": 0,
+  "forward_calls": 432038,
+  "new_students": 0,
+  "optimizer_calls": 0,
+  "script_sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc",
+  "seconds": 24.542572799997288,
+  "status": "passed"
+}

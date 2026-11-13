@@ -1,0 +1,22 @@
+{
+  "all3baseline_integrity": true,
+  "formal_command_seconds": 197.79170689999592,
+  "formal_session": 68762,
+  "full_TF_shape_checked_before_NN": true,
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "preregistration_commit": "dbebad71af32ea208dd85171347a4185e2e7e23d",
+  "primary_timing_sum_seconds": 187.94480879997718,
+  "receipt_sha256": "061bed3c80132ba23878ec0955dfc82af178aaf013d99dc0b5dea8c5065d5b50",
+  "required_paths_exist": 53,
+  "reviewer_forward_calls_at_preflight": 0,
+  "root_confirmed_formal_exit0": true,
+  "science_files": 48,
+  "science_npz": 18,
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  },
+  "status": "passed",
+  "timing_scope": "root wrapper wall includes command; primary timing list excludes baseline/finalTF/validation; not required to be equal"
+}
