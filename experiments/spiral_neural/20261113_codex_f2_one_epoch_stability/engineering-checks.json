@@ -1,0 +1,30 @@
+{
+  "AST_change": {
+    "entire_AST_equal_after_reversing_one_leaf": true,
+    "function": "Model.step",
+    "intervention_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "original_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "unique_changed_float_constant": {
+      "after": 0.001,
+      "before": 0.003
+    }
+  },
+  "errors": 0,
+  "external_model_calls": 0,
+  "failures": 0,
+  "new_parent_optimizer_calls": 0,
+  "public_mapping_and_frozen_next_orders_verified": true,
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  },
+  "status": "passed",
+  "synthetic_forward_calls": 3,
+  "synthetic_optimizer_updates": 3,
+  "synthetic_training_dense_MAC": 63168,
+  "test_output": "test_all_baselines_before_any_step_and_integrity_abort (test_stability.Engineering.test_all_baselines_before_any_step_and_integrity_abort) ... ok\ntest_native_eta003_exact_and_eta001_formula_nonzero_moments (test_stability.Engineering.test_native_eta003_exact_and_eta001_formula_nonzero_moments) ... ok\ntest_public_inputs_mapping_and_orders (test_stability.Engineering.test_public_inputs_mapping_and_orders) ... ok\ntest_qid_aligned_ties_lost_sets_and_betweenarm (test_stability.Engineering.test_qid_aligned_ties_lost_sets_and_betweenarm) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.113s\n\nOK\n",
+  "tests": 4,
+  "trained_parent_forward_calls": 0
+}

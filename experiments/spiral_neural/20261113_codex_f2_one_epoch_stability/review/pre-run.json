@@ -1,0 +1,123 @@
+{
+  "schema": "f2-stability-independent-pre-run-v1",
+  "status": "passed",
+  "date": "2026-11-13",
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "source_hashes": {
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  },
+  "inputs_zip_sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+  "review_source_sha256": "a6b737e4d1f747a04ef5695005c10b0f2226b3f1801313e8cc8d1443ff29a956",
+  "portable_native_validation": {
+    "actual_call": "validate_inputs(fresh_manifest, approved_hash)",
+    "fresh_bundle": "portable-bundle/",
+    "original_workspace_reads_denied": true,
+    "guard_positive_control_rejected": true,
+    "validator_original_workspace_read_attempts": 0,
+    "actual_relative_files_read": [
+      "prereg/inputs.zip",
+      "prereg/manifest.json",
+      "tool/__pycache__/run_stability.cpython-312.pyc",
+      "tool/protocol.json",
+      "tool/run_stability.py",
+      "tool/test_stability.py"
+    ],
+    "five_portable_inputs_SHA_unchanged": {
+      "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+      "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+      "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486",
+      "manifest.json": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+      "inputs.zip": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79"
+    },
+    "original_five_source_inputs_SHA_unchanged": true,
+    "validation_seconds": 0.9453156999952625,
+    "Model_NN_methods_patched_to_reject": [
+      "forward",
+      "generate",
+      "grow",
+      "lesson",
+      "loss_grad",
+      "step"
+    ],
+    "NN_method_attempts": 0
+  },
+  "inputs": {
+    "ZIP_members": 36,
+    "finite_array_members": {
+      "NPZ": 9,
+      "NPY": 3
+    },
+    "full_state_fields": 25,
+    "parents_and_control": {
+      "101": {
+        "start_t": 981000,
+        "end_t": 1017000,
+        "fields": 25,
+        "fullstate_restore_exact_in_native_validator": true,
+        "historical_lost": 7,
+        "order_SHA256": "bdf50fa0bb1778b6ab2eccfb19c0731936c507bdc07d109a5587f723a425b7a5"
+      },
+      "202": {
+        "start_t": 1192500,
+        "end_t": 1228500,
+        "fields": 25,
+        "fullstate_restore_exact_in_native_validator": true,
+        "historical_lost": 5,
+        "order_SHA256": "4ab083e40fb6d7dfa1e3316a21fc75ddc5ad4c765c03abecf6a5ae1d23d69553"
+      },
+      "303": {
+        "start_t": 1125900,
+        "end_t": 1161900,
+        "fields": 25,
+        "fullstate_restore_exact_in_native_validator": true,
+        "historical_lost": 52,
+        "order_SHA256": "c034f0d73f57c7e9818c32fa299c5191b1702bfb77ccfe8774663f4416a868ad"
+      }
+    },
+    "exact_order_slices_verified_by_native_validator": true,
+    "public_member_SHA_Gitblob_CRC_and_receipt_mapping_verified": true
+  },
+  "AST_change": {
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "original_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "intervention_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "function": "Model.step",
+    "unique_changed_float_constant": {
+      "before": 0.003,
+      "after": 0.001
+    },
+    "entire_AST_equal_after_reversing_one_leaf": true
+  },
+  "author_engineering": {
+    "source_pins_match": true,
+    "tests_passed": 4,
+    "synthetic_updates": 3,
+    "synthetic_forward_calls": 3,
+    "parent_forward_updates": 0,
+    "not_repeated_by_reviewer": true
+  },
+  "static_review": [
+    "execute performs all3 baselines before its first train_one call; baseline failure retains evidence and exits with0newupdates.",
+    "Baseline compares complete archived generation and all4class900scores; only inference counters may change, all learning/RNG/events/train counters exact.",
+    "Train_one consumes one exact36000target order, visible Q+correct priorA only, original AST step except eta001, no GPU/JIT/grow/accumulation.",
+    "Training counters are deltas from selected starts;108000 updates/2274048000MAC total; baseline/newprobe/finalTF separately recorded.",
+    "All3primary complete before finalTF; lastfree reused. Historicalcontrol state/generation/record are copies of public evidence, no oldcontrol optimizer call.",
+    "Primary condition all3strictly fewer lost; ties fail directional hypothesis; all seed/class QID categories retained; no outcome-driven extension.",
+    "Formalreplay empty/notplanned. Tracepred/loss digest is recorded evidence, not an independently reconstructed gradient/optimizer trajectory."
+  ],
+  "reviewer_forward_calls": 0,
+  "reviewer_optimizer_updates": 0,
+  "reviewer_external_calls": 0,
+  "new_outcomes_observed": false,
+  "blocking_findings": [],
+  "postrun_requirements": [
+    "Explicit root exit0/receipt GO before trained forward; verify exact metadata paths and receipt/session/commit first.",
+    "Pure independent NumPy forward for3baselines+3new endpoints+3historical controls, new finalTF108000targets; preserve incremental cost/proofs.",
+    "Hash complete source/manifest/inputs/science/receipt before and after audit; formal driver endguard checks core/manifest but does not rehash inputsZIP there.",
+    "Do not claim optimizer replay or reuse old control work as newly trained students; distinguish posthoc firstfull-start selection and one-epoch local inference."
+  ],
+  "initial_protocol_helper_error_record": "protocol-helper-attempt-01.json",
+  "limits": "Pre-run acceptance only. No trained inference or optimizer work performed by reviewer; root still owns Git prereg and sole formal authorization."
+}

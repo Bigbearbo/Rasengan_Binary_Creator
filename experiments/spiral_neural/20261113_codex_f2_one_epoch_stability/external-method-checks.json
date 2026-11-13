@@ -1,0 +1,35 @@
+{
+  "schema": "f2-stability-external-method-checks-v1",
+  "task_id": "F2-ONEEPOCH-METHOD-001",
+  "transport": "one_actual_call_structure_checked",
+  "claim_is_valid_JSON": false,
+  "expected": {
+    "new_updates_total": 108000,
+    "training_dense_MAC_total": 2274048000,
+    "new_end_t_in_seed_order": [
+      1017000,
+      1228500,
+      1161900
+    ]
+  },
+  "observed_nonJSON_fields": {
+    "new_updates_total": 3,
+    "training_dense_MAC_total": 63168,
+    "new_end_t_in_seed_order": [
+      20,
+      23,
+      20
+    ]
+  },
+  "exact_arithmetic_checks": {
+    "new_updates_total": false,
+    "training_dense_MAC_total": false,
+    "new_end_t_in_seed_order": false
+  },
+  "semantic_status": "candidate_rejected",
+  "research_claims_accepted": 0,
+  "NN_forward_calls": 0,
+  "optimizer_updates": 0,
+  "retries": 0,
+  "manual_method_review": "Different loss counts across seeds do not invalidate within-seed matching. Same next-order and all same learning state are deliberately required, not an unpaired boundary change. Original official endpoints are retained; forks are new experiments. No incorrect candidate instruction adopted."
+}

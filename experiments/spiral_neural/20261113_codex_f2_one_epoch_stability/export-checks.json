@@ -1,0 +1,14 @@
+{
+  "archive_members_bytes_CRC_SHA_verified": 36,
+  "final_independent_pre_run_gate": "passed",
+  "finite_arrays": {
+    "NPY": 3,
+    "NPZ": 9
+  },
+  "mode": "preregistration",
+  "new_science_read_or_executed": false,
+  "packager_NN_optimizer_benchmark_external_calls": 0,
+  "privacy_all_selected_members_checked": true,
+  "source_inputs_original_bytes_unchanged": true,
+  "status": "PASS"
+}
