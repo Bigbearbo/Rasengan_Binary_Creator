@@ -1,0 +1,557 @@
+{
+  "id": "WINDOW-E3-CD-FACTORIAL-READONLY-20261114",
+  "status": "completed",
+  "frozen_commit": "898a385b33cf25ca6cd75f34fddf6b09812e3bfb",
+  "source_PR": 49,
+  "source_commit": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "baseline_archive_exact_matches": 2700,
+  "total_generated_questions": 10800,
+  "metrics": {
+    "101": {
+      "c0_d0": {
+        "questions": 900,
+        "whole_correct": 900,
+        "word_correct": [
+          900,
+          900,
+          900
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "none": 900
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c1_d0": {
+        "questions": 900,
+        "whole_correct": 900,
+        "word_correct": [
+          900,
+          900,
+          900
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "none": 900
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c0_d1": {
+        "questions": 900,
+        "whole_correct": 900,
+        "word_correct": [
+          900,
+          900,
+          900
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "none": 900
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c1_d1": {
+        "questions": 900,
+        "whole_correct": 900,
+        "word_correct": [
+          900,
+          900,
+          900
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "none": 900
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      }
+    },
+    "202": {
+      "c0_d0": {
+        "questions": 900,
+        "whole_correct": 879,
+        "word_correct": [
+          900,
+          900,
+          879
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "12": 3,
+          "13": 5,
+          "14": 12,
+          "16": 1,
+          "none": 879
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c1_d0": {
+        "questions": 900,
+        "whole_correct": 879,
+        "word_correct": [
+          900,
+          900,
+          879
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 899,
+        "first_error_histogram": {
+          "12": 1,
+          "13": 6,
+          "14": 12,
+          "15": 1,
+          "16": 1,
+          "none": 879
+        },
+        "output_length_histogram": {
+          "16": 1,
+          "19": 899
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c0_d1": {
+        "questions": 900,
+        "whole_correct": 876,
+        "word_correct": [
+          900,
+          900,
+          876
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 900,
+        "first_error_histogram": {
+          "12": 2,
+          "13": 13,
+          "14": 9,
+          "none": 876
+        },
+        "output_length_histogram": {
+          "19": 900
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      },
+      "c1_d1": {
+        "questions": 900,
+        "whole_correct": 878,
+        "word_correct": [
+          900,
+          900,
+          878
+        ],
+        "first_two_correct": 900,
+        "stop_position_correct": 899,
+        "first_error_histogram": {
+          "12": 3,
+          "13": 11,
+          "14": 7,
+          "15": 1,
+          "none": 878
+        },
+        "output_length_histogram": {
+          "16": 1,
+          "19": 899
+        },
+        "termination_histogram": {
+          "stop": 900
+        }
+      }
+    },
+    "303": {
+      "c0_d0": {
+        "questions": 900,
+        "whole_correct": 897,
+        "word_correct": [
+          900,
+          897,
+          897
+        ],
+        "first_two_correct": 897,
+        "stop_position_correct": 897,
+        "first_error_histogram": {
+          "9": 3,
+          "none": 897
+        },
+        "output_length_histogram": {
+          "19": 897,
+          "32": 3
+        },
+        "termination_histogram": {
+          "stop": 897,
+          "cap_exhausted": 3
+        }
+      },
+      "c1_d0": {
+        "questions": 900,
+        "whole_correct": 893,
+        "word_correct": [
+          900,
+          895,
+          893
+        ],
+        "first_two_correct": 895,
+        "stop_position_correct": 894,
+        "first_error_histogram": {
+          "12": 1,
+          "14": 1,
+          "9": 5,
+          "none": 893
+        },
+        "output_length_histogram": {
+          "13": 1,
+          "19": 894,
+          "32": 5
+        },
+        "termination_histogram": {
+          "stop": 895,
+          "cap_exhausted": 5
+        }
+      },
+      "c0_d1": {
+        "questions": 900,
+        "whole_correct": 895,
+        "word_correct": [
+          900,
+          895,
+          895
+        ],
+        "first_two_correct": 895,
+        "stop_position_correct": 895,
+        "first_error_histogram": {
+          "9": 5,
+          "none": 895
+        },
+        "output_length_histogram": {
+          "19": 895,
+          "32": 5
+        },
+        "termination_histogram": {
+          "stop": 895,
+          "cap_exhausted": 5
+        }
+      },
+      "c1_d1": {
+        "questions": 900,
+        "whole_correct": 893,
+        "word_correct": [
+          900,
+          893,
+          893
+        ],
+        "first_two_correct": 893,
+        "stop_position_correct": 893,
+        "first_error_histogram": {
+          "9": 7,
+          "none": 893
+        },
+        "output_length_histogram": {
+          "19": 893,
+          "32": 7
+        },
+        "termination_histogram": {
+          "stop": 893,
+          "cap_exhausted": 7
+        }
+      }
+    }
+  },
+  "paired_metrics": {
+    "101": {
+      "c_effect_d0": {
+        "factor": "c",
+        "left_cell": "c0_d0",
+        "right_cell": "c1_d0",
+        "pairs": 900,
+        "left_whole_correct": 900,
+        "right_whole_correct": 900,
+        "both_whole_correct": 900,
+        "whole_output_invariant": 0,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 900,
+        "third_word_output_invariant": 0,
+        "third_word_correct_both": 900,
+        "stop_position_correct_both": 900,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1783
+      },
+      "c_effect_d1": {
+        "factor": "c",
+        "left_cell": "c0_d1",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 900,
+        "right_whole_correct": 900,
+        "both_whole_correct": 900,
+        "whole_output_invariant": 0,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 900,
+        "third_word_output_invariant": 0,
+        "third_word_correct_both": 900,
+        "stop_position_correct_both": 900,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1783
+      },
+      "d_effect_c0": {
+        "factor": "d",
+        "left_cell": "c0_d0",
+        "right_cell": "c0_d1",
+        "pairs": 900,
+        "left_whole_correct": 900,
+        "right_whole_correct": 900,
+        "both_whole_correct": 900,
+        "whole_output_invariant": 900,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 0,
+        "third_word_output_invariant": 900,
+        "third_word_correct_both": 900,
+        "stop_position_correct_both": 900
+      },
+      "d_effect_c1": {
+        "factor": "d",
+        "left_cell": "c1_d0",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 900,
+        "right_whole_correct": 900,
+        "both_whole_correct": 900,
+        "whole_output_invariant": 900,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 0,
+        "third_word_output_invariant": 900,
+        "third_word_correct_both": 900,
+        "stop_position_correct_both": 900
+      }
+    },
+    "202": {
+      "c_effect_d0": {
+        "factor": "c",
+        "left_cell": "c0_d0",
+        "right_cell": "c1_d0",
+        "pairs": 900,
+        "left_whole_correct": 879,
+        "right_whole_correct": 879,
+        "both_whole_correct": 865,
+        "whole_output_invariant": 4,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 899,
+        "third_word_output_changed": 895,
+        "third_word_output_invariant": 4,
+        "third_word_correct_both": 865,
+        "stop_position_correct_both": 899,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1755
+      },
+      "c_effect_d1": {
+        "factor": "c",
+        "left_cell": "c0_d1",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 876,
+        "right_whole_correct": 878,
+        "both_whole_correct": 860,
+        "whole_output_invariant": 1,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 899,
+        "third_word_output_changed": 898,
+        "third_word_output_invariant": 1,
+        "third_word_correct_both": 860,
+        "stop_position_correct_both": 899,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1757
+      },
+      "d_effect_c0": {
+        "factor": "d",
+        "left_cell": "c0_d0",
+        "right_cell": "c0_d1",
+        "pairs": 900,
+        "left_whole_correct": 879,
+        "right_whole_correct": 876,
+        "both_whole_correct": 859,
+        "whole_output_invariant": 863,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 37,
+        "third_word_output_invariant": 863,
+        "third_word_correct_both": 859,
+        "stop_position_correct_both": 900
+      },
+      "d_effect_c1": {
+        "factor": "d",
+        "left_cell": "c1_d0",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 879,
+        "right_whole_correct": 878,
+        "both_whole_correct": 863,
+        "whole_output_invariant": 869,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 900,
+        "first_two_correct_both": 900,
+        "third_word_complete_both": 899,
+        "third_word_output_changed": 31,
+        "third_word_output_invariant": 868,
+        "third_word_correct_both": 863,
+        "stop_position_correct_both": 899
+      }
+    },
+    "303": {
+      "c_effect_d0": {
+        "factor": "c",
+        "left_cell": "c0_d0",
+        "right_cell": "c1_d0",
+        "pairs": 900,
+        "left_whole_correct": 897,
+        "right_whole_correct": 893,
+        "both_whole_correct": 890,
+        "whole_output_invariant": 0,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 892,
+        "first_two_correct_both": 892,
+        "third_word_complete_both": 899,
+        "third_word_output_changed": 899,
+        "third_word_output_invariant": 0,
+        "third_word_correct_both": 890,
+        "stop_position_correct_both": 891,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1769
+      },
+      "c_effect_d1": {
+        "factor": "c",
+        "left_cell": "c0_d1",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 895,
+        "right_whole_correct": 893,
+        "both_whole_correct": 888,
+        "whole_output_invariant": 0,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 888,
+        "first_two_correct_both": 888,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 900,
+        "third_word_output_invariant": 0,
+        "third_word_correct_both": 888,
+        "stop_position_correct_both": 888,
+        "third_word_target_bit_changes": 1783,
+        "target_bit_changes_followed_correctly": 1769
+      },
+      "d_effect_c0": {
+        "factor": "d",
+        "left_cell": "c0_d0",
+        "right_cell": "c0_d1",
+        "pairs": 900,
+        "left_whole_correct": 897,
+        "right_whole_correct": 895,
+        "both_whole_correct": 895,
+        "whole_output_invariant": 896,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 898,
+        "first_two_correct_both": 895,
+        "third_word_complete_both": 900,
+        "third_word_output_changed": 4,
+        "third_word_output_invariant": 896,
+        "third_word_correct_both": 895,
+        "stop_position_correct_both": 895
+      },
+      "d_effect_c1": {
+        "factor": "d",
+        "left_cell": "c1_d0",
+        "right_cell": "c1_d1",
+        "pairs": 900,
+        "left_whole_correct": 893,
+        "right_whole_correct": 893,
+        "both_whole_correct": 890,
+        "whole_output_invariant": 894,
+        "first_two_complete_both": 900,
+        "first_two_output_stable": 896,
+        "first_two_correct_both": 892,
+        "third_word_complete_both": 899,
+        "third_word_output_changed": 5,
+        "third_word_output_invariant": 894,
+        "third_word_correct_both": 890,
+        "stop_position_correct_both": 891
+      }
+    }
+  },
+  "cost": {
+    "baseline_forward_calls": 51339,
+    "new_intervention_forward_calls": 154109,
+    "total_forward_calls": 205448,
+    "dense_MAC_per_forward": 10432,
+    "total_inference_dense_MAC": 2143233536,
+    "new_optimizer_updates": 0,
+    "manual_weight_updates": 0,
+    "inference_wall_seconds": 3.6461916150001343
+  },
+  "state_sha256_before": {
+    "101": "d50569acc6246436f0c667c2146929964129d7266c0cb0f3a1508a6cb643b266",
+    "202": "4528055f1226dad9034c5c244ccf1ed8c122654d384d27755f11748b9b51add3",
+    "303": "a53f1434be6e433e27c9d3a2f6a4494f47e332e328ad6724680a19d070cb9460"
+  },
+  "state_sha256_after": {
+    "101": "d50569acc6246436f0c667c2146929964129d7266c0cb0f3a1508a6cb643b266",
+    "202": "4528055f1226dad9034c5c244ccf1ed8c122654d384d27755f11748b9b51add3",
+    "303": "a53f1434be6e433e27c9d3a2f6a4494f47e332e328ad6724680a19d070cb9460"
+  },
+  "all_state_arrays_read_only": true,
+  "source_unchanged": true,
+  "raw_cases_sha256": "79cbfaf2cff4f7c4590dc5b83ef598dca6c1c6be886b8a5f68419b104becc603",
+  "raw_cases_bytes": 4762875,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "limits": "All three intervention cells have new Q relative to the fixed900bank. Only c-changing cells have new relevant (a,b,c) combinations; d-only retains (a,b,c) and changes answer-irrelevant context. Numeric values are previously exposed, and this is not a researcher-blind external test. Known source failures are retained. Frozen deterministic +1 interventions do not establish all-context behavior or identify an internal neural mechanism."
+}
