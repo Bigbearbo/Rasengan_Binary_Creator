@@ -1,0 +1,861 @@
+{
+  "author": "視窗GPT",
+  "f2_probe": {
+    "all_state_arrays_unchanged": true,
+    "baseline_gate": {
+      "all_three_passed_before_F2": true,
+      "archive_outputs_exact": 8100
+    },
+    "inference_dense_MAC": 1147801664,
+    "manual_parameter_updates": 0,
+    "neural_forward_calls": 110027,
+    "optimizer_calls": 0,
+    "source_files_unchanged": true,
+    "wall_seconds": 2.9845036000006075
+  },
+  "f2_students": [
+    {
+      "F2_forward_calls": 12649,
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 0,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 0,
+          "flip_then_echo": 10
+        },
+        "error_categories": {
+          "cap_exhausted": 50,
+          "correct_stop_wrong_content": 838,
+          "early_stop": 9,
+          "late_stop": 3
+        },
+        "first_word_correct": 82,
+        "questions": 900,
+        "second_word_correct": 2,
+        "stop_position_correct": 838,
+        "whole_correct": 0
+      },
+      "baseline_forward_calls": 24300,
+      "baseline_metrics": {
+        "E1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": 900,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        }
+      },
+      "parent_state_sha256": "3d0010cc2c489cc7636c6c6e2dd4fd88406db211b7776ab0bf9e1a92537d96a9",
+      "seed": 101
+    },
+    {
+      "F2_forward_calls": 12143,
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 9,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 1,
+          "flip_then_echo": 11
+        },
+        "error_categories": {
+          "cap_exhausted": 26,
+          "correct_stop_wrong_content": 838,
+          "early_stop": 32,
+          "late_stop": 4
+        },
+        "first_word_correct": 116,
+        "questions": 900,
+        "second_word_correct": 7,
+        "stop_position_correct": 838,
+        "whole_correct": 0
+      },
+      "baseline_forward_calls": 24300,
+      "baseline_metrics": {
+        "E1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": 900,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        }
+      },
+      "parent_state_sha256": "21c3573dab389f614a64ea7617c196eb21d75ac8a319281de3133b6c1318e0c6",
+      "seed": 202
+    },
+    {
+      "F2_forward_calls": 12335,
+      "F2_metrics": {
+        "descriptive_output_patterns": {
+          "echo_both": 0,
+          "echo_then_flip": 0,
+          "flip_first_then_stop": 0,
+          "flip_then_echo": 14
+        },
+        "error_categories": {
+          "cap_exhausted": 34,
+          "correct_stop_wrong_content": 853,
+          "early_stop": 11,
+          "late_stop": 1
+        },
+        "first_word_correct": 231,
+        "questions": 900,
+        "second_word_correct": 5,
+        "stop_position_correct": 854,
+        "whole_correct": 1
+      },
+      "baseline_forward_calls": 24300,
+      "baseline_metrics": {
+        "E1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": 900,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "descriptive_output_patterns": {},
+          "error_categories": {},
+          "first_word_correct": 900,
+          "questions": 900,
+          "second_word_correct": null,
+          "stop_position_correct": 900,
+          "whole_correct": 900
+        }
+      },
+      "parent_state_sha256": "10232db67e9c75315973d8a1b2ae59848940dfd770863ad9198a837dd8c535d1",
+      "seed": 303
+    }
+  ],
+  "formal_training_updates": 0,
+  "new_results_scope": "Independent checkpoint inference and correction only. Not a replay of any training run.",
+  "nvidia": {
+    "calls": 0,
+    "reason": "No available authorized OpenRouter/NVIDIA worker tool in this environment",
+    "status": "skipped_unavailable"
+  },
+  "pr29_correction": {
+    "archive_replay": {
+      "archived_labeled_rows": 864,
+      "distinct_model_question_pairs": 480,
+      "duplicate_labeled_rows": 384,
+      "exact_output_matches": 480,
+      "forward_count": 4800,
+      "mismatches": []
+    },
+    "corrected_evaluation": {
+      "distinct_model_question_pairs": 864,
+      "high_suffix_ids_all_at_least_15": true,
+      "new_train_suffix_forward_count": 3840,
+      "new_train_suffix_queries": 384,
+      "reused_archive_inferences": 480,
+      "train_distinct_queries_per_model": 144,
+      "train_queries_per_model": 144
+    },
+    "cost": {
+      "MAC_scope": "Linear multiplications only; excludes biases, tanh, other operations and I/O.",
+      "complete_generations": 864,
+      "dense_affine_MAC": 90132480,
+      "dense_affine_MAC_per_forward": 10432,
+      "forward_count": 8640,
+      "new_optimizer_steps": 0,
+      "new_training_targets": 0
+    },
+    "original_test_result_preserved": {
+      "fixed": {
+        "corrected_exact": 7,
+        "n": 12,
+        "original_exact": 7,
+        "unchanged": true
+      },
+      "varied": {
+        "corrected_exact": 9,
+        "n": 12,
+        "original_exact": 9,
+        "unchanged": true
+      }
+    },
+    "per_model": [
+      {
+        "evaluation": {
+          "test": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 70,
+                "bits_total": 72,
+                "exact": 5,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 67,
+                "bits_total": 72,
+                "exact": 4,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          },
+          "train": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 285,
+                "bits_total": 288,
+                "exact": 23,
+                "n": 24,
+                "stop_position": 24
+              }
+            }
+          },
+          "val": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          }
+        },
+        "mode": "fixed",
+        "seed": 101
+      },
+      {
+        "evaluation": {
+          "test": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          },
+          "train": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            }
+          },
+          "val": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          }
+        },
+        "mode": "varied",
+        "seed": 101
+      },
+      {
+        "evaluation": {
+          "test": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 71,
+                "bits_total": 72,
+                "exact": 5,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 66,
+                "bits_total": 72,
+                "exact": 3,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          },
+          "train": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 141,
+                "bits_total": 144,
+                "exact": 22,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 273,
+                "bits_total": 288,
+                "exact": 18,
+                "n": 24,
+                "stop_position": 24
+              }
+            }
+          },
+          "val": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          }
+        },
+        "mode": "fixed",
+        "seed": 202
+      },
+      {
+        "evaluation": {
+          "test": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 66,
+                "bits_total": 72,
+                "exact": 3,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          },
+          "train": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 288,
+                "bits_total": 288,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 144,
+                "bits_total": 144,
+                "exact": 24,
+                "n": 24,
+                "stop_position": 24
+              },
+              "2": {
+                "bits_correct": 269,
+                "bits_total": 288,
+                "exact": 15,
+                "n": 24,
+                "stop_position": 24
+              }
+            }
+          },
+          "val": {
+            "changed_low": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "seen": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 72,
+                "bits_total": 72,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              }
+            },
+            "unseen_high": {
+              "1": {
+                "bits_correct": 36,
+                "bits_total": 36,
+                "exact": 6,
+                "n": 6,
+                "stop_position": 6
+              },
+              "2": {
+                "bits_correct": 70,
+                "bits_total": 72,
+                "exact": 5,
+                "n": 6,
+                "stop_position": 6
+              }
+            }
+          }
+        },
+        "mode": "varied",
+        "seed": 202
+      }
+    ],
+    "reference_commit": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000",
+    "reference_files_unchanged": true
+  },
+  "probe_frozen_commit": "bdf15a1ffeebbc3b439f0ed203d4e4fde959d2d2",
+  "source_codex_head": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "total_inference_dense_MAC": 1237934144,
+  "total_inference_forward_calls": 118667
+}
