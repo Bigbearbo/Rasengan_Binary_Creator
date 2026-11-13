@@ -1,0 +1,341 @@
+{
+  "schema": "WINDOW-GPT-MASTERY-SOURCE-SNAPSHOT-v1",
+  "retrieved_utc": "2026-11-13 22:23:23 UTC",
+  "repository": "Bigbearbo/Rasengan_Binary_Creator",
+  "query_scope": {
+    "branches": "GET /repos/Bigbearbo/Rasengan_Binary_Creator/branches?per_page=100",
+    "branches_returned": 62,
+    "pulls": "GET /repos/Bigbearbo/Rasengan_Binary_Creator/pulls?state=all&sort=updated&direction=desc&per_page=5"
+  },
+  "branches": [
+    {
+      "name": "Bigbearbo-patch-1",
+      "sha": "cdb09976af815ca2c1132f602fda7ac7edb161d6"
+    },
+    {
+      "name": "chatgpt-write-check-20261110",
+      "sha": "712c748f92ad6df4edad616e60147dd2dbfb74a4"
+    },
+    {
+      "name": "codex/ae1-flip2-20261113",
+      "sha": "f9d41eb28f067a222682e02c85c7371297bddde9"
+    },
+    {
+      "name": "codex/ae1-mixed-flip-20261113",
+      "sha": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c"
+    },
+    {
+      "name": "codex/ae1-parameter-curriculum-20261113",
+      "sha": "7213cce112a8411b13dc128c49f9e88acfc9d65f"
+    },
+    {
+      "name": "codex/e3-continuation-20261113",
+      "sha": "915219a4a787ea1452b798104d2158a6d8c82410"
+    },
+    {
+      "name": "codex/e3-learning-probe-20261113",
+      "sha": "60ffaee62ab582f7ead926c064ba7e454e2f3018"
+    },
+    {
+      "name": "codex/early-mix-matched-20261113",
+      "sha": "3fe2a9aa945512c8510222c13b769b2fbb2cc859"
+    },
+    {
+      "name": "codex/early-mix-routing-20261113",
+      "sha": "9ba6209fd0fcc016c694762521a2ce1a7287dc5c"
+    },
+    {
+      "name": "codex/echo-copy-audit-20261113",
+      "sha": "365c5fbf3324d3decb625f9d04ddd1bc91af4d93"
+    },
+    {
+      "name": "codex/f2-stability-20261113",
+      "sha": "995870a458e4c9da279b30b03e39c6097dce9cc7"
+    },
+    {
+      "name": "codex/full-domain-mix-20261113",
+      "sha": "2a073c96869bbd0820ab3295ff3622b52ea881f2"
+    },
+    {
+      "name": "codex/gpu-training-review-20261113",
+      "sha": "f7cfaef575a5204074f7c6529adaf3282aa15897"
+    },
+    {
+      "name": "codex/hamu-collaboration-20261110",
+      "sha": "45e50ada61ca89f7b78070001e05fa7059c99123"
+    },
+    {
+      "name": "codex/hamu-guest-contract-20261110",
+      "sha": "7196afcce8476a1546d01266ce6b4757f8f00e10"
+    },
+    {
+      "name": "codex/hamu-stop-reasons-20261110",
+      "sha": "44d23b934dbea141e436c24e52b60a500d09e162"
+    },
+    {
+      "name": "codex/hamu-vm-library-sync-20261110",
+      "sha": "8d69ca4555d398a3ff2aa2c2289c3a868be61ac4"
+    },
+    {
+      "name": "codex/p031-shared-math-bank-20261112",
+      "sha": "cee9fb7c331f23d9b7495f7240cc45060c19838d"
+    },
+    {
+      "name": "codex/p032-width-curriculum-20261112",
+      "sha": "f003980f719f84b366cda13601091ecf8c256d51"
+    },
+    {
+      "name": "codex/p033-coverage-interleaving-20261112",
+      "sha": "e217bd0fd6cfe654062c3615ee2aa73a36d1ca71"
+    },
+    {
+      "name": "codex/p034-e900-attention-20261112",
+      "sha": "5e6a25c8bb809f8130b60c257280aa72225a5f89"
+    },
+    {
+      "name": "codex/p035-codec-growth-20261113",
+      "sha": "a309f2fc3e23255327fcab35745c27012d15ed4f"
+    },
+    {
+      "name": "codex/sle-neural-publication-20261112",
+      "sha": "6fd4cb7b75efea77f389ed7093a424619c318c1a"
+    },
+    {
+      "name": "codex/ur1-notice-execution-20261113",
+      "sha": "15b7788c1d50269f477b0681d64cbbd08708d65f"
+    },
+    {
+      "name": "codex/write-access-check-2026-11-10",
+      "sha": "964d743013e4bd6fe13be09e8ef1a49b417f0e62"
+    },
+    {
+      "name": "main",
+      "sha": "d032a825c2b419f365bf34a531baee3b53b91750"
+    },
+    {
+      "name": "pro/advanced-echo-design-20261113",
+      "sha": "685c6f92d9e5a335a2f2a7193d9b501918d90b00"
+    },
+    {
+      "name": "pro/advanced-echo-learning-20261113",
+      "sha": "1d8db6b6d265d4a6b059437444178e87edbb9808"
+    },
+    {
+      "name": "pro/echo-progress-review-20261113",
+      "sha": "fd4205cb6c7f903ecd184a9f11fdc530099e6a5f"
+    },
+    {
+      "name": "pro/notice-learning-20261113",
+      "sha": "19ece2819c6c2c1d7ef9fdb2389efaa045b1c35e"
+    },
+    {
+      "name": "pro/research-update-20261112",
+      "sha": "4e2ded91166a4fd9348dccf8fc71ddf01e991645"
+    },
+    {
+      "name": "pro/upgrade-notice-20261113",
+      "sha": "a6f4a0943d63a6cba1763f5de095d40aba893bfa"
+    },
+    {
+      "name": "research/orchestration/pr-dag-preflight-20261113",
+      "sha": "7da2a7ae16ba127a595be287f838e1cf357c8f4a"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-b-only-intervention-20261113",
+      "sha": "1cd9c95d70c47cd28d1fa331828a1c492a784340"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-b-vocab-transfer-20261113",
+      "sha": "23963d32f0ef75c5890cfdd5bc9d320621754f32"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-bit8-conjunction-teach-20261113",
+      "sha": "dc73a3175ec487da7e064dbbcb804031ee5fe6d8"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-bit8-transfer-20261113",
+      "sha": "3f6af7aba3c257a8a9fd3ac7728a3b42bc461037"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-bit-coupling-20261113",
+      "sha": "9897c81b8a915ef303de03ef2d556cdab69adbdd"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-c3-invariance-20261113",
+      "sha": "1598246cde44d9b29a0fdf6645e27ff023dde4b0"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-context-balanced-20261113",
+      "sha": "8c008ec60adc67915ad4955ae5ab239784dcf7da"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-cross-role-prefix-20261113",
+      "sha": "66f4eecd9a56c0de9297070e183727861b51ec9a"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-d-bit-invariance-20261113",
+      "sha": "acb2947e558addfac1912870d61be439df4d9b7f"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-equal-unique-role-20261114",
+      "sha": "3a5e3848cac8c4706aef24f30e41ab2bbf5008e4"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-first-high-role-transfer-20261114",
+      "sha": "61cf62856bbc20bacc779cc7c4b7953ae733cee3"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-first-word-bit8-20261114",
+      "sha": "76636565b73c2d1dc0383ea1bbe9ff3fbb2e1ad5"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-high-r-mixed-20261113",
+      "sha": "80b814f0c4041471cd99395d2a10f6c86cb4f2d3"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-input-target-20261113",
+      "sha": "b18bc81009364318b14e35fada37036e4e412719"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-new-pair-context-20261114",
+      "sha": "5d8c42c98f1b0e0f5edeb073be6232b512e47526"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-numeric-transfer-20261113",
+      "sha": "553817cdad83bb1db2bc6fe2806017628006a1b4"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-prefix-audit-20261113",
+      "sha": "0ba6d37bd97d5d406e8f49438e2119760307f735"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-role-mix-20261113",
+      "sha": "6a2162a687dc05b68034b2d00c287584a463f545"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-role-swap-20261114-r11",
+      "sha": "ca0864ca24492b719329ba2726a6497c0cd88116"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-role-swap-pilot-20261113",
+      "sha": "0b4a39342ee4ef00a0775ece7a2c20a1dfa08b25"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-suffix-exposure-20261113",
+      "sha": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-suffix-identifiability-20261113",
+      "sha": "cb5f6e8654b7f443cde1746c12442c8bd07f31b0"
+    },
+    {
+      "name": "research/scheduled-nn-ae1-weight-tying-20261114",
+      "sha": "e745264ba8da233486b4632e69b093ac2833d7fb"
+    },
+    {
+      "name": "research/scheduled-nn-full-domain-prereg-gate-20261113",
+      "sha": "9e969a9f4b31364eec4716264784158b123c07a4"
+    },
+    {
+      "name": "research/window-gpt/ae1-next-phase-review-20261113",
+      "sha": "1e4812bd48404c8c03f659ed8a8d86dd5aa5852e"
+    },
+    {
+      "name": "research/window-gpt/ae1-progress-decisions-20261114",
+      "sha": "ad643ed635f1fdafd2797a95b3a398046143b86c"
+    },
+    {
+      "name": "research/window-gpt/hamu-handle-publication-20261113",
+      "sha": "dea34fe62601979e055b52e7f11e343b493956d6"
+    },
+    {
+      "name": "research/window-gpt/hamu-publication-composition-20261113",
+      "sha": "56e5d8cf7ff12e0e577927813a6f42b5f3de5fcb"
+    },
+    {
+      "name": "research/window-gpt/hamu-ticket-epoch-20261113",
+      "sha": "ba8aa1cd7e4fd0be0f8ebed7f84d8b95241401fa"
+    }
+  ],
+  "latest_prs": [
+    {
+      "number": 57,
+      "title": "[NN研究] AE1 新詞答案位置互換：0/3門檻，第二詞收益依賴上下文",
+      "head_sha": "ca0864ca24492b719329ba2726a6497c0cd88116",
+      "head": "research/scheduled-nn-ae1-role-swap-20261114-r11",
+      "updated_utc": "2026-11-13T21:57:09Z",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/57"
+    },
+    {
+      "number": 56,
+      "title": "[視窗GPT] E3新組合實測：101全對，核對進度與下一輪穩定性決策",
+      "head_sha": "ad643ed635f1fdafd2797a95b3a398046143b86c",
+      "head": "research/window-gpt/ae1-progress-decisions-20261114",
+      "updated_utc": "2026-11-13T21:14:07Z",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/56"
+    },
+    {
+      "number": 55,
+      "title": "[NN研究] AE1 詞位權重共用：六學生實訓，首詞新值 0/84、次詞有限改善",
+      "head_sha": "e745264ba8da233486b4632e69b093ac2833d7fb",
+      "head": "research/scheduled-nn-ae1-weight-tying-20261114",
+      "updated_utc": "2026-11-13T20:53:04Z",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/55"
+    },
+    {
+      "number": 54,
+      "title": "[NN研究] AE1 等不同題數角色教材：兩seed門檻未全過、未見詞值仍0/96",
+      "head_sha": "3a5e3848cac8c4706aef24f30e41ab2bbf5008e4",
+      "head": "research/scheduled-nn-ae1-equal-unique-role-20261114",
+      "updated_utc": "2026-11-13T19:52:54Z",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/54"
+    },
+    {
+      "number": 53,
+      "title": "[NN研究] AE1 首詞高位教材等預算角色互換：已知詞轉移有限改善、新詞值仍0/64",
+      "head_sha": "61cf62856bbc20bacc779cc7c4b7953ae733cee3",
+      "head": "research/scheduled-nn-ae1-first-high-role-transfer-20261114",
+      "updated_utc": "2026-11-13T18:52:20Z",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/53"
+    }
+  ],
+  "mainline_last_visible_sha": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "latest_visible_external_research_pr": 57,
+  "limits": "Public remote visibility only; excludes local or unpublished Codex results. Source freeze, not a claim of continued freshness.",
+  "literature": [
+    {
+      "title": "Neural GPUs Learn Algorithms",
+      "url": "https://arxiv.org/pdf/1511.08228",
+      "version": "v3 15 March 2016",
+      "sections": [
+        "3.1",
+        "3.3"
+      ],
+      "finding": "Example curriculum threshold >90% fully correct outputs, 20% sampling across lengths; approximately 30k parameters. Threshold is a searched hyperparameter example, not fixed universally."
+    },
+    {
+      "title": "Teacher-Student Curriculum Learning",
+      "url": "https://arxiv.org/pdf/1707.00183",
+      "sections": [
+        "3",
+        "4.1",
+        "Appendix C"
+      ],
+      "official_code_commit": "ec41eea6aa45f68c183b839a3279db4c66857705",
+      "official_code_urls": [
+        "https://github.com/tambetm/TSCL/blob/ec41eea6aa45f68c183b839a3279db4c66857705/addition/addition_rnn_model.py",
+        "https://github.com/tambetm/TSCL/blob/ec41eea6aa45f68c183b839a3279db4c66857705/addition/addition_rnn_teacher.py"
+      ],
+      "finding": "Code uses full_number_accuracy (all positions), training >99% for manual progression and validation >99% for stopping; adaptive sampling need not wait for perfect previous tasks."
+    },
+    {
+      "title": "Automated Curriculum Learning for Neural Networks",
+      "url": "https://proceedings.mlr.press/v70/graves17a/graves17a.pdf",
+      "sections": [
+        "Introduction",
+        "4.2"
+      ],
+      "finding": "Task-dependent threshold problems; learning-progress-driven curricula evaluated on repeat-copy. Not every adaptive signal beats uniform sampling."
+    }
+  ]
+}
