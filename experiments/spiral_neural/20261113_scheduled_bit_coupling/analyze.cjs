@@ -83,5 +83,5 @@ const analyze=function analyze(raw,sha) {
   }));
   return {source_commit:"23963d32f0ef75c5890cfdd5bc9d320621754f32",source_raw_blob:sha,rows:rows.length,contexts:byContext.size,reference_exact:totals,all_stop_correct:true,invalid_second_word_terminal_0:invalidSuffixZero,metrics:result,per_model:modelResult,per_seed:seeds,context_signs:sign24,training_updates:0,forward_calls:0,MAC:0};
 };
-if(require.main===module){const path=process.argv[2]||require('path').join(__dirname,'../20261113_scheduled_b_vocab_transfer/raw_cases.jsonl');const raw=fs.readFileSync(path,'utf8');const result=analyze(raw,'62f6d95bad4abf3dc57a6852eb990be9bcabd96d');process.stdout.write(JSON.stringify(result,null,2)+'\n');}
+if(require.main===module){const path=process.argv[2]||require('path').join(__dirname,'../20261113_scheduled_b_vocab_transfer/raw_cases.jsonl');const raw=fs.readFileSync(path,'utf8');const crypto=require('crypto');const expectedBlob='62f6d95bad4abf3dc57a6852eb990be9bcabd96d';const actualBlob=crypto.createHash('sha1').update('blob '+Buffer.byteLength(raw,'utf8')+'\0','utf8').update(raw,'utf8').digest('hex');if(actualBlob!==expectedBlob)throw Error('git blob SHA mismatch: '+actualBlob);const result=analyze(raw,actualBlob);process.stdout.write(JSON.stringify(result,null,2)+'\n');}
 module.exports=analyze;
