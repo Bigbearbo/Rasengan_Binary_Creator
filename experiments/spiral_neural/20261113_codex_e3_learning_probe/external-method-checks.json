@@ -1,0 +1,28 @@
+{
+  "schema": "e3-external-field-checks-v1",
+  "task_id": "E3-LR-METHOD-001",
+  "expected": {
+    "total_updates": 318600,
+    "total_training_dense_MAC": 6708441600,
+    "E3_fixture_output": "000010001100101110S",
+    "rate_superiority_established_by_feasibility_gate": false
+  },
+  "observed": {
+    "total_updates": 3,
+    "total_training_dense_MAC": 21056,
+    "E3_fixture_output": "000010001100101110S",
+    "rate_superiority_established_by_feasibility_gate": false
+  },
+  "checks": {
+    "total_updates": false,
+    "total_training_dense_MAC": false,
+    "E3_fixture_output": true,
+    "rate_superiority_established_by_feasibility_gate": true
+  },
+  "semantic_status": "candidate_rejected",
+  "reason": "Wrong update and total MAC arithmetic. Encoding and feasibility distinction verified independently; no model research claim imported.",
+  "research_claims_adopted": 0,
+  "NN_calls": 0,
+  "optimizer_calls": 0,
+  "retries": 0
+}

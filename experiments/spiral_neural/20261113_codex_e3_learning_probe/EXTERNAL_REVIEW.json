@@ -1,0 +1,24 @@
+{
+  "round": "E3-LR-PROBE-R1-20261113",
+  "setup_round": "E3-LR-PROBE-20261113",
+  "setup_round_disposition": "Superseded before dispatch because the selected public context was frozen after the initial immutable registry pin; both workers explicitly skipped there, zero calls.",
+  "gemini": {
+    "decision": "skipped_prior_analysis_only_path_unavailable",
+    "reason": "agy executable and existing login retained; unresolved prior tool isolation/unknown provider outcome. No resend or relogin.",
+    "new_calls": 0
+  },
+  "nvidia": {
+    "task_id": "E3-LR-METHOD-001",
+    "new_actual_live_calls": 1,
+    "retries": 0,
+    "tool_wall_seconds": 6.978441,
+    "decision": "candidate_rejected",
+    "reason": "Reported3updates instead of318600 and totalMAC21056 instead of6708441600. E3fixture and feasibility/rate-superiority distinction verified independently, but no candidate research claims imported.",
+    "research_claims_adopted": 0,
+    "provider_tokens_cost": "not provided in this public record"
+  },
+  "public_selected_material_only": true,
+  "private_chat_handoff_credentials_account_data_sent": false,
+  "native_agents": "Implementation, independent local design/code review and mechanical provenance/publication are distinct native agents, not Gemini or NVIDIA calls.",
+  "evidence": "external-candidate.json, external-method-checks.json and validate_external.py; all source selection and semantic acceptance owned by coordinator"
+}

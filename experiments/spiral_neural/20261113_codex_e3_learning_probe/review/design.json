@@ -1,0 +1,120 @@
+{
+  "schema": "e3-learning-probe-independent-design-v1",
+  "status": "recommended_with_declared_limits",
+  "date": "2026-11-13",
+  "reviewer_NN_forward_calls": 0,
+  "reviewer_optimizer_updates": 0,
+  "reviewer_Git_operations": 0,
+  "reviewer_external_model_calls": 0,
+  "full_auditor_written": false,
+  "new_NN_results_read": false,
+  "source_pins": {
+    "completed_HANDOFF": {
+      "path": "outputs/f2-stability/HANDOFF.md",
+      "sha256": "ee9a4ab973ce9feecfbea46d217f9d2f18267ac3b9f0f250a0a9fa50719128dc"
+    },
+    "parent_result_commit": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+    "parent_publication_manifest_sha256": "fe7e9daec1eae0a3ab7ddaef01899dbc60e236b2c12f92b20370db2146dbc56c",
+    "parent_manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+    "parent_inputs_zip_sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+    "payloads_sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee",
+    "old_questions_sha256": "1c226e32bd3ddade9de21fcf1f91d32310d31f79aa60497e2c604b836446c409",
+    "grammar_reference_sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6"
+  },
+  "recommendation": "Use the fixed paired one-epoch eta001/eta003 probe now. It identifies a local learning/retention tradeoff on selected inherited states, not completion of E3 learning or a generally superior rate.",
+  "parent_selection": {
+    "states": "PR43 science/seed{101,202,303}/final-after-TF.npz; preserve full25field p/m/v/birth/t/RNG/events/counters",
+    "start_t": {
+      "101": 1017000,
+      "202": 1228500,
+      "303": 1161900
+    },
+    "end_t_after_one_epoch": {
+      "101": 1070100,
+      "202": 1281600,
+      "303": 1215000
+    },
+    "eta_not_stored_in_NPZ": "Parent step rate comes from eta001 AST. New two classes must differ only in the one eta constant; same complete state is cloned to both arms.",
+    "scope": "Posthoc lineage already conditioned on prior eta001 continuation and known bank fit; these are not fresh independent students."
+  },
+  "grammar_and_data_checks": {
+    "old_questions_unchanged_required": 3600,
+    "new_class": "Echo010/r3 only",
+    "new_question_IDs": "3600+pair_id",
+    "new_count_field": "0110 =3information bits011 plus tail0",
+    "ordinary_word": "5information bits plus tail0, inputIDs0..29",
+    "Q_bits": 39,
+    "E3_answer_bits": 18,
+    "E3_targets_including_S": 19,
+    "E3_correct_STOP_prefix_length": 57,
+    "maximum_actual_prefix_before_cap32_forward": 70,
+    "fixed_context_L": 80,
+    "hidden_H": 64,
+    "parameters": 10499,
+    "no_window_growth_needed": true,
+    "old_encoder_guard_requires_explicit_extension": "Pinned F2 encode currently allows only E1/E2/F1/F2; add only Echo010/r3 in the new runner/profile and keep old source/3600rawQA exact.",
+    "E3_unique_Q_checked": 900,
+    "old_new_Q_overlap": 0,
+    "all_teacher_prefixes_unique": 53100,
+    "all_first_pairs_covered": 900,
+    "bank_is_all30power4": false,
+    "third_word_all30values_present": true,
+    "third_word_question_count_range": [
+      19,
+      41
+    ],
+    "third_word_balance": "Third words come from the existing frozen suffixbank; counts19..41 are not uniform. No resampling/rebalancing after seeing scores."
+  },
+  "budget": {
+    "classes_questions_each": 900,
+    "questions_per_arm": 4500,
+    "targets_by_class": {
+      "E1": 6300,
+      "E2": 11700,
+      "F1": 6300,
+      "F2": 11700,
+      "E3": 17100
+    },
+    "targets_per_arm": 53100,
+    "arms": 2,
+    "seeds": 3,
+    "new_trajectories": 6,
+    "new_optimizer_updates": 318600,
+    "training_MAC_per_update": 21056,
+    "training_MAC_per_arm": 1118073600,
+    "training_MAC_all_arms": 6708441600,
+    "new_final_TF_per_arm": 53100,
+    "new_final_TF_all_arms": 318600,
+    "new_final_TF_MAC": 3323635200,
+    "shared_E3_cold_TF_per_seed": 17100,
+    "shared_E3_cold_TF_all_seeds": 51300,
+    "shared_E3_cold_TF_MAC": 535161600,
+    "shared_old_integrity_free_calls_if_all_pass": 108000,
+    "shared_E3_cold_free_and_endpoint_free_calls": "Count actual emitted prefixes throughS/cap; do not assume every baseline output has correct19token length.",
+    "class_weight_scope": "Equal question count is not equal target weight:6300/11700/6300/11700/17100. Both rate arms use exactly the same target stream."
+  },
+  "adopted_minimal_protocol": [
+    "ALL3old3600complete generation integrity checks pass before ANY optimizer; failure is integrationabort0updates, not cohort learning failure.",
+    "Per seed shared oldfree+E3coldfree+E3coldTF are performed once before cloning the common post-baseline fullstate to both arms. Probe changes inference counters only. Physical sharedbaseline cost is charged3times, not6 or by summing copied global counters.",
+    "Freeze one53100(QID,answerposition) permutation per seed with rng(seed+666000), canonical pair->E1,E2,F1,F2,E3->position; same order in both arms. Every target gets its own Adam update; no gradient averaging.",
+    "Exactly one epoch per arm, all6 retained regardless of scores; no retries, extra epochs/rates/seeds, checkpoint selection or outcome-based budget.",
+    "Each endpoint uses all4500own-output greedy generations with cap32/contextguard, then all53100teacher-forced positions. No forcedSTOP or expected-answer-length cutoff. Prefer finalTF after all6primary trajectories.",
+    "Low-rate primary conjunction is all3 old_lost==0 and E3whole>that seed coldE3whole. Apply and report the same feasibility conjunction for eta003 as secondary readout, alongside paired oldlost and E3gain; no dominance requirement or rate-superiority conclusion.",
+    "Preserve every class/word1/2/3 information5/tail0/complete6, correct STOP timing, first-error/termination and QID churn/paired correct sets. No assumption errors occur only in word3."
+  ],
+  "endpoint_critique": {
+    "one_epoch": "Reasonable fixed learning probe with matched budget/order. Failure to master E3 after one epoch does not establish inability to learn; any strict improvement is a weak positive signal, not mastery.",
+    "low_feasibility_gate": "Appropriate for the stated low-rate can-learn-without-old-loss question if declared prospectively. It does not test low rate superiority and can pass with only1/900additional E3 question correct. Always show absolute counts, changes, and eta003 performance.",
+    "ceiling_case": "If a seed coldE3whole is already900, strict gain is mathematically impossible. Keep fixed arms/budget and strict flag, label baseline ceiling/learning gain not identifiable, do not call this learning failure or replace seed. Never assert coldE3==0.",
+    "TF_vs_free": "TF supplies correct earlier answer tokens, so strong TFword3 accuracy can coexist with autonomous earlySTOP/wrong earlier words. Keep cold/endpoint TF separate from own-output whole/word metrics; probes must not update optimizer/state.",
+    "algorithm_scope": "Finite previously exposed900payload bank with a new parameter/task condition, not all30^4inputs, suffix generalization, algorithm identification or unseen vocabulary."
+  },
+  "alternative_eta001_three_epochs": {
+    "optimizer_updates": 477900,
+    "training_MAC": 10062662400,
+    "relative_update_budget_to_paired_one_epoch": 1.5,
+    "assessment": "A useful future amount-of-training question if separately designed, but changes repetitions/age/exposure and lacks a matched high-rate control at the same budget. Nominal eta-times-steps matching is not Adam trajectory equivalence. Do not switch to it in response to this probe result."
+  },
+  "next_required_gate": "Before any new NN: frozen protocol, exact parent rawbytes/public member lineage, oldQAidentity and all orders, singleASTeta difference, meaningful small engineering and zero-NN portable/source review, then coordinator Git prereg. No full auditor or new forward work at this design stage.",
+  "material_blocking_design_findings": []
+}

@@ -1,0 +1,27 @@
+{
+  "elapsed_ms": 0,
+  "evidence_refs": [
+    "context/e3_learning_probe.json"
+  ],
+  "execution_claim": "not_run",
+  "findings": [
+    {
+      "claim": "{\"total_updates\":3,\"total_training_dense_MAC\":21056,\"E3_fixture_output\":\"000010001100101110S\",\"rate_superiority_established_by_feasibility_gate\":false,\"limitations\":[\"One epoch acquisition probe\",\"Exposed bank 900 states / 3 models\",\"No outcome or generalization data\",\"Explicitly does not establish rate superiority\",\"Ties or no-whole-gain cases fail\"]}",
+      "evidence_refs": [
+        "context/e3_learning_probe.json"
+      ]
+    }
+  ],
+  "model_id": "nvidia/nemotron-3.5-lightning:free",
+  "recommended_next_step": "Run multi-epoch training with held-out evaluation to assess E3 acquisition beyond the one-epoch feasibility gate",
+  "status": "candidate",
+  "summary": "The feasibility gate examines one epoch across 900 bank-selected states and 3 models, tracking MAC counts and E3 output strings. While total training dense MAC is 21056 and total updates is 3 (one per arm), the design explicitly states the gate does NOT establish rate superiority, as ties or no-whole-gain cases fail and limitations include single-epoch exposure and lack of generalization data. The fixture output for E3 is 000010001100101110S. Rate superiority would require comparing loss reduction per MAC across multiple epochs or arms with statistical rigor, which is outside the scope of this probe.",
+  "task_id": "E3-LR-METHOD-001",
+  "unknowns": [
+    "longterm_eta",
+    "generalization_beyond_one_epoch",
+    "statistical_significance_of_rate_comparison"
+  ],
+  "usage": null,
+  "worker": "nvidia"
+}

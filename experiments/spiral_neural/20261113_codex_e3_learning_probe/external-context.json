@@ -1,0 +1,45 @@
+{
+  "classification": "public_or_synthetic",
+  "sources": [
+    "PR43 public result995870a458e4c9da279b30b03e39c6097dce9cc7",
+    "synthetic prospective E3 grammar"
+  ],
+  "grammar": "Q=01+op3bits+r3bits+0+4 complete words+END111100; each word=5informationbits+0; Q length39; Echoop010; E3r011. E3answer first3 complete words then external S, length19actions; no oracle truncation in generation.",
+  "fixtures": [
+    {
+      "payload": [
+        1,
+        6,
+        23,
+        11
+      ],
+      "Q": "010100110000010001100101110010110111100",
+      "expected_E3": "000010001100101110S"
+    }
+  ],
+  "design": {
+    "parent": "Three inherited PR43 fullstates, all old4classes900 each",
+    "model": "L80H64 10499parameters originalNumPyCPU, preserve full Adam m/v/birth/t/RNG/events/counters",
+    "new_course": "Same900payloads, oldE1/E2/F1/F2+E3 each900; allteacherprefixes supervised CE, shuffled target-wise; paired arm same fullstate+samepermutation",
+    "targets_by_class": {
+      "E1": 6300,
+      "E2": 11700,
+      "F1": 6300,
+      "F2": 11700,
+      "E3": 17100
+    },
+    "targets_per_arm": 53100,
+    "arms": [
+      0.001,
+      0.003
+    ],
+    "seeds": 3,
+    "epochs_per_arm": 1,
+    "train_MAC_per_target": 21056,
+    "primary": "Feasibility only: .001 oldlost0 and E3whole strictly above sameparentcold, ALL3; ties/no-whole-gain fail. Does NOT establish rate superiority. Separately compare both arms by seed oldlost and E3whole.",
+    "limits": "Oneepoch acquisition probe, exposed900bank/selectedstates/3models, not proof of E3 mastery, unseen generalization or optimal longterm eta. Never extend after outputs.",
+    "baseline": "All3 old3600 rawgeneration exact gates before any optimizer; E3coldfree900+17100teacher targets perseed, formal cost separate; no new NN duringprepare",
+    "endpoints": "6arms ownoutput4500free each+53100finalTF each, all6train beforefinalTF.0optimizerreplay. independent rawNumPy allbaseline/endpoints/TF."
+  },
+  "request": "Check whether feasibility gate alone can establish lower-rate superiority; identify interpretation traps. Verify counts and fixture only from supplied material; no execution/outcome prediction."
+}

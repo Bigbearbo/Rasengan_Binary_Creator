@@ -1,0 +1,1555 @@
+{
+  "fresh_live_parent_manifest_check": {
+    "Git_blob": "f64b8dca77ce801f9f23565e36c7a73a81b49fd5",
+    "byte_match": true,
+    "bytes": 70410,
+    "commit": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+    "method": "Fresh Git connector actual base64 bytes versus pinned local public artifact",
+    "path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/publication-manifest.json",
+    "record_sha256": "aa7a5d546acd77f2dc419de68a445dcdb97f32ca6ad7134ce8433b6eadc4d6fa",
+    "sha256": "fe7e9daec1eae0a3ab7ddaef01899dbc60e236b2c12f92b20370db2146dbc56c",
+    "source": "work/e3-learning-probe-20261113/PR43-live-readback.json"
+  },
+  "full_state_digest_algorithm": "Exact pinned vendor/run_f2.py state_sha: sorted fields, compact UTF8 JSON[name,dtype.str,shape] then C-order array bytes; no Model code executed",
+  "old_F2_manifest_source": {
+    "source_archive": {
+      "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+      "bytes": 1272100,
+      "file": "inputs.zip",
+      "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+      "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+      "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+      "verified_against_root_public57_readback": true
+    },
+    "source_member": {
+      "CRC32": "852ec9f2",
+      "Git_blob": "dc4420e65775458e8b1695ed4c05dfac028b4421",
+      "bytes": 13975,
+      "compressed_bytes": 5595,
+      "path": "provenance/F2-manifest.json",
+      "sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95"
+    }
+  },
+  "old_payload_bank": {
+    "distinct_first_two_word_pairs": 900,
+    "ordinary_ID_range": [
+      0,
+      29
+    ],
+    "raw_byte_identity_to_PR33_F2_manifest": true,
+    "rows": 900,
+    "source_archive": {
+      "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+      "bytes": 1272100,
+      "file": "inputs.zip",
+      "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+      "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+      "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+      "verified_against_root_public57_readback": true
+    },
+    "source_member": {
+      "CRC32": "28e38b5a",
+      "Git_blob": "129a9e63b006bcea003e1e321e4379b84d049673",
+      "bytes": 11430,
+      "compressed_bytes": 3597,
+      "path": "payloads.json",
+      "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+    },
+    "words_per_payload": 4
+  },
+  "old_questions": {
+    "classes": {
+      "E1": 900,
+      "E2": 900,
+      "F1": 900,
+      "F2": 900
+    },
+    "raw_byte_identity_to_PR33_F2_manifest": true,
+    "rows": 3600,
+    "source_archive": {
+      "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+      "bytes": 1272100,
+      "file": "inputs.zip",
+      "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+      "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+      "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+      "verified_against_root_public57_readback": true
+    },
+    "source_member": {
+      "CRC32": "88d12628",
+      "Git_blob": "682b1a8ff6a941a92754ebe3e4c05428ba29652d",
+      "bytes": 537364,
+      "compressed_bytes": 59887,
+      "path": "questions.json",
+      "sha256": "1c226e32bd3ddade9de21fcf1f91d32310d31f79aa60497e2c604b836446c409"
+    }
+  },
+  "parent_PR": 43,
+  "parent_publication_manifest": {
+    "Git_blob": "f64b8dca77ce801f9f23565e36c7a73a81b49fd5",
+    "bytes": 70410,
+    "local_raw_path": "work/f2-stability-20261113/publication/final/public/publication-manifest.json",
+    "sha256": "fe7e9daec1eae0a3ab7ddaef01899dbc60e236b2c12f92b20370db2146dbc56c"
+  },
+  "parent_result_commit": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+  "parents": {
+    "101": {
+      "actual_model_forward_or_optimizer_calls_for_verification": 0,
+      "all_numeric_arrays_finite": true,
+      "array_inventory": {
+        "H": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "a06f129fc52abf6085679d7cd71dc41ec7580c7f5f73efef6d02dde22bb00994",
+          "shape": []
+        },
+        "L": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "3478af7d895d85fb71e1c84813ac8dce11a4fcd1be230cf3cba471ea702c8bd3",
+          "shape": []
+        },
+        "birth0": {
+          "bytes": 81920,
+          "dtype": "<i8",
+          "sha256": "fa569e2360c540e6280e34a4627516770f1a5f34d81d35689334a99cc1013357",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "birth1": {
+          "bytes": 512,
+          "dtype": "<i8",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "shape": [
+            64
+          ]
+        },
+        "birth2": {
+          "bytes": 1536,
+          "dtype": "<i8",
+          "sha256": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "birth3": {
+          "bytes": 24,
+          "dtype": "<i8",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "shape": [
+            3
+          ]
+        },
+        "growth_rng": {
+          "bytes": 668,
+          "dtype": "<U167",
+          "sha256": "1b147b6cf55d6213017f29db4f6e59d42bfd11ca2726073b2287aa8975c5e9f3",
+          "shape": []
+        },
+        "m0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "ff529d2f4c15110aa4b4235772715c8221c369ac6277674a7dfb660ce0eb94c5",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "m1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "7ea46538267a4602e828c48496baaa3117313dbe3a622f1fda172a30a5d87678",
+          "shape": [
+            64
+          ]
+        },
+        "m2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "04923714b0a23a70c97d764c5994c474dec710cb7af465d35e09847804213295",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "m3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "dde427059ce3a24cda900697379e7d28cfbef865aad7b99d97353ddbf27d3aab",
+          "shape": [
+            3
+          ]
+        },
+        "meta_events": {
+          "bytes": 8,
+          "dtype": "<U2",
+          "sha256": "748047686ffecb42c953ce02b2f4cc638d39923c9f708f69a530ddc81d019a63",
+          "shape": []
+        },
+        "meta_inference_calls": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "b260f91e254224cdb9052f516041ee29f0bc1c58f237402f4827b4e7244757ac",
+          "shape": []
+        },
+        "meta_inference_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "16843364c3c8311e5fc33db095fafd559363ba5b9173706fd37391d730c5a909",
+          "shape": []
+        },
+        "meta_seed": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "8d67520993de119090ca5ef1d7a6feb35c8b348503426049f21af5875c7a5d4b",
+          "shape": []
+        },
+        "meta_train_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "598245cbb440c1165c073b722b29d9bef60f65f5dee30d77d37c112af9571118",
+          "shape": []
+        },
+        "p0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "0af6996cbb737f83d0826f86a7cd1e91516dce7740fab298754065d9d641193f",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "p1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "8124dca09e6af78a626d36511072d7038c55238afba6aca17cee665a323c5362",
+          "shape": [
+            64
+          ]
+        },
+        "p2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "93856117b79e4764115ee0cff84850b322636bfd0143605e7cdc730aa66ada7a",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "p3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "41ab8d85886fa4da3a0b37c13b2b74a97aabd5cf2f66efc229874ef1776a181d",
+          "shape": [
+            3
+          ]
+        },
+        "t": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "17633d4e1b324b67e2c831d1b4e1b18303648271eecd58b94ca6af58b00ff5fd",
+          "shape": []
+        },
+        "v0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "81e4d9cb74741fe9811a2dfed2990cb7cc1f4256e0361d69ff77c3bdc155a281",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "v1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "15570a6e2b1ef5d76b10bec4e0ee7928059565a2a52425aac30929e315c0f793",
+          "shape": [
+            64
+          ]
+        },
+        "v2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "0b1a8f16193a0af0daa90433583a071332ff97277049aee5035e2943b72fba7b",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "v3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "6b5b9033e9c4ea36e317d82f5b3d3279efb931c358ea3e16ba7df2f81219d8d0",
+          "shape": [
+            3
+          ]
+        }
+      },
+      "counters": {
+        "inference_MAC": 12000430336,
+        "inference_calls": 1150348,
+        "t": 1017000,
+        "train_MAC": 21413952000
+      },
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "6c378cb267934a402de22cefbe07f9110071721ceb5954327758c6ced4f636f4",
+      "model": {
+        "H": 64,
+        "L": 80,
+        "parameters": 10499
+      },
+      "old_generation": {
+        "raw_sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94",
+        "recorded_scores": {
+          "E1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "E2": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "rows": 3600,
+        "source_archive": {
+          "Git_blob": "46c473eb7f2563d4fadb24ada6661df0768f9679",
+          "bytes": 198883,
+          "file": "science-seed101-003.zip",
+          "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed101-003.zip",
+          "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed101-003.zip",
+          "sha256": "14e513f669fa714870a62c16f5276c2e730174e7b4577f12c6089ac360396bf4",
+          "verified_against_root_public57_readback": true
+        },
+        "source_member": {
+          "CRC32": "41a161d8",
+          "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+          "bytes": 736831,
+          "compressed_bytes": 25544,
+          "path": "science/seed101/new-generation.json",
+          "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+        }
+      },
+      "p_m_v_birth_array_bytes": 209980,
+      "raw_sha256": "a4f02371176c9f9ed4b478b5c7fa33f66f809a67e212acb7c60dd354b64c9d6f",
+      "source_archive": {
+        "Git_blob": "f6aa04d1aba82cb1838e57dab243bdb6b1af6ebc",
+        "bytes": 236484,
+        "file": "science-seed101-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed101-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed101-001.zip",
+        "sha256": "b863d7aed8926dad8a588445f804a3cfd5cf0c8de2bf109bfa1524da5fa8e697",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "0b9e6188",
+        "Git_blob": "4a6f24eed61ab2985bcc86cc57075512f7230cc2",
+        "bytes": 216804,
+        "compressed_bytes": 69992,
+        "path": "science/seed101/final-after-TF.npz",
+        "sha256": "a4f02371176c9f9ed4b478b5c7fa33f66f809a67e212acb7c60dd354b64c9d6f"
+      },
+      "state_metadata": {
+        "events": [],
+        "growth_rng": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 152581787746890618307538508690003029905,
+            "state": 304575109094401116031646016403423440898
+          },
+          "uinteger": 0
+        },
+        "seed": 101
+      }
+    },
+    "202": {
+      "actual_model_forward_or_optimizer_calls_for_verification": 0,
+      "all_numeric_arrays_finite": true,
+      "array_inventory": {
+        "H": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "a06f129fc52abf6085679d7cd71dc41ec7580c7f5f73efef6d02dde22bb00994",
+          "shape": []
+        },
+        "L": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "3478af7d895d85fb71e1c84813ac8dce11a4fcd1be230cf3cba471ea702c8bd3",
+          "shape": []
+        },
+        "birth0": {
+          "bytes": 81920,
+          "dtype": "<i8",
+          "sha256": "fa569e2360c540e6280e34a4627516770f1a5f34d81d35689334a99cc1013357",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "birth1": {
+          "bytes": 512,
+          "dtype": "<i8",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "shape": [
+            64
+          ]
+        },
+        "birth2": {
+          "bytes": 1536,
+          "dtype": "<i8",
+          "sha256": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "birth3": {
+          "bytes": 24,
+          "dtype": "<i8",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "shape": [
+            3
+          ]
+        },
+        "growth_rng": {
+          "bytes": 668,
+          "dtype": "<U167",
+          "sha256": "c0b5334a21fe9878effa55eac9a946e6724297f6e1b627898fd58c5a194294e6",
+          "shape": []
+        },
+        "m0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "a40e8b8bd3f66bcf9bdfe369ceebc5d1a0ee08068e92c76300c01d74fed69e87",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "m1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "090e241f0b0cd65ec4686a4662d23dbe13f57b73432b0c516aa12ec91ba54dfd",
+          "shape": [
+            64
+          ]
+        },
+        "m2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "4704a607d189adbea2d8cb2e2b3001c47ba7707a2d30f04ce6607aab8f74bb5d",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "m3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "5b9f6ab18535ffc65524c45058f1e9e1293513df066f8ec89913f2af6f439981",
+          "shape": [
+            3
+          ]
+        },
+        "meta_events": {
+          "bytes": 8,
+          "dtype": "<U2",
+          "sha256": "748047686ffecb42c953ce02b2f4cc638d39923c9f708f69a530ddc81d019a63",
+          "shape": []
+        },
+        "meta_inference_calls": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "97321dfc5207b0a91b94894a77dbbe74d3c1e183601d4c9a82d2494de7e598f3",
+          "shape": []
+        },
+        "meta_inference_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "27374a13f8ead4c0a41136f9925f19c908004c047f585839389ad97922d88fe0",
+          "shape": []
+        },
+        "meta_seed": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "7f962dc8eb9ff177eb0a6f02349ec2883eaa1eac4ef3c55c346d2e3a508b0c4d",
+          "shape": []
+        },
+        "meta_train_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "1a92b792867ed2168d3a3b92a4b99f11309e86fad641fc522860fe0eca8619ac",
+          "shape": []
+        },
+        "p0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "b042cc2cc40ba9294832ff39e03afba69ee6e6ce8920f2607aa50dbbb9d1cbb9",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "p1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "e2c5c774a4df3d45440bdb0bd69ae8e40b372adc9b59f66f6a7c8ad48796c7d4",
+          "shape": [
+            64
+          ]
+        },
+        "p2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "e0282a2153d4bd558c81888247bcb86a0bbbb9d719f1631372799b5c7867c8c9",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "p3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "8304ddb75c739dd0a4b1afbbe4362f206275d968660db4e9f43b5314626e3c84",
+          "shape": [
+            3
+          ]
+        },
+        "t": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "6e3708982322c65fb7cf3cda03094c9c155bcfdb5f657e99fce690b7b95c6eff",
+          "shape": []
+        },
+        "v0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "c8ef0684d092eee2e6501c54535f2e6b3099768460729189b9adc46936834dd2",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "v1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "ac63d24d07119cf31fb944471d08b49fae0cf128c0a3fdd0ae96aaf0d63001ed",
+          "shape": [
+            64
+          ]
+        },
+        "v2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "78a798ed3a6fc9d70bca32b93632d7731b3801a015bc36a42e8c3cc93f8761eb",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "v3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "50dea218e002d2aa9fdba681c81edb0544b5d1f1a2ce5586c5c07b7b4baf534e",
+          "shape": [
+            3
+          ]
+        }
+      },
+      "counters": {
+        "inference_MAC": 14210637312,
+        "inference_calls": 1362216,
+        "t": 1228500,
+        "train_MAC": 25867296000
+      },
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "c142987760397e891ab8e4f2b3ce66304b0bb080577de85aca24357eca67509d",
+      "model": {
+        "H": 64,
+        "L": 80,
+        "parameters": 10499
+      },
+      "old_generation": {
+        "raw_sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94",
+        "recorded_scores": {
+          "E1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "E2": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "rows": 3600,
+        "source_archive": {
+          "Git_blob": "ec95eb50e1a60251c331e29083e3a187cb3b653a",
+          "bytes": 128807,
+          "file": "science-seed202-003.zip",
+          "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed202-003.zip",
+          "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed202-003.zip",
+          "sha256": "0d2dae433a040e5305912409ae0332e27f99c356250b0fb712f88a7c5447c404",
+          "verified_against_root_public57_readback": true
+        },
+        "source_member": {
+          "CRC32": "41a161d8",
+          "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+          "bytes": 736831,
+          "compressed_bytes": 25544,
+          "path": "science/seed202/new-generation.json",
+          "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+        }
+      },
+      "p_m_v_birth_array_bytes": 209980,
+      "raw_sha256": "520100fedbce5c7edbd23dc2b3961eb510c459ac940afce6946aed4ec73062ac",
+      "source_archive": {
+        "Git_blob": "d24df593c6413925e62b051a58e25a9dea9f211f",
+        "bytes": 234538,
+        "file": "science-seed202-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed202-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed202-001.zip",
+        "sha256": "8b548af569379ee86b95828c6e04533a15d7fbcc1df25c9d1d7a0ba3f58de6ac",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "dffe3b26",
+        "Git_blob": "9acdfdb5ab56c42142b5d93a232a106532b07ebd",
+        "bytes": 216804,
+        "compressed_bytes": 69758,
+        "path": "science/seed202/final-after-TF.npz",
+        "sha256": "520100fedbce5c7edbd23dc2b3961eb510c459ac940afce6946aed4ec73062ac"
+      },
+      "state_metadata": {
+        "events": [],
+        "growth_rng": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 173652145176037672029898682610611352381,
+            "state": 169000914593237362997394287089145990976
+          },
+          "uinteger": 0
+        },
+        "seed": 202
+      }
+    },
+    "303": {
+      "actual_model_forward_or_optimizer_calls_for_verification": 0,
+      "all_numeric_arrays_finite": true,
+      "array_inventory": {
+        "H": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "a06f129fc52abf6085679d7cd71dc41ec7580c7f5f73efef6d02dde22bb00994",
+          "shape": []
+        },
+        "L": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "3478af7d895d85fb71e1c84813ac8dce11a4fcd1be230cf3cba471ea702c8bd3",
+          "shape": []
+        },
+        "birth0": {
+          "bytes": 81920,
+          "dtype": "<i8",
+          "sha256": "fa569e2360c540e6280e34a4627516770f1a5f34d81d35689334a99cc1013357",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "birth1": {
+          "bytes": 512,
+          "dtype": "<i8",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "shape": [
+            64
+          ]
+        },
+        "birth2": {
+          "bytes": 1536,
+          "dtype": "<i8",
+          "sha256": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "birth3": {
+          "bytes": 24,
+          "dtype": "<i8",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "shape": [
+            3
+          ]
+        },
+        "growth_rng": {
+          "bytes": 664,
+          "dtype": "<U166",
+          "sha256": "5a421943c125c4f61a22b75caad2fe68adbdd7f5e0ad29ee7540638275489aad",
+          "shape": []
+        },
+        "m0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "0dd40a2ce4341deff1bcbb46a51a09c1659d9d7a2944ab89dd48d45abc99330c",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "m1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "82231ab317ffa82de4812f50b483b7d4962608bd5254846fe6c2fd01c42f4209",
+          "shape": [
+            64
+          ]
+        },
+        "m2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "a626af62fe811afcae56c817957c810f40f444200309746e9cd4e606b09322af",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "m3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "80276c83b9f1a1dddfa3362d21bfa8749495961006618d6ae7ba6f9755b57ea7",
+          "shape": [
+            3
+          ]
+        },
+        "meta_events": {
+          "bytes": 8,
+          "dtype": "<U2",
+          "sha256": "748047686ffecb42c953ce02b2f4cc638d39923c9f708f69a530ddc81d019a63",
+          "shape": []
+        },
+        "meta_inference_calls": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "e3f09347e103bb1d94b649bba687a2690fe27f79caf7fc4eab038e1d5cc97412",
+          "shape": []
+        },
+        "meta_inference_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "8fcf965a3bdf274ce3ec726992a118ca50a982f0a7677860cc476be10e65c615",
+          "shape": []
+        },
+        "meta_seed": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "bf6c87544775f9e236b5c069fb70808ee89609b7d88f13a7e06581cf62b7e40a",
+          "shape": []
+        },
+        "meta_train_macs": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "02265dc554f3d1402760d1e2826e53348149f834d8165db57078a4665f2f8028",
+          "shape": []
+        },
+        "p0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "9bda4e49b6a2eb150dd364974d88d6eac9f0dea53a60246054b1c59afb20617a",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "p1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "b52d513134448a115f22fcfe605fe074d97c214e4b6978b22d9a7f41fc3eaed8",
+          "shape": [
+            64
+          ]
+        },
+        "p2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "0eac0a8f45d0be66276f60ce95a78aca6fa1139b8b6fb01410fe70899471c387",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "p3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "53e48cb58ee83cf56c7f4d9e1d0d29d42e71b7cb72b6ed31b21b53869706077d",
+          "shape": [
+            3
+          ]
+        },
+        "t": {
+          "bytes": 8,
+          "dtype": "<i8",
+          "sha256": "5f7bec8632869ac718381f01b41fe3cb8a77fd06c9e43353073cbb8c637a7900",
+          "shape": []
+        },
+        "v0": {
+          "bytes": 40960,
+          "dtype": "<f4",
+          "sha256": "e039a1b1bfe983fbdffaccc02b0c93706649af899c6f2c5143011047997156cc",
+          "shape": [
+            160,
+            64
+          ]
+        },
+        "v1": {
+          "bytes": 256,
+          "dtype": "<f4",
+          "sha256": "c4b760794425ce62ddece08feac4e89c9f683a293a256ac791d5d357481c676f",
+          "shape": [
+            64
+          ]
+        },
+        "v2": {
+          "bytes": 768,
+          "dtype": "<f4",
+          "sha256": "6839533a4c1e7258e45d42c0711227ef4652bacf706e7b4987e5b6bc719f1ca6",
+          "shape": [
+            64,
+            3
+          ]
+        },
+        "v3": {
+          "bytes": 12,
+          "dtype": "<f4",
+          "sha256": "c1d502222d33872fbfc1a0ddbe55394e03ebb26d2b0cadf08c1511effbe0daaf",
+          "shape": [
+            3
+          ]
+        }
+      },
+      "counters": {
+        "inference_MAC": 13525202752,
+        "inference_calls": 1296511,
+        "t": 1161900,
+        "train_MAC": 24464966400
+      },
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "25fab66c10344db811982fd16848fe09335aa420467404d06cfbb80c0ccdf9f8",
+      "model": {
+        "H": 64,
+        "L": 80,
+        "parameters": 10499
+      },
+      "old_generation": {
+        "raw_sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94",
+        "recorded_scores": {
+          "E1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "E2": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "F2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "rows": 3600,
+        "source_archive": {
+          "Git_blob": "fede4f8dc65fdcfe4728f779d1902ae35b187be5",
+          "bytes": 200859,
+          "file": "science-seed303-003.zip",
+          "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed303-003.zip",
+          "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed303-003.zip",
+          "sha256": "0a225d4d47744ce43032b2e5508e4665b59beb21f319bfdd93f25b87b2f09a31",
+          "verified_against_root_public57_readback": true
+        },
+        "source_member": {
+          "CRC32": "41a161d8",
+          "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+          "bytes": 736831,
+          "compressed_bytes": 25544,
+          "path": "science/seed303/new-generation.json",
+          "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+        }
+      },
+      "p_m_v_birth_array_bytes": 209980,
+      "raw_sha256": "f74c86b0519e37c7a359f33e302d795ede239690c104b88cf811e08dd92f9f18",
+      "source_archive": {
+        "Git_blob": "8ef04d2a5378b8238e366fbc414e77315259c4f3",
+        "bytes": 238806,
+        "file": "science-seed303-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed303-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed303-001.zip",
+        "sha256": "5029285efbd3ac65eb18ace983b5203d4398de0ef5f2333010e1f14bd8036113",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "0b886935",
+        "Git_blob": "263e45bda1fd638188d0041fda4419e484b34d69",
+        "bytes": 216800,
+        "compressed_bytes": 70636,
+        "path": "science/seed303/final-after-TF.npz",
+        "sha256": "f74c86b0519e37c7a359f33e302d795ede239690c104b88cf811e08dd92f9f18"
+      },
+      "state_metadata": {
+        "events": [],
+        "growth_rng": {
+          "bit_generator": "PCG64",
+          "has_uint32": 0,
+          "state": {
+            "inc": 158527801128050441683137808047925653559,
+            "state": 96181585481303915432553124939124324345
+          },
+          "uinteger": 0
+        },
+        "seed": 303
+      }
+    }
+  },
+  "portable_compact_input_recipe": [
+    {
+      "source_archive": {
+        "Git_blob": "f6aa04d1aba82cb1838e57dab243bdb6b1af6ebc",
+        "bytes": 236484,
+        "file": "science-seed101-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed101-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed101-001.zip",
+        "sha256": "b863d7aed8926dad8a588445f804a3cfd5cf0c8de2bf109bfa1524da5fa8e697",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "0b9e6188",
+        "Git_blob": "4a6f24eed61ab2985bcc86cc57075512f7230cc2",
+        "bytes": 216804,
+        "compressed_bytes": 69992,
+        "path": "science/seed101/final-after-TF.npz",
+        "sha256": "a4f02371176c9f9ed4b478b5c7fa33f66f809a67e212acb7c60dd354b64c9d6f"
+      },
+      "suggested_member": "initial/seed101.npz"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "46c473eb7f2563d4fadb24ada6661df0768f9679",
+        "bytes": 198883,
+        "file": "science-seed101-003.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed101-003.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed101-003.zip",
+        "sha256": "14e513f669fa714870a62c16f5276c2e730174e7b4577f12c6089ac360396bf4",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "41a161d8",
+        "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+        "bytes": 736831,
+        "compressed_bytes": 25544,
+        "path": "science/seed101/new-generation.json",
+        "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+      },
+      "suggested_member": "old-generation/seed101.json"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "d24df593c6413925e62b051a58e25a9dea9f211f",
+        "bytes": 234538,
+        "file": "science-seed202-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed202-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed202-001.zip",
+        "sha256": "8b548af569379ee86b95828c6e04533a15d7fbcc1df25c9d1d7a0ba3f58de6ac",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "dffe3b26",
+        "Git_blob": "9acdfdb5ab56c42142b5d93a232a106532b07ebd",
+        "bytes": 216804,
+        "compressed_bytes": 69758,
+        "path": "science/seed202/final-after-TF.npz",
+        "sha256": "520100fedbce5c7edbd23dc2b3961eb510c459ac940afce6946aed4ec73062ac"
+      },
+      "suggested_member": "initial/seed202.npz"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "ec95eb50e1a60251c331e29083e3a187cb3b653a",
+        "bytes": 128807,
+        "file": "science-seed202-003.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed202-003.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed202-003.zip",
+        "sha256": "0d2dae433a040e5305912409ae0332e27f99c356250b0fb712f88a7c5447c404",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "41a161d8",
+        "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+        "bytes": 736831,
+        "compressed_bytes": 25544,
+        "path": "science/seed202/new-generation.json",
+        "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+      },
+      "suggested_member": "old-generation/seed202.json"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "8ef04d2a5378b8238e366fbc414e77315259c4f3",
+        "bytes": 238806,
+        "file": "science-seed303-001.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed303-001.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed303-001.zip",
+        "sha256": "5029285efbd3ac65eb18ace983b5203d4398de0ef5f2333010e1f14bd8036113",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "0b886935",
+        "Git_blob": "263e45bda1fd638188d0041fda4419e484b34d69",
+        "bytes": 216800,
+        "compressed_bytes": 70636,
+        "path": "science/seed303/final-after-TF.npz",
+        "sha256": "f74c86b0519e37c7a359f33e302d795ede239690c104b88cf811e08dd92f9f18"
+      },
+      "suggested_member": "initial/seed303.npz"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "fede4f8dc65fdcfe4728f779d1902ae35b187be5",
+        "bytes": 200859,
+        "file": "science-seed303-003.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/science-seed303-003.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/science-seed303-003.zip",
+        "sha256": "0a225d4d47744ce43032b2e5508e4665b59beb21f319bfdd93f25b87b2f09a31",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "41a161d8",
+        "Git_blob": "2507e293ddfb0711a50834a3ee0c3cfd3bc45a00",
+        "bytes": 736831,
+        "compressed_bytes": 25544,
+        "path": "science/seed303/new-generation.json",
+        "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+      },
+      "suggested_member": "old-generation/seed303.json"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "28e38b5a",
+        "Git_blob": "129a9e63b006bcea003e1e321e4379b84d049673",
+        "bytes": 11430,
+        "compressed_bytes": 3597,
+        "path": "payloads.json",
+        "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+      },
+      "suggested_member": "payloads.json"
+    },
+    {
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "88d12628",
+        "Git_blob": "682b1a8ff6a941a92754ebe3e4c05428ba29652d",
+        "bytes": 537364,
+        "compressed_bytes": 59887,
+        "path": "questions.json",
+        "sha256": "1c226e32bd3ddade9de21fcf1f91d32310d31f79aa60497e2c604b836446c409"
+      },
+      "suggested_member": "parent-questions.json"
+    }
+  ],
+  "public57_readback_proof": {
+    "all_actual_bytes_verified": true,
+    "file_count": 57,
+    "result_commit": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+    "source": "work/f2-stability-20261113/publication-receipt.json",
+    "source_sha256": "26a9fe3268657368507aab5a7e1725af750720a97d1a5e0b35e69fc4ac7a95c5",
+    "status": "complete",
+    "verified_local_public_files": {
+      "EXTERNAL_REVIEW.json": {
+        "Git_blob": "d15eca24873f2afde6a86d4cb922bac5dc0ac196",
+        "bytes": 1235,
+        "sha256": "88b9a6b0a91f304257566d4295f69fffc6a3b5da9b70b7a471f30361308dd37a"
+      },
+      "HANDOFF.md": {
+        "Git_blob": "eaefa5753eba16b251d8e6daf760ccad2b8400d8",
+        "bytes": 2712,
+        "sha256": "ee9a4ab973ce9feecfbea46d217f9d2f18267ac3b9f0f250a0a9fa50719128dc"
+      },
+      "README.md": {
+        "Git_blob": "6452010ea94dee0c7167b0f499c2a7ed3c75385f",
+        "bytes": 1592,
+        "sha256": "86ff3f89c5517d7bfa6919008085bab617820031f077621ccf7a497d80d5747b"
+      },
+      "RESEARCH_NOTE.md": {
+        "Git_blob": "1722448540c51f5c984e34267645301a2a240590",
+        "bytes": 1809,
+        "sha256": "6a775edb7cf7875f471a696ecd76e740676e07464bc2a635dadd2e7c14d3c1a3"
+      },
+      "RESULTS.md": {
+        "Git_blob": "1b8434d20acb06a3f40799228b94c0567c2e5b6c",
+        "bytes": 3930,
+        "sha256": "054566c9c51a6fae49461e8845aa9d7c7ad0cabc34fe2a3c6f6dcd8c0d064314"
+      },
+      "engineering-checks.json": {
+        "Git_blob": "189632bfffd02e6b288118c2c1c49a112a5e53ce",
+        "bytes": 1802,
+        "sha256": "4dfc5cf6f678118f0df33d65f7644009cfb1a1d880cdaf5a9f67dfce5f6a12cd"
+      },
+      "execution-evidence.zip": {
+        "Git_blob": "a920be852433a736392f27e102b8f2d2776620b8",
+        "bytes": 45453,
+        "sha256": "efa90a5e6d84877473a621a19c2623ab5701c0bac4ddf3d5dd916b7b4233e367"
+      },
+      "execution-receipt.json": {
+        "Git_blob": "cb74b42d042cd77242d74c7983825291d8ddc6ef",
+        "bytes": 254142,
+        "sha256": "061bed3c80132ba23878ec0955dfc82af178aaf013d99dc0b5dea8c5065d5b50"
+      },
+      "execution.stderr.log": {
+        "Git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "execution.stdout.log": {
+        "Git_blob": "4980d16cbd7e10ac7467bd20fa5acb9e9dc396bc",
+        "bytes": 61468,
+        "sha256": "9feee8130c64209e336ff238214a80331c79b78b333939fe728503bd9d24e57d"
+      },
+      "export-checks.json": {
+        "Git_blob": "7d554b40ebfab6c1494a806fa73953651ba53a0e",
+        "bytes": 675,
+        "sha256": "0433961db16e026bde6f30b7e309852b741ecbbd0a1d025af79c2a5479c42584"
+      },
+      "external-context.json": {
+        "Git_blob": "cce0d48dccdb69a79be87e58c34a780c7fb3a5e2",
+        "bytes": 1940,
+        "sha256": "59554be0defc3fb4faa447fa1fb291b36f65dfbcdb15a287e848d062ca6678ae"
+      },
+      "external-method-checks.json": {
+        "Git_blob": "476013af60216a2ca565a1d13c06f930b6a30b9f",
+        "bytes": 1175,
+        "sha256": "4fd16fa9dee4702b6c309cc07fb5b65dee58b88dc3b8508491f1d29cd2302834"
+      },
+      "formal-command-result.json": {
+        "Git_blob": "89c63eca350efda7574a8eb81cc8c401d7075507",
+        "bytes": 578,
+        "sha256": "a2a3aa8555c493866a0926e3c9bb2a9df8f55be1b36d82169b340f9628684aa8"
+      },
+      "git-prereg-receipt.json": {
+        "Git_blob": "2d6b6767e8881fbdbb80662ddbbc8dd377ea8c70",
+        "bytes": 13641,
+        "sha256": "ae0ce754537ac5cd8f8aca9d899340ce99899c10953b29d778173a0b1a518beb"
+      },
+      "independent-evidence.zip": {
+        "Git_blob": "2394666a0655c10dedc044c69af20dd8b237bdf8",
+        "bytes": 91978,
+        "sha256": "6215c88a4a069456c54103f960d3219120c0a3dded6b2f735a3ed528c0672bea"
+      },
+      "inputs.zip": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79"
+      },
+      "launch_formal.py": {
+        "Git_blob": "c1a2807a89e943800e5e3c46a22d3004b12a8c43",
+        "bytes": 1592,
+        "sha256": "ca79aac4c928eae8b25080d3107bf4537dbf00fc89088726cd714b5cbee81ee5"
+      },
+      "manifest.json": {
+        "Git_blob": "83fa7d2f92250f4890f80086999e4cb2c0479b33",
+        "bytes": 14094,
+        "sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c"
+      },
+      "package_final.py": {
+        "Git_blob": "ac4149593bd8361c8b893d2b45f79fac9f56185c",
+        "bytes": 19461,
+        "sha256": "0951335ff82043ea3095b8211a411d627b8366dfdc8694e19b52bc637ca1eaff"
+      },
+      "package_publication.py": {
+        "Git_blob": "0b3807f7c62184cac97d57a0b98ebed0a1703353",
+        "bytes": 13892,
+        "sha256": "ee33970444b8c84942fa7b910c8155bacba9821869fc795a3ac49dd7eec4e531"
+      },
+      "preregistration.zip": {
+        "Git_blob": "79b9e9667fae2e41869116d1121c3131c86c3594",
+        "bytes": 1328652,
+        "sha256": "ebe40dff5c86841fa4658f21dfaea309a10bdb79383af8917f07a2d9a0beab37"
+      },
+      "protocol.json": {
+        "Git_blob": "f4fe4ad1218e3547e9bc026e5eeda167d05f40f8",
+        "bytes": 5356,
+        "sha256": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854"
+      },
+      "public-redactions.json": {
+        "Git_blob": "07fcbd914d560cc1ba9caca69ae48aad123bf0f3",
+        "bytes": 895,
+        "sha256": "fedd8d7a0ba2cad91816ac4242f52b4823b113f5635abd3f5ab9357e213a8d0c"
+      },
+      "publication-manifest.json": {
+        "Git_blob": "f64b8dca77ce801f9f23565e36c7a73a81b49fd5",
+        "bytes": 70410,
+        "sha256": "fe7e9daec1eae0a3ab7ddaef01899dbc60e236b2c12f92b20370db2146dbc56c"
+      },
+      "references/PR33-live-readback.json": {
+        "Git_blob": "455a6564b30b7090e9800bdca1dd35ef0ddc07a3",
+        "bytes": 433,
+        "sha256": "6bdea9295bc0e42793e9b3e80e76abe0b050e4c22ed07da533933060b5ad4cac"
+      },
+      "references/PR33-publication-manifest.json": {
+        "Git_blob": "dafd61634a966b30977fc13cb3194edd542bcc87",
+        "bytes": 280221,
+        "sha256": "193d2c49ccf052c55db808014cb837f80204789fc93388fd3955c4205720e9a4"
+      },
+      "review/audit-cost.json": {
+        "Git_blob": "0cdcac044521a8297ade4c7f05a32b3bc2cd7103",
+        "bytes": 601,
+        "sha256": "86e473a0fbe707833c9afecbd33cb91de1806cd264ee5dc2fdad45da7c92050a"
+      },
+      "review/audit-execution-receipt.json": {
+        "Git_blob": "d01d3abc147ed38a84bc96c1a7bdf18b3e4e8b14",
+        "bytes": 1121,
+        "sha256": "91270793838b9d5d4210aee860f6fcfdca13c0ea518085c1562d7494f0d78499"
+      },
+      "review/audit.stderr.log": {
+        "Git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review/audit.stdout.log": {
+        "Git_blob": "f998e0ac1dba261695ad33f166f7afe74f0a8233",
+        "bytes": 1167,
+        "sha256": "4599475a13ca4265c9763f69b1ad99af6ad5a74e9a4c5eb6e6e663702137734f"
+      },
+      "review/audit_post.py": {
+        "Git_blob": "2757ab0c37b4f3741f67713f6767bc2eeb6e387f",
+        "bytes": 44445,
+        "sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"
+      },
+      "review/check_pre_run.py": {
+        "Git_blob": "73d371db40274529a4d8b1c2efc578d4b096b89f",
+        "bytes": 12741,
+        "sha256": "a6b737e4d1f747a04ef5695005c10b0f2226b3f1801313e8cc8d1443ff29a956"
+      },
+      "review/check_protocol.py": {
+        "Git_blob": "40ca8c3dc123fe0aef5eaa911a583073354e0cbc",
+        "bytes": 8948,
+        "sha256": "d79860914ab8e9cdc2864cf12c0c8e936b4cd005a10d63e328979dbda16e8837"
+      },
+      "review/metadata-preflight.json": {
+        "Git_blob": "13e3d1917c898df91c6061455bc48dbfa8b53af7",
+        "bytes": 1074,
+        "sha256": "b4310b59f39f869d590ff01c36640eb4a78b9f24867770d43870f74c73cf9d0d"
+      },
+      "review/post-run-details.json": {
+        "Git_blob": "5cff839a7001b5f53ddcc832e947ec163b57d892",
+        "bytes": 265113,
+        "sha256": "5c494177adc256705dff407856b5a91b4db1aebecf09e25dfcb0ba29d9add588"
+      },
+      "review/post-run.json": {
+        "Git_blob": "b862404a0d8da77e4401c5fecd791a59230041ed",
+        "bytes": 3630,
+        "sha256": "671d7684c4b1196f792844b5753d941387a99323ff577473240c2049479b80f4"
+      },
+      "review/pre-run.json": {
+        "Git_blob": "c2ded9e1dea1a59c5c6df38abbd7af0fab5cce37",
+        "bytes": 5961,
+        "sha256": "3dee8c39addd695205f46d7905e2ffeb0d1529ab414b057778e2c7c3f2021056"
+      },
+      "review/protocol-helper-attempt-01.json": {
+        "Git_blob": "d9586e3bd5bf2184add80ec9c526e665d16d691d",
+        "bytes": 1127,
+        "sha256": "70be55deb18e9b3aff7c2f46ca75dfbea9ffd23dc75d1b347d262729d2562317"
+      },
+      "review/protocol-review.json": {
+        "Git_blob": "ee4fcc9f659095438b0324e49c897ce1dbcca432",
+        "bytes": 11414,
+        "sha256": "e921eceefb784854112ffcf38ae1f8a95fde6ea589e22d0f47f06e494fae82eb"
+      },
+      "root-execution-intent.json": {
+        "Git_blob": "1a4defcdabbed24848a6eab5d7fe90306f545b26",
+        "bytes": 325,
+        "sha256": "0fce238dce76eb296ffcf90022d18baf043f7bfe926c240a629d7b01618481e1"
+      },
+      "run_stability.py": {
+        "Git_blob": "255b1f855c673e71161fa65d8cbd8afaf093ef18",
+        "bytes": 29937,
+        "sha256": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3"
+      },
+      "science-compact.json": {
+        "Git_blob": "7b88ba4a527882cbe6fa2e2c8dc451ed8db390bd",
+        "bytes": 253840,
+        "sha256": "a4c59c754ff47405216dc32b883bc1dc27ef23f87aacdc555e912d9d3825d0af"
+      },
+      "science-execution-intent.json": {
+        "Git_blob": "3edbf35ba7d44c14823e2a870fe5c29f9f132866",
+        "bytes": 652,
+        "sha256": "7198c7a70698f473a1f94ee3ecd7c2e27650318a6c500fddd1f93d6e64d420f3"
+      },
+      "science-metadata.zip": {
+        "Git_blob": "bd56b4fdf1dc1230a769a2c11b328ed2fa199a01",
+        "bytes": 31024,
+        "sha256": "7ad8b8d75aad6652e7258940eb4987e8ae4e62af975c4092cf549bb806ab8353"
+      },
+      "science-seed101-001.zip": {
+        "Git_blob": "f6aa04d1aba82cb1838e57dab243bdb6b1af6ebc",
+        "bytes": 236484,
+        "sha256": "b863d7aed8926dad8a588445f804a3cfd5cf0c8de2bf109bfa1524da5fa8e697"
+      },
+      "science-seed101-002.zip": {
+        "Git_blob": "fc8500ad8ef8e267de281f8a6187235e8d2018e5",
+        "bytes": 2970099,
+        "sha256": "7f42c2fd8ebc32aab0171cb3d8eedf5132555d42daf1fcc63e4e991c19cb101f"
+      },
+      "science-seed101-003.zip": {
+        "Git_blob": "46c473eb7f2563d4fadb24ada6661df0768f9679",
+        "bytes": 198883,
+        "sha256": "14e513f669fa714870a62c16f5276c2e730174e7b4577f12c6089ac360396bf4"
+      },
+      "science-seed202-001.zip": {
+        "Git_blob": "d24df593c6413925e62b051a58e25a9dea9f211f",
+        "bytes": 234538,
+        "sha256": "8b548af569379ee86b95828c6e04533a15d7fbcc1df25c9d1d7a0ba3f58de6ac"
+      },
+      "science-seed202-002.zip": {
+        "Git_blob": "8c8312e1f79b13ae32703fb8c29d0380a6cb5b33",
+        "bytes": 2985305,
+        "sha256": "b79a5c4d27f273657635de3c52d902d6b5196e1c82d615bed2211ad959aae7f6"
+      },
+      "science-seed202-003.zip": {
+        "Git_blob": "ec95eb50e1a60251c331e29083e3a187cb3b653a",
+        "bytes": 128807,
+        "sha256": "0d2dae433a040e5305912409ae0332e27f99c356250b0fb712f88a7c5447c404"
+      },
+      "science-seed303-001.zip": {
+        "Git_blob": "8ef04d2a5378b8238e366fbc414e77315259c4f3",
+        "bytes": 238806,
+        "sha256": "5029285efbd3ac65eb18ace983b5203d4398de0ef5f2333010e1f14bd8036113"
+      },
+      "science-seed303-002.zip": {
+        "Git_blob": "a0fd8571f4e912e5980f746606a936a6f8a70ccb",
+        "bytes": 2999537,
+        "sha256": "db2148e88532875195f57de8b9e249ffdeff9389dbe1111bbf60734da72cb312"
+      },
+      "science-seed303-003.zip": {
+        "Git_blob": "fede4f8dc65fdcfe4728f779d1902ae35b187be5",
+        "bytes": 200859,
+        "sha256": "0a225d4d47744ce43032b2e5508e4665b59beb21f319bfdd93f25b87b2f09a31"
+      },
+      "science-timing.json": {
+        "Git_blob": "521d03151cbbedbb21cdc83c3a700e7ee0355fe2",
+        "bytes": 250,
+        "sha256": "7f9005e8ce5408b3222ab6e46acdfb1df55bfd13d482c064fd02d544a3eb5474"
+      },
+      "source-freeze.json": {
+        "Git_blob": "9a2a93f68ba0aa5a5a8a35cab1d92ce0ab20a6d4",
+        "bytes": 1079,
+        "sha256": "04c8a34f693f98b19cb8f3edf17f4b1b0304909c7a9846f2159543b7bb64977f"
+      },
+      "test_stability.py": {
+        "Git_blob": "0b740baf0e0ae0b5049b62523230a21e1a6e2593",
+        "bytes": 7982,
+        "sha256": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+      }
+    }
+  },
+  "schema": "e3-learning-probe-parent-provenance-v1",
+  "source_helpers": {
+    "public/protocol.json": {
+      "Git_blob": "f4fe4ad1218e3547e9bc026e5eeda167d05f40f8",
+      "bytes": 5356,
+      "local_raw_path": "work/f2-stability-20261113/publication/final/public/protocol.json",
+      "public_file": "protocol.json",
+      "sha256": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+      "verified_against_root_public57_readback": true
+    },
+    "public/run_stability.py": {
+      "Git_blob": "255b1f855c673e71161fa65d8cbd8afaf093ef18",
+      "bytes": 29937,
+      "local_raw_path": "work/f2-stability-20261113/publication/final/public/run_stability.py",
+      "public_file": "run_stability.py",
+      "sha256": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+      "verified_against_root_public57_readback": true
+    },
+    "public/test_stability.py": {
+      "Git_blob": "0b740baf0e0ae0b5049b62523230a21e1a6e2593",
+      "bytes": 7982,
+      "local_raw_path": "work/f2-stability-20261113/publication/final/public/test_stability.py",
+      "public_file": "test_stability.py",
+      "sha256": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486",
+      "verified_against_root_public57_readback": true
+    },
+    "source/AST-change.json": {
+      "raw_sha256": "bec4f8bfa57b99632965df3061b95779ff14bde603378bfebd7ccdd81b51a81d",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "ac54b1ce",
+        "Git_blob": "dc347da741196b694bc217549f756b8d7acedab5",
+        "bytes": 415,
+        "compressed_bytes": 282,
+        "path": "source/AST-change.json",
+        "sha256": "bec4f8bfa57b99632965df3061b95779ff14bde603378bfebd7ccdd81b51a81d"
+      }
+    },
+    "source/Model-eta001.ast": {
+      "raw_sha256": "29fb21b0dd93ecf80e9e964d781e8d455aa13137f3b64b449096ea3509446eaf",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "0e4f4cd9",
+        "Git_blob": "94b8df5fac3d400debd302dbfc88d4a7a3d1b444",
+        "bytes": 32698,
+        "compressed_bytes": 3140,
+        "path": "source/Model-eta001.ast",
+        "sha256": "29fb21b0dd93ecf80e9e964d781e8d455aa13137f3b64b449096ea3509446eaf"
+      }
+    },
+    "source/Model-original.ast": {
+      "raw_sha256": "38e995ce38124c983c23e9fddae899213c5255552eb2fb9a333c8def19193184",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "dbaaa127",
+        "Git_blob": "cb42a0dd85aa81e347da572f594802c34acb902e",
+        "bytes": 32698,
+        "compressed_bytes": 3142,
+        "path": "source/Model-original.ast",
+        "sha256": "38e995ce38124c983c23e9fddae899213c5255552eb2fb9a333c8def19193184"
+      }
+    },
+    "source/p030_binary_continual.py": {
+      "raw_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "9f1a1db3",
+        "Git_blob": "8b41433c6415c6d0927d69ed0aad14ff035fbe40",
+        "bytes": 21055,
+        "compressed_bytes": 7303,
+        "path": "source/p030_binary_continual.py",
+        "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+      }
+    },
+    "vendor/protocol.json": {
+      "raw_sha256": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "6545032d",
+        "Git_blob": "00432c5b161bc7f0657a306197568943489741f4",
+        "bytes": 6128,
+        "compressed_bytes": 3210,
+        "path": "vendor/protocol.json",
+        "sha256": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958"
+      }
+    },
+    "vendor/run_f2.py": {
+      "raw_sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+      "source_archive": {
+        "Git_blob": "b68f717b7073c0b6837571a417b3532649781e2d",
+        "bytes": 1272100,
+        "file": "inputs.zip",
+        "local_archive_path": "work/f2-stability-20261113/publication/final/public/inputs.zip",
+        "public_path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/inputs.zip",
+        "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+        "verified_against_root_public57_readback": true
+      },
+      "source_member": {
+        "CRC32": "bc6c7798",
+        "Git_blob": "17d2bf86a4ba6343c9194ae18d288f0e4d52caab",
+        "bytes": 45777,
+        "compressed_bytes": 11647,
+        "path": "vendor/run_f2.py",
+        "sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6"
+      }
+    }
+  },
+  "status": "verified_public_parent_bytes_only",
+  "verification_scope": {
+    "Model_NN_forward_optimizer_calls": 0,
+    "all3_NPZ_complete_fields_shapes_counters_finite_checked": true,
+    "all57_actual_public_file_bytes_SHA256_Gitblob_verified": true,
+    "external_model_or_network_calls_by_this_agent": 0,
+    "fresh_live_fetch_owner": "root",
+    "local_science_files_used_as_authority": false,
+    "new_dataset_questions_or_course_generated": false,
+    "new_replays": 0,
+    "new_states_or_NPZ_files_written": 0,
+    "original_public_inputs_unchanged": true,
+    "selected_ZIP_source_and_member_size_CRC_SHA256_Gitblob_verified": true
+  }
+}
