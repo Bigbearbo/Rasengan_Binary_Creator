@@ -1,0 +1,17 @@
+{
+  "classification": "synthetic",
+  "status": "Prospective experiment, no scientific outcomes supplied",
+  "profile": "SLE-AE1-n5-v1, fixed N=4, ordinary symbol IDs0..29, END30 and UP31 reserved",
+  "grammar": "Q=01+010+r(3 information bits followed by syntax0)+four words(each5 information bits followed by syntax0)+END111100. A=the first r complete6-bit words, then model-generated external S. END is not echoed.",
+  "examples": [
+    {"r": 1, "count_code": "0010", "payload_ids": [1,6,11,17], "Q": "010100010000010001100010110100010111100", "A": "000010S"},
+    {"r": 2, "count_code": "0100", "payload_ids": [1,6,11,17], "Q": "010100100000010001100010110100010111100", "A": "000010001100S"}
+  ],
+  "bank": "900 fixed payloads. First two IDs enumerate every ordered pair a,b in0..29. Last two IDs are a frozen seeded random suffix. Payload and order remain identical when r changes. All900 are taught; no heldout. This is not all30^4 possible four-word questions.",
+  "training": "Three fresh seeds101/202/303, unchanged dense tanh P030 Model/Adam.003, fixed L80/H64/10499 parameters. Phase1 all900 r1 Q,6300 labelled targets per epoch. Phase2 all1800 Q, r1 andr2 from the same bank,18000 targets per epoch. Each phase prefreezes40 independent full target-pair permutations perseed. Teachers feed correct answer prefixes; tests greedily feed own generated prefixes. No decoded features, cursor or forcedSTOP enters the model.",
+  "progression": "At each complete epoch end, probe every currently taught Q. A full A plus S must be exact on all Q. Two consecutive perfect epochs advance phase1 or finish phase2. Any miss resets streak. Max40epochs perphase. A student failing phase1 stops without seeing any r2 targets; do not silently advance. Phase2 rehearses r1 and r2, and both must be perfect for completion. No score-dependent extra epochs, replacement seeds, best-checkpoint selection or schedule regeneration.",
+  "lengths": {"Q": 39, "r1_answer_bits": 6, "r1_STOP_prefix": 45, "r2_answer_bits": 12, "r2_STOP_prefix": 51, "future_r4_STOP_prefix": 63, "generation_cap_actions": 32, "largest_prefix_before_action32": 70, "L": 80},
+  "cost_cap": {"updates_per_student": 972000, "primary_students": 3, "complete_replays": "seed101 only,202/303 explicitly not planned", "total_updates_including_one_replay": 3888000, "train_dense_MAC_per_update": 21056, "forward_dense_MAC_per_call": 10432},
+  "reporting": "Record every epoch score, full state, loss/prediction digest, stage/streak/stop decisions, first observed perfect and stable completion epochs. Freeze full initial states and all courses before training. All failures remain. Final teacher-prefix diagnostics only on actually taught r values. Inference/replay/engineering/audit costs separate. No unseenr3/r4 probes this round.",
+  "scope": "Finite-bank learning of parameterized prefix Echo and retention when r2 is introduced. No claim of blind/generalized copying or isolated causal improvement over older AE1, whose curriculum and data differ. Full-domain numeric8 Echo/Neg is a separate incompatible profile; no old weights or Neg code mixing."
+}

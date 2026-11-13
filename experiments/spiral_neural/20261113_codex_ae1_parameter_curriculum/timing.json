@@ -1,0 +1,26 @@
+{
+  "scope": "Allprimary/probes/epochstateIO,seed101replay,inputguards,finalTF;notpurekernels",
+  "total_seconds": 712.2413899999956,
+  "trajectories": [
+    {
+      "mode": "primary",
+      "seconds": 147.31450559999212,
+      "seed": 101
+    },
+    {
+      "mode": "primary",
+      "seconds": 183.15016900000046,
+      "seed": 202
+    },
+    {
+      "mode": "primary",
+      "seconds": 225.9755057000002,
+      "seed": 303
+    },
+    {
+      "mode": "replay",
+      "seconds": 150.99936000000162,
+      "seed": 101
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# AE1參數課程完成交接
+
+2026-11-13，Codex。正式session7462 exit0已完成，不重啟。三fresh學生最後新回音r1、r2各900/900含尾零與自行輸出的STOP，連兩輪全對；唯一seed101完整replay exact，一次raw-NumPy audit PASS。請先讀RESULTS.md及review/post-run.json，不重跑PR24數值題域、PR19舊AE1或其他已完成實驗。
+
+使用新回音AE1-n5，四詞資料保持相同；先r1，再r1/r2共同練習。900組固定payload、三fresh seed101/202/303、L80/H64、原Adam.003、global-target shuffle；每階各40epoch上限、每epoch全教材自由生成，兩連勝才前進。phase1未過就停止該學生，保留所有失敗；不因低分追加epoch、改seed或重新抽題。
+
+完整initial、三seed兩階所有可能課序與原Model來源在inputs.zip，13成員／7291036bytes；只seed101指定完整replay，202/303 not_planned。事前commit966297559b4f4dedc4b8cf655258d4036cc21cc8、manifestdcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60，原runner b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6不改。Git21檔byte回讀、獨審0NN portablegate與當前使用者繼續實驗授權核對後才執行。
+
+三seed r1首次全對皆第3輪，穩定前進4／6／4；r12首次全對6／4／8、穩定完成7／8／11，累計題次16200／19800／23400，target更新151200／181800／223200。202與303曾退步，不以首次全對挑checkpoint。三模型共用900bank，不稱2700獨立資料。
+
+Primary556200updates／11711347200trainMAC；101 replay151200／3183667200。Formal非更新推論包含primary probe556173、replay probe151176及finalTF54000，合計761349forward／7942392768MAC。正式wall712.2413899999956秒，非純kernel；scope見RESULTS。獨審另610173forward／6365324736MAC、0optimizer，40primaryepoch的59400free／54000TF／58scienceNPZ全exact，43proof逐步保存。未存的原始pertargetloss／中間gradient或獨立replay state副本不冒稱重新驗算。
+
+全實際science與失敗、完整frozeninputs、native工程6updates32F／mock另列、獨審及Git執行收據都封存；只選定公開／合成資料，NVIDIA真呼一次候選兩錯誤finding已否決、Gemini隔離未解skip。未改其他研究者分支或主導航，PR26不自動合併。
+
+下一方向可在相同新回音文法下加入r3/r4並保持既有參數，Q39與r4正確STOP前綴63仍在L80內；本輪沒有訓練、探測或凍結該後續課程。現有結論是固定900組題庫的r1/r2學習與保持，不是新suffix／任意長度或課程因果優勢。下一輪先核對Git明確owner／branch／SHA，勿以PR最大編號跳到別支研究。

@@ -1,0 +1,426 @@
+{
+  "archive": {
+    "bytes": 7291036,
+    "file": "inputs.zip",
+    "sha256": "8eb05d5649c5568abf5da18a5b51ffa6c5a1be1e721481b1960d2e27cebe5efe"
+  },
+  "author": "Codex",
+  "data_checks": {
+    "consistent_unique_teacher_prefixes": 18000,
+    "first_two_combinations": 900,
+    "payloads": 900,
+    "phase_targets": {
+      "r1": 6300,
+      "r12": 18000
+    },
+    "possible_four_word_payloads": 810000,
+    "questions": 1800,
+    "word_position_counts": [
+      {
+        "0": 30,
+        "1": 30,
+        "10": 30,
+        "11": 30,
+        "12": 30,
+        "13": 30,
+        "14": 30,
+        "15": 30,
+        "16": 30,
+        "17": 30,
+        "18": 30,
+        "19": 30,
+        "2": 30,
+        "20": 30,
+        "21": 30,
+        "22": 30,
+        "23": 30,
+        "24": 30,
+        "25": 30,
+        "26": 30,
+        "27": 30,
+        "28": 30,
+        "29": 30,
+        "3": 30,
+        "4": 30,
+        "5": 30,
+        "6": 30,
+        "7": 30,
+        "8": 30,
+        "9": 30
+      },
+      {
+        "0": 30,
+        "1": 30,
+        "10": 30,
+        "11": 30,
+        "12": 30,
+        "13": 30,
+        "14": 30,
+        "15": 30,
+        "16": 30,
+        "17": 30,
+        "18": 30,
+        "19": 30,
+        "2": 30,
+        "20": 30,
+        "21": 30,
+        "22": 30,
+        "23": 30,
+        "24": 30,
+        "25": 30,
+        "26": 30,
+        "27": 30,
+        "28": 30,
+        "29": 30,
+        "3": 30,
+        "4": 30,
+        "5": 30,
+        "6": 30,
+        "7": 30,
+        "8": 30,
+        "9": 30
+      },
+      {
+        "0": 25,
+        "1": 26,
+        "10": 36,
+        "11": 32,
+        "12": 28,
+        "13": 30,
+        "14": 24,
+        "15": 41,
+        "16": 36,
+        "17": 38,
+        "18": 29,
+        "19": 28,
+        "2": 27,
+        "20": 29,
+        "21": 41,
+        "22": 34,
+        "23": 38,
+        "24": 37,
+        "25": 19,
+        "26": 23,
+        "27": 31,
+        "28": 26,
+        "29": 30,
+        "3": 28,
+        "4": 34,
+        "5": 20,
+        "6": 25,
+        "7": 24,
+        "8": 30,
+        "9": 31
+      },
+      {
+        "0": 27,
+        "1": 30,
+        "10": 29,
+        "11": 30,
+        "12": 24,
+        "13": 24,
+        "14": 31,
+        "15": 36,
+        "16": 28,
+        "17": 38,
+        "18": 36,
+        "19": 33,
+        "2": 36,
+        "20": 31,
+        "21": 33,
+        "22": 26,
+        "23": 30,
+        "24": 29,
+        "25": 33,
+        "26": 23,
+        "27": 24,
+        "28": 34,
+        "29": 26,
+        "3": 38,
+        "4": 43,
+        "5": 29,
+        "6": 26,
+        "7": 24,
+        "8": 27,
+        "9": 22
+      }
+    ]
+  },
+  "external_model_calls": 0,
+  "files": {
+    "initial/seed101.npz": {
+      "bytes": 216804,
+      "sha256": "35ee4f2931add98e5924123efb398eb6d78b749ced3d2e7b6d2d9ec2851cfbea"
+    },
+    "initial/seed202.npz": {
+      "bytes": 216804,
+      "sha256": "a01c77a2e07facb9e82e993161df181161e9fb2d906fc66cfe2d237d7297cb3d"
+    },
+    "initial/seed303.npz": {
+      "bytes": 216800,
+      "sha256": "4471a27275d02baa4b6d5c8cd0e9f5bea639124583a72ca5e7b530a53303d3da"
+    },
+    "orders/seed101-r1.npy": {
+      "bytes": 1008128,
+      "sha256": "17dafa823a90aabd1d93e68407c1a782f13b230ba485b673342901166afa67d8"
+    },
+    "orders/seed101-r12.npy": {
+      "bytes": 2880128,
+      "sha256": "af9914cebbefc965ee878dcacce8c86c3d5a8aa79a98ff96dc5a648b21a67761"
+    },
+    "orders/seed202-r1.npy": {
+      "bytes": 1008128,
+      "sha256": "1120c5a3aa543a0693ce2b9fcdef3ff989c2b296a57b96ef4b77061276a76e7c"
+    },
+    "orders/seed202-r12.npy": {
+      "bytes": 2880128,
+      "sha256": "aeb3099aa7e1920af7c9fbb5b44305ec050272e73955d74c3dc20db24dfdffde"
+    },
+    "orders/seed303-r1.npy": {
+      "bytes": 1008128,
+      "sha256": "e764342f70a82231ee8260c58952eeea39ab79833c2bc4339bad35b388b6bf5d"
+    },
+    "orders/seed303-r12.npy": {
+      "bytes": 2880128,
+      "sha256": "5b1d44f1f9b70edcb0be5bd3008d67c244d79aeaa06125d55518afbe675791d5"
+    },
+    "payloads.json": {
+      "bytes": 11430,
+      "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+    },
+    "plan.json": {
+      "bytes": 5757,
+      "sha256": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6"
+    },
+    "questions.json": {
+      "bytes": 224928,
+      "sha256": "03b134bb597e15ef96a8a7f3e6f2f08bbe30a201a6171a40ec1b622b77f84e6f"
+    },
+    "source/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    }
+  },
+  "formal_forward_calls_before_freeze": 0,
+  "formal_optimizer_calls_before_freeze": 0,
+  "id": "AE1-PARAMETER-CURRICULUM-20261113",
+  "initial_states": {
+    "101": {
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6"
+    },
+    "202": {
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c"
+    },
+    "303": {
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21"
+    }
+  },
+  "protocol": {
+    "A": "The first r complete6-bit payload words, then external S; r1 has7 targets/STOPprefix45, r2 has13 targets/STOPprefix51",
+    "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "Q": "01+010+(r as3 information bits+0)+four complete(5 information bits+0)words+END111100;39 bits",
+    "advance": "Phase1 each completed epoch greedily probes all900r1. Two consecutive exact full A+S passes advance retaining the same complete model/Adam state. Any failure resets streak. If phase1 reaches40 without stable pass, stop that student and do not teach or evaluate r2",
+    "author": "Codex",
+    "canonical_target_pool": "Ascending pairID; phase1 r1 only; phase2 r1 then r2 for each pairID; then ascending answer target position includingS",
+    "checkpoint": "Save every completed epoch full state after probe, all free-generation outputs/scores/streak/advance/block/complete decision, pre-update target loss/prediction digest. Save phase entry fullstate and assert phase2 entry exactly equals phase1 exit including inference counters",
+    "costs": "Actual phase/cumulative updates and question exposures, primary/replay training MAC, each phase probe inference, finalTF, array/storagebytes and walltime reported separately. Maximum budget includes phase1 pretraining",
+    "coverage": "First two word positions each contain every ID30 times and all900 first-two-word combinations. Third/fourth counts are recorded seeded-random frequencies, not forced balanced.900 payloads are not all30^4 inputs. No heldout or blind-generalization claim",
+    "exposures": "A completed full target set counts900 source-question exposures in r1 or1800 in r12, with separate by-r counts; target counts6300/18000 recorded separately. Targets are globally shuffled; source-question exposure counts are not contiguous whole-question chronology",
+    "external_model_calls_by_runner": 0,
+    "final_TF": "Only after primary and designatedreplay, complete logits/probabilities/CE for the actual taught set:900r1 if phase1blocked,1800r1+r2 if enteredphase2. Reuse last free-generation outputs. Never inspect extra r2 for phase1blocked students or anyr3/r4",
+    "forward_dense_MAC_per_call": 10432,
+    "gate": "Pure data preparation/formalNNforward0 plus bounded synthetic engineering first; exact source/input review and coordinator Gitpreregistration before a single formal execute",
+    "generation": "Fixed32 actions using only rawQ+generated prefix, original L80 overflow guard. No true-r/answer-length cutoff, forcedSTOP, old generate8 or unseenr3/r4 probe",
+    "id": "AE1-PARAMETER-CURRICULUM-20261113",
+    "initialization": "Fresh original Model(seed,L80,H64). Freeze all p/m/v/birth/t/growth_rng, seed/events/train and inference counters",
+    "limits": "Finite900-payload parameter curriculum. Answer-combination coverage is not all input coverage or blinded generalization. No Prolr diagnostic, old numericNeg, growth or proof of arbitrary-r extraction",
+    "maximum_training_dense_MAC_per_seed": 20466432000,
+    "maximum_updates_per_seed": 972000,
+    "model": {
+      "H": 64,
+      "L": 80,
+      "parameters": 10499
+    },
+    "optimizer": "Unmodified original P030 Model.step: Adam lr.003 beta.9/.999 eps1e-8, global normclip1, float32 parameters/moments and per-element birth-age correction; no grow, extra feature, parser/oracle input or router",
+    "ordinary_word_IDs": "All and only0..29; END30=111100 is control,31 not an ordinary word",
+    "p_m_v_birth_array_bytes": 209980,
+    "payloads": "900 fixed payloads: pairID=30*a+b in ascending order a,b=0..29; words3/4 from np.random.default_rng(331000).integers(0,30,size=(900,2)). Same bank for both r and all seeds",
+    "phase_training_MAC_per_epoch": {
+      "r1": 132652800,
+      "r12": 379008000
+    },
+    "phases": [
+      {
+        "max_epochs": 40,
+        "name": "r1",
+        "questions_per_epoch": 900,
+        "schedule_seed_offset": 332000,
+        "targets_per_epoch": 6300,
+        "taught_r": [
+          1
+        ]
+      },
+      {
+        "max_epochs": 40,
+        "name": "r12",
+        "questions_per_epoch": 1800,
+        "schedule_seed_offset": 333000,
+        "targets_per_epoch": 18000,
+        "taught_r": [
+          1,
+          2
+        ]
+      }
+    ],
+    "profile": "SLE-AE1-n5-v1; Pro PR16 commit685c6f92d9e5a335a2f2a7193d9b501918d90b00, fixedN4; not numericNeg and not UR1",
+    "question_ID": "QID=(r-1)*900+pairID; r1 IDs0..899 and r2 IDs900..1799",
+    "replay": "After all primary students, seed101 alone repeats all actual adaptive phases/epochs from frozeninitial using originalstep. Independently derive everystreak/advance/block/stop and compare epoch trace/loss/pred digest, all freeoutputs and complete state exactly.202/303 explicitly notplanned",
+    "replay_seeds": [
+      101
+    ],
+    "retention_gate": "Phase2 probes all1800 taught Q per complete epoch. Both r1 andr2 must each have900/900 exact full outputs includingS for2 consecutive epochs. Any failure resets streak; otherwise cap40 and report failure",
+    "schedule": "Per seed/phase independent np.random.default_rng(seed+phaseoffset),40 sequential full-target-pool permutations. Freeze actual(questionID,position) arrays, little-endian uint16. All precomputed before formal scores",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "stop": "Only the frozen gates/caps above. No score-dependent extension, extra seed, restart, parameter/profile change or unseen-r probe",
+    "target_weighting": "Global target shuffle and one original Model.step per true-prefix CE. Phase2 has900 Q per r, but r1 contributes6300 and r2 contributes11700 optimizer targets/epoch, not equal optimizer exposure or normalized question losses. Do not rebalance",
+    "trace": "Per epoch SHA256 of canonical JSON lines[QID,position,prediction_before_update,CE_loss]. No per-target statehash/IO. Reconstruct targets solely from frozen data/orders",
+    "training_dense_MAC_per_target": 21056
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schedules": {
+    "seed101-r1": {
+      "dtype": "<u2",
+      "file": "orders/seed101-r1.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 87123497509826054715738575913117395787,
+          "state": 142457962257154656793167295031509164244
+        },
+        "uinteger": 1073380155
+      },
+      "schedule_seed": 332101,
+      "shape": [
+        40,
+        6300,
+        2
+      ]
+    },
+    "seed101-r12": {
+      "dtype": "<u2",
+      "file": "orders/seed101-r12.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 140953885555262850923769562952034432867,
+          "state": 189703545614228260623813459257822366562
+        },
+        "uinteger": 3407476873
+      },
+      "schedule_seed": 333101,
+      "shape": [
+        40,
+        18000,
+        2
+      ]
+    },
+    "seed202-r1": {
+      "dtype": "<u2",
+      "file": "orders/seed202-r1.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 248971436335781057658489403028598196111,
+          "state": 175515018138353266314266373262007640656
+        },
+        "uinteger": 713374104
+      },
+      "schedule_seed": 332202,
+      "shape": [
+        40,
+        6300,
+        2
+      ]
+    },
+    "seed202-r12": {
+      "dtype": "<u2",
+      "file": "orders/seed202-r12.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 16906025420692498545359943435851481843,
+          "state": 239856807004971593050902325193856864390
+        },
+        "uinteger": 821173191
+      },
+      "schedule_seed": 333202,
+      "shape": [
+        40,
+        18000,
+        2
+      ]
+    },
+    "seed303-r1": {
+      "dtype": "<u2",
+      "file": "orders/seed303-r1.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 77707645012886993855191012053993190947,
+          "state": 181261572141668496715268849222922283768
+        },
+        "uinteger": 296976582
+      },
+      "schedule_seed": 332303,
+      "shape": [
+        40,
+        6300,
+        2
+      ]
+    },
+    "seed303-r12": {
+      "dtype": "<u2",
+      "file": "orders/seed303-r12.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 189302078453982735314477465433738740683,
+          "state": 240785352910496587311579053064974391787
+        },
+        "uinteger": 3777545726
+      },
+      "schedule_seed": 333303,
+      "shape": [
+        40,
+        18000,
+        2
+      ]
+    }
+  },
+  "schema": "ae1-parameter-curriculum-v1",
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  },
+  "status": "frozen_before_formal_training"
+}

@@ -1,0 +1,291 @@
+{
+  "actual_full_replay_seeds": [
+    101
+  ],
+  "actual_phases_by_seed": {
+    "101": [
+      {
+        "decision": "advance",
+        "entry_full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6",
+        "epochs": 4,
+        "exit_full_state_sha256": "02752e80f9b6d9b202720b4ea85e7346a4d7ecb90b4c09f8a08488a8b61ed86d",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 3,
+        "phase": "r1",
+        "probe_inference_MAC": 262886400,
+        "probe_inference_calls": 25200,
+        "question_exposures": 3600,
+        "stable_pass_epoch": 4,
+        "target_updates": 25200,
+        "training_dense_MAC": 530611200
+      },
+      {
+        "decision": "complete",
+        "entry_full_state_sha256": "02752e80f9b6d9b202720b4ea85e7346a4d7ecb90b4c09f8a08488a8b61ed86d",
+        "epochs": 7,
+        "exit_full_state_sha256": "3408a4eeca740ad828c8000eaf50d3ea587430b092350a437f09e7eed50a5db1",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 6,
+        "phase": "r12",
+        "probe_inference_MAC": 1314181632,
+        "probe_inference_calls": 125976,
+        "question_exposures": 12600,
+        "stable_pass_epoch": 7,
+        "target_updates": 126000,
+        "training_dense_MAC": 2653056000
+      }
+    ],
+    "202": [
+      {
+        "decision": "advance",
+        "entry_full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c",
+        "epochs": 6,
+        "exit_full_state_sha256": "d3d86d86088a80909b42344f2faff5b8c7256fe98a1a124f7f23b1a0e975c339",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 3,
+        "phase": "r1",
+        "probe_inference_MAC": 394329600,
+        "probe_inference_calls": 37800,
+        "question_exposures": 5400,
+        "stable_pass_epoch": 6,
+        "target_updates": 37800,
+        "training_dense_MAC": 795916800
+      },
+      {
+        "decision": "complete",
+        "entry_full_state_sha256": "d3d86d86088a80909b42344f2faff5b8c7256fe98a1a124f7f23b1a0e975c339",
+        "epochs": 8,
+        "exit_full_state_sha256": "5e4d6763dddea23ab4f1ee583fc80f7d2c0d58470c4f43cbf527cea7bd3f48d0",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 4,
+        "phase": "r12",
+        "probe_inference_MAC": 1502155840,
+        "probe_inference_calls": 143995,
+        "question_exposures": 14400,
+        "stable_pass_epoch": 8,
+        "target_updates": 144000,
+        "training_dense_MAC": 3032064000
+      }
+    ],
+    "303": [
+      {
+        "decision": "advance",
+        "entry_full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21",
+        "epochs": 4,
+        "exit_full_state_sha256": "1a056a5609dcc52f9ba498921579c14e44b9fcf525bed5f5fceb95dfff2e7876",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 3,
+        "phase": "r1",
+        "probe_inference_MAC": 262886400,
+        "probe_inference_calls": 25200,
+        "question_exposures": 3600,
+        "stable_pass_epoch": 4,
+        "target_updates": 25200,
+        "training_dense_MAC": 530611200
+      },
+      {
+        "decision": "complete",
+        "entry_full_state_sha256": "1a056a5609dcc52f9ba498921579c14e44b9fcf525bed5f5fceb95dfff2e7876",
+        "epochs": 11,
+        "exit_full_state_sha256": "31dda85da683dfac8a869cab64dd7e5aab2fb780a4a4b757094bcb39f5407b31",
+        "final_scores": {
+          "1": {
+            "questions": 900,
+            "whole_correct": 900
+          },
+          "2": {
+            "questions": 900,
+            "whole_correct": 900
+          }
+        },
+        "first_full_epoch": 8,
+        "phase": "r12",
+        "probe_inference_MAC": 2065556864,
+        "probe_inference_calls": 198002,
+        "question_exposures": 19800,
+        "stable_pass_epoch": 11,
+        "target_updates": 198000,
+        "training_dense_MAC": 4169088000
+      }
+    ]
+  },
+  "actual_primary_epochs_verified": 40,
+  "actual_primary_students": 3,
+  "all_completed_curriculum": true,
+  "all_generation_TF_failures_curves_exposures_stops_costs_exact": true,
+  "all_source_frozen_inputs_science_and_execution_metadata_unchanged": true,
+  "all_students_including_failures_retained": true,
+  "audit_attempt_count": 1,
+  "audit_extra_dense_MAC": 6365324736,
+  "audit_extra_forward_calls": 610173,
+  "details": "review/post-run-details.json",
+  "each_epoch_and_student_numeric_proof_and_cost_persisted": true,
+  "external_model_calls": 0,
+  "final_TF_logits_probabilities_CE_verified": 54000,
+  "final_decomposed_metrics_by_seed": {
+    "101": {
+      "1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      }
+    },
+    "202": {
+      "1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      }
+    },
+    "303": {
+      "1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      }
+    }
+  },
+  "formal_session": 7462,
+  "formal_wall_seconds": 712.2413899999956,
+  "frozen_initial_states_verified": 3,
+  "frozen_target_permutations_independently_verified": 240,
+  "full_science_NPZ_verified": 58,
+  "independent_limit": "All archived primary states, phase transitions, free outputs, final taught-set TF, data/orders, aggregate/digest form, exposures, stops and costs were checked. Unarchived target losses, gradients and intermediate optimizer trajectories were not reconstructed.",
+  "inputs_zip_sha256": "8eb05d5649c5568abf5da18a5b51ffa6c5a1be1e721481b1960d2e27cebe5efe",
+  "interpretation_limit": "Fixed900-payload r1-to-r12 curriculum fit/retention, not heldout or arbitrary-r/length generalization. No joint-training causal control; equal question counts have unequal target weight6300/11700.",
+  "legacy_or_driver_modules_imported": false,
+  "manifest_sha256": "dcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60",
+  "metadata": {
+    "actual_timing_trajectories": 4,
+    "epoch_progress_records": 51,
+    "preregistration_precedes_execution": true,
+    "receipt_sha256": "26a0cd10a8d09444fdd8a1f7e0812a35b2d8b29a8a3095e805cdf9c9c35a9553",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 14269,
+    "stdout_sha256": "3e6416b9b1651638d8db1f09813943ec9f3a3d590e1fadee2b5b5d6bfcc3597b"
+  },
+  "metadata_checked_before_any_trained_forward": true,
+  "native_final_TF_forward_calls": 54000,
+  "new_students": 0,
+  "not_replayed_seeds": [
+    202,
+    303
+  ],
+  "numeric_proof_count": 43,
+  "optimizer_calls": 0,
+  "phase_carry_fullarrays_Adam_birth_t_RNG_probe_counters_exact": true,
+  "preregistration_commit": "966297559b4f4dedc4b8cf655258d4036cc21cc8",
+  "primary_probe_forward_calls": 556173,
+  "primary_training_dense_MAC": 11711347200,
+  "primary_updates_evidenced_by_epoch_counters": 556200,
+  "receipt_sha256": "26a0cd10a8d09444fdd8a1f7e0812a35b2d8b29a8a3095e805cdf9c9c35a9553",
+  "replay_probe_forward_calls_seed101": 151176,
+  "replay_scope": "Actual exit0, frozen driver assertions, ordered stdout and timing establish one complete seed101 replay comparing epoch prediction/loss digests, generated outputs and full state. Separate replay state copies and raw target records are not stored; no claim of re-auditing those absent internals. Seeds202/303 are not replayed.",
+  "replay_training_dense_MAC_seed101": 3183667200,
+  "replay_updates_seed101": 151200,
+  "root_confirmed_formal_exit0": true,
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  },
+  "status": "passed",
+  "whole_free_generations_verified": 59400
+}

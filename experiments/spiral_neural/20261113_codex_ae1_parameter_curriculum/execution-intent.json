@@ -1,0 +1,25 @@
+{
+  "schema": "ae1-single-formal-execution-intent-v1",
+  "created_UTC": "2026-11-13T00:39:50.483Z",
+  "preregistration_commit": "966297559b4f4dedc4b8cf655258d4036cc21cc8",
+  "manifest_sha256": "dcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60",
+  "Git_byte_checks_before_formal": 21,
+  "output": "science/",
+  "stdout": "execution.stdout.log",
+  "stderr": "execution.stderr.log",
+  "primary_seeds": [
+    101,
+    202,
+    303
+  ],
+  "replay_seeds": [
+    101
+  ],
+  "formal_invocations": 1,
+  "auto_retry": false,
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  }
+}
