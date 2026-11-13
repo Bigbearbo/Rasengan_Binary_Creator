@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "round_id": "AE1-FLIP2-20261113",
+  "manifest_sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95",
+  "inputs_zip_sha256": "eb8869afb02be3f84c2405044bbc294c32cbeba2468c4976b93f9bba3eeb5d3d",
+  "source_hashes": {
+    "protocol.json": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958",
+    "run_f2.py": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+    "test_f2.py": "41d1f04e9d0fa47ead4df3871131f98dbc409ebc105d58810a8ff53de7ff9e94"
+  },
+  "parent_result_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "parent_publication_manifest_sha256": "dcf039bf53bcc39669d06daced174dffb133fa75c93e52acbc2fd59433b45a11",
+  "parent_publication_manifest_Git_blob": "2f90e963b31486a4ba568b8361976cd2f23f8145",
+  "public_parent_archives_independently_byte_blob_member_CRC_checked": {
+    "inputs.zip": {
+      "bytes": 7967750,
+      "sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+      "Git_blob": "de45a6224d4e0eec86c89c827babf59df12b1b48"
+    },
+    "science-seed101-001.zip": {
+      "bytes": 2939410,
+      "sha256": "4a7cd03183a8ad3b14a0e5750060e6a5263b0d35f519d6bb8449d13fce3836b8",
+      "Git_blob": "511f27091a19613e04db20921164374ec75465cd"
+    },
+    "science-seed202-001.zip": {
+      "bytes": 2999389,
+      "sha256": "9889a229e8a4752284a2068d0326cdcea7ab79371aaab392707d75dc7cdb1026",
+      "Git_blob": "3c6013b8075fe1e6ba84dffaacf273a05109a66d"
+    },
+    "science-seed303-001.zip": {
+      "bytes": 2936442,
+      "sha256": "9bd4db599f151d1284c42e1d920a92b30a9769c0d6439754f399dea7f913d2ff",
+      "Git_blob": "8a0670d66e31a947906bb34126869dfd681cd8a1"
+    }
+  },
+  "full_parent_checkpoints_exact_verified": 3,
+  "parent_t": {
+    "101": 297000,
+    "202": 400500,
+    "303": 441900
+  },
+  "portable_archive_entries": 13,
+  "fresh_bundle_real_validator_passed_original_workspace_reads_blocked": true,
+  "fresh_input_files_before_after_exact": 6,
+  "old_three_class_QA_bitidentical": 2700,
+  "four_class_questions": 3600,
+  "consistent_unique_teacher_prefixes": 36000,
+  "literal_Flip_two_word_control_pattern_answers_preserved": [
+    "111110111110S",
+    "111110111100S"
+  ],
+  "target_label_counts_per_epoch": {
+    "0": 18900,
+    "S": 3600,
+    "1": 13500
+  },
+  "frozen_exact_RNG_full_target_permutations": 120,
+  "independent_pure_token_fixture_outputs": 32,
+  "independent_QID_net_zero_churn_swap_classes": 4,
+  "source_review": {
+    "all3_parent_old_three_baseline_integrity_before_any_new_optimizer": true,
+    "F2_baseline_descriptive_not_filtered_by_Pro_reference_or_counted_in_streak": true,
+    "baseline_failure_whole_batch_aborts0new_updates_no_repair": true,
+    "baseline_only_inference_counters_change_and_streak_starts0": true,
+    "trained_parent_Adam_t_m_v_birth_RNG_fullstate_continued": true,
+    "parent_old_costs_separate_all_new_counts_are_deltas": true,
+    "only_raw_Q_plus_true_prefix_for_training_free_uses_own_prefix": true,
+    "both_F2_words_flip5_information_bits_and_preserve_each_tail0": true,
+    "only_external_S_stops_no_answer_length_cutoff_or_forced_STOP": true,
+    "all4_classes900_exact_twice_or40cap_no_extension_selection": true,
+    "zero_formal_training_replays_all_three_not_planned_timing3": true,
+    "all_primary_before_final_TF_no_hidden_rawloss_or_optimizer_trajectory_reconstruction_claim": true,
+    "all_saved_baseline_epoch_word_bit_STOP_firsterror_two_axis_metrics_are_pure_tokens": true,
+    "QID_matched_both_direction_churn_baseline_null_epoch1_vs_baseline": true
+  },
+  "engineering_separate": {
+    "tests": 10,
+    "synthetic_native_updates": 6,
+    "synthetic_native_inference_calls": 32,
+    "synthetic_native_training_forward_calls": 6,
+    "synthetic_native_total_forward_calls": 38,
+    "synthetic_mock_targets": 72000,
+    "synthetic_mock_probes": 3
+  },
+  "reviewer_zero_NN_gate_attempts": 2,
+  "reviewer_prior_metadata_only_failure": {
+    "field": "synthetic_native_forward_calls",
+    "correction": "actual author field synthetic_native_inference_calls",
+    "model_forward_calls": 0,
+    "optimizer_calls": 0,
+    "local_evidence": "pre-run-attempt-01/attempt.json"
+  },
+  "material_findings_remaining": [],
+  "interpretation_limits": [
+    "Continuation of3 PR28 models on an exposed900-payload bank, no fresh-student or independent-new-dataset claim.",
+    "Equal question counts have unequal6300/11700/6300/11700 CE weighting.",
+    "Pro30 baseline is prior observer background; current fresh wire/restore baseline is not a new independent discovery.",
+    "No control isolates F2 causality or supports unseen-bank/arbitrary-r/length generalization or internal control execution.",
+    "No formal training replay; frozen source/orders, archived checkpoints/output/aggregates and one independent forward audit have that limit."
+  ],
+  "required_root_before_formal": "Verify this exact source/input freeze in public Git with raw-byte readback, then one fresh formal command; no baseline NN before authorization.",
+  "reviewer_model_forward_calls": 0,
+  "reviewer_optimizer_calls": 0,
+  "reviewer_formal_students": 0,
+  "external_model_calls": 0
+}

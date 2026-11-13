@@ -1,0 +1,18 @@
+{
+  "external_model_calls": 0,
+  "formal_forward_calls": 0,
+  "new_parent_optimizer_calls": 0,
+  "source_hashes": {
+    "protocol.json": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958",
+    "run_f2.py": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+    "test_f2.py": "41d1f04e9d0fa47ead4df3871131f98dbc409ebc105d58810a8ff53de7ff9e94"
+  },
+  "status": "PASS",
+  "synthetic_mock_probes": 3,
+  "synthetic_mock_targets": 72000,
+  "synthetic_native_inference_calls": 32,
+  "synthetic_native_total_forward_calls": 38,
+  "synthetic_native_training_forward_calls": 6,
+  "synthetic_native_updates": 6,
+  "tests": 10
+}

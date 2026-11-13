@@ -1,0 +1,21 @@
+{
+  "scope": "Allbaseline,training,probes,stateIO,guards,finalTF;noformalreplay;notpurekernels",
+  "total_seconds": 6440.997965899995,
+  "trajectories": [
+    {
+      "mode": "primary",
+      "seconds": 1706.6009598000092,
+      "seed": 101
+    },
+    {
+      "mode": "primary",
+      "seconds": 2366.045891200003,
+      "seed": 202
+    },
+    {
+      "mode": "primary",
+      "seconds": 2357.566919699995,
+      "seed": 303
+    }
+  ]
+}

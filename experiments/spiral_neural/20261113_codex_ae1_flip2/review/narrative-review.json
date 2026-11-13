@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "review_kind": "zero_NN_narrative_factcheck",
+  "documents": {
+    "README.md": {
+      "sha256": "72edb376a428d2f9274421c5f84368bfee0b57e7b301b19a0135222e0a5fb405",
+      "bytes": 3468
+    },
+    "RESULTS.md": {
+      "sha256": "170934dea78dd72ba9dd068b4237d5c5b5e2185036af395f79a1f0cd333ea591",
+      "bytes": 5242
+    },
+    "RESEARCH_NOTE.md": {
+      "sha256": "75b6d1d1a3780fe811eb440def82200292504e49f7c7cce7f73def7df81703fe",
+      "bytes": 3154
+    },
+    "HANDOFF.md": {
+      "sha256": "3ac95c4bbe376a015ff078bad62ddf79929aed75ffac1a36a98eb66bf79b649e",
+      "bytes": 2708
+    }
+  },
+  "audit_post_run_sha256": "ac11b9f2ef471fc78b66e3745588626fac781a18c66a9e5de704136dbbec6217",
+  "audit_closure_receipt_sha256": "8150d1af485e6ee4a14bc7835a64807ddea1c997b04faab2d155af11297a6b8e",
+  "material_findings": [],
+  "checks": {
+    "first_full_vs_stable_and_cap_failures": true,
+    "formal_endpoints_not_best_checkpoint": true,
+    "parent_state_and_new_delta_cost_scope": true,
+    "word_tail0_and_STOP_correct_despite_content_errors": true,
+    "F2_baseline_descriptive_not_external_gate": true,
+    "net_zero_QID_loss_recovery_example": true,
+    "no_formal_training_replay_or_unarchived_gradient_claim": true,
+    "LR_next_step_only_untested_hypothesis": true,
+    "fixed900_bank_not_blind_or_generic_algorithm_claim": true,
+    "publication_relative_links_match_planned_direct_artifacts": true
+  },
+  "selected_verified_facts": {
+    "all_class_first_full_epochs": {
+      "101": 19,
+      "202": 22,
+      "303": 19
+    },
+    "stable_pass_epochs": {
+      "101": 27,
+      "202": null,
+      "303": null
+    },
+    "final_class_whole_correct": {
+      "101": [
+        900,
+        900,
+        900,
+        900
+      ],
+      "202": [
+        900,
+        900,
+        899,
+        869
+      ],
+      "303": [
+        900,
+        899,
+        900,
+        898
+      ]
+    },
+    "F2_baseline_word_and_STOP": {
+      "101": {
+        "whole": 0,
+        "word1": 82,
+        "word2": 2,
+        "STOP": 838
+      },
+      "202": {
+        "whole": 0,
+        "word1": 116,
+        "word2": 7,
+        "STOP": 838
+      },
+      "303": {
+        "whole": 1,
+        "word1": 231,
+        "word2": 5,
+        "STOP": 854
+      }
+    },
+    "final_TF_incorrect_tokens": {
+      "101": 0,
+      "202": 32,
+      "303": 3
+    },
+    "F2_first_single_class_full_epochs": [
+      16,
+      18,
+      17
+    ],
+    "old_E1_E2_F1_epoch_min_by_seed": {
+      "101": [
+        884,
+        808,
+        829
+      ],
+      "202": [
+        821,
+        650,
+        729
+      ],
+      "303": [
+        863,
+        793,
+        778
+      ]
+    },
+    "per_class_epoch_nonzero_net_zero_churn_events_by_seed": [
+      3,
+      2,
+      11
+    ],
+    "seed202_epoch14_F1": {
+      "whole_previous": 899,
+      "whole_current": 899,
+      "correct_to_wrong": 1,
+      "wrong_to_correct": 1,
+      "lost_QID2120": {
+        "previous": "101010S",
+        "current": "110100S"
+      },
+      "recovered_QID2591": {
+        "previous": "001100S",
+        "current": "001010S"
+      }
+    },
+    "seed202_epoch15_F2": {
+      "word1_complete6_correct": 900,
+      "word2_complete6_correct": 699,
+      "tail0_each": 900,
+      "STOP_correct": 900
+    },
+    "formal_new_updates": 3852000,
+    "formal_training_dense_MAC": 81107712000,
+    "formal_nonupdate_forward_calls": 4072688,
+    "formal_inference_dense_MAC": 42486281216,
+    "audit_extra_forward_calls": 4072688,
+    "audit_extra_dense_MAC": 42486281216,
+    "audit_seconds": 203.69749649999721
+  },
+  "evidence_scope": "Numeric facts were checked against existing independent per-epoch proofs/post-run metrics and selected already-audited saved token strings. No new neural queries, optimizer steps or optimizer replay.",
+  "model_forward_calls": 0,
+  "optimizer_calls": 0,
+  "trained_audit_reruns": 0,
+  "science_or_core_files_modified": false
+}

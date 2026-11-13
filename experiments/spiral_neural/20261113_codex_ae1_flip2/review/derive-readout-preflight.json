@@ -1,0 +1,20 @@
+{
+  "NN_calls": 0,
+  "actual_self_test_invocations_during_preparation": 2,
+  "awaiting_coordinator_exit0_and_GO": true,
+  "evidence_scope": "Records the actual --self-test results already observed in this session; this metadata command does not execute the helper",
+  "final_helper_self_test": "PASS",
+  "helper_file": "derive_readout.py",
+  "helper_sha256": "dd7d0d22ad0ea83a0c4e85b64af25ccdca12f8eef96c72d3abd030fbca98dd5e",
+  "last_observed_self_test_stdout": {
+    "NN_calls": 0,
+    "optimizer_calls": 0,
+    "science_readout_runs": 0,
+    "status": "PASS",
+    "synthetic_token_cases": 1
+  },
+  "optimizer_calls": 0,
+  "schema": "ae1-f2-readout-helper-preflight-v1",
+  "science_readout_runs": 0,
+  "status": "PASS"
+}

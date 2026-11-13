@@ -1,0 +1,15 @@
+{
+  "status": "zero_NN_preparation_evidence_preserved",
+  "record": "audit-preparation.json",
+  "helper": "check_audit_preparation.py",
+  "prepared_auditor_source": "audit_post.pre-pin.py",
+  "prepared_auditor_sha256": "3c7a696996d3ac34844a0f1cc3156626ccbcb8df6ec0c621bfcb9ada3d97e507",
+  "final_auditor_source": "audit_post.py",
+  "final_auditor_sha256": "eea964b70ba4cce523530bce70e6404420965653886d7b5788e634bd44f55755",
+  "only_source_difference": "PREREG=None and FORMAL_SESSION=None were replaced by the actual current-study preregistration commit and process session pins; algorithms and data checks were unchanged.",
+  "snapshot_check": "Reconstructed pre-pin bytes were SHA256-checked against the original preparation record. No preparation tests or model inference were rerun.",
+  "model_forward_calls": 0,
+  "optimizer_calls": 0,
+  "actual_post_audit_attempts": 0,
+  "scope": "Historical workspace input-parser and pure-string readout check. It imports only the independent auditor and hard-denies its Forward call; it does not import a learner/driver or evaluate trained checkpoints. The final audit has its own explicit CLI paths and root exit0 gate."
+}

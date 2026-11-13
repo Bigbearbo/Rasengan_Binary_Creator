@@ -1,0 +1,16 @@
+{
+  "attempts": 1,
+  "calls_by_phase": {
+    "baseline_free_generation": 110027,
+    "final_TF": 108000,
+    "mixed_epoch_free_generation": 3854661
+  },
+  "dense_MAC": 42486281216,
+  "external_model_calls": 0,
+  "forward_calls": 4072688,
+  "new_students": 0,
+  "optimizer_calls": 0,
+  "script_sha256": "eea964b70ba4cce523530bce70e6404420965653886d7b5788e634bd44f55755",
+  "seconds": 203.69749649999721,
+  "status": "passed"
+}
