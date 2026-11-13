@@ -1,0 +1,107 @@
+{
+  "s0_echo_d1": {
+    "cases": 2,
+    "question_bits": 12,
+    "answer_bits": 4,
+    "max_q": 6,
+    "max_prefix": 8
+  },
+  "s1_echo_d2": {
+    "cases": 4,
+    "question_bits": 28,
+    "answer_bits": 12,
+    "max_q": 7,
+    "max_prefix": 10
+  },
+  "s2_echo_d3": {
+    "cases": 8,
+    "question_bits": 64,
+    "answer_bits": 32,
+    "max_q": 8,
+    "max_prefix": 12
+  },
+  "s3_op2": {
+    "cases": 8,
+    "question_bits": 72,
+    "answer_bits": 32,
+    "max_q": 9,
+    "max_prefix": 13
+  },
+  "s4_neg": {
+    "cases": 16,
+    "question_bits": 144,
+    "answer_bits": 64,
+    "max_q": 9,
+    "max_prefix": 13
+  },
+  "s5_zero": {
+    "cases": 24,
+    "question_bits": 216,
+    "answer_bits": 96,
+    "max_q": 9,
+    "max_prefix": 13
+  },
+  "s6_end": {
+    "cases": 24,
+    "question_bits": 288,
+    "answer_bits": 96,
+    "max_q": 12,
+    "max_prefix": 16
+  },
+  "s7_one_cut": {
+    "cases": 40,
+    "question_bits": 560,
+    "answer_bits": 152,
+    "max_q": 14,
+    "max_prefix": 18
+  },
+  "s8_and": {
+    "cases": 104,
+    "question_bits": 1712,
+    "answer_bits": 408,
+    "max_q": 18,
+    "max_prefix": 22
+  },
+  "v1_or": {
+    "cases": 168,
+    "question_bits": 2864,
+    "answer_bits": 664,
+    "max_q": 18,
+    "max_prefix": 22
+  },
+  "v2_xor": {
+    "cases": 168,
+    "question_bits": 2864,
+    "answer_bits": 664,
+    "max_q": 18,
+    "max_prefix": 22
+  },
+  "d4_and": {
+    "cases": 336,
+    "question_bits": 6320,
+    "answer_bits": 1664,
+    "max_q": 20,
+    "max_prefix": 25
+  },
+  "layer2_v0": {
+    "cases": 104,
+    "question_bits": 2648,
+    "answer_bits": 408,
+    "max_q": 27,
+    "max_prefix": 31
+  },
+  "layer2_v1": {
+    "cases": 168,
+    "question_bits": 4376,
+    "answer_bits": 664,
+    "max_q": 27,
+    "max_prefix": 31
+  },
+  "layer2_v2": {
+    "cases": 168,
+    "question_bits": 4376,
+    "answer_bits": 664,
+    "max_q": 27,
+    "max_prefix": 31
+  }
+}
