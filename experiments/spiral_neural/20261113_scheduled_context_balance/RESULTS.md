@@ -35,7 +35,7 @@ T：`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python run.py gate` 事前PASS；�
 `run.py` SHA256 `41cf9d8115ef8a249d4ef64ac173c46761b471dd7a9284c5661ca197fdc70e18`；
 `PREREGISTRATION.json` SHA256 `84bb8900dbc55dc4b4b226de089ebdce532f3bdb8e187e58c26b3191965e78a9`；
 `raw_cases.jsonl` SHA256 `e91630fe7d0142d9f981e17d079687dfc19f7ebc542ee9df6cc881a2f0565a8d`。
-**Git 僅留事前凍結和結果摘要，不含大型checkpoint與原始raw ZIP；單憑git clone不能重播本輪全部神經推論。**
+**Git 已公開字節核對一致的正式 `run.py`、原始 `PREREGISTRATION.json`、獨立 `verify_numpy.py`、`frozen_inputs/parent_course.json`、事前凍結與結果；但不含六份訓練前後 checkpoint 或原始raw ZIP，單憑git clone仍不能重播本輪全部神經推論。** 事前manifest的 `source_SHA_note` 曾規劃要上傳來源權重，實際沒有上傳到Git；完整權重保存在已驗SHA的伴隨ZIP，不能把未實現的出版計畫稱為已完成。
 
 U：使用者要求真正01小網路學習／泛化、受控課程；F：PR40、44真checkpoint及P030～P035原證據；T：本輪PyTorch真訓練及獨立NumPy重播；A：c均衡減少shortcut仍是未被本次兩seed支持為穩定修復的候選。UR1、F2、數學題庫PR5均不同研究線，這不是數學學習或SLE優於普通二進位之證據。
 
