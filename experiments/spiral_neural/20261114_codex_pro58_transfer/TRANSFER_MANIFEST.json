@@ -1,0 +1,250 @@
+{
+  "archive": {
+    "bytes": 37262691,
+    "sha256": "6e24b1ccaa58c1b55b9b7ac2e97bd749fa69893aa1f0c70934ce9d3f14ebcd6a"
+  },
+  "files": {
+    "docs/ai_orchestration/CODEX_PRO58_CURRENT_MASTERY_20261114.md": {
+      "bytes": 643,
+      "sha256": "e738def211ee638128f91e06e229851a77bc733046138672ba988b411122ba19"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/.gitattributes": {
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/HANDOFF.md": {
+      "bytes": 1326,
+      "sha256": "db85d6303b714e6056c05a5faa65b14105a341722fc5c28659170944ca3676f9"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/README.md": {
+      "bytes": 327,
+      "sha256": "c65ff70934758a11dc660791098f4bbd76be3ecba3c918c6701674203c7a73ec"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/RESULTS.md": {
+      "bytes": 4129,
+      "sha256": "7724e78be8f70ea9a0f03ea9db177054b30b0d5b52f3722276e561db705b126d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/audit-summary.json": {
+      "bytes": 10481,
+      "sha256": "579f86b3c02f2bd25adc06b802e0a3a8df7a4d2f227b5a62f2f0ac11b58439aa"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/audit_e4.py": {
+      "bytes": 10206,
+      "sha256": "9e98ebe3f5d9569e30b4380da4afb7aa25120065b17e79217aa5129f71492e83"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/audit_panel_scope.py": {
+      "bytes": 2183,
+      "sha256": "7a7bb46a58a2671aa8908335698f3ecfe50f68e18c30100567020e1fd12ca835"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/compact.json": {
+      "bytes": 427309,
+      "sha256": "ed35ca61d54da86a7e426dfbc02ea086195f746e0811a24443e3e75855e81665"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/engineering.json": {
+      "bytes": 819,
+      "sha256": "b17f794368f9ad7d827b59ed770d7d036b3e142236751cd5905faf491a8d7e4e"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/external-review.json": {
+      "bytes": 1225,
+      "sha256": "6f3f9431fefee83682e62048328004d80c5c8e79d3a37c6467d8dbbc6f118b54"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/finish_round.py": {
+      "bytes": 9145,
+      "sha256": "ffb80f7b880f8d925ff9fd73387ff931c911c852acf425f5b093ac55c645c913"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/freeze_local.py": {
+      "bytes": 4595,
+      "sha256": "ec1e3831c96a540ae8a3f30c74801b0844a4a94185a13f1b3318db8d4fa0a94b"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/independent-audit-command-result.json": {
+      "bytes": 551,
+      "sha256": "7d9cc5ea648a1ba8baa3209a283aee4ea8e9c65aedf8f7baf61df9d9d520c171"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/initial-panel-gate-failure.stderr.txt": {
+      "bytes": 783,
+      "sha256": "93601a2f5fc13b2b99baf0f24b1be0752f83c57e277aefefd857bc4cc230eb57"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/inputs.zip": {
+      "bytes": 4556825,
+      "sha256": "cba8b0033451724db66163f704906f8c5f472a101fdb68226eaeb01627ce3216"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/launch_formal.py": {
+      "bytes": 1837,
+      "sha256": "f3484e7985564709f7e24164d9414b7122870f25ad92cd19572c68f8f0d9174d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/manifest.json": {
+      "bytes": 18217,
+      "sha256": "f704aad2d37fd2564b80750b38b8ea03d2ef40fc7d3f770514d07412bfddf826"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/metadata.zip": {
+      "bytes": 6326,
+      "sha256": "c80eadd7cf880e3aba8ca76523eba8f5d3fd38c91501dc401a9c16be54c31191"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/new-panel-command-result.json": {
+      "bytes": 385,
+      "sha256": "826a0c25b70973a13ee75e42dd27a239a4daeec6e742a70d08316aa01444d11d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/new-panel-recovery-command-result.json": {
+      "bytes": 212,
+      "sha256": "657ae885637625017151933f51119d07b5e16eaaee56b150bae2770ddb508d2f"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/new-panel-summary.json": {
+      "bytes": 3474,
+      "sha256": "d39678dcc11f33a5b6e96be1ee7cf23e1a9411542bf3ee0abed88a39c7574447"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/new-panel.zip": {
+      "bytes": 357236,
+      "sha256": "dfb2eed417ed610a9fb7b34bb510da08b0cafe66578639aff149889ccbe995aa"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pack_results.py": {
+      "bytes": 12123,
+      "sha256": "535d844dee0fd7498e5fd50e80174fb5d9f6e92f183569dc7315dd50f358a87d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/packaging-correction.json": {
+      "bytes": 769,
+      "sha256": "a3ee62f90752fcfd3087d5fa0c1e97d667a1785caacc1136e3d0ee6451285438"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/panel-recovery-intent.json": {
+      "bytes": 1029,
+      "sha256": "4be6214c4a166f94b59708af4a59805039ef94f6094cfa1df981eae7f2f732af"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/panel-recovery-result.json": {
+      "bytes": 1277,
+      "sha256": "cc2cf1724343c00a86a746e4cee6c4fd74441a16362d3e51e71e2d251d3a9f47"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/panel-scope-audit.json": {
+      "bytes": 1604,
+      "sha256": "e5776ac4587c321fdddc0e4e1c3cd5121c85b3f2e7aa8ef9ed0c79e02075c386"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/policy-command-result.json": {
+      "bytes": 292,
+      "sha256": "8fc7b7e142e684a6f3a0f75aa9d1be016df902a3564de30f91cbd14d62e2bafa"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/policy-readout.json": {
+      "bytes": 9966,
+      "sha256": "8fcb3d9db03230f10b04207e6c79ad61200207298d1f963d7a6713d75cf4224d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/policy_panel.py": {
+      "bytes": 6881,
+      "sha256": "087411c86535971251ca16bf9a8f22a0145eb40c0619d057d6fbbddfa3805d55"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/postfreeze-processing.json": {
+      "bytes": 634,
+      "sha256": "756b1d726a6ca8cbcff414ace930ec9b4322dd6d4f14728e75f51fc7b8b07639"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/preregistration.zip": {
+      "bytes": 4557707,
+      "sha256": "b366d978fc98f33d7855c3f16677174f692340e255b5b29cacd918a360cc06a6"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source-manifest.json": {
+      "bytes": 1387,
+      "sha256": "b48882292bce2c8d548f31b1e9fa5d49f1d61ebc590a8385bd96eb9143411838"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/docs/ai_orchestration/WINDOW_GPT_MASTERY_REVIEW_20261114.md": {
+      "bytes": 2096,
+      "sha256": "7285da3b23072588b053099511fd2bd33073da980321b3a7019fd580832f329e"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/experiments/spiral_neural/20261114_window_mastery_review/README.md": {
+      "bytes": 10474,
+      "sha256": "768a729b6f2056c23c7a15a64a576a039c4113f942cbb62f4a1178d805f7fa64"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/experiments/spiral_neural/20261114_window_mastery_review/next_phase_candidate.json": {
+      "bytes": 5750,
+      "sha256": "9e5579479491d99bb5c85fdeac6752d2130da233651a7fe56eec80f92f126e3e"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/experiments/spiral_neural/20261114_window_mastery_review/pr57_static_audit.json": {
+      "bytes": 9039,
+      "sha256": "57af57f5a3b05873d0b05e8a0d39abdc901ba8c62696f7298219805c775cda8b"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/experiments/spiral_neural/20261114_window_mastery_review/record_checks.json": {
+      "bytes": 2402,
+      "sha256": "6a177a8e124a8e36c52465d8cbed8be7b5ecbc714eb9aa95824ae2412e79f209"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/pro58-source/experiments/spiral_neural/20261114_window_mastery_review/source_snapshot.json": {
+      "bytes": 12153,
+      "sha256": "026d0e4b233ec23a97b807039cb033f4a927aab07ec43601a013938f86dda135"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/protocol.json": {
+      "bytes": 4982,
+      "sha256": "84929a32e2a8476117b0fb9c403a88abbf8ac3a2fdd6c077e680b530ca488d13"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/publication-manifest.json": {
+      "bytes": 39711,
+      "sha256": "575d73c85aecc6fa4f30435825abcc3e84c544fd4fb80616f64f227ab2e3479e"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/recover_panel_gate.py": {
+      "bytes": 4434,
+      "sha256": "b973fe38f7a17562a647d1d0eda0b316c4e44476e76e7892e8912aac74d2bfbc"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/regression.py": {
+      "bytes": 10631,
+      "sha256": "abb797b41cadc70af394c6f142cf00dc337e46ea000b2a417263496fbb2bc1a2"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/run_continue.py": {
+      "bytes": 11810,
+      "sha256": "c36068630e11cd8c7c5cd2ae4b268250440415ed2e53300d083149433180497d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/science.zip": {
+      "bytes": 29220403,
+      "sha256": "629dea58b43f95878b4cf942941b0539758f1fcbdfd601a8e9b0276f416a9676"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/seal_local.py": {
+      "bytes": 5069,
+      "sha256": "ca4a8d0439c78bf49d46b5220b1ed078c2695e0a6f5b521c6647808278041c2c"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/source-freeze.json": {
+      "bytes": 1124,
+      "sha256": "eabd2f66284aa96b5a50dbbf6db32d95eb7a27b4426e72ffa94e730e4e10a23d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/team-final-summary.json": {
+      "bytes": 1361,
+      "sha256": "40abff7a85c295737b92bfcdae00a9158f9dfcfba8f40d1614633a3db278e205"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/test_continue.py": {
+      "bytes": 4877,
+      "sha256": "a4afea67214a64f611422e20115d68281e757a6b43e7edacbd1660aee87eb5d2"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/vendor/e3_probe_audit.py": {
+      "bytes": 31194,
+      "sha256": "cff693544debfa6bbd730af6df20fe3bed2be7c667b2c6e2714879a2b2c8bc30"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/vendor/f2_stability_audit.py": {
+      "bytes": 44445,
+      "sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/vendor/pro56/e3_composition_probe.py": {
+      "bytes": 23512,
+      "sha256": "05a85714c7a8e9c168375a335b7c247c9097a54be1593a18c3796b0aef54468d"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/vendor/run_e4.py": {
+      "bytes": 15159,
+      "sha256": "6c5ad6fc3729f6e4ecdbdbce3327bd034650c2fd79ba48d804896a1465c97903"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/verification-command-summary.json": {
+      "bytes": 851,
+      "sha256": "193d6fb65503fd037a2ea55e57ad662477ee4f81263af1016e19b61337c0f465"
+    },
+    "experiments/spiral_neural/20261114_codex_pro58_current_mastery/verification-recovery-summary.json": {
+      "bytes": 2369,
+      "sha256": "473adb73b93400980a902163fc60029fa09f14b02ab38adfb94982c208694760"
+    }
+  },
+  "local_preregistration_commit": "e330bf091cc247d91771c86ae41fdff10b09650e",
+  "local_result_commit": "cf4a70853958dfa92f0cb360cf6c12e73e9c5237",
+  "optimizer_updates": 0,
+  "parts": [
+    {
+      "bytes": 20971520,
+      "name": "research-bundle.zip.part00",
+      "sha256": "bade6647e357cfa2626a0315ce36320483f55838bc04e36fd3f21fa33a80b874"
+    },
+    {
+      "bytes": 16291171,
+      "name": "research-bundle.zip.part01",
+      "sha256": "351c7f42889f13d6861fe06cf019cf6f8c1c7d41c8844fe3592625e0785f0a42"
+    }
+  ],
+  "prefix": "experiments/spiral_neural/20261114_codex_pro58_current_mastery",
+  "schema": "exact-git-research-multipart-v1",
+  "scope": "Complete current experiment including all states, raw records, source, original frozen preregistration and documented evaluation error. Local Git ancestry is not pushed; exact committed files are transported and verified instead."
+}
