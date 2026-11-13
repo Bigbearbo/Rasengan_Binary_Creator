@@ -1,0 +1,9 @@
+{
+  "commit": "f9d41eb28f067a222682e02c85c7371297bddde9",
+  "path": "experiments/spiral_neural/20261113_codex_ae1_flip2/publication-manifest.json",
+  "Git_blob": "dafd61634a966b30977fc13cb3194edd542bcc87",
+  "sha256": "193d2c49ccf052c55db808014cb837f80204789fc93388fd3955c4205720e9a4",
+  "bytes": 280221,
+  "byte_match": true,
+  "method": "current-turn live GitHub connector base64 actual bytes compared to cached public manifest"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "zero-NN-review-development-attempt-v1",
+  "status": "rejected_during_development_then_corrected",
+  "helper": "check_protocol.py",
+  "observed_failure": "AssertionError in correct_map at the question-ID check, line37, during the first actual zero-NN run",
+  "incorrect_assumption": "The first helper version assumed question_id=3*pair_id+class_rank for old classes",
+  "source_and_artifact_correction": "Pinned run_f2.py target_pool and saved generation rows use class-block offsets0/900/1800/2700 plus pair_id. The helper was corrected to that actual mapping",
+  "failed_source_snapshot_preserved": false,
+  "failed_source_sha256": null,
+  "evidence_scope": "Honest record from actual tool failure; no old source or source hash was retroactively fabricated",
+  "successful_current_helper_sha256": "d79860914ab8e9cdc2864cf12c0c8e936b4cd005a10d63e328979dbda16e8837",
+  "successful_report": "protocol-review.json",
+  "successful_report_sha256": "e921eceefb784854112ffcf38ae1f8a95fde6ea589e22d0f47f06e494fae82eb",
+  "NN_forward_calls": 0,
+  "optimizer_updates": 0,
+  "scientific_source_or_result_modified": false
+}

@@ -1,0 +1,21 @@
+{
+  "round": "F2-STABILITY-20261113",
+  "gemini": {
+    "decision": "skipped_unavailable_analysis_only_path",
+    "reason": "Installed agy and existing login retained; prior tool-isolation initialization failed with provider outcome unknown. No resend or relogin.",
+    "new_calls": 0
+  },
+  "nvidia": {
+    "task_id": "F2-ONEEPOCH-METHOD-001",
+    "decision": "one_actual_live_call_candidate_rejected",
+    "new_calls": 1,
+    "retries": 0,
+    "reason": "Returned non-JSON claim confused epochs with updates/global t and miscomputed all three arithmetic fields; unsupported matching criticism rejected by coordinator.",
+    "research_claims_accepted": 0,
+    "actual_tool_wall_seconds": 6.198,
+    "provider_cost_and_token_usage": "not provided in this public readout"
+  },
+  "validation": "external-method-checks.json contains fixed-program arithmetic checks; no NN calls or optimizer updates",
+  "native_agents": "Implementation, independent local review and mechanical publication are native agents, distinct from the genuine external NVIDIA call.",
+  "scope": "Only explicitly selected public PR33 facts and synthetic method arithmetic were dispatched; private handoff, chat and account data excluded. No background schedule."
+}

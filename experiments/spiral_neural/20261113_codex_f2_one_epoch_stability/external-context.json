@@ -1,0 +1,50 @@
+{
+  "classification": "public",
+  "source_commit": "f9d41eb28f067a222682e02c85c7371297bddde9",
+  "source": "PR33 original retained per-epoch states/outputs in public evidence archives",
+  "design": "For each seed use its archived FIRST four-class-perfect state, exact same next frozen36000-target permutation. Existing eta.003 next-epoch outputs are historical paired controls. New arm changes ONLY eta to.001, one epoch perseed; no schedule/state/shape/precision/gradient change.",
+  "subjects": [
+    {
+      "seed": 101,
+      "start_epoch": 19,
+      "next_epoch": 20,
+      "start_t": 981000,
+      "control_lost_questions": 7
+    },
+    {
+      "seed": 202,
+      "start_epoch": 22,
+      "next_epoch": 23,
+      "start_t": 1192500,
+      "control_lost_questions": 5
+    },
+    {
+      "seed": 303,
+      "start_epoch": 19,
+      "next_epoch": 20,
+      "start_t": 1125900,
+      "control_lost_questions": 52
+    }
+  ],
+  "shape": {
+    "L": 80,
+    "H": 64,
+    "parameters": 10499,
+    "questions_per_class": 900,
+    "classes": 4,
+    "targets_per_epoch": 36000,
+    "train_dense_MAC_per_target": 21056
+  },
+  "restoration": "Original p/m/v/birth/t/RNG/events/counters retained; before new updates all3 must pass fourclass900baseline. No reset/no best-checkpoint replacement of original official endpoints. Archived-state forks are new experiments.",
+  "primary": "Report new total lost perseed versus7/5/52; primary hypothesis strict fewerlost in all3. Outcome may fail; never extend oneepoch or tuneeta after outcomes. Same exposed900bank, after observed-data firstperfect-state selection; not blind, population significance or longtermstability evidence.",
+  "requested_claim_shape": {
+    "new_updates_total": "integer",
+    "training_dense_MAC_total": "integer",
+    "new_end_t_in_seed_order": [
+      "integer"
+    ],
+    "methodological_traps": [
+      "string"
+    ]
+  }
+}

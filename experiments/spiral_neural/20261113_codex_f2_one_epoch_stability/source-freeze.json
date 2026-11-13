@@ -1,0 +1,24 @@
+{
+  "AST_change": {
+    "entire_AST_equal_after_reversing_one_leaf": true,
+    "function": "Model.step",
+    "intervention_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "original_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "unique_changed_float_constant": {
+      "after": 0.001,
+      "before": 0.003
+    }
+  },
+  "formal_forward_calls": 0,
+  "inputs_zip_bytes": 1272100,
+  "inputs_zip_sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79",
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "members": 36,
+  "new_optimizer_calls": 0,
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  }
+}

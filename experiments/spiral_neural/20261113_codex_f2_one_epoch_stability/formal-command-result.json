@@ -1,0 +1,21 @@
+{
+  "command": [
+    "<python>",
+    "-X",
+    "utf8",
+    "-B",
+    "D:\\Codex用\\outputs\\f2-stability\\run_stability.py",
+    "--execute",
+    "--manifest",
+    "D:\\Codex用\\work\\f2-stability-20261113\\prereg\\manifest.json",
+    "--approved-manifest-sha",
+    "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+    "--preregistration-commit",
+    "dbebad71af32ea208dd85171347a4185e2e7e23d",
+    "--out",
+    "D:\\Codex用\\work\\f2-stability-20261113\\science"
+  ],
+  "command_invocations": 1,
+  "exit_code": 0,
+  "formal_seconds": 197.79170689999592
+}

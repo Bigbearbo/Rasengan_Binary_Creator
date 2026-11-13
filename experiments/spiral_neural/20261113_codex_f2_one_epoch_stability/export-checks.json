@@ -1,0 +1,24 @@
+{
+  "all_original_files_hash_unchanged": 124,
+  "archive_members_byte_CRC_SHA_verified": 137,
+  "authorized_public_copy_redactions": 1,
+  "local_private_original_modified": false,
+  "original_prereg_files_byte_verified": 23,
+  "packager_NN_optimizer_external_Git_calls": 0,
+  "science_coverage": {
+    "all_actual_files_preserved": true,
+    "prereg_finite_arrays": {
+      "NPY": 3,
+      "NPZ": 9
+    },
+    "preregistration_nested_inputs_are_an_exact_duplicate_of_inputs_zip": true,
+    "source_files": 48,
+    "source_finite_arrays": {
+      "NPY": 0,
+      "NPZ": 18
+    },
+    "unique_source_finite_NPY": 3,
+    "unique_source_finite_NPZ": 27
+  },
+  "status": "PASS"
+}

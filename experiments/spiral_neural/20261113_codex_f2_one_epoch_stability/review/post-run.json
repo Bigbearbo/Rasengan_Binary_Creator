@@ -1,0 +1,124 @@
+{
+  "actual_optimizer_replay": false,
+  "all3_strict_hypothesis": true,
+  "audit_cost": {
+    "calls_by_phase": {
+      "final_TF": 108000,
+      "seed101_baseline": 36000,
+      "seed101_control": 36038,
+      "seed101_new": 36000,
+      "seed202_baseline": 36000,
+      "seed202_control": 36000,
+      "seed202_new": 36000,
+      "seed303_baseline": 36000,
+      "seed303_control": 36000,
+      "seed303_new": 36000
+    },
+    "dense_MAC": 4507020416,
+    "external_model_calls": 0,
+    "forward_calls": 432038,
+    "new_students": 0,
+    "optimizer_calls": 0
+  },
+  "baseline_new_historical_control_audited": true,
+  "details_sha256": "5c494177adc256705dff407856b5a91b4db1aebecf09e25dfcb0ba29d9add588",
+  "finalTF_targets_independently_recomputed": 108000,
+  "formal_session": 68762,
+  "free_questions_independently_generated": 32400,
+  "limitations": [
+    "Posthoc first-full historical starts, one fixed next epoch, exposed900bank and3inherited students.",
+    "No independent optimizer/gradient replay. Training aggregate digest form/source provenance checked, not raw pertarget losses or intermediate weights.",
+    "Formal root whole-command wall and primary-only timing list have different scopes; independent inference audit cost separate."
+  ],
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c",
+  "preregistration_commit": "dbebad71af32ea208dd85171347a4185e2e7e23d",
+  "proofs": 15,
+  "receipt_sha256": "061bed3c80132ba23878ec0955dfc82af178aaf013d99dc0b5dea8c5065d5b50",
+  "review_source_sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc",
+  "reviewer_new_students": 0,
+  "reviewer_optimizer_calls": 0,
+  "root_confirmed_formal_exit0": true,
+  "schema": "f2-stability-independent-post-run-v1",
+  "science_files": 48,
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  },
+  "status": "passed",
+  "strict_equality": true,
+  "students": [
+    {
+      "historical_lost": 7,
+      "new_lost": 0,
+      "scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F2": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "seed": 101,
+      "strict_directional_pass": true
+    },
+    {
+      "historical_lost": 5,
+      "new_lost": 0,
+      "scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F2": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "seed": 202,
+      "strict_directional_pass": true
+    },
+    {
+      "historical_lost": 52,
+      "new_lost": 0,
+      "scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F2": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "seed": 303,
+      "strict_directional_pass": true
+    }
+  ]
+}

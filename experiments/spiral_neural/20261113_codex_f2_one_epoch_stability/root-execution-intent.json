@@ -1,0 +1,8 @@
+{
+  "id": "F2-STABILITY-ETA001-20261113",
+  "intent_created_UTC": "2026-11-13T12:33:48.751Z",
+  "formal_command_invocations_authorized": 1,
+  "auto_retry": false,
+  "preregistration_commit": "dbebad71af32ea208dd85171347a4185e2e7e23d",
+  "manifest_sha256": "1079366438d667f7bce2ac8fce983792b6c7bf935f4a200fb9eda4e9612e328c"
+}

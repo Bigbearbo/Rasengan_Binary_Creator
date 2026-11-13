@@ -1,0 +1,319 @@
+{
+  "AST_change": {
+    "entire_AST_equal_after_reversing_one_leaf": true,
+    "function": "Model.step",
+    "intervention_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "original_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "unique_changed_float_constant": {
+      "after": 0.001,
+      "before": 0.003
+    }
+  },
+  "archive": {
+    "bytes": 1272100,
+    "file": "inputs.zip",
+    "sha256": "46f14f6e233ed6f6304c9c0a01779c653647c2f40ae60c57ab4e5d7661f0dc79"
+  },
+  "external_model_calls": 0,
+  "files": {
+    "historical/seed101/control-generation.json": {
+      "bytes": 736874,
+      "sha256": "13ad2f919c7bd6f85adc83991c93416da63d7f34b99d9441093163a96f98ced3"
+    },
+    "historical/seed101/control-record.json": {
+      "bytes": 7039,
+      "sha256": "5a0447de7ed4e42dac52fb54450d08da016d12ad915a685434f412ce4ebc6108"
+    },
+    "historical/seed101/control-state.npz": {
+      "bytes": 216804,
+      "sha256": "83923a95a808bf120719eac85ecf1e88a710cf0e52d22db0a6a2f677394b36d5"
+    },
+    "historical/seed101/start-generation.json": {
+      "bytes": 736831,
+      "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+    },
+    "historical/seed101/start-record.json": {
+      "bytes": 6932,
+      "sha256": "5f90d26060cf4216516ad1dc248b7e6ed0303e4753b02cc971c0351f3b39efce"
+    },
+    "historical/seed101/start-state.npz": {
+      "bytes": 216804,
+      "sha256": "46d6056d2a1ca0dee40ea7e4849d1f7bf4b067185ad9d0c58b286e343f47fb91"
+    },
+    "historical/seed202/control-generation.json": {
+      "bytes": 736836,
+      "sha256": "fe9b7a8a084a28fb7977b488b3e3c1b495886d58283ff29edf620ccbe4b4e0db"
+    },
+    "historical/seed202/control-record.json": {
+      "bytes": 7049,
+      "sha256": "1b5c231e51a649cf8cf595ae0adbb7f27f064066cf09c291fba3677e90cbe98e"
+    },
+    "historical/seed202/control-state.npz": {
+      "bytes": 216804,
+      "sha256": "4eae16df22f46290f78b04048221ea932aab3975846bfc1d10ddf1a61b8627fe"
+    },
+    "historical/seed202/start-generation.json": {
+      "bytes": 736831,
+      "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+    },
+    "historical/seed202/start-record.json": {
+      "bytes": 6933,
+      "sha256": "d8ab17a58547b5c390744d4a8f6eab21726d81225911c6063ffa0c6d106334d6"
+    },
+    "historical/seed202/start-state.npz": {
+      "bytes": 216804,
+      "sha256": "0636c6123b2d928a916aa1abe7968d36f8eea305d0966e8e5d3ee43878da00ff"
+    },
+    "historical/seed303/control-generation.json": {
+      "bytes": 736883,
+      "sha256": "81fa426fc29a14f4815a2b1fce273707bf6fe76844ee1e0678545535422a903a"
+    },
+    "historical/seed303/control-record.json": {
+      "bytes": 7194,
+      "sha256": "49faf95f1c0b014edb622b11c3efc2f524430e6be938ffbd714e03eec55d9cd7"
+    },
+    "historical/seed303/control-state.npz": {
+      "bytes": 216800,
+      "sha256": "f5b308c324e0e6ef00e032f5eeeb4571c78d7a77f6c4156a7ab50978894567e7"
+    },
+    "historical/seed303/start-generation.json": {
+      "bytes": 736831,
+      "sha256": "afb01a45afe5787185372d8861571c47087eaaa3b8c8f86a2cf4899b0a25bd94"
+    },
+    "historical/seed303/start-record.json": {
+      "bytes": 6933,
+      "sha256": "fde46de540ddcf74d5f0f9f839e18757de81634666558a57c69f29ea3fb4c7c6"
+    },
+    "historical/seed303/start-state.npz": {
+      "bytes": 216800,
+      "sha256": "f8477567836591676aad80430c01a96ade970fbff15ddf13911bbee7a35064b0"
+    },
+    "initial/seed101.npz": {
+      "bytes": 216804,
+      "sha256": "46d6056d2a1ca0dee40ea7e4849d1f7bf4b067185ad9d0c58b286e343f47fb91"
+    },
+    "initial/seed202.npz": {
+      "bytes": 216804,
+      "sha256": "0636c6123b2d928a916aa1abe7968d36f8eea305d0966e8e5d3ee43878da00ff"
+    },
+    "initial/seed303.npz": {
+      "bytes": 216800,
+      "sha256": "f8477567836591676aad80430c01a96ade970fbff15ddf13911bbee7a35064b0"
+    },
+    "orders/seed101.npy": {
+      "bytes": 144128,
+      "sha256": "bdf50fa0bb1778b6ab2eccfb19c0731936c507bdc07d109a5587f723a425b7a5"
+    },
+    "orders/seed202.npy": {
+      "bytes": 144128,
+      "sha256": "4ab083e40fb6d7dfa1e3316a21fc75ddc5ad4c765c03abecf6a5ae1d23d69553"
+    },
+    "orders/seed303.npy": {
+      "bytes": 144128,
+      "sha256": "c034f0d73f57c7e9818c32fa299c5191b1702bfb77ccfe8774663f4416a868ad"
+    },
+    "payloads.json": {
+      "bytes": 11430,
+      "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+    },
+    "plan.json": {
+      "bytes": 5356,
+      "sha256": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854"
+    },
+    "provenance/F2-manifest.json": {
+      "bytes": 13975,
+      "sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95"
+    },
+    "provenance/public-proof.json": {
+      "bytes": 10897,
+      "sha256": "f54d13d5e50aedc4efdb2335bf1b9a94452286be9cd67a0bd6174a88f64c8b49"
+    },
+    "provenance/publication-manifest.json": {
+      "bytes": 280221,
+      "sha256": "193d2c49ccf052c55db808014cb837f80204789fc93388fd3955c4205720e9a4"
+    },
+    "questions.json": {
+      "bytes": 537364,
+      "sha256": "1c226e32bd3ddade9de21fcf1f91d32310d31f79aa60497e2c604b836446c409"
+    },
+    "source/AST-change.json": {
+      "bytes": 415,
+      "sha256": "bec4f8bfa57b99632965df3061b95779ff14bde603378bfebd7ccdd81b51a81d"
+    },
+    "source/Model-eta001.ast": {
+      "bytes": 32698,
+      "sha256": "29fb21b0dd93ecf80e9e964d781e8d455aa13137f3b64b449096ea3509446eaf"
+    },
+    "source/Model-original.ast": {
+      "bytes": 32698,
+      "sha256": "38e995ce38124c983c23e9fddae899213c5255552eb2fb9a333c8def19193184"
+    },
+    "source/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    },
+    "vendor/protocol.json": {
+      "bytes": 6128,
+      "sha256": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958"
+    },
+    "vendor/run_f2.py": {
+      "bytes": 45777,
+      "sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6"
+    }
+  },
+  "formal_forward_calls": 0,
+  "id": "F2-STABILITY-ETA001-20261113",
+  "new_optimizer_calls": 0,
+  "parents": {
+    "101": {
+      "counters": {
+        "inference_MAC": 10873774336,
+        "inference_calls": 1042348,
+        "t": 981000,
+        "train_MAC": 20655936000
+      },
+      "full_state_sha256": "81284bfca72723b4490cbf5fc299b2aa94e6f805dc81471b8595c4f61e08bf7f",
+      "historical_control_lost": 7,
+      "raw_sha256": "46d6056d2a1ca0dee40ea7e4849d1f7bf4b067185ad9d0c58b286e343f47fb91"
+    },
+    "202": {
+      "counters": {
+        "inference_MAC": 13083981312,
+        "inference_calls": 1254216,
+        "t": 1192500,
+        "train_MAC": 25109280000
+      },
+      "full_state_sha256": "ccb3b84fd2d4f763b2b793997cfe0637ae5bd801c56cfd21c58a602aa89fec3a",
+      "historical_control_lost": 5,
+      "raw_sha256": "0636c6123b2d928a916aa1abe7968d36f8eea305d0966e8e5d3ee43878da00ff"
+    },
+    "303": {
+      "counters": {
+        "inference_MAC": 12398546752,
+        "inference_calls": 1188511,
+        "t": 1125900,
+        "train_MAC": 23706950400
+      },
+      "full_state_sha256": "d541c7ed6a293e411332e0f1676b7301c61c352ebd0e47b8155f7ec5d87bc7e0",
+      "historical_control_lost": 52,
+      "raw_sha256": "f8477567836591676aad80430c01a96ade970fbff15ddf13911bbee7a35064b0"
+    }
+  },
+  "protocol": {
+    "F2_protocol_sha256": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958",
+    "F2_runner_sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+    "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "author": "Codex",
+    "baseline": "ALL3 fresh3600-question free probes before ANY new optimizer update. Require every class900/900 and the complete generation result exactly equal the archived start-generation. Any failure aborts wholebatch0newupdates; only inference counters may change. Baseline is not training",
+    "costs": "DELTA from each selected start; inheritedt/trainMAC/inferencecounters separately recorded. Freshbaseline/probe/finalTF inference separate. Exactly3 newone-epoch primary trajectories and0 optimizer replays",
+    "course": "Exactly each seed's already-frozen next epoch20/23/20 target permutation from PR33 inputs.36000 (QID,position) targets, canonical pool6300/11700/6300/11700 per class. Verify slice against original order bytes and seed+555000 permutation sequence; no reshuffle or questionwise gradient order",
+    "derived_readout": "Savedtokens only: bit/word/STOP/firsterror/termination, baseline-to-new and baseline-to-control churn, betweenarm bothcorrect/newonly/controlonly/bothwrong QID categories.0additionalforward",
+    "end_t": {
+      "101": 1017000,
+      "202": 1228500,
+      "303": 1161900
+    },
+    "execute_gate": "Coordinator finalsource/inputfreeze+independentreview+Git preregistration then one explicit --execute only; default/prepare/validate do not perform trainedmodel inference",
+    "external_model_calls_by_runner": 0,
+    "final_TF": "After ALL3 newprimary trajectories, all3600 Q/36000 targets perseed with full Q/expected/free/logits/CE/labels. Reuse saved newfree. Total108000 finalTF forwards",
+    "forward_dense_MAC_per_call": 10432,
+    "generation": "Reuse pinned F2 cap32 own-output/L80 context guard; no oracle expectedlength cutoff or forcedSTOP",
+    "historical_control": "Original eta.003 next epoch20/23/20 is reused only from public archived state/generation/record. No control optimizer steps or newly trained control",
+    "historical_control_lost_QIDs": {
+      "101": 7,
+      "202": 5,
+      "303": 52
+    },
+    "id": "F2-STABILITY-ETA001-20261113",
+    "intervention": "Only the unique float Constant .003 inside original Model.step AST becomes .001. Original sourcebytes unchanged; dump both class ASTs and prove restoring that single Constant makes the entire class AST identical",
+    "limits": "Three fixed posthoc checkpoints and exposed900payloads, no blind generalization, population significance or longterm stability claim. Historical matched control, one-step-size intervention for exactlyone epoch. Retain all failures/results; no extraepochs/seeds/restart/bestcheckpoint/eta change",
+    "model": {
+      "H": 64,
+      "L": 80,
+      "parameters": 10499
+    },
+    "new_replay_updates": 0,
+    "new_training_dense_MAC_all_primary": 2274048000,
+    "new_training_dense_MAC_per_seed": 758016000,
+    "new_updates_all_primary": 108000,
+    "next_epochs": {
+      "101": 20,
+      "202": 23,
+      "303": 20
+    },
+    "optimizer": "Original NumPy CPU,float32 p/m/v, tanh, normclip1, Adam betas.9/.999 eps1e-8 and perparameter birth-age correction, teacherprefixCE unchanged; no GPU/Numba/minibatching/grow/router/features",
+    "parent_PR": 33,
+    "parent_head": "f9d41eb28f067a222682e02c85c7371297bddde9",
+    "parent_publication_manifest_Git_blob": "dafd61634a966b30977fc13cb3194edd542bcc87",
+    "parent_publication_manifest_sha256": "193d2c49ccf052c55db808014cb837f80204789fc93388fd3955c4205720e9a4",
+    "prepare_formal_forward_calls": 0,
+    "prepare_new_optimizer_calls": 0,
+    "primary_endpoint": "Perseed total previously-correct QIDs now wrong after exactlyone next epoch. Directional hypothesis: all3 neweta.001 lost_total strictly below their respective historicaleta.003 control lost_total. Report perclass QID lists, paired differences and newfour-class-all900 count even if hypothesis fails",
+    "profile": "Unchanged SLE-AEM2-n5-v1; same900 N4 payloads and3600 E1/E2/F1/F2 questions. Inputordinary0..29; literal flipped outputwords30/31 allowed. No new data, task, window, hidden width or heldout",
+    "public_provenance": "Pin complete PR33 publicmanifest and prior remote-byte receipt. Verify each selected public ZIP SHA/Gitblob/bytes plus member SHA/Gitblob/CRC32/rawbytes before compact extraction. Freeze exact original start/control NPZ containerbytes, start/control generations+records, bank/questions, original source and F2 helpers, next-order slices and provenance",
+    "replay_policy": "No full optimizer replay is planned. Tiny synthetic nonzero-moment/heterogeneous-birth one-step engineering and mandatory independent rawNumPy baseline/new/control free-generation and newfinalTF audit are separate evidence; trace digest is not independently replayed",
+    "replay_seeds": [],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "start_epochs": {
+      "101": 19,
+      "202": 22,
+      "303": 19
+    },
+    "start_t": {
+      "101": 981000,
+      "202": 1192500,
+      "303": 1125900
+    },
+    "starts": "Continue each actual first-four-class-full PR33 checkpoint at19/22/19, including full p/m/v/birth/t/growthRNG/seed/events/all counters. These are posthoc selected historical starts, not fresh independent students",
+    "training_dense_MAC_per_target": 21056,
+    "updates_per_seed": 36000
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schedules": {
+    "101": {
+      "dtype": "<u2",
+      "file": "orders/seed101.npy",
+      "shape": [
+        36000,
+        2
+      ],
+      "source_epoch": 20
+    },
+    "202": {
+      "dtype": "<u2",
+      "file": "orders/seed202.npy",
+      "shape": [
+        36000,
+        2
+      ],
+      "source_epoch": 23
+    },
+    "303": {
+      "dtype": "<u2",
+      "file": "orders/seed303.npy",
+      "shape": [
+        36000,
+        2
+      ],
+      "source_epoch": 20
+    }
+  },
+  "schema": "f2-stability-paired-v1",
+  "source_hashes": {
+    "protocol.json": "8f4452756a63d3665d85ec2b319d8d902a5038cca047223c5d32154b37499854",
+    "run_stability.py": "2e11066e065103f6d8c211718fc4a3271b79876b52af00f49241fe79577cf6e3",
+    "test_stability.py": "2262e781c3e1c32e0dafe58d3af38bef8e1bbd082d90f33087bfa60c4c6b5486"
+  },
+  "status": "frozen_before_any_new_trained_model_forward_or_update"
+}
