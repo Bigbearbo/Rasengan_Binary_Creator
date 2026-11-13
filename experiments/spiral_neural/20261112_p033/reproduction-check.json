@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "archive_generation": "final-v2",
+  "public_archives_only": true,
+  "assembled_files_sha_verified": 90,
+  "diagnostic_recomputed_equal": true,
+  "original_history_overwritten": false
+}

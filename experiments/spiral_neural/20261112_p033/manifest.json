@@ -1,0 +1,121 @@
+{
+  "coverage_LH": [
+    16,
+    72
+  ],
+  "coverage_Neg_budget": 3000,
+  "coverage_new_percent": 70,
+  "coverage_schedule_offsets": {
+    "C0": 0,
+    "C1": 10000,
+    "S0": 0,
+    "S1": 10000
+  },
+  "experiment": "P033-D+A+3A",
+  "not_run": [
+    "V1/V2 pairing exposures",
+    "B learned architecture",
+    "extra widths",
+    "new math operators"
+  ],
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "seed": [
+    101,
+    202,
+    303
+  ],
+  "source_sha256": {
+    "P033-事前執行規格-2026-11-12.md": "d4e430df21160a95f441c0a4f9840d3c8bc192c1cd22d3cd6605e2a39377b34f",
+    "diagnostic.py": "45082eaf549348fc70ffa440b6d1a4ceea3b5152d3898d0bfeed293bbb547a99",
+    "p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "p032_reference.py": "e20b74fcf5b9e6af3c78ac2ab7419613de7987a28426018266c26196bea67c95",
+    "p033.py": "6e7445b8824b781f6e00356bfbcb6678c099299157b6baddb216d733e5379b48"
+  },
+  "splits": {
+    "C0": {
+      "test": [
+        6
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "val": [
+        5
+      ]
+    },
+    "C1": {
+      "test": [
+        7
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "val": [
+        4
+      ]
+    },
+    "S0": {
+      "test": [
+        6
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "val": [
+        4
+      ]
+    },
+    "S1": {
+      "test": [
+        7
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "val": [
+        5
+      ]
+    }
+  },
+  "timing_budget": 3000,
+  "timing_exposure_per_op_value": 250,
+  "timing_groups": {
+    "G0": "S0",
+    "G1": "C1"
+  },
+  "timing_op_rng": "seed+70000",
+  "timing_value_rng": "seed+60000+1000*op",
+  "timings": [
+    "T0",
+    "T1",
+    "T0B"
+  ],
+  "upstream": "9118abf4e895204588f7c5aa1bfc2615d0ab52b8",
+  "warm_budgets": [
+    96,
+    192,
+    768,
+    768
+  ]
+}

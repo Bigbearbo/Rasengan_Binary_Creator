@@ -1,0 +1,828 @@
+{
+  "status": "verified",
+  "coverage": [
+    {
+      "split": "S0",
+      "train": [
+        36,
+        36
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "Echo_test_before": [
+        3,
+        3
+      ],
+      "Echo_test_after": [
+        0,
+        3
+      ],
+      "MAC_per_learner": 124756416
+    },
+    {
+      "split": "C0",
+      "train": [
+        36,
+        36
+      ],
+      "val": [
+        2,
+        6
+      ],
+      "test": [
+        1,
+        6
+      ],
+      "test_Echo": [
+        1,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "Echo_test_before": [
+        3,
+        3
+      ],
+      "Echo_test_after": [
+        1,
+        3
+      ],
+      "MAC_per_learner": 124756416
+    },
+    {
+      "split": "S1",
+      "train": [
+        36,
+        36
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "Echo_test_before": [
+        3,
+        3
+      ],
+      "Echo_test_after": [
+        0,
+        3
+      ],
+      "MAC_per_learner": 124756416
+    },
+    {
+      "split": "C1",
+      "train": [
+        36,
+        36
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "Echo_test_before": [
+        3,
+        3
+      ],
+      "Echo_test_after": [
+        0,
+        3
+      ],
+      "MAC_per_learner": 124756416
+    }
+  ],
+  "fresh_timing": [
+    {
+      "group": "G0",
+      "split": "S0",
+      "timing": "T0",
+      "train": [
+        19,
+        36
+      ],
+      "train_Echo": [
+        1,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        2,
+        6
+      ],
+      "test": [
+        3,
+        6
+      ],
+      "val_Echo": [
+        2,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        3,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 3,
+            "total": 24
+          },
+          "neg": {
+            "whole": 21,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    },
+    {
+      "group": "G0",
+      "split": "S0",
+      "timing": "T1",
+      "train": [
+        36,
+        36
+      ],
+      "train_Echo": [
+        18,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "val_Echo": [
+        0,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 15,
+            "total": 24
+          },
+          "neg": {
+            "whole": 17,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    },
+    {
+      "group": "G0",
+      "split": "S0",
+      "timing": "T0B",
+      "train": [
+        36,
+        36
+      ],
+      "train_Echo": [
+        18,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        1,
+        6
+      ],
+      "val_Echo": [
+        0,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        1,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 12,
+            "total": 24
+          },
+          "neg": {
+            "whole": 17,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 19,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    },
+    {
+      "group": "G1",
+      "split": "C1",
+      "timing": "T0",
+      "train": [
+        18,
+        36
+      ],
+      "train_Echo": [
+        0,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        2,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "val_Echo": [
+        2,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 2,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    },
+    {
+      "group": "G1",
+      "split": "C1",
+      "timing": "T1",
+      "train": [
+        36,
+        36
+      ],
+      "train_Echo": [
+        18,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "val_Echo": [
+        0,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    },
+    {
+      "group": "G1",
+      "split": "C1",
+      "timing": "T0B",
+      "train": [
+        36,
+        36
+      ],
+      "train_Echo": [
+        18,
+        18
+      ],
+      "train_Neg": [
+        18,
+        18
+      ],
+      "val": [
+        0,
+        6
+      ],
+      "test": [
+        0,
+        6
+      ],
+      "val_Echo": [
+        0,
+        3
+      ],
+      "val_Neg": [
+        0,
+        3
+      ],
+      "test_Echo": [
+        0,
+        3
+      ],
+      "test_Neg": [
+        0,
+        3
+      ],
+      "all8_by_op_at_fixed_snapshots": {
+        "1000": {
+          "echo": {
+            "whole": 21,
+            "total": 24
+          },
+          "neg": {
+            "whole": 3,
+            "total": 24
+          }
+        },
+        "1500": {
+          "echo": {
+            "whole": 15,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        },
+        "3000": {
+          "echo": {
+            "whole": 18,
+            "total": 24
+          },
+          "neg": {
+            "whole": 18,
+            "total": 24
+          }
+        }
+      },
+      "MAC_per_learner": 78840000
+    }
+  ],
+  "teacher_vs_free": [
+    {
+      "operator": "echo",
+      "heldout_rows": 48,
+      "first_wrong": [
+        15,
+        21,
+        10,
+        0,
+        0
+      ],
+      "free_wrong": [
+        15,
+        34,
+        36,
+        0,
+        0
+      ],
+      "teacher_wrong": [
+        15,
+        22,
+        32,
+        0,
+        3
+      ],
+      "rescued_after_first_error": [
+        0,
+        13,
+        11,
+        0,
+        0
+      ],
+      "introduced_by_correct_prefix_after_first_free_error": [
+        0,
+        1,
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "operator": "neg",
+      "heldout_rows": 48,
+      "first_wrong": [
+        27,
+        17,
+        4,
+        0,
+        0
+      ],
+      "free_wrong": [
+        27,
+        37,
+        31,
+        1,
+        1
+      ],
+      "teacher_wrong": [
+        27,
+        24,
+        28,
+        16,
+        0
+      ],
+      "rescued_after_first_error": [
+        0,
+        20,
+        17,
+        0,
+        1
+      ],
+      "introduced_by_correct_prefix_after_first_free_error": [
+        0,
+        7,
+        14,
+        15,
+        0
+      ]
+    }
+  ],
+  "heldout_diagonal_sensitivity": [
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 24,
+      "mean_signed_delta_p1": 0.6356328764011473
+    },
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 24,
+      "mean_signed_delta_p1": 0.06621513481430923
+    },
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 24,
+      "mean_signed_delta_p1": 0.3197308751701256
+    },
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 24,
+      "mean_signed_delta_p1": -0.5612433116619088
+    },
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 24,
+      "mean_signed_delta_p1": -0.03190615744951489
+    },
+    {
+      "phase": "after",
+      "H": 72,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 24,
+      "mean_signed_delta_p1": -0.44865372480501214
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 24,
+      "mean_signed_delta_p1": 0.6991181588027892
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 24,
+      "mean_signed_delta_p1": 0.09297043247269744
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 24,
+      "mean_signed_delta_p1": 0.37366551793376673
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 24,
+      "mean_signed_delta_p1": -0.39701505235961515
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 24,
+      "mean_signed_delta_p1": -0.008582059217249296
+    },
+    {
+      "phase": "after",
+      "H": 128,
+      "operator": "neg",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 24,
+      "mean_signed_delta_p1": -0.39861421392586377
+    },
+    {
+      "phase": "before",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 12,
+      "mean_signed_delta_p1": 0.7635641876951912
+    },
+    {
+      "phase": "before",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 12,
+      "mean_signed_delta_p1": 0.9999105110459414
+    },
+    {
+      "phase": "before",
+      "H": 72,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 12,
+      "mean_signed_delta_p1": 0.9182862979716225
+    },
+    {
+      "phase": "before",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 0,
+      "count": 12,
+      "mean_signed_delta_p1": 0.7588561600967879
+    },
+    {
+      "phase": "before",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 1,
+      "count": 12,
+      "mean_signed_delta_p1": 0.9999176691805823
+    },
+    {
+      "phase": "before",
+      "H": 128,
+      "operator": "echo",
+      "subset": "heldout",
+      "input_bit": 2,
+      "count": 12,
+      "mean_signed_delta_p1": 0.9470032368351203
+    }
+  ],
+  "coverage_control_reproduced": 6,
+  "training_presentations": 111888,
+  "target_updates": 554832,
+  "including_full_replay_updates": 1109664,
+  "scope": "same 3-bit domain, mechanism study; no new blind domain or representation change"
+}

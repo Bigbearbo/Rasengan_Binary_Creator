@@ -1,0 +1,31 @@
+{
+  "coverage": {
+    "C0": {
+      "0,1": [],
+      "0,2": [],
+      "1,2": []
+    },
+    "C1": {
+      "0,1": [],
+      "0,2": [],
+      "1,2": []
+    },
+    "S0": {
+      "0,1": [],
+      "0,2": [
+        "10"
+      ],
+      "1,2": []
+    },
+    "S1": {
+      "0,1": [],
+      "0,2": [
+        "11"
+      ],
+      "1,2": []
+    }
+  },
+  "exact_same_multiset_and_per_op_value_streams": true,
+  "fresh_interleaving_begins_in_first_two_lessons": true,
+  "pure_binary_and_roundtrip": true
+}

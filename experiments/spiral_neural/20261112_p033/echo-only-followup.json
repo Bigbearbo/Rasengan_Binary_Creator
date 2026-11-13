@@ -1,0 +1,87 @@
+{
+  "all_trace_curve_optimizer_RNG_replayed": true,
+  "comparisons": [
+    {
+      "Echo_after_Neg70_test": [
+        1,
+        3
+      ],
+      "Echo_after_Neg70_val": [
+        2,
+        3
+      ],
+      "Echo_only_test": [
+        3,
+        3
+      ],
+      "Echo_only_val": [
+        3,
+        3
+      ],
+      "split": "C0"
+    },
+    {
+      "Echo_after_Neg70_test": [
+        0,
+        3
+      ],
+      "Echo_after_Neg70_val": [
+        0,
+        3
+      ],
+      "Echo_only_test": [
+        3,
+        3
+      ],
+      "Echo_only_val": [
+        0,
+        3
+      ],
+      "split": "C1"
+    },
+    {
+      "Echo_after_Neg70_test": [
+        0,
+        3
+      ],
+      "Echo_after_Neg70_val": [
+        0,
+        3
+      ],
+      "Echo_only_test": [
+        3,
+        3
+      ],
+      "Echo_only_val": [
+        0,
+        3
+      ],
+      "split": "S0"
+    },
+    {
+      "Echo_after_Neg70_test": [
+        0,
+        3
+      ],
+      "Echo_after_Neg70_val": [
+        0,
+        3
+      ],
+      "Echo_only_test": [
+        3,
+        3
+      ],
+      "Echo_only_val": [
+        3,
+        3
+      ],
+      "split": "S1"
+    }
+  ],
+  "extra_presentations": 36000,
+  "extra_target_updates": 180000,
+  "extra_updates_with_replay": 360000,
+  "learners": 12,
+  "status": "passed",
+  "wall_seconds_with_replay": 59.15903270000126
+}

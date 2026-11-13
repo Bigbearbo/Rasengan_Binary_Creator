@@ -1,0 +1,14 @@
+{
+  "all_updates_fully_replayed": true,
+  "counterfactual_rows": 4320,
+  "coverage_learners": 12,
+  "diagnostic_checkpoints": 36,
+  "meaning": "execution and replay accepted; see learning scores separately",
+  "original_P032_controls_reproduced": 6,
+  "status": "passed",
+  "target_updates": 554832,
+  "timing_T0B_supplementary": 6,
+  "timing_primary_learners": 12,
+  "training_presentations": 111888,
+  "wall_seconds_with_diagnostic_and_replay": 194.94314609999856
+}
