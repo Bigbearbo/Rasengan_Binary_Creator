@@ -15,9 +15,13 @@ HELPERS = {"package_publication.py": "652fe08c087a504a231ae351cf98e28bed6197f455
 PRE = ("prereg/source-freeze.json", "engineering/checks.json", "engineering/portable-input-validation/checks.json",
        "review/design.json", "review/check_protocol.py", "review/protocol-review.json", "review/check_pre_run.py", "review/pre-run.json")
 POST = ("review/audit_post.py", "review/metadata-preflight.json", "review/audit-cost.json", "review/post-run.json",
-        "review/post-run-details.json", "review/audit-execution-receipt.json", "review/audit.stdout.log", "review/audit.stderr.log")
+        "review/post-run-details.json", "review/audit-execution-receipt.json", "review/audit.stdout.log", "review/audit.stderr.log",
+        "review/vendor/e3_probe_audit.py", "review/vendor/f2_stability_audit.py")
 EXEC = ("launch_formal.py", "execution.stdout.log", "execution.stderr.log", "formal-command-result.json",
-        "execution-receipt.json", "git-prereg-receipt.json", "root-execution-intent.json", "latest-Git-read.json")
+        "execution-receipt.json", "git-prereg-receipt.json", "root-execution-intent.json")
+AUDIT_PINS = {"review/audit_post.py": "e6508be9afe54b3cd2a770accdd22b77f9d27e04613b1f4a83713f857105c16c",
+              "review/vendor/e3_probe_audit.py": "cff693544debfa6bbd730af6df20fe3bed2be7c667b2c6e2714879a2b2c8bc30",
+              "review/vendor/f2_stability_audit.py": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"}
 
 
 def load_helpers():
@@ -38,6 +42,25 @@ def load_helpers():
         spec.loader.exec_module(module)
         modules.append(module)
     return modules
+
+
+def snapshot_archive(b, z, entries):
+    """Original prereg has two ZIP containers; preserve both without rewriting either."""
+    output = z.io.BytesIO()
+    with z.zipfile.ZipFile(output, "w") as archive:
+        for name, raw in sorted(entries.items()):
+            item = z.zipfile.ZipInfo(b.safe_name(name), (1980, 1, 1, 0, 0, 0))
+            item.external_attr = 0o100644 << 16
+            archive.writestr(item, raw, compress_type=z.zipfile.ZIP_DEFLATED, compresslevel=9)
+    raw, members = output.getvalue(), {}
+    with z.zipfile.ZipFile(z.io.BytesIO(raw)) as archive:
+        b.need(set(archive.namelist()) == set(entries) and len(archive.infolist()) == len(entries), "Snapshot inventory differs")
+        for item in archive.infolist():
+            data = entries[item.filename]
+            crc = z.zlib.crc32(data) & 0xffffffff
+            b.need(archive.read(item) == data and item.CRC == crc and item.file_size == len(data), "Snapshot byte/CRC differs")
+            members[item.filename] = {**b.info(data), "CRC32": f"{crc:08x}", "compressed_bytes": item.compress_size}
+    return raw, {**b.info(raw), "member_count": len(members), "members": members}
 
 
 def package(mode, work, approved, out, extras):
@@ -82,7 +105,7 @@ def package(mode, work, approved, out, extras):
                        and all(public[k] == original[k] for k in original if k != "command"), "Redaction changed other fields")
                 raw = b.json_bytes(public)
                 evidence["public-redactions.json"] = b.json_bytes({"JSON_pointer": "/command/0", "public_member": name,
-                    "reason": "machine-userpath", "original_sha256": originals[path], "public": b.info(raw),
+                    "reason": "machine-userpath", "original_bytes": path.stat().st_size, "original_sha256": originals[path], "public": b.info(raw),
                     "replacement": "<python>", "original_value_disclosed": False, "local_original_modified": False})
         b.check_content(name, raw)
         evidence[name] = raw
@@ -115,14 +138,49 @@ def package(mode, work, approved, out, extras):
                and post["source_hashes"] == detail["source_hashes"] == pins and post["root_confirmed_formal_exit0"] is True,
                "Completed post-audit gate differs")
         b.need(post["receipt_sha256"] == detail["receipt_sha256"] == b.sha(receipt_raw)
-               and receipt["exit_code"] == receipt["formal_exit"] == 0 and receipt["formal_session_closed"] is True,
+               and receipt["status"] == "exit0" and receipt["exit_code"] == receipt["formal_exit"] == 0
+               and receipt["formal_session_closed"] is True and receipt["command_invocations"] == 1,
                "Root formal receipt is not closed exit0")
         b.need(closure["status"] == "exit0" and closure["audit_exit_code"] == closure["audit_tool_exit_code"] == 0
-               and closure["audit_process_closed"] is True and closure["audit_tool_session_closed"] is True, "Audit process not closed exit0")
+               and closure["audit_process_closed"] is True and closure["audit_tool_session_closed"] is True
+               and closure["command_invocations"] == 1, "Audit process not closed exit0")
+        for name, pin in AUDIT_PINS.items():
+            b.need(b.sha(b.file_under(work, name).read_bytes()) == pin, "Executed review source differs")
+        b.need(post["review_source_sha256"] == closure["review_source_sha256"] == AUDIT_PINS["review/audit_post.py"]
+               and b.sha((work / "review/post-run-details.json").read_bytes()) == post["details_sha256"], "Audit source/details pin differs")
+        vendor_pins = {Path(name).name: pin for name, pin in AUDIT_PINS.items() if "/vendor/" in name}
+        b.need(closure["review_source_after_sha256"] == AUDIT_PINS["review/audit_post.py"]
+               and detail["pure_vendor_sha256"] == closure["pure_vendor_sha256"] == vendor_pins
+               and closure["optimizer_calls"] == closure["training_replays"] == post["optimizer_calls"] == post["actual_training_replays"] == 0,
+               "Audit exact vendor/zero-replay scope differs")
+        git = b.read_json(work / "git-prereg-receipt.json")
+        commit = git["preregistration_commit"]
+        b.need(git["all_actual_bytes_verified"] is True and git["manifest_sha256"] == approved
+               and receipt["preregistration_commit"] == post["preregistration_commit"] == closure["preregistration_commit"] == commit
+               and closure["manifest_sha256"] == approved and closure["formal_session_id"] == receipt["session_id"] == post["formal_session"],
+               "Preregistration/formal/audit linkage differs")
+        summary = b.read_json(work / "science/compact.json")
+        students = summary["students"]
+        epochs = sum(s["epochs"] for s in students)
+        b.need(summary["status"] == "complete" and [s["seed"] for s in students] == [101, 202, 303]
+               and all(1 <= s["epochs"] <= 8 and s["replay_status"] == "not_planned" for s in students)
+               and summary["new_updates"] == epochs * 53100 and summary["new_training_dense_MAC"] == epochs * 1118073600
+               and summary["new_replay_updates"] == summary["new_replay_training_dense_MAC"] == 0 and summary["exact_full_replays"] == [],
+               "Fixed epoch cap/cost/no-replay scope differs")
+        b.need(receipt["students"] == students and receipt["new_optimizer_updates"] == summary["new_updates"]
+               and receipt["new_training_dense_MAC"] == summary["new_training_dense_MAC"]
+               and all(receipt[k] == value for k, value in summary.items() if k.startswith("physical_")), "Receipt costs/students differ")
+        b.need(b.read_json(work / "science/execution-intent.json") == {"approved_manifest_sha256": approved,
+               "preregistration_commit": commit, "source_hashes": pins, "replay_seeds": [], "auto_retry": False}, "Native intent differs")
+        b.need(len(b.read_json(work / "science/timing.json")["epoch_trajectories"]) == epochs, "Epoch timing coverage differs")
         b.need(z.inventory(work / "science") == detail["science_file_inventory"], "Actual science inventory differs from independent audit")
         science = {"science/" + n: read(b.file_under(work / "science", n)) for n in detail["science_file_inventory"]}
+        b.need(len(science) == 36 + 6 * epochs and sum(n.endswith(".npz") for n in science) == 15 + 2 * epochs, "Science point count differs")
         refs = detail["numeric_proof_refs"]
-        b.need(len(refs) == len(set(refs)) and set(refs) == set(detail["numeric_proof_inventory"]), "Proof allowlist differs")
+        expected = {f"numeric-proof/seed{s['seed']}-{point}.json" for s in students
+                    for point in ("baseline", "student", *(f"epoch-{e:03}" for e in range(1, s["epochs"] + 1)))}
+        b.need(len(refs) == len(set(refs)) == epochs + 6 and set(refs) == expected
+               and set(refs) == set(detail["numeric_proof_inventory"]), "Proof allowlist differs")
         for name in refs:
             raw = read(b.file_under(work / "review", name))
             b.need({"bytes": len(raw), "sha256": b.sha(raw)} == detail["numeric_proof_inventory"][name], "Proof bytes differ")
@@ -131,9 +189,12 @@ def package(mode, work, approved, out, extras):
             add_evidence(name, b.file_under(work, name))
         old = work / "publication/prereg"
         prior = b.read_json(old / "compact.json")["public_files"]
+        checks = {row["name"]: row for row in git["byte_checks"]}
+        b.need(len(prior) == git["public_files"] == 9 and set(z.inventory(old / "public")) == set(prior) == set(checks), "Original nine-file set differs")
         snapshot = {"preregistration/" + n: read(b.file_under(old / "public", n)) for n in prior}
-        b.need(all(b.info(snapshot["preregistration/" + n]) == p for n, p in prior.items()), "Original prereg bytes differ")
-        raw, index = z.make_archive(snapshot, frozen)
+        b.need(all(b.info(snapshot["preregistration/" + n]) == p and checks[n]["byte_match"] is True
+                   and all(checks[n][k] == p[k] for k in ("bytes", "sha256", "Git_blob")) for n, p in prior.items()), "Original prereg bytes differ")
+        raw, index = snapshot_archive(b, z, snapshot)
         files["preregistration.zip"], archives["preregistration.zip"] = raw, index
 
     for kind, entries in (("evidence", evidence), ("science", science)):
