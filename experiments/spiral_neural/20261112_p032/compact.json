@@ -1,0 +1,2053 @@
+{
+  "Neg_branches": 24,
+  "actual_presentations_without_replay": 93888,
+  "all_actual_updates_replayed": true,
+  "diagnostic_checkpoints": 37,
+  "diagnostic_rows": 456,
+  "meaning": "execution and replay verification passed, not universal learning success",
+  "rows": [
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.1822849996359839,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.8452658054719226,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0010225310632241858,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.6993951206869178,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.09526120724652003,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0010225310632241858,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.8037593474228917,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.38763361747547603,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0003355134800333559,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.3601362517395674,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.6006193714689758,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0003355134800333559,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 2.2769367451566547,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.4911640506018797,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.00023759828108254054,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 2.3019229633420624,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.1411412363679045,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.00023759828108254054,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 2.2679439011604816,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.11953545943986388,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.00019966832317752647,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.8457009434502591,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.42044889132722485,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.00019966832317752647,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.631213831743257,
+        "teacher_correct": 7,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.6454044942921169,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0006000142063482983,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.7000256074857998,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.2689437415555023,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0006000142063482983,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S0",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.3472224436818903,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 1.1720843547693014,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0004194595683379987,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.9362825962705651,
+        "teacher_correct": 8,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 4,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 0.44792027012074664,
+        "teacher_correct": 4,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.0004194595683379987,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S0",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 5.2715352596453915,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.302819534822309,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.03517020326558855,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "overflow": 0,
+            "stop": 0,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.2891847844928845,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 9.611623467886833,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.03517020326558855,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.036450047395341,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.250525654146583,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.005213184065822318,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 1,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.341253655838197,
+        "teacher_correct": 4,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.921585176416002,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.005213184065822318,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 101,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.125769800881946,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.088167494682277,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.009950175035086061,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 8.921611712294673,
+        "teacher_correct": 4,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 8.943492986364427,
+        "teacher_correct": 2,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.009950175035086061,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 5.233924089311342,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 5.531272597314505,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.05168990674474143,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.16194830616889,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.2913394820508275,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.05168990674474143,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 202,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.735394625319808,
+        "teacher_correct": 4,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.636372224111247,
+        "teacher_correct": 2,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.05574680024719188,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 72,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 1,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.43533529474651,
+        "teacher_correct": 3,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 2595,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 1,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.989976267152524,
+        "teacher_correct": 1,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.05574680024719188,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S1",
+      "total_train_dense_MACs": 124756416
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 7.8204902204299085,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 70,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.540032583032058,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.024941239494269674,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    },
+    {
+      "H": 128,
+      "final_test": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          },
+          "neg": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 2,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 8.783670430447847,
+        "teacher_correct": 5,
+        "teacher_targets": 10
+      },
+      "new_percent": 50,
+      "parameters": 4611,
+      "postNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 3,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 0
+          }
+        },
+        "ce_mean": 6.077776721778503,
+        "teacher_correct": 3,
+        "teacher_targets": 5
+      },
+      "preNeg_test_echo": {
+        "by_op": {
+          "echo": {
+            "bit_correct": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "overflow": 0,
+            "stop": 1,
+            "teacher_correct": 5,
+            "teacher_targets": 5,
+            "total": 1,
+            "whole": 1
+          }
+        },
+        "ce_mean": 0.024941239494269674,
+        "teacher_correct": 5,
+        "teacher_targets": 5
+      },
+      "seed": 303,
+      "split": "S1",
+      "total_train_dense_MACs": 221789184
+    }
+  ],
+  "shared_warm_prefixes": 12,
+  "status": "passed",
+  "wall_seconds_with_full_replay": 184.1629621999964
+}

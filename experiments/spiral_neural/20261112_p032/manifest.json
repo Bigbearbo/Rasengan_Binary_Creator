@@ -1,0 +1,74 @@
+{
+  "B_growth": "not run; conditional future study",
+  "H": [
+    72,
+    128
+  ],
+  "L": 16,
+  "Neg_budget": 3000,
+  "experiment": "P032-D+A",
+  "max_target_updates_per_logical_learner": 23736,
+  "new_percent": [
+    70,
+    50
+  ],
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "scheduler_seed": "seed+10000*split_index+100*phase_index; Neg phase_index=4",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "snapshot_points": [
+    923,
+    1687,
+    3000
+  ],
+  "source_sha256": {
+    "P032-事前執行規格-2026-11-12.md": "226d35123493f0b4b0e4d4721875cbc5180cd610f9fb1b9bdb3d5af951f56183",
+    "p030_reference.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "p032.py": "e20b74fcf5b9e6af3c78ac2ab7419613de7987a28426018266c26196bea67c95"
+  },
+  "splits": {
+    "S0": {
+      "test": [
+        6
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "val": [
+        4
+      ]
+    },
+    "S1": {
+      "test": [
+        7
+      ],
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "val": [
+        5
+      ]
+    }
+  },
+  "upstream_plan_commit": "a1881a3ada19105661df51015454751ab313bf10",
+  "warm_budgets": [
+    96,
+    192,
+    768,
+    768
+  ]
+}
