@@ -1,0 +1,385 @@
+{
+  "acceptance": "Report all four models and all three suffix conditions for train/val/test separately, actual optimizer steps, bit/full/STOP correctness and failures. No hyperparameter retuning or claimed transfer of Pro/Codex checkpoints. Differences do not prove general SLE advantages.",
+  "data": {
+    "cases": [
+      {
+        "a": 0,
+        "b": 0,
+        "split": "val",
+        "suffix_fixed": [
+          0,
+          0
+        ]
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "split": "test",
+        "suffix_fixed": [
+          3,
+          11
+        ]
+      },
+      {
+        "a": 0,
+        "b": 2,
+        "split": "train",
+        "suffix_fixed": [
+          6,
+          7
+        ]
+      },
+      {
+        "a": 0,
+        "b": 3,
+        "split": "train",
+        "suffix_fixed": [
+          9,
+          3
+        ]
+      },
+      {
+        "a": 0,
+        "b": 4,
+        "split": "train",
+        "suffix_fixed": [
+          12,
+          14
+        ]
+      },
+      {
+        "a": 0,
+        "b": 5,
+        "split": "train",
+        "suffix_fixed": [
+          0,
+          10
+        ]
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "split": "test",
+        "suffix_fixed": [
+          7,
+          5
+        ]
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "split": "train",
+        "suffix_fixed": [
+          10,
+          1
+        ]
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "split": "train",
+        "suffix_fixed": [
+          13,
+          12
+        ]
+      },
+      {
+        "a": 1,
+        "b": 3,
+        "split": "train",
+        "suffix_fixed": [
+          1,
+          8
+        ]
+      },
+      {
+        "a": 1,
+        "b": 4,
+        "split": "train",
+        "suffix_fixed": [
+          4,
+          4
+        ]
+      },
+      {
+        "a": 1,
+        "b": 5,
+        "split": "val",
+        "suffix_fixed": [
+          7,
+          0
+        ]
+      },
+      {
+        "a": 2,
+        "b": 0,
+        "split": "train",
+        "suffix_fixed": [
+          14,
+          10
+        ]
+      },
+      {
+        "a": 2,
+        "b": 1,
+        "split": "train",
+        "suffix_fixed": [
+          2,
+          6
+        ]
+      },
+      {
+        "a": 2,
+        "b": 2,
+        "split": "train",
+        "suffix_fixed": [
+          5,
+          2
+        ]
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "split": "train",
+        "suffix_fixed": [
+          8,
+          13
+        ]
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "split": "val",
+        "suffix_fixed": [
+          11,
+          9
+        ]
+      },
+      {
+        "a": 2,
+        "b": 5,
+        "split": "test",
+        "suffix_fixed": [
+          14,
+          5
+        ]
+      },
+      {
+        "a": 3,
+        "b": 0,
+        "split": "train",
+        "suffix_fixed": [
+          6,
+          0
+        ]
+      },
+      {
+        "a": 3,
+        "b": 1,
+        "split": "train",
+        "suffix_fixed": [
+          9,
+          11
+        ]
+      },
+      {
+        "a": 3,
+        "b": 2,
+        "split": "train",
+        "suffix_fixed": [
+          12,
+          7
+        ]
+      },
+      {
+        "a": 3,
+        "b": 3,
+        "split": "val",
+        "suffix_fixed": [
+          0,
+          3
+        ]
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "split": "test",
+        "suffix_fixed": [
+          3,
+          14
+        ]
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "split": "train",
+        "suffix_fixed": [
+          6,
+          10
+        ]
+      },
+      {
+        "a": 4,
+        "b": 0,
+        "split": "train",
+        "suffix_fixed": [
+          13,
+          5
+        ]
+      },
+      {
+        "a": 4,
+        "b": 1,
+        "split": "train",
+        "suffix_fixed": [
+          1,
+          1
+        ]
+      },
+      {
+        "a": 4,
+        "b": 2,
+        "split": "val",
+        "suffix_fixed": [
+          4,
+          12
+        ]
+      },
+      {
+        "a": 4,
+        "b": 3,
+        "split": "test",
+        "suffix_fixed": [
+          7,
+          8
+        ]
+      },
+      {
+        "a": 4,
+        "b": 4,
+        "split": "train",
+        "suffix_fixed": [
+          10,
+          4
+        ]
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "split": "train",
+        "suffix_fixed": [
+          13,
+          0
+        ]
+      },
+      {
+        "a": 5,
+        "b": 0,
+        "split": "train",
+        "suffix_fixed": [
+          5,
+          10
+        ]
+      },
+      {
+        "a": 5,
+        "b": 1,
+        "split": "val",
+        "suffix_fixed": [
+          8,
+          6
+        ]
+      },
+      {
+        "a": 5,
+        "b": 2,
+        "split": "test",
+        "suffix_fixed": [
+          11,
+          2
+        ]
+      },
+      {
+        "a": 5,
+        "b": 3,
+        "split": "train",
+        "suffix_fixed": [
+          14,
+          13
+        ]
+      },
+      {
+        "a": 5,
+        "b": 4,
+        "split": "train",
+        "suffix_fixed": [
+          2,
+          9
+        ]
+      },
+      {
+        "a": 5,
+        "b": 5,
+        "split": "train",
+        "suffix_fixed": [
+          5,
+          5
+        ]
+      }
+    ],
+    "eval_variants": {
+      "changed_low": "((c0+8)%15,(d0+9)%15)",
+      "seen": "(c0,d0)",
+      "unseen_high": "(15+c0,15+d0)"
+    },
+    "example_raw": {
+      "A_r1": "000000S",
+      "A_r2": "000000000000S",
+      "Q_r1": "010100010000000000000000000000000111100",
+      "Q_r2": "010100100000000000000000000000000111100"
+    },
+    "first_two_vocabulary": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "split_rule": "(a+b)%6: val0,test1,other train",
+    "suffix_fixed": "c=(7a+3b)%15,d=(5a+11b)%15",
+    "suffix_varied": "c=(c0+epoch)%15,d=(d0+7epoch)%15; epoch0 fixed",
+    "test_pairs": 6,
+    "train_pairs": 24,
+    "val_pairs": 6
+  },
+  "frozen_budget": {
+    "batch_size": 64,
+    "epochs": 200,
+    "no_early_stop": true,
+    "optimizer_steps_per_model": 1600,
+    "teacher_targets_per_epoch": 480,
+    "total_model_runs": 4,
+    "train_MAC_per_target_reference_approx": 21056,
+    "val_test_during_training": false
+  },
+  "id": "AE1-NUISANCE-SUFFIX-EXPOSURE-20261113",
+  "network": {
+    "H": 64,
+    "L": 80,
+    "architecture": "one-hot slots (zero/one; pad all zeros) -> tanh FC (160,64) -> 3 logits [0,1,S]",
+    "initial_seeds": [
+      101,
+      202
+    ],
+    "optimizer": "torch Adam(lr=.003) batched CE, global gradient clip1; differs from original P030 sequential per-target optimizer",
+    "parameters": 10499
+  },
+  "profile": "SLE-AE1-n5-v1: raw 01+010+r(3 information bits+0)+4*(5 info+0)+END111100; r in {1,2}; answer prefix complete words then external STOP",
+  "schedule_sha256_by_seed": {
+    "101": "08f38a64250999213774a0ab83045ec70b7b170d80a6f0ff807133c63bb63a6b",
+    "202": "90f16a8d8bc0d7555af2f8c50bb29ff3e47ad3d2dcd84abcaa0ba9377cc32569"
+  },
+  "single_variable": "training suffix exposure: fixed third/fourth words per first-two pair versus epoch-varying (both answer-irrelevant)",
+  "source": "Codex AE1 PR26 head 7213cce112a8411b13dc128c49f9e88acfc9d65f; independent model implementation"
+}
