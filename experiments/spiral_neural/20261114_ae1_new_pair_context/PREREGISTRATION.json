@@ -1,0 +1,70 @@
+{
+  "work_id": "SLE-AE1-NEW-PAIR-CONTEXT-20261114",
+  "date": "2026-11-14",
+  "owner": "independent scheduled NN researcher",
+  "source_pr48_head": "acb2947e558addfac1912870d61be439df4d9b7f",
+  "source_pr48_archive_sha256": "de9faa95e2ba8d178b0a52712a6aa0259894a04147d4894eab407b270ef48e4d",
+  "profile": "SLE-AE1-n5-v1: Q39=01+010+010+0+4*(5bit data+0)+111100; ordinary IDs0..29; END30 UP31 reserved; r2 output first two six-bit words and externally student-generated S",
+  "unique_factor": "Probe wholly new a/b r2-pair combinations within previously trained a0..3/b18,19,22,23 domain. Pair exposure from PR40 fixed r teaching: r2 seen if (b-15+a)%2==1, else r2 unseen. Frozen c1-only PR44 vs mixed-c PR45 arms, c0/2/3 and d0/8 are planned within-pair invariant audit blocks, NOT separate tuned treatments.",
+  "train_split": "Historical PR40 training 120 presentations; a0..3 and high b15..23 teach r1 or r2 by fixed alternating assignment. PR44 adds b16,17,20,21 controls and b24,25,28,29 conjunction arms c1; PR45 balances those c0/1. No new student training or teach labels in this probe. Prior train/val/test splits unchanged.",
+  "val_test_split": "Prospective diagnostic study partition: a0/1 train-domain probes; a2 validation-probe; a3 test-probe. These a were historically trained as values; c2/c3/d8 are new contexts, but these labels MUST NOT be presented as a genuine independent heldout a split, and researcher had reviewed neighboring task domains. All Q preregistered before forwarding.",
+  "seeds": [
+    101,
+    202
+  ],
+  "arms": [
+    "frozen_c1_control",
+    "balanced_c"
+  ],
+  "a": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "b": [
+    18,
+    19,
+    22,
+    23
+  ],
+  "c": [
+    0,
+    2,
+    3
+  ],
+  "d": [
+    0,
+    8
+  ],
+  "r": 2,
+  "cases": 384,
+  "unique_Q": 96,
+  "unseen_pair_rows": 192,
+  "seen_pair_rows": 192,
+  "student": "Frozen 160 one-hot raw bit positional inputs ->64 tanh->3 logits 0/1/S, greedy cap32 L80; four true F32 archived checkpoints",
+  "params_per_student": 10499,
+  "updates": 0,
+  "train_targets": 0,
+  "MAC_per_forward": 10432,
+  "seeds_not_chosen_after_results": true,
+  "pre_gate": "Four genuine checkpoint file/tensor SHA; exact Q39/native codes; 384 enumerated rows/96 unique Q; balanced 8 r2 seen +8 r2 unseen pair allocations; c2->c3 changes exactly one Q bit; d0->d8 exactly one Q bit; expected answer invariant; static preflight 0 forward before Git publication.",
+  "a_priori_success": "BOTH balanced_c seeds on r2_unseen each exact >=40/48 across c0/2/3*d0/8 and >=24/32 specifically for c2+c3,d0+d8; all 24/24 matched d0-vs-d8 replies identical in unseen pairs. Any failure => FAIL; no posthoc seed/threshold changes. Old c1 controls diagnostic.",
+  "secondary": "Seen-vs-unseen r2 pair accuracy in each arm, per c and d; c2/c3 full-answer invariance vs correctness and STOP position; actual 01 and wrong answers kept.",
+  "runner_sha256": "cad31ad92d3ad2f8a3262129ce5ef4617aeb99e9223fd7f8986c9c076ef5186f",
+  "verifier_sha256": "2934c47717b458ad82373aa2af8e4681d7cdef019ad89e293cbaec102d0afe1f",
+  "case_manifest_sha256": "638a2d47dd5de18a5ad442f5e9650f6b5a9ff631415d87659f05a319cc5dabdb",
+  "checkpoints": {
+    "101_frozen_c1_control": "6472ff0222228b3b95cb2de781ccf9c97ae8f730ddd1caa5e5db95bb67f392bc",
+    "101_balanced_c": "c795c97cac145507a842f02eb8b8e65c92aa195523a2c8ec3b1f09a94fc0d3e3",
+    "202_frozen_c1_control": "ee930b8fd2803f889502e709ede5e4853448c98901de6d37b03e62a09854047b",
+    "202_balanced_c": "1ae8a29f40d1ae11410c5948e1fad10088d7e1368744be0356110c8d7e0e2baf"
+  },
+  "U": "User requests true raw SLE-01 small NN generalization research, no VM/parser overlap.",
+  "F": "PR40 120-row role teaching; PR44/45 F32 weights in PR48 public companion archive; codex P030-P035 and Pro UR1 distinct work.",
+  "A": "mixed-c teaching may retain contextual robustness for previously untrained r2 pairings; c parity may be special to old a/b context; d expected irrelevant.",
+  "T_pre_forward": "Static 384 case enumeration plus source hash/checkpoint tensor preflight only, no new NN inference or training until Git freeze.",
+  "nvidia": "0 calls; OpenRouter NVIDIA credentials unavailable/unauthorized in this runtime; no secret read or public exposure.",
+  "codex": "0 local Codex calls; Git and CPU local Python only.",
+  "next_owner": "Independent verifier or Codex investigator; no UR1/VM branch merges."
+}
