@@ -1,0 +1,114 @@
+{
+  "work_id": "SLE-AE1-B-VOCAB-TRANSFER-20261113",
+  "date": "2026-11-13",
+  "owner": "scheduled independent small-neural-network research",
+  "parent_pr": 29,
+  "base_ref": "dcabc3a65a4b9e7a50ab83ff8266b2c233d15000",
+  "dependent_context": [
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "question": "Does a frozen native-01 AE1 student generalize copying answer-bearing second word b beyond values b=0..5 trained in that role, as opposed to merely recombining familiar values?",
+  "single_variable": "Only b changes within each fixed a,c,d,r and model; exhaustive legal b=0..29, with old role-exposed 0..5, previously seen only in nuisance c/d position 6..14, and entirely train-unseen 15..29.",
+  "legal_profile": {
+    "name": "SLE-AE1-n5-v1",
+    "Q": "01+010+r(3 information bits+0)+4*(5 information bits+0)+END111100",
+    "A": "first r full six-bit data words followed by external STOP S",
+    "r": [
+      1,
+      2
+    ],
+    "allowed_data_ids": "0..29",
+    "reserved": "ID30 END, ID31 UP",
+    "Q_bits": 39,
+    "cap": 32,
+    "L": 80,
+    "H": 64,
+    "stop_literal": "S"
+  },
+  "original_training": {
+    "source_pr": 29,
+    "seed": [
+      101,
+      202
+    ],
+    "suffix_training_modes": [
+      "fixed",
+      "varied"
+    ],
+    "train_val_test": "a,b in 0..5, split by (a+b)%6: val0,test1,otherwise train",
+    "count_pairs": {
+      "train": 24,
+      "val": 6,
+      "test": 6
+    },
+    "epochs": 200,
+    "optimizer_steps_per_model": 1600,
+    "train_target_exposures_per_model": 96000,
+    "model": "one-hot 160 -> tanh 64 -> logits (0,1,S)",
+    "parameters": 10499,
+    "optimizer": "batch Adam .003, batch64, clip1",
+    "no_new_training": true
+  },
+  "source_blobs": {
+    "weights_seed101_fixed.json": "a76bc7608bfe36683e7ed06bd2949483795534d5",
+    "weights_seed101_varied.json": "140307fd6d8c44c4c654d84b90e58a563ffeeaf5",
+    "weights_seed202_fixed.json": "07f0d9544eb422f6fd5532fe4c412d46c4849ad3",
+    "weights_seed202_varied.json": "be9f7481803ff47a9e54dad6744ef76714a4e6bd",
+    "results.json": "7d87bfc417564c4af08892534d15b1b3af96e104"
+  },
+  "test_design": {
+    "anchors": "all six original test (a,b0) for a=0..5 where (a+b0)%6=1; c=15+(7a+3b0)%15,d=15+(5a+11b0)%15",
+    "values_b": "enumerate all integers 0..29 for each anchor",
+    "r1": "negative control; correct answer ignores b, assess invariance/first word",
+    "r2": "target should follow the value of b",
+    "n": "4 frozen checkpoints * 6 anchors * 30 b values * 2 r = 1440 responses",
+    "groups": {
+      "0-5": "known second-position vocabulary; train/val/test pair membership separately",
+      "6-14": "not seen in b during training; may appear in nuisance c/d as raw input",
+      "15-29": "not seen in any training payload positions; test suffix may contain this value; report collisions b=c or b=d separately"
+    },
+    "example": {
+      "Q_r2_a0_b1_c18_d26": "010100100000000000010100100110100111100",
+      "A_r2_a0_b1": "000000000010S",
+      "Q_r2_a0_b6_c18_d26": "010100100000000001100100100110100111100",
+      "A_r2_a0_b6": "000000001100S"
+    }
+  },
+  "pre_run_gates": [
+    "Read exact Git blob ids for all 4 checkpoints and source 864 archived predictions from immutable PR29 ref; reject mismatch",
+    "Independent JS float32 dense-tanh inference must reproduce all 864 archived outputs exactly before any new 1440 interventions",
+    "Assert Q length39, pure raw 01 input, legal 6-bit data words 0..29, fixed a,c,d,r and differences confined to b slot",
+    "Evaluate all four checkpoints, all six anchors, every b 0..29, r1 and r2; no seed, b or epoch selection by observed results",
+    "Preserve all generated Q,expected,actual and all failures"
+  ],
+  "metrics": [
+    "per-model and aggregate full exact, r1 first word, r2 first/second words, stop position, cap/overflow by b group",
+    "within original known b=0..5, separate original train/val/test pair membership",
+    "r2 for novel 15..29 separately with b equal to nuisance c/d and b not equal (collision exclusion for primary novelty measure)",
+    "r1 answer invariance across b relative to anchor baseline",
+    "groupwise first error bit/word and representative failures"
+  ],
+  "resources": {
+    "new_training_updates": 0,
+    "expected_complete_generations": 1440,
+    "dense_MAC_per_forward": 10432,
+    "count_actual_forward_and_MAC": "include 864 source replays plus new responses; record separately"
+  },
+  "provenance": {
+    "U": "User requests native-bit small NN learning, distinguish knowledge from heldout generalization, reproducible evidence",
+    "F": "Codex PR26 AE1 legal profile; independent PR29 trained weights; PR32 b-only b0..5 probe",
+    "T": "Pending until source/output gates and genuine model forward",
+    "A": "Role-transfer beyond previously answer-bearing IDs may distinguish finite combination recombination from transferable bitwise copying"
+  },
+  "nvidia": {
+    "delegated": false,
+    "calls": 0,
+    "reason": "Only GitHub connector and isolated computation available; no authorized NVIDIA/OpenRouter invocation tool surfaced"
+  },
+  "next_owner": "NN coordinator/Pro to check the new b role boundary. If transfer fails, consider preregistered balanced coverage of b6..29 as a separate training-policy experiment; not retroactively expand this run.",
+  "scope": "diagnostic on pretrained small NN; test domain selected after other published results; not a fresh blind test, not a proof of SLE advantage"
+}
