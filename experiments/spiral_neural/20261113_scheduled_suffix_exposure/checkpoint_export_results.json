@@ -1,0 +1,42 @@
+{
+  "records": [
+    {
+      "checkpoint": "weights_seed101_fixed.json",
+      "final_weights_sha256": "8326000e96a0575c86733aec43b13809b9236924dfd880050e6d48c6940bd741",
+      "match": true,
+      "mode": "fixed",
+      "seed": 101,
+      "sha256": "be8426421f4d6983adbf557cb137fd5ef8de022892d95de7c498690b37717c3c",
+      "size_bytes": 56766
+    },
+    {
+      "checkpoint": "weights_seed101_varied.json",
+      "final_weights_sha256": "a537e4b2676c1aa4f09ee17f11e9416516b16fc0502ee5d8b76d91c49f512b6b",
+      "match": true,
+      "mode": "varied",
+      "seed": 101,
+      "sha256": "022f7280f529229184ee8736ebfe0e7c0cf634f1e83c68e6f1361740761bcfd0",
+      "size_bytes": 56767
+    },
+    {
+      "checkpoint": "weights_seed202_fixed.json",
+      "final_weights_sha256": "da993aa5186b014c565cdb2bcf25937b00cefb4deed3790a2d6fae87dc32808d",
+      "match": true,
+      "mode": "fixed",
+      "seed": 202,
+      "sha256": "e02e06369e80be393a5625e3402e5af531135fcdba45e3b6621ca89075a7190f",
+      "size_bytes": 56766
+    },
+    {
+      "checkpoint": "weights_seed202_varied.json",
+      "final_weights_sha256": "5c39ccb1b93df5ac7e7dd81b8b90006dcf7d5e518b0ccc1188b80f310837d3cb",
+      "match": true,
+      "mode": "varied",
+      "seed": 202,
+      "sha256": "f4786ee1f795c602fd5c08b18256350c7ce61d4569f2681341a1a93d9444531e",
+      "size_bytes": 56767
+    }
+  ],
+  "rerun_type": "post-run deterministic checkpoint export, identical frozen schedule and model; not a second scientific trial",
+  "scope": "inference weights only; optimizer not exported"
+}
