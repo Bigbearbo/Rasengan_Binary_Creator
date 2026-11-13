@@ -1,0 +1,42 @@
+{
+  "work_id": "AE1-BIT8-ROUTE-R12-20261114",
+  "profile": "SLE-AE1-n5-v1",
+  "question_count": 32,
+  "student_count": 6,
+  "inference_calls": 192,
+  "pair_count": 96,
+  "model_params": {
+    "tied": 10457,
+    "untied": 11081
+  },
+  "dense_mac_per_call": 10920,
+  "total_forward_dense_mac": 2096640,
+  "optimizer_updates": 0,
+  "test_gate": "FAIL",
+  "seed_gates": [
+    {
+      "seed": 101,
+      "aligned": 2,
+      "still_bad": 4,
+      "passes": false
+    },
+    {
+      "seed": 202,
+      "aligned": 2,
+      "still_bad": 4,
+      "passes": false
+    },
+    {
+      "seed": 303,
+      "aligned": 1,
+      "still_bad": 4,
+      "passes": false
+    }
+  ],
+  "cases_sha256": "45d8dcbd7c39515d1b57b04476bbd2c3edd59cdffbfe04873f3a272f45a1a71d",
+  "source_checkpoint_unchanged": true,
+  "source_zip": "sle_ae1_word_weight_tying_20261114.zip",
+  "source_zip_sha256": "53f6e312f30570ef7d458f35b25c17b49eb7b161415bb5d3b165645aeb8f10a0",
+  "logits_sha256": "1ae3b542c3323975452c57ad2d1ee26fe8216570dd6e7ae19e69179734ea8203",
+  "pairs_sha256": "a9f036cd4a29867d67f05199464411e2c8a69410ff4e60712fc019e7402cfab0"
+}
