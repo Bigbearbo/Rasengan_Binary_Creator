@@ -1,0 +1,66 @@
+{
+  "author": "視窗GPT / delegated read-only probe agent",
+  "candidate_profile": "SLE-AEM2-probe: extend op100 to r2, complement five information bits in each of the first two words; retain both tail0; literal answer30/31 permitted; externalS only stops",
+  "generation": "Independent scalar-prefix NumPy float32 dense forward, same one-hot/tanh/matmul order as the pinned original; own generated prefix only; greedy0/1/S; cap32; L80 guard; no expected-length cutoff",
+  "id": "WINDOW-F2-FROZEN-CHECKPOINT-PROBE-20261113",
+  "inference_budget": {
+    "F2_questions": 2700,
+    "baseline_questions": 8100,
+    "dense_MAC_per_forward": 10432,
+    "maximum_forward_calls": 345600
+  },
+  "interpretation": "F2 is a previously untrained op/r combination on already exposed values and payloads. Success only shows this bounded combination transfer; failure does not invalidate old finite-bank learning or establish a model/encoding limit.",
+  "learning": "0 optimizer calls; no manual weight changes; p/m/v/birth/t/RNG/events/counters arrays read-only; no checkpoint written; all source files hashed before/after",
+  "model": {
+    "H": 64,
+    "L": 80,
+    "parameters": 10499
+  },
+  "new_questions_sha256": "f63d071adabadaab68a4f9acbf44404f5ad54d65f2b72ee209372df5685d9d02",
+  "old_questions_sha256": "2fbf586b5a7ed3e431697a250dd41b7ecda0bd7a5782bb89b59acd9afce938e6",
+  "order": "All three checkpoints must first regenerate all2700 old E1/E2/F1 answers and exactly match their archived outputs. Only then probe each checkpoint on all900 F2 questions in ascending pair_id.",
+  "outputs": "All10800 raw Q/expected/generated records; full-answer, first/second-word and STOP-position metrics; error pattern counts; actual forward/MAC and wall time; per-seed state and archive hash invariance",
+  "parent_state_sha256": {
+    "101": "3d0010cc2c489cc7636c6c6e2dd4fd88406db211b7776ab0bf9e1a92537d96a9",
+    "202": "21c3573dab389f614a64ea7617c196eb21d75ac8a319281de3133b6c1318e0c6",
+    "303": "10232db67e9c75315973d8a1b2ae59848940dfd770863ad9198a837dd8c535d1"
+  },
+  "preflight": {
+    "F2_targets": 11700,
+    "literal_control_answer_cases": true,
+    "neural_forward_calls": 0,
+    "old_rows_preserved": 2700,
+    "optimizer_calls": 0,
+    "questions_checked_without_NN": 3600,
+    "source_unchanged": true
+  },
+  "probe_source_sha256": "2ee8c31382b34109eac67a81cc91b07934397821733eaa9cc1497c58f9756424",
+  "provenance": "F=immutable PR28 evidence; A=proposed F2 semantics and probe; future output is new read-only T, not Codex training",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "selected_source_members": {
+    "inputs.zip:payloads.json": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee",
+    "inputs.zip:questions.json": "99ac8f2344eed15b88d18b3bcfd64199f87ae999a5c7ef6be8c68b98942b8739",
+    "inputs.zip:source/p030_binary_continual.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "science-seed101-001.zip:science/seed101/final-state.npz": "375995e0279e79e298635bdc952909b5caffcbdbcf4f8088b69baf28b2e57039",
+    "science-seed101-001.zip:science/seed101/generation-006.json": "e845dae592841a597308db8b37047aee03ea13760e0f29a7e33a49e17baf6294",
+    "science-seed202-001.zip:science/seed202/final-state.npz": "ef3461e9f5352f962673afe757d40764e71fbf7c14e69fe8e52fcc31689b2dca",
+    "science-seed202-001.zip:science/seed202/generation-009.json": "e845dae592841a597308db8b37047aee03ea13760e0f29a7e33a49e17baf6294",
+    "science-seed303-001.zip:science/seed303/final-state.npz": "635adad94d8a8d230be680f37c52d13ca92a94d4568cd4f7431d2c5fd05054f9",
+    "science-seed303-001.zip:science/seed303/generation-009.json": "e845dae592841a597308db8b37047aee03ea13760e0f29a7e33a49e17baf6294"
+  },
+  "source_PR": 28,
+  "source_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "source_files": {
+    "inputs.zip": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+    "publication-manifest.json": "dcf039bf53bcc39669d06daced174dffb133fa75c93e52acbc2fd59433b45a11",
+    "science-seed101-001.zip": "4a7cd03183a8ad3b14a0e5750060e6a5263b0d35f519d6bb8449d13fce3836b8",
+    "science-seed202-001.zip": "9889a229e8a4752284a2068d0326cdcea7ab79371aaab392707d75dc7cdb1026",
+    "science-seed303-001.zip": "9bd4db599f151d1284c42e1d920a92b30a9769c0d6439754f399dea7f913d2ff"
+  },
+  "source_publication_manifest_sha256": "dcf039bf53bcc39669d06daced174dffb133fa75c93e52acbc2fd59433b45a11",
+  "stopping": "Abort before F2 if any old answer fails or differs from its archive; no repair, additional seed, training or result-driven rerun"
+}
