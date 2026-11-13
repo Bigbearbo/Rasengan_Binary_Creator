@@ -1,0 +1,271 @@
+{
+  "archive": {
+    "bytes": 4452849,
+    "file": "inputs.zip",
+    "sha256": "e2889728eccb95498df95cdcfdcf64e7eed5a9151b1e056f4d7c516ba3e1fde7"
+  },
+  "files": {
+    "first-orders/seed101.npy": {
+      "bytes": 212528,
+      "sha256": "16014eae4fcd1d883364de321e31edab9809267f42d025f33ad1e1529dcba07f"
+    },
+    "first-orders/seed202.npy": {
+      "bytes": 212528,
+      "sha256": "b8dbf80b9710f74e271123ca62d0af54ced86b64c501b8b7fe20db5907e09d18"
+    },
+    "first-orders/seed303.npy": {
+      "bytes": 212528,
+      "sha256": "6475e015b212e2f99dd8319f46b4775c77342322940bcca3a116462fc44c7561"
+    },
+    "historical/seed101.json": {
+      "bytes": 930062,
+      "sha256": "ee6a495f629f1bb5d1affbc1829c0b70dc282bba9b08eb485f3a6c863e148dde"
+    },
+    "historical/seed202.json": {
+      "bytes": 930238,
+      "sha256": "fdf8cfeee6c186fbd82039e8c7b7b89dff133be98f7bae90d15b8b0fd43b53c3"
+    },
+    "historical/seed303.json": {
+      "bytes": 930328,
+      "sha256": "05462a7bd707138086fed63730765937ee0a04d6efae498fe729ff5abeba44f2"
+    },
+    "initial/seed101.npz": {
+      "bytes": 216804,
+      "sha256": "a07699abb9419aaf5e7e3cb45555f13e3d5c1388ec536abde0a35208d4ff6734"
+    },
+    "initial/seed202.npz": {
+      "bytes": 216804,
+      "sha256": "267cdf285d193214e51b70ed231d01ccbe6f5a993d544b2896be7730347d6fa0"
+    },
+    "initial/seed303.npz": {
+      "bytes": 216800,
+      "sha256": "039deca57d60d8095a4a90ffeea35e39c749afa705c4d5a7a1cff3d6029cde78"
+    },
+    "orders/seed101.npy": {
+      "bytes": 1699328,
+      "sha256": "1a0d701b46741cee46071a56a13d9cc8b57aa5fd8d67375bbad8cd4c1d5074d3"
+    },
+    "orders/seed202.npy": {
+      "bytes": 1699328,
+      "sha256": "a819420444b45b2f79b20294a2dcce798bfb735ed53e3593541df63721040887"
+    },
+    "orders/seed303.npy": {
+      "bytes": 1699328,
+      "sha256": "3a1a427828a4ff09b22e61c663a2b9e0828b4b3c2bd89e3756ff9d000b7a3a46"
+    },
+    "payloads.json": {
+      "bytes": 11430,
+      "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+    },
+    "plan.json": {
+      "bytes": 4255,
+      "sha256": "4deeff5fe415b899ec660744d83c0a5ab6bb1ca6bc4095d313cff31783445f5a"
+    },
+    "provenance/parent-manifest.json": {
+      "bytes": 13339,
+      "sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc"
+    },
+    "provenance/proof.json": {
+      "bytes": 9725,
+      "sha256": "a6e42e7eea7b0ecbb2ef6196935172b892f33178dcafd87d57196d59e747a469"
+    },
+    "provenance/publication-manifest.json": {
+      "bytes": 94333,
+      "sha256": "a47f9675912d3e35a6a731700f2e09124f10bc633f0e2731331ea03cbaa20682"
+    },
+    "questions.json": {
+      "bytes": 680082,
+      "sha256": "7ab1b43d8c76036cfae3409ec1199ab5f04328974211f0dbfd876ec9da82fa84"
+    },
+    "source/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    },
+    "vendor/F2-protocol.json": {
+      "bytes": 6128,
+      "sha256": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958"
+    },
+    "vendor/protocol.json": {
+      "bytes": 6134,
+      "sha256": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8"
+    },
+    "vendor/run_f2.py": {
+      "bytes": 45777,
+      "sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6"
+    },
+    "vendor/run_probe.py": {
+      "bytes": 46414,
+      "sha256": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196"
+    }
+  },
+  "new_optimizer_calls": 0,
+  "parents": {
+    "101": {
+      "counters": {
+        "inference_MAC": 13776238400,
+        "inference_calls": 1320575,
+        "t": 1070100,
+        "train_MAC": 22532025600
+      },
+      "full_state_sha256": "9f03e018dbdf780ba00c688750279f00594880c3fa986b7a3be75766cfbe0dc9",
+      "raw_sha256": "a07699abb9419aaf5e7e3cb45555f13e3d5c1388ec536abde0a35208d4ff6734"
+    },
+    "202": {
+      "counters": {
+        "inference_MAC": 15972508224,
+        "inference_calls": 1531107,
+        "t": 1281600,
+        "train_MAC": 26985369600
+      },
+      "full_state_sha256": "c602495589562bbcd5fe78d89f14f3e920ec3bc7420852b6599402413f1f9b6a",
+      "raw_sha256": "267cdf285d193214e51b70ed231d01ccbe6f5a993d544b2896be7730347d6fa0"
+    },
+    "303": {
+      "counters": {
+        "inference_MAC": 15282285376,
+        "inference_calls": 1464943,
+        "t": 1215000,
+        "train_MAC": 25583040000
+      },
+      "full_state_sha256": "0089a1b07087d6b7a8b3dc4024208eafd5d9cbb00a33248468eca964274de419",
+      "raw_sha256": "039deca57d60d8095a4a90ffeea35e39c749afa705c4d5a7a1cff3d6029cde78"
+    }
+  },
+  "protocol": {
+    "F2_runner_sha256": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+    "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "arms": {
+      "eta001": 0.001
+    },
+    "baseline": "ALL3 freshall4500 freegenerations exactarchivedPR47eta001 generation beforeANYnewoptimizer. DoNOTrequire900 since existingerrors allowed. Only inferencecounters change. No coldTF/repeatedbaseline. Anyexactmismatch abortwholebatch0updates",
+    "classes": [
+      "E1",
+      "E2",
+      "F1",
+      "F2",
+      "E3"
+    ],
+    "costs": "DeltafromPR47completecounterparent. Physicalbaseline3 once, actualepochupdates/probes, finalTF3 separately; inheritedcounters never rebilled. Max24epochs/1274400updates/26833766400trainMAC",
+    "courses": "Continue default_rng(seed+666000): reconstruct firstpermutation and requireexactPR47frozenfirstorder, then freezeNEXT8permutations as(8,53100,2)<u2. Never retrain or overwrite oldfirstepoch",
+    "end_t": {
+      "101": 1123200,
+      "202": 1334700,
+      "303": 1268100
+    },
+    "engineering": "Onlyboundedmockstop/reset/cap/order/counter/baselineaborttests;0native syntheticsteps/gradientchecks and0trainedNN. Existingfrozenmathtests not repeated",
+    "final_TF": "AfterALL3stop/cap, onceperseedall4500/53100TFtargets viaunchangedteacher_forced andsavedlastfree.159300finalTFcalls. No intermediateTF/coldTF",
+    "forward_dense_MAC_per_call": 10432,
+    "gate": "Pureprepare/validate0trainedNN;source/inputfreeze andindependent0NNgate+coordinatorGitprereg beforeoneexplicitformalexecute.0externalmodelcallsbyrunner",
+    "generation": "Unchangedoriginalcap32/L80ownoutput guard, no oraclecutoff or forcedSTOP",
+    "id": "E3-CONTINUE8-20261113",
+    "limits": "Continualtraining onfixedexposedbank fromselectedlowratearm. No blinded/generalcopy/longterm claim or optimizerreplay. Stablepass is taskbankfit; cap retainsincompleteoutcome",
+    "max_epochs": 8,
+    "maximum_new_training_dense_MAC_all_primary": 26833766400,
+    "maximum_new_updates_all_primary": 1274400,
+    "maximum_new_updates_per_seed": 424800,
+    "metrics": "Reuseoriginaldynamicword1/2/3, bit/STOP/firsterror/termination and QIDchurn. Controller only addsstop/streak/firstfull/cumulativecost. No newmetricversion or posthoc selection",
+    "model": {
+      "H": 64,
+      "L": 80,
+      "parameters": 10499
+    },
+    "new_replay_updates": 0,
+    "parent_PR": 47,
+    "parent_head": "60ffaee62ab582f7ead926c064ba7e454e2f3018",
+    "parent_inputs_sha256": "b658716bd3e4bba693ab33c26e429f406fc326fe220bfa1679cb5fb446ff4efc",
+    "parent_publication_manifest_Git_blob": "90212b644a20a6e0fcf49f35b5f4034f2c17a854",
+    "parent_publication_manifest_sha256": "a47f9675912d3e35a6a731700f2e09124f10bc633f0e2731331ea03cbaa20682",
+    "parent_t": {
+      "101": 1070100,
+      "202": 1281600,
+      "303": 1215000
+    },
+    "profile": "Exact PR47 SLE-AEM3-n5-v1, same4500Q/900payloads/source/grammar/targets. ContinueONLYactualeta001 final-after-TF states. No E4/newpayload/highrate arm or math/precision/optimizer change",
+    "replay_seeds": [],
+    "reuse": "Vendor complete publicrun_probe.py and protocol rawbytes. Compile selected originalAST definitions only, never oldmain. Model/Adam/gradient/train_arm/probe/TF/tokenmetrics/churn unchanged. namespaceprotocol returns thisconfig; controller ONLY updates end_t[seed]=originalstart_t+newEpoch*53100 before originaltrain_arm assertion",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "state": "ExactinitialrawNPZ+p/m/v/birth/t/growthRNG/seed/events/allcounters. Eachnext_epoch receives previousoriginaltrain_arm final-state includingallinferencecounters. No t/m/v/reset or freshinit. Everyepochfolder uses unchangedtrain_arm outputs",
+    "stop": "Eachstudentindependently stops afterall5classeseach900/900includingS for2consecutiveNEWepochs. Baseline streak0 regardlessscore; anynonfull epochresets0. Otherwisecap8 withallfailuresretained. RecordfirstE3full/firstall5full/stable2 separately. Cap is boundednonattainment, not inabilitytolearn",
+    "targets_per_epoch": 53100,
+    "training_dense_MAC_per_epoch": 1118073600,
+    "training_dense_MAC_per_target": 21056,
+    "vendor_protocol_sha256": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "vendor_runner_sha256": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196"
+  },
+  "reused_def_AST_sha256": {
+    "canonical": "7e6795fc3c5d443fae2baeb8f4fd0e147369913e85430772811b5e2a7ab1aaf4",
+    "churn_metrics": "f7656936eb39c0c011db5a2282da4ff3fbd7c3ede6517107e0f1b12da71f0434",
+    "data_checks": "317613d7e42b8842002aa9829637e7388a1d3cf8e13f3b840e2db3f22d3424d0",
+    "encode": "b4e5307c7e3e19a9fc85227eda6bcd0752dc51d963de591e76d66e05eee0b5f4",
+    "expected_answer": "44c33cfd21ec470e434a6f058f24d6ed8577e27e22bd04167d7d562a50576a62",
+    "git_blob": "1530344246d3c479bcf9c1e6e61671affba62571462916ad2367d8d7626f3705",
+    "learning_unchanged": "80e91d71000b0a73dd5f35e9d80a148986a3701de3bbe76adc49c34c9c8b95de",
+    "load_helpers": "edc4c28159bb47af448100552ebf6c338f9f058596fa638b8788cf0051eda234",
+    "make_rows": "b62b09b3eea3eca19eade02334694f7583887804217b947d79124cbf0c883888",
+    "model_classes": "5cef6f5748c02d10893f35f66291a22c55612a5227848154907dce0262b27ca0",
+    "probe": "e0d26cccfb36daff676b443e3f739c6220c07d74c06d626ab99077046a254f71",
+    "read": "7d23e38b4a1d2e4f3cf9fa684875d32a65b98014e43fe7bfb2e060bc19800b28",
+    "runtime": "750952b9903b441823bef3141c66bb7bf2faf39c83241f0ddc5db5471bd7fe35",
+    "sha": "5d2f17cf600e426b5b233fbac6acbf635ebc09f06bca0fad37d5385c1d852ed6",
+    "shuffled_order": "b6c6894545c992765c38024559324e0f7ee86d974564c4f17289c1779f2ca5b1",
+    "target_pool": "544dcefc98c378e6cb335c11a88fb7cd151d94ba00b18bc000c3476c798c8bc8",
+    "teacher_forced": "e73e862a1e92c9ee778f9009b3ae95355b5cb2715d9e8adea4a68d3c2c8a2fef",
+    "token_metrics": "2db7d3e0e7352f1839f7fbb1f0e172d3ff4d855b8238e1e0cf0c0a389dffd08f",
+    "train_arm": "9ced793152e0e98aa06c63badd6b02f370dd8fb8b92f98c56b4f7aadc30e8c13",
+    "word": "348a409bab7163e994ab19fcf91f428a89160e83480e058a95df7077e402ad03",
+    "write": "d60e00c226e0ab399a86fa15d0837fd018304dccc876dcd6f224525473b36a30"
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schedules": {
+    "101": {
+      "dtype": "<u2",
+      "file": "orders/seed101.npy",
+      "first_permutation_verified": true,
+      "rng_seed": 666101,
+      "shape": [
+        8,
+        53100,
+        2
+      ]
+    },
+    "202": {
+      "dtype": "<u2",
+      "file": "orders/seed202.npy",
+      "first_permutation_verified": true,
+      "rng_seed": 666202,
+      "shape": [
+        8,
+        53100,
+        2
+      ]
+    },
+    "303": {
+      "dtype": "<u2",
+      "file": "orders/seed303.npy",
+      "first_permutation_verified": true,
+      "rng_seed": 666303,
+      "shape": [
+        8,
+        53100,
+        2
+      ]
+    }
+  },
+  "schema": "e3-continuation-v1",
+  "source_hashes": {
+    "protocol.json": "4deeff5fe415b899ec660744d83c0a5ab6bb1ca6bc4095d313cff31783445f5a",
+    "run_continue.py": "f5481161818ecf8edad221d55bd3a16a8c0d4fd4447a402bb5784acfd8db3639",
+    "test_continue.py": "823f583675cc1f462c91f4f48ebb6a3c01e7241cff37cccfc95ded2efe804d38"
+  },
+  "trained_forward_calls": 0
+}
