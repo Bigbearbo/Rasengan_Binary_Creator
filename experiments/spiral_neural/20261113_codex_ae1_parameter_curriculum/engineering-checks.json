@@ -1,0 +1,16 @@
+{
+  "external_model_calls": 0,
+  "formal_forward_calls": 0,
+  "formal_optimizer_calls": 0,
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  },
+  "status": "PASS",
+  "synthetic_mock_probes": 14,
+  "synthetic_mock_targets": 54,
+  "synthetic_native_inference_calls": 32,
+  "synthetic_native_optimizer_updates": 6,
+  "tests": 8
+}

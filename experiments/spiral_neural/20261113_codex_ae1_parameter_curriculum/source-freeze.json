@@ -1,0 +1,35 @@
+{
+  "external_model_calls": 0,
+  "formal_forward_calls": 0,
+  "formal_optimizer_calls": 0,
+  "initial_states": {
+    "101": {
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "41491bd0323b5a31fa745c2871f8771891ea371e6b65c218e51e650c15dd1af6"
+    },
+    "202": {
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "ecc10a1b52ef4c760f1b0eac78c98e47ec04eccf5df2dad75735bad06748931c"
+    },
+    "303": {
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "9c1024204ce65d74f0334cf0d0d50ea992274f7125ddfe3f33bb74d74da8ef21"
+    }
+  },
+  "inputs_zip_bytes": 7291036,
+  "inputs_zip_sha256": "8eb05d5649c5568abf5da18a5b51ffa6c5a1be1e721481b1960d2e27cebe5efe",
+  "manifest_sha256": "dcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60",
+  "schedule_sha256": {
+    "seed101-r1": "17dafa823a90aabd1d93e68407c1a782f13b230ba485b673342901166afa67d8",
+    "seed101-r12": "af9914cebbefc965ee878dcacce8c86c3d5a8aa79a98ff96dc5a648b21a67761",
+    "seed202-r1": "1120c5a3aa543a0693ce2b9fcdef3ff989c2b296a57b96ef4b77061276a76e7c",
+    "seed202-r12": "aeb3099aa7e1920af7c9fbb5b44305ec050272e73955d74c3dc20db24dfdffde",
+    "seed303-r1": "e764342f70a82231ee8260c58952eeea39ab79833c2bc4339bad35b388b6bf5d",
+    "seed303-r12": "5b1d44f1f9b70edcb0be5bd3008d67c244d79aeaa06125d55518afbe675791d5"
+  },
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  }
+}

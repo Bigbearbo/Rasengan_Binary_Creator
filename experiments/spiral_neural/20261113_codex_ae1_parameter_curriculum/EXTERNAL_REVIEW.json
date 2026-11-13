@@ -1,0 +1,27 @@
+{
+  "schema": "external-candidate-disposition-v1",
+  "round_id": "AE1-PARAMETER-EXEC-20261113",
+  "earlier_local_prepare": {"round_id": "AE1-PARAMETER-CURRICULUM-20261113", "status": "blocked_before_dispatch", "reason": "Selected synthetic context was added after that round's registry pin; closed old dispositions and created a newly reviewed round", "external_calls": 0},
+  "gemini": {"actual_calls": 0, "decision": "skipped", "reason": "Existing installation/login retained; previously observed analysis-only tool isolation remains unresolved and previous provider outcome unknown. No resend, login or global settings change."},
+  "nvidia": {
+    "task_id": "AE1-PARAMETER-PROSPECTIVE-001",
+    "actual_calls": 1,
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "prompt_sha256": "30a58589a9f5db546a6d28a30da7b336677a5c5bf44e4163ff2a0c6fc7ba1b4a",
+    "context_sha256": "bad75214d9e9ec07e2253d122e8d1d5cca9e6523e2313f3f1e3dba67484abb7e",
+    "seconds": 6.187,
+    "usage": {"prompt_tokens": 1610, "completion_tokens": 311, "total_tokens": 1921, "cost": 0},
+    "finish_reason": "stop",
+    "no_retry": true,
+    "transport_status": "candidate_locally_checked",
+    "semantic_status": "candidate_rejected",
+    "accepted_research_claims": 0,
+    "findings": [
+      {"candidate_claim": "Answer widths6/12 inconsistent with payload IDs totaling4/8 bits", "disposition": "rejected", "local_reason": "IDs are integer values encoded as5 information bits plus syntax0. A1 is one6-bit word; A2 is two6-bit words=12. Integer-ID count does not define bit width.", "checks": {"r1_bits": 6, "r2_bits": 12}},
+      {"candidate_claim": "future r4 STOP prefix63 plus r2 STOP prefix51 gives114 exceeding70", "disposition": "rejected", "local_reason": "These are separate generation inputs; their lengths must not be added. Each is independently <=cap-bound70 and context80. Q39 plus31 already-generated bits is70 before action32.", "checks": {"r1_STOP_prefix": 45, "r2_STOP_prefix": 51, "future_r4_STOP_prefix": 63, "max_prefix_before_action32": 70, "context": 80}}
+    ],
+    "limitations": "Structural validation, exit0 and a model's agreement do not establish semantic correctness. Both candidate objections are false; no science change or extra call follows. Original free catalog, quota reserve, lock and DPAPI guards retained by the pinned legacy worker."
+  },
+  "native_OpenAI_agents": "Separate implementation and independent local review; never represented as Gemini or NVIDIA",
+  "private_data_exported": false
+}

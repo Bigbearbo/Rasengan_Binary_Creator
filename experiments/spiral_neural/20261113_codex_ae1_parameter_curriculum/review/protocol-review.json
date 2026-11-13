@@ -1,0 +1,56 @@
+{
+  "status": "protocol_arithmetic_passed_code_gate_pending",
+  "round_id": "AE1-PARAMETER-EXEC-20261113",
+  "computed": {
+    "Q_length": 39,
+    "target_actions_r1_r2_including_STOP": {
+      "1": 7,
+      "2": 13
+    },
+    "last_STOP_teacher_prefix_r1_r2": {
+      "1": 45,
+      "2": 51
+    },
+    "parameters": 10499,
+    "forward_dense_MAC": 10432,
+    "training_dense_MAC_per_target": 21056,
+    "stage1_targets_per_epoch": 6300,
+    "stage2_targets_per_epoch": 18000,
+    "stage1_MAC_per_epoch": 132652800,
+    "stage2_MAC_per_epoch": 379008000,
+    "maximum_updates_per_seed": 972000,
+    "maximum_training_MAC_per_seed": 20466432000,
+    "maximum_3primary_plus1replay_updates": 3888000,
+    "maximum_3primary_plus1replay_training_MAC": 81865728000,
+    "p_m_v_birth_array_bytes": 209980,
+    "stage1_teacher_label_counts": {
+      "0": 3270,
+      "S": 900,
+      "1": 2130
+    },
+    "stage2_teacher_label_counts": {
+      "0": 9810,
+      "S": 1800,
+      "1": 6390
+    }
+  },
+  "required_code_checks": [
+    "One fixed900 bank has all ordered first pairs0..29 and exactly one rng331000 suffix pair each; same payloads under r1/r2, no END as an ordinary word.",
+    "All40 epoch target permutations per stage/seed are frozen before scores; each stage2 epoch has6300 r1 and11700 r2 targets, without question-level reweighting.",
+    "Stage2 advances only after two consecutive exact full-stage1 generations, preserves p/m/v/birth/t/RNG/counters, and records every nonadvancing seed rather than dropping it.",
+    "Free generation uses only Q and generated prefixes with a fixed cap at least13; no r-dependent true-length cutoff or forcedSTOP.",
+    "Stage2 stopping requires all900 r1 and900 r2 exact includingSTOP twice consecutively; final TF covers only actually taught tasks.",
+    "Only predetermined seed101 receives a full replay independently reproducing stage branches and stops; other seeds remain explicitly not replayed."
+  ],
+  "interpretation_limits": [
+    "This is a finite fixed-bank fit and retention curriculum, with no heldout, r3/r4 or length extrapolation evidence.",
+    "All ordered first pairs do not cover30^4 payloads: only one suffix pair is sampled for each first pair.",
+    "A single sequential curriculum without a joint-training control cannot isolate a curriculum benefit.",
+    "Stage2 equal question counts do not imply equal optimization weight: r1/r2 contribute6300/11700 CE targets.",
+    "A fixed finite r1/r2 bank cannot distinguish lookup from a general count-controlled copying algorithm."
+  ],
+  "reviewer_model_forward_calls": 0,
+  "reviewer_optimizer_calls": 0,
+  "formal_students": 0,
+  "external_model_calls": 0
+}

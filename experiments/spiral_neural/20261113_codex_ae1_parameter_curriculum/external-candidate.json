@@ -1,0 +1,29 @@
+{
+  "elapsed_ms": 0,
+  "evidence_refs": [
+    "context/ae1_parameter_curriculum.json"
+  ],
+  "execution_claim": "not_run",
+  "findings": [
+    {
+      "claim": "Stop word framing uses inconsistent bit counts: r1_answer_bits=6 vs payload_ids totaling 4 bits, r2_answer_bits=12 vs payload_ids totaling 8 bits, contradicting the stated payload structure and word-length definitions",
+      "evidence_refs": [
+        "context/ae1_parameter_curriculum.json"
+      ]
+    },
+    {
+      "claim": "Stop prefix lengths sum exceeds largest_prefix_before_action32 + margin: 63 (future_r4_STOP_prefix) + 51 (r2_STOP_prefix) = 114 > 70, breaching the largest_prefix_before_action32 bound of 70",
+      "evidence_refs": [
+        "context/ae1_parameter_curriculum.json"
+      ]
+    }
+  ],
+  "model_id": "nvidia/nemotron-3.5-lightning:free",
+  "recommended_next_step": "Reconcile answer bit counts with payload_id widths and STOP prefix arithmetic against largest_prefix_before_action32 to resolve stated inconsistencies",
+  "status": "candidate",
+  "summary": "Two concrete inconsistencies identified: answer bit widths do not match payload_id enumeration widths, and STOP prefix length sums violate the largest_prefix_before_action32 constraint of 70.",
+  "task_id": "AE1-PARAMETER-PROSPECTIVE-001",
+  "unknowns": [],
+  "usage": null,
+  "worker": "nvidia"
+}

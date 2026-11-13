@@ -1,0 +1,15 @@
+{
+  "all_science_preserved": false,
+  "archive_members_size_CRC_SHA_byte_verified": 13,
+  "finite_arrays": {
+    "NPY": 6,
+    "NPZ": 3
+  },
+  "frozen_inputs_byte_identical": true,
+  "full_actual_science_files": 0,
+  "mode": "prereg",
+  "model_optimizer_inference_external_calls": 0,
+  "original_source_and_input_hashes_unchanged": true,
+  "privacy_checked_every_public_member": true,
+  "status": "PASS"
+}

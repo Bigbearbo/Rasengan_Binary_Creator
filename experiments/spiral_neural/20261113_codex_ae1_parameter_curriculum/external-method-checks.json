@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "r": 1,
+      "Q_bits": 39,
+      "answer_bits": 6,
+      "STOP_prefix_bits": 45,
+      "raw_Q_exact": true,
+      "raw_A_exact": true
+    },
+    {
+      "r": 2,
+      "Q_bits": 39,
+      "answer_bits": 12,
+      "STOP_prefix_bits": 51,
+      "raw_Q_exact": true,
+      "raw_A_exact": true
+    }
+  ],
+  "same_payload_and_END": true,
+  "independent_context_lengths": [
+    45,
+    51,
+    63,
+    70
+  ],
+  "context": 80,
+  "correct_operation": "compare each input length independently; do not add different queries",
+  "max_updates_per_seed": 972000,
+  "training_MAC_per_update": 21056,
+  "forward_MAC_per_call": 10432,
+  "NN_calls": 0,
+  "optimizer_calls": 0,
+  "external_calls_by_this_check": 0
+}
