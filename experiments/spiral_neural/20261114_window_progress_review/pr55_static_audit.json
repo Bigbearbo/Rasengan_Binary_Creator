@@ -1,0 +1,585 @@
+{
+  "audit": "PR55 public source and deterministic teaching/eval corpus; no checkpoint replay",
+  "source_head": "e745264ba8da233486b4632e69b093ac2833d7fb",
+  "source_file_sha256": {
+    "pr36": "05e2d730eecefcb50fa92392697556ffde313f5ecb59c2f4e583aad52e321303",
+    "pr39": "bf97b897c89f97a40d9e34247990112e4319513054eb873d02329e8b27dc9ffc",
+    "pr40": "79dc4dca3c8e03f3889258a33532b639f5db11c0d3a6cf12dcba79443c826193",
+    "pr55": "79ac66bd8f2c2fd82b559310bc44e0eae05e3cb23949d1dd9af14e80048acf9a"
+  },
+  "optimizer_updates": 0,
+  "neural_forward_calls": 0,
+  "course_presentations": 136,
+  "course_distinct_Q": 112,
+  "teacher_targets_per_epoch": 1408,
+  "output_target_histogram_by_zero_based_position": {
+    "0": {
+      "0": 120,
+      "1": 16
+    },
+    "1": {
+      "0": 136
+    },
+    "2": {
+      "0": 112,
+      "1": 24
+    },
+    "3": {
+      "0": 82,
+      "1": 54
+    },
+    "4": {
+      "0": 70,
+      "1": 66
+    },
+    "5": {
+      "0": 136
+    },
+    "6": {
+      "S": 60,
+      "0": 60,
+      "1": 16
+    },
+    "7": {
+      "0": 74,
+      "1": 2
+    },
+    "8": {
+      "0": 54,
+      "1": 22
+    },
+    "9": {
+      "1": 33,
+      "0": 43
+    },
+    "10": {
+      "0": 42,
+      "1": 34
+    },
+    "11": {
+      "0": 76
+    },
+    "12": {
+      "S": 76
+    }
+  },
+  "teaching_values_by_position": {
+    "r": [
+      1,
+      2
+    ],
+    "a": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      16,
+      17,
+      18,
+      19
+    ],
+    "b": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "c": [
+      0,
+      1
+    ],
+    "d": [
+      0,
+      1
+    ]
+  },
+  "first_answer_bit8_training_positive_count": 0,
+  "first_answer_bit8_training_total": 136,
+  "second_answer_bit8_training_positive_count": 2,
+  "second_answer_bit8_training_total": 76,
+  "primary_new_first_rows": 28,
+  "primary_new_first_bit8_positive_rows": 20,
+  "manifest_rows": 156,
+  "manifest_sha256": "97749bd4c921a5eff34668e8a39776bc3704a4fb49a50f2456600915f1c68b74",
+  "parent_reconstruction_matches_frozen_sha": true,
+  "seen_baseline_rows": 48,
+  "seen_baseline_exact_training_Q_count": 16,
+  "teaching_input_bit_counts_by_r_and_role": {
+    "all": {
+      "a": {
+        "16": {
+          "zero": 120,
+          "one": 16
+        },
+        "8": {
+          "zero": 136,
+          "one": 0
+        },
+        "4": {
+          "zero": 112,
+          "one": 24
+        },
+        "2": {
+          "zero": 82,
+          "one": 54
+        },
+        "1": {
+          "zero": 70,
+          "one": 66
+        }
+      },
+      "b": {
+        "16": {
+          "zero": 104,
+          "one": 32
+        },
+        "8": {
+          "zero": 132,
+          "one": 4
+        },
+        "4": {
+          "zero": 89,
+          "one": 47
+        },
+        "2": {
+          "zero": 78,
+          "one": 58
+        },
+        "1": {
+          "zero": 66,
+          "one": 70
+        }
+      },
+      "c": {
+        "16": {
+          "zero": 136,
+          "one": 0
+        },
+        "8": {
+          "zero": 136,
+          "one": 0
+        },
+        "4": {
+          "zero": 136,
+          "one": 0
+        },
+        "2": {
+          "zero": 136,
+          "one": 0
+        },
+        "1": {
+          "zero": 124,
+          "one": 12
+        }
+      },
+      "d": {
+        "16": {
+          "zero": 136,
+          "one": 0
+        },
+        "8": {
+          "zero": 136,
+          "one": 0
+        },
+        "4": {
+          "zero": 136,
+          "one": 0
+        },
+        "2": {
+          "zero": 136,
+          "one": 0
+        },
+        "1": {
+          "zero": 120,
+          "one": 16
+        }
+      }
+    },
+    "1": {
+      "a": {
+        "16": {
+          "zero": 60,
+          "one": 0
+        },
+        "8": {
+          "zero": 60,
+          "one": 0
+        },
+        "4": {
+          "zero": 48,
+          "one": 12
+        },
+        "2": {
+          "zero": 37,
+          "one": 23
+        },
+        "1": {
+          "zero": 32,
+          "one": 28
+        }
+      },
+      "b": {
+        "16": {
+          "zero": 44,
+          "one": 16
+        },
+        "8": {
+          "zero": 58,
+          "one": 2
+        },
+        "4": {
+          "zero": 35,
+          "one": 25
+        },
+        "2": {
+          "zero": 35,
+          "one": 25
+        },
+        "1": {
+          "zero": 24,
+          "one": 36
+        }
+      },
+      "c": {
+        "16": {
+          "zero": 60,
+          "one": 0
+        },
+        "8": {
+          "zero": 60,
+          "one": 0
+        },
+        "4": {
+          "zero": 60,
+          "one": 0
+        },
+        "2": {
+          "zero": 60,
+          "one": 0
+        },
+        "1": {
+          "zero": 54,
+          "one": 6
+        }
+      },
+      "d": {
+        "16": {
+          "zero": 60,
+          "one": 0
+        },
+        "8": {
+          "zero": 60,
+          "one": 0
+        },
+        "4": {
+          "zero": 60,
+          "one": 0
+        },
+        "2": {
+          "zero": 60,
+          "one": 0
+        },
+        "1": {
+          "zero": 60,
+          "one": 0
+        }
+      }
+    },
+    "2": {
+      "a": {
+        "16": {
+          "zero": 60,
+          "one": 16
+        },
+        "8": {
+          "zero": 76,
+          "one": 0
+        },
+        "4": {
+          "zero": 64,
+          "one": 12
+        },
+        "2": {
+          "zero": 45,
+          "one": 31
+        },
+        "1": {
+          "zero": 38,
+          "one": 38
+        }
+      },
+      "b": {
+        "16": {
+          "zero": 60,
+          "one": 16
+        },
+        "8": {
+          "zero": 74,
+          "one": 2
+        },
+        "4": {
+          "zero": 54,
+          "one": 22
+        },
+        "2": {
+          "zero": 43,
+          "one": 33
+        },
+        "1": {
+          "zero": 42,
+          "one": 34
+        }
+      },
+      "c": {
+        "16": {
+          "zero": 76,
+          "one": 0
+        },
+        "8": {
+          "zero": 76,
+          "one": 0
+        },
+        "4": {
+          "zero": 76,
+          "one": 0
+        },
+        "2": {
+          "zero": 76,
+          "one": 0
+        },
+        "1": {
+          "zero": 70,
+          "one": 6
+        }
+      },
+      "d": {
+        "16": {
+          "zero": 76,
+          "one": 0
+        },
+        "8": {
+          "zero": 76,
+          "one": 0
+        },
+        "4": {
+          "zero": 76,
+          "one": 0
+        },
+        "2": {
+          "zero": 76,
+          "one": 0
+        },
+        "1": {
+          "zero": 60,
+          "one": 16
+        }
+      }
+    }
+  },
+  "teaching_output_bit_counts_by_role": {
+    "first": {
+      "16": {
+        "zero": 120,
+        "one": 16
+      },
+      "8": {
+        "zero": 136,
+        "one": 0
+      },
+      "4": {
+        "zero": 112,
+        "one": 24
+      },
+      "2": {
+        "zero": 82,
+        "one": 54
+      },
+      "1": {
+        "zero": 70,
+        "one": 66
+      }
+    },
+    "second": {
+      "16": {
+        "zero": 60,
+        "one": 16
+      },
+      "8": {
+        "zero": 74,
+        "one": 2
+      },
+      "4": {
+        "zero": 54,
+        "one": 22
+      },
+      "2": {
+        "zero": 43,
+        "one": 33
+      },
+      "1": {
+        "zero": 42,
+        "one": 34
+      }
+    }
+  },
+  "teaching_output_bit_pair_coverage_by_role": {
+    "first": {
+      "16,8": {
+        "00": 120,
+        "01": 0,
+        "10": 16,
+        "11": 0
+      },
+      "16,4": {
+        "00": 96,
+        "01": 24,
+        "10": 16,
+        "11": 0
+      },
+      "16,2": {
+        "00": 74,
+        "01": 46,
+        "10": 8,
+        "11": 8
+      },
+      "16,1": {
+        "00": 62,
+        "01": 58,
+        "10": 8,
+        "11": 8
+      },
+      "8,4": {
+        "00": 112,
+        "01": 24,
+        "10": 0,
+        "11": 0
+      },
+      "8,2": {
+        "00": 82,
+        "01": 54,
+        "10": 0,
+        "11": 0
+      },
+      "8,1": {
+        "00": 70,
+        "01": 66,
+        "10": 0,
+        "11": 0
+      },
+      "4,2": {
+        "00": 58,
+        "01": 54,
+        "10": 24,
+        "11": 0
+      },
+      "4,1": {
+        "00": 58,
+        "01": 54,
+        "10": 12,
+        "11": 12
+      },
+      "2,1": {
+        "00": 41,
+        "01": 41,
+        "10": 29,
+        "11": 25
+      }
+    },
+    "second": {
+      "16,8": {
+        "00": 58,
+        "01": 2,
+        "10": 16,
+        "11": 0
+      },
+      "16,4": {
+        "00": 46,
+        "01": 14,
+        "10": 8,
+        "11": 8
+      },
+      "16,2": {
+        "00": 35,
+        "01": 25,
+        "10": 8,
+        "11": 8
+      },
+      "16,1": {
+        "00": 34,
+        "01": 26,
+        "10": 8,
+        "11": 8
+      },
+      "8,4": {
+        "00": 54,
+        "01": 20,
+        "10": 0,
+        "11": 2
+      },
+      "8,2": {
+        "00": 43,
+        "01": 31,
+        "10": 0,
+        "11": 2
+      },
+      "8,1": {
+        "00": 42,
+        "01": 32,
+        "10": 0,
+        "11": 2
+      },
+      "4,2": {
+        "00": 27,
+        "01": 27,
+        "10": 16,
+        "11": 6
+      },
+      "4,1": {
+        "00": 30,
+        "01": 24,
+        "10": 12,
+        "11": 10
+      },
+      "2,1": {
+        "00": 25,
+        "01": 18,
+        "10": 17,
+        "11": 16
+      }
+    }
+  },
+  "b15_input_presentations": 4,
+  "b15_answer_presentations": 2,
+  "tied_parameters": 10457,
+  "untied_parameters": 11081,
+  "forward_dense_MAC": 10920,
+  "interpretation": [
+    "First-slot bit8 receives only zero labels: encoder sharing cannot by itself supply positive first-slot labels. This is a legitimate zero-shot role-transfer test, but failure does not isolate encoder weakness.",
+    "Twenty of 28 primary new-first examples require a positive bit8 at first-output index1. The other eight examples (a6,7) fail too in the prior reported result, so absent bit8 positives alone cannot explain all 0/28 outcomes.",
+    "All eight primary cases a6,7 require a first-word (bit4,bit2)=(1,1) conjunction absent in first-role training, though it appears in second-role training. Primary OOV therefore combines unobserved first-slot bit values and unobserved within-word combinations.",
+    "WordStudent receives deterministic word slices, r header, and a position onehot; it discards generated prefix contents and constant framing. It does not learn word boundaries or r syntax from unrestricted raw bits.",
+    "The tied/untied within-study contrast has equal initial function by construction and equal forward MAC, but not equal parameters; historical raw-MLP comparisons also differ in frontend, initialization/continuation, epochs and budget.",
+    "Public Git has enough source to reconstruct corpus manifest exactly, but lacks final weights/raw/results JSON/prereg; prior 936/936 replay remains prior reported evidence until companion archive recovered."
+  ],
+  "initial_review_history": [
+    {
+      "status": "reviewer_assertion_corrected",
+      "detail": "The initial static audit expected 20 second-role bit8 positive presentations. Its assertion failed before neural work; reconstruction showed 2, and the audit assertion was corrected. This was a reviewer-script error, not an upstream experiment bug.",
+      "neural_forward_calls": 0,
+      "optimizer_updates": 0
+    }
+  ]
+}

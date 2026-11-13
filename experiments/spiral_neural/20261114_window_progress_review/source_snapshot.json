@@ -1,0 +1,228 @@
+{
+  "checked_at_utc": "2026-11-13 21:04:00 UTC",
+  "time_note": "Latest relevant pull request metadata refreshed immediately before preregistering the read-only probe.",
+  "primary_head": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "parallel_head": "e745264ba8da233486b4632e69b093ac2833d7fb",
+  "pull_requests": [
+    {
+      "number": 55,
+      "title": "[NN研究] AE1 詞位權重共用：六學生實訓，首詞新值 0/84、次詞有限改善",
+      "head": "e745264ba8da233486b4632e69b093ac2833d7fb",
+      "branch": "research/scheduled-nn-ae1-weight-tying-20261114",
+      "base": "research/scheduled-nn-ae1-equal-unique-role-20261114",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/55",
+      "updated_at": "2026-11-13T20:53:04Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 54,
+      "title": "[NN研究] AE1 等不同題數角色教材：兩seed門檻未全過、未見詞值仍0/96",
+      "head": "3a5e3848cac8c4706aef24f30e41ab2bbf5008e4",
+      "branch": "research/scheduled-nn-ae1-equal-unique-role-20261114",
+      "base": "research/scheduled-nn-ae1-first-high-role-transfer-20261114",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/54",
+      "updated_at": "2026-11-13T19:52:54Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 53,
+      "title": "[NN研究] AE1 首詞高位教材等預算角色互換：已知詞轉移有限改善、新詞值仍0/64",
+      "head": "61cf62856bbc20bacc779cc7c4b7953ae733cee3",
+      "branch": "research/scheduled-nn-ae1-first-high-role-transfer-20261114",
+      "base": "research/scheduled-nn-ae1-first-word-bit8-20261114",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/53",
+      "updated_at": "2026-11-13T18:52:20Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 52,
+      "title": "[NN研究] AE1 首詞新位元值泛化：四checkpoint見詞96/96、未教詞0/96",
+      "head": "76636565b73c2d1dc0383ea1bbe9ff3fbb2e1ad5",
+      "branch": "research/scheduled-nn-ae1-first-word-bit8-20261114",
+      "base": "research/scheduled-nn-ae1-new-pair-context-20261114",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/52",
+      "updated_at": "2026-11-13T17:47:58Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 49,
+      "title": "E3 續教8輪：首次900全對，整體穩定門檻仍未達",
+      "head": "915219a4a787ea1452b798104d2158a6d8c82410",
+      "branch": "codex/e3-continuation-20261113",
+      "base": "codex/e3-learning-probe-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/49",
+      "updated_at": "2026-11-13T16:43:33Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 47,
+      "title": "E3 CPU：一輪學新與保留比較，零遺忘門檻未達",
+      "head": "60ffaee62ab582f7ead926c064ba7e454e2f3018",
+      "branch": "codex/e3-learning-probe-20261113",
+      "base": "codex/f2-stability-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/47",
+      "updated_at": "2026-11-13T15:33:07Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 43,
+      "title": "F2 CPU：降學習率後三個模型下一輪都維持全對",
+      "head": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+      "branch": "codex/f2-stability-20261113",
+      "base": "codex/ae1-flip2-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/43",
+      "updated_at": "2026-11-13T12:56:04Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 41,
+      "title": "[效能研究] GTX1650逐bit加速：現成CuPy＋Graph原型與工具取捨",
+      "head": "f7cfaef575a5204074f7c6529adaf3282aa15897",
+      "branch": "codex/gpu-training-review-20261113",
+      "base": "codex/ae1-flip2-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/41",
+      "updated_at": "2026-11-13T10:51:51Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 33,
+      "title": "[神經實驗] F2混合續訓：3/3曾全對、1/3兩連勝",
+      "head": "f9d41eb28f067a222682e02c85c7371297bddde9",
+      "branch": "codex/ae1-flip2-20261113",
+      "base": "codex/ae1-mixed-flip-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/33",
+      "updated_at": "2026-11-13T06:26:32Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 30,
+      "title": "[視窗GPT] 核對三類已會、實測F2缺口，修正後綴評估並設計下一階段",
+      "head": "1e4812bd48404c8c03f659ed8a8d86dd5aa5852e",
+      "branch": "research/window-gpt/ae1-next-phase-review-20261113",
+      "base": "codex/ae1-mixed-flip-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/30",
+      "updated_at": "2026-11-13T02:52:19Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 28,
+      "title": "[Codex] 三模型學會混合回音1/2與翻轉：各900/900，舊能力恢復",
+      "head": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+      "branch": "codex/ae1-mixed-flip-20261113",
+      "base": "codex/ae1-parameter-curriculum-20261113",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/28",
+      "updated_at": "2026-11-13T02:13:04Z",
+      "state": "open",
+      "draft": false
+    }
+  ],
+  "checked_at_timezone": "UTC",
+  "latest_pr_metadata": [
+    {
+      "number": 55,
+      "title": "[NN研究] AE1 詞位權重共用：六學生實訓，首詞新值 0/84、次詞有限改善",
+      "head": "e745264ba8da233486b4632e69b093ac2833d7fb",
+      "updated_at": "2026-11-13T20:53:04Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 54,
+      "title": "[NN研究] AE1 等不同題數角色教材：兩seed門檻未全過、未見詞值仍0/96",
+      "head": "3a5e3848cac8c4706aef24f30e41ab2bbf5008e4",
+      "updated_at": "2026-11-13T19:52:54Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 53,
+      "title": "[NN研究] AE1 首詞高位教材等預算角色互換：已知詞轉移有限改善、新詞值仍0/64",
+      "head": "61cf62856bbc20bacc779cc7c4b7953ae733cee3",
+      "updated_at": "2026-11-13T18:52:20Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 52,
+      "title": "[NN研究] AE1 首詞新位元值泛化：四checkpoint見詞96/96、未教詞0/96",
+      "head": "76636565b73c2d1dc0383ea1bbe9ff3fbb2e1ad5",
+      "updated_at": "2026-11-13T17:47:58Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 51,
+      "title": "[NN研究] AE1 新a/b配對×無關c/d泛化：384真01回覆，混教96/96但舊模型出現d敏感反例",
+      "head": "5d8c42c98f1b0e0f5edeb073be6232b512e47526",
+      "updated_at": "2026-11-13T16:57:01Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 49,
+      "title": "E3 續教8輪：首次900全對，整體穩定門檻仍未達",
+      "head": "915219a4a787ea1452b798104d2158a6d8c82410",
+      "updated_at": "2026-11-13T16:43:33Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 50,
+      "title": "[視窗GPT] VM 發票時機與 issuer epoch 組合 ABA 回歸",
+      "head": "56e5d8cf7ff12e0e577927813a6f42b5f3de5fcb",
+      "updated_at": "2026-11-13T16:02:09Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 48,
+      "title": "[NN研究] AE1 第四詞d單bit介入：192真01推論與c字位敏感度分離",
+      "head": "acb2947e558addfac1912870d61be439df4d9b7f",
+      "updated_at": "2026-11-13T15:48:18Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 47,
+      "title": "E3 CPU：一輪學新與保留比較，零遺忘門檻未達",
+      "head": "60ffaee62ab582f7ead926c064ba7e454e2f3018",
+      "updated_at": "2026-11-13T15:33:07Z",
+      "state": "open",
+      "draft": false
+    },
+    {
+      "number": 46,
+      "title": "[NN研究] AE1 c2→c3無關詞介入：448真01回答、奇偶捷徑與混教對照",
+      "head": "1598246cde44d9b29a0fdf6645e27ff023dde4b0",
+      "updated_at": "2026-11-13T14:56:49Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 45,
+      "title": "[NN研究] AE1 無關第三詞c平衡教學：兩真學生、seed101過關／seed202失敗、c2反例",
+      "head": "8c008ec60adc67915ad4955ae5ab239784dcf7da",
+      "updated_at": "2026-11-13T13:56:09Z",
+      "state": "open",
+      "draft": true
+    },
+    {
+      "number": 43,
+      "title": "F2 CPU：降學習率後三個模型下一輪都維持全對",
+      "head": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+      "updated_at": "2026-11-13T12:56:04Z",
+      "state": "open",
+      "draft": false
+    }
+  ]
+}

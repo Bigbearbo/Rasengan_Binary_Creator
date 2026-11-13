@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "scope": "Independent saved-record/source/state-hash/cost audit; no NN regeneration or optimizer execution",
+  "source_head": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "frozen_probe_commit": "898a385b33cf25ca6cd75f34fddf6b09812e3bfb",
+  "probe_source_sha256": "05a85714c7a8e9c168375a335b7c247c9097a54be1593a18c3796b0aef54468d",
+  "protocol_sha256": "e144751b102a85695799b46f7761f283cffde3f510c9e02322830065d5cdef3f",
+  "raw_cases_sha256": "79cbfaf2cff4f7c4590dc5b83ef598dca6c1c6be886b8a5f68419b104becc603",
+  "raw_cases_checked": 10800,
+  "baseline_exact_archive_matches_including_errors": 2700,
+  "baseline_correct_answers": {
+    "101": 900,
+    "202": 879,
+    "303": 897
+  },
+  "new_distinct_Q_per_model": 2700,
+  "new_relevant_abc_combinations_per_model": 900,
+  "whole_correct": {
+    "101": {
+      "c0_d0": 900,
+      "c1_d0": 900,
+      "c0_d1": 900,
+      "c1_d1": 900
+    },
+    "202": {
+      "c0_d0": 879,
+      "c1_d0": 879,
+      "c0_d1": 876,
+      "c1_d1": 878
+    },
+    "303": {
+      "c0_d0": 897,
+      "c1_d0": 893,
+      "c0_d1": 895,
+      "c1_d1": 893
+    }
+  },
+  "paired_metrics_exact": true,
+  "source_state_hashes_match_reported_before_and_after": true,
+  "source_archives_unchanged": true,
+  "original_probe_forward_calls": 205448,
+  "original_probe_dense_MAC": 2143233536,
+  "new_audit_forward_calls": 0,
+  "new_audit_optimizer_updates": 0,
+  "limits": "This audit verifies saved outputs and accounting; it does not independently regenerate model outputs or observe past in-memory state. Runtime and readonly-array claims remain the executed probe's observations."
+}

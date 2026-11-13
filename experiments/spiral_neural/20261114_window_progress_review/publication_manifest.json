@@ -1,0 +1,127 @@
+{
+  "id": "WINDOW-GPT-E3-PROGRESS-REVIEW-20261114",
+  "owner": "視窗GPT",
+  "parent_commit": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "preregistration_commit": "898a385b33cf25ca6cd75f34fddf6b09812e3bfb",
+  "all_changes": "new files only; old code, weights and reports unchanged",
+  "listed_files_excluding_self": 19,
+  "files": [
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/NEXT_DECISIONS.md",
+      "bytes": 7350,
+      "sha256": "963dbd74677d8075ead1cb9edff30740169e52e8bee01ba36461451add733892",
+      "git_blob": "a9531b44b5e314d6295131ab0d1502ce07b972bc"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/PR55_FINDINGS.md",
+      "bytes": 2782,
+      "sha256": "b685848f6f4098be7369b45e0a31fd440dcdd77ff44c2fa0c6cf198f2036f96a",
+      "git_blob": "fe1be50fb7aff9abdc58e39f4c90e2e65e96267d"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/README.md",
+      "bytes": 11375,
+      "sha256": "f56279aceed345744ffce420438b26f5570029c05180b15e3884f9dfebffb622",
+      "git_blob": "0589523f43df6d98cbb264fdc702553e52abe57d"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/e3_composition_probe.py",
+      "bytes": 23512,
+      "sha256": "05a85714c7a8e9c168375a335b7c247c9097a54be1593a18c3796b0aef54468d",
+      "git_blob": "f0cc592c458df042f57c30880e5b356fd5150e75"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/e3_probe_protocol.json",
+      "bytes": 6333,
+      "sha256": "e144751b102a85695799b46f7761f283cffde3f510c9e02322830065d5cdef3f",
+      "git_blob": "4f8fbefb317222db1fbf42a44144468448363b29"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/e3_probe_record_audit.json",
+      "bytes": 1628,
+      "sha256": "5a65eff47eea62524e940fed54f891fd1d495aea473f5050a8f093c623a6b5a0",
+      "git_blob": "c45b5049bc3f9cd075b0760d17e292efa83fd970"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/e3_probe_record_audit.py",
+      "bytes": 11066,
+      "sha256": "4ca28157bd9f63c806a11fdbd7281d9b75fbd9ea21ccfa3c2feaa5b2f19f9703",
+      "git_blob": "0ac9d2e22a53035edc436f755b0e6571a3c1c30a"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/mainline_record_audit.json",
+      "bytes": 14749,
+      "sha256": "f380f2b1df692b9946dd65143e714e4ff4c7e4fbc8ae74937f6907cc7dbf9dd4",
+      "git_blob": "b587a1ed9d912deb52a6203d03cd5e06e95de896"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/mainline_record_audit.py",
+      "bytes": 10706,
+      "sha256": "f0fcdc880800ca5341188d3ba90736e3fad2f880b56280e275c019e8e1b14f61",
+      "git_blob": "843ee09f6a915ed159da88271fbfeff46f07dc02"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/next_training_candidate.json",
+      "bytes": 3465,
+      "sha256": "d528c399eea5980fed5f06a237388569fe992e2324dd7cab7947a6f8131c7a84",
+      "git_blob": "d85a4711ab56fe2ad9637416df44d204d8ff1161"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/pr55_static_audit.json",
+      "bytes": 11300,
+      "sha256": "a291eec84428f35a4254dca7a550ab52462727ec04a9b60fcdcb3041662c38b8",
+      "git_blob": "6325d201dac34710837d05d8b964cdd3cdc00167"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/pr55_static_audit.py",
+      "bytes": 8867,
+      "sha256": "d9634156f93ed867571e09391c77d678553e5023f154c74289f98c9f79ef6764",
+      "git_blob": "9844a2b30b6923df1fb437e4d11556b675752685"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/probe_evidence.zip",
+      "bytes": 343344,
+      "sha256": "9b5a6d1ae7455d4840f9ca263b849b37c821af782c8c14495d3a0d9d7c61f019",
+      "git_blob": "bcd072ce2bcab6b6439ad6779f170a59ccdb2fdd"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/probe_evidence_manifest.json",
+      "bytes": 689,
+      "sha256": "ff3a15f17dc32d268fd3ba040618b79c71b86bad105ac45a44ec571e7cc37a82",
+      "git_blob": "66abdb83173dff5fac9c0d54612a1fda43d46cad"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/probe_execution_intent.json",
+      "bytes": 418,
+      "sha256": "dc59e5283eaf2ecab1ff6f9b1fcf8ae0251b424c2f908cd29c3a3375513358c9",
+      "git_blob": "4eb19e9927987fcc12bcaec53bb27219283ca73c"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/probe_summary.json",
+      "bytes": 15957,
+      "sha256": "d8f55e5ae99c14dd6bee346df779e0d0c0d04a43c5ab4fda5521f7ee983ab1ad",
+      "git_blob": "7bc021a7a32963ef7b0719035461109a714f9385"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/review_checks.json",
+      "bytes": 1880,
+      "sha256": "6bc2cde4177cda5a21ac01ad866f6ba44f75e364119e0790753cb60973e27816",
+      "git_blob": "74f7241fc47640f88740547de677c0c9a0840f1e"
+    },
+    {
+      "path": "experiments/spiral_neural/20261114_window_progress_review/source_snapshot.json",
+      "bytes": 8865,
+      "sha256": "64eab8c70bd46504a57264de7a7ed38d7ae551bea4b32bdf5e1c6618bad2d6a3",
+      "git_blob": "280e6b01e0532ab666ea470cd42a68ced8391edf"
+    },
+    {
+      "path": "docs/ai_orchestration/WINDOW_GPT_E3_PROGRESS_DECISIONS_20261114.md",
+      "bytes": 1653,
+      "sha256": "247831a6db966ca8ae785c737716b294082f6b43a3139815b51ce768cadb87c6",
+      "git_blob": "3ff96fa259942e3524b061b4bfbf477af05ea00f"
+    }
+  ],
+  "raw_probe_results": "Preserved completely in probe_evidence.zip; local unpacked probe_results is not a separate tracked deliverable",
+  "new_optimizer_updates": 0,
+  "new_neural_forward_calls": 205448
+}

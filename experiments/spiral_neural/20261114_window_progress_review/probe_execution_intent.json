@@ -1,0 +1,9 @@
+{
+  "protocol_id": "WINDOW-E3-CD-FACTORIAL-READONLY-20261114",
+  "frozen_commit": "898a385b33cf25ca6cd75f34fddf6b09812e3bfb",
+  "created_at_UTC": "2026-11-13T21:05:27.599618+00:00",
+  "protocol_sha256": "e144751b102a85695799b46f7761f283cffde3f510c9e02322830065d5cdef3f",
+  "probe_source_sha256": "05a85714c7a8e9c168375a335b7c247c9097a54be1593a18c3796b0aef54468d",
+  "new_optimizer_updates": 0,
+  "auto_retry": false
+}

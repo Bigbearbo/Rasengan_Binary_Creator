@@ -1,0 +1,24 @@
+{
+  "archive": "probe_evidence.zip",
+  "bytes": 343344,
+  "sha256": "9b5a6d1ae7455d4840f9ca263b849b37c821af782c8c14495d3a0d9d7c61f019",
+  "members": [
+    {
+      "path": "raw_cases.jsonl",
+      "bytes": 4762875,
+      "sha256": "79cbfaf2cff4f7c4590dc5b83ef598dca6c1c6be886b8a5f68419b104becc603"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 15957,
+      "sha256": "d8f55e5ae99c14dd6bee346df779e0d0c0d04a43c5ab4fda5521f7ee983ab1ad"
+    },
+    {
+      "path": "execution_intent.json",
+      "bytes": 418,
+      "sha256": "dc59e5283eaf2ecab1ff6f9b1fcf8ae0251b424c2f908cd29c3a3375513358c9"
+    }
+  ],
+  "new_neural_forward_calls_for_packaging": 0,
+  "new_optimizer_updates": 0
+}

@@ -1,0 +1,661 @@
+{
+  "status": "passed",
+  "scope": "PR49 archived-record, data, course, source-AST and state-chain audit; no NN executed",
+  "head": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "new_forward_calls": 0,
+  "new_optimizer_updates": 0,
+  "public_files_checked": 17,
+  "archive_members_checked": 272,
+  "science_members": 180,
+  "raw_questions_checked": 4500,
+  "recorded_generations_rescored": 121500,
+  "final_TF_records_checked": 159300,
+  "source_functions_AST_checked": 21,
+  "recorded_inference_count": 1595382,
+  "students": [
+    {
+      "seed": 101,
+      "initial_t": 1070100,
+      "final_t": 1494900,
+      "final_scores": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 899,
+        "E3": 900
+      },
+      "trajectory": [
+        {
+          "epoch": 1,
+          "E3": 587,
+          "old_wrong": 4,
+          "all_correct": 4183,
+          "lost_vs_previous": 86,
+          "recovered_vs_previous": 443
+        },
+        {
+          "epoch": 2,
+          "E3": 775,
+          "old_wrong": 16,
+          "all_correct": 4359,
+          "lost_vs_previous": 90,
+          "recovered_vs_previous": 266
+        },
+        {
+          "epoch": 3,
+          "E3": 838,
+          "old_wrong": 1,
+          "all_correct": 4437,
+          "lost_vs_previous": 56,
+          "recovered_vs_previous": 134
+        },
+        {
+          "epoch": 4,
+          "E3": 785,
+          "old_wrong": 5,
+          "all_correct": 4380,
+          "lost_vs_previous": 118,
+          "recovered_vs_previous": 61
+        },
+        {
+          "epoch": 5,
+          "E3": 893,
+          "old_wrong": 6,
+          "all_correct": 4487,
+          "lost_vs_previous": 12,
+          "recovered_vs_previous": 119
+        },
+        {
+          "epoch": 6,
+          "E3": 806,
+          "old_wrong": 2,
+          "all_correct": 4404,
+          "lost_vs_previous": 96,
+          "recovered_vs_previous": 13
+        },
+        {
+          "epoch": 7,
+          "E3": 890,
+          "old_wrong": 4,
+          "all_correct": 4486,
+          "lost_vs_previous": 12,
+          "recovered_vs_previous": 94
+        },
+        {
+          "epoch": 8,
+          "E3": 900,
+          "old_wrong": 1,
+          "all_correct": 4499,
+          "lost_vs_previous": 1,
+          "recovered_vs_previous": 14
+        }
+      ],
+      "final_old_lost_vs_baseline": [
+        3120
+      ],
+      "final_old_recovered_vs_baseline": [
+        2362,
+        2540,
+        3300
+      ],
+      "first_E3_full_epoch": 8,
+      "all_five_full_epochs": [],
+      "final_TF_error_counts": {
+        "E1": 0,
+        "E2": 0,
+        "F1": 0,
+        "F2": 1,
+        "E3": 0
+      },
+      "final_first_error_histogram": {
+        "F2@9": 1
+      },
+      "final_wrong_records": [
+        {
+          "qid": 3120,
+          "class": "F2",
+          "payload": [
+            14,
+            0,
+            21,
+            3
+          ],
+          "first_error": 9,
+          "expected": "100010111110S",
+          "actual": "100010111010S"
+        }
+      ]
+    },
+    {
+      "seed": 202,
+      "initial_t": 1281600,
+      "final_t": 1706400,
+      "final_scores": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 900,
+        "E3": 879
+      },
+      "trajectory": [
+        {
+          "epoch": 1,
+          "E3": 159,
+          "old_wrong": 0,
+          "all_correct": 3759,
+          "lost_vs_previous": 32,
+          "recovered_vs_previous": 139
+        },
+        {
+          "epoch": 2,
+          "E3": 128,
+          "old_wrong": 10,
+          "all_correct": 3718,
+          "lost_vs_previous": 148,
+          "recovered_vs_previous": 107
+        },
+        {
+          "epoch": 3,
+          "E3": 206,
+          "old_wrong": 0,
+          "all_correct": 3806,
+          "lost_vs_previous": 88,
+          "recovered_vs_previous": 176
+        },
+        {
+          "epoch": 4,
+          "E3": 581,
+          "old_wrong": 2,
+          "all_correct": 4179,
+          "lost_vs_previous": 62,
+          "recovered_vs_previous": 435
+        },
+        {
+          "epoch": 5,
+          "E3": 816,
+          "old_wrong": 4,
+          "all_correct": 4412,
+          "lost_vs_previous": 51,
+          "recovered_vs_previous": 284
+        },
+        {
+          "epoch": 6,
+          "E3": 898,
+          "old_wrong": 2,
+          "all_correct": 4496,
+          "lost_vs_previous": 3,
+          "recovered_vs_previous": 87
+        },
+        {
+          "epoch": 7,
+          "E3": 899,
+          "old_wrong": 0,
+          "all_correct": 4499,
+          "lost_vs_previous": 1,
+          "recovered_vs_previous": 4
+        },
+        {
+          "epoch": 8,
+          "E3": 879,
+          "old_wrong": 0,
+          "all_correct": 4479,
+          "lost_vs_previous": 21,
+          "recovered_vs_previous": 1
+        }
+      ],
+      "final_old_lost_vs_baseline": [],
+      "final_old_recovered_vs_baseline": [
+        1751,
+        1767
+      ],
+      "first_E3_full_epoch": null,
+      "all_five_full_epochs": [],
+      "final_TF_error_counts": {
+        "E1": 0,
+        "E2": 0,
+        "F1": 0,
+        "F2": 0,
+        "E3": 21
+      },
+      "final_first_error_histogram": {
+        "E3@14": 12,
+        "E3@13": 5,
+        "E3@12": 3,
+        "E3@16": 1
+      },
+      "final_wrong_records": [
+        {
+          "qid": 3638,
+          "class": "E3",
+          "payload": [
+            1,
+            8,
+            26,
+            7
+          ],
+          "first_error": 14,
+          "expected": "000010010000110100S",
+          "actual": "000010010000111010S"
+        },
+        {
+          "qid": 3646,
+          "class": "E3",
+          "payload": [
+            1,
+            16,
+            27,
+            23
+          ],
+          "first_error": 14,
+          "expected": "000010100000110110S",
+          "actual": "000010100000111010S"
+        },
+        {
+          "qid": 3654,
+          "class": "E3",
+          "payload": [
+            1,
+            24,
+            20,
+            21
+          ],
+          "first_error": 13,
+          "expected": "000010110000101000S",
+          "actual": "000010110000110000S"
+        },
+        {
+          "qid": 3655,
+          "class": "E3",
+          "payload": [
+            1,
+            25,
+            20,
+            13
+          ],
+          "first_error": 13,
+          "expected": "000010110010101000S",
+          "actual": "000010110010110000S"
+        },
+        {
+          "qid": 3657,
+          "class": "E3",
+          "payload": [
+            1,
+            27,
+            20,
+            21
+          ],
+          "first_error": 13,
+          "expected": "000010110110101000S",
+          "actual": "000010110110110000S"
+        },
+        {
+          "qid": 3695,
+          "class": "E3",
+          "payload": [
+            3,
+            5,
+            24,
+            23
+          ],
+          "first_error": 14,
+          "expected": "000110001010110000S",
+          "actual": "000110001010111000S"
+        },
+        {
+          "qid": 3720,
+          "class": "E3",
+          "payload": [
+            4,
+            0,
+            26,
+            9
+          ],
+          "first_error": 14,
+          "expected": "001000000000110100S",
+          "actual": "001000000000111010S"
+        },
+        {
+          "qid": 3761,
+          "class": "E3",
+          "payload": [
+            5,
+            11,
+            21,
+            15
+          ],
+          "first_error": 13,
+          "expected": "001010010110101010S",
+          "actual": "001010010110110010S"
+        },
+        {
+          "qid": 3774,
+          "class": "E3",
+          "payload": [
+            5,
+            24,
+            20,
+            17
+          ],
+          "first_error": 13,
+          "expected": "001010110000101000S",
+          "actual": "001010110000110000S"
+        },
+        {
+          "qid": 3804,
+          "class": "E3",
+          "payload": [
+            6,
+            24,
+            12,
+            23
+          ],
+          "first_error": 12,
+          "expected": "001100110000011000S",
+          "actual": "001100110000100000S"
+        },
+        {
+          "qid": 3852,
+          "class": "E3",
+          "payload": [
+            8,
+            12,
+            26,
+            19
+          ],
+          "first_error": 14,
+          "expected": "010000011000110100S",
+          "actual": "010000011000111010S"
+        },
+        {
+          "qid": 4089,
+          "class": "E3",
+          "payload": [
+            16,
+            9,
+            12,
+            15
+          ],
+          "first_error": 12,
+          "expected": "100000010010011000S",
+          "actual": "100000010010100000S"
+        },
+        {
+          "qid": 4122,
+          "class": "E3",
+          "payload": [
+            17,
+            12,
+            24,
+            21
+          ],
+          "first_error": 14,
+          "expected": "100010011000110000S",
+          "actual": "100010011000111000S"
+        },
+        {
+          "qid": 4178,
+          "class": "E3",
+          "payload": [
+            19,
+            8,
+            24,
+            13
+          ],
+          "first_error": 14,
+          "expected": "100110010000110000S",
+          "actual": "100110010000111000S"
+        },
+        {
+          "qid": 4187,
+          "class": "E3",
+          "payload": [
+            19,
+            17,
+            12,
+            7
+          ],
+          "first_error": 12,
+          "expected": "100110100010011000S",
+          "actual": "100110100010100000S"
+        },
+        {
+          "qid": 4194,
+          "class": "E3",
+          "payload": [
+            19,
+            24,
+            25,
+            23
+          ],
+          "first_error": 14,
+          "expected": "100110110000110010S",
+          "actual": "100110110000111000S"
+        },
+        {
+          "qid": 4198,
+          "class": "E3",
+          "payload": [
+            19,
+            28,
+            26,
+            19
+          ],
+          "first_error": 14,
+          "expected": "100110111000110100S",
+          "actual": "100110111000111010S"
+        },
+        {
+          "qid": 4294,
+          "class": "E3",
+          "payload": [
+            23,
+            4,
+            17,
+            16
+          ],
+          "first_error": 16,
+          "expected": "101110001000100010S",
+          "actual": "101110001000100000S"
+        },
+        {
+          "qid": 4303,
+          "class": "E3",
+          "payload": [
+            23,
+            13,
+            24,
+            7
+          ],
+          "first_error": 14,
+          "expected": "101110011010110000S",
+          "actual": "101110011010111000S"
+        },
+        {
+          "qid": 4314,
+          "class": "E3",
+          "payload": [
+            23,
+            24,
+            26,
+            19
+          ],
+          "first_error": 14,
+          "expected": "101110110000110100S",
+          "actual": "101110110000111010S"
+        },
+        {
+          "qid": 4358,
+          "class": "E3",
+          "payload": [
+            25,
+            8,
+            11,
+            15
+          ],
+          "first_error": 14,
+          "expected": "110010010000010110S",
+          "actual": "110010010000011010S"
+        }
+      ]
+    },
+    {
+      "seed": 303,
+      "initial_t": 1215000,
+      "final_t": 1639800,
+      "final_scores": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 899,
+        "E3": 897
+      },
+      "trajectory": [
+        {
+          "epoch": 1,
+          "E3": 130,
+          "old_wrong": 18,
+          "all_correct": 3712,
+          "lost_vs_previous": 156,
+          "recovered_vs_previous": 94
+        },
+        {
+          "epoch": 2,
+          "E3": 376,
+          "old_wrong": 30,
+          "all_correct": 3946,
+          "lost_vs_previous": 92,
+          "recovered_vs_previous": 326
+        },
+        {
+          "epoch": 3,
+          "E3": 447,
+          "old_wrong": 12,
+          "all_correct": 4035,
+          "lost_vs_previous": 142,
+          "recovered_vs_previous": 231
+        },
+        {
+          "epoch": 4,
+          "E3": 662,
+          "old_wrong": 10,
+          "all_correct": 4252,
+          "lost_vs_previous": 159,
+          "recovered_vs_previous": 376
+        },
+        {
+          "epoch": 5,
+          "E3": 739,
+          "old_wrong": 11,
+          "all_correct": 4328,
+          "lost_vs_previous": 134,
+          "recovered_vs_previous": 210
+        },
+        {
+          "epoch": 6,
+          "E3": 826,
+          "old_wrong": 11,
+          "all_correct": 4415,
+          "lost_vs_previous": 60,
+          "recovered_vs_previous": 147
+        },
+        {
+          "epoch": 7,
+          "E3": 854,
+          "old_wrong": 12,
+          "all_correct": 4442,
+          "lost_vs_previous": 45,
+          "recovered_vs_previous": 72
+        },
+        {
+          "epoch": 8,
+          "E3": 897,
+          "old_wrong": 1,
+          "all_correct": 4496,
+          "lost_vs_previous": 1,
+          "recovered_vs_previous": 55
+        }
+      ],
+      "final_old_lost_vs_baseline": [
+        3499
+      ],
+      "final_old_recovered_vs_baseline": [
+        962,
+        1266,
+        1402,
+        1642,
+        1660,
+        1690,
+        3434,
+        3448
+      ],
+      "first_E3_full_epoch": null,
+      "all_five_full_epochs": [],
+      "final_TF_error_counts": {
+        "E1": 0,
+        "E2": 0,
+        "F1": 0,
+        "F2": 1,
+        "E3": 3
+      },
+      "final_first_error_histogram": {
+        "F2@9": 1,
+        "E3@9": 3
+      },
+      "final_wrong_records": [
+        {
+          "qid": 3499,
+          "class": "F2",
+          "payload": [
+            26,
+            19,
+            2,
+            2
+          ],
+          "first_error": 9,
+          "expected": "001010011000S",
+          "actual": "001010011S"
+        },
+        {
+          "qid": 3966,
+          "class": "E3",
+          "payload": [
+            12,
+            6,
+            0,
+            27
+          ],
+          "first_error": 9,
+          "expected": "011000001100000000S",
+          "actual": "01100000101110000000000000000000"
+        },
+        {
+          "qid": 4342,
+          "class": "E3",
+          "payload": [
+            24,
+            22,
+            0,
+            17
+          ],
+          "first_error": 9,
+          "expected": "110000101100000000S",
+          "actual": "11000010101101100000000000000000"
+        },
+        {
+          "qid": 4390,
+          "class": "E3",
+          "payload": [
+            26,
+            10,
+            0,
+            4
+          ],
+          "first_error": 9,
+          "expected": "110100010100000000S",
+          "actual": "11010001001110000000000000000000"
+        }
+      ]
+    }
+  ]
+}

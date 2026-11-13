@@ -1,0 +1,40 @@
+{
+  "author": "視窗GPT",
+  "status": "passed_with_scoped_limitations",
+  "formal_new_training_runs": 0,
+  "probe_execution_count": 1,
+  "probe_process_exit_code": 0,
+  "preregistered_commit": "898a385b33cf25ca6cd75f34fddf6b09812e3bfb",
+  "remote_preregistration_file_bytes_verified": 2,
+  "checks": {
+    "mainline_archived_data_and_state_chain": "mainline_record_audit.json",
+    "pr55_static_corpus_and_architecture": "pr55_static_audit.json",
+    "independent_new_probe_record_rescoring": "e3_probe_record_audit.json",
+    "final_report_numerical_and_attribution_review": "passed; read-only agent review, zero NN",
+    "new_Python_AST_parse": "4 files passed",
+    "new_JSON_parse": "all passed",
+    "training_candidate_cost_arithmetic": "passed",
+    "evidence_zip_byte_roundtrip": "passed; exact original three results files"
+  },
+  "probe_prefreeze_corrections": [
+    "Clarified d-only does not create a new relevant (a,b,c) combination",
+    "Added explicit refusal under python -O so assertion guards remain active; regenerated protocol before Git freeze"
+  ],
+  "nvidia": {
+    "task_id": "E3-next-step-readonly-review",
+    "status": "skipped_unavailable",
+    "reason": "No authorized callable OpenRouter/NVIDIA tool was exposed in this runtime",
+    "calls": 0
+  },
+  "gemini_calls": 0,
+  "native_agent_roles": [
+    "archived-mainline and state-chain audit plus probe prereg/post-record review",
+    "independent PR55 curriculum/source audit and final report review",
+    "next-phase design and read-only E3 probe implementation"
+  ],
+  "limits": [
+    "PR55 checkpoints and companion raw evidence were not retrieved; its reported neural replay is not a replay executed here",
+    "The only new NN work was the preregistered read-only E3 probe; audits use saved records/source",
+    "No merge, user desktop Codex launch, E4 training or backend replacement"
+  ]
+}
