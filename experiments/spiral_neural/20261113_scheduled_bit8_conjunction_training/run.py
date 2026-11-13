@@ -1,6 +1,6 @@
 """Matched AE1 bit8+bit16 conjunction teaching. Actual PyTorch native-01 learners.
 Pre-registered curriculum only; not a parser, oracle NN, or HAMU VM.
-Run \`python run.py gate\` then \`python run.py train\` exactly once.
+Run `python run.py gate` then `python run.py train` exactly once.
 """
 import base64,copy,hashlib,json,sys,time
 from pathlib import Path
