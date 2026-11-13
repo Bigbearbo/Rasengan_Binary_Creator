@@ -1,0 +1,240 @@
+{
+  "work_id": "SLE-AE1-ROLE-MIXED-POSITION-20261113",
+  "preregistered_before_run": true,
+  "protocol_sha256": "e695547810d8c15c15ec5608261bf08dab9eea3f09cd0e917efe41c43a707e41",
+  "source_pr36_commit": "0b4a39342ee4ef00a0775ece7a2c20a1dfa08b25",
+  "software": {
+    "torch": "2.10.0+cpu",
+    "numpy": "2.3.5"
+  },
+  "seeds": [
+    101,
+    202
+  ],
+  "epochs": 250,
+  "batch": 64,
+  "parameters": 10499,
+  "learning_rate": 0.003,
+  "models": [
+    {
+      "seed": 101,
+      "arm": "MIX_PARITY",
+      "initial_sha256": "8162fe86ef510343363a5993fc747e0c82f082c08925d58682ba5012f9c19006",
+      "final_sha256": "6b01085438db5b24acd7f23577b5957800aba532238e1feb36f2f34f732288ed",
+      "checkpoint": "weights_seed101_mix_parity.json",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.7840569615364075,
+        "100": 0.059746623039245605,
+        "250": 0.0035809515975415707
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "terminal_zero_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "terminal_zero_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "terminal_zero_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "mixed_taught_orientation": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "terminal_zero_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "inverse_not_taught": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "terminal_zero_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "heldout_s4_high_first": {
+          "n": 9,
+          "exact": 7,
+          "first_word_correct": 9,
+          "second_word_correct": 7,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s4_high_second": {
+          "n": 9,
+          "exact": 7,
+          "first_word_correct": 7,
+          "second_word_correct": 7,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s5_high_first": {
+          "n": 9,
+          "exact": 9,
+          "first_word_correct": 9,
+          "second_word_correct": 9,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s5_high_second": {
+          "n": 9,
+          "exact": 9,
+          "first_word_correct": 9,
+          "second_word_correct": 9,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "arm": "MIX_PARITY",
+      "initial_sha256": "9451a8901c8bf14cc08c681f657f14a935179917f5d9cbb9866537363acf511d",
+      "final_sha256": "58ce0d43bb1b659d52ea5f6fec89951986fcf6f2a723bc23743853ceeb05885f",
+      "checkpoint": "weights_seed202_mix_parity.json",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.7832221984863281,
+        "100": 0.04822133108973503,
+        "250": 0.0017428009305149317
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "terminal_zero_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "terminal_zero_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "terminal_zero_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "mixed_taught_orientation": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "terminal_zero_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "inverse_not_taught": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "terminal_zero_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "heldout_s4_high_first": {
+          "n": 9,
+          "exact": 8,
+          "first_word_correct": 8,
+          "second_word_correct": 8,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s4_high_second": {
+          "n": 9,
+          "exact": 9,
+          "first_word_correct": 9,
+          "second_word_correct": 9,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s5_high_first": {
+          "n": 9,
+          "exact": 8,
+          "first_word_correct": 8,
+          "second_word_correct": 8,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "heldout_s5_high_second": {
+          "n": 9,
+          "exact": 9,
+          "first_word_correct": 9,
+          "second_word_correct": 9,
+          "stop_correct": 9,
+          "terminal_zero_correct": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        }
+      }
+    }
+  ],
+  "all_new_optimizer_steps": 7500,
+  "all_new_target_exposures": 474000,
+  "all_new_training_dense_forward_MAC": 4944768000,
+  "all_new_eval_forward_calls": 4248,
+  "all_new_eval_dense_forward_MAC": 44315136,
+  "total_raw_cases": 360,
+  "elapsed_seconds": 6.446145842000078,
+  "raw_sha256": "768c010b22b61325d1d14e85a58e9a286e2e02fad111e2525290a3a0c94c7349"
+}
