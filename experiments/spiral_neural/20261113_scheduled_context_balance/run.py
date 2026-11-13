@@ -132,8 +132,8 @@ def gate():
     assert all(ans(r,a,b)==ans(R,A,B) for (r,a,b,c,d),(R,A,B,C,D) in zip(z,m))
     assert sum(c!=C for (_,_,_,c,_),(_,_,_,C,_) in zip(z,m))==8
     assert sum(x[3]==0 for x in m)==8 and sum(x[3]==1 for x in m)==8
-    assert all(sum(x[3]==c for x in m if x[1]==a)==2 for a in range(4) for c in (0,1))
-    assert all(sum(x[3]==c for x in m if x[2]==b)==2 for b in VALUES for c in (0,1))
+    assert all(sum(v[3]==c for v in m if v[1]==a)==2 for a in range(4) for c in (0,1))
+    assert all(sum(v[3]==c for v in m if v[2]==b)==2 for b in VALUES for c in (0,1))
     for policy in ('c1_only','balanced_c'):
         rs=rows(policy);X,Y=teacher(rs)
         assert len(rs)==136 and len(set(rs))==112 and X.shape==(1408,160) and Y.shape==(1408,)
