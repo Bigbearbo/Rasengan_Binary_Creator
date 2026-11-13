@@ -29,8 +29,10 @@ function auditRecord(rec, rows, label, split, variant, r) {
     check(pred,a,b,c,d,rr);
     assert(rr===r,'wrong r '+label);
     assert(sp(a,b)===split,'split leak '+label);
-    if(variant==='unseen_high')assert(c>=15&&d>=15,'high suffix error');
-    if(variant==='changed_low'||variant==='seen')assert(c<15&&d<15,'low suffix error');
+    // PR29 rows('train') ignores suffix_mode: all three labelled regimes are the *same* frozen-low input.
+    if(split==='train')assert(c<15&&d<15,'train suffix alias expected low');
+    else if(variant==='unseen_high')assert(c>=15&&d>=15,'high suffix error');
+    else assert(c<15&&d<15,'low suffix error');
     assert(!ids.has(key(row)),'duplicate '+label);ids.add(key(row));
     const expect=(r===1?word(a):word(a)+word(b))+'S';
     if(pred===expect)exact++;
@@ -87,6 +89,9 @@ function analyze(raw) {
   for(const model of data.per_model){
     assert([101,202].includes(model.seed)&&['fixed','varied'].includes(model.mode),'unexpected model');
     const tag=model.seed+'/'+model.mode;assert(!seenModels.has(tag),'duplicate model');seenModels.add(tag);
+    for(const r of ['1','2'])for(const variant of ['changed_low','unseen_high'])
+      assert(JSON.stringify(model.evaluation.train.seen[r].predictions)===JSON.stringify(model.evaluation.train[variant][r].predictions),
+        'PR29 train labelled suffix regimes should alias the same Q/outputs');
     for(const split of splits)for(const variant of variants){
       const byR=model.evaluation[split][variant];
       const k=tag+'/'+split+'/'+variant;
