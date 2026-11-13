@@ -1,0 +1,57 @@
+{
+  "id": "WINDOW-GPT-E4-MIXED-MASTERY-CANDIDATE-20261114",
+  "owner": "視窗GPT",
+  "status": "proposal_only_not_executed_not_a_training_preregistration",
+  "purpose": "Observe addition of E4 while retaining five already highly learned tasks; operational curriculum progress need not wait for perfect accuracy.",
+  "supersedes_priority_of": "PR56 WINDOW-GPT-E3-LATE-STEP-CANDIDATE-20261114, whose file and historical results remain unchanged",
+  "provenance": {
+    "user_direction": "Question mandatory perfect mastery and examine other small-model training experience.",
+    "assistant_policy_proposal": "95% whole-answer mastery reference, retention warning band, fixed four-epoch E4 exploration.",
+    "not_claimed": "User approval of every numeric policy, universal optimal threshold, completed new training, or causal proof that E4 causes any retention change."
+  },
+  "source_repository": "Bigbearbo/Rasengan_Binary_Creator",
+  "source_commit": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "source_pr": 49,
+  "source_state": "actual final-after-TF complete state for each seed, never an earlier best checkpoint",
+  "seeds": [101, 202, 303],
+  "initial_t": {"101": 1494900, "202": 1706400, "303": 1639800},
+  "learning_rate": 0.001,
+  "preserve": ["raw01 one-hot interface", "L80/H64/10499 parameters", "original CPU NumPy optimizer arithmetic", "p", "m", "v", "birth", "t", "growth RNG", "events", "all inherited counters", "own-prefix greedy generation", "external S", "cap32"],
+  "training": {
+    "payloads": "same 900 frozen N4 payloads as PR49",
+    "classes": ["E1", "E2", "F1", "F2", "E3", "E4"],
+    "questions_per_class": 900,
+    "questions_per_epoch": 5400,
+    "targets_per_question_including_S": {"E1": 7, "E2": 13, "F1": 7, "F2": 13, "E3": 19, "E4": 25},
+    "targets_per_epoch": 75600,
+    "mixing": "shuffle the full teacher-forced target presentation list as in the source training family; equal question counts are not equal target counts",
+    "course_rng": "separate explicitly frozen phase course RNG; preserve inherited model growth RNG; exact RNG seed, permutations and SHA required in executable preregistration",
+    "epochs_per_student": 4,
+    "updates_per_student": 302400,
+    "updates_all_students": 907200,
+    "dense_training_MAC_per_target": 21056,
+    "dense_training_MAC_all_students": 19102003200,
+    "cost_limit": "training arithmetic only; inference, validation, I/O and source reconstruction reported separately; no wall-time forecast",
+    "fixed_endpoint": "all students complete four epochs unless an implementation/data/nonfinite fault requires an explicitly recorded abort; no adaptive extra epochs or best-checkpoint restoration"
+  },
+  "evaluation": {
+    "baseline": "verify each parent against all 4500 archived old-task generations; additionally measure 900 original-payload E4 questions before any optimizer update, without assuming a zero baseline",
+    "per_epoch": ["whole answer including S by student and class", "first-error word/bit", "STOP correctness", "cap failures", "per-question lost/recovered", "maximum interim retention drop", "optimizer and inference costs"],
+    "mastery_reference": {"whole_accuracy_at_least": 0.95, "correct_out_of_900_at_least": 855, "scope": "each student and class independently", "meaning": "practical course progression reference, not universal algorithm proof"},
+    "old_task_warning": {
+      "condition": "correct < 855 OR baseline_correct - correct > 18",
+      "unit": "more than two percentage points over the same 900 questions, not relative percent",
+      "consecutive_warning": "two consecutive warnings on the SAME student and SAME old task call for diagnosis",
+      "further_progression": "hold further difficulty increases only for a student with an old-task warning still present at epoch four; an earlier recovered warning does not permanently block progress",
+      "within_window": "record warnings without changing the frozen four-epoch curriculum or learning rate"
+    },
+    "new_combination_panel": "freeze exact native questions and answers before training, verify unique complete Q and exclusion from all actual source training and prior probe manifests, use already seen values with new combinations, keep training/evaluation separate; exact size and generation seed must be fixed by executable preregistration",
+    "new_panel_scoring": "score at the fixed final endpoint only; never choose checkpoint or curriculum from this panel; without a measured panel baseline, report final accuracy rather than improvement",
+    "existing_PR56_probe": "diagnostic regression set already inspected by researchers, not a fresh blind test",
+    "historical_milestone": "retain original all-five 900/900 for two consecutive new epochs label as a historical metric; it is not a prerequisite for this E4 candidate",
+    "generalization_limit": "no claim of unseen numeric values, arbitrary word width, arbitrary sequence length or all-context correctness"
+  },
+  "pre_execution_freeze_required": ["recheck latest Codex ref for intervening work", "actual parent state SHA256 and t/counters", "runner and source-function audit", "all training question/target manifests", "four exact target-order manifests per student", "evaluation manifest and historical exclusion checks", "numeric budgets and inference accounting", "all pass/continue/warning definitions above"],
+  "causal_limit": "No equal-update old-only control: describe retention changes after E4 introduction, not a demonstrated E4-specific causal cost.",
+  "not_in_this_candidate": ["learning-rate sweep", "GPU/backend substitution", "architecture change", "optimizer reset", "error-specific oversampling", "rewriting historical pass/fail", "new neural run in this review"]
+}

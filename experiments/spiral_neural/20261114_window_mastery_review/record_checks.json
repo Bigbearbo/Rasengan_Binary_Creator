@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "scope": "Recompute ratios and planned exposure from immutable PR56 summary records and candidate; not a new replay of archived generations or neural inference",
+  "source_pr56_commit": "ad643ed635f1fdafd2797a95b3a398046143b86c",
+  "source_sha256": {
+    "mainline_record_audit.json": "f380f2b1df692b9946dd65143e714e4ff4c7e4fbc8ae74937f6907cc7dbf9dd4",
+    "probe_summary.json": "d8f55e5ae99c14dd6bee346df779e0d0c0d04a43c5ab4fda5521f7ee983ab1ad"
+  },
+  "source_mainline": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "students": [
+    {
+      "seed": 101,
+      "per_class_final_correct": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 899,
+        "E3": 900
+      },
+      "E3_percent": 100.0,
+      "old_four_correct": 3599,
+      "new_probe_correct": 2700,
+      "new_probe_total": 2700,
+      "new_probe_cells": {
+        "c1_d0": 900,
+        "c0_d1": 900,
+        "c1_d1": 900
+      }
+    },
+    {
+      "seed": 202,
+      "per_class_final_correct": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 900,
+        "E3": 879
+      },
+      "E3_percent": 97.66666666666667,
+      "old_four_correct": 3600,
+      "new_probe_correct": 2633,
+      "new_probe_total": 2700,
+      "new_probe_cells": {
+        "c1_d0": 879,
+        "c0_d1": 876,
+        "c1_d1": 878
+      }
+    },
+    {
+      "seed": 303,
+      "per_class_final_correct": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 900,
+        "F2": 899,
+        "E3": 897
+      },
+      "E3_percent": 99.66666666666667,
+      "old_four_correct": 3599,
+      "new_probe_correct": 2681,
+      "new_probe_total": 2700,
+      "new_probe_cells": {
+        "c1_d0": 893,
+        "c0_d1": 895,
+        "c1_d1": 893
+      }
+    }
+  ],
+  "minimum_mainline_class_correct": 879,
+  "minimum_new_probe_cell_correct": 876,
+  "proposed_budget": {
+    "targets_per_epoch": 75600,
+    "optimizer_updates": 907200,
+    "training_dense_MAC": 19102003200
+  },
+  "E4_encoding_capacity": {
+    "question_bits": 39,
+    "answer_bits": 24,
+    "actions_including_STOP": 25,
+    "max_correct_input_before_STOP": 63,
+    "window": 80,
+    "generation_cap": 32
+  },
+  "this_review_new_neural_forwards": 0,
+  "this_review_new_optimizer_updates": 0,
+  "historical_PR49_full_gate_changed": false,
+  "new_candidate_executed": false,
+  "nvidia_status": "skipped_unavailable",
+  "nvidia_calls": 0
+}
