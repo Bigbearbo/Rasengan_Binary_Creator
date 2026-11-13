@@ -1,0 +1,24 @@
+# SLE-AE1 equal-distinct role-exposure experiment — actual result (2026-11-14)
+
+**Frozen primary gate: FAIL** (only seed 202 passes; seed 101 fails). This is an independent small native-01 NN result, not parser, VM or Pro/Codex UR1. The public pre-training freeze is commit [`54c83e5d`](https://github.com/Bigbearbo/Rasengan_Binary_Creator/commit/54c83e5d202153c6fdbcf53cf8793252c2d3f228), parent PR #53 commit `61cf62856bbc20bacc779cc7c4b7953ae733cee3`.
+
+**One between-arm factor:** same 16 high16..19/low0..3 r2 teacher pairs, swap high word into first vs second output position. Both arm injections use irrelevant c0,d1 whereas all parent lessons use d0; this removes previous 112-versus-104 distinct-question imbalance. Both arms now have 136 presentations, **112 distinct questions**, 1408 target-prefix labels/epoch, same label histogram, same initial F32 source checkpoint and fresh Adam optimizer. Compared with previous PR #53 the suffix changes too, so do NOT treat the previous historical and current runs as a clean one-factor A/B.
+
+| seed, arm | baseline known /48 | exact injected train /16 | val first-role a20..23 /16 | unseen-value first-role a24..29 /24 | d0 context companion /24 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 101 first_high | 48 | 16 | 7 | **0** | 0 |
+| 101 second_high | 48 | 16 | 0 | **0** | 0 |
+| 202 first_high | 41 | 16 | 8 | **0** | 0 |
+| 202 second_high | 48 | 16 | 0 | **0** | 0 |
+
+Predeclared *per seed* PASS requires first_high val+unseen >=8/40, lead over second_high >=6/40 and both baselines >=40/48. seed101 7 vs0 -> FAIL; seed202 8 vs0 -> PASS. Entire gate **FAIL**. Heldout 24..29 are student-unseen throughout new curriculum, but researcher historically saw partially overlapping first/second word values; **not independent global blind testing**. Two paired seeds and finite range do not establish a universal algorithm.
+
+T (actual this run, PyTorch 2.10 CPU): **four** new 10,499-parameter students; 2200 Adam updates/student; 8800 total; 563200 teacher targets; **5,875,302,400** training forward dense MAC (no backward/optimizer counted); **512** complete original 01 + self-generated STOP replies; 6080 autoregressive neural forward and **63,426,560** inference dense MAC. Independent NumPy-only verifier loaded four final F32 states and exactly reproduced **512/512 complete replies** and 6080 decisions. All positive and negative raw Q/expected/actual are preserved, including seed101 first_high a21,b23,c0,d1 truth `101010101110S`, actual `111000101110S`.
+
+Machine-readable results `results.json` and all six source/final checkpoints, `raw_cases.jsonl`, 256-case locked `cases.jsonl`, `run.py`, `prereg.json`, a SHA256 manifest, and independent `verify_numpy.py` are together in companion **`sle_ae1_equal_unique_role_20261114.zip`**, SHA256 **`dee1121c7ca6ecd7d1f66bc0cb42e48f05f4f1603c14dc446634ff3e15a21093`**. Git alone does not contain the F32 weight binaries or every raw case. In a clean extraction, `sha256sum -c SHA256SUMS.txt`, `python validate_design.py`, and `OPENBLAS_NUM_THREADS=1 python verify_numpy.py` all PASS. The exact training runner was frozen before training by its SHA256 `edae40874fd937616e4f7a93e642dddf75d010e7cc02f1dea757e0bd24a55f1f` (10,780B), and full manifest by SHA256 `2eaf6ff3293a398322fbf4668407a9164b818886a6daf7c386f0b49fb9a0121f`. Complete archive accessible to the researcher in the accompanying research conversation; do not pretend Git alone suffices for full replay.
+
+U=author's native-bit small NN learning/growth/education objective. F=PR #40 source F32 states and PR #53 observed distinct-example confound. A=slot exposure could help seen-value role migration after equalizing unique coverage. T=four actual independent-trial students+raw generations+NumPy replay. No LLM answers during student inference or manual weight edits. NVIDIA skipped, no currently authorized callable OpenRouter reviewer, 0 calls; local Codex 0, Gemini 0. No changes to other workers' branches, no auto-merge.
+
+[更新] With equal *distinct* questions and equal target budgets, first-slot lessons still gain some **known** value first-role transfer (15/32 vs 0/32 across two seeds) but all student-unseen value outputs remain **0/96**. [取代] PR #53 unequal unique-count coverage alone could explain all role transfer. [原因] New arm-controlled 112/112 unique comparison with full pre-freeze and immutable outputs. [狀態] Measured result HIGH; internal mechanism and cross-study causal attribution LOW because suffix changed vs previous study.
+
+**Next owner:** independent native-bit NN researcher to design *genuinely untouched* value/context split and stronger copy-inductive-bias or word-position-sharing comparator, with fixed capacity/updates, rather than repeatedly retuning now-exposed a20..29. No evidence of SLE superiority to ordinary binary, neural mathematical understanding, or physically growing models here.
