@@ -1,0 +1,42 @@
+{
+  "work_id": "AE1-BIT8-ROUTE-R12-20261114",
+  "profile": "SLE-AE1-n5-v1",
+  "script_sha256": "7ffac184f73a275ef78f2f4c303413ffec65a93b3c89d477fdc57e91727a0e63",
+  "manifest_sha256": "45d8dcbd7c39515d1b57b04476bbd2c3edd59cdffbfe04873f3a272f45a1a71d",
+  "verifier_sha256": "8d177b3d43dd92f917fd4fbc9437313940d48fba0023259770b00fd79be24654",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "arms": [
+    "tied",
+    "untied"
+  ],
+  "model_params": {
+    "tied": 10457,
+    "untied": 11081
+  },
+  "model_forward_MAC": 10920,
+  "new_updates": 0,
+  "source_pr": 55,
+  "source_zip_sha256": "53f6e312f30570ef7d458f35b25c17b49eb7b161415bb5d3b165645aeb8f10a0",
+  "split": {
+    "diagnostic_val": [
+      0,
+      1
+    ],
+    "diagnostic_test": [
+      2,
+      3
+    ]
+  },
+  "anchor": [
+    18,
+    19
+  ],
+  "unique_variable": "flip data-bit of value 8 at target-word input, first or second; compare same role/anchor/prefix per pair",
+  "primary_gate": "At least two of three tied seeds: test 4 pairs of new-first role with >=3/4 positive target bit1 margin deltas while >=3/4 newly flipped target bits still incorrect. This distinguishes weak-but-aligned readout from no positive readout effect, not a proof of cause.",
+  "status": "FROZEN_BEFORE_NEURAL_FORWARD",
+  "limitations": "All IDs are previously analyzed; diagnostic split not untouched blind. SLE Q39 native 01, A two 6-bit words + external S. Each pair holds 1-bit target output prefix fixed. No training or free generation this run; no model/student oracle."
+}
