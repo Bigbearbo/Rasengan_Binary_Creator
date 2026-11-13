@@ -1,0 +1,85 @@
+{
+  "work_id": "SLE-AE1-ROLE-MIXED-POSITION-20261113",
+  "status": "PREREGISTERED_BEFORE_NEW_NN_TRAINING",
+  "owner": "independent scheduled NN researcher (not Codex/Pro)",
+  "source": {
+    "base_pull_request": 36,
+    "base_head_commit": "0b4a39342ee4ef00a0775ece7a2c20a1dfa08b25",
+    "parent_runner_git_blob_sha1": "ef24e2f5fd2515e5b5c0d0a593e5a9db9cca24b9",
+    "parent_runner_sha256": "05e2d730eecefcb50fa92392697556ffde313f5ecb59c2f4e583aad52e321303",
+    "parent_results_git_blob_sha1": "fc679d187b0a677989953fd37797a54c31c002c9",
+    "parent_raw_git_blob_sha1": "187636a0330be6e5f481c6df8e1504c47685c563",
+    "related_distinct_tracks": ["Codex F2 PR33", "UR1 neural PR12 and target-order PR13"]
+  },
+  "sole_experimental_factor": "For every (high v in 6..14, low s in 0..3), allocate orientation to high-first when (v-6+s) is even, otherwise high-second, instead of all pairs high-first or all pairs high-second. Equal 36 supplemental r2 question count, equal per-v and per-s exposures, equal model, initial weights, permutations, optimizer and updates; this is a curriculum allocation-policy comparison, not a pure input-position-only intervention.",
+  "a_priori_question": "Can exposure to every high token in BOTH answer positions, holding the 36-question supplemental count and per-token frequencies fixed, permit correct transfer to the previously untrained reverse orientation and to low-partner s4/s5?",
+  "profile": {
+    "name": "SLE-AE1-n5-v1",
+    "question": "01 + 010 + (three info bits for r + terminal 0) + 4*(five info bits ID+terminal 0) + END 111100",
+    "Q_bits": 39,
+    "answer": "first r complete 6-bit payload words + separate external STOP S",
+    "r": [1,2],
+    "ordinary_ID": "0..29", "reserved": "30 is END, 31 is UP",
+    "L": 80, "H": 64, "generation_cap": 32,
+    "fixture_question_second_high": "010100100000000001100000000000000111100",
+    "fixture_answer_second_high": "000000001100S",
+    "fixture_question_first_high": "010100100001100000000000000000000111100",
+    "fixture_answer_first_high": "001100000000S"
+  },
+  "split": {
+    "base": "All 36 (a,b) 0..5 pairs; (a+b)%6 == 0 is validation (6 pairs), ==1 is test (6 pairs), remaining 24 pairs train. Two r versions per pair. c=d=0.",
+    "supplement_train": "36 r2 pairs v6..14,s0..3, exactly one of (v,s) and (s,v), selected by parity (v-6+s)%2; 18 first and 18 second; every v occurs 2x in each role and every low s remains at 9 total exposures.",
+    "counterfactual_untrained_orientation": "36 r2 inverse-orientation pairs for the same 36 (v,s) choices; no train duplicates; diagnostic, not blind.",
+    "heldout_val": "s=4, v6..14, high in first or second role, 18 r2 pairs; never trained; results already seen as class in parent PR36, not novel blind.",
+    "heldout_test": "s=5, v6..14, high in first or second role, 18 r2 pairs; never trained; results already seen as class in parent PR36, not novel blind.",
+    "nuisance": "third/fourth payload words c=d=0 in all conditions"
+  },
+  "model_training": {
+    "architecture": "160 one-hot input slots -> 64 tanh -> 3 logits (0,1,S)",
+    "parameters": 10499,
+    "seeds": [101,202],
+    "start_state": "fresh model identical torch.manual_seed(seed) and SHA256 to previous PR36 seed counterpart, not checkpoint warm-start",
+    "optimizer": "Adam lr=0.003; batch=64; grad_clip_norm=1; no early-stop",
+    "epoch_shuffling": "numpy.default_rng(seed+87000+epoch).permutation(948), same as original PR36 for each seed",
+    "epochs": 250,
+    "targets_per_epoch": 948,
+    "updates_per_epoch": 15,
+    "optimizer_updates_per_model": 3750,
+    "optimizer_updates_all_new_models": 7500,
+    "target_exposures_per_model": 237000,
+    "target_exposures_total": 474000,
+    "train_dense_forward_MAC_per_model": 2472384000,
+    "train_dense_forward_MAC_total": 4944768000,
+    "MAC_per_forward": 10432,
+    "backward_optimizer_MAC_excluded": true,
+    "one_precommitted_training_attempt": true
+  },
+  "preregistered_evaluation": {
+    "primary": "For each seed, complete free-generated r2+STOP accuracy on 36 reverse-orientation cases and 18+18 heldout s4/s5 (report both roles separately), versus old PR36 per-seed exclusive-arm controls; no test-based selection.",
+    "secondary": "36 in-orientation train examples, base train/val/test, first/second six-bit word and terminal-zero checks, external STOP and cap failures, explicit full raw Q/expected/actual for every case.",
+    "mechanistic_gate": "If in-orientation exact is <33/36 OR base train <46/48, categorize as insufficient fitting; no claim position transfer failed in a well-fitted model.",
+    "success_criterion": "At least 12/18 exact for EACH heldout role in BOTH seeds, and at least 25/36 inverse orientation cases in BOTH seeds; otherwise report negative/partial without adding updates.",
+    "baseline": "PR36 exclusive high-first trained arm has 18/18 high-first, 0/18 high-second; exclusive high-second trained arm reverses to 0/18 and 18/18, both seeds. This is a matched policy reference, NOT a newly trained model in this round.",
+    "split_is_diagnostic": "PR36 already inspected s4/s5 heldout cases; these are heldout from this training but not prospectively unseen by research team. Do not call fresh blind generalization."
+  },
+  "pre_run_gate": [
+    "Import parent runner only if exact frozen sha256 matches PR36 source; every new Q is exactly native legal 39 bits; STOP is outside SLE bitstream.",
+    "No overlap among base train/val/test and supplemental/holdout classes; 36 unique supplemental pairs, 36 unique inverse pairs, 18 first+18 second; exactly 948 target-prefix examples per epoch.",
+    "Same fresh seed initial weight SHA as PR36; model 10499 params; identical 948 target shuffle indices for epochs 0..249; exactly 3750 updates per new student.",
+    "No large model or teacher oracle calculating outputs at inference; deterministic offline qbits/answer is only label generator and scoring truth.",
+    "Checkpoints and all successful/failed raw 01 outputs must be published; independent reloaded inference should reproduce full generation exactly."
+  ],
+  "evidence_provenance": {
+    "U": "author priority: small NN true native-01 learning and generalization, causal single-variable experiments, education",
+    "F": "live Git PR36 head + PR36 Python run/results/raw Git blob and checkpoint; P030-P035 distinct completed experiments",
+    "T": "none at preregistration, forthcoming only on actual invocation",
+    "A": "mixing high-value roles at a fixed lesson budget may improve heldout role use, but diluted per-role exposure may harm fitting"
+  },
+  "external": {
+    "nvidia_status": "skipped_no_authorized_worker_connection",
+    "nvidia_actual_calls": 0,
+    "codex_actual_calls": 0,
+    "gemini_actual_calls": 0
+  },
+  "owner_next": "independent NN reviewer / Codex (review-only); no automatic merge, frozen PR36 and UR1 branches untouched"
+}
