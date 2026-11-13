@@ -1,0 +1,82 @@
+{
+  "work_id": "SLE-AE1-BIT8-TRANSFER-20261113-12",
+  "prereg_commit": "ead3e96c7f982061bb5fdd41b1961a7d43f1389d",
+  "parent_pr": 40,
+  "parent_head": "80b814f0c4041471cd99395d2a10f6c86cb4f2d3",
+  "source_archive_sha256": "1562ebeb5069e217d4d1396c14b9ea9e3fe969db0ce93237e9fcd635fc6fd94e",
+  "source_checkpoint_sha256": {
+    "seed101": "ac022fdcac1c6e9de5b78e1667519a6443e05c7f8e48fe4b84514432a1576009",
+    "seed202": "048c719e8c2afbbcac579b80a2f820989eb68ba030a1f2ce7c2747474897a157"
+  },
+  "source_checkpoint_replay": {
+    "correct": 288,
+    "total": 288,
+    "forward_calls": 2880
+  },
+  "new_test": {
+    "real_NN_outputs": 288,
+    "pairs": 144,
+    "forward_calls": 2880,
+    "dense_MAC": 30044160,
+    "per_checkpoint_parameters": 10499,
+    "optimizer_updates": 0,
+    "categories": {
+      "seed101_heldout": {
+        "r1_exposed": "12/12",
+        "r1_novel": "12/12",
+        "r2_exposed": "12/12",
+        "r2_novel": "0/12",
+        "r1_pair_invariant": "12/12",
+        "r2_pair_invariant": "12/12",
+        "r2_exact_bit8_flip": "0/12"
+      },
+      "seed202_heldout": {
+        "r1_exposed": "12/12",
+        "r1_novel": "12/12",
+        "r2_exposed": "12/12",
+        "r2_novel": "0/12",
+        "r1_pair_invariant": "12/12",
+        "r2_pair_invariant": "12/12",
+        "r2_exact_bit8_flip": "0/12"
+      },
+      "all_a0_to5_both_seeds": {
+        "r1_exposed": "72/72",
+        "r1_novel": "72/72",
+        "r2_exposed": "72/72",
+        "r2_novel": "0/72",
+        "r1_pair_invariant": "72/72",
+        "r2_pair_invariant": "72/72",
+        "r2_exact_bit8_flip": "0/72",
+        "STOP_correct": "288/288"
+      }
+    }
+  },
+  "independent_pytorch_vs_numpy": {
+    "matched": 288,
+    "total": 288,
+    "forward_calls": 2880,
+    "dense_MAC": 30044160
+  },
+  "archive_only_raw_sha256": "b68bdabeaa20fe4149a6b7d32d729ff70474a2aa1e2efae83d9a648a81c22573",
+  "archive_only_pairs_sha256": "fbe29352a51e1c36f0b433e7f04512cf826b8ac38d4e9532cc98c2636c90d33a",
+  "git_reproducer_raw_sha256": "aa1d1a46a0210d66f5be519d1e57dc23bb118089fbfca0f18898c60491c4fda4",
+  "prereg_primary_gate": {
+    "baseline_control": "PASS both seeds",
+    "transfer": "FAIL both seeds"
+  },
+  "runner_standalone_sha256": "d4bfc9cf6686438c98e355eb6ddc0b688ffa95daac4057ec403784f3c932d5d0",
+  "provenance": {
+    "U": "Author asks independent true 01 neural generalization tests",
+    "F": "PR40 frozen checkpoint and PR39/PR36 evidence; P030-P035 context",
+    "T": "one read-only novel Q-bit intervention, NumPy student and PyTorch replay, 0 updates",
+    "A": "Missing general bit-copy transfer for value-8 bit in this model configuration; neural internals not isolated"
+  },
+  "limitations": "Only two seeds, selected values 16..21 vs 24..29, a4/5 context has been examined by prior researcher; heldout-partner not untouched researcher-blind. No direct baseline vs other encoding, no new training or UR1 training. Full raw/checkpoints are in the companion user-delivered ZIP, not this Git branch.",
+  "NVIDIA": {
+    "actual_calls": 0,
+    "reason": "No authorized worker access in this environment"
+  },
+  "Codex_local_calls": 0,
+  "Gemini_calls": 0,
+  "next_owner": "independent checkpoint reviewer or Codex; no automatic merge"
+}
