@@ -1,0 +1,101 @@
+{
+  "external_model_calls": 0,
+  "formal_forward_calls": 0,
+  "inputs_zip_bytes": 7967750,
+  "inputs_zip_sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "new_optimizer_calls": 0,
+  "parents": {
+    "101": {
+      "counters": {
+        "inference_MAC": 1577068032,
+        "inference_calls": 151176,
+        "t": 151200,
+        "train_MAC": 3183667200
+      },
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "3408a4eeca740ad828c8000eaf50d3ea587430b092350a437f09e7eed50a5db1",
+      "raw_sha256": "75c4a207766b86779f5332a58521ab19f43dd3837225718a34a134ad4fe16879",
+      "source_archive": {
+        "Git_blob": "b4d7918a847e72d683ae97be548f2eb00d35dfa0",
+        "bytes": 2813680,
+        "file": "science-seed101-001.zip",
+        "sha256": "fce8000c4a1cb9b274272f6b4af6c6dda940cab591df6c8470e0d7e2b78bdd1b",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "b344e289",
+        "Git_blob": "daa5665eea5ad71f27f98f5f2986318aa4136a85",
+        "bytes": 216804,
+        "compressed_bytes": 75026,
+        "path": "science/seed101/final-state.npz",
+        "sha256": "75c4a207766b86779f5332a58521ab19f43dd3837225718a34a134ad4fe16879"
+      }
+    },
+    "202": {
+      "counters": {
+        "inference_MAC": 1896485440,
+        "inference_calls": 181795,
+        "t": 181800,
+        "train_MAC": 3827980800
+      },
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "5e4d6763dddea23ab4f1ee583fc80f7d2c0d58470c4f43cbf527cea7bd3f48d0",
+      "raw_sha256": "bc677bd5097dcae2ecb1ec5ce55a04f2d0d1f564baedbea7230e0d4c219389cc",
+      "source_archive": {
+        "Git_blob": "f7c99b8b485f9eede4cf62b2c0910e0f06d28e09",
+        "bytes": 2952031,
+        "file": "science-seed202-001.zip",
+        "sha256": "bcf5645474f63485e6f58848645bfe3f4fc60bcac71931bb44f44fe776a890d5",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "c7287e97",
+        "Git_blob": "7be7fb27b6dc3be625935b6739bc16b57dc6c509",
+        "bytes": 216804,
+        "compressed_bytes": 74202,
+        "path": "science/seed202/final-state.npz",
+        "sha256": "bc677bd5097dcae2ecb1ec5ce55a04f2d0d1f564baedbea7230e0d4c219389cc"
+      }
+    },
+    "303": {
+      "counters": {
+        "inference_MAC": 2328443264,
+        "inference_calls": 223202,
+        "t": 223200,
+        "train_MAC": 4699699200
+      },
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "31dda85da683dfac8a869cab64dd7e5aab2fb780a4a4b757094bcb39f5407b31",
+      "raw_sha256": "fa2d97da92a81ad3e4fa9d8bdc5b15781e7a7f3a187249fcf113896d35907f09",
+      "source_archive": {
+        "Git_blob": "4cbf639c73f8f2339163f34c4e767716c8aa7170",
+        "bytes": 2998456,
+        "file": "science-seed303-001.zip",
+        "sha256": "f4c5d704295afe980a8dd1139eff88b56b49573effb474afa3e0212a264f9e8e",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "5a5158df",
+        "Git_blob": "14e011c09412e1d127ecfd74899fd1fd77f93ea0",
+        "bytes": 216800,
+        "compressed_bytes": 73659,
+        "path": "science/seed303/final-state.npz",
+        "sha256": "fa2d97da92a81ad3e4fa9d8bdc5b15781e7a7f3a187249fcf113896d35907f09"
+      }
+    }
+  },
+  "schedule_sha256": {
+    "101": "028934e7c85ced413cb6ee2c48800a83ee0b27e8be8efdc44b955d1a95af9c8b",
+    "202": "583bd74436c4dd0240fa7ef72d7b2d9de48bc7dda78ee6a6ba65159cfa6bd3e6",
+    "303": "a3cf2f0de0df0c099ce07fc221c164ad7776f5133142d5aba0106076233da9ca"
+  },
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  }
+}

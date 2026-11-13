@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "round_id": "AE1-MIXED-FLIP-20261113",
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "inputs_zip_sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  },
+  "parent_result_commit": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+  "parent_publication_manifest_sha256": "660390547db4dc014e094de2e1b03ca851cb511502f68c3d04975962baa32a6c",
+  "parent_publication_manifest_Git_blob": "30200c222b0086d02db7044269877501cd3d2d4d",
+  "public_parent_archives_independently_byte_blob_member_CRC_checked": {
+    "inputs.zip": {
+      "bytes": 7291036,
+      "sha256": "8eb05d5649c5568abf5da18a5b51ffa6c5a1be1e721481b1960d2e27cebe5efe",
+      "Git_blob": "be41e28e43d9d50ed3e3e6fecd6c50776d0d6f36"
+    },
+    "science-seed101-001.zip": {
+      "bytes": 2813680,
+      "sha256": "fce8000c4a1cb9b274272f6b4af6c6dda940cab591df6c8470e0d7e2b78bdd1b",
+      "Git_blob": "b4d7918a847e72d683ae97be548f2eb00d35dfa0"
+    },
+    "science-seed202-001.zip": {
+      "bytes": 2952031,
+      "sha256": "bcf5645474f63485e6f58848645bfe3f4fc60bcac71931bb44f44fe776a890d5",
+      "Git_blob": "f7c99b8b485f9eede4cf62b2c0910e0f06d28e09"
+    },
+    "science-seed303-001.zip": {
+      "bytes": 2998456,
+      "sha256": "f4c5d704295afe980a8dd1139eff88b56b49573effb474afa3e0212a264f9e8e",
+      "Git_blob": "4cbf639c73f8f2339163f34c4e767716c8aa7170"
+    }
+  },
+  "full_parent_checkpoints_exact_verified": 3,
+  "parent_t": {
+    "101": 151200,
+    "202": 181800,
+    "303": 223200
+  },
+  "portable_archive_entries": 13,
+  "fresh_bundle_real_validator_passed_original_workspace_reads_blocked": true,
+  "fresh_input_files_before_after_exact": 6,
+  "old_Echo_QA_bitidentical": 1800,
+  "mixed_questions": 2700,
+  "consistent_unique_teacher_prefixes": 24300,
+  "literal_Flip_input0_1_answers_preserved": [
+    "111110S",
+    "111100S"
+  ],
+  "target_label_counts_per_epoch": {
+    "0": 12840,
+    "S": 2700,
+    "1": 8760
+  },
+  "frozen_exact_RNG_full_target_permutations": 120,
+  "source_review": {
+    "all3_parent_baseline_integrity_before_any_new_optimizer": true,
+    "baseline_failure_whole_batch_aborts0new_updates_no_repair": true,
+    "baseline_only_inference_counters_change_and_streak_starts0": true,
+    "trained_parent_Adam_t_m_v_birth_RNG_fullstate_continued": true,
+    "parent_old_costs_separate_all_new_counts_are_deltas": true,
+    "only_raw_Q_plus_true_prefix_for_training_free_uses_own_prefix": true,
+    "Flip5_information_bits_plus_tail0_literal_control_pattern_answers": true,
+    "only_external_S_stops_no_answer_length_cutoff_or_forced_STOP": true,
+    "all3_classes900_exact_twice_or40cap_no_extension_selection": true,
+    "only_seed101_full_baseline_and_mixed_epoch_replay": true,
+    "all_primary_and_replay_before_final_TF_no_hidden_rawloss_claim": true
+  },
+  "engineering_separate": {
+    "tests": 8,
+    "synthetic_native_updates": 6,
+    "synthetic_native_forward_calls": 32,
+    "synthetic_mock_targets": 97200,
+    "synthetic_mock_probes": 6
+  },
+  "material_findings_remaining": [],
+  "interpretation_limits": [
+    "Continuation of3 existing models on the same exposed900-payload bank, no fresh-student or independent-new-dataset claim.",
+    "Equal question counts have unequal6300/11700/6300 CE weighting.",
+    "No control isolates Flip causality, unseen-bank/arbitrary-r/length generalization or internal control execution."
+  ],
+  "required_root_before_formal": "Verify this exact source/input freeze in a public Git preregistration with byte readback, then one fresh formal command; no baseline NN before that authorization.",
+  "reviewer_model_forward_calls": 0,
+  "reviewer_optimizer_calls": 0,
+  "reviewer_formal_students": 0,
+  "external_model_calls": 0
+}

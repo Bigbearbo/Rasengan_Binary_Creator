@@ -1,0 +1,295 @@
+{
+  "archive": {
+    "bytes": 7967750,
+    "file": "inputs.zip",
+    "sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36"
+  },
+  "author": "Codex",
+  "data_checks": {
+    "literal_control_answer_cases_preserved": true,
+    "old_Echo_QA_unchanged": 1800,
+    "payloads": 900,
+    "questions": 2700,
+    "target_counts_by_class": {
+      "E1": 6300,
+      "E2": 11700,
+      "F1": 6300
+    },
+    "unique_teacher_prefixes": 24300
+  },
+  "external_model_calls": 0,
+  "files": {
+    "initial/seed101.npz": {
+      "bytes": 216804,
+      "sha256": "75c4a207766b86779f5332a58521ab19f43dd3837225718a34a134ad4fe16879"
+    },
+    "initial/seed202.npz": {
+      "bytes": 216804,
+      "sha256": "bc677bd5097dcae2ecb1ec5ce55a04f2d0d1f564baedbea7230e0d4c219389cc"
+    },
+    "initial/seed303.npz": {
+      "bytes": 216800,
+      "sha256": "fa2d97da92a81ad3e4fa9d8bdc5b15781e7a7f3a187249fcf113896d35907f09"
+    },
+    "orders/seed101.npy": {
+      "bytes": 3888128,
+      "sha256": "028934e7c85ced413cb6ee2c48800a83ee0b27e8be8efdc44b955d1a95af9c8b"
+    },
+    "orders/seed202.npy": {
+      "bytes": 3888128,
+      "sha256": "583bd74436c4dd0240fa7ef72d7b2d9de48bc7dda78ee6a6ba65159cfa6bd3e6"
+    },
+    "orders/seed303.npy": {
+      "bytes": 3888128,
+      "sha256": "a3cf2f0de0df0c099ce07fc221c164ad7776f5133142d5aba0106076233da9ca"
+    },
+    "parent-questions.json": {
+      "bytes": 224928,
+      "sha256": "03b134bb597e15ef96a8a7f3e6f2f08bbe30a201a6171a40ec1b622b77f84e6f"
+    },
+    "payloads.json": {
+      "bytes": 11430,
+      "sha256": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee"
+    },
+    "plan.json": {
+      "bytes": 5211,
+      "sha256": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4"
+    },
+    "provenance/parent-provenance.json": {
+      "bytes": 3663,
+      "sha256": "b6764ead6169f53279641dd5e06942fa06be70119416e0b0be45b16809160deb"
+    },
+    "provenance/parent-publication-manifest.json": {
+      "bytes": 103335,
+      "sha256": "660390547db4dc014e094de2e1b03ca851cb511502f68c3d04975962baa32a6c"
+    },
+    "questions.json": {
+      "bytes": 400046,
+      "sha256": "99ac8f2344eed15b88d18b3bcfd64199f87ae999a5c7ef6be8c68b98942b8739"
+    },
+    "source/p030_binary_continual.py": {
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    }
+  },
+  "formal_forward_calls": 0,
+  "id": "AE1-MIXED-FLIP-CONTINUATION-20261113",
+  "new_optimizer_calls": 0,
+  "parents": {
+    "101": {
+      "counters": {
+        "inference_MAC": 1577068032,
+        "inference_calls": 151176,
+        "t": 151200,
+        "train_MAC": 3183667200
+      },
+      "file": "initial/seed101.npz",
+      "full_state_sha256": "3408a4eeca740ad828c8000eaf50d3ea587430b092350a437f09e7eed50a5db1",
+      "raw_sha256": "75c4a207766b86779f5332a58521ab19f43dd3837225718a34a134ad4fe16879",
+      "source_archive": {
+        "Git_blob": "b4d7918a847e72d683ae97be548f2eb00d35dfa0",
+        "bytes": 2813680,
+        "file": "science-seed101-001.zip",
+        "sha256": "fce8000c4a1cb9b274272f6b4af6c6dda940cab591df6c8470e0d7e2b78bdd1b",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "b344e289",
+        "Git_blob": "daa5665eea5ad71f27f98f5f2986318aa4136a85",
+        "bytes": 216804,
+        "compressed_bytes": 75026,
+        "path": "science/seed101/final-state.npz",
+        "sha256": "75c4a207766b86779f5332a58521ab19f43dd3837225718a34a134ad4fe16879"
+      }
+    },
+    "202": {
+      "counters": {
+        "inference_MAC": 1896485440,
+        "inference_calls": 181795,
+        "t": 181800,
+        "train_MAC": 3827980800
+      },
+      "file": "initial/seed202.npz",
+      "full_state_sha256": "5e4d6763dddea23ab4f1ee583fc80f7d2c0d58470c4f43cbf527cea7bd3f48d0",
+      "raw_sha256": "bc677bd5097dcae2ecb1ec5ce55a04f2d0d1f564baedbea7230e0d4c219389cc",
+      "source_archive": {
+        "Git_blob": "f7c99b8b485f9eede4cf62b2c0910e0f06d28e09",
+        "bytes": 2952031,
+        "file": "science-seed202-001.zip",
+        "sha256": "bcf5645474f63485e6f58848645bfe3f4fc60bcac71931bb44f44fe776a890d5",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "c7287e97",
+        "Git_blob": "7be7fb27b6dc3be625935b6739bc16b57dc6c509",
+        "bytes": 216804,
+        "compressed_bytes": 74202,
+        "path": "science/seed202/final-state.npz",
+        "sha256": "bc677bd5097dcae2ecb1ec5ce55a04f2d0d1f564baedbea7230e0d4c219389cc"
+      }
+    },
+    "303": {
+      "counters": {
+        "inference_MAC": 2328443264,
+        "inference_calls": 223202,
+        "t": 223200,
+        "train_MAC": 4699699200
+      },
+      "file": "initial/seed303.npz",
+      "full_state_sha256": "31dda85da683dfac8a869cab64dd7e5aab2fb780a4a4b757094bcb39f5407b31",
+      "raw_sha256": "fa2d97da92a81ad3e4fa9d8bdc5b15781e7a7f3a187249fcf113896d35907f09",
+      "source_archive": {
+        "Git_blob": "4cbf639c73f8f2339163f34c4e767716c8aa7170",
+        "bytes": 2998456,
+        "file": "science-seed303-001.zip",
+        "sha256": "f4c5d704295afe980a8dd1139eff88b56b49573effb474afa3e0212a264f9e8e",
+        "verification_source": "cached_remote_ZIP",
+        "verified_against_prior_public_readback": true
+      },
+      "source_member": {
+        "CRC32": "5a5158df",
+        "Git_blob": "14e011c09412e1d127ecfd74899fd1fd77f93ea0",
+        "bytes": 216800,
+        "compressed_bytes": 73659,
+        "path": "science/seed303/final-state.npz",
+        "sha256": "fa2d97da92a81ad3e4fa9d8bdc5b15781e7a7f3a187249fcf113896d35907f09"
+      }
+    }
+  },
+  "protocol": {
+    "Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "Q": "01+op3bits+(r3 information bits+0)+same four complete6-bit ordinary words+END111100;39 bits",
+    "answers": "E1/E2 exactly parent first1/2 completewords. F1 complements ONLY firstword5 information bits and appends tail0 then externalS. InputID0=>111110S and1=>111100S are literal ANSWERbits, never UP/END execution; keep bothcases",
+    "author": "Codex",
+    "baseline_gate": "Before ANY new optimizer call in the batch, all3 parents independently probe all2700Q. Save exact rawparent, before/afterfullstate and generatedoutputs. Each parent's E1 andE2 must each900/900 exact includingS; otherwise abort WHOLEbatch0newupdates, no repair/replacement. F1baseline is exposed diagnostic, not training/heldout",
+    "baseline_state": "Only inferencecalls/MAC may increase during baseline; all p/m/v/birth/t/growthRNG/seed/events/trainMAC unchanged. Train from each saved baseline-end fullstate. Initial mixedstreak0; baseline never counts towardstreak",
+    "classes": [
+      "E1",
+      "E2",
+      "F1"
+    ],
+    "costs": "All newcosts are DELTA from savedparent t/trainMAC/inferencecalls/MAC. Parent totals separately named. BaselineF, mixedepochprobeF and finalTFF separate; seed101replay separate. Fullstate continues to contain old+new cumulativecounters",
+    "epoch_evidence": "Save every completedepoch fullstate/all2700freeoutputs/counters/streak/decision and canonicaltargetdigest of[QID,pos,preupdateprediction,loss]. No pertargetfullstatehash/IO",
+    "external_model_calls_by_runner": 0,
+    "final_TF": "After allprimary+plannedreplay, fullTF for all2700 perseed=24300targets with logits/CE/rawprefix/labels; reuse lastfreeoutputs. No oldNN rerun, unseenr3/r4, new heldout or genericalgorithm proof",
+    "forward_dense_MAC_per_call": 10432,
+    "gate": "Pureprepare formalNNforward0/newupdates0, bounded synthetic engineering and source/input review plus coordinatorGitpreregistration before uniqueformalexecute",
+    "generation": "Fixed32actions/rawQ+generatedprefix/L80overflowguard only. STOPprefix45forE1/F1 and51forE2; no answer-length cutoff, forcedS or oldgenerate8",
+    "id": "AE1-MIXED-FLIP-CONTINUATION-20261113",
+    "limits": "Exposed finite900payload continuation for retained Echo1/Echo2 plus Flip1. Answer table fits do not identify neural genericcopy/flip/routing, blinded generalization or control execution. Not all30^4inputs",
+    "max_epochs": 40,
+    "maximum_new_training_dense_MAC_per_seed": 20466432000,
+    "maximum_new_updates_per_seed": 972000,
+    "model": {
+      "H": 64,
+      "L": 80,
+      "parameters": 10499
+    },
+    "new_training_dense_MAC_per_epoch": 511660800,
+    "optimizer": "Unchanged original P030 Model.step/Adam.003 beta.9/.999 eps1e-8, normclip1, float32p/m/v and originalbirthage. Restore trained parent moments/t/RNG; no freshstudent, grow, feature, router or oracle",
+    "p_m_v_birth_array_bytes": 209980,
+    "parent_PR": 26,
+    "parent_head": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+    "parent_provenance": "Pure preparation verifies local finalstate originalNPZbytes against pinned publicPR26 publicationmanifest and exact cached public sourceZIP SHA/Gitblob/member. Freeze parentstate originalbytes directly as initial/seed*.npz with rawSHA/fullstateSHA, originalbank/oldquestions and parent provenance",
+    "parent_publication_manifest_Git_blob": "30200c222b0086d02db7044269877501cd3d2d4d",
+    "parent_publication_manifest_sha256": "660390547db4dc014e094de2e1b03ca851cb511502f68c3d04975962baa32a6c",
+    "parent_t": {
+      "101": 151200,
+      "202": 181800,
+      "303": 223200
+    },
+    "payloads": "Exact parent bank:900 firstpairs a,b0..29 in pairID30*a+b order; suffix from original rng331000 unchanged. Ordinary INPUTwordIDs0..29 only; no input filter/replacement",
+    "profile": "SLE-AEM1-n5-v1, extends AE1 with EchoOP010 unchanged and FlipOP100 here only; not numericZero100",
+    "question_IDs": "E1 Echo010/r1 IDs0..899;E2 Echo010/r2 IDs900..1799 exactly parentQ/A;F1 Flip100/r1 IDs1800..2699",
+    "replay": "After allprimary, one complete independent seed101 replay from exactparentbytes, including baseline and allactualepochs/stopping. Compare every baseline/epoch probe, trace/loss/pred digest, complete state and inherited/new counters exactly.202/303notplanned",
+    "replay_seeds": [
+      101
+    ],
+    "schedule": "np.random.default_rng(seed+444000),40 sequential fullpoolpermutations. Actual(QID,position) arrays little-endianuint16 frozen before baseline or any newscore",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "source_sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "stop": "After each complete mixedepoch greedy all2700Q. All3classes each900/900 exactA+S for2consecutiveepochs stop; anyclassfailure resetsstreak0. Otherwise40capretainfailure. No extraepochs/seeds/restarts/bestcheckpoint selection",
+    "target_pool": "AscendingpairID then E1,E2,F1, then ascending answerposition includingS.900*(7+13+7)=24300 targetpairs/epoch, all2700Q exactly once as complete targetsets",
+    "target_weighting": "E1/E2/F1 each900Q, but6300/11700/6300 optimizer targets respectively; globaltargetshuffle, not equalquestionloss normalization or wholequestionchronology",
+    "targets_per_epoch": 24300,
+    "training_dense_MAC_per_target": 21056
+  },
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "schedules": {
+    "101": {
+      "dtype": "<u2",
+      "file": "orders/seed101.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 1,
+        "state": {
+          "inc": 230302785569317842702874565167513935445,
+          "state": 329730283060260678589914585262083217012
+        },
+        "uinteger": 3255223698
+      },
+      "schedule_seed": 444101,
+      "shape": [
+        40,
+        24300,
+        2
+      ]
+    },
+    "202": {
+      "dtype": "<u2",
+      "file": "orders/seed202.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 141427603213525415414411325869197961519,
+          "state": 142123368389603493996306613758770763171
+        },
+        "uinteger": 3776999398
+      },
+      "schedule_seed": 444202,
+      "shape": [
+        40,
+        24300,
+        2
+      ]
+    },
+    "303": {
+      "dtype": "<u2",
+      "file": "orders/seed303.npy",
+      "final_schedule_RNG": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 70014222092019309914148408895301863759,
+          "state": 291876177291125061390230264023908792604
+        },
+        "uinteger": 1156046254
+      },
+      "schedule_seed": 444303,
+      "shape": [
+        40,
+        24300,
+        2
+      ]
+    }
+  },
+  "schema": "ae1-mixed-flip-continuation-v1",
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  },
+  "status": "frozen_before_baseline_or_new_updates"
+}
