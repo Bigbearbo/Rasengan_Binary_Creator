@@ -39,6 +39,7 @@ class SessionPublishedRefs {
   std::unordered_map<uint64_t,DurableRegistry::Ref> refs_;
 };
 
+#ifndef HAMU_SESSION_EPOCH_NO_MAIN
 int main(){
  Hamster h(9601,extended());DurableRegistry d(h,9601);
  set_id_candidate(h,0,0);execute(h,{28,1,15,0});
@@ -94,3 +95,5 @@ int main(){
  require(refused,"issuer epoch overflow accepted");
  std::cout << "PASS: baseline ticket reuse alias reproduced; issuer epoch, deletion, overflow guards pass (host-only)\n";
 }
+
+#endif // HAMU_SESSION_EPOCH_NO_MAIN
