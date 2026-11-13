@@ -1,0 +1,9 @@
+{
+  "commit": "995870a458e4c9da279b30b03e39c6097dce9cc7",
+  "path": "experiments/spiral_neural/20261113_codex_f2_one_epoch_stability/publication-manifest.json",
+  "sha256": "fe7e9daec1eae0a3ab7ddaef01899dbc60e236b2c12f92b20370db2146dbc56c",
+  "Git_blob": "f64b8dca77ce801f9f23565e36c7a73a81b49fd5",
+  "bytes": 70410,
+  "byte_match": true,
+  "method": "Fresh Git connector actual base64 bytes versus pinned local public artifact"
+}

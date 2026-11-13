@@ -1,0 +1,21 @@
+{
+  "command": [
+    "<python>",
+    "-X",
+    "utf8",
+    "-B",
+    "D:\\Codex用\\outputs\\e3-learning-probe\\run_probe.py",
+    "--execute",
+    "--manifest",
+    "D:\\Codex用\\work\\e3-learning-probe-20261113\\prereg\\manifest.json",
+    "--approved-manifest-sha",
+    "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+    "--preregistration-commit",
+    "beca9c77e774318accf9a78ea971ae5aec620d4d",
+    "--out",
+    "D:\\Codex用\\work\\e3-learning-probe-20261113\\science"
+  ],
+  "command_invocations": 1,
+  "exit_code": 0,
+  "formal_seconds": 459.7506418999983
+}

@@ -1,0 +1,132 @@
+{
+  "TF_targets_independently_recomputed": 369900,
+  "actual_training_replays": 0,
+  "audit_cost": {
+    "calls_by_phase": {
+      "seed101_cold": 10930,
+      "seed101_coldTF": 17100,
+      "seed101_eta001_TF": 53100,
+      "seed101_eta001_free": 53097,
+      "seed101_eta003_TF": 53100,
+      "seed101_eta003_free": 52621,
+      "seed101_old": 36000,
+      "seed202_cold": 9591,
+      "seed202_coldTF": 17100,
+      "seed202_eta001_TF": 53100,
+      "seed202_eta001_free": 53100,
+      "seed202_eta003_TF": 53100,
+      "seed202_eta003_free": 53172,
+      "seed202_old": 36000,
+      "seed303_cold": 8905,
+      "seed303_coldTF": 17100,
+      "seed303_eta001_TF": 53100,
+      "seed303_eta001_free": 53327,
+      "seed303_eta003_TF": 53100,
+      "seed303_eta003_free": 53322,
+      "seed303_old": 36000
+    },
+    "dense_MAC": 8616466880,
+    "external_model_calls": 0,
+    "forward_calls": 825965,
+    "new_students": 0,
+    "optimizer_calls": 0
+  },
+  "details_sha256": "fcdadb9c787d0d653a9b7007023ba7ed6d8e5c07e8b9f0113c4f193b844a305f",
+  "feasibility_by_arm": {
+    "eta001": {
+      "overall_interpretation": "not_met",
+      "strict_feasibility_all_three": false
+    },
+    "eta003": {
+      "overall_interpretation": "not_met",
+      "strict_feasibility_all_three": false
+    }
+  },
+  "formal_session": 1057,
+  "free_questions_independently_generated": 40500,
+  "limits": [
+    "Oneepoch pairedprobe on3inherited exposedbank states; feasibility is not mastery or general rate superiority.",
+    "No traininggradient/optimizer replay; aggregate digest form/source provenance only.",
+    "Free compares complete tokens/flags/scores; exact logits/probabilities/CE comparisons apply to savedTF positions."
+  ],
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "new_students": 0,
+  "optimizer_calls": 0,
+  "preregistration_commit": "beca9c77e774318accf9a78ea971ae5aec620d4d",
+  "proofs": 27,
+  "receipt_sha256": "81b359ac2e40b50d163bb8acd148b4ab6fe9e05582443a85015aeada12248d23",
+  "review_source_sha256": "cff693544debfa6bbd730af6df20fe3bed2be7c667b2c6e2714879a2b2c8bc30",
+  "root_confirmed_formal_exit0": true,
+  "schema": "e3-independent-post-run-v1",
+  "science_files": 90,
+  "source_hashes": {
+    "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+    "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31"
+  },
+  "status": "passed",
+  "strict_equality": true,
+  "students": [
+    {
+      "arms": {
+        "eta001": {
+          "E3_whole": 229,
+          "E3_whole_gain": 229,
+          "baseline_ceiling": false,
+          "old_lost_total": 3,
+          "strict_feasibility": false
+        },
+        "eta003": {
+          "E3_whole": 240,
+          "E3_whole_gain": 240,
+          "baseline_ceiling": false,
+          "old_lost_total": 23,
+          "strict_feasibility": false
+        }
+      },
+      "cold_E3": 0,
+      "seed": 101
+    },
+    {
+      "arms": {
+        "eta001": {
+          "E3_whole": 54,
+          "E3_whole_gain": 54,
+          "baseline_ceiling": false,
+          "old_lost_total": 2,
+          "strict_feasibility": false
+        },
+        "eta003": {
+          "E3_whole": 76,
+          "E3_whole_gain": 76,
+          "baseline_ceiling": false,
+          "old_lost_total": 32,
+          "strict_feasibility": false
+        }
+      },
+      "cold_E3": 0,
+      "seed": 202
+    },
+    {
+      "arms": {
+        "eta001": {
+          "E3_whole": 182,
+          "E3_whole_gain": 182,
+          "baseline_ceiling": false,
+          "old_lost_total": 8,
+          "strict_feasibility": false
+        },
+        "eta003": {
+          "E3_whole": 33,
+          "E3_whole_gain": 33,
+          "baseline_ceiling": false,
+          "old_lost_total": 74,
+          "strict_feasibility": false
+        }
+      },
+      "cold_E3": 0,
+      "seed": 303
+    }
+  ],
+  "vendor_sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"
+}

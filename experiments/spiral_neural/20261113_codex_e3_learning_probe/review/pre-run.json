@@ -1,0 +1,140 @@
+{
+  "schema": "e3-learning-probe-independent-pre-run-v1",
+  "status": "passed",
+  "date": "2026-11-13",
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "source_hashes": {
+    "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+    "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31"
+  },
+  "inputs_zip_sha256": "b658716bd3e4bba693ab33c26e429f406fc326fe220bfa1679cb5fb446ff4efc",
+  "review_source_sha256": "932e6577cb6d4f44ad372858eb663f6abe9318856a8651381fd9a42c45bf3e32",
+  "portable": {
+    "native_validate_inputs_actually_called": true,
+    "original_workspace_reads_denied": true,
+    "original_dependency_read_attempts": 0,
+    "guard_positive_control_rejected": true,
+    "fresh_files_read": [
+      "prereg/inputs.zip",
+      "prereg/manifest.json",
+      "tool/__pycache__/run_probe.cpython-312.pyc",
+      "tool/protocol.json",
+      "tool/run_probe.py",
+      "tool/test_probe.py"
+    ],
+    "five_inputs_before_after_SHA256": {
+      "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+      "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+      "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31",
+      "manifest.json": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+      "inputs.zip": "b658716bd3e4bba693ab33c26e429f406fc326fe220bfa1679cb5fb446ff4efc"
+    },
+    "original_files_unchanged": true,
+    "validation_seconds": 0.4909526999981608,
+    "Model_NN_methods_patched": [
+      "forward",
+      "generate",
+      "grow",
+      "lesson",
+      "loss_grad",
+      "step"
+    ],
+    "NN_entry_attempts": 0
+  },
+  "inputs": {
+    "ZIP_members": 22,
+    "finite_NPZ": 3,
+    "NPY_orders": 3,
+    "parents": {
+      "101": {
+        "parent_t": 1017000,
+        "parent_raw_SHA256": "a4f02371176c9f9ed4b478b5c7fa33f66f809a67e212acb7c60dd354b64c9d6f",
+        "parent_full_state_SHA256": "6c378cb267934a402de22cefbe07f9110071721ceb5954327758c6ced4f636f4",
+        "orders_exact_independent_pool_and_seed": true,
+        "full_state_fields": 25
+      },
+      "202": {
+        "parent_t": 1228500,
+        "parent_raw_SHA256": "520100fedbce5c7edbd23dc2b3961eb510c459ac940afce6946aed4ec73062ac",
+        "parent_full_state_SHA256": "c142987760397e891ab8e4f2b3ce66304b0bb080577de85aca24357eca67509d",
+        "orders_exact_independent_pool_and_seed": true,
+        "full_state_fields": 25
+      },
+      "303": {
+        "parent_t": 1161900,
+        "parent_raw_SHA256": "f74c86b0519e37c7a359f33e302d795ede239690c104b88cf811e08dd92f9f18",
+        "parent_full_state_SHA256": "25fab66c10344db811982fd16848fe09335aa420467404d06cfbb80c0ccdf9f8",
+        "orders_exact_independent_pool_and_seed": true,
+        "full_state_fields": 25
+      }
+    },
+    "data_checks": {
+      "questions": 4500,
+      "teacher_targets": 53100,
+      "unique_teacher_prefixes": 53100,
+      "by_class": {
+        "E1": {
+          "questions": 900,
+          "targets": 6300,
+          "STOP_prefix_length": 45
+        },
+        "E2": {
+          "questions": 900,
+          "targets": 11700,
+          "STOP_prefix_length": 51
+        },
+        "F1": {
+          "questions": 900,
+          "targets": 6300,
+          "STOP_prefix_length": 45
+        },
+        "F2": {
+          "questions": 900,
+          "targets": 11700,
+          "STOP_prefix_length": 51
+        },
+        "E3": {
+          "questions": 900,
+          "targets": 17100,
+          "STOP_prefix_length": 57
+        }
+      }
+    },
+    "publicSHA_Gitblob_CRC_receipt_lineage": "native validator complete pass"
+  },
+  "AST_change": {
+    "eta003_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "eta001_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "unique_changed_leaf": {
+      "function": "Model.step",
+      "before": 0.003,
+      "after": 0.001
+    },
+    "entire_AST_equal_after_reversing_one_leaf": true
+  },
+  "author_engineering": {
+    "source_pins_match": true,
+    "tests_passed": 5,
+    "actual_tiny_updates": 3,
+    "actual_tiny_forward_calls": 3,
+    "mock_counter_increments_not_NN": 210600,
+    "not_repeated_by_reviewer": true
+  },
+  "static_review": [
+    "All3 old3600generation integrity gates precede anyE3cold oroptimizer; integrationfailure abort0updates.",
+    "Each seed shared oldfree+E3coldfree+coldTF is measured once; both arms restore identical25field sharedbaseline-endstate. Physical baseline summed3records, not6logicalancestry counters.",
+    "Old3600Q/A dictionaries exact; only900 Echo010/r3 appended. Native and independent pool/order yield53100targets with17100E3 targets and maxcorrectSTOPprefix57.",
+    "Each arm consumes the same seed order once, oneAdam step pertarget, no minibatching/grow/GPU/JIT; total318600updates/6708441600trainingMAC, zero optimizer replay.",
+    "All6primary finish before finalTF. Greedy uses only own outputs/cap32/L80guard; no oracle answerlength cutoff. TF dynamic classes/word3 is separate from free.",
+    "Both arms use the same feasibility formula. Low primary is all3strict conjunction, not rate superiority; ceiling interpretation never changes budget or selection.",
+    "Dynamic perword/info/tail/STOP/firsterror/termination and QID churn preserve word3/missing-token denominators; i0 uses explicit None check."
+  ],
+  "reviewer_trained_forward_calls": 0,
+  "reviewer_optimizer_updates": 0,
+  "reviewer_external_calls": 0,
+  "new_scores_observed": false,
+  "blocking_findings": [],
+  "gate_scope": "Final source/input portable acceptance only; coordinator still owns Git prereg and sole formal execution.",
+  "postaudit_scope": "Only after root actualexit0+explicitGO: reuse pinned old pureForward/readoutdefs;3sharedbaselines includingE3TF,6endpoints/finalTF. No optimizer/fulltraining replay or extra cases."
+}

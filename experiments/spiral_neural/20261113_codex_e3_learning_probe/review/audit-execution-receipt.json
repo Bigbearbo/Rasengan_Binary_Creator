@@ -1,0 +1,32 @@
+{
+  "audit_exit_code": 0,
+  "audit_process_closed": true,
+  "audit_seconds": 47.65823320002528,
+  "audit_tool_closure_observed_UTC": "2026-11-13T15:13:21.413956+00:00",
+  "audit_tool_exit_code": 0,
+  "audit_tool_session_closed": true,
+  "audit_tool_session_id": 48104,
+  "command_invocations": 1,
+  "ended_UTC": "2026-11-13T15:12:56.049598+00:00",
+  "formal_session_id": 1057,
+  "logs": {
+    "audit.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit.stdout.log": {
+      "bytes": 1476,
+      "sha256": "ee8f59b499efdc5a2af7b23c5a001e8b8b884913a44df7a1f8f86f233de7079b"
+    }
+  },
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "optimizer_calls": 0,
+  "preregistration_commit": "beca9c77e774318accf9a78ea971ae5aec620d4d",
+  "review_source_after_sha256": "cff693544debfa6bbd730af6df20fe3bed2be7c667b2c6e2714879a2b2c8bc30",
+  "review_source_sha256": "cff693544debfa6bbd730af6df20fe3bed2be7c667b2c6e2714879a2b2c8bc30",
+  "schema": "e3-independent-audit-execution-v1",
+  "started_UTC": "2026-11-13T15:12:08.392376+00:00",
+  "status": "exit0",
+  "training_replays": 0,
+  "vendor_sha256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"
+}

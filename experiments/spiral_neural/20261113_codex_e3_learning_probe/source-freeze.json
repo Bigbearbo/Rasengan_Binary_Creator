@@ -1,0 +1,23 @@
+{
+  "AST_change": {
+    "entire_AST_equal_after_reversing_one_leaf": true,
+    "eta001_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "eta003_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "unique_changed_leaf": {
+      "after": 0.001,
+      "before": 0.003,
+      "function": "Model.step"
+    }
+  },
+  "formal_forward_calls": 0,
+  "inputs_zip_bytes": 926204,
+  "inputs_zip_sha256": "b658716bd3e4bba693ab33c26e429f406fc326fe220bfa1679cb5fb446ff4efc",
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "members": 22,
+  "new_optimizer_calls": 0,
+  "source_hashes": {
+    "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+    "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31"
+  }
+}

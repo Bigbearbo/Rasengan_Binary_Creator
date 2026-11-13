@@ -1,0 +1,18 @@
+{
+  "all_paths_schema_checked_before_NN": true,
+  "formal_session": 1057,
+  "forward_calls": 0,
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "preregistration_commit": "beca9c77e774318accf9a78ea971ae5aec620d4d",
+  "receipt_sha256": "81b359ac2e40b50d163bb8acd148b4ab6fe9e05582443a85015aeada12248d23",
+  "root_confirmed_formal_exit0": true,
+  "science_NPZ": 33,
+  "science_files": 90,
+  "source_hashes": {
+    "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+    "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31"
+  },
+  "status": "passed",
+  "vendor_SHA256": "443ad00cb9cebe94c6cc5e22602f139586c35c7310e48623e21d515b2e72aacc"
+}

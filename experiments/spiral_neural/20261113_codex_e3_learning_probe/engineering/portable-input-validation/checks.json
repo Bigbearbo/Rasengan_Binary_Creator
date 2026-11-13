@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "5e2b3e6eb90c20a27c12ff9d743c8f0ab65a759fff4d561c6d156b535497c8bc",
+  "members": 22,
+  "new_optimizer_calls": 0,
+  "status": "passed",
+  "trained_model_forward_calls": 0
+}

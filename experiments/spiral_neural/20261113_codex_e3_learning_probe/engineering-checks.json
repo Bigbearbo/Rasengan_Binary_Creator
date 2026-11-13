@@ -1,0 +1,29 @@
+{
+  "AST_change": {
+    "entire_AST_equal_after_reversing_one_leaf": true,
+    "eta001_Model_AST_sha256": "8eccf989590af0c465a04f1aa7bebe01c816288f71251d42a72cfc66a3748843",
+    "eta003_Model_AST_sha256": "3cff2fc5cceb6edfbbffc791f37f0eff503a9c7fd778a5d9bc8d22b08402f910",
+    "unique_changed_leaf": {
+      "after": 0.001,
+      "before": 0.003,
+      "function": "Model.step"
+    }
+  },
+  "errors": 0,
+  "external_model_calls": 0,
+  "failures": 0,
+  "mock_inference_counter_increments_not_actual_forwards": 210600,
+  "source_hashes": {
+    "protocol.json": "b59735c8933668fbe1ce5b630c01e1c4ffa5b4647ab77c8c786608ca7aaedac8",
+    "run_probe.py": "2e4033c6b47b1db84a5fa01cd9344622183a22b50178e2ee2f82331781d9b196",
+    "test_probe.py": "8bf2d56b3b423e842ac1301e30a507ca9bd8c17860e7e9c0bdd6f54883b13a31"
+  },
+  "status": "passed",
+  "synthetic_forward_calls": 3,
+  "synthetic_optimizer_updates": 3,
+  "synthetic_training_dense_MAC": 63168,
+  "test_output": "test_grammar_third_word_and_three_exact_courses (test_probe.Engineering.test_grammar_third_word_and_three_exact_courses) ... ok\ntest_mock_shared_baseline_once_and_exact_arm_clones (test_probe.Engineering.test_mock_shared_baseline_once_and_exact_arm_clones) ... ok\ntest_native_eta_formulas_nonzero_moments_heterogeneous_birth (test_probe.Engineering.test_native_eta_formulas_nonzero_moments_heterogeneous_birth) ... ok\ntest_old_gate_abort_prevents_cold_and_optimizer (test_probe.Engineering.test_old_gate_abort_prevents_cold_and_optimizer) ... ok\ntest_thirdword_metrics_paired_axes_and_ceiling (test_probe.Engineering.test_thirdword_metrics_paired_axes_and_ceiling) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.671s\n\nOK\n",
+  "tests": 5,
+  "trained_model_forward_calls": 0,
+  "trained_parent_optimizer_calls": 0
+}
