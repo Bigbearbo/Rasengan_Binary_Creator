@@ -1,0 +1,43 @@
+{
+  "schema": "GPU-batch1-engineering-pilot-v1",
+  "status": "complete",
+  "hardware": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "compute_capability": [
+      7,
+      5
+    ],
+    "VRAM_bytes": 4294639616
+  },
+  "software": {
+    "cupy": "14.2.0",
+    "numpy": "2.3.5",
+    "CUDA_driver_API": 13030,
+    "CUDA_runtime_API": 12090
+  },
+  "plan_sha256": "28128555559b1381c3c7b452cb9677e279f5c9d1261998575f8e19ed9b451fc6",
+  "script_sha256": "d326d06294f1b1a8afe6721eed4bbd9608ce5a3acd893b280f8fddb036978c0a",
+  "fixture_sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4",
+  "timing_scope": "preencoded batch1 forward/backward/global-clip/Adam, no gradient averaging; device loss/logit values available, no per-step host logging/hash. Events and synchronized wall include host enqueue gaps. Compile/context/transfer/validation separate. Not full-study speedup or bitwise training replay.",
+  "backends": {
+    "CuPy_eager_GPU": {
+      "accepted_engineering_parity": false,
+      "error_type": "TypeError",
+      "error": "take() got an unexpected keyword argument 'mode'"
+    },
+    "CuPy_CUDA_Graph_GPU": {
+      "accepted_engineering_parity": false,
+      "error_type": "TypeError",
+      "error": "take() got an unexpected keyword argument 'mode'"
+    }
+  },
+  "formal_training_updates": 0,
+  "actual_synthetic_updates": {
+    "reference_GPU_validation": 128,
+    "CuPy_eager_GPU": 0,
+    "CuPy_CUDA_Graph_GPU": 0
+  },
+  "captured_steps_not_executed": 0,
+  "fixture_unchanged": true,
+  "total_seconds": 0.1694502000027569
+}

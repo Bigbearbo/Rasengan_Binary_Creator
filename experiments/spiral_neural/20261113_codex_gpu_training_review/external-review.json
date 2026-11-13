@@ -1,0 +1,22 @@
+{
+  "schema": "GPU-external-review-v1",
+  "round": "GPU-TRAIN-REVIEW-20261113",
+  "Gemini": {
+    "calls": 0,
+    "decision": "skipped",
+    "reason": "Existing installed agy/login retained; prior analysis-only tool isolation/unknown provider outcome unresolved; no resend/relogin or unrelated adapter repair"
+  },
+  "NVIDIA": {
+    "actual_dispatches": 1,
+    "configured_model": "nvidia/nemotron-3.5-lightning:free",
+    "task": "GPUB1-SEMANTICS-001",
+    "input": "Selected hardware-independent synthetic160/64/3onlineMLP, no private chat/hardware identifiers/credentials/quota",
+    "prompt_sha256": "9a62a7e4a4a4bfb577405dd8bfd9fa514b0a24a42f47a99528455b202c29ea33",
+    "status": "candidate_rejected",
+    "reason": "ValueError: Report fields mismatch",
+    "accepted_research_claims": 0,
+    "retries": 0
+  },
+  "native_agents": "Independent OpenAI source/method reviewer and CPU implementation/packaging helpers are separate from genuine external call; not relabelled as Gemini/NVIDIA",
+  "semantic_acceptance": "Primary sources and locally executed engineering probes only; external candidate rejected"
+}

@@ -1,0 +1,7 @@
+{
+  "id":"GPU-TRAIN-REVIEW-20261113-ADDENDUM02",
+  "trigger":"Zero-NN independent method review identified explicit FP32 casting of clip scale, whereas original NumPy clipped scale can be a strong FP64 numpy scalar. Prior prototype results stay archived and are not a production-equivalence claim.",
+  "change":"Remove premature clip-scale cast; CuPy inplace g*=FP64 device scalar then casts gradient to float32, matching intended original scalar precision. No change to batch1 update frequency, tolerances, fixture, target sequence, model shape or Adam state.",
+  "bounded_verification":"Repeat only same-arithmetic eager-reductions and CUDA Graph variants, two64step cases and3x1024timings; preserve attempt03. Including all four GPU attempts and CPU controls expected26234 total syntheticupdates and at most6411 for an individual GPU backend, below original40000/7000 caps.",
+  "limitations":"No real checkpoint/nonzero-initial-moments/growth/RNG integration test or full-training replay; non-byteexact floating reduction order persists. No extrapolation from core microtiming to complete prior-study wall time."
+}

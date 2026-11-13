@@ -1,0 +1,38 @@
+{
+  "schema": "GPU-environment-checks-v1",
+  "local_GPU_compute_passed": true,
+  "GPU": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "compute_capability": [
+      7,
+      5
+    ],
+    "VRAM_bytes": 4294639616
+  },
+  "software": {
+    "cupy": "14.2.0",
+    "numpy": "2.3.5",
+    "CUDA_driver_API": 13030,
+    "CUDA_runtime_API": 12090
+  },
+  "python": "3.12.14",
+  "installation": "isolated workspace virtual environment, primary runtime and system driver unchanged",
+  "ASCII_alias_workaround": {
+    "result": "passed",
+    "actual_dependency_files_remain_in_original_workspace": true,
+    "reason_observed": "Both restricted and normal-host imports from nonASCII installation path failed NVRTC cupy/complex.cuh Invalid argument; normal-host ASCII alias of same environment completed real160x64GPU matrix multiplication",
+    "not_a_general_claim_about_all_NVRTC_or_Unicode_paths": true
+  },
+  "startup_optimizer_updates": 0,
+  "cold_import_context_probe_seconds": 1.2783309999940684,
+  "packages": {
+    "numba": "0.68.1",
+    "cupy-cuda12x": "14.2.0",
+    "cuda-pathfinder": "1.8.6",
+    "nvidia-cuda-runtime-cu12": "12.9.79",
+    "nvidia-cuda-nvrtc-cu12": "12.9.86",
+    "nvidia-cublas-cu12": "12.9.2.10",
+    "llvmlite": "0.50.0"
+  },
+  "no_credentials_or_quota_data": true
+}

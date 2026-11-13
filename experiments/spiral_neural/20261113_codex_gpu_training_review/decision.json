@@ -1,0 +1,72 @@
+{
+  "schema": "GPU-tool-decision-v1",
+  "date": "2026-11-13",
+  "status": "engineering_research_complete",
+  "recommendation": "Use existing CuPy plus CUDA Graph and a thin study-specific adapter first; do not start a complete handwritten CUDA training framework. Profile before choosing any small fused custom kernel.",
+  "hardware": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "compute_capability": [
+      7,
+      5
+    ],
+    "VRAM_bytes": 4294639616
+  },
+  "software": {
+    "cupy": "14.2.0",
+    "numpy": "2.3.5",
+    "CUDA_driver_API": 13030,
+    "CUDA_runtime_API": 12090
+  },
+  "measurements": {
+    "updates_per_trial": 1024,
+    "trials": 3,
+    "CPU_original_median_seconds": 0.488750100004836,
+    "CPU_original_range_seconds": [
+      0.32939949999854434,
+      0.9004828999895835
+    ],
+    "CuPy_same_ops_eager_median_seconds": 5.122710999989067,
+    "CuPy_Graph_median_seconds": 0.3044616999977734,
+    "CuPy_Graph_range_seconds": [
+      0.30429990000266116,
+      0.4700063000054797
+    ],
+    "same_ops_eager_over_Graph_observed_median_ratio": 16.825469344835593,
+    "CPU_original_over_Graph_observed_median_ratio": 1.6052925540664404
+  },
+  "evidence_scope": "Author-run synthetic engineering microbenchmarks; independent source/code/metadata review, not independently rerun speed or NN validation. Current result is attempt04/current source only.",
+  "candidate_source_sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110",
+  "candidate_result_sha256": "8cd963fb60dab2e041176653b65fa26b422fccc99e32a3aa58b267993c2985f0",
+  "synthetic_optimizer_updates_by_effective_backend": {
+    "Numba_njit_CPU_fastmath_false": 3232,
+    "original_NumPy_string_CPU": 3744,
+    "preencoded_NumPy_CPU": 3232,
+    "CuPy_eager_GPU": 3205,
+    "CuPy_CUDA_Graph_GPU": 6411,
+    "CuPy_eager_reductions_GPU": 6410
+  },
+  "actual_total_synthetic_optimizer_updates": 26234,
+  "formal_neural_experiment_updates": 0,
+  "changes_from_naive_port": [
+    "ASCII package alias resolves observed NVRTC header path failure",
+    "CuPy14.2 cuBLAS wrapper blocks capture: replace all small matmuls/outer calls with broadcast product and float32 sum",
+    "Use in-place p/m/v plus device t and input/label index; replay advances each individual optimizer step",
+    "Remove premature FP32clip-scale cast; preserve FP64scalar until gradient writeback"
+  ],
+  "limits": [
+    "Graph validation observes four trace rows per64step case plus19final learning-state fields, not all64trace rows",
+    "Both synthetic cases start m/v at0; aged case tests t400500 and heterogeneous birth, not real parent nonzero-moment continuation",
+    "No RNG/growth/events/research-counter or pertarget study trace/hash integration test",
+    "Tolerance2e-5 passed; not byteexact, no formal optimizer replay or full-training trajectory equivalence",
+    "CPU timing range is wide and timing scopes differ: original includes string encoding/prediction; GPU stages only last outputs, excludes full pertarget host trace/hash, compilation/context/transfer separate",
+    "Do not extrapolate observed median ratios to prior107minute complete F2 study or claim PyTorch/custom CUDA performance without measurement"
+  ],
+  "alternative_tools": {
+    "PyTorch": "Official Windows CUDA eager and CUDAGraph candidate, not locally installed/timed here; stock optimizer must not silently replace perparameter birth-age Adam",
+    "Numba_CPU": "Measured control; current strict math port did not establish acceleration",
+    "Triton_current": "Upstream Linux/CC8.0+ target does not directly match native Windows/CC7.5; no compatibility assertion from torch.compile availability",
+    "custom_CUDA": "Only consider a small fused kernel after profiling; no handwritten lowlevel CUDA kernel benchmark was performed"
+  },
+  "next_engineering_step": "Keep F2 frozen; integrate an optional backend on copies, validate real nonzero p/m/v/birth/t and whole generated outputs plus trace/counter completeness, then run a separately declared short same-stream trial. No full training started.",
+  "recorded_UTC": "2026-11-13T10:43:01.104583+00:00"
+}

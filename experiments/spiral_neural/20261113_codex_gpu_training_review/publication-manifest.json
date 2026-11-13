@@ -1,0 +1,392 @@
+{
+  "accounting": {
+    "CPU_actual_micro_updates": 9696,
+    "GPU_attempts": {
+      "gpu-attempt01": {
+        "actual_micro_updates": 128,
+        "captured_steps_not_executed": 0,
+        "executed_script_sha256": "d326d06294f1b1a8afe6721eed4bbd9608ce5a3acd893b280f8fddb036978c0a",
+        "ledger": {
+          "CuPy_CUDA_Graph_GPU": 0,
+          "CuPy_eager_GPU": 0,
+          "reference_GPU_validation": 128
+        }
+      },
+      "gpu-attempt02": {
+        "actual_micro_updates": 3334,
+        "captured_steps_not_executed": 0,
+        "executed_script_sha256": "1893a36d789b4768a4529ee14f2e3cda317b752b6dbc40682bb9dad9c7e9f144",
+        "ledger": {
+          "CuPy_CUDA_Graph_GPU": 1,
+          "CuPy_eager_GPU": 3205,
+          "reference_GPU_validation": 128
+        }
+      },
+      "gpu-attempt03": {
+        "actual_micro_updates": 6538,
+        "captured_steps_not_executed": 80,
+        "executed_script_sha256": "3b0efb8c19ecda439beac681ab22af8a0c2673b2cd61368b81691408c740114d",
+        "ledger": {
+          "CuPy_CUDA_Graph_GPU": 3205,
+          "CuPy_eager_GPU": 0,
+          "CuPy_eager_reductions_GPU": 3205,
+          "reference_GPU_validation": 128
+        }
+      },
+      "gpu-attempt04": {
+        "actual_micro_updates": 6538,
+        "captured_steps_not_executed": 80,
+        "executed_script_sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110",
+        "ledger": {
+          "CuPy_CUDA_Graph_GPU": 3205,
+          "CuPy_eager_GPU": 0,
+          "CuPy_eager_reductions_GPU": 3205,
+          "reference_GPU_validation": 128
+        }
+      }
+    },
+    "actual_micro_updates_total": 26234,
+    "fixture_sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4",
+    "formal_neural_experiment_updates": 0,
+    "parity_scope": "64-step selected full p/m/v/t/birth plus logits/CE/argmax compared against original math, atol2e-5/rtol2e-5; report exact-byte equality separately. Passing this engineering probe never proves full-training bitwise replay.",
+    "per_backend_actual_updates": {
+      "CuPy_CUDA_Graph_GPU": 6411,
+      "CuPy_eager_GPU": 3205,
+      "CuPy_eager_reductions_GPU": 6410,
+      "Numba_njit_CPU_fastmath_false": 3232,
+      "original_NumPy_string_CPU": 3232,
+      "preencoded_NumPy_CPU": 3232,
+      "reference_GPU_validation": 512
+    },
+    "source_versions_preserved_separately": true
+  },
+  "archives": {
+    "evidence.zip": {
+      "Git_blob": "c90ef5a173ea9c6acee7ab0cb70170b126d757ae",
+      "bytes": 121657,
+      "member_count": 25,
+      "members": {
+        "README.md": {
+          "CRC32": "d4ea27dc",
+          "Git_blob": "b16bc634bcf3c8ec233f6f1ede10ab2e52e4d00b",
+          "bytes": 5957,
+          "compressed_bytes": 3697,
+          "sha256": "4450514fd9cae77e041fa4eb93ba702c797791c65966d15554a227d0af67a05c"
+        },
+        "bench_common.py": {
+          "CRC32": "5fe80a31",
+          "Git_blob": "178607041acf1744a439848cd13c9b4c4c20cba6",
+          "bytes": 8468,
+          "compressed_bytes": 3155,
+          "sha256": "ddfe00dfc5e757a0e531ef4fdac9870e61b065fce764f2200f2bb1d44be83e34"
+        },
+        "cpu-results.json": {
+          "CRC32": "2df2c392",
+          "Git_blob": "ae1420b9dd9aa977f4cd8d1771748876684367ca",
+          "bytes": 32085,
+          "compressed_bytes": 2998,
+          "sha256": "ed3ae41703e61f8a04e4714b13df0d204258b6da4cdb201344c8c62440ab1e2c"
+        },
+        "cpu_bench.py": {
+          "CRC32": "54c8b503",
+          "Git_blob": "4ca8eeb11a0adc4b9ffb50744046f2e7e49e84b8",
+          "bytes": 15197,
+          "compressed_bytes": 4362,
+          "sha256": "ae4a1bc88dbbfccf5a2f9e9b020fcda6f2df546b9c1bf18760174b9efd978b52"
+        },
+        "decision.json": {
+          "CRC32": "16d23f42",
+          "Git_blob": "3a99b22dfd10403d347d4e4e612c1d86a637fa5e",
+          "bytes": 4187,
+          "compressed_bytes": 2103,
+          "sha256": "5e1d2bc332b586fa7de07d9c579fa4914fe89c3cffd7ab0f3fe4974d59aea862"
+        },
+        "environment-checks.json": {
+          "CRC32": "b170dd2e",
+          "Git_blob": "bebd423a04d4ff3588a8a987f194d2ff5d2af6a9",
+          "bytes": 1320,
+          "compressed_bytes": 702,
+          "sha256": "7567387d5190b5ae20fdb63a1d1590f64c927f4390f2630264a098bf46d3bc9c"
+        },
+        "external-review.json": {
+          "CRC32": "a8ff08ca",
+          "Git_blob": "28515c21cf40dc604edc2cdaa6bd73ef99ee3795",
+          "bytes": 1136,
+          "compressed_bytes": 676,
+          "sha256": "6297d4e622484630e0a858aac32c4ad0f710875568ce14a627682a48b6865381"
+        },
+        "fixture.npz": {
+          "CRC32": "de277757",
+          "Git_blob": "2afb5ae09d243fd7bf231415615e9ab9fbece0c0",
+          "bytes": 242526,
+          "compressed_bytes": 42138,
+          "sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4"
+        },
+        "gpu-attempt01/gpu-results.json": {
+          "CRC32": "c37fc49e",
+          "Git_blob": "88b2d3e6998c8842858fd177e7708213efa153fd",
+          "bytes": 1597,
+          "compressed_bytes": 824,
+          "sha256": "163c9febe51b958666469ad456c0c95de504ad693e7e301fbe30693a36f6141f"
+        },
+        "gpu-attempt01/gpu_bench.py": {
+          "CRC32": "12832fb1",
+          "Git_blob": "7bc9e64849965902f5ce07a68a16664596d6d70f",
+          "bytes": 10119,
+          "compressed_bytes": 3547,
+          "sha256": "d326d06294f1b1a8afe6721eed4bbd9608ce5a3acd893b280f8fddb036978c0a"
+        },
+        "gpu-attempt02/gpu-results.json": {
+          "CRC32": "6fc8324a",
+          "Git_blob": "383d1d040b7e309998a9bce29b71fbc66410df95",
+          "bytes": 18911,
+          "compressed_bytes": 2550,
+          "sha256": "83f01da2c521a23b73166aa471bfaced7d199a35614cd4eabf49ac6121e56927"
+        },
+        "gpu-attempt02/gpu_bench.py": {
+          "CRC32": "aed458c2",
+          "Git_blob": "f55df50c188d05ee5f7f04e8ce704a6358884693",
+          "bytes": 10515,
+          "compressed_bytes": 3711,
+          "sha256": "1893a36d789b4768a4529ee14f2e3cda317b752b6dbc40682bb9dad9c7e9f144"
+        },
+        "gpu-attempt03/gpu-results.json": {
+          "CRC32": "73a68815",
+          "Git_blob": "866e4095f1e6394d181b0544bb42cb9d6942773c",
+          "bytes": 34330,
+          "compressed_bytes": 3016,
+          "sha256": "97f7d10ebbfddc96e46b13ce8d7186b72deda9b034d98109fef0b0eee278a812"
+        },
+        "gpu-attempt03/gpu_bench.py": {
+          "CRC32": "c87ec732",
+          "Git_blob": "f649bd272350141a3ff073c34b84daa6989ba1b3",
+          "bytes": 11112,
+          "compressed_bytes": 3885,
+          "sha256": "3b0efb8c19ecda439beac681ab22af8a0c2673b2cd61368b81691408c740114d"
+        },
+        "gpu-attempt04/gpu-results.json": {
+          "CRC32": "322ddcbb",
+          "Git_blob": "2c303139f27dae7e870b0440523bfe2ecaaa7183",
+          "bytes": 34283,
+          "compressed_bytes": 3033,
+          "sha256": "8cd963fb60dab2e041176653b65fa26b422fccc99e32a3aa58b267993c2985f0"
+        },
+        "gpu-attempt04/gpu_bench.py": {
+          "CRC32": "24c1872a",
+          "Git_blob": "60185e393b7652a17d7d78413ab87d1d005b0382",
+          "bytes": 11093,
+          "compressed_bytes": 3882,
+          "sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110"
+        },
+        "gpu-method-review.json": {
+          "CRC32": "9cfa92a6",
+          "Git_blob": "ba256550fad7b97d07e0ffd3a0c58a1943ee75b9",
+          "bytes": 12050,
+          "compressed_bytes": 4004,
+          "sha256": "9b8adb794f6a42f7bf8fe395ef72b96b3d562b971594b4c578701ebf4bc1c8f4"
+        },
+        "gpu_bench.py": {
+          "CRC32": "24c1872a",
+          "Git_blob": "60185e393b7652a17d7d78413ab87d1d005b0382",
+          "bytes": 11093,
+          "compressed_bytes": 3882,
+          "sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110"
+        },
+        "independent-sources.json": {
+          "CRC32": "8bfc5945",
+          "Git_blob": "6e62df4f62080e98315d5b547d20b386a9f6869b",
+          "bytes": 16486,
+          "compressed_bytes": 5500,
+          "sha256": "4e8c918693bc977cc7087a55a915557385bb3451e0fc211d253b7979228ae948"
+        },
+        "independent-sources.md": {
+          "CRC32": "6eda496b",
+          "Git_blob": "4bacc3af8461d94692bc5bbe4ba3d9af16263735",
+          "bytes": 14956,
+          "compressed_bytes": 6294,
+          "sha256": "94352e8afd5c91222fea872e8edf5f0f0ec43e92ee1cb784db4637cd0a2e8c8c"
+        },
+        "package_publication.py": {
+          "CRC32": "eb827343",
+          "Git_blob": "477921947066f70713dfed1763c05e0b0ad3621d",
+          "bytes": 14305,
+          "compressed_bytes": 4719,
+          "sha256": "77e5509a31bbf75bee538b9b0fc1c9a1d7e35b8b2c54695c8d8de77cfc88ddea"
+        },
+        "plan-addendum-01.json": {
+          "CRC32": "66da84eb",
+          "Git_blob": "ee41e7f1616b21266757f5d0e768fb914d51903d",
+          "bytes": 1269,
+          "compressed_bytes": 751,
+          "sha256": "d1ad5ce233fe9124051e9f50df84e8871dfbff0ba3eba16a7f03e51166c1d0cc"
+        },
+        "plan-addendum-02.json": {
+          "CRC32": "03cbf79c",
+          "Git_blob": "a44c72b2400b622c44081ecf3cd13e0c6f1bfef0",
+          "bytes": 1118,
+          "compressed_bytes": 695,
+          "sha256": "0d8ad705a3616c08561ac6766ac43ef7cd67711afbe2c684abd154436cbac517"
+        },
+        "plan.json": {
+          "CRC32": "2fa047f8",
+          "Git_blob": "7f28fba4634c539ef0748b7a65a103b6fa92954e",
+          "bytes": 2285,
+          "compressed_bytes": 1248,
+          "sha256": "28128555559b1381c3c7b452cb9677e279f5c9d1261998575f8e19ed9b451fc6"
+        },
+        "reference/p030_binary_continual.py": {
+          "CRC32": "9f1a1db3",
+          "Git_blob": "8b41433c6415c6d0927d69ed0aad14ff035fbe40",
+          "bytes": 21055,
+          "compressed_bytes": 7303,
+          "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+        }
+      },
+      "sha256": "455233d19474c5af33cb0fb0ab9f17a5cdfe0887033a75a3a9cc0cc1b2b69c14"
+    }
+  },
+  "finite_fixture_NPZ": 1,
+  "not_selected": [
+    "venv",
+    "pipcache",
+    "CUDAcache",
+    "installation logs",
+    "raw external worker transport",
+    "account quota",
+    "DPAPI",
+    "chat",
+    "private handoff",
+    "trained study checkpoints"
+  ],
+  "packager_benchmark_or_model_calls": 0,
+  "schema": "gpu-training-review-publication-v1",
+  "scope": "Bounded synthetic engineering evidence; not a formal training result or bitwise training replay",
+  "selected_files": {
+    "README.md": {
+      "Git_blob": "b16bc634bcf3c8ec233f6f1ede10ab2e52e4d00b",
+      "bytes": 5957,
+      "sha256": "4450514fd9cae77e041fa4eb93ba702c797791c65966d15554a227d0af67a05c"
+    },
+    "bench_common.py": {
+      "Git_blob": "178607041acf1744a439848cd13c9b4c4c20cba6",
+      "bytes": 8468,
+      "sha256": "ddfe00dfc5e757a0e531ef4fdac9870e61b065fce764f2200f2bb1d44be83e34"
+    },
+    "cpu-results.json": {
+      "Git_blob": "ae1420b9dd9aa977f4cd8d1771748876684367ca",
+      "bytes": 32085,
+      "sha256": "ed3ae41703e61f8a04e4714b13df0d204258b6da4cdb201344c8c62440ab1e2c"
+    },
+    "cpu_bench.py": {
+      "Git_blob": "4ca8eeb11a0adc4b9ffb50744046f2e7e49e84b8",
+      "bytes": 15197,
+      "sha256": "ae4a1bc88dbbfccf5a2f9e9b020fcda6f2df546b9c1bf18760174b9efd978b52"
+    },
+    "decision.json": {
+      "Git_blob": "3a99b22dfd10403d347d4e4e612c1d86a637fa5e",
+      "bytes": 4187,
+      "sha256": "5e1d2bc332b586fa7de07d9c579fa4914fe89c3cffd7ab0f3fe4974d59aea862"
+    },
+    "environment-checks.json": {
+      "Git_blob": "bebd423a04d4ff3588a8a987f194d2ff5d2af6a9",
+      "bytes": 1320,
+      "sha256": "7567387d5190b5ae20fdb63a1d1590f64c927f4390f2630264a098bf46d3bc9c"
+    },
+    "external-review.json": {
+      "Git_blob": "28515c21cf40dc604edc2cdaa6bd73ef99ee3795",
+      "bytes": 1136,
+      "sha256": "6297d4e622484630e0a858aac32c4ad0f710875568ce14a627682a48b6865381"
+    },
+    "fixture.npz": {
+      "Git_blob": "2afb5ae09d243fd7bf231415615e9ab9fbece0c0",
+      "bytes": 242526,
+      "sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4"
+    },
+    "gpu-attempt01/gpu-results.json": {
+      "Git_blob": "88b2d3e6998c8842858fd177e7708213efa153fd",
+      "bytes": 1597,
+      "sha256": "163c9febe51b958666469ad456c0c95de504ad693e7e301fbe30693a36f6141f"
+    },
+    "gpu-attempt01/gpu_bench.py": {
+      "Git_blob": "7bc9e64849965902f5ce07a68a16664596d6d70f",
+      "bytes": 10119,
+      "sha256": "d326d06294f1b1a8afe6721eed4bbd9608ce5a3acd893b280f8fddb036978c0a"
+    },
+    "gpu-attempt02/gpu-results.json": {
+      "Git_blob": "383d1d040b7e309998a9bce29b71fbc66410df95",
+      "bytes": 18911,
+      "sha256": "83f01da2c521a23b73166aa471bfaced7d199a35614cd4eabf49ac6121e56927"
+    },
+    "gpu-attempt02/gpu_bench.py": {
+      "Git_blob": "f55df50c188d05ee5f7f04e8ce704a6358884693",
+      "bytes": 10515,
+      "sha256": "1893a36d789b4768a4529ee14f2e3cda317b752b6dbc40682bb9dad9c7e9f144"
+    },
+    "gpu-attempt03/gpu-results.json": {
+      "Git_blob": "866e4095f1e6394d181b0544bb42cb9d6942773c",
+      "bytes": 34330,
+      "sha256": "97f7d10ebbfddc96e46b13ce8d7186b72deda9b034d98109fef0b0eee278a812"
+    },
+    "gpu-attempt03/gpu_bench.py": {
+      "Git_blob": "f649bd272350141a3ff073c34b84daa6989ba1b3",
+      "bytes": 11112,
+      "sha256": "3b0efb8c19ecda439beac681ab22af8a0c2673b2cd61368b81691408c740114d"
+    },
+    "gpu-attempt04/gpu-results.json": {
+      "Git_blob": "2c303139f27dae7e870b0440523bfe2ecaaa7183",
+      "bytes": 34283,
+      "sha256": "8cd963fb60dab2e041176653b65fa26b422fccc99e32a3aa58b267993c2985f0"
+    },
+    "gpu-attempt04/gpu_bench.py": {
+      "Git_blob": "60185e393b7652a17d7d78413ab87d1d005b0382",
+      "bytes": 11093,
+      "sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110"
+    },
+    "gpu-method-review.json": {
+      "Git_blob": "ba256550fad7b97d07e0ffd3a0c58a1943ee75b9",
+      "bytes": 12050,
+      "sha256": "9b8adb794f6a42f7bf8fe395ef72b96b3d562b971594b4c578701ebf4bc1c8f4"
+    },
+    "gpu_bench.py": {
+      "Git_blob": "60185e393b7652a17d7d78413ab87d1d005b0382",
+      "bytes": 11093,
+      "sha256": "a5e2741ac7a49ec58a8dd63433dbfc3e87938febb334e8c9e1d6c19980461110"
+    },
+    "independent-sources.json": {
+      "Git_blob": "6e62df4f62080e98315d5b547d20b386a9f6869b",
+      "bytes": 16486,
+      "sha256": "4e8c918693bc977cc7087a55a915557385bb3451e0fc211d253b7979228ae948"
+    },
+    "independent-sources.md": {
+      "Git_blob": "4bacc3af8461d94692bc5bbe4ba3d9af16263735",
+      "bytes": 14956,
+      "sha256": "94352e8afd5c91222fea872e8edf5f0f0ec43e92ee1cb784db4637cd0a2e8c8c"
+    },
+    "package_publication.py": {
+      "Git_blob": "477921947066f70713dfed1763c05e0b0ad3621d",
+      "bytes": 14305,
+      "sha256": "77e5509a31bbf75bee538b9b0fc1c9a1d7e35b8b2c54695c8d8de77cfc88ddea"
+    },
+    "plan-addendum-01.json": {
+      "Git_blob": "ee41e7f1616b21266757f5d0e768fb914d51903d",
+      "bytes": 1269,
+      "sha256": "d1ad5ce233fe9124051e9f50df84e8871dfbff0ba3eba16a7f03e51166c1d0cc"
+    },
+    "plan-addendum-02.json": {
+      "Git_blob": "a44c72b2400b622c44081ecf3cd13e0c6f1bfef0",
+      "bytes": 1118,
+      "sha256": "0d8ad705a3616c08561ac6766ac43ef7cd67711afbe2c684abd154436cbac517"
+    },
+    "plan.json": {
+      "Git_blob": "7f28fba4634c539ef0748b7a65a103b6fa92954e",
+      "bytes": 2285,
+      "sha256": "28128555559b1381c3c7b452cb9677e279f5c9d1261998575f8e19ed9b451fc6"
+    },
+    "reference/p030_binary_continual.py": {
+      "Git_blob": "8b41433c6415c6d0927d69ed0aad14ff035fbe40",
+      "bytes": 21055,
+      "sha256": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013"
+    }
+  },
+  "status": "verified"
+}
