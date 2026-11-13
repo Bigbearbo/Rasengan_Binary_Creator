@@ -1,0 +1,1040 @@
+{
+  "actual_micro_updates": {
+    "Numba_njit_CPU_fastmath_false": {
+      "compile": 0,
+      "timed": 3072,
+      "validation": 128,
+      "warm": 32
+    },
+    "original_NumPy_string_CPU": {
+      "compile": 0,
+      "timed": 3072,
+      "validation": 128,
+      "warm": 32
+    },
+    "preencoded_NumPy_CPU": {
+      "compile": 0,
+      "timed": 3072,
+      "validation": 128,
+      "warm": 32
+    }
+  },
+  "actual_micro_updates_total": 9696,
+  "backends": {
+    "Numba_njit_CPU_fastmath_false": {
+      "median_seconds": 0.6614164000056917,
+      "speedup_vs_original": 0.7389446345760857,
+      "status": "passed",
+      "trials": [
+        {
+          "checksum": {
+            "loss_sum": 181.91663212690978,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.00010760000441223383,
+          "seconds": 0.6457119000115199,
+          "trial": 1,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91663212690978,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.00010540000221226364,
+          "seconds": 0.6614164000056917,
+          "trial": 2,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91663212690978,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.0001731999946059659,
+          "seconds": 0.6778017000033287,
+          "trial": 3,
+          "updates": 1024
+        }
+      ],
+      "updates_per_second": 1548.1926362744985,
+      "validation": {
+        "aged_t400500_heterogeneous_birth": {
+          "checksum": {
+            "loss_sum": 115.21443604298531,
+            "prediction_sum": 66
+          },
+          "seconds": 0.01649149999138899,
+          "state": {
+            "atol": 2e-05,
+            "exact_bytes": false,
+            "fields": {
+              "H": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "L": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth0": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth1": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth2": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth3": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.1525116860866547e-08,
+                "max_rel": 0.05465663782166859,
+                "passed": true
+              },
+              "m1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.1059455573558807e-08,
+                "max_rel": 0.00039416633819471815,
+                "passed": true
+              },
+              "m2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 4.377216100692749e-08,
+                "max_rel": 0.0001574142092559555,
+                "passed": true
+              },
+              "m3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.1175870895385742e-08,
+                "max_rel": 7.644276936253305e-07,
+                "passed": true
+              },
+              "p0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 4.976987838745117e-06,
+                "max_rel": 0.000510816886732008,
+                "passed": true
+              },
+              "p1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 5.811452865600586e-07,
+                "max_rel": 0.00010148403630118431,
+                "passed": true
+              },
+              "p2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 3.129243850708008e-07,
+                "max_rel": 0.00010560069572223065,
+                "passed": true
+              },
+              "p3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 3.026798367500305e-08,
+                "max_rel": 5.794813499276584e-06,
+                "passed": true
+              },
+              "t": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.2732925824820995e-11,
+                "max_rel": 0.001257092969133227,
+                "passed": true
+              },
+              "v1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.000444171950221e-11,
+                "max_rel": 2.1690826090396254e-05,
+                "passed": true
+              },
+              "v2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 5.820766091346741e-10,
+                "max_rel": 3.0469339343674586e-06,
+                "passed": true
+              },
+              "v3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.7462298274040222e-10,
+                "max_rel": 3.572222115055559e-07,
+                "passed": true
+              }
+            },
+            "max_abs": 4.976987838745117e-06,
+            "passed": true,
+            "rtol": 2e-05
+          },
+          "trace": {
+            "atol": 2e-05,
+            "exact_bytes": false,
+            "fields": {
+              "logits": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 2.384185791015625e-06,
+                "max_rel": 4.70416979661015e-05,
+                "passed": true
+              },
+              "losses": {
+                "actual_dtype": "<f8",
+                "exact_bytes": false,
+                "expected_dtype": "<f8",
+                "max_abs": 2.3689355401756984e-06,
+                "max_rel": 2.1412783196930787e-06,
+                "passed": true
+              },
+              "predictions": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 2.384185791015625e-06,
+            "passed": true,
+            "rtol": 2e-05
+          }
+        },
+        "fresh_t0_allbirth0": {
+          "checksum": {
+            "loss_sum": 97.73529820791131,
+            "prediction_sum": 65
+          },
+          "seconds": 0.016373899998143315,
+          "state": {
+            "atol": 2e-05,
+            "exact_bytes": false,
+            "fields": {
+              "H": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "L": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth0": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth1": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth2": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth3": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 4.6566128730773926e-09,
+                "max_rel": 0.002093910449473654,
+                "passed": true
+              },
+              "m1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 5.587935447692871e-09,
+                "max_rel": 0.00030306562536426155,
+                "passed": true
+              },
+              "m2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.6763806343078613e-08,
+                "max_rel": 0.00022333891680625348,
+                "passed": true
+              },
+              "m3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.30385160446167e-08,
+                "max_rel": 1.4701363845523948e-06,
+                "passed": true
+              },
+              "p0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.2740492820739746e-06,
+                "max_rel": 0.0002699492454321155,
+                "passed": true
+              },
+              "p1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 2.60770320892334e-08,
+                "max_rel": 3.6294341681970276e-05,
+                "passed": true
+              },
+              "p2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 8.940696716308594e-08,
+                "max_rel": 2.0984788127086677e-06,
+                "passed": true
+              },
+              "p3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 6.984919309616089e-09,
+                "max_rel": 1.867185079937624e-05,
+                "passed": true
+              },
+              "t": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.6370904631912708e-11,
+                "max_rel": 0.00042160253668552396,
+                "passed": true
+              },
+              "v1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.2732925824820995e-11,
+                "max_rel": 1.0977913149079608e-06,
+                "passed": true
+              },
+              "v2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 2.0372681319713593e-10,
+                "max_rel": 6.793674871297227e-07,
+                "passed": true
+              },
+              "v3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 5.820766091346741e-11,
+                "max_rel": 1.1218831841378283e-07,
+                "passed": true
+              }
+            },
+            "max_abs": 1.2740492820739746e-06,
+            "passed": true,
+            "rtol": 2e-05
+          },
+          "trace": {
+            "atol": 2e-05,
+            "exact_bytes": false,
+            "fields": {
+              "logits": {
+                "actual_dtype": "<f4",
+                "exact_bytes": false,
+                "expected_dtype": "<f4",
+                "max_abs": 1.1920928955078125e-06,
+                "max_rel": 1.4584790461935966e-05,
+                "passed": true
+              },
+              "losses": {
+                "actual_dtype": "<f8",
+                "exact_bytes": false,
+                "expected_dtype": "<f8",
+                "max_abs": 1.52981102408134e-06,
+                "max_rel": 1.5237931792560638e-06,
+                "passed": true
+              },
+              "predictions": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 1.52981102408134e-06,
+            "passed": true,
+            "rtol": 2e-05
+          }
+        }
+      },
+      "warm_seconds": 0.017295400000875816
+    },
+    "original_NumPy_string_CPU": {
+      "median_seconds": 0.488750100004836,
+      "speedup_vs_original": 1.0,
+      "status": "reference",
+      "trials": [
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.0009617000032449141,
+          "seconds": 0.32939949999854434,
+          "trial": 1,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.0009497999999439344,
+          "seconds": 0.488750100004836,
+          "trial": 2,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.0018755000055534765,
+          "seconds": 0.9004828999895835,
+          "trial": 3,
+          "updates": 1024
+        }
+      ],
+      "updates_per_second": 2095.140236267712,
+      "validation_seconds": {
+        "aged_t400500_heterogeneous_birth": 0.02438070000789594,
+        "fresh_t0_allbirth0": 0.029862099996535107
+      },
+      "warm_seconds": 0.010460200006491505
+    },
+    "preencoded_NumPy_CPU": {
+      "median_seconds": 0.9266783999919426,
+      "speedup_vs_original": 0.527421487334857,
+      "status": "passed",
+      "trials": [
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 9.020000288728625e-05,
+          "seconds": 0.9266783999919426,
+          "trial": 1,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 9.289999434258789e-05,
+          "seconds": 0.9820602999971015,
+          "trial": 2,
+          "updates": 1024
+        },
+        {
+          "checksum": {
+            "loss_sum": 181.91649009004192,
+            "prediction_sum": 1123
+          },
+          "final_t": 401524,
+          "initialize_seconds": 0.00011950000771321356,
+          "seconds": 0.8957904999988386,
+          "trial": 3,
+          "updates": 1024
+        }
+      ],
+      "updates_per_second": 1105.0219795874207,
+      "validation": {
+        "aged_t400500_heterogeneous_birth": {
+          "checksum": {
+            "loss_sum": 115.214434699011,
+            "prediction_sum": 66
+          },
+          "seconds": 0.022039899995434098,
+          "state": {
+            "atol": 2e-05,
+            "exact_bytes": true,
+            "fields": {
+              "H": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "L": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth0": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth1": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth2": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth3": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "t": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 0.0,
+            "passed": true,
+            "rtol": 2e-05
+          },
+          "trace": {
+            "atol": 2e-05,
+            "exact_bytes": true,
+            "fields": {
+              "logits": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "losses": {
+                "actual_dtype": "<f8",
+                "exact_bytes": true,
+                "expected_dtype": "<f8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "predictions": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 0.0,
+            "passed": true,
+            "rtol": 2e-05
+          }
+        },
+        "fresh_t0_allbirth0": {
+          "checksum": {
+            "loss_sum": 97.7352917842234,
+            "prediction_sum": 65
+          },
+          "seconds": 0.024855099996784702,
+          "state": {
+            "atol": 2e-05,
+            "exact_bytes": true,
+            "fields": {
+              "H": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "L": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth0": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth1": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth2": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "birth3": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "m3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "p3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "t": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v0": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v1": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v2": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "v3": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 0.0,
+            "passed": true,
+            "rtol": 2e-05
+          },
+          "trace": {
+            "atol": 2e-05,
+            "exact_bytes": true,
+            "fields": {
+              "logits": {
+                "actual_dtype": "<f4",
+                "exact_bytes": true,
+                "expected_dtype": "<f4",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "losses": {
+                "actual_dtype": "<f8",
+                "exact_bytes": true,
+                "expected_dtype": "<f8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              },
+              "predictions": {
+                "actual_dtype": "<i8",
+                "exact_bytes": true,
+                "expected_dtype": "<i8",
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "passed": true
+              }
+            },
+            "max_abs": 0.0,
+            "passed": true,
+            "rtol": 2e-05
+          }
+        }
+      },
+      "warm_seconds": 0.030673400004161522
+    }
+  },
+  "compile_actual_updates": 0,
+  "fixture": {
+    "file": "fixture.npz",
+    "lengths": [
+      51,
+      41,
+      49,
+      49,
+      48,
+      41,
+      40,
+      41,
+      51,
+      46,
+      42,
+      48,
+      47,
+      45,
+      51,
+      39,
+      47,
+      42,
+      49,
+      41,
+      48,
+      49,
+      50,
+      42,
+      43,
+      39,
+      47,
+      49,
+      40,
+      48,
+      40,
+      45
+    ],
+    "preparation_seconds": {
+      "encoding_seconds": 0.0002759000053629279,
+      "fixture_write_seconds": 0.001320000010309741,
+      "original_initialization_seconds": 0.0035897999914595857,
+      "prefix_labels_generation_seconds": 0.005512600007932633,
+      "reference_import_seconds": 0.01696809999702964
+    },
+    "sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4",
+    "shape": [
+      32,
+      160
+    ],
+    "timing_state_t": 400500
+  },
+  "formal_neural_experiment_updates": 0,
+  "id": "GPU-TRAIN-REVIEW-20261113",
+  "imports_seconds": {
+    "common_numpy": 0.07364489999599755,
+    "numba": 0.46908710000570863
+  },
+  "numba_compile_seconds": 1.6155379000119865,
+  "reference_update_utility_count": 128,
+  "runtime": {
+    "BLAS_threads": 1,
+    "fastmath": false,
+    "numba": "0.68.1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "scope": "Synthetic engineering only, formal experiment updates0",
+  "source_hashes": {
+    "bench_common.py": "ddfe00dfc5e757a0e531ef4fdac9870e61b065fce764f2200f2bb1d44be83e34",
+    "cpu_bench.py": "ae4a1bc88dbbfccf5a2f9e9b020fcda6f2df546b9c1bf18760174b9efd978b52",
+    "original_reference": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "plan.json": "28128555559b1381c3c7b452cb9677e279f5c9d1261998575f8e19ed9b451fc6"
+  },
+  "source_plan_fixture_unchanged": true,
+  "status": "complete",
+  "wall_seconds_excluding_import": 8.354344799998216,
+  "wall_seconds_including_import": 8.949551099998644
+}

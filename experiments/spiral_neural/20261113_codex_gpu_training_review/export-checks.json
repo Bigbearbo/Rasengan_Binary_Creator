@@ -1,0 +1,13 @@
+{
+  "archive_members_byte_CRC_SHA_verified": 25,
+  "external_calls": 0,
+  "finite_synthetic_fixture_NPZ": 1,
+  "formal_training_updates": 0,
+  "original_source_result_fixture_files_unchanged": true,
+  "packager_micro_updates": 0,
+  "packager_model_forward_calls": 0,
+  "privacy_checked_all_selected_files": true,
+  "selected_original_files": 25,
+  "source_versions_and_result_pins_verified": true,
+  "status": "PASS"
+}

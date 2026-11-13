@@ -1,0 +1,9 @@
+{
+  "id": "GPU-TRAIN-REVIEW-20261113-ADDENDUM01",
+  "trigger_observed_before_new_variants": "CuPy14.2 eager cuBLAS path passes two64step parity cases but graph capture raises NotImplementedError in cupy_backends.cuda.libs.cublas.setStream. Original CPU timings also show temporal spread .3294/.4888/.9005seconds, so report ranges and avoid precise global speedup extrapolation.",
+  "preserved_results": ["cpu-results.json", "gpu-attempt01", "gpu-attempt02/gpu-results.json"],
+  "new_variants": ["CuPy_eager_reductions_GPU", "CuPy_CUDA_Graph_GPU using identical product-sum reductions"],
+  "math_change": "Replace small dot/outer calls with broadcast product plus float32 reductions to avoid uncapturable cuBLAS; validate same frozen64step cases/atol2e-5/rtol2e-5 before timing. This can change rounding and is not claimed byteexact or an isolated Graph effect versus the oldcuBLAS path.",
+  "timing": "Same32-cycle synthetic stream, pertoken Adam, 1024updates x3trials, compilation/capture/transfer separate. Compare eager and graph with identical reduction arithmetic.",
+  "limits_unchanged": "Each backend<=7000actual micro updates, all<=40000 including failed attempts and CPU references. Formal neural experiment updates0. No hidden retry or changed tolerances."
+}

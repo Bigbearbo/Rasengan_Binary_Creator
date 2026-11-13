@@ -1,0 +1,608 @@
+{
+  "schema": "GPU-batch1-engineering-pilot-v1",
+  "status": "complete",
+  "hardware": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "compute_capability": [
+      7,
+      5
+    ],
+    "VRAM_bytes": 4294639616
+  },
+  "software": {
+    "cupy": "14.2.0",
+    "numpy": "2.3.5",
+    "CUDA_driver_API": 13030,
+    "CUDA_runtime_API": 12090
+  },
+  "plan_sha256": "28128555559b1381c3c7b452cb9677e279f5c9d1261998575f8e19ed9b451fc6",
+  "script_sha256": "1893a36d789b4768a4529ee14f2e3cda317b752b6dbc40682bb9dad9c7e9f144",
+  "fixture_sha256": "62fed1b52f83166ade9641a74afbe4bf0cd03f045a3752ae35d3bbd92bfe69b4",
+  "timing_scope": "preencoded batch1 forward/backward/global-clip/Adam, no gradient averaging; device loss/logit values available, no per-step host logging/hash. Events and synchronized wall include host enqueue gaps. Compile/context/transfer/validation separate. Not full-study speedup or bitwise training replay.",
+  "backends": {
+    "CuPy_eager_GPU": {
+      "validation": [
+        {
+          "case": "fresh_t0_allbirth0",
+          "steps": 64,
+          "observed_trace_positions0": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ],
+          "state": {
+            "passed": true,
+            "exact_bytes": false,
+            "atol": 2e-05,
+            "rtol": 2e-05,
+            "max_abs": 1.2665987014770508e-06,
+            "fields": {
+              "p0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.2665987014770508e-06,
+                "max_rel": 0.00021667088954611344,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.30385160446167e-08,
+                "max_rel": 1.2868907853995001e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 2.9802322387695312e-08,
+                "max_rel": 3.912308316666981e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.862645149230957e-09,
+                "max_rel": 6.795761951716442e-06,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.979060471057892e-09,
+                "max_rel": 0.0006184232703065897,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 9.313225746154785e-10,
+                "max_rel": 6.993822123790651e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 9.313225746154785e-09,
+                "max_rel": 1.478950832279581e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 4.6566128730773926e-09,
+                "max_rel": 5.250487087687125e-07,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 7.275957614183426e-12,
+                "max_rel": 0.00042049284773767716,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 7.275957614183426e-12,
+                "max_rel": 1.8929428687272515e-06,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.1641532182693481e-10,
+                "max_rel": 3.394200013644684e-07,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 5.820766091346741e-11,
+                "max_rel": 1.1218831841378283e-07,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "birth0": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth1": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth2": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth3": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "t": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "L": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "H": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              }
+            }
+          },
+          "trace": {
+            "passed": true,
+            "exact_bytes": false,
+            "atol": 2e-05,
+            "rtol": 2e-05,
+            "max_abs": 7.365300931372332e-07,
+            "fields": {
+              "logits": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 7.152557373046875e-07,
+                "max_rel": 2.176712357244967e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "losses": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 7.365300931372332e-07,
+                "max_rel": 7.038805739002501e-07,
+                "actual_dtype": "<f8",
+                "expected_dtype": "<f8"
+              },
+              "predictions": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              }
+            }
+          },
+          "warm_compile_capture_seconds": 6.811026399998809,
+          "passed": true
+        },
+        {
+          "case": "aged_t400500_heterogeneous_birth",
+          "steps": 64,
+          "observed_trace_positions0": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ],
+          "state": {
+            "passed": true,
+            "exact_bytes": false,
+            "atol": 2e-05,
+            "rtol": 2e-05,
+            "max_abs": 4.976987838745117e-06,
+            "fields": {
+              "p0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 4.976987838745117e-06,
+                "max_rel": 0.0005234964241044567,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 6.407499313354492e-07,
+                "max_rel": 6.525291836372951e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 3.129243850708008e-07,
+                "max_rel": 7.256518395885902e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "p3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 2.7939677238464355e-08,
+                "max_rel": 1.554695358202948e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.2048985809087753e-08,
+                "max_rel": 0.02694913526512966,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.1350493878126144e-08,
+                "max_rel": 3.8076859988899456e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 3.67872416973114e-08,
+                "max_rel": 6.602583332496049e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "m3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.210719347000122e-08,
+                "max_rel": 9.937560017129295e-07,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v0": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 7.73070496506989e-12,
+                "max_rel": 0.001256257093290624,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v1": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 8.071765478234738e-12,
+                "max_rel": 2.2319545687219336e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v2": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 6.984919309616089e-10,
+                "max_rel": 3.168811291742157e-06,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "v3": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 2.9103830456733704e-11,
+                "max_rel": 1.4558178923221764e-07,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "birth0": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth1": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth2": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "birth3": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "t": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "L": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              },
+              "H": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              }
+            }
+          },
+          "trace": {
+            "passed": true,
+            "exact_bytes": false,
+            "atol": 2e-05,
+            "rtol": 2e-05,
+            "max_abs": 2.1457672119140625e-06,
+            "fields": {
+              "logits": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 2.1457672119140625e-06,
+                "max_rel": 5.6267793693109305e-05,
+                "actual_dtype": "<f4",
+                "expected_dtype": "<f4"
+              },
+              "losses": {
+                "passed": true,
+                "exact_bytes": false,
+                "max_abs": 1.7567598433743115e-06,
+                "max_rel": 1.6874539999212746e-06,
+                "actual_dtype": "<f8",
+                "expected_dtype": "<f8"
+              },
+              "predictions": {
+                "passed": true,
+                "exact_bytes": true,
+                "max_abs": 0.0,
+                "max_rel": 0.0,
+                "actual_dtype": "<i8",
+                "expected_dtype": "<i8"
+              }
+            }
+          },
+          "warm_compile_capture_seconds": 0.0074142999947071075,
+          "passed": true
+        }
+      ],
+      "accepted_engineering_parity": true,
+      "benchmark": {
+        "trials": [
+          {
+            "trial": 0,
+            "updates": 1024,
+            "synchronized_wall_seconds": 4.869303600004059,
+            "GPU_event_seconds": 4.86907958984375,
+            "transfer_allocation_seconds": 0.0019668000022647902,
+            "warm_compile_capture_seconds": 0.007257000004756264,
+            "final_t": 401524
+          },
+          {
+            "trial": 1,
+            "updates": 1024,
+            "synchronized_wall_seconds": 5.401401399998576,
+            "GPU_event_seconds": 5.401154296875,
+            "transfer_allocation_seconds": 0.0014243000041460618,
+            "warm_compile_capture_seconds": 0.004755699992529117,
+            "final_t": 401524
+          },
+          {
+            "trial": 2,
+            "updates": 1024,
+            "synchronized_wall_seconds": 5.119202700007008,
+            "GPU_event_seconds": 5.11896533203125,
+            "transfer_allocation_seconds": 0.0017544000002089888,
+            "warm_compile_capture_seconds": 0.00536409999767784,
+            "final_t": 401524
+          }
+        ],
+        "median_seconds": 5.119202700007008,
+        "median_updates_per_second": 200.03114938164063
+      }
+    },
+    "CuPy_CUDA_Graph_GPU": {
+      "accepted_engineering_parity": false,
+      "error_type": "NotImplementedError",
+      "error": "calling cuBLAS API during stream capture is currently unsupported"
+    }
+  },
+  "formal_training_updates": 0,
+  "actual_synthetic_updates": {
+    "reference_GPU_validation": 128,
+    "CuPy_eager_GPU": 3205,
+    "CuPy_CUDA_Graph_GPU": 1
+  },
+  "captured_steps_not_executed": 0,
+  "fixture_unchanged": true,
+  "total_seconds": 23.30267270001059
+}

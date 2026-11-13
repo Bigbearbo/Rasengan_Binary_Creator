@@ -1,0 +1,388 @@
+{
+  "schema": "gpu-independent-official-source-review-v1",
+  "status": "completed_documentary_review",
+  "date": "2026-11-13",
+  "round_id": "GPU-TRAIN-REVIEW-20261113",
+  "scope": {
+    "installs": 0,
+    "neural_forward_calls": 0,
+    "optimizer_updates": 0,
+    "benchmarks": 0,
+    "external_model_calls_by_reviewer": 0,
+    "git_operations": 0,
+    "completed_F2_source_or_state_modified": false,
+    "hardware_inventory_independently_probed": false,
+    "performance_measurements": null
+  },
+  "supplied_environment": {
+    "os": "Windows 11 x64",
+    "python": "CPython 3.12",
+    "gpu": "GTX1650 4GB",
+    "compute_capability": "7.5",
+    "driver": "610.88",
+    "tool_packages_at_assignment": "torch/cupy/numba/jax/triton absent; coordinator-supplied inventory"
+  },
+  "workload": {
+    "input": 160,
+    "hidden": 64,
+    "output": 3,
+    "activation": "tanh",
+    "parameter_count": 10499,
+    "forward_MAC": 10432,
+    "training_MAC_per_target": 21056,
+    "MAC_formula_is_latency_model": false,
+    "update_order": "one Adam step per teacher-prefix token",
+    "students": 3,
+    "student_execution": "independent serial",
+    "stored_p_m_v_dtype": "float32",
+    "CE_dtype": "float64",
+    "clip": "one global gradient norm per student, maximum 1",
+    "bias_correction": "per-element birth-age; inherited optimizer state retained"
+  },
+  "recommendation_order": [
+    "Measure complete ordered-step CPU Numba JIT against NumPy",
+    "Measure CuPy eager then a fixed-buffer CUDA Graph only on an individually validated capture-safe operation path; CuPy14.2 cuBLAS-wrapper path is rejected during capture",
+    "Use PyTorch eager as an optional framework comparator; do not substitute stock Adam without state/age validation",
+    "Only after bottleneck evidence, consider CuPy RawKernel or NVIDIA Numba-CUDA fusion",
+    "Do not make current Inductor/Triton the first Windows SM7.5 route"
+  ],
+  "compatibility": [
+    {
+      "tool": "Numba CPU",
+      "assessment": "documented candidate, not locally tested",
+      "source_ids": [
+        "numba_install",
+        "numba_tips",
+        "numba_fp"
+      ]
+    },
+    {
+      "tool": "CuPy eager/Graph/RawKernel",
+      "assessment": "Windows/Python3.12 wheels documented; coordinator eager test works; v14.2 cuBLAS wrapper forbids capture. Product/sum graph path remains a separately testable candidate",
+      "source_ids": [
+        "cupy_install",
+        "cupy_stream",
+        "cupy_raw",
+        "cupy_cublas_guard",
+        "cupy_math_source",
+        "cupy_reduction_source"
+      ]
+    },
+    {
+      "tool": "PyTorch eager/CUDAGraph",
+      "assessment": "v2.15.0 cu132 CPython3.12 Windows wheel and SM7.5+ release support documented; runtime untested",
+      "source_ids": [
+        "torch_release",
+        "torch_wheel",
+        "torch_cuda"
+      ]
+    },
+    {
+      "tool": "current upstream Triton",
+      "assessment": "published support excludes native Windows and SM7.5",
+      "source_ids": [
+        "triton"
+      ]
+    },
+    {
+      "tool": "triton-windows legacy",
+      "assessment": "Turing requires3.2; current2.15 pairing3.9; legacy cross-version combination not guaranteed",
+      "source_ids": [
+        "triton_windows"
+      ]
+    },
+    {
+      "tool": "NVIDIA Numba-CUDA",
+      "assessment": "CUDA12/13 SM7.5 target and Windows wheel configuration documented; requires custom kernels; untested",
+      "source_ids": [
+        "numba_cuda_install",
+        "numba_cuda_metadata",
+        "numba_cuda_kernels",
+        "numba_cuda_deprecation"
+      ]
+    },
+    {
+      "tool": "JAX GPU",
+      "assessment": "native Windows not supported; WSL2 experimental",
+      "source_ids": [
+        "jax_install"
+      ]
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "G1",
+      "kind": "compatibility",
+      "finding": "PyTorch eager CUDA support is distinct from current default Inductor/Triton support on native Windows SM7.5."
+    },
+    {
+      "id": "G2",
+      "kind": "optimizer_semantics",
+      "finding": "Stock PyTorch Adam stores scalar tensor step and does not directly encode elementwise birth-age."
+    },
+    {
+      "id": "G3",
+      "kind": "numeric_semantics",
+      "finding": "Numba/NumPy mixed-type power promotion differs; explicit precision and state validation are required."
+    },
+    {
+      "id": "G4",
+      "kind": "graph_correctness",
+      "finding": "Graph replay omits Python work; target and Adam counters must advance through correct device mutation or staging."
+    },
+    {
+      "id": "G5",
+      "kind": "performance_scope",
+      "finding": "NVIDIA's near-constant graph-launch example is Ampere-specific; pre-Ampere graph launch remains node-count dependent."
+    },
+    {
+      "id": "G6",
+      "kind": "experimental_equivalence",
+      "finding": "Batching token gradients into one optimizer step changes chronology; changed floating-point trajectories cannot inherit exact-replay claims."
+    },
+    {
+      "id": "G7",
+      "kind": "operation_capture_compatibility",
+      "finding": "CuPy14.2 setStream explicitly rejects non-HIP capturing streams. Stream capture API does not imply cuBLAS-backed matmul can be captured."
+    },
+    {
+      "id": "G8",
+      "kind": "follow_up_candidate_scope",
+      "finding": "Elementwise multiply plus sum avoids this cuBLAS guard via ufunc/reduction paths. Entire-chain capture success and rounding equivalence still require an actual bounded test."
+    }
+  ],
+  "benchmark_acceptance_proposal_only": {
+    "execute_by_reviewer": false,
+    "fixtures": [
+      "same public prefixes/labels",
+      "nonzero inherited m/v/t",
+      "mixed birth ages",
+      "global clipping active",
+      "changing graph targets and counters"
+    ],
+    "check": [
+      "CE and predictions",
+      "p/m/v after every ordered step",
+      "global t and per-element birth",
+      "no extra warmup updates in measured initial state",
+      "same curriculum and stopping policy"
+    ],
+    "timing": [
+      "separate setup/compile/capture/warmup",
+      "synchronized device completion",
+      "end-to-end wall time with explicit transfer and artifact scope"
+    ],
+    "speedup_claim": null
+  },
+  "team": {
+    "roster_checked": true,
+    "registry_sha256": "915762aed9df66d295ef0dd869eccf2cdca77c39651a7eaefc8f0326cd6cbc36",
+    "final_summary_status": "coordinator_dispositions_recorded",
+    "needs_dispatch_decision": false,
+    "gemini": "explicitly skipped: unresolved prior analysis-only tool isolation; no reviewer call",
+    "nvidia": "coordinator single actual call candidate_rejected, no retry, no accepted factual claim"
+  },
+  "sources": [
+    {
+      "id": "torch_release",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.15.0",
+      "observed": "latest redirect v2.15.0; cu132/cu134; Turing+ and driver580+"
+    },
+    {
+      "id": "torch_wheel",
+      "url": "https://download.pytorch.org/whl/cu132/torch/",
+      "observed": "torch-2.15.0+cu132-cp312-cp312-win_amd64.whl listed"
+    },
+    {
+      "id": "torch_cuda",
+      "url": "https://docs.pytorch.org/docs/2.15/notes/cuda.html#cuda-graphs",
+      "observed": "capture constraints: fixed addresses/shapes, Python work omitted, synchronization restricted"
+    },
+    {
+      "id": "torch_compile",
+      "url": "https://docs.pytorch.org/docs/2.15/generated/torch.compile.html",
+      "observed": "default Inductor; reduce-overhead graph mode has applicability and memory constraints"
+    },
+    {
+      "id": "torch_windows_inductor",
+      "url": "https://docs.pytorch.org/tutorials/unstable/inductor_windows.html",
+      "observed": "tutorial scope Windows CPU/XPU"
+    },
+    {
+      "id": "torch_adam",
+      "url": "https://docs.pytorch.org/docs/2.15/generated/torch.optim.Adam.html",
+      "observed": "foreach/fused/capturable options; mathematical Adam specification"
+    },
+    {
+      "id": "torch_adam_source",
+      "url": "https://github.com/pytorch/pytorch/blob/v2.15.0/torch/optim/adam.py",
+      "observed": "scalar step tensor per parameter; exp_avg and exp_avg_sq shaped like parameter"
+    },
+    {
+      "id": "torch_accuracy",
+      "url": "https://docs.pytorch.org/docs/2.15/notes/numerical_accuracy.html",
+      "observed": "CPU/GPU or release-to-release bitwise identity not guaranteed"
+    },
+    {
+      "id": "triton",
+      "url": "https://github.com/triton-lang/triton#compatibility",
+      "observed": "upstream supported platform Linux; NVIDIA CC8.0+"
+    },
+    {
+      "id": "triton_windows",
+      "url": "https://github.com/triton-lang/triton-windows",
+      "observed": "Turing3.2 only, dropped3.3; PyTorch2.15 pairs3.9; legacy mixing not guaranteed"
+    },
+    {
+      "id": "cupy_install",
+      "url": "https://docs.cupy.dev/en/stable/install.html",
+      "observed": "CuPy14.2 docs; Windows/Python3.12; CUDA12/13 wheels and optional ctk dependencies"
+    },
+    {
+      "id": "cupy_raw",
+      "url": "https://docs.cupy.dev/en/stable/reference/generated/cupy.RawKernel.html",
+      "observed": "raw CUDA source, NVRTC default, per-device cache, C++17 default in14, manual strides"
+    },
+    {
+      "id": "cupy_stream",
+      "url": "https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.Stream.html#cupy.cuda.Stream.begin_capture",
+      "observed": "capture/end_capture/launch API; synchronous D2H prohibited during capture"
+    },
+    {
+      "id": "cupy_performance",
+      "url": "https://docs.cupy.dev/en/stable/user_guide/performance.html",
+      "observed": "CUDA events/synchronization, context and JIT startup overhead"
+    },
+    {
+      "id": "numba_install",
+      "url": "https://numba.readthedocs.io/en/stable/user/installing.html#version-support-information",
+      "observed": "Windows10+x64;0.68.1 matrix includes Python3.12/NumPy2.3.5"
+    },
+    {
+      "id": "numba_tips",
+      "url": "https://numba.readthedocs.io/en/stable/user/performance-tips.html",
+      "observed": "nopython/loops supported; fastmath permits reassociation"
+    },
+    {
+      "id": "numba_fp",
+      "url": "https://numba.readthedocs.io/en/stable/reference/fpsemantics.html",
+      "observed": "different algorithms/precision possible, mixed integer-float power promotion differs from NumPy"
+    },
+    {
+      "id": "numba_cuda_deprecation",
+      "url": "https://numba.readthedocs.io/en/stable/cuda/overview.html",
+      "observed": "built-in target deprecated; maintained NVIDIA numba-cuda package uses same namespace"
+    },
+    {
+      "id": "numba_cuda_install",
+      "url": "https://nvidia.github.io/numba-cuda/user/installation.html",
+      "observed": "CUDA12/13 support; CUDA13 startsSM7.5; pip cu12/cu13 extras documented"
+    },
+    {
+      "id": "numba_cuda_metadata",
+      "url": "https://github.com/NVIDIA/numba-cuda/blob/main/pyproject.toml",
+      "observed": "Python>=3.9; Windows AMD64 cibuildwheel configuration"
+    },
+    {
+      "id": "numba_cuda_kernels",
+      "url": "https://nvidia.github.io/numba-cuda/user/kernels.html",
+      "observed": "restricted Python kernel language, explicit thread hierarchy and memory model"
+    },
+    {
+      "id": "numba_cuda_fastmath",
+      "url": "https://nvidia.github.io/numba-cuda/user/fastmath.html",
+      "observed": "fastmath changes denormals, division/sqrt approximations and multiply-add contraction"
+    },
+    {
+      "id": "cuda_compat",
+      "url": "https://docs.nvidia.com/deploy/cuda-compatibility/latest/minor-version-compatibility.html",
+      "observed": "driver families13>=580 and12>=525; newer driver backward compatibility, feature/PTX caveats"
+    },
+    {
+      "id": "cuda132_release",
+      "url": "https://docs.nvidia.com/cuda/archive/13.2.0/cuda-toolkit-release-notes/index.html",
+      "observed": "Windows NVRTC/runtime/compiler components; compatibility table and separate Windows driver installation"
+    },
+    {
+      "id": "cuda_graph_intro",
+      "url": "https://docs.nvidia.com/dl-cuda-graph/latest/cuda-graph-basics/introduction.html",
+      "observed": "small-operation launch overhead rationale"
+    },
+    {
+      "id": "cuda_graph_hardware_limit",
+      "url": "https://developer.nvidia.com/blog/constant-time-launch-for-straight-line-cuda-graphs-and-other-performance-enhancements/",
+      "observed": "2024 article body limits near-constant repeated launch to Ampere; pre-Ampere O(nodes); benchmarkRTX3060/Linux"
+    },
+    {
+      "id": "jax_install",
+      "url": "https://docs.jax.dev/en/latest/installation.html#supported-platforms",
+      "observed": "native Windows NVIDIA GPU no; WSL2 experimental"
+    },
+    {
+      "id": "cupy_cublas_guard",
+      "url": "https://github.com/cupy/cupy/blob/v14.2.0/cupy_backends/cuda/libs/cublas.pyx",
+      "observed": "setStream raises NotImplementedError when non-HIP streamIsCapturing; wrapper intentionally disables cuBLAS capture pending conditions testing"
+    },
+    {
+      "id": "cupy_math_source",
+      "url": "https://github.com/cupy/cupy/blob/v14.2.0/cupy/_core/_routines_math.pyx",
+      "observed": "multiply is arithmetic ufunc; sum chooses CUB/cuTENSOR or own reduction, not the cuBLAS setStream path"
+    },
+    {
+      "id": "cupy_reduction_source",
+      "url": "https://github.com/cupy/cupy/blob/v14.2.0/cupy/_core/_reduction.pyx",
+      "observed": "fallback reduction launches own generated CUDA kernel through linear_launch"
+    },
+    {
+      "id": "cupy_graph_tests",
+      "url": "https://github.com/cupy/cupy/blob/v14.2.0/tests/cupy_tests/cuda_tests/test_graph.py",
+      "observed": "elementwise graph capture examples; host branch on reduction result exemplifies forbidden synchronization"
+    },
+    {
+      "id": "cublas_graphs",
+      "url": "https://docs.nvidia.com/cuda/cublas/index.html#cuda-graphs",
+      "observed": "cuBLAS itself supports graph stream capture in most situations subject to host-result/scalar/memory-workspace conditions"
+    }
+  ],
+  "follow_up": {
+    "date": "2026-11-13",
+    "reviewer_new_NN_operations": 0,
+    "initial_claim_refined": "A Stream capture API is insufficient to claim cuBLAS-backed matmul capture compatibility",
+    "rejected_path": "CuPy14.2 cuBLAS-backed matmul inside capture",
+    "candidate_path": "device-only broadcast multiply plus sum, paired with same-operation eager baseline",
+    "candidate_complete_capture_success_claimed": false,
+    "candidate_speed_claimed": false,
+    "fixed_numerical_tolerances_changed": false,
+    "local_source_guard_bypass_recommended": false,
+    "author_record_readouts_not_reproduced_by_reviewer": {
+      "cpu_artifact": "cpu-results.json",
+      "CPU_original_1024_step_seconds": [
+        0.32939949999854434,
+        0.488750100004836,
+        0.9004828999895835
+      ],
+      "CPU_original_median_seconds": 0.488750100004836,
+      "CPU_numba_median_seconds": 0.6614164000056917,
+      "CPU_preencoded_numpy_median_seconds": 0.9266783999919426,
+      "gpu_artifact": "gpu-attempt02/gpu-results.json",
+      "GPU_CuPy_cublas_eager_median_seconds": 5.119202700007008,
+      "GPU_eager_validation": "two64-step synthetic cases, atol=rtol2e-5 passed; not byte-exact",
+      "GPU_graph_result": "NotImplementedError from cuBLAS wrapper stream capture guard",
+      "formal_training_updates": 0,
+      "later_product_sum_results_incorporated": false,
+      "limits": "short synthetic author benchmark, CPU timing spread, no reviewer reproduction or full-research speed claim",
+      "artifact_sha256": {
+        "cpu-results.json": "ed3ae41703e61f8a04e4714b13df0d204258b6da4cdb201344c8c62440ab1e2c",
+        "gpu-attempt02/gpu-results.json": "83f01da2c521a23b73166aa471bfaced7d199a35614cd4eabf49ac6121e56927"
+      }
+    }
+  },
+  "limitations": [
+    "Official docs/repos/releases only; no third-party speed data accepted",
+    "Moving stable/main pages were observed on review date and can change",
+    "No package installation or local availability/runtime test by reviewer",
+    "No measured GPU/CPU speed ranking, memory peak or correctness equivalence",
+    "No completed scientific training/state/source changed",
+    "RawKernel and Numba-CUDA still require custom numerical-kernel implementation"
+  ]
+}
