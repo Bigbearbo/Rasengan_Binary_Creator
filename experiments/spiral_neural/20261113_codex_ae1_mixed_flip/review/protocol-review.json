@@ -1,0 +1,71 @@
+{
+  "status": "protocol_arithmetic_passed_code_gate_pending",
+  "round_id": "AE1-MIXED-FLIP-20261113",
+  "public_parent_result_commit": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+  "computed": {
+    "parameters": 10499,
+    "forward_dense_MAC": 10432,
+    "training_dense_MAC_per_target": 21056,
+    "class_targets_per_epoch": {
+      "E1": 6300,
+      "E2": 11700,
+      "F1": 6300
+    },
+    "targets_per_epoch": 24300,
+    "training_MAC_per_epoch": 511660800,
+    "maximum_new_updates_per_seed": 972000,
+    "maximum_new_training_MAC_per_seed": 20466432000,
+    "maximum_3primary_plus1replay_new_updates": 3888000,
+    "maximum_3primary_plus1replay_new_training_MAC": 81865728000,
+    "class_teacher_label_counts": {
+      "E1": {
+        "0": 3270,
+        "S": 900,
+        "1": 2130
+      },
+      "E2": {
+        "0": 6540,
+        "S": 900,
+        "1": 4260
+      },
+      "F1": {
+        "1": 2370,
+        "0": 3030,
+        "S": 900
+      }
+    },
+    "mixed_teacher_label_counts": {
+      "0": 12840,
+      "S": 2700,
+      "1": 8760
+    },
+    "literal_flip_answers_0_1": {
+      "0": "111110S",
+      "1": "111100S"
+    },
+    "parent_t_starts": {
+      "101": 151200,
+      "202": 181800,
+      "303": 223200
+    }
+  },
+  "required_code_gates": [
+    "Public parent result commit/archive/blob/member provenance and all3 full parent checkpoints must match exact pinned raw bytes; bundle all necessary inputs without private path dependencies.",
+    "All3 primary baseline E1/E2 integrity gates pass before the first new optimizer call. Failure is an integration abort with0 new updates and no repair/reset/replacement.",
+    "Baseline checks all2700 questions using only Q/generated bits. F1 baseline is diagnostic, baseline does not enter streak; only inference counters may change from exact parent state.",
+    "Flip complements the first word's5 information bits and keeps tail0; literal output IDs30/31 are legal answer bits, never executed END/UP or filtered.",
+    "E1/E2 raw Q/A remain bitidentical to the parent profile, while F1 uses new opcode100 under explicit mixed profile, not old numericZero/Neg semantics.",
+    "Freeze40 full24300-target permutations from rng(seed+444000). Preserve global parent t/m/v/birth/RNG and bill only new training/baseline/probe/TF deltas.",
+    "Stop only after two consecutive epoch-end900/900 exact+STOP in all3 classes or cap40. Only seed101 full replay includes its baseline and all new epochs; finalTF after all primary+planned replay only."
+  ],
+  "interpretation_limits": [
+    "Continuation of3 existing models on one fixed900-payload bank, not3 fresh students or new independent datasets.",
+    "No additional control isolates Flip-specific causality from continued mixed practice; no unseen-bank, arbitrary-r or length claim.",
+    "Equal class question counts imply unequal CE target counts6300/11700/6300; no length normalization.",
+    "The before/after Flip score is a trained-domain diagnostic and cannot establish a general complement algorithm."
+  ],
+  "reviewer_model_forward_calls": 0,
+  "reviewer_optimizer_calls": 0,
+  "formal_students": 0,
+  "external_model_calls": 0
+}

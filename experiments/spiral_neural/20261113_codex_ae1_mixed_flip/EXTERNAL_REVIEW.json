@@ -1,0 +1,25 @@
+{
+  "schema": "external-candidate-disposition-v1",
+  "round_id": "AE1-MIXED-FLIP-20261113",
+  "gemini": {"actual_calls": 0, "decision": "skipped", "reason": "Existing installed authenticated agy retained. Analysis-only tool isolation unresolved with a previous unknown provider outcome; no resend/login/global setting change."},
+  "nvidia": {
+    "task_id": "AE1-MIXED-FLIP-PROSPECTIVE-001",
+    "actual_calls": 1,
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "prompt_sha256": "3d33b6ecd92b27f83e3220014b544ba4c049476505c2b0ba235d9ec612f5c786",
+    "context_sha256": "6d5ee4b0354b3d660ec0b015c8725f5b43a5a4bea55b8abf346996874ba44da3",
+    "seconds": 4.75,
+    "usage": {"prompt_tokens": 1767, "completion_tokens": 294, "total_tokens": 2061, "cost": 0},
+    "no_retry": true,
+    "finish_reason": "stop",
+    "transport_status": "candidate_locally_checked",
+    "semantic_status": "candidate_rejected",
+    "accepted_research_claims": 0,
+    "candidate_claim": "Baseline requires byte-exact E1/E2 reproduction across all2700; F1 modified firstword may contradict parent6-bit/S framing",
+    "disposition": "Rejected. Baseline integrity gates only E1/E2 each900; F1's900 baseline questions are descriptive and need not be correct. F1 always emits exactly five complemented information bits plus tail0, hence the same6-bit word length followed by S. There is no framing contradiction; the new task being initially unknown is intended.",
+    "local_evidence": "external-method-checks.json independently constructs all2700 Q/24300 distinct consistent prefixes, verifies class coverage and literal control-code answer cases;0NN and0optimizer. Driver/independent review/actual tests remain required; candidate schema/exit0 is not a semantic gate.",
+    "legacy_worker_guards": "Original free catalog, max_price0, reserve, daily limit, lock, no retry and DPAPI remain unchanged; no credential/quota copying."
+  },
+  "native_OpenAI_agents": "Separate implementation, package and independent review, never represented as external Gemini/NVIDIA calls",
+  "private_data_exported": false
+}

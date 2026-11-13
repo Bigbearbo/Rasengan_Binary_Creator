@@ -1,0 +1,26 @@
+{
+  "schema": "ae1-mixed-single-formal-intent-v1",
+  "created_UTC": "2026-11-13T01:41:41.974Z",
+  "preregistration_commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13",
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "parent_commit": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+  "Git_byte_checks_before_formal": 21,
+  "primary_continued_seeds": [
+    101,
+    202,
+    303
+  ],
+  "replay_seeds": [
+    101
+  ],
+  "output": "science/",
+  "stdout": "execution.stdout.log",
+  "stderr": "execution.stderr.log",
+  "formal_invocations": 1,
+  "auto_retry": false,
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  }
+}

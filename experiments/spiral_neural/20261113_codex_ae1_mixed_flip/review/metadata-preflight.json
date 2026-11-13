@@ -1,0 +1,25 @@
+{
+  "actual_epochs_by_seed": {
+    "101": 6,
+    "202": 9,
+    "303": 9
+  },
+  "actual_timing_trajectories": 4,
+  "all_required_paths_and_schemas_checked_before_any_trained_forward": true,
+  "epoch_progress_records": 30,
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "model_forward_calls": 0,
+  "preregistration_precedes_execution": true,
+  "receipt_sha256": "0987d7245c82d9f8ef4171e4894ae7131b221b3030c9cd88f3be2b99373bf1f3",
+  "science_files": 108,
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  },
+  "status": "passed",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 10634,
+  "stdout_sha256": "622ebc3bedf663c2415e29db5b6a5a3d909cbf7afabe228efa940277a96cce35"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "classes": {
+    "E1": 900,
+    "E2": 900,
+    "F1": 900
+  },
+  "targets": {
+    "E1": 6300,
+    "E2": 11700,
+    "F1": 6300
+  },
+  "ordinary_inputs": 30,
+  "flip0": "111110S",
+  "flip1": "111100S",
+  "extra_NN_calls": 0,
+  "extra_optimizer_calls": 0,
+  "unique_teacher_prefixes": 24300,
+  "conclusion": "Baseline integrity applies only to old E1/E2; F1 is a cold diagnostic. F1 always emits six literal bits plus S, preserving tail0. The NVIDIA alleged format/baseline contradiction is false."
+}

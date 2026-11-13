@@ -1,0 +1,212 @@
+{
+  "schema": "ae1-mixed-git-prereg-receipt-v1",
+  "checked_before_formal": true,
+  "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13",
+  "parent": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+  "branch": "codex/ae1-mixed-flip-20261113",
+  "pull_request": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/28",
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "public_file_byte_checks": [
+    {
+      "name": "EXTERNAL_REVIEW.json",
+      "Git_blob": "8ebe28ca2fc7d0c7554489bd0c798163bb46b75f",
+      "sha256": "63238694376e3296f5ff39999a25eaaa06430ae6bb8f1a060866d35ea5e00823",
+      "bytes": 2087,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "HANDOFF.md",
+      "Git_blob": "50e1d1c498aaa8b450b2495d08e6686236aac3b3",
+      "sha256": "d13a7379c48d7cdd4c8c1f70fc6de26922f40cc434578d1f7b52ad506af56cfa",
+      "bytes": 1219,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "README.md",
+      "Git_blob": "29efdeebf23b082e5b0364f35d4d89c9979f9119",
+      "sha256": "d7e7ef37dc72f1d321ad52eee136e7c140a75e612d2ec53f77a9a8ad306ffb01",
+      "bytes": 3404,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "RESEARCH_NOTE.md",
+      "Git_blob": "340acc814fc143909cff190973535728b2da6ea9",
+      "sha256": "616509ade77f9d1d5556170d04bdde562fa49b7a26b8c8f4a3baaff0b4d94944",
+      "bytes": 1852,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "engineering-checks.json",
+      "Git_blob": "21a7b441103fe6be8d163d06b85e0032b005973a",
+      "sha256": "5215cd067748e4224d53640a36042284f934752728dbd4ac05d602f22b32c5d3",
+      "bytes": 559,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "export-checks.json",
+      "Git_blob": "e19e02ad4712282ec308b40a32959a4d46a309c2",
+      "sha256": "dd3665f147572fadef9aa0b2c9a3c7b9cf43b5fef2a81e4cf0ce3abd20b433de",
+      "bytes": 406,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "external-candidate.json",
+      "Git_blob": "7ac6d76fb403f1177447962a9abda701f7d4a377",
+      "sha256": "dbd0abe7095cf6c0ab26079d2939a07bf81caba83c5d6471bed3b11aa3eee617",
+      "bytes": 1343,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "external-context.json",
+      "Git_blob": "d8e94dffc432c315f54986578a100ab16e2e80b3",
+      "sha256": "6d5ee4b0354b3d660ec0b015c8725f5b43a5a4bea55b8abf346996874ba44da3",
+      "bytes": 3997,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "external-method-checks.json",
+      "Git_blob": "86a76e51edfac951556b0c264fefb275767538a8",
+      "sha256": "1d55d17582c4a48c06d43836e70d44e928d02576119cde5a2c105b3ab4409a11",
+      "bytes": 521,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "manifest.json",
+      "Git_blob": "e3cc75b92a016a520e26540373a8b83571d34637",
+      "sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+      "bytes": 13028,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "package_publication.py",
+      "Git_blob": "4ca7be9aadf950c3a29c69b28d65a83384432ad7",
+      "sha256": "e0e9519fdc4ff331b009362220be3e9d4a5a0c7f68dedc4ebbe4876a2a1e50aa",
+      "bytes": 29867,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "protocol.json",
+      "Git_blob": "9906e4f3d5923286d6373610b40b685ef1e4e00c",
+      "sha256": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+      "bytes": 5211,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "publication-manifest.json",
+      "Git_blob": "46f0910bf501a259a7ebf3f83265365e587f3ca6",
+      "sha256": "73f663ac441db274932534885f0e7b513ee458810dd764bf00e4019cca4fe5f5",
+      "bytes": 9070,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "review/check_pre_run.py",
+      "Git_blob": "664ea403ad8d380c3fe71a4b0b01a81457509755",
+      "sha256": "8cfd5d315de145779461cd0c8bee0be7395effc881831681cfd1359d9ff7051a",
+      "bytes": 18225,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "review/check_protocol.py",
+      "Git_blob": "3e0cd13a0750286802339a80bb65c0dbd8bc67e2",
+      "sha256": "9c7773aecfb823cd4f1647b7901af6f445aeaaa5189ae9c9d8d0be06ba431d97",
+      "bytes": 4654,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "review/pre-run.json",
+      "Git_blob": "b8215c7f9d8c6ed5b805ea50558389ef1585f7fc",
+      "sha256": "6f77d8c9ddf5fa00287f83c70fbfab0712f38c96c1d28fc7235c0e6d25c03b69",
+      "bytes": 4037,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "review/protocol-review.json",
+      "Git_blob": "2c5b9e17de1faed5d54874e4ba04afeddb712719",
+      "sha256": "c3c09d6980f5a3ea21ff9f3ead569895f34810427d7e1100f072c907692be6b9",
+      "bytes": 3153,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "run_mixed.py",
+      "Git_blob": "d1bb3f9141f5fc6a545c43bba0ba9f497e7aac1d",
+      "sha256": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+      "bytes": 38473,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "source-freeze.json",
+      "Git_blob": "aaa2748e09422b1af68f010a9b9ea4c946167470",
+      "sha256": "30b728197751130e1400f59530c827bdc7d1c8d54dbb67f38242a443cfe81741",
+      "bytes": 4105,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "test_mixed.py",
+      "Git_blob": "8de9810037699854492674a203124110845aa866",
+      "sha256": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c",
+      "bytes": 11159,
+      "byte_match": true,
+      "method": "GitHub connector base64 file readback",
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    },
+    {
+      "name": "inputs.zip",
+      "Git_blob": "de45a6224d4e0eec86c89c827babf59df12b1b48",
+      "sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+      "bytes": 7967750,
+      "byte_match": true,
+      "ref_match": true,
+      "method": "Unauthenticated public GitHub blob API",
+      "credentials_used": false,
+      "commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13"
+    }
+  ],
+  "live_parent_public_manifest_check": {
+    "commit": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+    "Git_blob": "30200c222b0086d02db7044269877501cd3d2d4d",
+    "sha256": "660390547db4dc014e094de2e1b03ca851cb511502f68c3d04975962baa32a6c",
+    "bytes": 103335,
+    "byte_match": true
+  },
+  "coordinator_scope": "Current user approved continuing the three existing models on mixed E1/E2/F1. Coordinator verified actual public bytes and parent input provenance; public SHA knowledge alone is not authorization.",
+  "formal_invocations_at_this_receipt": 0,
+  "recorded_UTC": "2026-11-13T01:40:31.714Z"
+}

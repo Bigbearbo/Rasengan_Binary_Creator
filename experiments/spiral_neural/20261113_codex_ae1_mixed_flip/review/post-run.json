@@ -1,0 +1,365 @@
+{
+  "actual_epochs_by_seed": {
+    "101": 6,
+    "202": 9,
+    "303": 9
+  },
+  "actual_full_replay_seeds": [
+    101
+  ],
+  "actual_primary_continuations": 3,
+  "actual_primary_epochs_verified": 24,
+  "all3_old_Echo_baseline_integrity_verified_before_auditing_mixed_epochs": true,
+  "all_confirmed_three_class_fit": true,
+  "all_continuations_including_failures_retained": true,
+  "all_generation_TF_failures_curves_stops_costs_exact": true,
+  "all_source_parent_frozen_inputs_science_and_execution_metadata_unchanged": true,
+  "audit_attempt_count": 1,
+  "audit_extra_dense_MAC": 7607588160,
+  "audit_extra_forward_calls": 729255,
+  "baseline_excluded_from_training_streak": true,
+  "baseline_only_inference_counters_changed": true,
+  "baseline_questions_independently_generated": 8100,
+  "baseline_scores_by_seed": {
+    "101": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 0
+      }
+    },
+    "202": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 0
+      }
+    },
+    "303": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 0
+      }
+    }
+  },
+  "details": "review/post-run-details.json",
+  "each_baseline_epoch_student_numeric_proof_and_cost_persisted": true,
+  "external_model_calls": 0,
+  "final_TF_logits_probabilities_CE_verified": 72900,
+  "final_decomposed_metrics_by_seed": {
+    "101": {
+      "E1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "E2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      },
+      "F1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      }
+    },
+    "202": {
+      "E1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "E2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      },
+      "F1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      }
+    },
+    "303": {
+      "E1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      },
+      "E2": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 9000,
+        "TF_tail0_correct": 1800,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 9000,
+        "free_tail0_correct": 1800,
+        "free_whole_correct": 900,
+        "info_bit_targets": 9000,
+        "questions": 900,
+        "tail0_targets": 1800
+      },
+      "F1": {
+        "STOP_targets": 900,
+        "TF_STOP_correct": 900,
+        "TF_info_bits_correct": 4500,
+        "TF_tail0_correct": 900,
+        "free_STOP_position_correct": 900,
+        "free_info_bits_correct": 4500,
+        "free_tail0_correct": 900,
+        "free_whole_correct": 900,
+        "info_bit_targets": 4500,
+        "questions": 900,
+        "tail0_targets": 900
+      }
+    }
+  },
+  "final_literal_F1_input0_1_by_seed": {
+    "101": {
+      "0": {
+        "expected_literal_answer": "111110S",
+        "questions": 30,
+        "whole_correct": 30
+      },
+      "1": {
+        "expected_literal_answer": "111100S",
+        "questions": 30,
+        "whole_correct": 30
+      }
+    },
+    "202": {
+      "0": {
+        "expected_literal_answer": "111110S",
+        "questions": 30,
+        "whole_correct": 30
+      },
+      "1": {
+        "expected_literal_answer": "111100S",
+        "questions": 30,
+        "whole_correct": 30
+      }
+    },
+    "303": {
+      "0": {
+        "expected_literal_answer": "111110S",
+        "questions": 30,
+        "whole_correct": 30
+      },
+      "1": {
+        "expected_literal_answer": "111100S",
+        "questions": 30,
+        "whole_correct": 30
+      }
+    }
+  },
+  "final_scores_by_seed": {
+    "101": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 900
+      }
+    },
+    "202": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 900
+      }
+    },
+    "303": {
+      "E1": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "E2": {
+        "questions": 900,
+        "whole_correct": 900
+      },
+      "F1": {
+        "questions": 900,
+        "whole_correct": 900
+      }
+    }
+  },
+  "first_full_epochs_by_seed": {
+    "101": 5,
+    "202": 8,
+    "303": 6
+  },
+  "formal_session": 20420,
+  "formal_wall_seconds": 821.947731799999,
+  "frozen_target_permutations_independently_verified": 120,
+  "full_science_NPZ_verified": 36,
+  "independent_limit": "All archived public-parent/baseline/primary states, actual generated outputs, final TF, frozen data/orders, aggregate/digest form, gates and delta/cumulative costs were checked. No unarchived per-target loss, gradient or intermediate optimizer trajectory reconstruction.",
+  "inputs_zip_sha256": "fa8168e7029b5f0d0892bd8b73c7f4e05b0293d3fc56f6956eb38671de9d5d36",
+  "interpretation_limit": "Three existing PR26 models continued on an exposed900-payload finite bank with unequal6300/11700/6300 target weights. No causal isolation of Flip, new-bank/arbitrary-r/length generalization or control-execution claim.",
+  "legacy_or_driver_modules_imported": false,
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "metadata": {
+    "actual_timing_trajectories": 4,
+    "epoch_progress_records": 30,
+    "preregistration_precedes_execution": true,
+    "receipt_sha256": "0987d7245c82d9f8ef4171e4894ae7131b221b3030c9cd88f3be2b99373bf1f3",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 10634,
+    "stdout_sha256": "622ebc3bedf663c2415e29db5b6a5a3d909cbf7afabe228efa940277a96cce35"
+  },
+  "metadata_checked_before_any_trained_forward": true,
+  "mixed_epoch_free_questions_verified": 64800,
+  "new_final_TF_forward_calls": 72900,
+  "new_primary_baseline_forward_calls": 72898,
+  "new_primary_mixed_probe_forward_calls": 583457,
+  "new_primary_training_dense_MAC": 12279859200,
+  "new_primary_updates": 583200,
+  "new_replay_baseline_forward_calls_seed101": 24298,
+  "new_replay_mixed_probe_forward_calls_seed101": 145807,
+  "new_replay_training_dense_MAC_seed101": 3069964800,
+  "new_replay_updates_seed101": 145800,
+  "new_students": 0,
+  "not_replayed_seeds": [
+    202,
+    303
+  ],
+  "numeric_proof_count": 30,
+  "optimizer_calls": 0,
+  "parent_inherited_counters_by_seed": {
+    "101": {
+      "inference_MAC": 1577068032,
+      "inference_calls": 151176,
+      "t": 151200,
+      "train_MAC": 3183667200
+    },
+    "202": {
+      "inference_MAC": 1896485440,
+      "inference_calls": 181795,
+      "t": 181800,
+      "train_MAC": 3827980800
+    },
+    "303": {
+      "inference_MAC": 2328443264,
+      "inference_calls": 223202,
+      "t": 223200,
+      "train_MAC": 4699699200
+    }
+  },
+  "parent_old_costs_not_rebilled": true,
+  "parent_result_commit": "7213cce112a8411b13dc128c49f9e88acfc9d65f",
+  "preregistration_commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13",
+  "public_parent_states_exact_retained": 3,
+  "receipt_sha256": "0987d7245c82d9f8ef4171e4894ae7131b221b3030c9cd88f3be2b99373bf1f3",
+  "replay_scope": "Frozen driver/exit0 establish seed101 full baseline and epoch replay with matching probe, digest and complete state assertions. Stdout/timing record its epoch trajectory; separate replay state copies and raw target losses are not stored, so their absent internals are not independently re-audited. Seeds202/303 are not replayed.",
+  "root_confirmed_formal_exit0": true,
+  "source_hashes": {
+    "protocol.json": "b613aa2b8455963bc188928742ad24a66176992f612f6007297d21e607059db4",
+    "run_mixed.py": "3ad223a4f11d82d2c4ede86a97093d03a604bd22677c5c327936b393334037f0",
+    "test_mixed.py": "adef8c2a72c3029a0e4549be42dc903c8befc0834525baa6be9fc9b91264856c"
+  },
+  "stable_pass_epochs_by_seed": {
+    "101": 6,
+    "202": 9,
+    "303": 9
+  },
+  "status": "passed",
+  "stop_reasons_by_seed": {
+    "101": "two_consecutive_all_class_passes",
+    "202": "two_consecutive_all_class_passes",
+    "303": "two_consecutive_all_class_passes"
+  },
+  "timing_scope": "Formal total includes all baselines, training, probes, I/O, seed101 replay baseline, guards and final TF. Individual train_one trajectory durations exclude baseline_one calls.",
+  "total_baseline_and_mixed_free_questions_verified": 72900
+}
