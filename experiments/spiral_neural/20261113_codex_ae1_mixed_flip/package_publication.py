@@ -280,7 +280,9 @@ def coordinator_guard(work, manifest, approved):
          "Coordinator manifest differs")
     need(intent["preregistration_commit"] == git["commit"] and intent["formal_invocations"] == 1
          and intent["auto_retry"] is False, "Coordinator execution scope differs")
-    need(intent["primary_seeds"] == list(SEEDS) and intent["replay_seeds"] == [101]
+    need(intent["parent_commit"] == git["parent"] == manifest["protocol"]["parent_head"],
+         "Coordinator parent continuation pin differs")
+    need(intent["primary_continued_seeds"] == list(SEEDS) and intent["replay_seeds"] == [101]
          and intent["source_hashes"] == manifest["source_hashes"], "Coordinator seed/source pins differ")
     frozen_public = read_json(work / "publication/prereg/compact.json")["public_files"]
     checks = git["public_file_byte_checks"]
@@ -310,7 +312,7 @@ def final_guard(work, manifest, approved, receipt_path):
          "Root execution receipt coordinator pins differ")
     summary = read_json(work / "science/compact.json")
     need(summary["status"] == "complete" and summary["manifest_sha256"] == approved, "Formal result is incomplete/different")
-    need(summary["primary_students"] == 3 and summary["exact_full_replays"] == [101], "Formal seed/replay scope differs")
+    need(summary["primary_continued_students"] == 3 and summary["exact_full_replays"] == [101], "Formal continuation/replay scope differs")
     need([student["seed"] for student in summary["students"]] == list(SEEDS), "A seed is missing")
     need([student["replay_status"] for student in summary["students"]] == ["complete_exact", "not_planned", "not_planned"], "Replay disposition differs")
     need((work / "science/manifest.json").read_bytes() == (work / "prereg/manifest.json").read_bytes(), "Actual manifest bytes differ")
@@ -424,6 +426,8 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
     finite = {key: sum(archive["finite_arrays"][key] for archive in archives.values()) for key in ("NPZ", "NPY")}
     publication = {"schema": "ae1-mixed-flip-publication-v1", "status": "verified", "mode": mode,
                    "manifest_sha256": approved, "source_hashes": manifest["source_hashes"], "author": "Codex",
+                   "continuation_parent_states": manifest["parents"],
+                   "cost_scope": "New optimizer/training/probe counts are deltas; inherited parent counters are retained separately, not new work.",
                    "files": {name: info(data) for name, data in sorted(files.items())}, "archives": archives,
                    "complete_science_inventory": science_inventory, "science_files": len(science_inventory),
                    "prefrozen_courses_including_unused": course_usage, "finite_arrays": finite,

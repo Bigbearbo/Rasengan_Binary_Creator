@@ -1,6 +1,8 @@
 # 三種題混合續訓
 
-2026-11-13，Codex，事前版本，正式訓練尚未開始。直接接續[PR26](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/26)結果commit `7213cce112a8411b13dc128c49f9e88acfc9d65f` 的三份完整finalstate，不另開新學生。原P030 Model AST、Adam0.003、L80/H64／10499參數不變，保留p/m/v/birth/t/RNG及所有舊計數器。
+2026-11-13，Codex。本輪已完成：三模型分別第6／9／9輪連兩輪三類各900/900而提前停，指定101完整replay精確相符，一次獨立rawNumPy audit PASS。直接接續[PR26](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/26)結果commit `7213cce112a8411b13dc128c49f9e88acfc9d65f` 的三份完整finalstate，不另開新學生。原P030 Model AST、Adam0.003、L80/H64／10499參數不變，保留p/m/v/birth/t/RNG及所有舊計數器。
+
+本輪新增題次16200／24300／24300，翻轉baseline皆0/900、最後900/900；舊回音曾短暫退步，最後恢復全對。完整數字、成本、字面控制碼答案與範圍見[RESULTS.md](RESULTS.md)，獨審直接入口[review/post-run.json](review/post-run.json)。事前commit6b9df16cb593c422426f6cb093a8ecfbe18d1e13、manifest a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218，frozen核心不改。
 
 選定格式為 `SLE-AEM1-n5-v1`：`01 + 三bit題型 + 四bit組數參數 + 四個六bit資料詞 + END111100`，Q39位。題目普通資料ID0..29，每詞五資訊位加尾零；沿用原900組bank，前兩詞全30×30組合、後兩詞固定seed331000。同一payload配三個題型，各900題，共2700 Q。
 
@@ -21,3 +23,5 @@
 完整parent checkpoint原bytes／公開archive/blob/member出處、bank、Model source、protocol、三份完整40輪課序事前凍結。每輪完整state、全部輸出、streak／stop、loss/prediction digest全保留。未存逐target原始loss／中間gradient或獨立replay state副本，不宣稱獨立重算那些。engineer、baseline、primary、replay、TF與audit成本分列；MAC是矩陣結構計數。
 
 科學範圍是900組固定題庫下新增F1並保持E1/E2，非盲測、一般copy／內部router證明或單一因果機制識別。900不是全部30^4四詞payload。Git事前byte回讀與獨立0NN portable gate後才啟動唯一正式批次；公開SHA本身不是授權，coordinator負責當前使用者授權與版本核對，不自動合併PR。
+
+唯一正式session20420 exit0已結束，不因接續而重啟。還原先核publication-manifest，inputs.zip是13成員原始容器；結果ZIP依其relative paths還原同一science樹，review archives保存全部baseline／epoch／student數值proof與logs／receipt。原Model與parent證據、完整課序均在事前資料中。若做其他題型或參數，另凍結新課程與預算，不追改本批。

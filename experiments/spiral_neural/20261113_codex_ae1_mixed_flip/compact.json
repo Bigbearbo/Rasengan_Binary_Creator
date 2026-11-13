@@ -1,0 +1,214 @@
+{
+  "all_confirmed_three_class_fit": true,
+  "array_bytes_per_student": 209980,
+  "author": "Codex",
+  "baseline_inference_MAC": 760471936,
+  "baseline_inference_calls": 72898,
+  "exact_full_replays": [
+    101
+  ],
+  "external_model_calls": 0,
+  "final_TF_inference_MAC": 760492800,
+  "final_TF_inference_calls": 72900,
+  "id": "AE1-MIXED-FLIP-CONTINUATION-20261113",
+  "limits": "Exposed finite900payload continuation for retained Echo1/Echo2 plus Flip1. Answer table fits do not identify neural genericcopy/flip/routing, blinded generalization or control execution. Not all30^4inputs",
+  "manifest_sha256": "a85457a3d7a6e06d7b20ad608d695a6f322a9b3daf38e714ff974fb7d7b6d218",
+  "mixed_probe_inference_MAC": 6086623424,
+  "mixed_probe_inference_calls": 583457,
+  "new_primary_training_dense_MAC": 12279859200,
+  "new_primary_updates": 583200,
+  "new_replay_training_dense_MAC": 3069964800,
+  "new_replay_updates": 145800,
+  "preregistration_commit": "6b9df16cb593c422426f6cb093a8ecfbe18d1e13",
+  "primary_continued_students": 3,
+  "replay_baseline_inference_MAC": 253476736,
+  "replay_baseline_inference_calls": 24298,
+  "replay_probe_inference_MAC": 1521058624,
+  "replay_probe_inference_calls": 145807,
+  "status": "complete",
+  "students": [
+    {
+      "baseline_inference_MAC": 253476736,
+      "baseline_inference_calls": 24298,
+      "epochs": 6,
+      "final_TF_inference_MAC": 253497600,
+      "final_TF_inference_calls": 24300,
+      "final_TF_metrics": {
+        "E1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        },
+        "E2": {
+          "TF_correct": 11700,
+          "TF_targets": 11700,
+          "questions": 900
+        },
+        "F1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        }
+      },
+      "final_full_state_sha256": "3d0010cc2c489cc7636c6c6e2dd4fd88406db211b7776ab0bf9e1a92537d96a9",
+      "final_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "first_full_epoch": 5,
+      "new_probe_inference_MAC": 1521058624,
+      "new_probe_inference_calls": 145807,
+      "new_training_dense_MAC": 3069964800,
+      "new_updates": 145800,
+      "parent_counters": {
+        "inference_MAC": 1577068032,
+        "inference_calls": 151176,
+        "t": 151200,
+        "train_MAC": 3183667200
+      },
+      "replay_status": "complete_exact",
+      "seed": 101,
+      "stable_pass_epoch": 6,
+      "stop_reason": "two_consecutive_all_class_passes",
+      "streak": 2,
+      "total_counters_before_finalTF": {
+        "inference_MAC": 3351603392,
+        "inference_calls": 321281,
+        "t": 297000,
+        "train_MAC": 6253632000
+      }
+    },
+    {
+      "baseline_inference_MAC": 253497600,
+      "baseline_inference_calls": 24300,
+      "epochs": 9,
+      "final_TF_inference_MAC": 253497600,
+      "final_TF_inference_calls": 24300,
+      "final_TF_metrics": {
+        "E1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        },
+        "E2": {
+          "TF_correct": 11700,
+          "TF_targets": 11700,
+          "questions": 900
+        },
+        "F1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        }
+      },
+      "final_full_state_sha256": "21c3573dab389f614a64ea7617c196eb21d75ac8a319281de3133b6c1318e0c6",
+      "final_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "first_full_epoch": 8,
+      "new_probe_inference_MAC": 2281572288,
+      "new_probe_inference_calls": 218709,
+      "new_training_dense_MAC": 4604947200,
+      "new_updates": 218700,
+      "parent_counters": {
+        "inference_MAC": 1896485440,
+        "inference_calls": 181795,
+        "t": 181800,
+        "train_MAC": 3827980800
+      },
+      "replay_status": "not_planned",
+      "seed": 202,
+      "stable_pass_epoch": 9,
+      "stop_reason": "two_consecutive_all_class_passes",
+      "streak": 2,
+      "total_counters_before_finalTF": {
+        "inference_MAC": 4431555328,
+        "inference_calls": 424804,
+        "t": 400500,
+        "train_MAC": 8432928000
+      }
+    },
+    {
+      "baseline_inference_MAC": 253497600,
+      "baseline_inference_calls": 24300,
+      "epochs": 9,
+      "final_TF_inference_MAC": 253497600,
+      "final_TF_inference_calls": 24300,
+      "final_TF_metrics": {
+        "E1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        },
+        "E2": {
+          "TF_correct": 11700,
+          "TF_targets": 11700,
+          "questions": 900
+        },
+        "F1": {
+          "TF_correct": 6300,
+          "TF_targets": 6300,
+          "questions": 900
+        }
+      },
+      "final_full_state_sha256": "10232db67e9c75315973d8a1b2ae59848940dfd770863ad9198a837dd8c535d1",
+      "final_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 900
+        }
+      },
+      "first_full_epoch": 6,
+      "new_probe_inference_MAC": 2283992512,
+      "new_probe_inference_calls": 218941,
+      "new_training_dense_MAC": 4604947200,
+      "new_updates": 218700,
+      "parent_counters": {
+        "inference_MAC": 2328443264,
+        "inference_calls": 223202,
+        "t": 223200,
+        "train_MAC": 4699699200
+      },
+      "replay_status": "not_planned",
+      "seed": 303,
+      "stable_pass_epoch": 9,
+      "stop_reason": "two_consecutive_all_class_passes",
+      "streak": 2,
+      "total_counters_before_finalTF": {
+        "inference_MAC": 4865933376,
+        "inference_calls": 466443,
+        "t": 441900,
+        "train_MAC": 9304646400
+      }
+    }
+  ]
+}

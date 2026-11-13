@@ -1,0 +1,250 @@
+{
+  "schema": "ae1-mixed-derived-readout-v1",
+  "operation": "Pure archived-data arithmetic, no model queries",
+  "students": [
+    {
+      "seed": 101,
+      "parent_t": 151200,
+      "new_updates": 145800,
+      "final_global_t": 297000,
+      "epochs": 6,
+      "first_full_epoch": 5,
+      "new_question_exposures": 16200,
+      "baseline_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 0
+        }
+      },
+      "minimum_epoch_whole_scores": {
+        "E1": 806,
+        "E2": 870,
+        "F1": 102
+      },
+      "final_metrics": {
+        "E1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "parent_t": 181800,
+      "new_updates": 218700,
+      "final_global_t": 400500,
+      "epochs": 9,
+      "first_full_epoch": 8,
+      "new_question_exposures": 24300,
+      "baseline_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 0
+        }
+      },
+      "minimum_epoch_whole_scores": {
+        "E1": 899,
+        "E2": 851,
+        "F1": 323
+      },
+      "final_metrics": {
+        "E1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        }
+      }
+    },
+    {
+      "seed": 303,
+      "parent_t": 223200,
+      "new_updates": 218700,
+      "final_global_t": 441900,
+      "epochs": 9,
+      "first_full_epoch": 6,
+      "new_question_exposures": 24300,
+      "baseline_scores": {
+        "E1": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole_correct": 0
+        }
+      },
+      "minimum_epoch_whole_scores": {
+        "E1": 826,
+        "E2": 873,
+        "F1": 285
+      },
+      "final_metrics": {
+        "E1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "E2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        },
+        "F1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        }
+      }
+    }
+  ],
+  "paired_example": {
+    "pair_id": 36,
+    "payload_ids": [
+      1,
+      6,
+      23,
+      11
+    ],
+    "words": [
+      "000010",
+      "001100",
+      "101110",
+      "010110"
+    ],
+    "tasks": [
+      {
+        "class": "E1",
+        "Q": "010100010000010001100101110010110111100",
+        "A": "000010S"
+      },
+      {
+        "class": "E2",
+        "Q": "010100100000010001100101110010110111100",
+        "A": "000010001100S"
+      },
+      {
+        "class": "F1",
+        "Q": "011000010000010001100101110010110111100",
+        "A": "111100S"
+      }
+    ],
+    "source": "Archived final free generations, no extra query"
+  },
+  "literal_answer_examples": [
+    {
+      "input_first_ID": 0,
+      "Q": "011000010000000000000001100011110111100",
+      "A": "111110S"
+    },
+    {
+      "input_first_ID": 1,
+      "Q": "011000010000010000000100010101110111100",
+      "A": "111100S"
+    }
+  ],
+  "extra_NN_calls": 0
+}
