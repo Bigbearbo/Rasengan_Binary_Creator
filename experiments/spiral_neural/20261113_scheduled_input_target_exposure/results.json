@@ -1,0 +1,394 @@
+{
+  "work_id": "SLE-AE1-MATCHED-PAYLOAD-INPUT-TARGET-20261113",
+  "source_sha256": "05e2d730eecefcb50fa92392697556ffde313f5ecb59c2f4e583aad52e321303",
+  "prereg_sha256": "3efa38bab1d07667dbae65701ebe96b3488a035b20a37f96e36e9973b20e9b25",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "seeds": [
+    101,
+    202
+  ],
+  "arms": [
+    "HIGH_OUTPUT",
+    "HIGH_INPUT_ONLY"
+  ],
+  "epochs": 200,
+  "batch": 64,
+  "parameters": 10499,
+  "targets_per_epoch": 1200,
+  "models": [
+    {
+      "seed": 101,
+      "arm": "HIGH_OUTPUT",
+      "init_sha256": "8162fe86ef510343363a5993fc747e0c82f082c08925d58682ba5012f9c19006",
+      "weights_sha256": "a7816f6605b534d3165014c434839875c77841ae0aaf68b493c87bdf97802c3c",
+      "checkpoint": "weights_seed101_high_output.json",
+      "updates": 3800,
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word": 48,
+          "second_word": 24,
+          "stop_position": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "high_r1_train_values": {
+          "n": 36,
+          "exact": 4,
+          "first_word": 5,
+          "second_word": 0,
+          "stop_position": 35,
+          "bad_cap": 0,
+          "forward_calls": 253
+        },
+        "high_r2_train_values": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "high_r2_val_low4": {
+          "n": 9,
+          "exact": 9,
+          "first_word": 9,
+          "second_word": 9,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "high_r2_test_low5": {
+          "n": 9,
+          "exact": 9,
+          "first_word": 9,
+          "second_word": 9,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "low_block_r1": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "low_block_r2": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        }
+      }
+    },
+    {
+      "seed": 101,
+      "arm": "HIGH_INPUT_ONLY",
+      "init_sha256": "8162fe86ef510343363a5993fc747e0c82f082c08925d58682ba5012f9c19006",
+      "weights_sha256": "e727912da718af60a31fb873967ad891e4bec17b6c8e124dca655f9cfc25ba76",
+      "checkpoint": "weights_seed101_high_input_only.json",
+      "updates": 3800,
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word": 48,
+          "second_word": 24,
+          "stop_position": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "high_r1_train_values": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "high_r2_train_values": {
+          "n": 36,
+          "exact": 0,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "high_r2_val_low4": {
+          "n": 9,
+          "exact": 0,
+          "first_word": 9,
+          "second_word": 0,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "high_r2_test_low5": {
+          "n": 9,
+          "exact": 0,
+          "first_word": 9,
+          "second_word": 0,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "low_block_r1": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "low_block_r2": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "arm": "HIGH_OUTPUT",
+      "init_sha256": "9451a8901c8bf14cc08c681f657f14a935179917f5d9cbb9866537363acf511d",
+      "weights_sha256": "dfcf841936d64472a627e1a0d7ab07bed4e80ace52da80b16db25a546ca8ed4e",
+      "checkpoint": "weights_seed202_high_output.json",
+      "updates": 3800,
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word": 48,
+          "second_word": 24,
+          "stop_position": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "high_r1_train_values": {
+          "n": 36,
+          "exact": 4,
+          "first_word": 4,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "high_r2_train_values": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "high_r2_val_low4": {
+          "n": 9,
+          "exact": 9,
+          "first_word": 9,
+          "second_word": 9,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "high_r2_test_low5": {
+          "n": 9,
+          "exact": 9,
+          "first_word": 9,
+          "second_word": 9,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "low_block_r1": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "low_block_r2": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "arm": "HIGH_INPUT_ONLY",
+      "init_sha256": "9451a8901c8bf14cc08c681f657f14a935179917f5d9cbb9866537363acf511d",
+      "weights_sha256": "e48057b0871d7fa1ac818b093f89bd1be8784dd994c08ba116b206d24154328c",
+      "checkpoint": "weights_seed202_high_input_only.json",
+      "updates": 3800,
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word": 48,
+          "second_word": 24,
+          "stop_position": 48,
+          "bad_cap": 0,
+          "forward_calls": 480
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word": 12,
+          "second_word": 6,
+          "stop_position": 12,
+          "bad_cap": 0,
+          "forward_calls": 120
+        },
+        "high_r1_train_values": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "high_r2_train_values": {
+          "n": 36,
+          "exact": 0,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        },
+        "high_r2_val_low4": {
+          "n": 9,
+          "exact": 0,
+          "first_word": 9,
+          "second_word": 0,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "high_r2_test_low5": {
+          "n": 9,
+          "exact": 0,
+          "first_word": 9,
+          "second_word": 0,
+          "stop_position": 9,
+          "bad_cap": 0,
+          "forward_calls": 117
+        },
+        "low_block_r1": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 0,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 252
+        },
+        "low_block_r2": {
+          "n": 36,
+          "exact": 36,
+          "first_word": 36,
+          "second_word": 36,
+          "stop_position": 36,
+          "bad_cap": 0,
+          "forward_calls": 468
+        }
+      }
+    }
+  ],
+  "total_updates": 15200,
+  "total_train_targets": 960000,
+  "eval_forward": 9577,
+  "raw_sha256": "2d9416634339f1d42117eafcef70c959613b11c7f2656b3b9a864196122f6217",
+  "raw_count": 936,
+  "training_forward_dense_MAC": 10014720000,
+  "eval_forward_dense_MAC": 99907264,
+  "backward_MAC_excluded": true,
+  "seconds": 9.35947662999996
+}
