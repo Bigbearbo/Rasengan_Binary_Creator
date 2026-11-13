@@ -1,0 +1,1059 @@
+{
+  "source_commit": "23963d32f0ef75c5890cfdd5bc9d320621754f32",
+  "source_raw_blob": "62f6d95bad4abf3dc57a6852eb990be9bcabd96d",
+  "rows": 1440,
+  "contexts": 24,
+  "reference_exact": {
+    "known_0_5": [
+      143,
+      115
+    ],
+    "suffix_only_6_14": [
+      136,
+      1
+    ],
+    "unseen_15_29": [
+      224,
+      0
+    ]
+  },
+  "all_stop_correct": true,
+  "invalid_second_word_terminal_0": 0,
+  "metrics": {
+    "known_0_5": {
+      "rows": {
+        "n": 144,
+        "info_bits_correct": 656,
+        "info_bits_total": 720,
+        "majority_baseline_correct": 552,
+        "target_ones": [
+          0,
+          0,
+          48,
+          48,
+          72
+        ],
+        "actual_ones": [
+          0,
+          0,
+          58,
+          49,
+          55
+        ],
+        "structural_zero_correct": 144,
+        "info_bit_accuracy": 0.9111111111111111,
+        "majority_bit_accuracy": 0.7666666666666667
+      },
+      "edges": {
+        "total": 168,
+        "aligned": 129,
+        "reversed": 14,
+        "unchanged": 25,
+        "signed": 115,
+        "r1_first_word_changed": 2,
+        "r2_first_word_changed": 2,
+        "by_input_bit": [
+          {
+            "bit": 0,
+            "aligned": 48,
+            "reversed": 5,
+            "unchanged": 19,
+            "invalid": 0,
+            "r1_first_word_changed": 1,
+            "r2_first_word_changed": 1,
+            "total": 72
+          },
+          {
+            "bit": 1,
+            "aligned": 34,
+            "reversed": 9,
+            "unchanged": 5,
+            "invalid": 0,
+            "r1_first_word_changed": 0,
+            "r2_first_word_changed": 0,
+            "total": 48
+          },
+          {
+            "bit": 2,
+            "aligned": 47,
+            "reversed": 0,
+            "unchanged": 1,
+            "invalid": 0,
+            "r1_first_word_changed": 1,
+            "r2_first_word_changed": 1,
+            "total": 48
+          },
+          {
+            "bit": 3,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "r1_first_word_changed": 0,
+            "r2_first_word_changed": 0,
+            "total": 0
+          },
+          {
+            "bit": 4,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "r1_first_word_changed": 0,
+            "r2_first_word_changed": 0,
+            "total": 0
+          }
+        ]
+      }
+    },
+    "suffix_only_6_14": {
+      "rows": {
+        "n": 216,
+        "info_bits_correct": 708,
+        "info_bits_total": 1080,
+        "majority_baseline_correct": 744,
+        "target_ones": [
+          0,
+          168,
+          120,
+          120,
+          96
+        ],
+        "actual_ones": [
+          0,
+          0,
+          108,
+          73,
+          87
+        ],
+        "structural_zero_correct": 216,
+        "info_bit_accuracy": 0.6555555555555556,
+        "majority_bit_accuracy": 0.6888888888888889
+      },
+      "edges": {
+        "total": 264,
+        "aligned": 140,
+        "reversed": 29,
+        "unchanged": 95,
+        "signed": 111,
+        "r1_first_word_changed": 59,
+        "r2_first_word_changed": 58,
+        "by_input_bit": [
+          {
+            "bit": 0,
+            "aligned": 46,
+            "reversed": 15,
+            "unchanged": 35,
+            "invalid": 0,
+            "r1_first_word_changed": 5,
+            "r2_first_word_changed": 10,
+            "total": 96
+          },
+          {
+            "bit": 1,
+            "aligned": 39,
+            "reversed": 14,
+            "unchanged": 19,
+            "invalid": 0,
+            "r1_first_word_changed": 19,
+            "r2_first_word_changed": 16,
+            "total": 72
+          },
+          {
+            "bit": 2,
+            "aligned": 55,
+            "reversed": 0,
+            "unchanged": 17,
+            "invalid": 0,
+            "r1_first_word_changed": 33,
+            "r2_first_word_changed": 30,
+            "total": 72
+          },
+          {
+            "bit": 3,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 24,
+            "invalid": 0,
+            "r1_first_word_changed": 2,
+            "r2_first_word_changed": 2,
+            "total": 24
+          },
+          {
+            "bit": 4,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "r1_first_word_changed": 0,
+            "r2_first_word_changed": 0,
+            "total": 0
+          }
+        ]
+      }
+    },
+    "unseen_15_29": {
+      "rows": {
+        "n": 360,
+        "info_bits_correct": 842,
+        "info_bits_total": 1800,
+        "majority_baseline_correct": 1104,
+        "target_ones": [
+          336,
+          168,
+          168,
+          168,
+          192
+        ],
+        "actual_ones": [
+          0,
+          0,
+          172,
+          128,
+          172
+        ],
+        "structural_zero_correct": 360,
+        "info_bit_accuracy": 0.4677777777777778,
+        "majority_bit_accuracy": 0.6133333333333333
+      },
+      "edges": {
+        "total": 600,
+        "aligned": 191,
+        "reversed": 116,
+        "unchanged": 293,
+        "signed": 75,
+        "r1_first_word_changed": 174,
+        "r2_first_word_changed": 170,
+        "by_input_bit": [
+          {
+            "bit": 0,
+            "aligned": 54,
+            "reversed": 66,
+            "unchanged": 48,
+            "invalid": 0,
+            "r1_first_word_changed": 2,
+            "r2_first_word_changed": 12,
+            "total": 168
+          },
+          {
+            "bit": 1,
+            "aligned": 52,
+            "reversed": 50,
+            "unchanged": 42,
+            "invalid": 0,
+            "r1_first_word_changed": 40,
+            "r2_first_word_changed": 45,
+            "total": 144
+          },
+          {
+            "bit": 2,
+            "aligned": 85,
+            "reversed": 0,
+            "unchanged": 59,
+            "invalid": 0,
+            "r1_first_word_changed": 102,
+            "r2_first_word_changed": 85,
+            "total": 144
+          },
+          {
+            "bit": 3,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 144,
+            "invalid": 0,
+            "r1_first_word_changed": 30,
+            "r2_first_word_changed": 28,
+            "total": 144
+          },
+          {
+            "bit": 4,
+            "aligned": 0,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "r1_first_word_changed": 0,
+            "r2_first_word_changed": 0,
+            "total": 0
+          }
+        ]
+      }
+    }
+  },
+  "per_model": {
+    "101-fixed": {
+      "seed": 101,
+      "mode": "fixed",
+      "groups": {
+        "known_0_5": [
+          {
+            "a": 0,
+            "aligned": 5,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 5
+          },
+          {
+            "a": 1,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 2,
+            "aligned": 5,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 5
+          },
+          {
+            "a": 3,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 4,
+            "aligned": 5,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 5
+          },
+          {
+            "a": 5,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          }
+        ],
+        "suffix_only_6_14": [
+          {
+            "a": 0,
+            "aligned": 3,
+            "reversed": 2,
+            "unchanged": 6,
+            "invalid": 0,
+            "n": 11,
+            "signed": 1
+          },
+          {
+            "a": 1,
+            "aligned": 6,
+            "reversed": 1,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 5
+          },
+          {
+            "a": 2,
+            "aligned": 2,
+            "reversed": 2,
+            "unchanged": 7,
+            "invalid": 0,
+            "n": 11,
+            "signed": 0
+          },
+          {
+            "a": 3,
+            "aligned": 8,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 11,
+            "signed": 7
+          },
+          {
+            "a": 4,
+            "aligned": 5,
+            "reversed": 2,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 5,
+            "aligned": 8,
+            "reversed": 0,
+            "unchanged": 3,
+            "invalid": 0,
+            "n": 11,
+            "signed": 8
+          }
+        ],
+        "unseen_15_29": [
+          {
+            "a": 0,
+            "aligned": 7,
+            "reversed": 5,
+            "unchanged": 13,
+            "invalid": 0,
+            "n": 25,
+            "signed": 2
+          },
+          {
+            "a": 1,
+            "aligned": 8,
+            "reversed": 3,
+            "unchanged": 14,
+            "invalid": 0,
+            "n": 25,
+            "signed": 5
+          },
+          {
+            "a": 2,
+            "aligned": 3,
+            "reversed": 5,
+            "unchanged": 17,
+            "invalid": 0,
+            "n": 25,
+            "signed": -2
+          },
+          {
+            "a": 3,
+            "aligned": 5,
+            "reversed": 7,
+            "unchanged": 13,
+            "invalid": 0,
+            "n": 25,
+            "signed": -2
+          },
+          {
+            "a": 4,
+            "aligned": 7,
+            "reversed": 3,
+            "unchanged": 15,
+            "invalid": 0,
+            "n": 25,
+            "signed": 4
+          },
+          {
+            "a": 5,
+            "aligned": 12,
+            "reversed": 2,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 10
+          }
+        ]
+      }
+    },
+    "101-varied": {
+      "seed": 101,
+      "mode": "varied",
+      "groups": {
+        "known_0_5": [
+          {
+            "a": 0,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 1,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 2,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 3,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 4,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 5,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          }
+        ],
+        "suffix_only_6_14": [
+          {
+            "a": 0,
+            "aligned": 5,
+            "reversed": 2,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 1,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 7
+          },
+          {
+            "a": 2,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 6,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 3,
+            "aligned": 6,
+            "reversed": 1,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 5
+          },
+          {
+            "a": 4,
+            "aligned": 8,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 11,
+            "signed": 7
+          },
+          {
+            "a": 5,
+            "aligned": 6,
+            "reversed": 0,
+            "unchanged": 5,
+            "invalid": 0,
+            "n": 11,
+            "signed": 6
+          }
+        ],
+        "unseen_15_29": [
+          {
+            "a": 0,
+            "aligned": 8,
+            "reversed": 6,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 2
+          },
+          {
+            "a": 1,
+            "aligned": 9,
+            "reversed": 6,
+            "unchanged": 10,
+            "invalid": 0,
+            "n": 25,
+            "signed": 3
+          },
+          {
+            "a": 2,
+            "aligned": 7,
+            "reversed": 3,
+            "unchanged": 15,
+            "invalid": 0,
+            "n": 25,
+            "signed": 4
+          },
+          {
+            "a": 3,
+            "aligned": 6,
+            "reversed": 6,
+            "unchanged": 13,
+            "invalid": 0,
+            "n": 25,
+            "signed": 0
+          },
+          {
+            "a": 4,
+            "aligned": 8,
+            "reversed": 4,
+            "unchanged": 13,
+            "invalid": 0,
+            "n": 25,
+            "signed": 4
+          },
+          {
+            "a": 5,
+            "aligned": 10,
+            "reversed": 3,
+            "unchanged": 12,
+            "invalid": 0,
+            "n": 25,
+            "signed": 7
+          }
+        ]
+      }
+    },
+    "202-fixed": {
+      "seed": 202,
+      "mode": "fixed",
+      "groups": {
+        "known_0_5": [
+          {
+            "a": 0,
+            "aligned": 5,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 5
+          },
+          {
+            "a": 1,
+            "aligned": 4,
+            "reversed": 2,
+            "unchanged": 1,
+            "invalid": 0,
+            "n": 7,
+            "signed": 2
+          },
+          {
+            "a": 2,
+            "aligned": 3,
+            "reversed": 0,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 3,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          },
+          {
+            "a": 4,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 5,
+            "aligned": 7,
+            "reversed": 0,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 7
+          }
+        ],
+        "suffix_only_6_14": [
+          {
+            "a": 0,
+            "aligned": 6,
+            "reversed": 1,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 5
+          },
+          {
+            "a": 1,
+            "aligned": 5,
+            "reversed": 2,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 2,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 6,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 3,
+            "aligned": 9,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 11,
+            "signed": 9
+          },
+          {
+            "a": 4,
+            "aligned": 5,
+            "reversed": 2,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 5,
+            "aligned": 9,
+            "reversed": 0,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 11,
+            "signed": 9
+          }
+        ],
+        "unseen_15_29": [
+          {
+            "a": 0,
+            "aligned": 9,
+            "reversed": 7,
+            "unchanged": 9,
+            "invalid": 0,
+            "n": 25,
+            "signed": 2
+          },
+          {
+            "a": 1,
+            "aligned": 10,
+            "reversed": 6,
+            "unchanged": 9,
+            "invalid": 0,
+            "n": 25,
+            "signed": 4
+          },
+          {
+            "a": 2,
+            "aligned": 5,
+            "reversed": 4,
+            "unchanged": 16,
+            "invalid": 0,
+            "n": 25,
+            "signed": 1
+          },
+          {
+            "a": 3,
+            "aligned": 11,
+            "reversed": 3,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 8
+          },
+          {
+            "a": 4,
+            "aligned": 9,
+            "reversed": 3,
+            "unchanged": 13,
+            "invalid": 0,
+            "n": 25,
+            "signed": 6
+          },
+          {
+            "a": 5,
+            "aligned": 17,
+            "reversed": 0,
+            "unchanged": 8,
+            "invalid": 0,
+            "n": 25,
+            "signed": 17
+          }
+        ]
+      }
+    },
+    "202-varied": {
+      "seed": 202,
+      "mode": "varied",
+      "groups": {
+        "known_0_5": [
+          {
+            "a": 0,
+            "aligned": 4,
+            "reversed": 3,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 1
+          },
+          {
+            "a": 1,
+            "aligned": 4,
+            "reversed": 3,
+            "unchanged": 0,
+            "invalid": 0,
+            "n": 7,
+            "signed": 1
+          },
+          {
+            "a": 2,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 3,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 4,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          },
+          {
+            "a": 5,
+            "aligned": 4,
+            "reversed": 1,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 7,
+            "signed": 3
+          }
+        ],
+        "suffix_only_6_14": [
+          {
+            "a": 0,
+            "aligned": 6,
+            "reversed": 2,
+            "unchanged": 3,
+            "invalid": 0,
+            "n": 11,
+            "signed": 4
+          },
+          {
+            "a": 1,
+            "aligned": 6,
+            "reversed": 3,
+            "unchanged": 2,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 2,
+            "aligned": 5,
+            "reversed": 2,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 3
+          },
+          {
+            "a": 3,
+            "aligned": 6,
+            "reversed": 1,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 5
+          },
+          {
+            "a": 4,
+            "aligned": 5,
+            "reversed": 1,
+            "unchanged": 5,
+            "invalid": 0,
+            "n": 11,
+            "signed": 4
+          },
+          {
+            "a": 5,
+            "aligned": 6,
+            "reversed": 1,
+            "unchanged": 4,
+            "invalid": 0,
+            "n": 11,
+            "signed": 5
+          }
+        ],
+        "unseen_15_29": [
+          {
+            "a": 0,
+            "aligned": 7,
+            "reversed": 6,
+            "unchanged": 12,
+            "invalid": 0,
+            "n": 25,
+            "signed": 1
+          },
+          {
+            "a": 1,
+            "aligned": 8,
+            "reversed": 6,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 2
+          },
+          {
+            "a": 2,
+            "aligned": 4,
+            "reversed": 7,
+            "unchanged": 14,
+            "invalid": 0,
+            "n": 25,
+            "signed": -3
+          },
+          {
+            "a": 3,
+            "aligned": 7,
+            "reversed": 7,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 0
+          },
+          {
+            "a": 4,
+            "aligned": 6,
+            "reversed": 8,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": -2
+          },
+          {
+            "a": 5,
+            "aligned": 8,
+            "reversed": 6,
+            "unchanged": 11,
+            "invalid": 0,
+            "n": 25,
+            "signed": 2
+          }
+        ]
+      }
+    }
+  },
+  "per_seed": {
+    "101-known_0_5": {
+      "seed": 101,
+      "group": "known_0_5",
+      "aligned": 75,
+      "reversed": 1,
+      "unchanged": 8,
+      "signed": 74,
+      "n": 84
+    },
+    "101-suffix_only_6_14": {
+      "seed": 101,
+      "group": "suffix_only_6_14",
+      "aligned": 68,
+      "reversed": 13,
+      "unchanged": 51,
+      "signed": 55,
+      "n": 132
+    },
+    "101-unseen_15_29": {
+      "seed": 101,
+      "group": "unseen_15_29",
+      "aligned": 90,
+      "reversed": 53,
+      "unchanged": 157,
+      "signed": 37,
+      "n": 300
+    },
+    "202-known_0_5": {
+      "seed": 202,
+      "group": "known_0_5",
+      "aligned": 54,
+      "reversed": 13,
+      "unchanged": 17,
+      "signed": 41,
+      "n": 84
+    },
+    "202-suffix_only_6_14": {
+      "seed": 202,
+      "group": "suffix_only_6_14",
+      "aligned": 72,
+      "reversed": 16,
+      "unchanged": 44,
+      "signed": 56,
+      "n": 132
+    },
+    "202-unseen_15_29": {
+      "seed": 202,
+      "group": "unseen_15_29",
+      "aligned": 101,
+      "reversed": 63,
+      "unchanged": 136,
+      "signed": 38,
+      "n": 300
+    }
+  },
+  "context_signs": {
+    "known_0_5": {
+      "positive": 24,
+      "zero": 0,
+      "negative": 0,
+      "total": 24
+    },
+    "suffix_only_6_14": {
+      "positive": 23,
+      "zero": 1,
+      "negative": 0,
+      "total": 24
+    },
+    "unseen_15_29": {
+      "positive": 18,
+      "zero": 2,
+      "negative": 4,
+      "total": 24
+    }
+  },
+  "training_updates": 0,
+  "forward_calls": 0,
+  "MAC": 0
+}

@@ -1,0 +1,35 @@
+{
+  "work_id": "SLE-AE1-SECOND-WORD-BIT-COUPLING-20261113",
+  "date": "2026-11-13",
+  "owner": "scheduled NN independent",
+  "parent_pr": 34,
+  "source_commit": "23963d32f0ef75c5890cfdd5bc9d320621754f32",
+  "source_raw_blob": "62f6d95bad4abf3dc57a6852eb990be9bcabd96d",
+  "single_variable": "Existing PR34 b-only counterfactual ID, holding trained model, a/c/d/r constant. No new intervention or training.",
+  "role": "retrospective post-result bitwise diagnostic; original outcomes already observed; NOT fresh blinded experiment",
+  "profile": "SLE-AE1-n5-v1: Q=01+010+r[3 information bits,0]+four data words [5 information bits,0]+END111100; r1/r2, data IDs0..29, external S STOP",
+  "data": "All 1440 published model-Q-expected-actual records in source blob, exactly four frozen 10499-parameter models (seeds 101/202, modes fixed/varied), six fixed anchors and b0..29 each r1/r2.",
+  "training": "PR29 existing 24 train,6 val,6 test (a,b) in 0..5: split (a+b)%6; 200 epochs, batch Adam lr0.003, 1600 steps per model, 96000 target exposures; no new training.",
+  "new_updates": 0,
+  "new_NN_forward": 0,
+  "new_MAC": 0,
+  "raw_bits_example": {
+    "Q": "010100100000000001100100100110100111100",
+    "expected": "000000001100S"
+  },
+  "pre_run_gate": [
+    "Read PR34 exact committed SHA and Git blob, reject mismatch",
+    "1440 unique (seed,mode,a,b,r) with a0..5, b0..29, r1/r2; Q39, legal data words and exact expected answers, no S in input",
+    "1440 strings end at correct external S length; rerun published r2 exact group counts 115/144,1/216,0/360",
+    "Never choose samples or metrics after inspecting new per-bit results"
+  ],
+  "primary_metric": "For each group b0..5,6..14,15..29 and input bit k=0..4, form one-bit edges (b,b xor 2^k) where both legal b are in same group and low endpoint has bit k=0. Across four models * six anchors for r2, report aligned (predicted 2nd output bit k:0->1), reversed (1->0), unchanged, invalid, per-bit and per model; signed alignment=aligned-reversed. Compare negative-control r1 first-output changes across same edges (should be unchanged).",
+  "secondary_metric": "Second-word aggregate bit accuracy per group and majority-bit baseline per group; token exact retained from PR34. Report 24 contexts separately; do not interpret 24 repeated contexts as independent trained networks. No fresh NN logits.",
+  "prior_interpretation": "PR34 reports 1/216 and 0/360 exact r2 for novel answer-bearing b. This analysis tests whether some b-bit change is reflected in output despite failure of entire word.",
+  "decision_gate": "Do not claim transferable copy unless positive aligned excess is robust across independent seeds AND model modes; otherwise describe observed bit-level dependence and limits. No statistical significance claims from correlated edge counts.",
+  "nvidia": {
+    "calls": 0,
+    "status": "not called; no authorized local OpenRouter/NVIDIA worker available via tools"
+  },
+  "next_owner": "independent NN researcher / Codex reviewer: if bitwise evidence suggests a role/novelty gap, preregister separately controlled train roles on identical numeric IDs; this analysis alone cannot disentangle."
+}
