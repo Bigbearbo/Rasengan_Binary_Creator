@@ -1,0 +1,369 @@
+{
+  "protocol_commit": "8cc0cfe6011300cc0ca54fe2f8900b3c969725db",
+  "software": {
+    "torch": "2.10.0+cpu",
+    "numpy": "2.3.5"
+  },
+  "epochs": 250,
+  "parameters": 10499,
+  "learning_rate": 0.003,
+  "seeds": [
+    101,
+    202
+  ],
+  "models": [
+    {
+      "seed": 101,
+      "arm": "HIGH_FIRST",
+      "init_sha256": "8162fe86ef510343363a5993fc747e0c82f082c08925d58682ba5012f9c19006",
+      "final_sha256": "363fb7c63e6ae59feaee2afa5abb333a0732409bf415b6ef2401dec7e0a98d61",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.7413142919540405,
+        "100": 0.03891652449965477,
+        "250": 0.0018236511386930943
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480,
+          "high_bit8_generated_second": 0
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_FIRST": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_SECOND": {
+          "n": 36,
+          "exact": 0,
+          "first_word_correct": 31,
+          "second_word_correct": 0,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_FIRST": {
+          "n": 18,
+          "exact": 18,
+          "first_word_correct": 18,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_SECOND": {
+          "n": 18,
+          "exact": 0,
+          "first_word_correct": 16,
+          "second_word_correct": 0,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        }
+      },
+      "checkpoint_path": "weights_seed101_high_first.json"
+    },
+    {
+      "seed": 101,
+      "arm": "HIGH_SECOND",
+      "init_sha256": "8162fe86ef510343363a5993fc747e0c82f082c08925d58682ba5012f9c19006",
+      "final_sha256": "99599b801e83d0a21f438366ca96b0bdebe73117bb6a84c8d62777dbc9fd5969",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.7737129926681519,
+        "100": 0.026608971878886223,
+        "250": 0.001372219412587583
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480,
+          "high_bit8_generated_second": 0
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_FIRST": {
+          "n": 36,
+          "exact": 0,
+          "first_word_correct": 0,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_SECOND": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 28
+        },
+        "heldout_HIGH_FIRST": {
+          "n": 18,
+          "exact": 0,
+          "first_word_correct": 0,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_SECOND": {
+          "n": 18,
+          "exact": 18,
+          "first_word_correct": 18,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 14
+        }
+      },
+      "checkpoint_path": "weights_seed101_high_second.json"
+    },
+    {
+      "seed": 202,
+      "arm": "HIGH_FIRST",
+      "init_sha256": "9451a8901c8bf14cc08c681f657f14a935179917f5d9cbb9866537363acf511d",
+      "final_sha256": "032fff46fdfbd9e32b2bc035545e696dbcf18914506d53b9d2f0238d9c177d8a",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.734077513217926,
+        "100": 0.03341706097126007,
+        "250": 0.0011935126967728138
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480,
+          "high_bit8_generated_second": 0
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_FIRST": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_SECOND": {
+          "n": 36,
+          "exact": 0,
+          "first_word_correct": 33,
+          "second_word_correct": 0,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_FIRST": {
+          "n": 18,
+          "exact": 18,
+          "first_word_correct": 18,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_SECOND": {
+          "n": 18,
+          "exact": 0,
+          "first_word_correct": 16,
+          "second_word_correct": 0,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        }
+      },
+      "checkpoint_path": "weights_seed202_high_first.json"
+    },
+    {
+      "seed": 202,
+      "arm": "HIGH_SECOND",
+      "init_sha256": "9451a8901c8bf14cc08c681f657f14a935179917f5d9cbb9866537363acf511d",
+      "final_sha256": "1fe4ed907bd52c3e1c5217a0acdd990f0e05d840d60bdaf75e06f894261d8472",
+      "updates": 3750,
+      "target_exposures": 237000,
+      "loss_anchor": {
+        "1": 0.7746672034263611,
+        "100": 0.04994095116853714,
+        "250": 0.0012237558839842677
+      },
+      "metrics": {
+        "base_train": {
+          "n": 48,
+          "exact": 48,
+          "first_word_correct": 48,
+          "second_word_correct": 24,
+          "stop_correct": 48,
+          "bad_cap": 0,
+          "forward_calls": 480,
+          "high_bit8_generated_second": 0
+        },
+        "base_val": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "base_test": {
+          "n": 12,
+          "exact": 12,
+          "first_word_correct": 12,
+          "second_word_correct": 6,
+          "stop_correct": 12,
+          "bad_cap": 0,
+          "forward_calls": 120,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_FIRST": {
+          "n": 36,
+          "exact": 0,
+          "first_word_correct": 0,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 0
+        },
+        "exposed_HIGH_SECOND": {
+          "n": 36,
+          "exact": 36,
+          "first_word_correct": 36,
+          "second_word_correct": 36,
+          "stop_correct": 36,
+          "bad_cap": 0,
+          "forward_calls": 468,
+          "high_bit8_generated_second": 28
+        },
+        "heldout_HIGH_FIRST": {
+          "n": 18,
+          "exact": 0,
+          "first_word_correct": 0,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 0
+        },
+        "heldout_HIGH_SECOND": {
+          "n": 18,
+          "exact": 18,
+          "first_word_correct": 18,
+          "second_word_correct": 18,
+          "stop_correct": 18,
+          "bad_cap": 0,
+          "forward_calls": 234,
+          "high_bit8_generated_second": 14
+        }
+      },
+      "checkpoint_path": "weights_seed202_high_second.json"
+    }
+  ],
+  "raw_case_count": 720,
+  "total_train_forward_targets": 948000,
+  "total_optimizer_steps": 15000,
+  "evaluation_forward_calls": 8496,
+  "evaluation_dense_forward_mac": 88630272,
+  "training_dense_forward_mac": 9889536000,
+  "training_backward_mac_not_counted": true,
+  "wall_seconds": 8.722022977000051,
+  "raw_sha256": "698fc69c95d7a8c3227c6387f0119908def86fa4efc3c24bdb920117a643ed5a"
+}
