@@ -1,0 +1,6 @@
+{
+  "read_after_prereg_before_formal": true,
+  "PR46_head": "1598246cde44d9b29a0fdf6645e27ff023dde4b0",
+  "classification": "Separate PR44/45-derived PyTorch cohort, no data/state/course merged into this E3 experiment",
+  "design_change": false
+}

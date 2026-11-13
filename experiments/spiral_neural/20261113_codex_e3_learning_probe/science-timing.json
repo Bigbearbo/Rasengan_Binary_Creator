@@ -1,0 +1,44 @@
+{
+  "all_cold_baselines_seconds": 3.4145643999800086,
+  "all_final_TF_and_readout_seconds": 24.44834040000569,
+  "all_old_baselines_seconds": 1.2464702000143006,
+  "execute_wall_seconds_including_guards": 459.49454929999774,
+  "primary_trajectories": [
+    {
+      "arm": "eta001",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 75.99289190000854,
+      "seed": 101
+    },
+    {
+      "arm": "eta003",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 76.05045270000119,
+      "seed": 101
+    },
+    {
+      "arm": "eta001",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 72.85162319999654,
+      "seed": 202
+    },
+    {
+      "arm": "eta003",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 69.73898220001138,
+      "seed": 202
+    },
+    {
+      "arm": "eta001",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 67.85891460001585,
+      "seed": 303
+    },
+    {
+      "arm": "eta003",
+      "mode": "primary",
+      "seconds_training_and_freeprobe": 67.6026162999915,
+      "seed": 303
+    }
+  ]
+}

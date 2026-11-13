@@ -1,0 +1,150 @@
+{
+  "NN_calls": 0,
+  "source": "Saved native free token metrics and TF metrics only; no new inference",
+  "rows": [
+    {
+      "seed": 101,
+      "arm": "eta001",
+      "E3_whole": 229,
+      "old_lost": 3,
+      "old_scores": {
+        "E1": 900,
+        "E2": 900,
+        "F1": 898,
+        "F2": 899
+      },
+      "free_words": {
+        "word1": 900,
+        "word2": 900,
+        "word3": 229
+      },
+      "free_STOP": 899,
+      "TF_word3_info5": 229,
+      "TF_word3_information_bits": 3620,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 900
+    },
+    {
+      "seed": 101,
+      "arm": "eta003",
+      "E3_whole": 240,
+      "old_lost": 23,
+      "old_scores": {
+        "E1": 900,
+        "E2": 893,
+        "F1": 896,
+        "F2": 888
+      },
+      "free_words": {
+        "word1": 900,
+        "word2": 890,
+        "word3": 240
+      },
+      "free_STOP": 820,
+      "TF_word3_info5": 247,
+      "TF_word3_information_bits": 3690,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 900
+    },
+    {
+      "seed": 202,
+      "arm": "eta001",
+      "E3_whole": 54,
+      "old_lost": 2,
+      "old_scores": {
+        "E1": 900,
+        "E2": 898,
+        "F1": 900,
+        "F2": 900
+      },
+      "free_words": {
+        "word1": 900,
+        "word2": 900,
+        "word3": 54
+      },
+      "free_STOP": 899,
+      "TF_word3_info5": 54,
+      "TF_word3_information_bits": 3116,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 900
+    },
+    {
+      "seed": 202,
+      "arm": "eta003",
+      "E3_whole": 76,
+      "old_lost": 32,
+      "old_scores": {
+        "E1": 891,
+        "E2": 880,
+        "F1": 900,
+        "F2": 897
+      },
+      "free_words": {
+        "word1": 900,
+        "word2": 850,
+        "word3": 76
+      },
+      "free_STOP": 890,
+      "TF_word3_info5": 80,
+      "TF_word3_information_bits": 3082,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 900
+    },
+    {
+      "seed": 303,
+      "arm": "eta001",
+      "E3_whole": 182,
+      "old_lost": 8,
+      "old_scores": {
+        "E1": 900,
+        "E2": 894,
+        "F1": 900,
+        "F2": 898
+      },
+      "free_words": {
+        "word1": 900,
+        "word2": 897,
+        "word3": 182
+      },
+      "free_STOP": 854,
+      "TF_word3_info5": 183,
+      "TF_word3_information_bits": 3647,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 900
+    },
+    {
+      "seed": 303,
+      "arm": "eta003",
+      "E3_whole": 33,
+      "old_lost": 74,
+      "old_scores": {
+        "E1": 898,
+        "E2": 854,
+        "F1": 898,
+        "F2": 876
+      },
+      "free_words": {
+        "word1": 893,
+        "word2": 839,
+        "word3": 34
+      },
+      "free_STOP": 883,
+      "TF_word3_info5": 33,
+      "TF_word3_information_bits": 2993,
+      "TF_word3_information_bits_total": 4500,
+      "cold_TF_word3_information_bits": 0,
+      "cold_TF_word3_information_bits_total": 4500,
+      "TF_STOP": 898
+    }
+  ]
+}
