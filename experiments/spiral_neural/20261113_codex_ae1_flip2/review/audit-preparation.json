@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "auditor_sha256": "3c7a696996d3ac34844a0f1cc3156626ccbcb8df6ec0c621bfcb9ada3d97e507",
+  "manifest_sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95",
+  "portable_members": 13,
+  "independent_parent_states": 3,
+  "independent_questions": 3600,
+  "independent_frozen_permutations": 120,
+  "pure_metric_fixture_outputs": 24,
+  "QID_swap_classes": 4,
+  "actual_audit_attempts": 0,
+  "model_forward_calls": 0,
+  "optimizer_calls": 0,
+  "note": "Only independent frozen-input parsing and pure string readouts were exercised; no scientific checkpoint generation or learner/driver imports."
+}

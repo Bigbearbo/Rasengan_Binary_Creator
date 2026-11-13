@@ -1,28 +1,31 @@
 # F2：四類混合續訓
 
-2026-11-13，Codex，事前版本。參考[PR30下一階段設計](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/1e4812bd48404c8c03f659ed8a8d86dd5aa5852e/experiments/spiral_neural/20261113_window_progress_review/NEXT_PHASE.md)，本輪只加入翻轉兩組F2，保留E1/E2/F1。E3/E4留待另輪凍結。本輪尚未正式執行。
+2026-11-13，Codex，已執行並獨立驗收。三個原PR28模型都曾在第19／22／19輪把四類各900題全部答對；只有101完成連續兩輪全對，202／303在40輪上限未達此標準。這區分了「固定題庫曾經學會」與「繼續更新後能保持」，不能把後兩者寫成從未學會。
 
-父版本是PR28結果 `5ceec0c42507bb5646dc0d87089f4a86e0e6269c`，沿用三份完整finalstate，父t=297000／400500／441900，p/m/v/birth/t/RNG及舊計數器原樣保留。原P030 Model AST、Adam0.003、L80/H64／10499參數不變；新成本用父狀態差額。
+|Seed|首次四類全對（輪）|正式停止|新bit更新|
+|---|---:|---|---:|
+|101|19|27輪，兩連勝|972,000|
+|202|22|40輪上限，未兩連勝|1,440,000|
+|303|19|40輪上限，未兩連勝|1,440,000|
 
-同900個四詞payload、Q39位、每詞五資訊位加尾零，普通輸入ID0..29。新profile `SLE-AEM2-n5-v1` 保持原2700個Q/A bitexact，僅新增Flip100、r2（參數0100），QID2700..3599。回答前兩詞各自的五資訊位反碼，兩個尾零不反，最後模型自行產生S。
+同900個四詞payload；回音E1／E2、翻轉F1／F2各900題，每輪3600題、36000個含STOP的target，全域洗牌。訓練用正確答案前綴交叉熵，測試用模型自己的輸出接回題目。三份完整父state與Adam承接，L80／H64／10499參數、學習率0.003均不改。F2各反前兩詞的5個資訊位，各尾0保留，只有S停止。
 
-|類別|題型／參數|題數／輪|targets／輪|
-|---|---|---:|---:|
-|E1|010／0010|900|6300|
-|E2|010／0100|900|11700|
-|F1|100／0010|900|6300|
-|F2|100／0100|900|11700|
+末輪各類整串正確數，每類900題：
 
-F2資料[0,1,23,11]應答`111110111100S`，兩個語法零在答案位置5、11，S在位置12，含S共13動作、STOP前輸入51位。答案中111100／111110是字面內容，不執行END／UP，不濾掉輸入0/1。只有外部S停止；raw Q＋已答前綴進NN，沒有解碼特徵或正解長度截斷。沿用cap32／L80 guard，最大待預測prefix70。
+|Seed|E1|E2|F1|F2|
+|---|---:|---:|---:|---:|
+|101|900|900|900|900|
+|202|900|900|899|869|
+|303|900|899|900|898|
 
-正式批次先對全部三模型各做一次四類baseline，驗證舊三類各900/900後才有任何新optimizer；失敗則integration abort、不修權重或換parent。F2是新接線的冷啟動診斷，不依PR30的0／0／1選種、換課或計streak。這是本輪一次baseline，不重跑PR29/30的其他研究。
+本輪參考Pro [PR30下一階段設計](https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/1e4812bd48404c8c03f659ed8a8d86dd5aa5852e/experiments/spiral_neural/20261113_window_progress_review/NEXT_PHASE.md)，選擇只加入F2、補逐詞／首錯／逐題lost-recovered；E3／E4留到穩定性釐清後另行設計。PR32是另一PR29 cohort的b-only唯讀介入，沒有重複本輪續訓。
 
-每pair依E1/E2/F1/F2、各答案位置含S建立canonical pool。以各seed+555000 RNG預先凍結40份實際(QID,pos)排列；每輪3600 Q、36000 targets全域洗牌，類別target權重6300:11700:6300:11700，無長度平權。訓練使用正確前綴CE，輪末自由生成接模型自己的輸出。四類各900/900含S連兩輪才提前停；任何miss清零，最多40輪，不追加／挑最好checkpoint。
+Q39位，參數0010／0100分別表示一／兩組。前兩個普通詞ID覆蓋0..29的900組，後兩詞沿用既有bank；四類Q/A以raw bits輸入。答案prefix回接、cap32／L80 guard、無強制STOP或正解長度截斷。每輪target權重6300:11700:6300:11700，沒有做題長平權。全部三父版舊三類baseline通過後才更新，F2冷分數不作選seed或停訓streak依據。
 
-新增逐詞資訊位／尾零／整詞、各bit、STOP位置、首錯位置及逐QID正→錯／錯→正統計，全部只讀已有生成字串，0額外forward。首錯以expected A+S逐token比對，0起算；早S／缺token／多token／cap及context失敗明列，缺位算錯。Baseline沒有前一點，轉移為null；第一輪對baseline，後續對前輪，不能用淨分差代替轉移數。
+新正式更新3,852,000次，training dense MAC 81,107,712,000。新非更新forward分為baseline 110,027、輪末probe 3,854,661、最後TF 108,000，合計4,072,688次。父版舊成本不重計。正式runner耗時6440.997966秒，含baseline／訓練／probe／state I/O／最後TF及後置guard，不是純kernel時間；前置凍結、Git與獨立驗收另計。
 
-每seed新更新cap1440000／30320640000 training dense MAC；三primary最多4320000／90961920000。每target21056 MAC、非更新forward10432 MAC。沿用已驗證learner，本輪不安排完整訓練重播，三seed均not_planned，replay成本全0；工程僅有界合成接續／步驟重現。獨立rawNumPy驗算全部實際baseline、epoch和最後TF（每學生36000targets），不重生最後free輸出。未存的逐target原始loss、中間gradient／optimizer軌跡不宣稱獨立重算。
+獨立raw NumPy驗收PASS：107個實際epoch、396,000個baseline與epoch完整自由生成、108,000個最後TF logits／機率／CE；119份science NPZ、120份凍結課序與113份逐點證明。額外forward 4,072,688、dense MAC 42,486,281,216、optimizer0，驗收耗時203.697496秒。逐題word／bit／STOP／雙軸首錯／QID失去恢復均從保存tokens獨立重算；全部凍結來源、state、receipt及原logs前後SHA相同。
 
-完整parent原bytes／公開出處、bank、source、課序在事前包；每輪fullstate、全部輸出、trace digest、成本與停止均保留。MAC只計矩陣結構，並非硬體總FLOPs；209980bytes陣列不是程序RAM峰值。正式開始前完成Git byte回讀和獨立0NN portable gate，coordinator負責使用者授權及版本核對；公開SHA本身不是授權，不自動合併。
+本輪沒有完整正式訓練重播，三seed均not_planned、所有replay成本0。原learner不改，工程只有界合成接續測試；獨立驗收涵蓋保存狀態的輸出與計數，不宣稱未保存的逐target原始loss、中間gradient或optimizer軌跡已獨立重建。900組不是全部30^4輸入；沒有heldout、三／四詞回答、任意長度或內部copy／flip算法證據，也沒有early-mix／learning-rate因果對照。
 
-範圍是同900組bank下補齊F2並保持舊三類。900不是全部30^4 payload，沒有heldout、E3/E4、Flip3或長度外推測試，也不識別通用copy／flip算法、內部router或課程因果優勢。
+詳細數據見[RESULTS.md](RESULTS.md)、[derived-readout.json](derived-readout.json)，版本與完整封存見publication-manifest.json。[RESEARCH_NOTE.md](RESEARCH_NOTE.md)列Pro設計取捨，[HANDOFF.md](HANDOFF.md)給下一棒；固定外部隊員的真呼叫、拒絕與略過見EXTERNAL_REVIEW.json。

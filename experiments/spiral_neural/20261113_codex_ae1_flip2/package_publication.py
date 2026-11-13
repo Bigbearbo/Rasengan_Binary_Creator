@@ -30,7 +30,10 @@ PRIVATE_KEYS = {"private_raw_api_record", "private_legacy_record", "raw_api_path
 PRIVATE_NAMES = {".git", ".ssh", ".aws", "__pycache__", "fontcache", "autonomous-state.json", "transport.json"}
 REVIEW_PREREG = ("check_protocol.py", "protocol-review.json", "check_pre_run.py", "pre-run.json",
                  "pre-run-attempt-01/attempt.json", "pre-run-attempt-01/check_pre_run.py")
-REVIEW_FINAL = ("audit_post.py", "metadata-preflight.json", "post-run.json", "post-run-details.json", "audit-cost.json")
+REVIEW_FINAL = ("audit_post.py", "metadata-preflight.json", "post-run.json", "post-run-details.json", "audit-cost.json",
+                "audit-preparation.json", "check_audit_preparation.py", "audit_post.pre-pin.py",
+                "audit-preparation-context.json", "audit-execution-receipt.json", "narrative-review.json",
+                "finalize_audit_receipt.py")
 
 
 def need(condition, message):
@@ -286,16 +289,16 @@ def coordinator_guard(work, manifest, approved):
     need(git["manifest_sha256"] == intent["manifest_sha256"] == approved,
          "Coordinator manifest differs")
     need(intent["preregistration_commit"] == git["commit"] and intent["formal_invocations"] == 1
-         and intent["auto_retry"] is False, "Coordinator execution scope differs")
-    need(intent["parent_commit"] == git["parent"] == manifest["protocol"]["parent_head"],
+         and intent["automatic_retry"] is False, "Coordinator execution scope differs")
+    need(intent["parent_result_commit"] == git["parent"] == manifest["protocol"]["parent_head"],
          "Coordinator parent continuation pin differs")
     need(intent["primary_continued_seeds"] == list(SEEDS) and intent["replay_seeds"] == list(REPLAY_SEEDS)
-         and intent["source_hashes"] == manifest["source_hashes"], "Coordinator seed/source pins differ")
+         and intent["source_sha256"] == manifest["source_hashes"], "Coordinator seed/source pins differ")
     frozen_public = read_json(work / "publication/prereg/compact.json")["public_files"]
     checks = git["public_file_byte_checks"]
     need(len(checks) == len({item["name"] for item in checks}) == len(frozen_public)
          and {item["name"] for item in checks} == set(frozen_public)
-         and intent["Git_byte_checks_before_formal"] == len(checks), "Public readback coverage differs")
+         and intent["public_prereg_files_byte_checked"] == len(checks), "Public readback coverage differs")
     for item in checks:
         name = safe_name(item["name"])
         data = file_under(work / "publication/prereg/public", name).read_bytes()
@@ -310,6 +313,13 @@ def final_guard(work, manifest, approved, receipt_path):
     post = read_json(work / "review/post-run.json")
     need(post["status"] == "passed" and post["manifest_sha256"] == approved, "Independent post-run gate missing/different")
     need(post["source_hashes"] == manifest["source_hashes"] and post["root_confirmed_formal_exit0"] is True, "Post-run source/exit gate differs")
+    audit_receipt = read_json(work / "review/audit-execution-receipt.json")
+    audit_exit_codes = [audit_receipt[key] for key in ("exit_code", "audit_exit_code") if key in audit_receipt]
+    need(audit_exit_codes and all(type(code) is int and code == 0 for code in audit_exit_codes)
+         and audit_receipt["status"] in ("exit0", "passed")
+         and audit_receipt["audit_process_closed"] is True, "Independent audit process is not verified closed exit0")
+    need(sha(file_under(work / "review", "finalize_audit_receipt.py").read_bytes())
+         == audit_receipt["closure_helper_sha256"], "Audit receipt closure helper source differs")
     receipt_raw = receipt_path.read_bytes()
     receipt = json.loads(receipt_raw.decode("utf-8-sig"))
     receipt_pin = post.get("receipt_sha256", post.get("metadata", {}).get("receipt_sha256"))
@@ -385,6 +395,10 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
         summary, details, science_inventory, proofs = final_guard(work, manifest, approved, receipt)
         add_file(files, originals, tool, "RESULTS.md", "RESULTS.md")
         add_file(files, originals, work, "derived-readout.json", "derived-readout.json")
+        add_file(files, originals, work, "derived-readout-provenance.json", "derived-readout-provenance.json")
+        add_file(files, originals, work, "derive_readout.py", "derive_readout.py")
+        add_file(files, originals, work, "derive-readout-preflight.json", "review/derive-readout-preflight.json")
+        add_file(files, originals, work, "publication/final-helper-prep/readiness.json", "review/packager-preparation.json")
         for name in ("git-prereg-receipt.json", "execution-intent.json"):
             add_file(files, originals, work, name, name)
         science = {"science/" + name: file_under(work / "science", name).read_bytes() for name in science_inventory}
@@ -407,7 +421,10 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
             archives[name] = {**info(raw), **audit, "oversized_single_member_preserved": len(raw) > GROUP_BYTES}
             covered |= set(group)
         need(covered == set(science), "An actual science file was omitted")
-        evidence = dict(proofs)
+        evidence = {**proofs, "review/packager-preparation.json": files["review/packager-preparation.json"],
+                    "derive_readout.py": files["derive_readout.py"],
+                    "derived-readout-provenance.json": files["derived-readout-provenance.json"],
+                    "review/derive-readout-preflight.json": files["review/derive-readout-preflight.json"]}
         for name in REVIEW_FINAL:
             add_file(files, originals, work / "review", name, "review/" + name)
             evidence["review/" + name] = files["review/" + name]
@@ -445,6 +462,7 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
                    "continuation_parent_states": manifest["parents"],
                    "formal_replay_seeds": list(REPLAY_SEEDS),
                    "formal_replay_scope": "Not planned before freeze; three primary trajectories only, independent checkpoint forward audit separately recorded.",
+                   "preparation_record_scope": "review/audit-preparation.json records a pre-pin auditor source snapshot with0 actual audit attempts/forward calls. review/packager-preparation.json records earlier metadata-only helper checks/corrections. Their source SHA fields describe those preparation versions; the selected review/audit_post.py file hash and post-run/audit-cost report define the actual trained audit version and execution.",
                    "cost_scope": "New optimizer/training/probe counts are deltas; inherited parent counters are retained separately, not new work.",
                    "files": {name: info(data) for name, data in sorted(files.items())}, "archives": archives,
                    "complete_science_inventory": science_inventory, "science_files": len(science_inventory),
@@ -473,6 +491,7 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
     records = git_records(public, out)
     result = {"status": "verified", "mode": mode, "repo_prefix": PREFIX, "manifest_sha256": approved,
               "public_files": {name: info(data) for name, data in sorted(files.items())},
+              "public_files_over_1MiB": {name: info(data) for name, data in sorted(files.items()) if len(data) > 1024 * 1024},
               "archive_indexes": {name: {key: value for key, value in archive.items() if key != "members"} for name, archive in archives.items()},
               "full_archive_member_indexes": "public/publication-manifest.json",
               "full_science_inventory": "public/publication-manifest.json",

@@ -1,13 +1,13 @@
 {
-  "all_science_preserved": false,
-  "archive_members_size_CRC_SHA_byte_verified": 13,
+  "all_science_preserved": true,
+  "archive_members_size_CRC_SHA_byte_verified": 612,
   "finite_arrays": {
     "NPY": 3,
-    "NPZ": 3
+    "NPZ": 122
   },
   "frozen_inputs_byte_identical": true,
-  "full_actual_science_files": 0,
-  "mode": "prereg",
+  "full_actual_science_files": 467,
+  "mode": "final",
   "model_optimizer_inference_external_calls": 0,
   "original_source_and_input_hashes_unchanged": true,
   "privacy_checked_every_public_member": true,

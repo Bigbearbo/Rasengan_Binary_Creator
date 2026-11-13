@@ -1,0 +1,49 @@
+{
+  "NN_optimizer_external_calls": 0,
+  "core_or_intent_changed": false,
+  "core_schema_mechanically_matches_zero_replay_guard": true,
+  "expected_final_paths": [
+    "RESULTS.md",
+    "derived-readout.json",
+    "review/post-run.json",
+    "review/post-run-details.json",
+    "review/audit_post.py",
+    "review/audit-cost.json",
+    "review/metadata-preflight.json",
+    "execution-receipt.json",
+    "execution.stdout.log",
+    "execution.stderr.log"
+  ],
+  "final_export_executed": false,
+  "formal_science_or_scores_read": false,
+  "metadata_only_earlier_attempts": [
+    {
+      "NN_calls": 0,
+      "kind": "runtime_command_path_typo"
+    },
+    {
+      "NN_calls": 0,
+      "kind": "legacy_intent_field_KeyError",
+      "mechanical_helper_field_alignment": "automatic_retry,parent_result_commit,source_sha256,public_prereg_files_byte_checked"
+    }
+  ],
+  "packager_sha256": "bee74690cb036b61da095f353d0372d2478df931c0e927fd9f8ef3be68ea50cb",
+  "parent_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "prereg_public_files_verified": 25,
+  "preregistration_commit": "5fb6ee26a088f8b4794594346fee7c4988744f18",
+  "preserved_pre_run_attempt_files": [
+    "pre-run-attempt-01/attempt.json",
+    "pre-run-attempt-01/check_pre_run.py"
+  ],
+  "primary_continued_seeds": [
+    101,
+    202,
+    303
+  ],
+  "references": [
+    "references/PRO_NEXT_PHASE.md",
+    "references/pro30-selected.json"
+  ],
+  "replay_seeds": [],
+  "status": "prepared_metadata_checked"
+}

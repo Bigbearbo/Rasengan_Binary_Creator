@@ -11,3 +11,11 @@
 PR29是另一批PyTorch batched Adam學生，PR30/31揭露並修正train suffix_mode別名及第一詞／第二詞的封存統計；不把那些24/6/6 split或864列混入本900bank、不重訓它、不改本機逐target Adam以追求不可比的耗時。新後綴正確也不能排除查表，延續PR27識別性限制。當輪只主張固定bank學習與保持。
 
 來源入口：PR28 RESULTS／publication-manifest及公開checkpoint、PR30 NEXT_PHASE與results_summary。references/PRO_NEXT_PHASE.md與pro30-selected.json保存選定公開參考，不外送整份聊天／私人交接。NVIDIA只核四個合成標籤一次，候選本機逐字驗收；Gemini既有安裝／登入保留，analysis-only隔離未解skip。詳EXTERNAL_REVIEW。
+
+## 執行後更新
+
+三個原PR28模型都曾在第19／22／19輪把四類各900題全部答對；只有101完成連續兩輪全對，202／303在40輪上限未達此標準。這區分了「固定題庫曾經學會」與「繼續更新後能保持」，不能把後兩者寫成從未學會。
+
+三個原fullstate均有固定bank四類全對狀態，未達兩連勝不能寫成從未學會；滿分也不能寫成繼續更新從不退步。保留正式終點27／40／40，不選回較早checkpoint。下一輪優先固定資料、容量、課序只改一個保持穩定性變因；降低學習率是待驗證候選，不是已排除其他原因的診斷。E3／E4及blind-answer-pair測試仍未執行。
+
+PR32已在本輪啟動前讀過：它使用PR29不同cohort、0更新、第二詞b-only介入，沒有重複PR28 F2新訓練。事前25公開檔全部actual bytes核對後，才啟動唯一正式command；研究成功門檻1/3，程式／數據獨立驗收PASS，兩者分列。

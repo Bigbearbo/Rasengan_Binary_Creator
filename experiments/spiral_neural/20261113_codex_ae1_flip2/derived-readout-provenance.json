@@ -1,0 +1,71 @@
+{
+  "actual_science_readout_invocations": 1,
+  "formal_helper_logs_receipt_after": {
+    "derive_readout.py": {
+      "bytes": 21279,
+      "sha256": "dd7d0d22ad0ea83a0c4e85b64af25ccdca12f8eef96c72d3abd030fbca98dd5e"
+    },
+    "execution-intent.json": {
+      "bytes": 1109,
+      "sha256": "f8549d941d1e1ac48b7a1c15c5070e6d7146d0eeaf622044df8eb29b749d1267"
+    },
+    "execution-receipt.json": {
+      "bytes": 2301,
+      "sha256": "6a4b531f43f85aa59a543f42e8a2d4d2b5fb0d474653bb4d9dfad83ea329e608"
+    },
+    "execution.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "execution.stdout.log": {
+      "bytes": 41428,
+      "sha256": "3757e9533e9dc434957d8be206759af8543a6aaf20bf4b5018d5668d680b7248"
+    }
+  },
+  "formal_helper_logs_receipt_before": {
+    "derive_readout.py": {
+      "bytes": 21279,
+      "sha256": "dd7d0d22ad0ea83a0c4e85b64af25ccdca12f8eef96c72d3abd030fbca98dd5e"
+    },
+    "execution-intent.json": {
+      "bytes": 1109,
+      "sha256": "f8549d941d1e1ac48b7a1c15c5070e6d7146d0eeaf622044df8eb29b749d1267"
+    },
+    "execution-receipt.json": {
+      "bytes": 2301,
+      "sha256": "6a4b531f43f85aa59a543f42e8a2d4d2b5fb0d474653bb4d9dfad83ea329e608"
+    },
+    "execution.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "execution.stdout.log": {
+      "bytes": 41428,
+      "sha256": "3757e9533e9dc434957d8be206759af8543a6aaf20bf4b5018d5668d680b7248"
+    }
+  },
+  "formal_logs_receipt_unchanged": true,
+  "formal_training_replays": [],
+  "helper_sha256": "dd7d0d22ad0ea83a0c4e85b64af25ccdca12f8eef96c72d3abd030fbca98dd5e",
+  "new_NN_forward_calls": 0,
+  "new_optimizer_calls": 0,
+  "readout_bytes": 1108257,
+  "readout_file": "derived-readout.json",
+  "readout_sha256": "6fd872d2b9443aab8a4245d9b41dd5f0df01548ee718d90718a00c72e3dd66d5",
+  "runtime_guard": {
+    "NN_modules_imported": false,
+    "NN_optimizer_method_calls": {
+      "forward": 0,
+      "grow": 0,
+      "lesson": 0,
+      "loss_grad": 0,
+      "step": 0
+    },
+    "external_process_or_network_events": [],
+    "writes_allowed_only_to_readout": true
+  },
+  "schema": "ae1-f2-derived-readout-provenance-v1",
+  "source_science_files_hashed_before_after": 474,
+  "source_science_hashes_unchanged": true,
+  "status": "PASS"
+}

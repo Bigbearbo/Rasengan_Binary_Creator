@@ -1,0 +1,26 @@
+{
+  "schema": "ae1-f2-execution-intent-v1",
+  "recorded_UTC": "2026-11-13T04:02:11.992Z",
+  "manifest_sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95",
+  "preregistration_commit": "5fb6ee26a088f8b4794594346fee7c4988744f18",
+  "parent_result_commit": "5ceec0c42507bb5646dc0d87089f4a86e0e6269c",
+  "pull_request": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/33",
+  "public_prereg_files_byte_checked": 25,
+  "primary_continued_seeds": [
+    101,
+    202,
+    303
+  ],
+  "replay_seeds": [],
+  "formal_invocations": 1,
+  "automatic_retry": false,
+  "source_sha256": {
+    "run_f2.py": "08dcba6ef9074c640e3e94321d56492dc27d1c1a3f0a77f0c09afd17c5215dc6",
+    "protocol.json": "7c58a7209b50c20442db78c48e085ff28e5e462840256615b9150e5d4f1e6958",
+    "test_f2.py": "41d1f04e9d0fa47ead4df3871131f98dbc409ebc105d58810a8ff53de7ff9e94"
+  },
+  "science_directory": "science",
+  "stdout": "execution.stdout.log",
+  "stderr": "execution.stderr.log",
+  "PR32_scope_decision": "Separate PR29 archived cohort, b-only zero-update intervention; does not duplicate PR28 F2 continuation."
+}

@@ -1,0 +1,7 @@
+{
+  "all_parent_baselines_before_any_optimizer": true,
+  "author": "Codex",
+  "auto_retry": false,
+  "manifest_sha256": "b8d385db584aec294f5363556f045aecb3ceb8864dc20f4816c30bc591426d95",
+  "preregistration_commit": "5fb6ee26a088f8b4794594346fee7c4988744f18"
+}
