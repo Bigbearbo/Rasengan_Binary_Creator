@@ -1,0 +1,96 @@
+{
+  "id": "WINDOW-E3-CD-FACTORIAL-READONLY-20261114",
+  "author": "視窗GPT / delegated independent probe agent",
+  "source_PR": 49,
+  "source_commit": "915219a4a787ea1452b798104d2158a6d8c82410",
+  "source_directory": "experiments/spiral_neural/20261113_codex_e3_continuation",
+  "source_publication_manifest_sha256": "526c95e09d38c5a283675954cc0365a4811bddc73381d35fc675e1b9e17e8d5e",
+  "source_files": {
+    "publication-manifest.json": "526c95e09d38c5a283675954cc0365a4811bddc73381d35fc675e1b9e17e8d5e",
+    "inputs.zip": "e2889728eccb95498df95cdcfdcf64e7eed5a9151b1e056f4d7c516ba3e1fde7",
+    "science-001.zip": "86cd84dc1902f6861e209344b5fd42bd7d34a5a3585888ad99825fca36c0996f",
+    "science-003.zip": "c8426e260f360c55609da07cb91428000040d7eb44119f2af238c72b832f5796",
+    "science-005.zip": "3695d43b850ab6b12db6fe5cb5953bcb73748085470b399da083486651ccbaf5"
+  },
+  "selected_source_members": {
+    "inputs.zip:payloads.json": "efdffdb247ffad655b1add880e374223f43c6917478fb3aa0f45ffbf8faddeee",
+    "inputs.zip:questions.json": "7ab1b43d8c76036cfae3409ec1199ab5f04328974211f0dbfd876ec9da82fa84",
+    "inputs.zip:source/p030_binary_continual.py": "db39661a7b16d13e64db7acc5dae22a81ca59dc39cf467ed4c58addbc0654013",
+    "science-001.zip:science/seed101/final-after-TF.npz": "d4cd3fc43e9e820e404c17d4b14ff49d13acd3175832e08e7262c3ad9ffd3344",
+    "science-001.zip:science/seed101/final-generation.json": "f4631792160442996bc61a93c16bfba6aa325f9af1c9363059b8fcb9b36d5686",
+    "science-003.zip:science/seed202/final-after-TF.npz": "0a60fde52635c5ae919f456461e9f15d817858c8f4307f3935e221d8ce3aba1c",
+    "science-003.zip:science/seed202/final-generation.json": "f48c32b4edcd20037a80ebfedb133b6da4d8a4289a254c514d508dfbd1fa3c63",
+    "science-005.zip:science/seed303/final-after-TF.npz": "2b76483cfa744874aa677f43887639e440f594803a0b6001d11e31571eba476e",
+    "science-005.zip:science/seed303/final-generation.json": "9b386ecaef2ea0f4d22240df7538c372b2902d498c981472b29c4acc1106ef7c"
+  },
+  "probe_source_sha256": "05a85714c7a8e9c168375a335b7c247c9097a54be1593a18c3796b0aef54468d",
+  "profile": "Exact existing SLE-AEM3-n5-v1 Echo r3, Q39, four legal IDs0..29, first three complete six-bit words then externalS",
+  "provenance": "F=immutable PR49 actual final checkpoints and archived E3 outputs; A=new c/d factorial diagnostic; new generated output is read-only T, not Codex training",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "model": {
+    "L": 80,
+    "H": 64,
+    "parameters": 10499
+  },
+  "checkpoint_selection": "All three actual final-after-TF states at the declared eight-new-epoch cap; no historical best-state or seed selection",
+  "parent_state_sha256": {
+    "101": "d50569acc6246436f0c667c2146929964129d7266c0cb0f3a1508a6cb643b266",
+    "202": "4528055f1226dad9034c5c244ccf1ed8c122654d384d27755f11748b9b51add3",
+    "303": "a53f1434be6e433e27c9d3a2f6a4494f47e332e328ad6724680a19d070cb9460"
+  },
+  "cells": [
+    {
+      "name": "c0_d0",
+      "delta_c_mod30": 0,
+      "delta_d_mod30": 0,
+      "question_count": 900,
+      "questions_sha256": "81e792828d47ae82a4381baff9e9b93d866846f8650488bc771417da6dca6841"
+    },
+    {
+      "name": "c1_d0",
+      "delta_c_mod30": 1,
+      "delta_d_mod30": 0,
+      "question_count": 900,
+      "questions_sha256": "8020d6ec160337f8a71dca2a9b06bcc64c71dd1a04520000067aab9f6c45c720"
+    },
+    {
+      "name": "c0_d1",
+      "delta_c_mod30": 0,
+      "delta_d_mod30": 1,
+      "question_count": 900,
+      "questions_sha256": "fef6d81db486caa650e20319b39dcaadc672c756bd55499656f813173fb05146"
+    },
+    {
+      "name": "c1_d1",
+      "delta_c_mod30": 1,
+      "delta_d_mod30": 1,
+      "question_count": 900,
+      "questions_sha256": "81d5c9d32e285b88deda123507f22fb2f9218199f0343a971fd0af0ed12b1ea2"
+    }
+  ],
+  "factorial_interpretation": "c is the third requested answer word; changing it changes the last six answer bits. d is outside r3 and should not change the answer. +1 mod30 is a legal value intervention, not necessarily one bit.",
+  "order": "All three checkpoints first regenerate all900 archived E3 answers, total2700 exact archive matches required. Only then evaluate each seed in101/202/303 order on c1_d0,c0_d1,c1_d1, each ascending pair_id.",
+  "generation": "Independent scalar-prefix NumPy float32 dense forward; one-hot rawQ+own generated bits; greedy0/1/S; cap32; L80 guard; no label, teacher prefix, expected-length cutoff or forcedSTOP",
+  "inference_budget": {
+    "baseline_questions": 2700,
+    "new_questions": 8100,
+    "maximum_forward_calls": 345600,
+    "dense_MAC_per_forward": 10432
+  },
+  "learning": "0 optimizer calls and no manual parameter changes; all complete p/m/v/birth/t/RNG/events/counter arrays read-only; no checkpoint written; source archive and state hashes before/after",
+  "metrics": "Per seed/cell whole, three words, first two combined, STOP, first error and exact lengths. Paired c edges: changed output versus correctly tracking changed third word, first-two stability, both-whole exact. Paired d edges: output invariance versus both-whole exact; invariance alone can preserve a wrong answer. Raw paired metrics use only already generated tokens.",
+  "stopping": "Abort all new intervention inference if any of2700 baseline outputs/flags/exact indicators differs from archive. One execution; no repairs, newseeds, test-driven curriculum or result-driven rerun.",
+  "decision_boundary": "Descriptive diagnostic without a fitted success threshold. It does not select checkpoint, change training, or overturn PR49's failed strict-mastery gate. Low transfer motivates a separately preregistered generalization study; high transfer still does not prove a universal copy algorithm.",
+  "limits": "All three intervention cells have new Q relative to the fixed900bank. Only c-changing cells have new relevant (a,b,c) combinations; d-only retains (a,b,c) and changes answer-irrelevant context. Numeric values are previously exposed, and this is not a researcher-blind external test. Known source failures are retained. Frozen deterministic +1 interventions do not establish all-context behavior or identify an internal neural mechanism.",
+  "preflight": {
+    "unique_probe_questions": 3600,
+    "new_questions_vs_parent4500": 2700,
+    "source_unchanged": true,
+    "neural_forward_calls": 0,
+    "optimizer_calls": 0
+  }
+}
