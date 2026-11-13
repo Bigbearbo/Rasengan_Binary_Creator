@@ -42,8 +42,15 @@
     "intervention": "for each anchor, keep a and c0=15+(7a+3b0)%15, d0=15+(5a+11b0)%15, choose b=0..5; run separately r=1 and r=2",
     "total": "4 frozen models * 6 anchors * 6 b * 2 r = 288 generated responses; 4*6*5*2=240 changed-b contrasts",
     "raw_bits_examples": {
-      "a0_b1_r1": "010100010000000000010011110010100111100",
-      "note": "Example is illustrative; runner generates and checks literal raw bits from formula, not this string."
+      "a0_b1_r1": "010100010000000000010100100110100111100",
+      "a0_b1_r2": "010100100000000000010100100110100111100",
+      "a0_b1_r1_expected": "000000S",
+      "a0_b1_r2_expected": "000000000010S",
+      "a0_b1_suffix_high": [
+        18,
+        26
+      ],
+      "note": "Computed from the documented legal profile before any new NN inference; r1/r2 Q differ only in r header. Historical values are not a new experiment result."
     }
   },
   "pre_run_gates": [
