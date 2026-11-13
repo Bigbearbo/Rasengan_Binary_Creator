@@ -1,6 +1,8 @@
 # 新回音：同題先參數1，再參數2
 
-2026-11-13，Codex。正式神經訓練尚未開始；此事前版本保存課程、完整初態與全部可能使用的課序，執行結果另在完成後新增。
+2026-11-13，Codex。實驗完成：三學生最後r1、r2各900/900整題含STOP全對，兩階段分別於4/7、6/8、4/11輪連兩輪全對而提前停止。唯一session7462 exit0，指定seed101完整重播精確一致，一次獨立數值audit PASS。完整數字、限制與成本見[RESULTS.md](RESULTS.md)。
+
+事前commit `966297559b4f4dedc4b8cf655258d4036cc21cc8`／manifest `dcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60` 保留完整課程、初態和所有可能使用的課序；本結果版本未改凍結核心。累計題次16200／19800／23400，三模型共用同900組資料，不作獨立2700組或保留題解讀。
 
 沿用公開 [AE1設計 PR16](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/16) 的 `SLE-AE1-n5-v1`。題目是 `01 + 新回音010 + 回覆組數r + 四個資料詞 + END111100`。參數r使用三資訊位加尾0，1=`0010`、2=`0100`；每個普通資料詞五資訊位加尾0，ID0..29，END30與UP31保留。回答前r個完整資料詞，再自行輸出外部STOP；END不回覆。參數改變時，資料詞及順序完全相同。
 
@@ -29,3 +31,5 @@
 這是固定題庫、指定課程的學習與保持實驗，沒有盲測、平鋪課程對照或學習率對照，不單獨識別課程、題量或架構的因果效果，也不宣稱任意長度／內部通用copy算法。PR24的八資訊位數值Echo／Neg和本輪不同profile，沒有載入其權重或混用其010=Neg語義。
 
 正式入口為 `run_curriculum.py` 的help；核心必須由同版本protocol與tests驗證，事前包manifest／source-freeze／inputs.zip記錄完整來源、initial與課序。Git上先公開並回讀確認，協調者再以確切manifest SHA與事前commit執行一次正式批次。這是協調者的授權與版本核對邊界，公開SHA本身不等於授權。
+
+本批已完成，不要在接續時重啟。還原時先核對publication-manifest.json，將結果ZIP成員依原relative path還原至同一science樹；原inputs.zip是事前13成員原容器。唯一指定seed101 replay由正式driver完成，其他seed not_planned。全部實際輸出、失敗與state保留於結果archives，audit source和逐epoch/student proof在review封存。科學結論限定本900組題庫及r1/r2，後續r3/r4須另凍結新課程與預算。

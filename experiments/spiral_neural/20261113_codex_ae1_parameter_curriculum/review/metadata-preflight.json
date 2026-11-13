@@ -1,0 +1,52 @@
+{
+  "actual_phases_by_seed": {
+    "101": [
+      {
+        "epochs": 4,
+        "phase": "r1"
+      },
+      {
+        "epochs": 7,
+        "phase": "r12"
+      }
+    ],
+    "202": [
+      {
+        "epochs": 6,
+        "phase": "r1"
+      },
+      {
+        "epochs": 8,
+        "phase": "r12"
+      }
+    ],
+    "303": [
+      {
+        "epochs": 4,
+        "phase": "r1"
+      },
+      {
+        "epochs": 11,
+        "phase": "r12"
+      }
+    ]
+  },
+  "actual_timing_trajectories": 4,
+  "all_required_paths_and_schemas_checked_before_any_trained_forward": true,
+  "epoch_progress_records": 51,
+  "manifest_sha256": "dcf3ea17d1f5a179ccaa37b5f544f630ad274afdfa7b56ab93684d1a9344fe60",
+  "model_forward_calls": 0,
+  "preregistration_precedes_execution": true,
+  "receipt_sha256": "26a0cd10a8d09444fdd8a1f7e0812a35b2d8b29a8a3095e805cdf9c9c35a9553",
+  "science_files": 155,
+  "source_hashes": {
+    "protocol.json": "ec0e1fd9ca2996195c0a396bcb42e52c288bee86adffef5cd3f20a78f2c190d6",
+    "run_curriculum.py": "b95c9a96f096624c2d01ef6dcd1782070d1d3f172cfbc4a60b097754047895a6",
+    "test_curriculum.py": "f0817d655b00e0d832dfe7064b40f1bf6039db1ac7d9d3b494007760b9e620e0"
+  },
+  "status": "passed",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 14269,
+  "stdout_sha256": "3e6416b9b1651638d8db1f09813943ec9f3a3d590e1fadee2b5b5d6bfcc3597b"
+}

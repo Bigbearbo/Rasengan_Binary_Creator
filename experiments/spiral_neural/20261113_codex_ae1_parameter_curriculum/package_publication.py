@@ -270,6 +270,32 @@ def proof_names(summary):
     return result
 
 
+def coordinator_guard(work, manifest, approved):
+    git = read_json(work / "git-prereg-receipt.json")
+    intent = read_json(work / "execution-intent.json")
+    need(git["checked_before_formal"] is True and git["formal_invocations_at_this_receipt"] == 0,
+         "Public byte verification did not precede the formal invocation")
+    need(git["manifest_sha256"] == intent["manifest_sha256"] == approved,
+         "Coordinator manifest differs")
+    need(intent["preregistration_commit"] == git["commit"] and intent["formal_invocations"] == 1
+         and intent["auto_retry"] is False, "Coordinator execution scope differs")
+    need(intent["primary_seeds"] == list(SEEDS) and intent["replay_seeds"] == [101]
+         and intent["source_hashes"] == manifest["source_hashes"], "Coordinator seed/source pins differ")
+    frozen_public = read_json(work / "publication/prereg/compact.json")["public_files"]
+    checks = git["public_file_byte_checks"]
+    need(len(checks) == len({item["name"] for item in checks}) == len(frozen_public)
+         and {item["name"] for item in checks} == set(frozen_public)
+         and intent["Git_byte_checks_before_formal"] == len(checks), "Public readback coverage differs")
+    for item in checks:
+        name = safe_name(item["name"])
+        data = file_under(work / "publication/prereg/public", name).read_bytes()
+        need(item["byte_match"] is True and item["commit"] == git["commit"]
+             and info(data) == frozen_public[name]
+             and all(item[key] == frozen_public[name][key] for key in ("bytes", "sha256", "Git_blob")),
+             "Actual preregistration byte evidence differs")
+    return git, intent
+
+
 def final_guard(work, manifest, approved, receipt_path):
     post = read_json(work / "review/post-run.json")
     need(post["status"] == "passed" and post["manifest_sha256"] == approved, "Independent post-run gate missing/different")
@@ -278,12 +304,18 @@ def final_guard(work, manifest, approved, receipt_path):
     receipt = json.loads(receipt_raw.decode("utf-8-sig"))
     receipt_pin = post.get("receipt_sha256", post.get("metadata", {}).get("receipt_sha256"))
     need(receipt_pin == sha(receipt_raw) and receipt["exit_code"] == 0, "Root receipt bytes/exit differ")
+    git, intent = coordinator_guard(work, manifest, approved)
+    need(receipt["manifest_sha256"] == approved and receipt["preregistration_commit"] == git["commit"],
+         "Root execution receipt coordinator pins differ")
     summary = read_json(work / "science/compact.json")
     need(summary["status"] == "complete" and summary["manifest_sha256"] == approved, "Formal result is incomplete/different")
     need(summary["primary_students"] == 3 and summary["exact_full_replays"] == [101], "Formal seed/replay scope differs")
     need([student["seed"] for student in summary["students"]] == list(SEEDS), "A seed is missing")
     need([student["replay_status"] for student in summary["students"]] == ["complete_exact", "not_planned", "not_planned"], "Replay disposition differs")
     need((work / "science/manifest.json").read_bytes() == (work / "prereg/manifest.json").read_bytes(), "Actual manifest bytes differ")
+    start = read_json(work / "science/execution-start.json")
+    need(start["preregistration_commit"] == summary["preregistration_commit"] == git["commit"]
+         and start["auto_retry"] is False, "Actual execution does not match coordinator intent")
     details = read_json(work / "review/post-run-details.json")
     actual = inventory(work / "science")
     need(actual == details["science_file_inventory"], "Full actual science inventory differs from independent audit")
@@ -339,6 +371,10 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
         need(receipt is not None and stdout is not None and stderr is not None, "Final requires exact receipt/stdout/stderr paths")
         receipt, stdout, stderr = (Path(value).resolve() for value in (receipt, stdout, stderr))
         summary, details, science_inventory, proofs = final_guard(work, manifest, approved, receipt)
+        add_file(files, originals, tool, "RESULTS.md", "RESULTS.md")
+        add_file(files, originals, work, "derived-readout.json", "derived-readout.json")
+        for name in ("git-prereg-receipt.json", "execution-intent.json"):
+            add_file(files, originals, work, name, name)
         science = {"science/" + name: file_under(work / "science", name).read_bytes() for name in science_inventory}
         covered = set()
         for seed in SEEDS:
@@ -361,7 +397,8 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
         need(covered == set(science), "An actual science file was omitted")
         evidence = dict(proofs)
         for name in REVIEW_FINAL:
-            evidence["review/" + name] = file_under(work / "review", name).read_bytes()
+            add_file(files, originals, work / "review", name, "review/" + name)
+            evidence["review/" + name] = files["review/" + name]
         for path, name in ((receipt, "execution-receipt.json"), (stdout, "execution.stdout.log"), (stderr, "execution.stderr.log")):
             need(path.is_file() and path.is_relative_to(work), "Execution record is outside the authorized work root")
             evidence[name] = path.read_bytes()
@@ -423,6 +460,8 @@ def package(mode, root, work, tool, approved, out, receipt=None, stdout=None, st
     result = {"status": "verified", "mode": mode, "repo_prefix": PREFIX, "manifest_sha256": approved,
               "public_files": {name: info(data) for name, data in sorted(files.items())},
               "archive_indexes": {name: {key: value for key, value in archive.items() if key != "members"} for name, archive in archives.items()},
+              "full_archive_member_indexes": "public/publication-manifest.json",
+              "full_science_inventory": "public/publication-manifest.json",
               "complete_science_coverage": {"actual_files": len(science_inventory), "all_preserved": mode == "final"},
               "finite_arrays": finite, "checks": checks, **records, "packager_sha256": sha(Path(__file__).read_bytes())}
     write_json(out / "compact.json", result)

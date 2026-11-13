@@ -1,0 +1,118 @@
+{
+  "schema": "ae1-derived-readout-v1",
+  "operation": "Pure arithmetic over archived final truth; no model forward or update",
+  "students": [
+    {
+      "seed": 101,
+      "metrics": {
+        "1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "metrics": {
+        "1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        }
+      }
+    },
+    {
+      "seed": 303,
+      "metrics": {
+        "1": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 4500,
+          "free_information_targets": 4500,
+          "free_tail0_correct": 900,
+          "free_tail0_targets": 900,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 4500,
+          "TF_tail0_correct": 900,
+          "TF_STOP_correct": 900
+        },
+        "2": {
+          "questions": 900,
+          "whole": 900,
+          "free_information_correct": 9000,
+          "free_information_targets": 9000,
+          "free_tail0_correct": 1800,
+          "free_tail0_targets": 1800,
+          "free_STOP_timing_correct": 900,
+          "TF_information_correct": 9000,
+          "TF_tail0_correct": 1800,
+          "TF_STOP_correct": 900
+        }
+      }
+    }
+  ],
+  "paired_example": {
+    "pair_id": 36,
+    "payload_ids": [
+      1,
+      6,
+      23,
+      11
+    ],
+    "words": [
+      "000010",
+      "001100",
+      "101110",
+      "010110"
+    ],
+    "r1": {
+      "Q": "010100010000010001100101110010110111100",
+      "A": "000010S"
+    },
+    "r2": {
+      "Q": "010100100000010001100101110010110111100",
+      "A": "000010001100S"
+    },
+    "source": "Archived final free outputs, not an extra model query"
+  },
+  "extra_NN_calls": 0
+}
