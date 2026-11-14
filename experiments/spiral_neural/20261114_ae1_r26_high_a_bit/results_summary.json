@@ -1,0 +1,51 @@
+{
+  "work_id": "SLE-AE1-R26-HIGH-A-BIT-20261114",
+  "status": "diagnostic gate PASS 2/3, not copy generalization",
+  "gate": "PASS",
+  "seeds_pass": 2,
+  "seeds_total": 3,
+  "parameters_per_checkpoint": 10457,
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "paired_arms": [
+    "R20",
+    "R23"
+  ],
+  "unique_paired_raw_change": "a+4 bit flip at r1; all b/c/d fixed within pair",
+  "legal_profile": "SLE-AE1-n5-v1",
+  "calibration_questions": 16,
+  "test_questions": 32,
+  "training_updates": 0,
+  "student_generated_outputs": 288,
+  "greedy_forwards": 6978,
+  "stop_probe_forwards": 288,
+  "inference_dense_MAC": 79344720,
+  "formal_test": {
+    "R20": {
+      "first_correct": 64,
+      "stop_class_correct": 6,
+      "full_correct": 4,
+      "c2_full_correct": 1
+    },
+    "R23": {
+      "first_correct": 64,
+      "stop_class_correct": 14,
+      "full_correct": 10,
+      "c2_full_correct": 1
+    }
+  },
+  "manifest_sha256": "5088f373281616abed19ef9fd1666f19170cc48557100c99f126a0742d09ae6d",
+  "runner_sha256": "8f14bf35713b1d93db46cb726c14a1a52643ad2ff30a76403a872e1c63a67c15",
+  "raw_results_sha256": "d5e1529fe514afe92d0ab5b820cf665e5ffa12011233181dbcbaee1f36df898c",
+  "companion_zip_sha256": "2c945803a5336820a5f17c72daaaa7cd1a9a46f9b9299c0fc0af87d1cbe115e3",
+  "independent_numpy": "288/288 PASS",
+  "provenance": {
+    "U": "user SLE 01 NN education and growth goals",
+    "F": "historical R20/R23/P030-P035/UR1 fixed artifacts",
+    "T": "288 genuine PyTorch outputs; 288 independent NumPy replays; no new training",
+    "A": "nuisance lesson might transfer, proved limited STOP benefit, not first-word copy generalization"
+  }
+}
