@@ -1,7 +1,9 @@
 """Public audit copy of R19's only architecture change.
 
 Same 10,457-parameter feed-forward network as R18; first answer word sees a,
-second answer word sees b, STOP sees all four. Actual frozen training runner
+cursor positions 6..11 see b only. **POST-RUN ERRATUM:** for r1, STOP is
+already at cursor6 and therefore ALSO sees only b; this violated the frozen
+prose intent to leave STOP unchanged. r2 STOP at cursor12 still sees all. Actual frozen training runner
 SHA256 2705913fe770783778cb45bed586eecfa397fccb86433cc0c9d392720c3da682
 and exact checkpoints live in the R19 companion ZIP. This isolated file is
 not a replacement for the complete frozen runner.
