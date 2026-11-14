@@ -1,0 +1,102 @@
+{
+  "work_id": "SLE-AE1-R25-D4-D5-OUT-OF-DOMAIN-20261114",
+  "status": "PASS_3_OF_3_predeclared_joint_gate_but_copy_ceiling",
+  "profile": "SLE-AE1-n5-v1",
+  "base_pr": 74,
+  "pre_manifest_commit": "5c0587f0d76d8c219c4b013a6508e98fb79facf8",
+  "pre_protocol_commit": "d1553157800c7db4c04cfdbf2c93661b5bac6765",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "calibration_Q": 32,
+  "test_Q": 64,
+  "student_checkpoints": 6,
+  "parameters_each": 10457,
+  "new_training_updates": 0,
+  "training_MAC": 0,
+  "forwards_greedy": 5643,
+  "forwards_extra_STOP": 576,
+  "total_forwards": 6219,
+  "inference_MAC": 67911480,
+  "results_c2_test": {
+    "d4_R20_STOP": 22,
+    "d4_R23_STOP": 36,
+    "d5_R20_STOP": 18,
+    "d5_R23_STOP": 29,
+    "pooled_denominator": 96,
+    "pooled_R20_STOP": 40,
+    "pooled_R23_STOP": 65,
+    "pooled_R20_full": 40,
+    "pooled_R23_full": 65,
+    "firstword_correct_each_arm": 96
+  },
+  "results_c0_test": {
+    "denominator": 96,
+    "R20_STOP": 87,
+    "R23_STOP": 88
+  },
+  "per_seed": [
+    {
+      "seed": 101,
+      "d4_stop": [
+        8,
+        14
+      ],
+      "d5_stop": [
+        8,
+        13
+      ],
+      "firstword_c2_each_arm": 32,
+      "gate": true
+    },
+    {
+      "seed": 202,
+      "d4_stop": [
+        6,
+        11
+      ],
+      "d5_stop": [
+        4,
+        9
+      ],
+      "firstword_c2_each_arm": 32,
+      "gate": true
+    },
+    {
+      "seed": 303,
+      "d4_stop": [
+        8,
+        11
+      ],
+      "d5_stop": [
+        6,
+        7
+      ],
+      "firstword_c2_each_arm": 32,
+      "gate": true
+    }
+  ],
+  "single_bit_d4_to_d5_R23_c2": {
+    "pairs": 48,
+    "full_output_changed": 9,
+    "STOP_correct_to_wrong": 7,
+    "STOP_wrong_to_correct": 0
+  },
+  "numpy_replay": {
+    "correct_full_outputs": 576,
+    "correct_STOP_logits": 576,
+    "max_abs_logit_error": 0.00000286102294921875
+  },
+  "manifest_SHA256": "0465f40a29cd9a9c9069cad739e2dbb2018d8fce29fedc72328b290d7ffbbefb",
+  "runner_SHA256": "e2c02b935c45b3a8f5b7fd1c73ad611e663d61d630ae8dfa9f06352aaa4f43f1",
+  "full_raw_SHA256": "9416ce8874e63c6500f27af1fe1d171313dbad0596bd278657f8cd218b69b923",
+  "full_results_SHA256": "5c96d66f6590e6564b64264f904582884280ab410b0e4631dceba7318735a705",
+  "companion_filename": "sle_ae1_r25_ood_dbit_20261114.zip",
+  "companion_SHA256": "e842869bdd900fab860559dfc20c5f4e2cd852b99b30079d9da784ce43f6bb29",
+  "nvidia_calls": 0,
+  "codex_calls": 0,
+  "gemini_calls": 0,
+  "important_limitation": "First word is already 96/96 each arm; STOP pass cannot refute R24 first-word regression; c2 STOP still 31/96 errors after R23; d bit remains nuisance."
+}
