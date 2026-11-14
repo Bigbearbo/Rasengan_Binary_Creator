@@ -1,0 +1,354 @@
+{
+  "report_id": "window-gpt-small-model-training-20261114",
+  "version": "1.0",
+  "author": "視窗 GPT",
+  "date_taipei": "2026-11-14",
+  "created_at_utc": "2026-11-14T09:46:29.678657+00:00",
+  "purpose": "Reusable training knowledge and evidence-based practical lessons for the existing SLE small-neural-network project.",
+  "repository": "Bigbearbo/Rasengan_Binary_Creator",
+  "base_commit": "d032a825c2b419f365bf34a531baee3b53b91750",
+  "branch": "research/window-gpt/small-model-training-handbook-20261114",
+  "status": "literature_and_historical_evidence_report_not_a_new_training_protocol",
+  "new_neural_forward_passes": 0,
+  "new_optimizer_updates": 0,
+  "checkpoints_modified": 0,
+  "provenance": {
+    "U": "Existing author direction is referenced through already-public project evidence; no private chat or Library content copied.",
+    "F": "13 external primary/author/official sources plus 8 immutable project evidence references.",
+    "T_new": "Only document/source-definition checks and arithmetic checks of existing P029 JSON; no neural rerun.",
+    "T_historical": "P027/P029/P030/P035 and PR61 execution belongs to their original authors; PR56 inference belongs to the earlier window GPT run.",
+    "A": "Engineering recommendations, diagnostic invariants and the native-I/O future comparison direction; not claimed universally optimal or user-ratified."
+  },
+  "external_sources": [
+    {
+      "id": "S01",
+      "url": "https://arxiv.org/pdf/1511.08228v3",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S02",
+      "url": "https://arxiv.org/pdf/1707.00183v2",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S03",
+      "url": "https://proceedings.mlr.press/v70/graves17a/graves17a.pdf",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S04",
+      "url": "https://karpathy.github.io/2019/04/25/recipe/",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S05",
+      "url": "https://cs231n.github.io/neural-networks-3/",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S06",
+      "url": "https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S07",
+      "url": "https://arxiv.org/pdf/1412.6980v9",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S08",
+      "url": "https://arxiv.org/pdf/1506.03099v3",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S09",
+      "url": "https://arxiv.org/pdf/1511.05641v4",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S10",
+      "url": "https://arxiv.org/pdf/1902.10486",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S11",
+      "url": "https://arxiv.org/pdf/2201.02177v1",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S12",
+      "url": "https://docs.pytorch.org/docs/2.15/notes/randomness.html",
+      "reviewed_on_taipei": "2026-11-14"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.deeplearningbook.org/contents/guidelines.html",
+      "reviewed_on_taipei": "2026-11-14"
+    }
+  ],
+  "source_type_counts": {
+    "original_research_papers": 9,
+    "author_textbook_chapters": 1,
+    "author_or_course_practical_guides": 2,
+    "official_documentation": 1
+  },
+  "project_sources": [
+    {
+      "id": "E01",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261112_p024_p030/reports/P027-修正教學方式與教材覆蓋-2026-11-12.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E02",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261112_p024_p030/reports/P029-論文四逐階不退回實測-2026-11-12.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E03",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261112_p024_p030/reports/P030-純二元動態網路第一批結果-2026-11-12.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E04",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/a309f2fc3e23255327fcab35745c27012d15ed4f/experiments/spiral_neural/20261112_p035/P035-輸入編碼與容量時序實測結果-2026-11-12.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E05",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261114_window_progress_review/probe_summary.json",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E06",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261114_window_progress_review/NEXT_DECISIONS.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E07",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ce42f504e20bc4367b04a94e464cb7c34338e0f8/experiments/spiral_neural/20261114_window_mastery_review/README.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    },
+    {
+      "id": "E08",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e5bbbb7c152ec9b93729e3de9263eab3a816f791/experiments/spiral_neural/20261114_codex_pro58_transfer/RESULTS.md",
+      "review_scope": "historical public report or saved result read; no neural rerun"
+    }
+  ],
+  "record_checks": {
+    "status": "PASS",
+    "scope": "document source definitions and arithmetic against existing saved P029 results; no model execution",
+    "thresholds": [
+      {
+        "N": 4,
+        "minimum_correct": 4,
+        "maximum_errors": 0
+      },
+      {
+        "N": 8,
+        "minimum_correct": 8,
+        "maximum_errors": 0
+      },
+      {
+        "N": 16,
+        "minimum_correct": 16,
+        "maximum_errors": 0
+      },
+      {
+        "N": 20,
+        "minimum_correct": 19,
+        "maximum_errors": 1
+      },
+      {
+        "N": 32,
+        "minimum_correct": 31,
+        "maximum_errors": 1
+      },
+      {
+        "N": 900,
+        "minimum_correct": 855,
+        "maximum_errors": 45
+      }
+    ],
+    "independent_bit_example_0_95_pow_20": 0.3584859224085419,
+    "ae1_targets_per_900_questions": {
+      "E1": 6300,
+      "E4": 22500
+    },
+    "P029_source_sha256": "ef97e1a01502771a1a72038aa09ff23cb471cf240dbf9ffaebe2d079d72ae9f7",
+    "P029_summary_url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/ad643ed635f1fdafd2797a95b3a398046143b86c/experiments/spiral_neural/20261112_p024_p030/evidence/echo-monotonic-ranks-20261112/summary-table.json",
+    "P029_runs_checked": [
+      {
+        "arm": "curriculum",
+        "seed": 101,
+        "total_updates": 33850,
+        "n8_presentations": 960,
+        "n8_final_test": [
+          32,
+          32
+        ]
+      },
+      {
+        "arm": "curriculum",
+        "seed": 202,
+        "total_updates": 24712,
+        "n8_presentations": 768,
+        "n8_final_test": [
+          30,
+          32
+        ]
+      },
+      {
+        "arm": "curriculum",
+        "seed": 303,
+        "total_updates": 24708,
+        "n8_presentations": 768,
+        "n8_final_test": [
+          31,
+          32
+        ]
+      },
+      {
+        "arm": "direct8",
+        "seed": 101,
+        "total_updates": 23040,
+        "n8_presentations": 2304,
+        "n8_final_test": [
+          32,
+          32
+        ]
+      },
+      {
+        "arm": "direct8",
+        "seed": 202,
+        "total_updates": 23040,
+        "n8_presentations": 2304,
+        "n8_final_test": [
+          31,
+          32
+        ]
+      },
+      {
+        "arm": "direct8",
+        "seed": 303,
+        "total_updates": 28800,
+        "n8_presentations": 2880,
+        "n8_final_test": [
+          32,
+          32
+        ]
+      }
+    ],
+    "source_definition_count": 21
+  },
+  "independent_reviews": [
+    {
+      "task": "training_debugging_and_metrics",
+      "status": "reviewed",
+      "result": "No blocking issue; accepted deterministic-greedy teacher-prefix invariant with explicit interface/state assumptions."
+    },
+    {
+      "task": "curriculum_growth_and_cost",
+      "status": "reviewed",
+      "result": "No blocking issue; added distinction between immediate function preservation and later optimization trajectory, with floating-point tolerance scope."
+    },
+    {
+      "task": "project_evidence_and_provenance",
+      "status": "reviewed",
+      "result": "No blocking issue; clarified old-wrong to new-correct rather than assuming recovery for P035."
+    }
+  ],
+  "external_worker": {
+    "name": "NVIDIA/OpenRouter",
+    "status": "skipped_unavailable",
+    "actual_calls": 0,
+    "reason": "No callable worker or authorized API integration exposed in this environment; native reviewers are not NVIDIA."
+  },
+  "remote_snapshot_scope": "Latest 8 PRs by updated time were read as metadata only during preparation; their findings have NOT been independently audited here. PR61 body and fixed RESULTS.md were separately read. This is not a comprehensive current-progress report.",
+  "latest_8_updated_prs_observed": [
+    {
+      "number": 71,
+      "title": "[SLE NN R22] 新上下文單bit干擾轉移：STOP 18/36→33/36，預註冊診斷PASS 3/3",
+      "updated_at": "2026-11-14T08:42:56Z",
+      "head_sha": "dbde92c8204cddd2cbefc78c93024ba7815c2052",
+      "head_branch": "research/scheduled-nn-ae1-r22-new-context-cbit-20261114",
+      "base_sha": "121fab51fca0ca9ccdc51ce50164c8fd8b2623a2",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/71",
+      "state": "open"
+    },
+    {
+      "number": 70,
+      "title": "[SLE NN R21] 單位元 c2→c0 診斷：r1 STOP 27/60→57/60，負控制不變；預註冊 PASS 2/3",
+      "updated_at": "2026-11-14T07:55:49Z",
+      "head_sha": "121fab51fca0ca9ccdc51ce50164c8fd8b2623a2",
+      "head_branch": "research/scheduled-nn-ae1-r21-cbit-stop-20261114",
+      "base_sha": "468f2a4d55a1d5d4b75499887dee12c5725568bc",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/70",
+      "state": "open"
+    },
+    {
+      "number": 69,
+      "title": "[SLE NN R20] r1 STOP 路由修復實訓 FAIL 1/3；r2 STOP 改善但 r1 停止大幅退步",
+      "updated_at": "2026-11-14T06:54:41Z",
+      "head_sha": "468f2a4d55a1d5d4b75499887dee12c5725568bc",
+      "head_branch": "research/scheduled-nn-ae1-r1stop-corrected-20261114-r20",
+      "base_sha": "b7aada524b85f2771f6b98e7cb03402804037968",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/69",
+      "state": "open"
+    },
+    {
+      "number": 68,
+      "title": "[SLE NN R19] 雙詞路由實測FAIL 0/3；後審發現 r1 STOP 也被遮蔽",
+      "updated_at": "2026-11-14T05:56:02Z",
+      "head_sha": "b7aada524b85f2771f6b98e7cb03402804037968",
+      "head_branch": "research/scheduled-nn-ae1-second-word-route-20261114-r19",
+      "base_sha": "d032a825c2b419f365bf34a531baee3b53b91750",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/68",
+      "state": "open"
+    },
+    {
+      "number": 67,
+      "title": "[SLE NN R18] 第一答案詞硬路由：3/3 預註冊過關，完整輸出仍有STOP與第二詞失敗",
+      "updated_at": "2026-11-14T04:45:59Z",
+      "head_sha": "e1ed293a3ce44ab044838f65ae2b49fe6b9463de",
+      "head_branch": "research/scheduled-nn-ae1-first-word-route-20261114-r18",
+      "base_sha": "d032a825c2b419f365bf34a531baee3b53b91750",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/67",
+      "state": "open"
+    },
+    {
+      "number": 66,
+      "title": "[NN研究 R17] b單bit正確前綴診斷：3/3門檻、702真推論、發現輸出前綴盲區",
+      "updated_at": "2026-11-14T03:51:30Z",
+      "head_sha": "ae26ec4bfe1f08a0507718b7d356169ac339e5ad",
+      "head_branch": "research/scheduled-nn-ae1-b4-correctprefix-20261114-r17",
+      "base_sha": "d032a825c2b419f365bf34a531baee3b53b91750",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/66",
+      "state": "open"
+    },
+    {
+      "number": 65,
+      "title": "[NN研究 R16] b16→20單位元介入：首答案受干擾、門檻FAIL 0/3、54真01推論",
+      "updated_at": "2026-11-14T02:45:56Z",
+      "head_sha": "a8387971af7fcf72ec72cf51f24a735d97dcb419",
+      "head_branch": "research/scheduled-nn-ae1-b4-single-bit-20261114-r16",
+      "base_sha": "d032a825c2b419f365bf34a531baee3b53b91750",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/65",
+      "state": "open"
+    },
+    {
+      "number": 64,
+      "title": "[NN研究 R15] 複合高位詞換b上下文：門檻FAIL 0/3、459筆真01推論及獨立回播",
+      "updated_at": "2026-11-14T01:53:23Z",
+      "head_sha": "ff2004fee36b1d773a7de7f52df857989474725e",
+      "head_branch": "research/scheduled-nn-ae1-b-context-transfer-20261114-r15",
+      "base_sha": "d032a825c2b419f365bf34a531baee3b53b91750",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/64",
+      "state": "open"
+    }
+  ],
+  "pr61": {
+    "head_sha": "e5bbbb7c152ec9b93729e3de9263eab3a816f791",
+    "review_scope": "PR description and fixed RESULTS.md text only in this turn; no full model bundle or independent neural replay."
+  },
+  "unchanged_scope": "Training code, datasets, checkpoints, historical outcomes, and all other workers' branches remain untouched."
+}
