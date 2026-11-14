@@ -1,5 +1,11 @@
 # 螺旋語研究程式入口 — Codex 導覽（2026-11-11）
 
+## 2026-11-14 新增：小模型訓練知識與實驗經驗
+
+[小模型訓練報告](ai_orchestration/small_model_training_20261114/README.md)彙整一手研究、P027–P035 與 PR56／58／61 的經驗，涵蓋教材覆蓋、訓練除錯、升課政策、持續學習、擴網與公平成本比較。先讀[短版開工卡](ai_orchestration/small_model_training_20261114/RUN_CARD.md)可按問題查閱。這是方法報告，本輪沒有新 NN 推論或訓練；不取代最新分支的實驗狀態，也不把 95% 設為通用規則。
+
+同日新增[開源工具與自動化補篇](ai_orchestration/small_model_training_20261114/OPEN_SOURCE_TOOLING.md)：makemore／Zero to Hero 補課、Hydra 固定批次、Ignite 事件與保存、Optuna 的適用時機；對照已有 PR61 入口與 GPU 工程報告，先串接既有能力。這是靜態研究與採用建議，尚未整合新 runner。
+
 ## 2026-11-12 新增：真正神經網路實測
 
 [P024–P030 實測成果索引](ai_orchestration/CODEX_EXPERIMENT_RESULTS_INDEX_20261112.md)連到可重跑程式、機器證據、模型checkpoint與GPT交接。這與下列腳本式雙代理示範分開；P030只完成第一批，神經轉碼器與P031數學比較仍未實作。
