@@ -1,0 +1,3 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_question_trace.cpp -o build/test_tree_question_trace
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_question_trace
+PASS five trace reconciliations, all 60 censuses and slot bounds

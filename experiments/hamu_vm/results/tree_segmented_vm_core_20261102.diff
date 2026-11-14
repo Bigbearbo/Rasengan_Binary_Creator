@@ -1,0 +1,263 @@
+--- previous/src/hamu_vm_core.hpp
++++ segmented/src/hamu_vm_core.hpp
+@@ -14,6 +14,9 @@
+ #include <map>
+ #include <random>
+ #include <climits>
++#include <array>
++#include <deque>
++#include <cstdint>
+ 
+ using namespace std;
+ 
+@@ -408,6 +411,7 @@
+     int tree_capacity = 0; // IDs 1..capacity; default five-bit legacy mode
+     int tree_id_bits = 5; // opt-in wider tree handles, 5..12 (not segmented allocation)
+     bool tree_index_enabled = true; // wide-mode VM-native derived index, not inherited memory
++    bool tree_segmented_enabled = false; // EXPERIMENTAL opt-in, canonical tree in 31-row pages
+ 
+     struct {
+         int input_start = 0;
+@@ -457,6 +461,78 @@
+     unsigned long long tree_lookup_rows_examined = 0;
+     // Wide-tree derived lookup cache. The guest's tree rows remain canonical.
+     // Lazy rebuild is charged in row-inspection metrics but not guest steps.
++    // Experimental page ABI: each canonical row is one packed 32-bit value.
++    // [parent <=16 bits][3-bit key][3-bit action state][live]. A 31-row
++    // deque page has stable addresses when pages are appended. This ABI is
++    // NOT interchangeable with the legacy guest-addressable bit rows.
++    static constexpr int SEGMENT_PAGE_ROWS=31;
++    using SegmentPage=std::array<uint32_t,SEGMENT_PAGE_ROWS>;
++    std::deque<SegmentPage> segment_pages;
++    std::deque<SegmentPage> segment_pages_his;
++    int segment_used=0;
++    int segment_used_his=0;
++    std::unordered_map<uint64_t,int> segment_edge_index; // derived, never inherited
++    bool segment_edge_index_valid=false;
++    unsigned long long segment_edge_rebuild_rows=0,segment_edge_lookups=0;
++    unsigned long long segment_edge_linear_rows=0,segment_growth_pages=0;
++
++    uint32_t segment_row(int id) const {
++        if(id<=0||id>segment_used) return 0;
++        return segment_pages.at((id-1)/SEGMENT_PAGE_ROWS).at((id-1)%SEGMENT_PAGE_ROWS);
++    }
++    uint32_t &segment_row_ref(int id) {
++        if(id<=0||id>params.tree_capacity) throw std::out_of_range("segment row ID out of capacity");
++        return segment_pages.at((id-1)/SEGMENT_PAGE_ROWS).at((id-1)%SEGMENT_PAGE_ROWS);
++    }
++    static uint64_t segment_edge(int parent,int key) {
++        return (uint64_t(parent)<<3)|uint64_t(key);
++    }
++    void invalidate_segment_index(){segment_edge_index.clear();segment_edge_index_valid=false;}
++    void ensure_segment_index() {
++        if(segment_edge_index_valid) return;
++        segment_edge_index.clear();
++        for(int id=1;id<=segment_used;++id){
++            ++segment_edge_rebuild_rows;
++            const uint32_t row=segment_row(id);
++            if(row&1u) segment_edge_index.emplace(segment_edge(int(row>>7),int((row>>4)&7)),id);
++        }
++        segment_edge_index_valid=true;
++    }
++    int segment_find(int parent,int key) {
++        ++segment_edge_lookups;
++        if(params.tree_index_enabled){
++            ensure_segment_index();
++            const auto it=segment_edge_index.find(segment_edge(parent,key));
++            return it==segment_edge_index.end()?0:it->second;
++        }
++        for(int id=1;id<=segment_used;++id){
++            ++segment_edge_linear_rows;
++            const uint32_t row=segment_row(id);
++            if((row&1u) && int(row>>7)==parent && int((row>>4)&7)==key)return id;
++        }
++        return 0;
++    }
++    void grow_segmented_tree_capacity(int capacity){
++        if(!params.tree_segmented_enabled || capacity<=params.tree_capacity ||
++           capacity>(1<<params.tree_id_bits)-1 || capacity<1)
++            throw std::invalid_argument("Invalid segmented tree capacity growth");
++        const std::size_t pages_needed=(std::size_t(capacity)+SEGMENT_PAGE_ROWS-1)/SEGMENT_PAGE_ROWS;
++        if(pages_needed>65536)throw std::invalid_argument("Segmented tree page limit");
++        // Deque appends preserve existing row addresses. If allocation throws,
++        // discard only the newly appended empty pages before rethrowing.
++        const std::size_t old_pages=segment_pages.size();
++        try {
++            while(segment_pages.size()<pages_needed)
++                segment_pages.push_back(SegmentPage{});
++        } catch (...) {
++            while(segment_pages.size()>old_pages)segment_pages.pop_back();
++            throw;
++        }
++        segment_growth_pages+=segment_pages.size()-old_pages;
++        params.tree_capacity=capacity;
++        creat_his=false;
++    }
++
+     bool tree_index_valid = false;
+     bool tree_index_mutation_guard = false;
+     // Packed 32-bit open-addressed index, separate from inheritable VM bits.
+@@ -584,7 +660,7 @@
+     void grow_wide_tree_capacity(int new_capacity) {
+         const int bits=params.tree_id_bits,row_bits=bits+7;
+         const int old_cap=params.tree_capacity,old_program=params.layout.program_start;
+-        if(bits<=5 || old_cap<1 || new_capacity<=old_cap ||
++        if(params.tree_segmented_enabled || bits<=5 || old_cap<1 || new_capacity<=old_cap ||
+            new_capacity>(1<<bits)-1 ||
+            params.tree_start<params.layout.work_start ||
+            params.tree_start+old_cap*row_bits!=old_program ||
+@@ -632,11 +708,21 @@
+               p.layout.program_start < p.layout.total_size) || p.layout.val_reg_size < 1 ||
+               p.op_order < 4 || p.op_order > 16 || p.op_lvl < 1 || p.op_lvl > 8 ||
+               p.unit_cost_per <= 0 || p.stable_work_bits < 0 ||
+-              p.tree_id_bits < 5 || p.tree_id_bits > 12 ||
++              p.tree_id_bits < 5 ||
++              p.tree_id_bits > (p.tree_segmented_enabled?16:12) ||
++              (p.tree_segmented_enabled &&
++               (p.tree_id_bits<=5 || p.tree_capacity<1 ||
++                p.tree_capacity>(1<<p.tree_id_bits)-1 ||
++                p.layout.val_reg_size<p.tree_id_bits+4)) ||
+               p.stable_work_bits >= p.layout.program_start-p.layout.work_start)
+             throw std::invalid_argument("Invalid hamster memory layout or VM parameters");
+         params.layout.total_size += int(Mem_inc_rate * ROUND_outside);
+         memory = std::vector<bool>(params.layout.total_size, 0);
++        if(p.tree_segmented_enabled){
++            const auto pages=(std::size_t(p.tree_capacity)+SEGMENT_PAGE_ROWS-1)/SEGMENT_PAGE_ROWS;
++            segment_pages.resize(pages);
++            segment_growth_pages=pages;
++        }
+         val_reg = std::vector<bool>(params.layout.val_reg_size, 0);
+ 
+         memory_his = std::vector<bool>(params.layout.total_size, 0);
+@@ -746,6 +832,10 @@
+ 
+     void new_his() {
+         creat_his = true;
++        if(params.tree_segmented_enabled){
++            segment_pages_his=segment_pages;
++            segment_used_his=segment_used;
++        }
+         memory_his = memory;
+         val_reg_his = val_reg;
+         max_hp_his = hp;
+@@ -763,6 +853,7 @@
+             params.tree_start != h2.params.tree_start ||
+             params.tree_capacity != h2.params.tree_capacity ||
+             params.tree_id_bits != h2.params.tree_id_bits ||
++            params.tree_segmented_enabled != h2.params.tree_segmented_enabled ||
+             params.layout.work_start != h2.params.layout.work_start ||
+             params.layout.program_start != h2.params.layout.program_start ||
+             val_reg.size() != h2.val_reg_his.size())
+@@ -770,6 +861,10 @@
+         if (h2.memory_his.size() > 1048576 ||
+             h2.memory_his.size() < static_cast<size_t>(params.layout.program_start))
+             throw std::invalid_argument("Invalid snapshot capacity");
++        if(params.tree_segmented_enabled &&
++           (h2.segment_pages_his.size()!=segment_pages.size() ||
++            h2.segment_used_his<0 || h2.segment_used_his>params.tree_capacity))
++            throw std::invalid_argument("Invalid segmented snapshot");
+         params.layout.total_size = static_cast<int>(h2.memory_his.size());
+         memory.resize(params.layout.total_size, false);
+         memory_his.resize(params.layout.total_size, false);
+@@ -782,6 +877,16 @@
+         for (int i = 0; i < h2.val_reg_his.size(); i++) {
+             val_reg[i] = h2.val_reg_his[i];
+             //val_reg = h2.val_reg_his;
++        }
++        if(params.tree_segmented_enabled){
++            if(h2.segment_pages_his.size()!=segment_pages.size() ||
++               h2.segment_used_his<0 || h2.segment_used_his>params.tree_capacity)
++                throw std::invalid_argument("Invalid segmented snapshot");
++            segment_pages=h2.segment_pages_his;
++            segment_used=h2.segment_used_his;
++            segment_pages_his=segment_pages;
++            segment_used_his=segment_used;
++            invalidate_segment_index();
+         }
+         // Rebuild non-hereditary caches from the inherited canonical rows.
+         invalidate_tree_index();
+@@ -948,6 +1053,8 @@
+     const std::vector<bool> written_before(h.written.begin()+writable_start,
+                                             h.written.begin()+writable_end);
+     const auto registers_before=h.val_reg;
++    const int segment_used_before=h.segment_used;
++    std::vector<std::pair<int,uint32_t>> segment_action_undo;
+     // A window has its own cursor. SET_PTR1 can change the next window now or
+     // when the current window reaches its end. All windows share one step budget.
+     auto order_at = [&](int ordinal) {
+@@ -1032,6 +1139,27 @@
+         bool jump_now = false;
+         switch (op) {
+         case SpiralOp::TREE_ACTION: {
++            if(h.params.tree_segmented_enabled){
++                const int bits=h.params.tree_id_bits;
++                if(h.val_reg.size()<std::size_t(bits+3)||param>1)break;
++                int id=0;
++                for(int b=0;b<bits;++b)id=(id<<1)|int(h.val_reg[b]);
++                const uint32_t row=h.segment_row(id);
++                if(!(row&1u)){
++                    h.val_reg[bits]=h.val_reg[bits+1]=h.val_reg[bits+2]=false;
++                    break;
++                }
++                if(param==1){
++                    segment_action_undo.emplace_back(id,row);
++                    const unsigned action=4u|(unsigned(h.val_reg[bits+1])<<1)|unsigned(h.val_reg[bits+2]);
++                    h.segment_row_ref(id)=(row&~14u)|(action<<1);
++                }
++                const unsigned state=(h.segment_row(id)>>1)&7u;
++                h.val_reg[bits]=(state&4u)!=0;
++                h.val_reg[bits+1]=(state&4u)!=0 && (state&2u)!=0;
++                h.val_reg[bits+2]=(state&4u)!=0 && (state&1u)!=0;
++                break;
++            }
+             // Versioned tree row: [live][parent bits][3 key bits]; action
+             // slots follow all rows in legacy mode; wide rows store actions
+             // inline to keep offsets invariant when capacity grows.
+@@ -1068,6 +1196,47 @@
+         case SpiralOp::TREE_ADD:
+         case SpiralOp::TREE_FIND_REG:
+         case SpiralOp::TREE_ADD_REG: {
++            if(h.params.tree_segmented_enabled){
++                const int bits=h.params.tree_id_bits,cap=h.params.tree_capacity;
++                const bool from_reg=op==SpiralOp::TREE_FIND_REG||op==SpiralOp::TREE_ADD_REG;
++                if(h.val_reg.size()<std::size_t(bits+(from_reg?4:1)))break;
++                int key=param;
++                if(from_reg){
++                    key=0;for(int b=bits+1;b<bits+4;++b)key=(key<<1)|int(h.val_reg[b]);
++                }
++                if(key>7)break;
++                int parent=0;for(int b=0;b<bits;++b)parent=(parent<<1)|int(h.val_reg[b]);
++                const bool parent_exists=parent==0 ||
++                    (parent<=h.segment_used && (h.segment_row(parent)&1u));
++                int found=parent_exists?h.segment_find(parent,key):0;
++                if(!found&&parent_exists&&(op==SpiralOp::TREE_ADD||op==SpiralOp::TREE_ADD_REG)){
++                    if(h.segment_used>=cap){
++                        h.tree_capacity_blocked=true;h.stop=true;
++                        // Atomic guest transaction: roll back only rows touched
++                        // by tree opcodes, without copying the entire tree.
++                        for(auto it=segment_action_undo.rbegin();it!=segment_action_undo.rend();++it)
++                            h.segment_row_ref(it->first)=it->second;
++                        for(int id=h.segment_used;id>segment_used_before;--id)
++                            h.segment_row_ref(id)=0;
++                        h.segment_used=segment_used_before;
++                        h.invalidate_segment_index();
++                        std::copy(memory_before.begin(),memory_before.end(),
++                                  h.memory.begin()+writable_start);
++                        std::copy(written_before.begin(),written_before.end(),
++                                  h.written.begin()+writable_start);
++                        h.val_reg=registers_before;
++                        for(int b=0;b<=bits;++b)h.val_reg[b]=false;
++                        return;
++                    }
++                    found=++h.segment_used;
++                    h.segment_row_ref(found)=(uint32_t(parent)<<7)|(uint32_t(key)<<4)|1u;
++                    if(h.segment_edge_index_valid)
++                        h.segment_edge_index.emplace(Hamster::segment_edge(parent,key),found);
++                }
++                for(int b=0;b<bits;++b)h.val_reg[b]=(found>>(bits-1-b))&1;
++                h.val_reg[bits]=found!=0;
++                break;
++            }
+             const int base=h.params.tree_start,cap=h.params.tree_capacity;
+             const int bits=h.params.tree_id_bits;
+             const int row_bits=(bits>5?bits+7:bits+4);

@@ -1,0 +1,99 @@
+
+=== 本輪最終 ASan/UBSan 回饋整合；quarantine_size_mb=16 ===
+pending slots ready
+feedback edge cases passed
+matrix 1 0 0
+matrix 1 0 1
+matrix 1 1 0
+matrix 1 1 1
+matrix 1 2 0
+matrix 1 2 1
+matrix 1 3 0
+matrix 1 3 1
+matrix 1 4 0
+matrix 1 4 1
+matrix 1 5 0
+matrix 1 5 1
+matrix 1 6 0
+matrix 1 6 1
+matrix 1 7 0
+matrix 1 7 1
+matrix 2 0 0
+matrix 2 0 1
+matrix 2 1 0
+matrix 2 1 1
+matrix 2 2 0
+matrix 2 2 1
+matrix 2 3 0
+matrix 2 3 1
+matrix 2 4 0
+matrix 2 4 1
+matrix 2 5 0
+matrix 2 5 1
+matrix 2 6 0
+matrix 2 6 1
+matrix 2 7 0
+matrix 2 7 1
+PASS guest feedback prunes two context masks, confirms, routes and inherits
+
+=== 既有整合與評分回歸 ===
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_pending_context
+PASS guest records paired context and learns two working tree routes
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_trial_grade
+PASS fresh VM tree trial grading: coverage, timeout, stale output and 16 candidates
+
+=== 樹橋接、路由與 VM 回歸（前述完整回歸執行記錄） ===
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_feedback_cycle.cpp -o build/test_tree_feedback_cycle
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_feedback_cycle
+PASS guest feedback prunes two context masks, confirms, routes and inherits
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_pending_context.cpp -o build/test_tree_pending_context
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_pending_context
+PASS guest records paired context and learns two working tree routes
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_trial_grade.cpp -o build/test_tree_trial_grade
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_trial_grade
+PASS fresh VM tree trial grading: coverage, timeout, stale output and 16 candidates
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_context_confirm
+PASS guest-captured category and operator locate distinct actions in two-level tree
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_confirm_bridge
+PASS confirmed local IDs bind two tree actions, unconfirmed ignored, inherited
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_context_vm
+PASS two-level guest tree routing, shared child key, unknown paths, inheritance
+ASAN_OPTIONS=detect_leaks=0 ./build/test_vm
+PASS: decoding, READ, inheritance, I/O, COPY, branching, protection, budget; 6000 random guests
+
+=== 一般編譯 -O2 同組測試 ===
+pending slots ready
+feedback edge cases passed
+matrix 1 0 0
+matrix 1 0 1
+matrix 1 1 0
+matrix 1 1 1
+matrix 1 2 0
+matrix 1 2 1
+matrix 1 3 0
+matrix 1 3 1
+matrix 1 4 0
+matrix 1 4 1
+matrix 1 5 0
+matrix 1 5 1
+matrix 1 6 0
+matrix 1 6 1
+matrix 1 7 0
+matrix 1 7 1
+matrix 2 0 0
+matrix 2 0 1
+matrix 2 1 0
+matrix 2 1 1
+matrix 2 2 0
+matrix 2 2 1
+matrix 2 3 0
+matrix 2 3 1
+matrix 2 4 0
+matrix 2 4 1
+matrix 2 5 0
+matrix 2 5 1
+matrix 2 6 0
+matrix 2 6 1
+matrix 2 7 0
+matrix 2 7 1
+PASS guest feedback prunes two context masks, confirms, routes and inherits

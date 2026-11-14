@@ -1,0 +1,9 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_compact_reference.cpp -o build/test_tree_compact_reference
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_compact_reference
+PASS guest chooses known or untried options and addresses payload, IDs 1..7 and 31; inheritance
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_error_trial.cpp -o build/test_tree_error_trial
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_error_trial
+PASS input-token search and feedback, recursion, inheritance and full-tree refusal
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_error_world.cpp -o build/test_tree_error_world
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_error_world
+PASS majority gate and full-tree refusal without repeated paid attempts

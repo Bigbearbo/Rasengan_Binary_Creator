@@ -1,0 +1,8 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_observed_transient.cpp -o build/test_tree_observed_transient
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16 ./build/test_tree_observed_transient
+failing_fragment,recovery,confirmed_turn,valid_of_6,correct_of_6,recovered,learning_guest,learning_request,learning_recovery,learning_fragment,learning_observations,failed_observations
+ZERO,0,5,4,2,0,12295,1025,0,304,17,2
+ZERO,1,4,6,4,2,14207,820,571,147,10,2
+COPY,0,3,4,4,0,5493,615,0,169,12,2
+COPY,1,3,6,4,2,10498,615,571,140,9,2
+PASS transient failures: identical schedule, no semantic elimination from failure, confirmation, binding, reclamation, 64 parent/child routes

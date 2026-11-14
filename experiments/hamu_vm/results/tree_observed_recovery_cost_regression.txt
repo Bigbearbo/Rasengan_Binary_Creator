@@ -1,0 +1,6 @@
+g++ -std=c++17 -O2 tests/benchmark_tree_observed_cost.cpp -o build/benchmark_tree_observed_cost
+./build/benchmark_tree_observed_cost
+policy,episodes,turns_per_episode,guest_steps_per_episode,request_steps_per_episode,fragment_steps_per_episode,observations_per_episode,vm_calls_per_episode,mean_learning_seconds
+full_host_reference,12,10,37135,0,684,40,240,0.0114259
+guest_requested,12,10,36589,2044,450,26,222,0.0102424
+PASS identical per-turn outcomes, masks and final trees; 32 routed answers per episode; learning timing excludes validation

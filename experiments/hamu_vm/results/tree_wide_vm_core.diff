@@ -1,0 +1,246 @@
+--- /dev/fd/63	2026-11-01 22:43:07.323835392 +0000
++++ src/hamu_vm_core.hpp	2026-11-01 22:38:26.696939001 +0000
+@@ -405,7 +405,8 @@
+     bool strict_work_insert = true; // false enables the historical VAG spill mode
+     int stable_work_bits = 0; // writable persistent tail, excluded from INSERT/DELETE
+     int tree_start = -1; // optional 9-bit nodes in stable work; root ID is 0
+-    int tree_capacity = 0; // IDs 1..capacity, at most 31
++    int tree_capacity = 0; // IDs 1..capacity; default five-bit legacy mode
++    int tree_id_bits = 5; // opt-in wider tree handles, 5..12 (not segmented allocation)
+ 
+     struct {
+         int input_start = 0;
+@@ -456,6 +457,7 @@
+     int step_limit = 32;
+     bool budget_exhausted = false;
+     bool work_insert_blocked = false;
++    bool tree_capacity_blocked = false; // wide-mode path transaction failed
+     std::vector<bool> written;
+     std::vector<bool> read_seen;
+     // Optional per-word information widths, in program order. Empty uses
+@@ -479,6 +481,49 @@
+         memory_his.resize(params.layout.total_size, false);
+     }
+ 
++    // Host-authorized capacity growth for the opt-in wide tree ABI.
++    // Wide rows keep their 3-bit action payload inline, so old row addresses
++    // and handles remain stable while the program is moved upward. This
++    // operation must run BETWEEN guest invocations, not during execution.
++    void grow_wide_tree_capacity(int new_capacity) {
++        const int bits=params.tree_id_bits,row_bits=bits+7;
++        const int old_cap=params.tree_capacity,old_program=params.layout.program_start;
++        if(bits<=5 || old_cap<1 || new_capacity<=old_cap ||
++           new_capacity>(1<<bits)-1 ||
++           params.tree_start<params.layout.work_start ||
++           params.tree_start+old_cap*row_bits!=old_program ||
++           params.stable_work_bits<old_cap*row_bits)
++            throw std::invalid_argument("Wide tree growth requires contiguous tree-at-work-tail");
++        const int delta=(new_capacity-old_cap)*row_bits;
++        if(delta>1048576-static_cast<int>(memory.size()) ||
++           static_cast<int>(memory.size())!=params.layout.total_size)
++            throw std::invalid_argument("Wide tree growth exceeds memory limit");
++        // Prepare the modified backing vectors before committing layout.
++        // Allocation failure leaves the original object untouched.
++        auto new_memory=memory,new_written=written,new_seen=read_seen;
++        new_memory.insert(new_memory.begin()+old_program,delta,false);
++        new_written.insert(new_written.begin()+old_program,delta,false);
++        new_seen.insert(new_seen.begin()+old_program,delta,false);
++        auto new_history=new_memory;
++        auto new_reg_history=val_reg;
++        memory.swap(new_memory);written.swap(new_written);
++        read_seen.swap(new_seen);memory_his.swap(new_history);
++        val_reg_his.swap(new_reg_history);
++        params.tree_capacity=new_capacity;
++        params.stable_work_bits+=delta;
++        params.layout.program_start+=delta;
++        params.layout.total_size+=delta;
++        if(pro_1>=old_program)pro_1+=delta;
++        if(pro_2>=old_program)pro_2+=delta;
++        if(ptr>=old_program)ptr+=delta;
++        if(secondary_ptr>=old_program)secondary_ptr+=delta;
++        if(output_ptr>=old_program)output_ptr+=delta;
++        // The old checkpoint has a different memory layout. Leave a coherent
++        // current-state backing copy, but require an explicit new_his()
++        // before it is authorized as a heredity snapshot.
++        creat_his=false;
++    }
++
+     Hamster(int _id, const HamsterParams& p) : id(_id), params(p), hp(p.initial_hp), age(0) {
+         if (!(0 <= p.layout.input_start && p.layout.input_start < p.layout.status_start &&
+               p.layout.status_start < p.layout.output_start &&
+@@ -487,6 +532,7 @@
+               p.layout.program_start < p.layout.total_size) || p.layout.val_reg_size < 1 ||
+               p.op_order < 4 || p.op_order > 16 || p.op_lvl < 1 || p.op_lvl > 8 ||
+               p.unit_cost_per <= 0 || p.stable_work_bits < 0 ||
++              p.tree_id_bits < 5 || p.tree_id_bits > 12 ||
+               p.stable_work_bits >= p.layout.program_start-p.layout.work_start)
+             throw std::invalid_argument("Invalid hamster memory layout or VM parameters");
+         params.layout.total_size += int(Mem_inc_rate * ROUND_outside);
+@@ -547,6 +593,7 @@
+         executed_steps = 0;
+         budget_exhausted = false;
+         work_insert_blocked = false;
++        tree_capacity_blocked = false;
+ 
+         // 將題目 token bits 寫入 input 區
+         for (const auto& token : p.question) {
+@@ -605,6 +652,8 @@
+     }
+ 
+     void copy_hamu(const Hamster& h2) {
++        if(h2.params.tree_id_bits>5 && !h2.creat_his)
++            throw std::invalid_argument("Wide tree donor requires a published snapshot");
+         if (params.op_order != h2.params.op_order || params.op_lvl != h2.params.op_lvl ||
+             params.stable_work_bits != h2.params.stable_work_bits ||
+             // A snapshot must not reinterpret 9-bit rows or TREE_ACTION's
+@@ -612,6 +661,7 @@
+             // Capacity migration requires a separate, explicit transaction.
+             params.tree_start != h2.params.tree_start ||
+             params.tree_capacity != h2.params.tree_capacity ||
++            params.tree_id_bits != h2.params.tree_id_bits ||
+             params.layout.work_start != h2.params.layout.work_start ||
+             params.layout.program_start != h2.params.layout.program_start ||
+             val_reg.size() != h2.val_reg_his.size())
+@@ -871,26 +921,36 @@
+         bool jump_now = false;
+         switch (op) {
+         case SpiralOp::TREE_ACTION: {
+-            // Separate action slots preserve the original 9-bit node layout.
+-            // Each slot: committed bit, two action bits (0..3).
++            // Versioned tree row: [live][parent bits][3 key bits]; action
++            // slots follow all rows in legacy mode; wide rows store actions
++            // inline to keep offsets invariant when capacity grows.
+             const int base=h.params.tree_start,cap=h.params.tree_capacity;
+-            const bool configured=base>=h.params.layout.work_start&&cap>0&&cap<=31&&
+-                base>=h.params.layout.program_start-h.params.stable_work_bits&&
+-                h.params.stable_work_bits>=cap*12&&
+-                base+cap*12<=h.params.layout.program_start&&h.val_reg.size()>=8;
++            const int bits=h.params.tree_id_bits;
++            const int row_bits=(bits>5?bits+7:bits+4);
++            const bool configured=base>=h.params.layout.work_start &&
++                cap>0 && cap<=(1<<bits)-1 &&
++                base>=h.params.layout.program_start-h.params.stable_work_bits &&
++                h.params.stable_work_bits>=cap*(row_bits+(bits>5?0:3)) &&
++                base+cap*(row_bits+(bits>5?0:3))<=h.params.layout.program_start &&
++                h.val_reg.size()>=static_cast<std::size_t>(bits+3);
+             if(!configured||param>1)break;
+-            int id=0;for(int b=0;b<5;++b)id=(id<<1)|int(h.val_reg[b]);
+-            const bool exists=id>0&&id<=cap&&h.memory[base+(id-1)*9];
+-            const int slot=base+cap*9+(id-1)*3;
+-            if(!exists){h.val_reg[5]=false;h.val_reg[6]=false;h.val_reg[7]=false;break;}
++            int id=0;
++            for(int b=0;b<bits;++b)id=(id<<1)|int(h.val_reg[b]);
++            const bool exists=id>0&&id<=cap&&h.memory[base+(id-1)*row_bits];
++            const int slot=(bits>5?base+(id-1)*row_bits+bits+4
++                                    :base+cap*row_bits+(id-1)*3);
++            if(!exists){
++                h.val_reg[bits]=false;h.val_reg[bits+1]=false;h.val_reg[bits+2]=false;
++                break;
++            }
+             if(param==1){
+-                const bool high=h.val_reg[6],low=h.val_reg[7];
++                const bool high=h.val_reg[bits+1],low=h.val_reg[bits+2];
+                 put(slot+1,high);put(slot+2,low);put(slot,true);
+             }
+             const bool committed=h.memory[slot];
+-            h.val_reg[5]=committed;
+-            h.val_reg[6]=committed&&h.memory[slot+1];
+-            h.val_reg[7]=committed&&h.memory[slot+2];
++            h.val_reg[bits]=committed;
++            h.val_reg[bits+1]=committed&&h.memory[slot+1];
++            h.val_reg[bits+2]=committed&&h.memory[slot+2];
+             break;
+         }
+         case SpiralOp::TREE_FIND:
+@@ -898,45 +958,70 @@
+         case SpiralOp::TREE_FIND_REG:
+         case SpiralOp::TREE_ADD_REG: {
+             const int base=h.params.tree_start,cap=h.params.tree_capacity;
++            const int bits=h.params.tree_id_bits;
++            const int row_bits=(bits>5?bits+7:bits+4);
+             int lookup_key=param;
+             const bool key_in_register=op==SpiralOp::TREE_FIND_REG||op==SpiralOp::TREE_ADD_REG;
+-            if(key_in_register&&h.val_reg.size()>=9) {
++            if(key_in_register && h.val_reg.size()>=static_cast<std::size_t>(bits+4)) {
+                 lookup_key=0;
+-                for(int b=6;b<9;++b)lookup_key=(lookup_key<<1)|int(h.val_reg[b]);
++                for(int b=bits+1;b<bits+4;++b)
++                    lookup_key=(lookup_key<<1)|int(h.val_reg[b]);
+             }
+-            const bool configured=base>=h.params.layout.work_start&&cap>0&&cap<=31&&
+-                h.params.stable_work_bits>=cap*9&&
+-                base>=h.params.layout.program_start-h.params.stable_work_bits&&
+-                base+cap*9<=h.params.layout.program_start&&
+-                base+cap*9<=int(h.memory.size())&&lookup_key<=7&&
+-                h.val_reg.size()>=(key_in_register?9:6);
++            const bool configured=base>=h.params.layout.work_start &&
++                cap>0 && cap<=(1<<bits)-1 &&
++                h.params.stable_work_bits>=cap*row_bits &&
++                base>=h.params.layout.program_start-h.params.stable_work_bits &&
++                base+cap*row_bits<=h.params.layout.program_start &&
++                lookup_key<=7 &&
++                h.val_reg.size()>=static_cast<std::size_t>(bits+(key_in_register?4:1));
+             if(!configured)break;
+             int parent=0;
+-            for(int bit=0;bit<5;++bit)parent=(parent<<1)|int(h.val_reg[bit]);
++            for(int bit=0;bit<bits;++bit)parent=(parent<<1)|int(h.val_reg[bit]);
+             bool parent_exists=parent==0;
+-            if(parent>0&&parent<=cap)parent_exists=h.memory[base+(parent-1)*9];
++            if(parent>0&&parent<=cap)parent_exists=h.memory[base+(parent-1)*row_bits];
+             int found=0,free_id=0;
+             if(parent_exists)for(int id=1;id<=cap;++id) {
+                 ++h.tree_lookup_rows_examined;
+-                const int row=base+(id-1)*9;
++                const int row=base+(id-1)*row_bits;
+                 if(!h.memory[row]){if(!free_id)free_id=id;continue;}
+                 int p=0,key=0;
+-                for(int b=1;b<=5;++b)p=(p<<1)|int(h.memory[row+b]);
+-                for(int b=6;b<=8;++b)key=(key<<1)|int(h.memory[row+b]);
++                for(int b=1;b<=bits;++b)p=(p<<1)|int(h.memory[row+b]);
++                for(int b=bits+1;b<bits+4;++b)key=(key<<1)|int(h.memory[row+b]);
+                 if(p==parent&&key==lookup_key){found=id;break;}
+             }
+             if(!found&&parent_exists&&
+                (op==SpiralOp::TREE_ADD||op==SpiralOp::TREE_ADD_REG)&&free_id) {
+                 found=free_id;
+-                const int row=base+(found-1)*9;
+-                for(int b=0;b<5;++b)put(row+1+b,(parent>>(4-b))&1);
+-                for(int b=0;b<3;++b)put(row+6+b,(lookup_key>>(2-b))&1);
+-                if(h.params.stable_work_bits>=cap*12&&base+cap*12<=h.params.layout.program_start)
+-                    put(base+cap*9+(found-1)*3,false);
+-                put(row,true); // publish the node only after its key and parent
++                const int row=base+(found-1)*row_bits;
++                for(int b=0;b<bits;++b)put(row+1+b,(parent>>(bits-1-b))&1);
++                for(int b=0;b<3;++b)put(row+bits+1+b,(lookup_key>>(2-b))&1);
++                const int slot=(bits>5?base+(found-1)*row_bits+bits+4
++                                        :base+cap*row_bits+(found-1)*3);
++                if(h.params.stable_work_bits>=cap*(row_bits+(bits>5?0:3)) &&
++                   base+cap*(row_bits+(bits>5?0:3))<=h.params.layout.program_start)
++                    put(slot,false);
++                put(row,true); // publish only after writing the full parent/key
++            }
++            // Wide mode treats a guest invocation as an atomic tree-growth
++            // transaction if allocation fails. A path may require multiple
++            // TREE_ADD instructions, so publishing its prefix alone would
++            // waste resources and break retries. Legacy mode stays unchanged.
++            if(!found && parent_exists &&
++               (op==SpiralOp::TREE_ADD||op==SpiralOp::TREE_ADD_REG)&&
++               bits>5 && !free_id) {
++                h.tree_capacity_blocked=true;
++                h.stop=true;
++                std::copy(memory_before.begin(),memory_before.end(),
++                          h.memory.begin()+writable_start);
++                std::copy(written_before.begin(),written_before.end(),
++                          h.written.begin()+writable_start);
++                h.val_reg=registers_before;
++                for(int b=0;b<bits;++b)h.val_reg[b]=false;
++                h.val_reg[bits]=false;
++                return;
+             }
+-            for(int b=0;b<5;++b)h.val_reg[b]=(found>>(4-b))&1;
+-            h.val_reg[5]=found!=0;
++            for(int b=0;b<bits;++b)h.val_reg[b]=(found>>(bits-1-b))&1;
++            h.val_reg[bits]=found!=0;
+             break;
+         }
+         case SpiralOp::XOR_REG:

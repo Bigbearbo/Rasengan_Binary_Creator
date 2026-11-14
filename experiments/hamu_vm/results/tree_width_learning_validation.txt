@@ -1,0 +1,24 @@
+2026-10-31 (Asia/Taipei)
+Source: hamu_vm_tree_width_grade_20261031.zip plus this turn's changes.
+
+This turn executed:
+make tree-width-learning-test tree-width-scaffold-test tree-width-pending-test tree-width-route-test tree-width-trial-test tree-width-grade-test
+All six PASS under ASan/UBSan. Exact output: tree_width_learning_test_output.txt.
+After adding binding recovery, reran make tree-width-learning-test; PASS.
+Exact final output: tree_width_learning_recovery_output.txt.
+ASAN_OPTIONS=detect_leaks=0; learning test also quarantine_size_mb=16.
+
+Final integration assertions:
+n=2 COPY chosen, teacher accepts, guest confirms and binds leaf 3.
+n=3 same numeric key: COPY wrong, then FLIP chosen and correct; leaf 5 bound to FLIP.
+32 routed answers across n=2/n=3 and parent/child snapshots, plus recovery answer.
+Malformed promotion preserves work/tree except transient preparation marker.
+Saved n=2 width resolves old leaf after promotion; committed actions not overwritten.
+Binding step limit intentionally exhausted after confirmation, next turn repairs binding.
+Tree capacity 2 cannot create operator leaf, publish preparation success, or capture pending.
+
+Changed code: src/tree_width_confirm_bridge.hpp (new), src/tree_width_learning_turn.hpp (new), tests/test_tree_width_learning_turn.cpp (new), Makefile (new target/dependencies).
+Changed records: README.md, this validation file, and the two test output files.
+Core VM/ISA unchanged. No complete fixed-width feedback matrix or 6000-random-guest rerun this turn.
+Controlled protocol: fixed n=3 category, one-way operator n=2->3, two slots, 3-bit data, host-provided COPY/FLIP and teacher answers.
+Capacity failure may retain upper nodes already created; no whole-question rollback promised.

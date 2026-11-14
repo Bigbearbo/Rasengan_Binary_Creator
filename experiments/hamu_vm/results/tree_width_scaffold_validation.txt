@@ -1,0 +1,3 @@
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_width_scaffold.cpp -o build/test_tree_width_scaffold
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_width_scaffold
+PASS width promotion preserves old branch and separates same numeric key

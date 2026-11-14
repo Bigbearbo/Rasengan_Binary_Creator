@@ -1,0 +1,6 @@
+# 2026-11-03 host-only segmented leaf recycle prototype
+U: preserve growing tree, correct reuse, rollback and inheritance; no guest deletion assumed.
+F: based on hamu_vm_tree_confirm_mixed_abi_20261103.zip. Segmented row layout: live bit0, confirmed bits1-3, key bits4-6, parent bits7+, reject bits23-30, third confirmed bit31. Segmented index is segment_edge_index, not legacy tree_index_slots.
+T: `g++ -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_leaf_recycle.cpp -o leaf_test && ASAN_OPTIONS=detect_leaks=0 ./leaf_test` => PASS host-only guarded leaf recycle, 3-bit and reject cleanup, index invalidation, reuse, offspring.
+T: two failed preliminary attempts: wrong packed-parent decoding accepted nonleaf deletion; after correction, overly strict assertion assumed reinserted row contained no key. Fixed test/prototype, not production core.
+A: host-only prototype refuses nonleaf deletion, zeroes complete row, invalidates segmented edge index, rebuilds free cursor. Re-add reuses ID with no confirmed/rejected state. Offspring copy checked. This is NOT guest opcode, NOT transaction-integrated, NOT a deletion of arbitrary subtrees; ID reuse can alias stale guest-held references. Next: generation-tagged handles or explicit reference invalidation, atomic rollback and guest permissions, differential test on larger trees.

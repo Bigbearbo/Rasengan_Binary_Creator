@@ -1,0 +1,29 @@
+2026-10-31 Asia/Taipei — observed-fragment request and fixed-width VM decode
+Source: hamu_vm_observed_fragments_20261031.zip (previous complete artifact).
+
+Code/build/test files changed before final validation (7; +105/-21 lines):
+  src/hamu_vm_core.hpp (+13/-20): constant-width ordinal, address, and window count; long long intermediate protects bounds.
+  src/tree_observed_vm.hpp (+9/-0): guest program exports four current-context request bits from survivor mask.
+  src/tree_observed_learner.hpp (+8/-1): validate request coverage and selected bit, then execute requested fragments only.
+  tests/test_tree_observed_learner.cpp (+4/-0): all/fewer/one requested observation and skipped step assertions.
+  tests/test_vm_decode_snapshot.cpp (+35/-0): deterministic 6,000 guest full-state snapshot check against old-core digest.
+  tests/bench_vm_decode.cpp (+24/-0): repeatable 40/160/400-pair microbenchmark.
+  Makefile (+12/-0): snapshot and benchmark targets.
+  README.md and this result file document the changes. No other source changed.
+
+Profiling evidence, g++ -O2, 10 repetitions of identical constant-width SET_AREA pairs plus stop, this host:
+  Pairs             old core seconds         new core seconds
+  40                0.000064257              0.000027952
+  160               0.000594258              0.000062865
+  400               0.00319752               0.00013257
+  The old 400-pair time grew roughly 50x from 40 pairs while instruction count grew 10x. Repeated ordinal_at/start_at scans were then replaced with arithmetic for the actual uniform op_order kernel. The new 400-pair measurement is about 24.1x lower under this microbenchmark. The earlier 726.71-second sanitizer test included compilation and a different concurrent load; the current 9.211-second build-and-test is not a controlled end-to-end speedup estimate.
+
+Validation (post-change, ASan/UBSan where Makefile target uses it):
+  make tree-observed-learner-test: PASS, 64 isolated observations, shuffled XOR1 table, 40 routed answers, invalid evidence and recovery; repeated PASS after final source modifications.
+  make test: PASS, 6,000 random guests and established VM assertions.
+  make -j2 tree-four-learning-test tree-width-learning-test: both PASS.
+  make vm-decode-snapshot-test: PASS, 6,000 deterministic old/new complete-state digest 88c085a021cbfdb7.
+  make vm-decode-bench: PASS, timing values above for new core.
+  Independently compiled test_vm_decode_snapshot.cpp with previous archived core and current core before recording the digest; both printed the same value. The saved test pins the old digest and includes memory, written, read_seen, registers, pointers, bounds, step count and stop flags. This is deterministic coverage, not proof for all programs.
+
+Limits: kernel still has one uniform op_order across every program window; no variable per-word width implemented. Mask comes from the guest work area after the current-context guard. The host validates all four fresh request outputs and executes the selected bit. Elimination remains monotone; if a selected fragment repeatedly fails execution, the first-survivor policy can still stall. Prediction steps are reported, not charged to HP. No unsandboxed purity claim or broader autonomous evolution claim follows from these tests.

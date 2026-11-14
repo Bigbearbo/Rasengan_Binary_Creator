@@ -1,0 +1,5 @@
+# Generation-tagged handle host-only prototype (2026-11-03)
+U: preserve scalable tree memory and avoid stale references after deletion/reuse.
+F: derived from hamu_vm_tree_leaf_recycle_host_trial_20261103.zip; core unchanged.
+T: `g++ -std=c++17 -O0 -g0 -fsanitize=address,undefined -fno-omit-frame-pointer -I src -I tests tests/test_tree_generation_handle.cpp -o /tmp/test_hamu_gen && /tmp/test_hamu_gen` -> PASS. Test covers nonleaf deletion refusal, leaf removal, ID reuse, old handle rejection, stale deletion refusal. Initial compile failed due nested test main macro; corrected test harness, no VM change.
+A: host Registry maintains generation per ID and increments only on successful deletion. A raw numeric ID still aliases on reuse; generation must accompany all external references. Registry currently ephemeral, not snapshot-persistent, and not transaction-safe across crashes; no guest opcode or world-scale benchmark. 64-bit generation counter wrap not exercised. Need persist generation metadata, ensure rollback atomicity, offspring semantics and old snapshot migration.

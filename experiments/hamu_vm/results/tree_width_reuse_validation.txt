@@ -1,0 +1,43 @@
+2026-10-31 (Asia/Taipei)
+Source: hamu_vm_tree_width_learning_20261031.zip plus this turn's changes.
+
+New behavior: run_tree_width_learning_turn(..., runner, true) enables reuse.
+The guest resolves a confirmed record's saved category/width/key, reads the
+committed tree action, verifies both action bits against the candidate ID,
+invalidates snapshot/admissibility/feedback-completion, and clears presence last.
+Capture resets old confirmation and candidate ID before publishing a reused slot.
+The returned confirmed flag describes that observation, before possible release.
+Default reuse=false preserves earlier callers and regression expectations.
+
+New test: make tree-width-reuse-test, ASan/UBSan,
+ASAN_OPTIONS=detect_leaks=0:quarantine_size_mb=16.
+PASS reusable width slots: action readback, interrupted release, five learned paths, inheritance
+Exact output: tree_width_reuse_test_output.txt.
+Seven rejection cases: uncommitted action, wrong high action bit, wrong low
+bit, unconfirmed slot, invalid category capture, wrong width, missing leaf.
+Release cutoffs: early, midpoint, and each final-write boundary; full retry.
+Five paths cumulatively learned through two slots; one unresolved slot is
+preserved while the other learns and releases. Parent and child route 56
+answers across the tested n=2/n=3 paths. Full tree prevents new capture.
+
+Bug found by this turn's 010 operator test:
+TREE_ACTION reads overwrite reg6..7. The old pending program saved its key
+only afterward, losing upper bits. Existing 000/001 examples did not expose it.
+Fixed by saving the complete key before TREE_ACTION; 010 now participates in
+full learning, and a dedicated 100 capture/choice test checks the high bit.
+
+Changed code: src/tree_width_reclaim_vm.hpp (new);
+src/tree_width_pending_vm.hpp (reset reused confirmation/ID, save key earlier);
+src/tree_width_learning_turn.hpp (optional reuse before capture/after binding);
+tests/test_tree_width_reuse.cpp (new); Makefile (new test/dependencies).
+Changed records: README.md, this file, tree_width_reuse_test_output.txt,
+and tree_width_reuse_regression_output.txt.
+Core VM/ISA unchanged. No long-term evolution or 6000-random-guest rerun.
+Controlled limits: fixed n=3 category, one-way n=2->3 operator, 3-bit data,
+two concurrently pending slots, host-provided COPY/FLIP and teacher answers.
+Unconfirmed or inconsistent records are retained; tree capacity is fixed.
+
+This turn's affected regressions also PASS under ASan/UBSan:
+make tree-width-pending-test tree-width-grade-test tree-width-learning-test
+Exact output: tree_width_reuse_regression_output.txt.
+Older scaffold/route/trial and random-VM results remain historical, not rerun here.

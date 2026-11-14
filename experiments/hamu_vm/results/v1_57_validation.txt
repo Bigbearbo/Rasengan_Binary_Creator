@@ -1,0 +1,21 @@
+mkdir -p build
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_trial_grade.cpp -o build/test_tree_trial_grade
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_trial_grade
+PASS fresh VM tree trial grading: coverage, timeout, stale output and 16 candidates
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_pending_context.cpp -o build/test_tree_pending_context
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_pending_context
+PASS guest records paired context and learns two working tree routes
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_context_confirm.cpp -o build/test_tree_context_confirm
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_context_confirm
+PASS guest-captured category and operator locate distinct actions in two-level tree
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_confirm_bridge.cpp -o build/test_tree_confirm_bridge
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_confirm_bridge
+PASS confirmed local IDs bind two tree actions, unconfirmed ignored, inherited
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_tree_context_vm.cpp -o build/test_tree_context_vm
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_context_vm
+PASS two-level guest tree routing, shared child key, unknown paths, inheritance
+g++ -std=c++17 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_vm.cpp -o build/test_vm
+ASAN_OPTIONS=detect_leaks=0 ./build/test_vm
+PASS: decoding, READ, inheritance, I/O, COPY, branching, protection, budget; 6000 random guests
+ASAN_OPTIONS=detect_leaks=0 ./build/test_tree_pending_context
+PASS guest records paired context and learns two working tree routes
