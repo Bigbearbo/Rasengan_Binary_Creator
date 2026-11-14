@@ -130,7 +130,6 @@ def replay(root,work):
         diff=float(np.max(np.abs(ll-np.array(x['stop_logits']))));maxdiff=max(maxdiff,diff)
         assert diff<5e-5 and abs(float(ll[2]-max(ll[0],ll[1]))-x['stop_margin'])<5e-5
         assert bool(int(ll.argmax())==2)==x['stop_correct'];total+=n
-
     assert res['greedy_forwards']==total and res['inference_MAC']==(total+len(rows))*10920
     print('R26 INDEPENDENT NUMPY PASS',len(rows),'native01 greedy outputs & stop logits; maximum logit difference',maxdiff)
 
