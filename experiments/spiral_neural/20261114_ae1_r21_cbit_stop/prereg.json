@@ -1,0 +1,76 @@
+{
+  "work_id": "AE1-R21-C2-TO-C0-R1-STOP-20261114",
+  "owner": "independent_scheduled_SLE_NN",
+  "profile": "SLE-AE1-n5-v1",
+  "only_intervened_variable": "c word value 2 -> 0 (one raw payload bit) at r1 STOP cursor6, holding a,b,d=3,r,prefix,architecture and checkpoint fixed",
+  "origin": "20 original c2 contexts in frozen R20 test_r1_stop split; c0 variants added as 20 counterfactuals. Diagnostic and researcher-seen, not blind generalization.",
+  "paired_panel": {
+    "a": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "b": [
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "d": 3,
+    "c": {
+      "control": 2,
+      "treatment": 0
+    },
+    "r": 1,
+    "prefix": "six true answer data bits",
+    "validation_a": [
+      0,
+      1
+    ],
+    "test_a": [
+      2,
+      3
+    ],
+    "pairs_each_split": 10,
+    "Q_total": 40
+  },
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "arms": [
+    "r19_dual_route",
+    "r20_corrected_route"
+  ],
+  "expected_neural_forwards": 240,
+  "new_training_updates": 0,
+  "training_course": "R14 parent120 + R18 dual high bits16 =136 appearances/112 unique; 60 r1 STOP+76 r2 STOP targets per epoch; 150 epochs 3300 updates per original trained seed, no changes in this run.",
+  "per_model_parameters": 10457,
+  "forward_MAC": 10920,
+  "total_inference_MAC_budget": 2620800,
+  "gate": "Diagnostic PASS iff in >=2/3 seeds on TEST (a2/3, ten b-pairs) replacing c2 with c0 recovers >=3 wrong STOP argmax predictions and net S accuracy >=+3/10; and R19 control S argmax invariant and max S-margin change <1e-5 on TEST. Otherwise FAIL. Report validation, test and margins regardless; no training/retries.",
+  "S_class": "third class S, margin logit(S)-max(logit(0),logit(1))",
+  "U": "Author independent native01 small NN, meaningful causal experiments",
+  "F": "R19 #68, R20 #69 frozen source and student checkpoints in SHA-validated companion ZIP; Pro P030-35/UR1 separate",
+  "T_at_freeze": "Static hash/preflight only. No R21 student forward/optimizer yet.",
+  "A": "Unseen c2 in r1 STOP context might contribute to the r1 STOP decline after R20 unmasks c; low confidence.",
+  "nvidia_status": "skipped (no authorized callable reviewer in this runtime), actual 0",
+  "manifest_sha256": "d78c00bc7bf783c3a431a9dad76cee3a666393b634c05f742367e3540dba21b5",
+  "runner_sha256": "270e248789c4de608e1c612a788fa82525b488b14a8f43a24b239652e820bb70",
+  "r20_zip_sha256": "9c698971dfd6fe1f89701be99fc2fa592edce006f017efd5c4e89dbdf5671866",
+  "frozen_source_sha256": {
+    "r14_source/run.py": "79ac66bd8f2c2fd82b559310bc44e0eae05e3cb23949d1dd9af14e80048acf9a",
+    "r14_source/parent_course.json": "e63d60db2b4f3fe316c76712e20d010eeb1a43d1afa8e15aa3faec9619e72f6a",
+    "experiment_r19/run_r19.py": "2705913fe770783778cb45bed586eecfa397fccb86433cc0c9d392720c3da682",
+    "experiment_r20/run_r19.py": "dbfad19c66ae2dd3f20113e8eb7e965fd576f9984462fd6a82c029897a28f15e",
+    "outputs_r19/weights_101_dual.json": "19d6d58ae3c407619d4855ec9cbc5d7bee4df147398c163dedee82173483604b",
+    "outputs_r19/weights_202_dual.json": "0c4e470f840dc1065d804240320b0a220819c455419584d1454c0e306fdcf2f2",
+    "outputs_r19/weights_303_dual.json": "ec15c55f219dc2e95e89dd6c7ae631c47bf456be3169f777dca9f9da4e9adb5f",
+    "outputs_r20/weights_101_dual.json": "4231d63398493d683b94ab572f846a9267d5a20ad6a39edcec0baf976801b464",
+    "outputs_r20/weights_202_dual.json": "0b241799b07458b144a3d2b9a6cf42f61f082d9b1b8377359878e5075bab5a62",
+    "outputs_r20/weights_303_dual.json": "58137a8d4dacd33c1597bbdaa901a32640eb79060c9a16ebba0af8b2227d435a"
+  }
+}
