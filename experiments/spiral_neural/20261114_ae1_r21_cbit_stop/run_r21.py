@@ -136,7 +136,7 @@ def verify(src):
         path=(src/'outputs_r19' if row['arm']=='r19_dual_route' else src/'outputs_r20')/f"weights_{row['seed']}_dual.json"
         logits=numpy_logits(row['Q'],row['expected'][:6],unpack(path),row['arm'])
         err=float(np.max(np.abs(logits-row['logits_0_1_S'])))
-        max_err=max(max_err,err)
+        max_err=max(err,max_err)
         if err>5e-5 or int(np.argmax(logits))!=(2 if row['S_predicted'] else int(np.argmax(row['logits_0_1_S']))):bad+=1
     assert bad==0,(bad,max_err)
     for b in summary(raw)['blocks']:
