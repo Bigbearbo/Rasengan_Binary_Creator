@@ -1,0 +1,57 @@
+{
+  "work_id": "SLE-AE1-R24-CBIT-CONTEXT-TRANSFER-20261114",
+  "owner": "independent_scheduled_SLE_NN",
+  "profile": "SLE-AE1-n5-v1",
+  "question_format": "01+010+r(3bits)+0+(a,b,c,d each 5bits+0)+111100 = 39 raw bits; r1 answer word(a)+S",
+  "unique_factor": "only c value 0 vs 2 (one bit) per fixed checkpoint and fixed a,b,d; model arm R20 vs R23 is frozen prior teaching factor; no new model or other intervention",
+  "calibration": "a=0..3,b=20..23,d=3,c=0/2 => 32 Q; calibration MUST NOT be used to adjust gate or test inputs",
+  "test": "a=4..7,b=18..23,d=3,c=0/2 => 48 Q; heldout a disjoint from calibration; include previously unseen a6,7; same Q previously untested",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "parameters": 10457,
+  "MAC_per_forward": 10920,
+  "training_updates": 0,
+  "inference_oracle": false,
+  "checkpoint_arms": [
+    "R20_original",
+    "R23_c2_lesson"
+  ],
+  "gate": {
+    "min_c2_margin_gain": 1,
+    "min_gap_reduction": 0.5,
+    "max_c0_STOP_loss": 2,
+    "min_seed_pass": 2
+  },
+  "gate_interpretation": "Per seed: mean teacher-position STOP logit margin (S minus max(0,1)) for c2 improves >=1.0 over R20, c0-c2 gap closes >=0.5, c0 STOP accuracy loss <=2 of 24; require >=2/3. Not dependent on non-ceiling accuracy; also report exact and first-word correctness. One-word r1 only.",
+  "blindness": "All test and calibration raw Q frozen BEFORE any R24 checkpoint forward; researcher knows historical lexical vocabulary and R21-23 so not completely blind",
+  "historical_manifests": [
+    "experiment_r20/manifest.jsonl",
+    "r21_experiment/manifest.jsonl",
+    "sle_ae1_r22/r22_experiment/manifest.jsonl",
+    "r23_experiment/manifest.jsonl"
+  ],
+  "frozen_sources_sha256": {
+    "r14_source/run.py": "79ac66bd8f2c2fd82b559310bc44e0eae05e3cb23949d1dd9af14e80048acf9a",
+    "experiment_r20/run_r19.py": "dbfad19c66ae2dd3f20113e8eb7e965fd576f9984462fd6a82c029897a28f15e",
+    "r23_experiment/verify_numpy.py": "5fe9ad091593963c4a3cd8dbc97923b5609c0a79c7ff3e84027a6f139c866e32",
+    "r14_source/parent_course.json": "e63d60db2b4f3fe316c76712e20d010eeb1a43d1afa8e15aa3faec9619e72f6a",
+    "outputs_r20/weights_101_dual.json": "4231d63398493d683b94ab572f846a9267d5a20ad6a39edcec0baf976801b464",
+    "outputs_r20/weights_202_dual.json": "0b241799b07458b144a3d2b9a6cf42f61f082d9b1b8377359878e5075bab5a62",
+    "outputs_r20/weights_303_dual.json": "58137a8d4dacd33c1597bbdaa901a32640eb79060c9a16ebba0af8b2227d435a",
+    "r23_outputs/weights_101_dual.json": "465c3cee00841ba4a4896408d21c6de6b2f837ea5cc4c52e7b5b4dea23e76d75",
+    "r23_outputs/weights_202_dual.json": "67ef7af6ec38fb3edf6d583f24e96e527d71af58652492e493dc6a1ebcf62db6",
+    "r23_outputs/weights_303_dual.json": "081f9eb05ee717fbdd9d54132fa49c8ef48bb85449ece72f7edcbce83e90bec2"
+  },
+  "runner_sha256": "537e4d55d1d68880015fe3c20de60983f05744b8b82a54fe4aed1dc45f82ff98",
+  "manifest_sha256": "6eb97e25da71d46c691a788a4f93322b8190fbf3449b090b4ef6089aeda5ce59",
+  "provenance": {
+    "U": "user independent small native01 NN learning program",
+    "F": "R20/R23 fixed checkpoint + code; PR5 and P030-P035 other lines, not copied",
+    "T": "only preflight if pre-experiment",
+    "A": "c2-curriculum may improve invariance in d3 / novel a; confidence low"
+  },
+  "limits": "No new training; fixed checkpoint transfer not causal re-training; teacher-forced STOP margin is diagnostic and full native01 generation separately scored; no SLE vs ordinary binary conclusion."
+}
