@@ -1,5 +1,14 @@
 # AE1 R19 — second-word hard routing: preregistered FAIL 0/3
 
+## POST-RUN SCIENTIFIC ERRATUM — protocol conformance FAIL
+
+**The frozen implementation accidentally changes r1 STOP, not just the r2 second answer word.** Cursor positions 6..11 are always masked to `b`, regardless of r. When r=1, the STOP target occurs at cursor6; hence R19 r1 STOP sees only `b`, whereas R18 r1 STOP saw all data words. The frozen prose incorrectly asserted that STOP was unchanged. This was discovered AFTER the 9,900 updates and all preregistered results. We preserve the exact frozen file/checkpoints and label this result **exploratory regarding second-word-only isolation**. The numeric prereg gate still FAILS 0/3; an additional protocol-conformance gate FAILS. In particular, **r1 STOP 38/60→60/60 is not an unaffected control.**
+
+Actual post-run bounded intervention on r1 STOP (6-bit prefix `000000`, b18/c0/d0 fixed, only a0→a1): R18 output logit maximum absolute changes per seed 101/202/303 were 1.1282 / 0.3581 / 1.9942; R19 changes all **0.0**. Verified 12 new PyTorch forwards, 131,040 dense forward MAC, 0 optimizer steps; not part of original registered inference budget. Companion ZIP contains `postrun_conformance_audit.py` and `POSTRUN_CONFORMANCE_AUDIT.json`. Training course audit also found b's bit8 positive in just 2/76 r2 teaching occurrences and bit16 positive in 16/76: a competing limited-coverage explanation for high-b failures (post hoc, not proven).
+
+**Do not silently rewrite the frozen manifest, repair-and-retrain on inspected tests, or call this a clean causal STOP-independent experiment.** A future new experiment must separately gate r1 STOP using r before testing a second-word-only route and freeze new untouched values/context.
+
+
 Status: **completed experiment / negative gate** (2026-11-14). Owner: independent SLE native-01 NN research worker. No Hamster VM, syntax dictionary, Pro UR1 branch modification, Codex intervention, or auto-merge.
 
 ## Evidence and provenance
@@ -11,7 +20,7 @@ Status: **completed experiment / negative gate** (2026-11-14). Owner: independen
 
 ## Only factor and budget
 
-R18 first answer word output 0..5 already sees only `a`. R19 additionally constrains second answer word output 6..11 to see only `b`. STOP remains full input. Same 39-bit SLE-AE1-n5-v1 Q, 136 teaching appearances/112 distinct, 1408 targets/epoch, three seeds 101/202/303, 150 epochs, lr .003, batch64, 10,457 parameters, 10,920 dense forward MAC/target. Three new students, **9,900 real Adam updates**, 633,600 supervised targets, **6,918,912,000 train forward MAC** (backward not included). Three R18 baseline checkpoints reused unchanged. The masking rule is **hand-coded**, not independently discovered by NN; teacher labels never substitute for student inference.
+R18 first answer word output 0..5 already sees only `a`. R19 additionally constrains second answer word output 6..11 to see only `b`. STOP remains full input. Same 39-bit SLE-AE1-n5-v1 Q, 136 teaching appearances/112 distinct, 1408 targets/epoch, three seeds 101/202/303, 150 epochs, lr .003, batch64, 10,457 parameters, 10,920 dense forward MAC/target. Three new students, **9,900 real Adam updates**, 633,600 supervised targets, **6,918,912,000 train forward MAC** (backward not included). Three R18 baseline checkpoints reused unchanged. The masking rule, including the unintended r1 STOP masking, is **hand-coded**, not independently discovered by NN; teacher labels never substitute for student inference.
 
 Predeclared gate: at least 2/3 seeds each need a ≥8/40 exact teacher-forced second-word gain vs R18 on new test_mid_b+test_high_b, retain seen ≥40/48 and taught ≥16/32 full free answers, plus r1 STOP timing ≥15/20. All test questions absent R14 train and R18 manifest, but researcher has previously seen some values elsewhere: NOT global researcher-blind.
 
