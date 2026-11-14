@@ -1,0 +1,359 @@
+{
+  "schema": "small-model-open-source-engineering-review-v1",
+  "date": "2026-11-14",
+  "timezone": "Asia/Taipei",
+  "document": "OPEN_SOURCE_TOOLING.md",
+  "relationship": "Engineering addendum to README.md v1.1; EVIDENCE.json keeps the original method-report record unchanged.",
+  "provenance": {
+    "F": "Official repositories, source code, documentation and published project records.",
+    "T": "Static source/metadata/archive/hash/document checks actually performed by this team on 2026-11-14. Historical neural results remain attributed to their original authors.",
+    "A": "Tool selection, integration design, acceptance criteria and future checks; not a user-approved new training protocol."
+  },
+  "scope": {
+    "new_neural_forward_calls": 0,
+    "new_optimizer_updates": 0,
+    "model_checkpoints_modified": 0,
+    "training_code_modified": 0,
+    "packages_installed": 0,
+    "external_tool_benchmarks_run": 0,
+    "new_runner_implemented": false,
+    "historical_gpu_benchmark_rerun": false
+  },
+  "projects": [
+    {
+      "repository": "karpathy/makemore",
+      "version": null,
+      "commit": "988aa59e4d8fefa526d06f3b453ad116258398d4",
+      "license_observed": "MIT",
+      "recommended_role": "learning_reference"
+    },
+    {
+      "repository": "karpathy/nn-zero-to-hero",
+      "version": null,
+      "commit": "73c3fcc741f0ec104ca850b1fb0df90e7e8d4cde",
+      "license_observed": "MIT stated in README",
+      "recommended_role": "learning_reference"
+    },
+    {
+      "repository": "hydra-ecosystem/hydra",
+      "version": "v1.3.8",
+      "commit": "004658aa49f466982433dded1e4f413c5fd35da8",
+      "license_observed": "MIT",
+      "recommended_role": "first_optional_batch_configuration_layer"
+    },
+    {
+      "repository": "pytorch/ignite",
+      "version": "v0.5.5",
+      "commit": "8a2a163e8a94b9f89a73621fd6acc9071437388c",
+      "license_observed": "BSD-3-Clause",
+      "recommended_role": "event_and_checkpoint_reference"
+    },
+    {
+      "repository": "optuna/optuna",
+      "version": "v5.0.0",
+      "commit": "01ddd17ab9f36c3d2817aed9afe376e1cb047d35",
+      "license_observed": "MIT",
+      "recommended_role": "defer_until_parameter_search_is_needed"
+    },
+    {
+      "repository": "pytorch/examples",
+      "version": null,
+      "commit": "acc295dc7b90714f1bf47f06004fc19a7fe235c4",
+      "license_observed": "BSD-3-Clause",
+      "recommended_role": "minimal_loop_reference"
+    },
+    {
+      "repository": "Lightning-AI/pytorch-lightning",
+      "version": "2.6.6",
+      "commit": "771017e4f39b314b49abd4a1d65905c74268d248",
+      "license_observed": "Apache-2.0",
+      "recommended_role": "defer_migration"
+    },
+    {
+      "repository": "karpathy/nanoGPT",
+      "version": null,
+      "commit": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+      "license_observed": "MIT",
+      "recommended_role": "deprecated_historical_reference"
+    },
+    {
+      "repository": "karpathy/micrograd",
+      "version": null,
+      "commit": "7bc720e951fe422b8f8814aa5aa1b64121d26b4c",
+      "license_observed": "MIT",
+      "recommended_role": "autograd_learning_only"
+    },
+    {
+      "repository": "karpathy/autoresearch",
+      "version": null,
+      "commit": "228791fb499afffb54b46200aca536f79142f117",
+      "license_observed": null,
+      "recommended_role": "public_workflow_reference_license_unconfirmed"
+    }
+  ],
+  "references": [
+    {
+      "id": "O01",
+      "url": "https://github.com/karpathy/nn-zero-to-hero/blob/73c3fcc741f0ec104ca850b1fb0df90e7e8d4cde/README.md",
+      "kind": "official_source"
+    },
+    {
+      "id": "O02",
+      "url": "https://github.com/karpathy/makemore/blob/988aa59e4d8fefa526d06f3b453ad116258398d4/makemore.py",
+      "kind": "official_source"
+    },
+    {
+      "id": "O03",
+      "url": "https://github.com/hydra-ecosystem/hydra/blob/004658aa49f466982433dded1e4f413c5fd35da8/hydra/_internal/core_plugins/basic_launcher.py",
+      "kind": "official_source"
+    },
+    {
+      "id": "O04",
+      "url": "https://hydra.cc/docs/1.3/tutorials/basic/running_your_app/multi-run/",
+      "kind": "official_source"
+    },
+    {
+      "id": "O05",
+      "url": "https://docs.pytorch.org/ignite/generated/ignite.engine.engine.Engine.html",
+      "kind": "official_source"
+    },
+    {
+      "id": "O06",
+      "url": "https://docs.pytorch.org/ignite/generated/ignite.handlers.Checkpoint.html",
+      "kind": "official_source"
+    },
+    {
+      "id": "O07",
+      "url": "https://optuna.readthedocs.io/en/stable/faq.html",
+      "kind": "official_source"
+    },
+    {
+      "id": "O08",
+      "url": "https://github.com/optuna/optuna/blob/01ddd17ab9f36c3d2817aed9afe376e1cb047d35/optuna/study/_optimize.py",
+      "kind": "official_source"
+    },
+    {
+      "id": "O09",
+      "url": "https://github.com/pytorch/examples/blob/acc295dc7b90714f1bf47f06004fc19a7fe235c4/mnist/main.py",
+      "kind": "official_source"
+    },
+    {
+      "id": "O10",
+      "url": "https://lightning.ai/docs/pytorch/stable/reference/common/checkpointing_basic",
+      "kind": "official_source"
+    },
+    {
+      "id": "O11",
+      "url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/README.md",
+      "kind": "official_source"
+    },
+    {
+      "id": "O12",
+      "url": "https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md",
+      "kind": "official_source"
+    },
+    {
+      "id": "O13",
+      "url": "https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md",
+      "kind": "official_source"
+    },
+    {
+      "id": "O14",
+      "url": "https://github.com/karpathy/micrograd/blob/7bc720e951fe422b8f8814aa5aa1b64121d26b4c/README.md",
+      "kind": "official_source"
+    },
+    {
+      "id": "O15",
+      "url": "https://github.com/pytorch/ignite/blob/8a2a163e8a94b9f89a73621fd6acc9071437388c/pyproject.toml",
+      "kind": "official_source"
+    },
+    {
+      "id": "O16",
+      "url": "https://github.com/hydra-ecosystem/hydra/releases/tag/v1.3.8",
+      "kind": "official_source"
+    },
+    {
+      "id": "O17",
+      "url": "https://api.github.com/repos/karpathy/autoresearch",
+      "kind": "official_source"
+    },
+    {
+      "id": "O18",
+      "url": "https://optuna.readthedocs.io/en/stable/tutorial/20_recipes/001_rdb.html",
+      "kind": "official_source"
+    },
+    {
+      "id": "P01",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e5bbbb7c152ec9b93729e3de9263eab3a816f791/experiments/spiral_neural/20261114_codex_pro58_transfer/README.md",
+      "kind": "project_record"
+    },
+    {
+      "id": "P02",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e5bbbb7c152ec9b93729e3de9263eab3a816f791/experiments/spiral_neural/20261114_codex_pro58_transfer/TRANSFER_MANIFEST.json",
+      "kind": "project_record"
+    },
+    {
+      "id": "P03",
+      "url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/f7cfaef575a5204074f7c6529adaf3282aa15897/experiments/spiral_neural/20261113_codex_gpu_training_review/decision.json",
+      "kind": "project_record"
+    }
+  ],
+  "remote_snapshot": {
+    "review_scope": "Latest 15 pull requests and returned 79 branches; not a scientific audit of all latest results.",
+    "codex_public_training": {
+      "pr": 61,
+      "head_sha": "e5bbbb7c152ec9b93729e3de9263eab3a816f791",
+      "updated_at": "2026-11-13T23:38:23Z"
+    },
+    "other_workstream_metadata_only": [
+      {
+        "pr": 73,
+        "head_sha": "31e4e3dd8c5c2fad453da5549b8f6139b3d9f7f9",
+        "workstream": "scheduled NN R23"
+      },
+      {
+        "pr": 74,
+        "head_sha": "d55dae4bf8e8091f9b085b24f416829db8d06c4b",
+        "workstream": "scheduled NN R24"
+      }
+    ],
+    "limitation": "No newly published Codex acceleration branch observed. Unpublished local changes and elapsed-time attribution are unknown."
+  },
+  "pr61_static_bundle_check": {
+    "actor": "native reviewer: audit_training_loop_latest",
+    "date": "2026-11-14",
+    "method": "Read-only inline Python standard-library subprocess, io, zipfile, hashlib, json; later AST source inspection. No imports or execution of neural code.",
+    "script_path": null,
+    "source_commit": "e5bbbb7c152ec9b93729e3de9263eab3a816f791",
+    "manifest_url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/e5bbbb7c152ec9b93729e3de9263eab3a816f791/experiments/spiral_neural/20261114_codex_pro58_transfer/TRANSFER_MANIFEST.json",
+    "archive_sha256": "6e24b1ccaa58c1b55b9b7ac2e97bd749fa69893aa1f0c70934ce9d3f14ebcd6a",
+    "member_prefix": "experiments/spiral_neural/20261114_codex_pro58_current_mastery/",
+    "member_sha256": {
+      "launch_formal.py": "f3484e7985564709f7e24164d9414b7122870f25ad92cd19572c68f8f0d9174d",
+      "run_continue.py": "c36068630e11cd8c7c5cd2ae4b268250440415ed2e53300d083149433180497d",
+      "finish_round.py": "ffb80f7b880f8d925ff9fd73387ff931c911c852acf425f5b093ac55c645c913"
+    },
+    "additional_member_hash_verified": "protocol.json",
+    "additional_source_read": [
+      "vendor/run_e4.py: execute/main",
+      "inputs.zip -> vendor/run_probe.py: train_arm"
+    ],
+    "hash_assertions": "PASS for combined archive and the four named direct members; not a claim that every nested member was separately checked.",
+    "findings": {
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "epochs_per_seed": 4,
+      "optimizer_updates_per_epoch": 104400,
+      "optimizer_updates_per_seed": 417600,
+      "planned_total_optimizer_updates": 1252800,
+      "adaptive_changes": false,
+      "launch_calls_execute_once": true,
+      "launch_automatically_calls_finish": false,
+      "finish_has_parallel_readonly_audits": true
+    },
+    "scope": "Static review only; author-reported neural outcomes are not independently replayed."
+  },
+  "historical_gpu_review": {
+    "author": "Codex",
+    "execution_date": "2026-11-13",
+    "source_commit": "f7cfaef575a5204074f7c6529adaf3282aa15897",
+    "source_url": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/blob/f7cfaef575a5204074f7c6529adaf3282aa15897/experiments/spiral_neural/20261113_codex_gpu_training_review/decision.json",
+    "updates_per_trial": 1024,
+    "timing_trials": 3,
+    "median_seconds": {
+      "original_numpy_cpu": 0.488750100004836,
+      "cupy_eager_gpu": 5.122710999989067,
+      "cupy_cuda_graph": 0.3044616999977734
+    },
+    "limits": [
+      "Synthetic engineering timing only.",
+      "CPU timing is variable and timing scopes differ.",
+      "No new measurement in this report.",
+      "Does not establish whole-study speedup or complete real-parent continuation equivalence."
+    ]
+  },
+  "independent_reviews": [
+    {
+      "role": "learning references",
+      "status": "PASS",
+      "note": "MLP, resume limits, split usage, deprecated status and project versions checked."
+    },
+    {
+      "role": "automation frameworks",
+      "status": "PASS after edits",
+      "note": "Removed an ungrounded six-condition example; added the direct Optuna RDB source for sampler/pruner state."
+    },
+    {
+      "role": "current project workflow",
+      "status": "PASS",
+      "note": "Existing launch/finish separation, metadata workstreams and GPU scope checked; no unsupported attribution of local elapsed time."
+    }
+  ],
+  "external_worker": {
+    "name": "NVIDIA/OpenRouter",
+    "status": "skipped_unavailable",
+    "actual_calls": 0,
+    "reason": "No callable authorized worker entry exposed; native reviewers are not NVIDIA."
+  },
+  "unimplemented": [
+    "Hydra adapter",
+    "Top-level continuous runner",
+    "New timing instrumentation",
+    "Interrupted training continuation test",
+    "Any new model experiment"
+  ],
+  "static_document_checks": {
+    "status": "PASS",
+    "actor": "root",
+    "date": "2026-11-14",
+    "checks": [
+      "21 reference definitions resolve to 21 used source IDs",
+      "Local links in three report/card files resolve",
+      "10 unique repository records with valid 40-character commit IDs",
+      "Both evidence JSON files parse",
+      "Protocol arithmetic 3 * 4 * 104400 = 1252800"
+    ],
+    "local_links_checked": [
+      [
+        "README.md",
+        "RUN_CARD.md"
+      ],
+      [
+        "README.md",
+        "EVIDENCE.json"
+      ],
+      [
+        "README.md",
+        "OPEN_SOURCE_TOOLING.md"
+      ],
+      [
+        "README.md",
+        "OPEN_SOURCE_EVIDENCE.json"
+      ],
+      [
+        "README.md",
+        "RUN_CARD.md"
+      ],
+      [
+        "RUN_CARD.md",
+        "README.md"
+      ],
+      [
+        "RUN_CARD.md",
+        "OPEN_SOURCE_TOOLING.md"
+      ],
+      [
+        "OPEN_SOURCE_TOOLING.md",
+        "README.md"
+      ],
+      [
+        "OPEN_SOURCE_TOOLING.md",
+        "OPEN_SOURCE_EVIDENCE.json"
+      ]
+    ],
+    "new_neural_operations": 0
+  }
+}
