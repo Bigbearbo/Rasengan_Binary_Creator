@@ -20,7 +20,7 @@ Test per seed R55→R56: 101 16→16/64; 202 10→12/64; 303 18→16/64. **Two n
 
 **Executed:** 1,500 Adam updates; new free 01 answers 528; 5,763 free-inference forwards (62,931,960 theoretical dense MAC). PyTorch replay 528/528, independent NumPy replay 528/528; maximum sampled initial logit difference 2.8610e-6. Separate standard-library raw audit 528/528. Extracted ZIP independently checked 350 file SHA256 entries. Full runner, three trained gate checkpoints, exact Q/answers, earlier source checkpoints and reusable replay code in ZIP:
 
-`sle_ae1_r56_fixed_intercept_control_20261116.zip` (provided as an accompanying conversation artifact; not committed to Git). Archive SHA256 `0e28cb66341bdb3cf5c9f92aa711f057dbe375f0c2abe77651bb81201d22c05c`. Frozen runner SHA256 `2197adbb9df85c5dd34269f6f1653240364daba2394e28d76bfe2be86f23c28c`, prereg JSON `e26173159cc52fb89e09e69a4e6a7aea5345c8fa4b570e8943ffca651a89bd4c`, raw-result JSONL `d53674ede8ecd1e78eb164a24bd5689bd083763afdfa1f643ff7651593bcc67f`.
+`sle_ae1_r56_fixed_intercept_control_20261116.zip` (provided as an accompanying conversation artifact; not committed to Git). Archive SHA256 `15e5c81168f2e8c6139e549e405250ce672bf1398b5c0290ee41cc2a3260fbfa`. Frozen runner SHA256 `2197adbb9df85c5dd34269f6f1653240364daba2394e28d76bfe2be86f23c28c`, prereg JSON `e26173159cc52fb89e09e69a4e6a7aea5345c8fa4b570e8943ffca651a89bd4c`, raw-result JSONL `d53674ede8ecd1e78eb164a24bd5689bd083763afdfa1f643ff7651593bcc67f`.
 
 **Failure examples:** seed303 legal Q (r1,a25,b28,c28,d10), expected `110010S`: R55 correct `110010S`, R56 wrong `110110S`; seed202 (r1,a26,b25,c15,d15) expected `110100S`: R55 wrong `000100S`, R56 correct. All test gains and losses, including bitstrings, are preserved in the ZIP evidence.
 
