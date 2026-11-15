@@ -1,0 +1,19 @@
+# R39 pre-training freeze — 2026-11-15 (SLE AE1, independent NN)
+
+**Frozen before any R39 train or inference.** Parent: draft PR #88 R38 branch. This project is independent of Codex P030–P035, Pro UR1 #12, and Hamster VM/parser implementation. No merged research claim.
+
+**Only factor:** remove the second-answer-word b-only engineered input mask from the R38 no-firstword-mask network; use the original fully unmasked tied `WordStudent(True)`. Identical tensor names, initialization, hidden/output sizes, 10,457 trainable parameters, training course and optimizer. No new labels or changed Q, STOP, codec, loss, time budget. The change is *only* during second word generation at position 6..11 of r=2; all other positions' initial forward logits are equivalent by the preflight test.
+
+**Authorized profile:** `SLE-AE1-n5-v1`, integers 0..29; value word `bin5(x)+0`. Question `01+010+bin3(r)+0+word(a)+word(b)+word(c)+word(d)+111100` = 39 literal raw 01 bits; answer first/second six-bit numeric words according to r plus **external STOP class** S. All teacher answers determined by the fixed wire codec, no LLM teacher oracle. Not UR1 and no invented manifest approval.
+
+**Course & split:** copy R38 136 ordered appearances and 1,408 teacher-forced targets per epoch, including its 8 substituted high-b lessons. No new heldout test creation. 128 fixed Q: high b26/27 (16); old b18/19 (16); displaced b20..23 (16); R31 prior mixed-arity retention (80; 24 r1 + 56 r2). Three seeds means test denominators 48/48/48/240. Entire test panel has previously been exposed to research and **is not blind**. No new validation optimization/model selection. R38 checkpoint raw results reused without re-training.
+
+**Budget:** seeds 101/202/303, init `seed+12000`, Adam lr0.003, batch64, clip norm1, 150 epochs, per-epoch shuffle `default_rng(seed+201000+epoch)`; 3,300 updates/seed, 9,900 combined. 633,600 target presentations, estimated 6,918,912,000 training-forward dense MAC **excluding backward** and overhead; 10,457 parameters, 10,920 MAC/forward target. Train once; no post-result curriculum changes.
+
+**Predeclared joint success:** high-b second word >=40/48 AND known-b second word >=44/48 AND displaced b second word >=36/48 AND R31 historical mixed-arity exact >=216/240 AND high-b full autoregressive exact >=6/48. Otherwise FAIL. Independently publish firstword, STOP, negative outputs, seed-specific and old/new deltas. R38 controls high-b b48/48, known48/48, displaced40/48, historical exact228/240, high-b complete1/48, first2/48, stop13/48. STOP never replaces entire answer as a success proxy.
+
+**Immutable accompanying local sources (to be included in post-result companion archive):** `r39_second_route.py` SHA256 `fc50668670a82add52a2b5ba23538f2d8780b815dba8750e89954134d96607f9`; generated `r39_prereg.json` SHA256 `106e2ad84fad019e33c21d3b7b956c7bba9f21fe3c1872e5de192868cfe6a0bb`; `r39_manifest.jsonl` SHA256 `781e351ead001a74a30f75be3f92347bbe70530149a4fec126b23b35c90c35b9`. Local static preflight run before freeze upload: PASS 136 teacher appearances, 128 legal 39-bit Q, model shape/forward-path equality. These are **not** R39 training or inference results.
+
+**U/F/T/A:** U=author prioritizes actual bit-level NN, teaching, generalization and equal-resource experiments; F=R38 old source/checkpoints plus published P031-P035 and Pro UR1 reference; T=static preflight only at freeze, no R39 updates or generations; A=route flexibility may help or harm, unproven. NVIDIA skipped (no authorized callable endpoint here), actual calls 0; local Codex 0; Gemini 0.
+
+**Next owner:** independent SLE NN worker; if frozen fingerprint matches, perform exactly one R39 training/evaluation, preserve weights/raw Q and failures plus independent PyTorch/NumPy replay. Do not change Pro/Codex branches, auto-merge, or upload secrets/private dialogue.
