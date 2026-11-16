@@ -1,0 +1,28 @@
+# R66 — randomized auxiliary frame labels, real three-student result (2026-11-16)
+
+**Pretraining freeze:** commit `fdedb1236f922dcd296e8db78e65d3c2a209dd38`. Public `FREEZE.md` was read back **before first R66 neural forward**. Frozen runner SHA256 `28ac5ede380664cde2dee4e5a2eb3ebff68ce032f6743c467c2d9b437fdfebb1`, mask `63e7bdb17041faea0b4a9986cd0bc0a47c4e009b7a30ccd31735b97659a26d01`, R64 original dataset `2201dc52d2c9b28bbf05439e85fb8b5405a963e4dc10c70468c748eef0f14ea2`.
+
+**Single factor:** relative to R64 truthful framing joint student, invert only the TRAIN auxiliary frame BCE labels on 128 of 256 randomly preselected base groups (fixed RNG 66066). Each base still carries two positives and two negatives; two duplicate legal rows have matching labels. **No changes** to legal SLE `SLE-AE1-n5-v1` 39-bit Q, Echo/STOP gold, model structure, seeds101/202/303, initial states, 600 Adam updates/seed, minibatch schedule, class balance, or original train/validation/test. R64 baseline students/checkpoints not retrained. Train operands0..23; val24..26; test27..29, all previously exposed in R64/R65. Unseen-root `10` is a malformed-root diagnostic, not a legal SLE item. This is R64's parallel Echo slot model, **not** Codex's three-round whole-region/true on-wire punctuation experiment.
+
+| Test complete Echo+external STOP | R64 math-only | R64 truthful framing | **R66 shuffled training labels** |
+| --- | ---: | ---: | ---: |
+| Seed 101 /64 | 63 | 64 | **14** |
+| Seed 202 /64 | 58 | 63 | **55** |
+| Seed 303 /64 | 28 | 38 | **4** |
+| Three-seed total /192 | **149** | **165** | **73** |
+
+R64 truthful frame validity **768/768**, R66 shuffled **297/768** (legal accept110/192, malformed reject187/576; novel root10 reject79/192). R66 right-position STOP **189/192**. Out of 100 paired complete-answer changes between R64 truthful and R66 randomized, truthful wins **96**, randomized wins **4**. **8/8 preregistered gates PASS**; for R66 this means the randomized-supervision control was successfully falsified, **not** that the noisy arm learned the structure.
+
+**Actual local work (T):** three newly trained 5,160-param students; 1,800 Adam updates, batch64, 115,200 supervised presentations; **582,451,200 theoretical train forward dense MAC** (not total training FLOPs). 1,344 new neural predictions; original NumPy read-only replay **1,344/1,344**; separate ZIP auditor verified **33 file SHA256** and independently reconstructed **1,344/1,344** math predictions/frame logits (maximum frame error **7.15e-7**); clean extraction, static profile check and full replay PASS. No additional training after examining outcomes.
+
+**Interpretation:** truthful auxiliary framing is much less disruptive to math than this specific balanced random-label control, and R64 truthful moderately beats math-only. Random labels can actively corrupt shared representations / global-clipped Adam gradients. Thus **do not** infer the 16-question R64 improvement comes uniquely from meaningful *language* learning, or infer SLE beats ordinary binary, variable-width or versioned tasks. Three seeds, exposed original test, and simple Echo limit generalization.
+
+**Real verification-package corrections:** first integrity inventory accidentally included excluded `__pycache__` paths; first archive verifier also shadowed its ZIP handle `z` with a loop variable. Both produced read-only verification exceptions. Both were fixed **after** training in packaging and verification files; frozen training source, frame flip mask, checkpoint, gold and neural predictions untouched. Final clean audit PASS; both exceptions are recorded in the companion `PACKAGING_FIXES.md`.
+
+**Companion standalone file:** `sle_ae1_r66_balanced_random_frame_20261116.zip`, SHA256 **`49bb552eca339d31a9b65ee656077097bdb1bd17c954ec3b765942c5072f8a14`**. It contains original R64 six checkpoint controls, R64 exact source and 1472-row manifest, all three R66 checkpoints, frozen runner/prereg/flip mask, 1344 raw neural predictions, 100 paired transitions and complete failures, train log, read-only NumPy replay and 33-entry integrity inventory. **Git alone does not contain model weights**. Unzip then `python r66_work/verify_r66_public.py <zip-path>`; also `cd r66_work && python r66_shuffled_aux.py static && python r66_shuffled_aux.py verify`. The Git verifier below is a read-only companion validation entrypoint.
+
+Provenance: U = author requests independent native01 education/generalization and source care; F = R64 #115, R65 #116, Pro UR1 #12, Codex P035 #10, separate shared corpus #5; T = this run's train and independent replay; A = future meaningful-but-unrelated auxiliary labels, pre-matched gradient norms and genuinely sealed test domain as a stronger diagnostic. NVIDIA 0 (no authorized callable local worker), local Codex 0, Gemini 0. No other research branches modified; no auto-merge.
+
+[更新] R64's improvement is **not reproduced by a generic random auxiliary supervision signal**; this particular signal is strongly harmful. [取代] 'R64's positive effect proves SLE structure understanding.' [原因] R65 detached math149/192 and R66 randomized math73/192 both constrain mechanisms but do not uniquely identify an SLE-specific linguistic cause. [狀態] High for this configuration's tested measurements; low for cross-profile neural-language claims.
+
+**Next owner:** independent SLE small NN. Avoid tweaking R64's exposed test; preregister a truly unused lawful problem domain and more discriminating meaningful non-framing auxiliary control with gradient magnitudes held comparable. Do not re-run Codex P030–P035 or Pro UR1.
