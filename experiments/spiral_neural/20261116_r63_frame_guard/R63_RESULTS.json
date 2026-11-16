@@ -1,0 +1,120 @@
+{
+  "work_id": "SLE-AE1-R63-FROZEN-FRAME-GUARD-20261116",
+  "state": "PASS_8_OF_8_DIAGNOSTIC_NOT_MATH_LEARNING",
+  "prereg_commit": "1e1c49463cac3634cd1cda5781d3e3ad9a6d23c9",
+  "profile": "SLE-AE1-n5-v1; legal 39-bit raw Q, r=1/2, data 0..29",
+  "split": {
+    "train": 0,
+    "validation_distinct_Q": 32,
+    "test_distinct_Q": 64,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "variants": [
+      "01",
+      "00",
+      "11",
+      "10"
+    ],
+    "raw_exact_Q_overlap_with_R62_manifest": 0
+  },
+  "active_params_per_seed": {
+    "R52_math": 10465,
+    "R62_raw_guard": 1313
+  },
+  "updates": 0,
+  "scores": {
+    "validation": {
+      "full_rows": 384,
+      "valid": 96,
+      "invalid": 288,
+      "raw_accept_valid": 96,
+      "raw_reject_invalid": 288,
+      "blind_accept_valid": 72,
+      "blind_reject_invalid": 72,
+      "math_full_correct": 89
+    },
+    "test": {
+      "full_rows": 768,
+      "valid": 192,
+      "invalid": 576,
+      "raw_accept_valid": 192,
+      "raw_reject_invalid": 576,
+      "blind_accept_valid": 134,
+      "blind_reject_invalid": 174,
+      "math_full_correct": 22
+    },
+    "all": {
+      "full_rows": 1152,
+      "valid": 288,
+      "invalid": 864,
+      "raw_accept_valid": 288,
+      "raw_reject_invalid": 864,
+      "blind_accept_valid": 206,
+      "blind_reject_invalid": 246,
+      "math_full_correct": 111
+    },
+    "deterministic_fixed_prefix_agreement": "1152/1152",
+    "math_original_valid_output_preservation": "288/288",
+    "math_output_same_across_all_root_variants": "1152/1152",
+    "blind_max_paired_logit_diff": 0
+  },
+  "inference": {
+    "math_full_generations": 1152,
+    "math_bit_level_forward_calls": 13900,
+    "math_dense_MAC": 151788000,
+    "frame_classification_forwards": 2304,
+    "frame_dense_MAC": 2949120,
+    "backprop_MAC": 0
+  },
+  "replay": {
+    "independent_numpy_math": "1152/1152",
+    "independent_numpy_frame": "2304/2304",
+    "max_frame_logit_abs_diff": 0.0000019073486328125,
+    "clean_bundle_replay": true
+  },
+  "artifact": {
+    "name": "sle_ae1_r63_frozen_frame_guard_20261116.zip",
+    "sha256": "447ed20ee7290a63fbf05559823f63d22fdea06974979ad87990a6ae57dfa4f2",
+    "size_bytes": 4299985,
+    "zip_entries": 10,
+    "zip_crc_pass": true
+  },
+  "sha256": {
+    "original_runner": "07960521a047d5d24e55f3184dd666aea485d91393e7f6131cbeb58a1c6dad52",
+    "manifest": "d7d0839ea0a804a880354865564158fa2de30f29122bf2f70cb90bf8367a41af",
+    "prereg": "9057400e09769f879563edf63f21a068fe71d10174bdbbdf5f7f9c6224f63ad3",
+    "raw_records": "425d786ae45e8af9d07039fe0afab76466ae198be893eaa1929906b51449d974",
+    "r61": "ac09f30323dd078bd0445935ebd0aa58eecf94dd5f0049cbe8c6805e5c431526",
+    "r62": "8d9e0c637112922b766607ab07add1c40498d158af5df970814de9c2c09e6d81"
+  },
+  "failure_example": {
+    "seed": 101,
+    "legal_q": "010100100001000111000001000001110111100",
+    "gold": "001000111000S",
+    "math_answer": "000000100000S",
+    "raw_header_guard_logit": 8.072487831115723
+  },
+  "source_provenance": {
+    "U": "User raw01 independent NN math learning objective",
+    "F": "Immutable Git P030-P035/Pro UR1 and R52/R60/R61/R62 reports and weights",
+    "A": "Independent modular guard hypothesis",
+    "T": "R63 new frozen-inference outputs, independent NumPy replays, all eight gates"
+  },
+  "limitations": [
+    "No joint training",
+    "No new math learning",
+    "All math Q already exposed to R52 historically",
+    "Fixed two-bit root allows cheaper exact deterministic comparator",
+    "No invented legal SLE error code; rejection out of band",
+    "Pro/Codex/VM branches unchanged"
+  ],
+  "next_owner": "Independent SLE NN: preregister true shared frame+math learning or nonconstant width/version field transfer under deterministic comparator",
+  "actual_external_calls": {
+    "nvidia": 0,
+    "codex": 0,
+    "gemini": 0
+  }
+}
