@@ -1,0 +1,32 @@
+{
+  "full_fable_codec_legality": "NOT_TESTED_MISSING_ORIGINAL_COMPILER",
+  "gate": "PASS",
+  "groups": 240,
+  "pairwise_distinct_target_groups": 240,
+  "panel_sha256": "746a07126c6e748beb1417ed30d67945d01d792505bee6a0f355e5b043f9b058",
+  "python_version": "3.13.5",
+  "raw_question_bits_generated": 0,
+  "rows": 720,
+  "seed": 20261117,
+  "split_groups_by_length": {
+    "3": {
+      "test": 24,
+      "train": 72,
+      "val": 24
+    },
+    "4": {
+      "test": 24,
+      "train": 72,
+      "val": 24
+    }
+  },
+  "split_rows": {
+    "test": 144,
+    "train": 432,
+    "val": 144
+  },
+  "student_forward_passes": 0,
+  "student_updates": 0,
+  "students_trained": 0,
+  "unverified_synthetic_candidate_words": 16
+}
