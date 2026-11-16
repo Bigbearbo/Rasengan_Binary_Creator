@@ -1,0 +1,29 @@
+# R62: learnable raw-01 framing diagnostic — frozen BEFORE neural training
+
+**Work ID**: SLE-AE1-R62-RAW-FRAME-VALIDITY-20261116. **Owner**: independent NN researcher (not Pro/Codex/VM/parser lexicon). Parent: R61 Draft PR #112 head `ebfd585a1263adc36b3da156c1a0a75cb9a14b82`. This preregistration is publicly committed before any R62 network forward/update. No auto-merge.
+
+## Single factor / hypothesis
+R60 established that the previous 10,465-param math student ignores Q[0], and R61 showed the fixed numeric SLE word `bin5(v)+0` is just a coordinate permutation of binary6 under a matched encoder. R62 asks **whether a tiny neural auxiliary validity head can learn the actual raw opening bits rather than merely accept a 39-bit container**.
+
+Compare a raw 39-bit MLP with a **framing-blind, otherwise identical MLP** where only input bits 0,1 are masked to neutral zero. Use identical initial weight state, samples, optimizer schedules, seeds and budget. This test does NOT modify or claim to improve existing math-answer checkpoint. The validity scalar is **not** a SLE wire symbol or new protocol vocabulary.
+
+## Fixed codec, data, and split
+Legal profile: `SLE-AE1-n5-v1`. Exactly 39 raw bits `01 + 010 + bin3(r) + 0 + 4*(bin5(value)+0) + 111100`; `r∈{1,2}`, all `a,b,c,d∈[0,29]`. Classification gold: only an exact opening `01` is valid **for this profile**; training malformed headers `00`, `11` are labeled invalid. Entirely unseen malformed `10` is a compositional diagnostic at validation and test. **Malformed controls are not legal SLE questions**. The remaining 37 bits are identical within each paired set. The truth label follows an explicit deterministic condition, with no LLM teacher.
+
+Deterministic manifest generator: `np.random.default_rng(62001)`; for each split, generate `n` unique `(r,a,b,c,d)` by setting `r=1+i%2` and repeatedly drawing four independent uniform integers from the split range until the tuple is novel. Per base, emit valid 01, flipped second bit 00, flipped first bit 11; for validation/test also emit withheld 10. Manifest rows are ordered train→validation→test, then increasing `i`, then order 01/00/11/10; JSON lines are `json.dumps(row,sort_keys=True,separators=(',',':'),ensure_ascii=False)+'\\n'`. Row fields `id` (e.g. train-000), `split,r,a,b,c,d,kind,raw_bits,label`. 744 rows. Full reproducibility artifact separately retains the actual manifest.
+
+Train: 120 base Q, each value only 0..19; 360 manifest rows, duplicate each valid sample once in the train sampling pool (480 examples, 240 positive and 240 negative). Validation: 32 base Q, all values 20..24, 128 rows, no tuning/early-stop. Test: 64 base Q, all values 25..29, 256 rows, not trained or used to choose settings. These are value-disjoint **by role within this new experiment**, not globally novel SLE values relative to historical work. Both `r=1` and `r=2` evenly represented.
+
+**Frozen SHA256**: manifest `bba1a08bd5fa115ce7481a20467d964d2a7b2abcddd48b452dcc576c72f8bb96`; main complete local runner `684bf38b4ed5ef6a10bdb0f0085e91126ce1d13bf30311e59a41e4e8b18b2ac2`; parent full R61 ZIP `ac09f30323dd078bd0445935ebd0aa58eecf94dd5f0049cbe8c6805e5c431526`. Static check prior to freeze: 744/744 generated rows valid to specification, and this profile's encoder reproduced all 272 archived R61 SLE Q byte-for-byte. No neural updates/forward at this point.
+
+## Model, budget and gates
+Two-layer `39→32 tanh→1` binary-logit MLP; raw input bits scaled `0→-1, 1→+1`. No decoded numerals or engineered header feature. Each arm has **1,313 total/trainable params** and **1,280 nominal dense forward MAC/input**. Seeds `101,202,303`, `torch.manual_seed(seed+62000)`; the two arms receive identical initial weights. Per-seed minibatch index stream `default_rng(seed+93001).integers(0,480,size=64)`. Adam `lr=0.01`, BCEWithLogits, grad clip norm 1.0, **400 updates per arm per seed**, batch64, no early stopping. Total **2,400 updates, 153,600 sample presentations, 196,608,000 nominal train forward MAC** (exclude backward and input masking). Teacher uses only binary validity labels, never answers mathematical questions.
+
+Success is conjunctive: raw arm test valid accepts ≥180/192, seen invalid rejects ≥330/384, wholly untrained double-flip `10` rejects ≥160/192; for each raw seed and each corruption, correctly rank valid logit above invalid for ≥55/64 paired contexts; frame-blind arm logits are identical within all framing-paired contexts (max diff ≤1e-6); all heldout values and canonical SLE references validated; independent NumPy replay of **2,304** heldout scalar predictions agrees with PyTorch (max difference <5e-5). All failures retained. Threshold 0.5 fixed, no post-hoc calibration.
+
+## Interpretation and boundaries
+This is an explicit validity-classification curriculum, **not** a small neural model learning unspecified SLE grammar from mathematics, and not evidence of mathematical reasoning, math-answer STOP, new vocabulary, variable-width extension, or actual refusal in the existing model. R60's frozen math model remains a negative observation, not a control trained for the new objective.
+
+Source classes: **U** author requests native 01 NN learning and independent neural experiments. **F** R60/R61 archived results, Git handoff, canonical AE1 profile. **A** hypothesis and design above. **T** only static generation/codec cross-check at prereg; training and test results must be reported later. NVIDIA reviewer **not called**: no authorized endpoint in this runtime. Local Codex/Gemini not called. No private notes, keys, or VM/Pro/Codex changes.
+
+Next owner after evidence: independent NN owner; if this auxiliary probe passes, test a jointly trained math-output model with genuine framing-dependent course and independent old-math retention, rather than asserting a side head automatically repairs math behavior.
