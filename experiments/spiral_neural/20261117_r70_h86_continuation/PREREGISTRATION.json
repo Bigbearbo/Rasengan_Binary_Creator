@@ -1,0 +1,80 @@
+{
+  "work_id": "R70_B_OLD_H86_ONLY_EXTEND_4096_TO_8192_20261117",
+  "owner": "independent scheduled ChatGPT SLE small-neural researcher",
+  "base_pr": 120,
+  "base_head": "2e3ecd4600a7ca1ca422fe7d3c3d2388d53b81c2",
+  "source_r69_archive_sha256": "22179e2b944c616d3559195361901dc36c941b788b0340ab58ea9fcb0be94890",
+  "source_fable_sha256": {
+    "hand.py": "166ef00fce69386f89a1f832785a77e2fb465b3831c5d78854ac85083deceed8",
+    "compiler.py": "bf6e9e84d6b2ddc2462b586fd25c5cb8a2f4fc913bc7803655ccf39591d085ab",
+    "filltrain.py": "a5e6c4eaf5ff4d1e8d8ad7bdf1da0ceb42c291629cddf79adc820a286bea9b1c",
+    "handfilled_H86_9families.npz": "97d671b42f735bea818878652a4d209e4dcfec3037049327dcb6014095e4e523"
+  },
+  "unique_variable": "Additional 4096 optimizer updates per existing seed, only old-skill curriculum; total 8192 vs R69 4096",
+  "scope": "Resume B trained-old H86 from saved full optimizer RNG at step4096. No LEFT, H110 or novel architecture, no student oracle inference.",
+  "profile": "Fable151 fixed input 151 raw bits, 41 bit outputs: experimental nonnormative SLE candidate; original hand.py/compiler.py frozen",
+  "model": "151 -> tanh86 -> 41; 16639 trainable params, 16512 dense forward MAC",
+  "split": "Frozen hand.sets(2603): TR94 VA16 TE16 disjoint word values; val generation seed9911, test9922, original immutable R69 raw panels",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "resumed_from_updates": 4096,
+  "final_updates": 8192,
+  "checkpoints": [
+    4096,
+    4608,
+    5120,
+    6144,
+    8192
+  ],
+  "batch_size": 64,
+  "curriculum_mix": [
+    [
+      "REVERSE4",
+      24
+    ],
+    [
+      "REVERSE3",
+      8
+    ],
+    [
+      "REVERSE2",
+      8
+    ],
+    [
+      "COPY4",
+      8
+    ],
+    [
+      "COPY3",
+      4
+    ],
+    [
+      "COPY2",
+      4
+    ],
+    [
+      "DIRTY-COPY1",
+      4
+    ],
+    [
+      "CLEAN-COPY1",
+      2
+    ],
+    [
+      "PUNCT",
+      2
+    ]
+  ],
+  "optimizer": "exact R69 Adam b1=.9 b2=.999 eps=1e-8 lr=.003 global_norm_clip1, resume saved p,m,v and RNG state, t index absolute (t+1) correction",
+  "frozen_primary_gate": "Each seed each of 9 old families has >=95% exact full output incl submit on R69 frozen validation; e.g COPY4 needs >=244/256. Report first observed at fixed checkpoints (zero of continuation=4096) and last earlier nonpass. No stop at success or seed cherry pick.",
+  "frozen_secondary": "Per family exact, aggregate validation, final fixed formerly inspected test, 3-seed pass; R69 4096 results preserved. First moment reaching >=95 between checkpoints unknown.",
+  "budget": "4096 extra updates x 3 seeds; 786432 additional 64-row target presentations; 16512 forward dense MAC per sample, 12,986,? million approximate; report exact",
+  "cost": "Separate original B 4096 old-skill pretrain from additional 4096; no cost-free comparison with handfilled A",
+  "test_policy": "No final panel reading until after all fixed checkpoints. Existing R69 test previously inspected and no longer qualifies as new blind heldout.",
+  "failures": "Preserve source SHA, checkpoint, validation family errors and final errors, runner code SHA, source A unchanged, DO NOT silently change optimizer/seed/lesson or threshold.",
+  "nvidia": "No authorized callable endpoint in this chat: 0 calls planned; read-only only if actually configured.",
+  "git": "Commit prereg BEFORE first update; write result in new independent branch and draft PR; no merge"
+}
