@@ -1,0 +1,243 @@
+{
+  "schema": "retention-growth-preregistration-v1",
+  "run": "pro_retention_growth_20261118_v1",
+  "created_utc": "2026-11-17T17:24:35.707693+00:00",
+  "question": "Does freezing an already trained small network suffice during width growth, and how do appended size and explicit format-scoped routing change retention and learning?",
+  "workstream": "SLE learned raw-bit interface; isolated research, no main queue mutation",
+  "provenance": {
+    "U": "User proposed incremental growth with room and a stable mature subnet alongside a smaller new subnet.",
+    "F": "PR129 six immutable parents; PR130 raw n5/n7 data, batch streams, original Fable W core and observed early forgetting.",
+    "A": "This paired mechanism-by-capacity experiment; frozen blocks and handfilled raw-header scope gate.",
+    "T": "No training results at preregistration; zero-update prior-chronology audit recorded separately."
+  },
+  "parent": {
+    "pr": 129,
+    "head": "00d089115461dd29f06044a6082363d48c058650",
+    "archive_sha256": "909fe1730f16a2a5c30f5beedce7fb6087a0d56ad74ca5ef5f3d2a656f3953cd",
+    "model_steps": 1024,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "policy": "Copy6checkpoints unchanged; preserve existing speaker101 failures; no parent retraining"
+  },
+  "previous_study": {
+    "pr": 130,
+    "head": "c35ff7d13ae427fc2ed6c5959665d121edd6bf50",
+    "archive_sha256": "a908a726571d5337cefe71dd193256e656bde8f729a181cf57109d2c93e5b579",
+    "use": "Immutable source/data/batches reuse; do not reuse trained PR130 heads as parents."
+  },
+  "profile": {
+    "status": "FABLE_W_CANDIDATE_NOT_CANONICAL151_OR_NORMATIVE_SLE_AE1",
+    "m": 4,
+    "n": [
+      5,
+      7
+    ],
+    "operands": 2,
+    "op_codes": {
+      "ADD": 12,
+      "XOR": 9,
+      "AND": 7,
+      "OR": 8
+    },
+    "frame": "1^4 0 | 1^n 0 | op4 0 | a_n 0 | b_n 0",
+    "frame_bits": {
+      "5": 28,
+      "7": 34
+    },
+    "transport": "One unsigned payload-length byte, then4or5bytes; MSB-first framebits then4or6zero padbits. Cut is one zero-length byte. Packet length exposes width, not semantic fields.",
+    "wire_bits": {
+      "5": 40,
+      "7": 48
+    },
+    "fixed_guard": "Boolean syntax/padding/op membership, width obtained from payload byte count; guard passes no semantic values to network. Old frozen receiver only accepts width5.",
+    "teacher_input": "Sender17slots=op2,b_low5,a_low5,b_high2,a_high2,width7flag. First12slots exactly parent input. Synthetic teaching request, not native SLE.",
+    "receiver_input": "Only raw received frame left aligned in34slots, append6zeros for28bit n5; no field remapping, parsed operands, original question, taskID, or continuous sender states.",
+    "sender_output": "34learnedlogits, hardthreshold>=0; use first28forn5 andall34forn7. Requested frame length supplied bycaller. Headers andtail bits learned.",
+    "receiver_output": "18logits=[op4,a_low5,b_low5,a_high2,b_high2]. argmaxop; all14operandbits threshold>=0, including highzeros for oldwidth5."
+  },
+  "data": {
+    "old_pairs": "PR129 splits unchanged384train72val72test; a,b<32,a+b<32. Oldtest historically inspected.",
+    "new_domain": "a,b<128,a+b<128, excluding all528oldpairs, total7728pairs. Eachpairall4ops inonesplit.",
+    "new_split": "192axisanchors(a0/0bwith32..127)train; lexnonaxis7536permuted default_rng(2026111702); first1856train,next256val,next256test,remaining5168unused.",
+    "new_counts_pairs": {
+      "train": 2048,
+      "val": 256,
+      "test": 256,
+      "unused": 5168
+    },
+    "panels_cases": {
+      "train_old": 1536,
+      "train_new": 8192,
+      "val_old": 288,
+      "val_new": 1024,
+      "val_oldwide": 288,
+      "test_old": 288,
+      "test_new": 1024,
+      "test_oldwide": 288
+    },
+    "oldwide": "Oldval/testsameheldpairs encodedwidth7. Never train oldpairs inwidth7; this measures formattransfer distinctfromnewrange.",
+    "leakage": "No semantic pair crosses train/val/test, even across widths. Newvaluesseen individuallyintrain, so heldpairgeneralization notunseen-value arithmetic learning.",
+    "evaluation_history": "All three test panels were examined in PR130. They remain disjoint from training but are reused benchmarks, not a fresh blind test. No new tuning or continuation on test results in this study."
+  },
+  "mechanisms": {
+    "initial_io_morphism": "Copy all old W1,b1,W2,b2 into firstinput/hidden/output coordinates. New input→oldhidden weights0. Newoutput weights0, biases−2. Old logits preserved; receiver newhighbits initiallyzero.",
+    "formula": "z = tanh(x W1_old+b1_old) W2_old+b2 + g(x) [tanh(x W1_new+b1_new) W2_new]",
+    "base_hidden": 16,
+    "appended_hidden": [
+      8,
+      16
+    ],
+    "initialization": "Per role and seed use default_rng(offset+seed), offset speaker700000/receiver800000. Draw one (nin,16) normal array with std sqrt(2/(nin+32)), take first k columns. Thus k8 matches the k16 prefix. New b1 and W2 zero; no extra residual output bias. This RNG block is a new pairing convention, not the PR130 sequential expansion convention.",
+    "arms": {
+      "joint": "All inherited and appended parameters train; g=1.",
+      "frozen_open": "Freeze all W1 columns0:16, b1[0:16], W2 rows0:16 and entire b2, including newly zero/-2 I/O extensions. Only appended blocks train; g=1.",
+      "frozen_gate": "Same frozen blocks, but g=speaker x[16] or receiver raw x[10]. Legal n5 has0, n7 has1. This handfilled format gate must multiply the complete new contribution; no semantic parser values reach the learner."
+    },
+    "names": [
+      "joint_k8",
+      "joint_k16",
+      "frozen_open_k8",
+      "frozen_open_k16",
+      "frozen_gate_k8",
+      "frozen_gate_k16"
+    ],
+    "paired_contrasts": "Within each k, joint vs frozen_open isolates imposed parameter freezing; frozen_open vs frozen_gate isolates explicit old-format suppression. k8 vs k16 changes capacity under identical data and matched incoming prefix. No trainable-base-plus-gate arm is included; the full interaction is not separately identified.",
+    "constraints": "Parent remains source of original errors. Frozen+gated preserves those errors too; do not equate retention to perfect accuracy. No random-output attachment arm: PR130 already established zero-outgoing morph invariance."
+  },
+  "models": {
+    "roles": [
+      "speaker",
+      "receiver"
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "dtype": "float64",
+    "activation": "tanh",
+    "total_models": 36,
+    "speaker_shape": [
+      17,
+      "16+k",
+      34
+    ],
+    "receiver_shape": [
+      34,
+      "16+k",
+      18
+    ],
+    "parameter_counts": {
+      "k8": {
+        "speaker_total": 1282,
+        "receiver_total": 1290,
+        "pair_total": 2572,
+        "speaker_frozen_arm_trainable": 416,
+        "receiver_frozen_arm_trainable": 424,
+        "pair_frozen_arm_trainable": 840
+      },
+      "k16": {
+        "speaker_total": 1698,
+        "receiver_total": 1714,
+        "pair_total": 3412,
+        "speaker_frozen_arm_trainable": 832,
+        "receiver_frozen_arm_trainable": 848,
+        "pair_frozen_arm_trainable": 1680
+      }
+    },
+    "forward_dense_mac": {
+      "k8": {
+        "speaker": 1224,
+        "receiver": 1248,
+        "pair": 2472
+      },
+      "k16": {
+        "speaker": 1632,
+        "receiver": 1664,
+        "pair": 3296
+      }
+    },
+    "accounting": "Count frozen dense blocks in stored parameters and forward dense MAC. Report gate scalar products separately; MAC does not include backprop, optimizer, nonlinearities, evaluation, IO or W execution. Same dense optimizer state may still be allocated for frozen values; report actual storage."
+  },
+  "training": {
+    "updates_per_model": 4096,
+    "models": 36,
+    "actual_updates_budget": 147456,
+    "presentations_budget": 18874368,
+    "batch_size": 128,
+    "batch_composition": "Same PR130 saved role/seed streams, 64 old and64 new rows per update, paired across all6arms. Old rows give zero trainable gradient in frozen_gate, but are still presented and scored.",
+    "batch_draw_order": "Generateall4096x64oldindices first,thenall4096x64newindices fromsamebatchRNG.",
+    "lr": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "clip_global_norm": 5.0,
+    "speaker_loss": "BCEmean overeachrowactive28or34bits,thenmeanrows",
+    "receiver_loss": "Mean4classCE + meanBCEoverall14operandbits",
+    "adam_resets": [
+      0,
+      512,
+      1024
+    ],
+    "reset_policy": "All arms reset m/v/t at same boundaries. Save step512/1024 checkpoint before reset, then reset with no parameter change. No adaptive architecture or learning-rate change. Parent Adam retained only as provenance.",
+    "checkpoints": [
+      0,
+      1,
+      8,
+      32,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "evaluation": "Three validation panels at each checkpoint, full outputs and components saved. Test panels only once after4096 per model; no earlystop/reseed/repair/additional training. All negative outcomes retained.",
+    "joint_gate_reporting": "First observed validation95all3 perhead, plus same-seedS/Rboth95; no claim95component guarantees95fullpipeline.",
+    "execution": "One programmatic loop; no LLM decisions between updates.",
+    "forward_training_dense_mac_budget": 27216838656,
+    "gradient_mask": "For frozen arms, zero all frozen gradients before global clipping and Adam. Zero moments reset and remain zero on frozen coordinates. Verify frozen parameters bitwise equal to step0 at every checkpoint."
+  },
+  "evaluation": {
+    "primary": "Minimum observed old validation accuracy and retained-parent-correct counts over checkpoint schedule; final n7 new-range and old-values/new-format complete frame/tuple; all3seeds separately. No claim observed minima exhaust every intermediate update.",
+    "secondary": "Base-weight change, base logits change, raw residual contribution, effective residual, old correct-to-wrong and wrong-to-correct; final actual wire fullpipeline.",
+    "acceptance": "Report95% whole-case performance as advancement marker, not repair failures to100. Retention claim frozen_gate means exact old function, not improved old errors. Joint S/R component markers are not the pipeline marker.",
+    "preflight": "Independent finite-difference gradient check, active masks, zero incoming gradients at init with zero outgoing, live outgoing gradient, raw-header gate, initial parent preservation and k-prefix pairing. Use deterministic synthetic/validation fixtures, no test tuning.",
+    "independent_audit": "Reproduce full fixed Adam recurrence once to test new gate/mask and every saved checkpoint; audit computations separate from experimental optimizer updates. Recompute predictions and raw wire outcomes with independent math/oracle.",
+    "frozen_core": "OriginalFableWunchanged. Receiversemanitics alone reencoded and passedtoW.run. n=max(inputwidth,bit_length(preda),bit_length(predb)); preserve wrong highbitpredictions and original carrywidthgrowth, no truncation/repair. Arithmetic notnewlylearned."
+  },
+  "channel": {
+    "receiver_process": "Fresh subprocess eachreceiverfixedcheckpoint; onlycase-varyinginputbinary stdin, no testcaseIDs/originalrequests/softsenderstates. This is dataflowisolation, notOSsandbox.",
+    "matched": "6arms x3seeds x(288old+1024new+288oldwide)=28800records,18freshreceiverprocesses,54groups. No extra crossplay/intervention repeat.",
+    "planned_records": 28800,
+    "receiver_scope": "Fixed boolean syntax guard then raw bits; explicit gate from raw header x[10]. No caller taskID or parsed operands supplied to receiver.",
+    "records": "Recordallrawlogits,bits,packedwire,predictions,Wcommandsandanswers,rejects,failures. Correlatedcrosspairsnotindependentseeds."
+  },
+  "constraints": [
+    "No formalgrammarclaim or SLEsuperioritycomparison",
+    "No newarithmetictraining",
+    "No autonomousarchitecturelearningclaim: controllergivenbyresearcher",
+    "No sizeoptimality/uncappedgrowthclaim",
+    "No mainqueuechanges,nomerge,noexternalLLMteacher",
+    "Allnegativeoutputs retained",
+    "No guarantee from small neuron count alone.",
+    "No claim gated protection was autonomously learned.",
+    "No full2x2 freezing-by-gating interaction test; trainable-base gated arm omitted.",
+    "No continuous-service deployment claim; this tests the candidate network itself."
+  ],
+  "workers": {
+    "nvidia_status": "skipped_unavailable",
+    "nvidia_actual_calls": 0,
+    "reason": "No callable NVIDIA/OpenRouter tool; OPENROUTER_API_KEY and NVIDIA_API_KEY absent in current runtime. Independent local agent review used.",
+    "windows_codex_actual_calls": 0,
+    "gemini_actual_calls": 0
+  },
+  "references": [
+    "https://arxiv.org/abs/1511.05641",
+    "https://arxiv.org/html/1606.04671v4",
+    "https://arxiv.org/abs/1606.09282"
+  ]
+}
