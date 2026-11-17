@@ -99,8 +99,8 @@
       "size_bytes": 5346429
     },
     "protocol.json": {
-      "sha256": "4f086f4d6f5e4fa57895d75cc21870fa926b3a022820779367648f1bc06aef46",
-      "size_bytes": 9159
+      "sha256": "62630b54d386483b11c63950c5d5dcc6581fbb2a60fd9ba3de9987001b676fd0",
+      "size_bytes": 9390
     },
     "projection_receipt.json": {
       "sha256": "2e41b671fc91495e5c206c256617e84fa8e64f95d14a127eac07d36460f8b93f",
@@ -147,6 +147,15 @@
       "data_redrawn": false,
       "training_updates": 0,
       "neural_forward_rows": 0
+    },
+    {
+      "utc": "2026-11-17T23:44:22.512569+00:00",
+      "changes": [
+        "Secondary final all-train prediction once after all nine heads finish; cached source features; no continuation; 74160 extra head forward rows / 18391680 MAC accounted"
+      ],
+      "data_redrawn": false,
+      "training_updates": 0,
+      "new_test_feature_rows": 0
     }
   ]
 }

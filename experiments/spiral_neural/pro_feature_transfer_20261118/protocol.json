@@ -141,7 +141,7 @@
   },
   "metrics": {
     "primary": "Validation exact seven-bit MAX accuracy by seed/checkpoint; first observed95%; first checkpoint ending two consecutive observed evaluations>=95%; final fresh test exactaccuracy",
-    "secondary": "AUC of validation exactaccuracy over update count using trapezoids at fixed checkpoints; opcode/operand-order/tie strata; copy-a/copy-b baselines; all errors retained",
+    "secondary": "AUC of validation exactaccuracy over update count using trapezoids at fixed checkpoints; opcode/operand-order/tie strata; copy-a/copy-b baselines; all errors retained; one final all-train exactaccuracy evaluation after all9headsfinish using cached trainfeatures, never a continuation criterion",
     "threshold_note": "95% markers do not stop or promote based on test. Missing crossing remains null; continuous safety or every-update monotonicity not required.",
     "source_audit": "After all training, decode mature source on fresh test from actual cached hidden and retained readout; report source tuple correctness and head errors by source correctness. No truth substitution.",
     "comparison_claim": "Matched new-head capacity and data; full-system storage differs because mature source retains its original450parameter readout. Conditional additional learning efficiency, not training-from-scratch total cost superiority."
@@ -159,7 +159,9 @@
     "dense_note": "Raw zero rows are stored and still counted by the dense implementation; rawP432nonzero+bias24. Tanh,normalization,backprop,Adam,evaluation,IO excluded from dense MAC and reported separately.",
     "inherited_lineage_updates_total": 15360,
     "inherited_lineage_presentations_total": 1966080,
-    "inherited_search_cost_note": "These are the chosen source lineages only, not all historical project experiments."
+    "inherited_search_cost_note": "These are the chosen source lineages only, not all historical project experiments.",
+    "final_train_head_forward_rows_budget": 74160,
+    "final_train_head_forward_mac_budget": 18391680
   },
   "constraints": [
     "No changes to source artifacts or other experiments",
