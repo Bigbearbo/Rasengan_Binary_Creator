@@ -1,0 +1,175 @@
+{
+  "schema": "sle_identity_growth_v1",
+  "status": "prospective_locked_before_main_training",
+  "research_question": "Can an explicit controller allocate trainable local correction units only on observed need, consolidate repeated identity exceptions into provisional semantic rules, and retract incorrect generalizations?",
+  "provenance": {
+    "U": "User proposed networks choosing width/length as needed and internal SLE interfaces.",
+    "A": "This bounded growth and reversible consolidation experiment.",
+    "T": "Only runs and verification archived in this study count as new evidence.",
+    "F": "Prior handfilled wordlevel core and primary literature are reused sources."
+  },
+  "grid": {
+    "contexts": 2,
+    "meanings": 4,
+    "aliases_per_meaning": 6,
+    "total_words": 24,
+    "total_pairs": 48,
+    "operations": [
+      "ADD",
+      "XOR",
+      "AND",
+      "OR"
+    ],
+    "base": "Known handfilled context/meaning rule, logit 2 for its correct operation and 0 for the other three. No old learned checkpoint is retrained.",
+    "input": "Exact context and word IDs plus known word-to-meaning mapping. This isolates growth policy, not learning language perception."
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "randomization": {
+    "generator": "numpy.default_rng(seed)",
+    "draw_order": [
+      "permutation(24).reshape(4,6): aliases[group,alias_index]",
+      "integers(1,4): context1_shift",
+      "integers(0,4): affected_group"
+    ],
+    "base_operation": "(meaning + context * context1_shift) % 4",
+    "changed_operation": "(base_operation+1)%4",
+    "note": "Seeds randomize namespace and affected operation, not zero-initialized optimization."
+  },
+  "worlds": {
+    "unchanged": "No target changes.",
+    "shared": "All six aliases of the affected group in context 1 change.",
+    "isolated2": "Only alias indices 0 and 1 of that group in context 1 change.",
+    "isolated3": "Only alias indices 0,1,2 of that group in context 1 change."
+  },
+  "stream": [
+    [
+      "affected",
+      0,
+      1
+    ],
+    [
+      "affected",
+      0,
+      1
+    ],
+    [
+      "affected",
+      0,
+      0
+    ],
+    [
+      "affected",
+      1,
+      1
+    ],
+    [
+      "next_group",
+      0,
+      1
+    ],
+    [
+      "affected",
+      2,
+      1
+    ],
+    [
+      "affected",
+      1,
+      0
+    ],
+    [
+      "affected",
+      3,
+      1
+    ],
+    [
+      "affected",
+      0,
+      1
+    ]
+  ],
+  "stream_tuple_fields": [
+    "group_kind",
+    "alias_index",
+    "context"
+  ],
+  "heldout": "Affected-group alias indices 4 and 5 in context1 are never taught; private scorer only.",
+  "arms": [
+    "frozen",
+    "preallocated_exact",
+    "always_exact",
+    "demand_exact",
+    "consolidate_k2",
+    "consolidate_k3"
+  ],
+  "architecture": {
+    "input_dims": 30,
+    "features": "context onehot(2),word onehot(24),meaning onehot(4)",
+    "base_hidden": 8,
+    "base_nonzero_coefficients": 32,
+    "base_dense_coefficients": 280,
+    "base_trainable": 0,
+    "exact_gate": "ReLU(x_context[c]+x_word[w]-1)",
+    "shared_gate": "ReLU(x_context[c]+x_meaning[g]-1)",
+    "cell": "Four trainable residual logits, zero initialized, plus three fixed nonzero gate coefficients. Exact identity cells override a shared rule when both match; all residuals add to unchanged base logits.",
+    "growth_unit": "One new gated hidden unit with four trainable output values.",
+    "demotion": "Remove provisional group unit and recreate exact cells for distinct observed keys in this group whose labels differ from base, training each from zero using its stored label. Shared-rule contradiction includes a newly observed original/base label.",
+    "promotion": "After recording each visible label, require at least K DISTINCT exact word IDs within the same context/meaning group, every observed label equal, and that label differ from base. Add and train one shared cell from zero; release exact cells in that group. Any mixed labels prevent promotion thereafter.",
+    "controller": "External deterministic software policy, not a learned architecture policy."
+  },
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8,
+    "dtype": "float64",
+    "updates_per_training_call": 100,
+    "initial_residual": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "ordinary_update": "Train only if the currently observed label is predicted incorrectly. Preallocated has all 48 zero cells at start; always_exact creates a cell for every first-seen key, including already-correct ones; demand_exact creates only when incorrect.",
+    "shared_update": "On an active rule contradiction, demote/rebuild before repairing the current key. At promotion, train one shared cell for 100 steps. No hidden full-grid or heldout labels enter controller state.",
+    "stop": "Exactly 9 events for every seed/world/arm; no early stop, seed selection, tuning, or human intervention."
+  },
+  "evaluation": {
+    "before_feedback": "Prediction on current labeled stream item before its label is released.",
+    "after_feedback": [
+      "Full 48-pair accuracy",
+      "Accuracy on all unchanged-target pairs relative to base",
+      "Accuracy on observed unique pairs against current world",
+      "Accuracy on the four affected support aliases",
+      "Accuracy on the two permanently held aliases",
+      "Maximum changes in frozen base coefficients",
+      "Active cells, cumulative creations/removals, optimizer update count, trainable coefficients, gate coefficients, retained policy evidence records"
+    ],
+    "stages": "Initial and after each of nine events; archive full logits/predictions and state.",
+    "retention": "Pairs whose target really changes are excluded from unchanged-retention denominator.",
+    "cost": "Count base, routing keys, gates, output values, Adam state and policy evidence separately. Consolidating active units does not imply deleting evidence or reducing all information."
+  },
+  "verification": {
+    "independent": "Array-only verifier must reconstruct dense ReLU gates and priority routing from archived states without importing model or runner; recompute metrics and policy decisions; finite-difference residual loss and Adam check separately.",
+    "integration": "Reuse verified core/cache without crediting old tests as new. Run a small separate direct W check on distinct core operations selected by trained growth snapshots; archive raw bits and trace. This does not prove SLE syntax is superior."
+  },
+  "claims_boundary": [
+    "Synthetic noiseless labels and known semantic groups only.",
+    "Frozen base is handfilled and already correct.",
+    "Rule grouping and growth choices are externally specified.",
+    "No fixed finite prefix distinguishes a genuine shared rule from matching isolated exceptions.",
+    "This does not test autonomous invention of depth, task discovery, noisy data, natural language, SLE encoding efficiency, or long-term compute savings."
+  ]
+}
