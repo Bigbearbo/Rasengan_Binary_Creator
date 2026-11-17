@@ -2,6 +2,18 @@
 
 This experiment separates two sources of old-skill interference: changing inherited parameters and adding a new contribution to shared outputs. PR130's early decline happened before its first hidden-unit expansion. Here we test a frozen inherited base, with either unrestricted or explicitly format-scoped new outputs, at two added widths.
 
+## Interpretation update: rebound and reuse (2026-11-18)
+
+The motivating user hypothesis allows transient early interference. The question is whether a modest added fraction makes mature learning easier to recover while the new part connects new learning, and whether excessive disturbance can restore old answers through a reorganized computation. Our prior response misread that as uninterrupted preservation. Frozen/gated conditions answer a different engineering question and do not refute the clarified hypothesis.
+
+This update reads already archived results only: zero new training, neural forward passes or W calls. A post hoc recovery description is the first saved checkpoint after the observed trough where at least95% of originally correct old-validation cases are retained and every subsequent saved checkpoint stays at least95%. For joint+8 this is S101/202/303=512/512/1024 and R101/202/303=1024/512/1024; joint+16 gives512 for all six. Thus these two widths do not establish faster recovery for the smaller addition. They add50% and100% of the16-unit parent, not an exhaustive small-to-large sweep. This descriptive marker does not replace preregistered acceptance.
+
+Archived component diagnostics also distinguish regained answers from unchanged division of work. For joint+8 Sender101 on test_old, the final complete head scores288/288; its current inherited16-unit component with current output weights/bias scores39/288 by itself, versus282/288 for the original parent. The new branch is now needed for those old answers. Ablating a coadapted branch does not prove erased knowledge: inherited features may remain while readout and compensation change.
+
+Sources: archived analysis_results.json, model_results[].old_retention_by_checkpoint and component_diagnostics_final.test_old. No immutable source, checkpoint, raw prediction, preregistration or ZIP was modified.
+
+Next priority is recovery plus structural reuse in existing joint checkpoints, using multiple diagnostics rather than raw parameter distance or one ablation. Hidden-unit permutation/sign symmetries and coadapted readouts must be considered. A later controlled added-size comparison should keep old learning plastic and track actual output/gradient disturbance as well as unit count. The present residual units read raw inputs and meet the old units at the output; directly reading mature hidden features is a separate proposed architecture, not something this experiment already demonstrated. The mixed-width teaching proposal below remains a distribution-control question, rather than the primary answer to this clarification.
+
 ## Executed finding
 
 The smaller unrestricted branch disturbed old skills less in all six paired role/seed comparisons, but learned the new format poorly. Freezing the old base alone did not protect the complete network output. Freezing it **and** restricting the new branch to the longer format preserved all originally correct old cases; adding 16 units then gave 99.61%, 99.61%, 99.90% complete semantic accuracy through the actual binary channel on the new range.
