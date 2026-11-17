@@ -1,0 +1,26 @@
+{
+  "schema": "bit-channel-source-lock-v1",
+  "run": "pro_bit_channel_20261117_v1",
+  "frozen_utc": "2026-11-17T14:19:15.140977+00:00",
+  "initial_preregister_commit": "5cf7ba17e33ba39570f3bce858262387c6e84c80",
+  "protocol_clarification_commit": "9517010cc73ee101f0a794705848402883879f35",
+  "source_pull_request": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/129",
+  "source_sha256": {
+    "protocol.json": "defdf5c4e251e78e94f2f4ef4d0a88f47fc220e27af59fad76a55bf0642a867b",
+    "data.json": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90",
+    "codec.py": "0a5820fdda994a103bdb9eba01653053400954246ed5024494166cada4f04f18",
+    "neural.py": "eb6eb7562742a73bf0c44094d27d0248880fe6ea735ccbdc6a12c59058b07273",
+    "run_train.py": "c2e91ab3e2922e37c64f09a8b12fef06ff9ee9558ea1ea57ed368481cbdaa022",
+    "run_channel.py": "af285bb29cc21a8abbb5a7889264f11d1058cb95854a298968ab4f82d116ceda",
+    "receiver_worker.py": "f8a147a8e3892eda654fdd6dbf4e903992e2d5de7d229faf90e355e33ecb09d4",
+    "check_gradients.py": "80470921b09017ebb816486210646f485e2e7e74347b9945a2606d48943139e7",
+    "sources/wordlevel.py": "f71a0696e212284f642ad034e18665da98b994adc38db3f462ca500ff4fb35e8"
+  },
+  "executed_before_lock": "finite-difference fixtures only,0optimizerupdates; scopedP0originalcore2112cases; no studenttraining",
+  "preflight_sha256": {
+    "gradient_checks.json": "9fed1df97b02dbb2b12a23497ab2f657754126feb9cc3438b51f4acdda27bd55",
+    "preflight/preflight.json": "5320832899b84d871104e8e86d0bd1c4d78d92d13780bcd95645b3e0bdf322cb",
+    "preflight/P0_records.jsonl": "f199ced2805fd8a8c2650823942b3983161202cfd598353997474844b963da7d"
+  },
+  "source_edits": "fixedrecordprefix cost clarified beforetraining; no result-based hyperparameterchange"
+}
