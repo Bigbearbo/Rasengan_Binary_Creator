@@ -1,0 +1,170 @@
+{
+  "schema": "sle_shadow_probe_v1",
+  "status": "prospective_locked_before_main_training",
+  "question": "Can a provisional shared rule request informative feedback before activation, reducing scope errors per paid query?",
+  "prior_archive": {
+    "filename": "sle_identity_growth_20261117_v1.zip",
+    "sha256": "6f72122c769e83e5e3643a75fd97149fe610151e7ffe690f5b00a505395758f4",
+    "module_sha256": "f1a7ae5c9ad35ebed5e2146eb15c0400f4bbb7139e1db8f055ae1feffc523489"
+  },
+  "grid": {
+    "contexts": 2,
+    "meanings": 4,
+    "aliases_per_meaning": 6,
+    "words": 24,
+    "pairs": 48,
+    "features": 30,
+    "operations": [
+      "ADD",
+      "XOR",
+      "AND",
+      "OR"
+    ],
+    "known_base": "Same handfilled8-gate base and supplied word-to-meaning map as prior study; no syntax learning."
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "data_rng": {
+    "generator": "numpy.default_rng(seed)",
+    "draws": [
+      "permutation(24).reshape(4,6)",
+      "integers(1,4) for context1 shift",
+      "integers(0,4) for affected group"
+    ],
+    "base": "(meaning+context*shift)%4",
+    "new_label": "(base+1)%4"
+  },
+  "worlds": {
+    "shared": 6,
+    "isolated2": 2,
+    "isolated3": 3,
+    "isolated4": 4
+  },
+  "unchanged_control": "Separate10seed ×7policy sanity panel, no changed labels/candidate/queries. Only clean teacher condition; not duplicated over query orders.",
+  "prefix": [
+    {
+      "alias": 0,
+      "context": 1
+    },
+    {
+      "alias": 0,
+      "context": 1
+    },
+    {
+      "alias": 0,
+      "context": 0
+    },
+    {
+      "alias": 1,
+      "context": 1
+    }
+  ],
+  "prefix_note": "4 observations,3 unique keys. Same changed prefix acrossall4worlds for eachseed. Prefix and candidate trained once then cloned; archive exact inheritance and distinguish logical per-episode updates from actual executions.",
+  "heldout": "Affected-group aliases4and5 in context1 never appear in prefix or query pool; scored only.",
+  "query_pool": "All48pairs minus3distinctprefixkeys minus2heldkeys =43eligible keys.",
+  "policies": [
+    "exact_only",
+    "immediate_k2",
+    "shadow_wait",
+    "random_1",
+    "disagreement_1",
+    "random_2",
+    "disagreement_2"
+  ],
+  "query_orders": {
+    "replicates": 8,
+    "generator": "numpy.default_rng(100000+seed)",
+    "construction": "For each of4draws, permute sorted43eligible grid indices; save permutation and its reversal as a paired pair of query orders.",
+    "coupling": "All worlds,teacher conditions and selectors for same seed/rep share this order. These are antithetic paired orders, not independent runs."
+  },
+  "selectors": {
+    "random": "Take first budget indices of full eligible order.",
+    "disagreement": "Filter that SAME order to indices where frozen provisional candidate and current exact-repair model initially predict different classes, then take first budget. Exactly2 such eligible keys here; no label knowledge or within-scope ranking."
+  },
+  "teacher_conditions": {
+    "clean": "Return world truth for asked key only.",
+    "one_wrong_key": "Only affected-group alias3/context1 has a fixed wrong teacher label: swap base and proposed-new operation. All other responses truthful. Same corrupt key acrosspolicies/order; repeated labels would be consistent. Report actual corrupted responses encountered, not just condition name."
+  },
+  "candidate": {
+    "creation": "After prefix, find a context/meaning group with at least2DISTINCT observed identities all having same non-base label. Exactlyone possiblecandidate in changedprefix;none inunchanged.",
+    "neural": "Reuse unchanged prior make_cell/cell_loss_grads/adam_update. Train separate shared cell fromzero for100Adamsteps on observed target. It has no access to world/held labels.",
+    "visibility": "Keep candidate in separate shadow store; no influence on live predictions before explicit deployment. It remains a fixed proposal during the probe episode."
+  },
+  "episode": {
+    "exact_only": "Use exact-repair prefix, no candidate cost/query.",
+    "immediate_k2": "Move trained candidate into live shared store immediately and remove same-group exact cells, no query.",
+    "shadow_wait": "Retain candidate off live path, no query.",
+    "query_policy": "Hold candidate off live path; choose all1or2queries from initial predictions, then consume full budget even if a contradiction occurs. Learn each response as an exact local correction if mispredicted. Queryed keys cease being unseen. At end make exactlyone activation decision.",
+    "acceptance": "At least1new queried key in INITIAL disagreement set agrees with candidate, and NO queried key in that set disagrees. Irrelevant queries neverconfirm. Apply same criterion to budget1and2.",
+    "rejection": "If any informative query contradicts, discard shadow candidate; retain exact repairs and evidence. If no informative response, remain pending with shadow stored.",
+    "stop": "End immediately after decision; no later natural feedback or recovery from contradictory duplicate labels is tested.",
+    "deployment": "Transfer candidatewithout retraining; remove live exact cells in that context/meaning; preserve other groups. Exact-over-shared priority as prior source. Never rerun training based on hidden score."
+  },
+  "training": {
+    "dtype": "float64",
+    "optimizer": "Adam",
+    "lr": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8,
+    "steps_per_call": 100,
+    "zero_init": true,
+    "fit": "Only newly corrected4-value cell outputs. Base and gatesfixed. No new deepfeature training.",
+    "reuse": "Train20prefix parents (unchanged/changed ×10seed), and10changed candidates once; clone for world/teacher/query branches. Actual new updates=sumparentcalls+branchadditionalcalls. Logical episode updatesincludeinheritedparentwork."
+  },
+  "counts": {
+    "query_episodes": 2560,
+    "noquery_changed_controls": 120,
+    "unchanged_sanity_episodes": 70,
+    "total": 2750,
+    "query_episodes_formula": "10seeds ×8orders ×4worlds ×2teachers ×4querypolicies"
+  },
+  "evaluation": {
+    "stages": "Initial live state with shadow, after each returned label, after activation decision; save logits/predictions/state/evidence/action/query logs.",
+    "metrics": [
+      "48-pair accuracy",
+      "unchanged-target retention",
+      "changed-target accuracy",
+      "permanentheld2accuracy",
+      "visible-label fit",
+      "visible-truth accuracy",
+      "queried/unqueried split",
+      "candidate activation/rejection/pending",
+      "wrong-rule activation",
+      "actualquerycount andcorruptedresponsecount",
+      "active live cells and shadowcells",
+      "totalstorage/optimizer/evidence/routecost",
+      "logical andactualnew gradient updates"
+    ],
+    "regression": "Before activation, addition of shadow alone must leave all48live logits exactlyunchanged. Localteachererrors may still create exact errors; report separately.",
+    "teacher_cost": "Report metrics versus query count and illustrative J=deployment_errors/48+lambda*queries for lambda0,0.01,0.05,0.10; lambda is chosen illustrative cost, not learned/empirical monetary calibration."
+  },
+  "exact_policy_enumeration": {
+    "role": "Separate symbolic audit, not new neural training or a source of model decisions.",
+    "global": "Enumerate43possible1-query keys and903unordered2-query subsets to compute exact activation probability for each world/teacher; no omitted failures.",
+    "disagreement": "Enumerate2possible1-query keys andone2-key set. Compare paired sample results and expose irrelevant-scope filtering."
+  },
+  "verification": {
+    "independent": "No importing model/runner for numerical replay. Reconstruct base,gates,priority,shadow isolation,visible-label policies,selectedqueries,allAdamstates,metrics,inheritance andaggregatecost.",
+    "implementation": "Reuse prior verified optimizer unchanged; add only material controller isolation/transfer/eligible-mask fixtures, not duplicate broadmath testing.",
+    "integration": "Small fixed trained-snapshot→existingW diagnostic with rawbits andwrong semanticselections preserved; reused source hashchecked. No oldcache runscredited."
+  },
+  "claims_boundary": [
+    "Externalquery/growthcontroller, knownmeaning groups andhandfilledbase.",
+    "Disagreement selects relevant scope; unseenmemberswithin it are exchangeable.",
+    "Finitequeries cannot certify arbitraryheldaliases; shared versusisolated4 identicalonallqueryeligible evidence.",
+    "Singlewrongkey is a sensitivitystress, not generalnoise robustness or adversarialtraining.",
+    "No direct SLE syntax/encoding/internalcommunication advantage demonstrated.",
+    "No fullcontinualcurriculum orpost-noise recovery inthisepisode."
+  ]
+}
