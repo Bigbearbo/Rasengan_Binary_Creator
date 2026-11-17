@@ -22,6 +22,13 @@
 | 局部擴容與可逆例外併入 | [#124](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/124) | [`ecfd15f759`](https://github.com/Bigbearbo/Rasengan_Binary_Creator/commit/ecfd15f759524a686ea1db147140f7cd3d85f189) |
 | 影子規則、主動查詢與標籤錯誤 | [#125](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/125) | [`0af19c3576`](https://github.com/Bigbearbo/Rasengan_Binary_Creator/commit/0af19c3576718c306b1a7739eec9681f100759b8) |
 
+**Pro 離散訊框與擴階實測線**：先看固定詞長的收發與換接，再看詞長增加時兩端如何各自擴容。兩輪都使用固定算術核心；擴階後恢復舊格式相容，不代表續學期間沒有遺忘，也不是螺旋語優於其他編碼的對照。
+
+| 主題 | PR | 本次查核的提交 |
+| --- | --- | --- |
+| 固定詞長：離散訊框、獨立接收端換接與合法訊詞介入 | [#129](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/129) | [`00d0891154`](https://github.com/Bigbearbo/Rasengan_Binary_Creator/commit/00d089115461dd29f06044a6082363d48c058650) |
+| 5→7 位：發送／接收端按需擴容、舊格式相容與暫時遺忘 | [#130](https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/130) | [`c35ff7d13a`](https://github.com/Bigbearbo/Rasengan_Binary_Creator/commit/c35ff7d13ae427fc2ed6c5959665d121edd6bf50) |
+
 ## 怎麼交棒
 
 1. **接工作前**：先看 PR 目前狀態、base 與 head SHA，確認有沒有人已完成。以原始 PR、報告與驗證為準，不因主分支沒有某個草稿結果就重跑。
