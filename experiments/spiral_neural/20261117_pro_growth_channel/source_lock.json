@@ -1,0 +1,27 @@
+{
+  "schema": "growth-channel-source-lock-v1",
+  "run": "pro_growth_channel_20261117_v1",
+  "locked_utc": "2026-11-17T14:57:37.598178+00:00",
+  "preregistered_git_commit": "ae8d6fee5179dc10897574049f27e658ba632b22",
+  "source_sha256": {
+    "protocol.json": "f6e7bf7f42f7e1807a8c5d6f37e142d8b63bab1f7d46502d0b42ec3771321c04",
+    "codec.py": "67f71587892ff7d17f9cea207296cd35347a59c4e06e4545fee20b0bfdf5e265",
+    "data.json": "8732d0e34fc847597aeb55769fae1253b699d780fbb823c1f9dd44c75d24fd6d",
+    "neural_growth.py": "e95db95a6bbb9558786c6e033df502cccd3c1a610691e8164d1c411dd30badf2",
+    "run_train.py": "6dc091c25bc8da77129892c84dc193283897919ac166079a3339ce4e3291d24e",
+    "channel.py": "1abaa1e8cf315fa1fb54614b6051851de98a2d6e42eaddfa52f68b27c52e39c9",
+    "receiver_worker.py": "9658823a050f16062e226bb2139c74c7b1f64a4fd9cb39808d5ea818cf512935",
+    "preflight.py": "0ca0cfec5d10f139c1503c865ac594fb3214c794fe44a324e45d174dbff0fc67",
+    "parent_sources.json": "55703a4329b66df0789f76a729d9cfd7e5ffd6b57d3fe307c20cf7210416af5f",
+    "parents/data.json": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90",
+    "parents/protocol.json": "defdf5c4e251e78e94f2f4ef4d0a88f47fc220e27af59fad76a55bf0642a867b",
+    "parents/neural.py": "eb6eb7562742a73bf0c44094d27d0248880fe6ea735ccbdc6a12c59058b07273",
+    "sources/wordlevel.py": "f71a0696e212284f642ad034e18665da98b994adc38db3f462ca500ff4fb35e8",
+    "parents/speaker_seed101.npz": "cae7551053a6e9d1b765d1daa26b566c8db05fea002038f4251c3db6a52b7a19",
+    "parents/speaker_seed202.npz": "26a0578d08433cf307718e385693be78b794000039fc3beadfa68e036ea26b5e",
+    "parents/speaker_seed303.npz": "972c0c68eb17debb56c318501e671433b04601a6594f6eddd9019d6d276e24a9",
+    "parents/receiver_seed101.npz": "f1abc4ee1078e65ad0bacffc172d215dd78366000c5d6f10971e2b79f3a7c91f",
+    "parents/receiver_seed202.npz": "14448f3c9ce6929b8293c4d9593d573df55645346a67623970c14c360f0a3770",
+    "parents/receiver_seed303.npz": "d95e3ddc25420c28a933b7c6540701cf5ef0af938f28b9a8b2f28f47d24c3ce8"
+  }
+}
