@@ -1,0 +1,179 @@
+{
+  "schema": "feature-transfer-preregistration-v1",
+  "run": "pro_feature_transfer_20261118_v1",
+  "created_utc": "2026-11-17T23:39:00.858722+00:00",
+  "question": "Does a small new MAX head learn more efficiently from a mature raw-frame receiver's actual hidden computation than from fixed random nonlinear features or an information-preserving raw projection?",
+  "provenance": {
+    "U": "User mature-network reuse, growing small branches, and permitted temporary regression/recovery concepts",
+    "F": "Existing PR130 demand receivers and original Fable W candidate frame profile; PR131 identified missing lateral reuse but is not rerun",
+    "A": "This fixed MAX readout, three equal-head feature conditions, fresh unordered split and accounting",
+    "T": "No experimental training or model inference at preparation; actual execution receipts follow separately"
+  },
+  "source": {
+    "study": "PR130",
+    "head_commit": "c35ff7d13ae427fc2ed6c5959665d121edd6bf50",
+    "archive_sha256": "a908a726571d5337cefe71dd193256e656bde8f729a181cf57109d2c93e5b579",
+    "arm": "demand",
+    "role": "receiver",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "shape": [
+      34,
+      24,
+      18
+    ],
+    "full_parameters_per_source": 1290,
+    "active_encoder_parameters": 840,
+    "retained_readout_parameters": 450,
+    "inherited_updates_per_source_lineage": 5120,
+    "inherited_presentations_per_source_lineage": 655360,
+    "new_source_updates": 0,
+    "new_source_pretraining": false,
+    "frozen_reason": "Causal feature-bank control only; not a claim that future adaptation must freeze the parent or never regress",
+    "source_split_evidence": [
+      "sources/pr130_data.json",
+      "sources/pr129_data.json"
+    ]
+  },
+  "task": {
+    "name": "fixed_MAX_readout",
+    "target": "max(a,b), 7 binary bits",
+    "input": "Actual source-profile n7 frame,34rawbits; Fable W candidate,not formal canonical SLE",
+    "source_opcodes": {
+      "ADD": 12,
+      "XOR": 9,
+      "AND": 7,
+      "OR": 8
+    },
+    "opcode_role": "Nuisance variation for this fixed MAX head; original operation meanings remain unchanged",
+    "external_task_identity": "Experiment caller selects the MAX readout; no learned new-opcode detection or task router",
+    "output_scope": "Seven answer bits, not a complete canonical SLE response or a newly assigned formal MAX opcode",
+    "teacher_scope": "True operands generate supervised MAX labels only. No true operands, MAX answers, source-oracle answers, or test outcomes enter feature inputs.",
+    "source_output_scope": "Mature hidden activations are actual frozen-model computations. Full source predictions may be audited after all training; they are not replaced by truth or fed as MAX labels."
+  },
+  "data": {
+    "data_seed": 2026111801,
+    "counts": {
+      "train": 8240,
+      "val": 2096,
+      "test": 3120
+    },
+    "pool_counts": {
+      "source_unused_ordered": 5168,
+      "both_orders_unused": 3598,
+      "eligible_unequal_groups": 1781,
+      "eligible_equal_groups": 36,
+      "retained_unused_unequal_groups": 117
+    },
+    "split_rule": "Sort unordered groups, permute unequal groups then ties using one RNG. Non-equal groups: 1024train/256val/384test/117unused; ties12/12/12. Expand both directions when unequal and all4opcodes within the same split.",
+    "exclusions": "Both directions must be in source unused; exclude all source old/new train,val,test unordered groups, including source growth-selection validation.",
+    "new_test_features": "No test feature generation, source prediction, normalization fitting, or head prediction until all nine heads have completed all4096updates.",
+    "benchmark_scope": "Fresh held semantic pairs within the bounded n7 source domain, including both operand orders and held ties; not unbounded arithmetic or unseen numeric vocabulary."
+  },
+  "features": {
+    "dimension": 24,
+    "arms": {
+      "mature_hidden": "tanh(raw34 @ source.W1 + source.b1), using actual PR130 weights",
+      "random_hidden": "Same34to24tanh architecture, fixed Xavier-normal W1 andzero b1; seed1800000+seed",
+      "raw_projection": "Fixed34x24 affine map;18 variable rows form an orthonormal basis,constant rowszero. Preserves all input differences in the variable-coordinate subspace. StoredP,bias authoritative."
+    },
+    "normalization": "For each arm/seed, fit mean24 on train features, then one global RMS scalar sqrt(mean((f-mean)^2)), floor1e-8. Val/test use frozen train statistics.25fixednumbers. Raw singular values shareone common rescaling,condition1 maintained.",
+    "raw_projection_seed": 2026111802,
+    "raw_projection_prior": "Constant-coordinate removal uses unlabeled train frame variation and the declared fixed n7 layout; no operand values are parsed or provided to the head.",
+    "no_bypass": true,
+    "feature_banks_fixed": true,
+    "cache": "Compute and save train/validation features once per arm/seed; test only after all training. Count actual feature rows and cache storage, plus per-query deployment feature cost."
+  },
+  "head": {
+    "shape": [
+      24,
+      8,
+      7
+    ],
+    "activation": "tanh",
+    "trainable_parameters": 263,
+    "initialization": "Paired per seed across all arms: seed1900000+seed; W1normalstdsqrt(2/32), W2normalstdsqrt(2/15), zero biases",
+    "output": "Seven logits threshold>=0; primary correctness requires all seven bits correct",
+    "architecture_search": "None; H8 fixed, no adaptive growth, no H sweep"
+  },
+  "training": {
+    "models": 9,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "arms": [
+      "mature_hidden",
+      "random_hidden",
+      "raw_projection"
+    ],
+    "updates_per_model": 4096,
+    "batch_size": 128,
+    "batch_seed_offset": 2000000,
+    "batch_rule": "Same saved4096x128indices per seed across all arms; replacement sampling from fresh train frames",
+    "loss": "Mean binary cross entropy over all seven output bits and all rows",
+    "optimizer": "Adam arithmetic reused from PR130",
+    "lr": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "clip_global_norm": 5.0,
+    "optimizer_resets": "At initialization only",
+    "checkpoints": [
+      0,
+      16,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "actual_updates_budget": 36864,
+    "presentations_budget": 4718592,
+    "stopping": "Always4096, regardless of95threshold, regressions, or poor scores. No reseeding, test-tuned repair, or curriculum adjustment.",
+    "execution": "One automated loop; source-lock check before and after; no LLM choices inside updates"
+  },
+  "metrics": {
+    "primary": "Validation exact seven-bit MAX accuracy by seed/checkpoint; first observed95%; first checkpoint ending two consecutive observed evaluations>=95%; final fresh test exactaccuracy",
+    "secondary": "AUC of validation exactaccuracy over update count using trapezoids at fixed checkpoints; opcode/operand-order/tie strata; copy-a/copy-b baselines; all errors retained",
+    "threshold_note": "95% markers do not stop or promote based on test. Missing crossing remains null; continuous safety or every-update monotonicity not required.",
+    "source_audit": "After all training, decode mature source on fresh test from actual cached hidden and retained readout; report source tuple correctness and head errors by source correctness. No truth substitution.",
+    "comparison_claim": "Matched new-head capacity and data; full-system storage differs because mature source retains its original450parameter readout. Conditional additional learning efficiency, not training-from-scratch total cost superiority."
+  },
+  "accounting": {
+    "head_parameters": 263,
+    "bank_active_parameters_each": 840,
+    "normalizer_values_each": 25,
+    "active_inference_values_each": 1128,
+    "mature_full_source_plus_head_normalizer_values": 1578,
+    "raw_random_bank_plus_head_normalizer_values": 1128,
+    "head_forward_dense_mac_per_row": 248,
+    "bank_forward_dense_mac_per_row": 816,
+    "new_head_forward_training_mac_budget": 1170210816,
+    "dense_note": "Raw zero rows are stored and still counted by the dense implementation; rawP432nonzero+bias24. Tanh,normalization,backprop,Adam,evaluation,IO excluded from dense MAC and reported separately.",
+    "inherited_lineage_updates_total": 15360,
+    "inherited_lineage_presentations_total": 1966080,
+    "inherited_search_cost_note": "These are the chosen source lineages only, not all historical project experiments."
+  },
+  "constraints": [
+    "No changes to source artifacts or other experiments",
+    "No test exposure before all9trainingrunsfinish",
+    "No complete SLE pipeline claim",
+    "No learned arithmetic source oracle",
+    "No lifelong learning/free-parent recovery claim",
+    "No guarantee of 95% success",
+    "All failure cases and temporary regressions retained"
+  ],
+  "workers": {
+    "nvidia_status": "skipped_unavailable",
+    "nvidia_actual_calls": 0,
+    "reason": "Root verified no callable NVIDIA/OpenRouter tools and no configured NVIDIA_API_KEY/OPENROUTER_API_KEY; independent local method review instead",
+    "external_teacher_calls": 0
+  }
+}

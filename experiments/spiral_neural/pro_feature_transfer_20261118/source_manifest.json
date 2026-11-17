@@ -1,0 +1,152 @@
+{
+  "schema": "feature-transfer-source-manifest-v1",
+  "copied_sources": [
+    {
+      "path": "sources/codec.py",
+      "sha256": "67f71587892ff7d17f9cea207296cd35347a59c4e06e4545fee20b0bfdf5e265",
+      "size_bytes": 5378,
+      "original_study": "growth_channel_20261117",
+      "original_path": "codec.py"
+    },
+    {
+      "path": "sources/neural_growth.py",
+      "sha256": "e95db95a6bbb9558786c6e033df502cccd3c1a610691e8164d1c411dd30badf2",
+      "size_bytes": 9530,
+      "original_study": "growth_channel_20261117",
+      "original_path": "neural_growth.py"
+    },
+    {
+      "path": "sources/pr130_data.json",
+      "sha256": "8732d0e34fc847597aeb55769fae1253b699d780fbb823c1f9dd44c75d24fd6d",
+      "size_bytes": 3530588,
+      "original_study": "growth_channel_20261117",
+      "original_path": "data.json"
+    },
+    {
+      "path": "sources/pr130_protocol.json",
+      "sha256": "f6e7bf7f42f7e1807a8c5d6f37e142d8b63bab1f7d46502d0b42ec3771321c04",
+      "size_bytes": 10548,
+      "original_study": "growth_channel_20261117",
+      "original_path": "protocol.json"
+    },
+    {
+      "path": "sources/pr130_source_lock.json",
+      "sha256": "7364ae1c27dbff7d58a25f45c15a7b1276b87e5bf3e8c8fcd8fac21dde3b98bf",
+      "size_bytes": 2043,
+      "original_study": "growth_channel_20261117",
+      "original_path": "source_lock.json"
+    },
+    {
+      "path": "sources/pr130_run_metadata.json",
+      "sha256": "3494808fc27294086cbbd865f2937190e545988fdb3926cdc78eac1d6397d1e6",
+      "size_bytes": 2515,
+      "original_study": "growth_channel_20261117",
+      "original_path": "results/run_metadata.json"
+    },
+    {
+      "path": "sources/receiver_seed101.npz",
+      "sha256": "db1356c70933dd64d1a7757f0ff3a43b13e3fbdbdf22e2efb78a002e986e7936",
+      "size_bytes": 30709,
+      "original_study": "growth_channel_20261117",
+      "original_path": "results/demand/receiver_seed101/checkpoints/step_4096.npz"
+    },
+    {
+      "path": "sources/parent_receiver_seed101.npz",
+      "sha256": "f1abc4ee1078e65ad0bacffc172d215dd78366000c5d6f10971e2b79f3a7c91f",
+      "size_bytes": 16681,
+      "original_study": "growth_channel_20261117",
+      "original_path": "parents/receiver_seed101.npz"
+    },
+    {
+      "path": "sources/receiver_seed202.npz",
+      "sha256": "7f324a6fb045dd127c8da18394b3087b07ca428cc023ed6cd58bc5e3ba1cc4ed",
+      "size_bytes": 30714,
+      "original_study": "growth_channel_20261117",
+      "original_path": "results/demand/receiver_seed202/checkpoints/step_4096.npz"
+    },
+    {
+      "path": "sources/parent_receiver_seed202.npz",
+      "sha256": "14448f3c9ce6929b8293c4d9593d573df55645346a67623970c14c360f0a3770",
+      "size_bytes": 16691,
+      "original_study": "growth_channel_20261117",
+      "original_path": "parents/receiver_seed202.npz"
+    },
+    {
+      "path": "sources/receiver_seed303.npz",
+      "sha256": "3a4ee632d2de15091e7d22d8ada5a6b4a13e25a451e0c67fa2aa587c7853b01d",
+      "size_bytes": 30704,
+      "original_study": "growth_channel_20261117",
+      "original_path": "results/demand/receiver_seed303/checkpoints/step_4096.npz"
+    },
+    {
+      "path": "sources/parent_receiver_seed303.npz",
+      "sha256": "d95e3ddc25420c28a933b7c6540701cf5ef0af938f28b9a8b2f28f47d24c3ce8",
+      "size_bytes": 16686,
+      "original_study": "growth_channel_20261117",
+      "original_path": "parents/receiver_seed303.npz"
+    },
+    {
+      "path": "sources/pr129_data.json",
+      "sha256": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90",
+      "size_bytes": 476141,
+      "original_study": "growth_channel_20261117",
+      "original_path": "parents/data.json"
+    }
+  ],
+  "generated_files": {
+    "data.json": {
+      "sha256": "d2ec16ec5abd2b0acf8bf1dda44073528f7e0c24db74dbd05bf4c1433e8115fa",
+      "size_bytes": 5346429
+    },
+    "protocol.json": {
+      "sha256": "4f086f4d6f5e4fa57895d75cc21870fa926b3a022820779367648f1bc06aef46",
+      "size_bytes": 9159
+    },
+    "projection_receipt.json": {
+      "sha256": "2e41b671fc91495e5c206c256617e84fa8e64f95d14a127eac07d36460f8b93f",
+      "size_bytes": 1336
+    },
+    "banks/random_seed101.npz": {
+      "sha256": "e47f22d197ef47cc9515943f2831366fc4daed5efcaf52376676654ef215a529",
+      "size_bytes": 6995
+    },
+    "banks/random_seed202.npz": {
+      "sha256": "8914ad120760183220e98a23d8c9b9fee8011c1012828135f874c56fad6828a7",
+      "size_bytes": 6997
+    },
+    "banks/random_seed303.npz": {
+      "sha256": "0099fc3268dc6e6773aec5e6e9ffee5bb67684419c26816c9e954ceaa74271ec",
+      "size_bytes": 6996
+    },
+    "banks/raw_projection.npz": {
+      "sha256": "ba1201e84a3493e12833ea7fe28c82412e293c556033fe19335f13da7acfd9c9",
+      "size_bytes": 4581
+    },
+    "batches/seed101.npz": {
+      "sha256": "4fb5d87b0b0d2c1f47b109fab7cb6f7120dbaaf18acaae01e5afde71da62762b",
+      "size_bytes": 1165971
+    },
+    "batches/seed202.npz": {
+      "sha256": "2364b2024723e37d4db5c1dc1fc97d60bbb11eebac6d65f4f10bc5e771b084e9",
+      "size_bytes": 1166045
+    },
+    "batches/seed303.npz": {
+      "sha256": "3d64a08b3d98be73b499e291a883f3004f370175e523cd72c0bc91be110def49",
+      "size_bytes": 1165780
+    }
+  },
+  "preparation_training_updates": 0,
+  "preparation_neural_forward_rows": 0,
+  "pretraining_revisions": [
+    {
+      "utc": "2026-11-17T23:40:54.305347+00:00",
+      "changes": [
+        "Explicit candidate-profile scope instead of canonical wording",
+        "Added PR129 original dataset as self-contained ancestor split evidence"
+      ],
+      "data_redrawn": false,
+      "training_updates": 0,
+      "neural_forward_rows": 0
+    }
+  ]
+}
