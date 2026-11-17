@@ -1,0 +1,237 @@
+{
+  "schema": "growth-channel-preregistration-v1",
+  "run": "pro_growth_channel_20261117_v1",
+  "created_utc": "2026-11-17T14:56:19.491361+00:00",
+  "question": "Can small trained neural bit-interface heads grow from wordwidth5 to7, retain original width5 wire compatibility, and benefit from added hidden capacity?",
+  "provenance": {
+    "U": "User small-network growth, room for growth, and internal SLE communication concepts",
+    "F": "Actual PR129 final6checkpoints and original Fable W candidate core",
+    "A": "This union-I/O, paired4arm curriculum, validation-driven growth heuristic and tests",
+    "T": "Only executed evidence will be filled after fixed run; no results at preregistration"
+  },
+  "parent": {
+    "pr": 129,
+    "head": "00d089115461dd29f06044a6082363d48c058650",
+    "archive_sha256": "909fe1730f16a2a5c30f5beedce7fb6087a0d56ad74ca5ef5f3d2a656f3953cd",
+    "model_steps": 1024,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "policy": "Copy6checkpoints unchanged; preserve existing speaker101 failures; no parent retraining"
+  },
+  "profile": {
+    "status": "FABLE_W_CANDIDATE_NOT_CANONICAL151_OR_NORMATIVE_SLE_AE1",
+    "m": 4,
+    "n": [
+      5,
+      7
+    ],
+    "operands": 2,
+    "op_codes": {
+      "ADD": 12,
+      "XOR": 9,
+      "AND": 7,
+      "OR": 8
+    },
+    "frame": "1^4 0 | 1^n 0 | op4 0 | a_n 0 | b_n 0",
+    "frame_bits": {
+      "5": 28,
+      "7": 34
+    },
+    "transport": "One unsigned payload-length byte, then4or5bytes; MSB-first framebits then4or6zero padbits. Cut is one zero-length byte. Packet length exposes width, not semantic fields.",
+    "wire_bits": {
+      "5": 40,
+      "7": 48
+    },
+    "fixed_guard": "Boolean syntax/padding/op membership, width obtained from payload byte count; guard passes no semantic values to network. Old frozen receiver only accepts width5.",
+    "teacher_input": "Sender17slots=op2,b_low5,a_low5,b_high2,a_high2,width7flag. First12slots exactly parent input. Synthetic teaching request, not native SLE.",
+    "receiver_input": "Only raw received frame left aligned in34slots, append6zeros for28bit n5; no field remapping, parsed operands, original question, taskID, or continuous sender states.",
+    "sender_output": "34learnedlogits, hardthreshold>=0; use first28forn5 andall34forn7. Requested frame length supplied bycaller. Headers andtail bits learned.",
+    "receiver_output": "18logits=[op4,a_low5,b_low5,a_high2,b_high2]. argmaxop; all14operandbits threshold>=0, including highzeros for oldwidth5."
+  },
+  "growth": {
+    "initial_io_morphism": "Copy all old W1,b1,W2,b2 into firstinput/hidden/output coordinates. New input→oldhidden weights0. Newoutput weights0, biases−2. Old logits preserved; receiver newhighbits initiallyzero.",
+    "hidden_morphism": "Append8hiddenunits with Xavier-random incoming weights stdsqrt(2/(nin+newH)), bias0; all outgoingweights0. Old functions preserved for arbitrary fixed-size inputs. Newunits are not dead: outgoinglearns first.",
+    "arms": {
+      "reuse_h16": "Parent+expandedI/O;hidden16throughout. This already adds I/Oparameters.",
+      "demand": "Parent+expandedI/O H16;after512and1024updates ifany of3validationpanels wholeaccuracy<.95 append8units,max32.",
+      "reuse_h32": "Parent+expandedI/O;append8twice atstep0. Same random blocks as demand correspondingstage.",
+      "scratch_h32": "Random Xavier32hidden with same finalI/O, no parentreuse."
+    },
+    "gate": "Separately perrole/model, min(val_old,val_new,val_oldwide)complete-frame/tuple accuracy>=.95. Test never used. This externally programmed need heuristic doesnot prove capacity causes any failure.",
+    "cap": 32,
+    "training_after_growth": "All old/newparameters learn; no frozen experts, routing bypass, distillation, or EWC. Oldreplay provides empiricalretention; preservinginstantgrowth doesnot guarantee future retention."
+  },
+  "data": {
+    "old_pairs": "PR129 splits unchanged384train72val72test; a,b<32,a+b<32. Oldtest historically inspected.",
+    "new_domain": "a,b<128,a+b<128, excluding all528oldpairs, total7728pairs. Eachpairall4ops inonesplit.",
+    "new_split": "192axisanchors(a0/0bwith32..127)train; lexnonaxis7536permuted default_rng(2026111702); first1856train,next256val,next256test,remaining5168unused.",
+    "new_counts_pairs": {
+      "train": 2048,
+      "val": 256,
+      "test": 256,
+      "unused": 5168
+    },
+    "panels_cases": {
+      "train_old": 1536,
+      "train_new": 8192,
+      "val_old": 288,
+      "val_new": 1024,
+      "val_oldwide": 288,
+      "test_old": 288,
+      "test_new": 1024,
+      "test_oldwide": 288
+    },
+    "oldwide": "Oldval/testsameheldpairs encodedwidth7. Never train oldpairs inwidth7; this measures formattransfer distinctfromnewrange.",
+    "leakage": "No semantic pair crosses train/val/test, even across widths. Newvaluesseen individuallyintrain, so heldpairgeneralization notunseen-value arithmetic learning."
+  },
+  "models": {
+    "roles": [
+      "speaker",
+      "receiver"
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "arms": [
+      "reuse_h16",
+      "demand",
+      "reuse_h32",
+      "scratch_h32"
+    ],
+    "dtype": "float64",
+    "activation": "tanh",
+    "speaker_shape": [
+      17,
+      "H",
+      34
+    ],
+    "receiver_shape": [
+      34,
+      "H",
+      18
+    ],
+    "seed_offsets": {
+      "speaker_init": 500000,
+      "receiver_init": 600000,
+      "speaker_growth": 700000,
+      "receiver_growth": 800000,
+      "speaker_batches": 900000,
+      "receiver_batches": 1000000
+    },
+    "initialization": "Normal Xavier stdsqrt(2/(fanin+fanout)),zero biases for scratch. Independent growthRNG frominit andbatch. Growth blocks drawn sequentially, same perrole/seed across reusedarms.",
+    "parameter_counts": {
+      "H16": {
+        "speaker": 866,
+        "receiver": 866,
+        "pair": 1732
+      },
+      "H24": {
+        "speaker": 1282,
+        "receiver": 1290,
+        "pair": 2572
+      },
+      "H32": {
+        "speaker": 1698,
+        "receiver": 1714,
+        "pair": 3412
+      }
+    },
+    "forward_dense_MAC": {
+      "H16": {
+        "speaker": 816,
+        "receiver": 832,
+        "pair": 1648
+      },
+      "H24": {
+        "speaker": 1224,
+        "receiver": 1248,
+        "pair": 2472
+      },
+      "H32": {
+        "speaker": 1632,
+        "receiver": 1664,
+        "pair": 3296
+      }
+    }
+  },
+  "training": {
+    "updates_per_model": 4096,
+    "models": 24,
+    "actual_updates_budget": 98304,
+    "presentations_budget": 12582912,
+    "batch_size": 128,
+    "batch_composition": "64drawswithreplacementfromtrain_old,then64fromtrain_new. Saveint64drawslosslessly. Sameentirebatchsequencefor4arms withinrole/seed.",
+    "batch_draw_order": "Generateall4096x64oldindices first,thenall4096x64newindices fromsamebatchRNG.",
+    "lr": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "clip_global_norm": 5.0,
+    "speaker_loss": "BCEmean overeachrowactive28or34bits,thenmeanrows",
+    "receiver_loss": "Mean4classCE + meanBCEoverall14operandbits",
+    "adam_resets": [
+      0,
+      512,
+      1024
+    ],
+    "reset_policy": "Allarms resetm/v/t atsameboundaries. Save512/1024pretransitioncheckpoint,gate,optionalhiddenexpansion,functionpreservation,andposttransitionstate. ParentAdamstatepreservedasartifactbutnotcontinued.",
+    "checkpoints": [
+      0,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "evaluation": "Validation3panelseachcheckpoint. Finaltest3panels onlyafter4096steps; noearlystopping/reseeding/repair/testtunedcontinuation.",
+    "joint_gate_reporting": "First observed validation95all3 perhead, plus same-seedS/Rboth95; no claim95component guarantees95fullpipeline.",
+    "execution": "Oneautomatedloop; noLLMinterventionsbetweenupdates"
+  },
+  "evaluation": {
+    "initial_retention": "Beforetraining, for3reusearms eachrole andseed compareoldval rawvariablelogitsandhardbehavior toparent; sourceparent101errors retained. Evaluate fullold all528pairs preservation atstep0independentauditwithouttuning.",
+    "growth_retention": "Before/after everygrowth compareALLlogits onall3validationpanels,notjustaccuracy; numericaltolerance1e-10.",
+    "final_reports": [
+      "exactframe andexacttuple,bitaccuracydiagnostic only",
+      "oldcorrect→wrong andoldwrong→correct separately",
+      "rawoldwire compatibility bothdirections",
+      "newdomain andoldvaluesnewformat separately",
+      "allseedresultsnotjustmean",
+      "params,trainableparams,MAC,updates,presentations,wirebytes,parentpretraincost,manualcodeknowledge"
+    ],
+    "frozen_core": "OriginalFableWunchanged. Receiversemanitics alone reencoded and passedtoW.run. n=max(inputwidth,bit_length(preda),bit_length(predb)); preserve wrong highbitpredictions and original carrywidthgrowth, no truncation/repair. Arithmetic notnewlylearned."
+  },
+  "channel": {
+    "receiver_process": "Fresh subprocess eachreceiverfixedcheckpoint; onlycase-varyinginputbinary stdin, no testcaseIDs/originalrequests/softsenderstates. This is dataflowisolation, notOSsandbox.",
+    "matched": "4armsx3seedsx3panels(test_old288,new1024,oldwide288)=19200records.",
+    "crossplay": "Withinarmoffdiagonal6seedpairsx4armsxfirst128newtestrows=3072records; matched subset reuseexisting.",
+    "old_peer": "OldS→grownR andgrownS→oldR same-seedoldtest288,4armsx3seedsx2=6912records.",
+    "intervention": "Onlydemand3matched,first128newtestrows,opnextcycleADD/XOR/AND/OR,flipalowbit,fliptailaftera,cut=1536records. Invalidsourceframespreservedandnotrepaired; valid semanticmutationonlyonvalidsource.",
+    "unsupported_width": "3oldreceiversx128canonicalwidth7newtestframes=384rejectchecks.",
+    "planned_records": 31104,
+    "test_source": "Recordallrawlogits,bits,packedwire,predictions,Wcommandsandanswers,rejects,failures. Correlatedcrosspairsnotindependentseeds."
+  },
+  "constraints": [
+    "No formalgrammarclaim or SLEsuperioritycomparison",
+    "No newarithmetictraining",
+    "No autonomousarchitecturelearningclaim: controllergivenbyresearcher",
+    "No sizeoptimality/uncappedgrowthclaim",
+    "No mainqueuechanges,nomerge,noexternalLLMteacher",
+    "Allnegativeoutputs retained"
+  ],
+  "workers": {
+    "nvidia_status": "skipped_unavailable",
+    "reason": "No callableNVIDIA/OpenRouterworker andbothconfiguredAPIkeyvariablesabsent inthisruntime",
+    "nvidia_actual_calls": 0
+  },
+  "references": [
+    "https://arxiv.org/abs/1511.05641",
+    "https://proceedings.mlr.press/v48/wei16.html",
+    "https://arxiv.org/abs/1606.04671"
+  ]
+}
