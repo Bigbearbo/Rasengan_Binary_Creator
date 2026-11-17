@@ -10,15 +10,27 @@
     "source_file": "sources/wordlevel.py",
     "source_sha256": "f71a0696e212284f642ad034e18665da98b994adc38db3f462ca500ff4fb35e8",
     "frame": "11110 | 111110 | op4,0 | a5,0 | b5,0",
-    "op_names": ["ADD", "XOR", "AND", "OR"],
-    "op_ids_in_original_W": [12,9,7,8],
+    "op_names": [
+      "ADD",
+      "XOR",
+      "AND",
+      "OR"
+    ],
+    "op_ids_in_original_W": [
+      12,
+      9,
+      7,
+      8
+    ],
     "frame_bits": 28,
     "transport_bytes": 4,
     "transport_padding_bits": 4,
     "transport_padding_value": 0,
     "word_count": 2,
     "word_width": 5,
-    "caller_question": "12 raw bits: request_op2,b5,a5; assistant synthetic task input, not a natural language input or canonical SLE frame"
+    "caller_question": "12 raw bits: request_op2,b5,a5; assistant synthetic task input, not a natural language input or canonical SLE frame",
+    "record_prefix_bytes": 1,
+    "clean_record_wire_bytes": 5
   },
   "data": {
     "ordered_pair_domain": "a,b in0..31 with a+b<32; all four ops for every pair",
@@ -34,66 +46,123 @@
     "generalization_claim": "unseen combinations of known operand values at fixed shape; no novel vocabulary, width, count, or syntax generalization"
   },
   "models": {
-    "speaker": {"shape":[12,16,28],"parameters":684,"dense_forward_mac":640,"targets":"all28 canonical framebits","loss":"mean binary cross entropy over examples and28bits"},
-    "receiver": {"shape":[28,16,14],"parameters":702,"dense_forward_mac":672,"targets":"4-class oponehot plus5a+5b binarybits","loss":"mean4class crossentropy plus mean binarycrossentropy over10operandbits"},
+    "speaker": {
+      "shape": [
+        12,
+        16,
+        28
+      ],
+      "parameters": 684,
+      "dense_forward_mac": 640,
+      "targets": "all28 canonical framebits",
+      "loss": "mean binary cross entropy over examples and28bits"
+    },
+    "receiver": {
+      "shape": [
+        28,
+        16,
+        14
+      ],
+      "parameters": 702,
+      "dense_forward_mac": 672,
+      "targets": "4-class oponehot plus5a+5b binarybits",
+      "loss": "mean4class crossentropy plus mean binarycrossentropy over10operandbits"
+    },
     "activation": "tanh hidden; outputlogits",
     "dtype": "float64",
     "initialization": "independent normal weights stdsqrt(2/(fanin+fanout)); zero biases",
     "input_scaling": "raw0/1",
     "hardening": "logit>=0 means1; receiverop uses argmax first4",
-    "seeds": [101,202,303],
-    "init_seeds": {"speaker":"100000+seed","receiver":"200000+seed"},
-    "batch_seeds": {"speaker":"300000+seed","receiver":"400000+seed"},
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "init_seeds": {
+      "speaker": "100000+seed",
+      "receiver": "200000+seed"
+    },
+    "batch_seeds": {
+      "speaker": "300000+seed",
+      "receiver": "400000+seed"
+    },
     "independence": "separateinitialization/optimization, canonicalteacherinterfaces, no sharedweights, no jointgradients, no speaker-generated receivertraining",
     "frozen_core": "unchanged original W source; 15x22 storedtable, no updates; Python formatting/dispatch/working state remain outside learned heads",
     "overflow": "No true main task overflows. Any predicted or counterfactual overflow uses original W behavior, preserving returned width and value; no target repair or clipping. A coincidentally correct answer never overrides tuple or frame error."
   },
   "training": {
-    "optimizer":"Adam", "lr":0.01, "beta1":0.9, "beta2":0.999, "eps":1e-8,
-    "clip_global_norm":5.0,
-    "updates_per_model":1024,
-    "batch_size":128,
-    "sampling":"with replacement from1536 trainingtasks",
-    "checkpoints":[0,32,128,512,1024],
-    "total_new_training_updates":6144,
-    "total_training_presentations":786432,
-    "stopping":"always fixed1024; no seedselection, test-tuned continuation or hyperparametersearch",
-    "threshold":"95% whole-frame or whole-tuple validation serves as progress marker only; all fixed-budget outcomes and failures retained"
+    "optimizer": "Adam",
+    "lr": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "clip_global_norm": 5.0,
+    "updates_per_model": 1024,
+    "batch_size": 128,
+    "sampling": "with replacement from1536 trainingtasks",
+    "checkpoints": [
+      0,
+      32,
+      128,
+      512,
+      1024
+    ],
+    "total_new_training_updates": 6144,
+    "total_training_presentations": 786432,
+    "stopping": "always fixed1024; no seedselection, test-tuned continuation or hyperparametersearch",
+    "threshold": "95% whole-frame or whole-tuple validation serves as progress marker only; all fixed-budget outcomes and failures retained"
   },
   "transport": {
-    "only_case_varying_receiver_input":"length-prefixed binary records containing only packedframebytes",
-    "receiver_process":"fresh subprocess with frozen receiverweights; stdin bytes, stdout predictions; no originalquestion, IDs, labels, logits, senderhiddenstate or teacherpayload",
-    "guard":"fixed formatcheck for length, padding, header, allowedopbits and tail0; returns onlyvalid/invalid, never parsedsemantics; invalidframes rejected without fallback",
-    "semantic_input_to_core":"receiverpredictedop,a,b only; guard or scorer never replaces them",
-    "weights_unchanged":"all inference and interventions use exact finalstep1024 weights"
+    "only_case_varying_receiver_input": "length-prefixed binary records containing only packedframebytes",
+    "receiver_process": "fresh subprocess with frozen receiverweights; stdin bytes, stdout predictions; no originalquestion, IDs, labels, logits, senderhiddenstate or teacherpayload",
+    "guard": "fixed formatcheck for length, padding, header, allowedopbits and tail0; returns onlyvalid/invalid, never parsedsemantics; invalidframes rejected without fallback",
+    "semantic_input_to_core": "receiverpredictedop,a,b only; guard or scorer never replaces them",
+    "weights_unchanged": "all inference and interventions use exact finalstep1024 weights",
+    "record_framing": "one unsignedbyte length followedby payload; clean record=1prefix+4payload=5bytes/40bits; cut=one0byte"
   },
   "evaluation": {
-    "P0":"fixedcodec roundtrip and actualW for all2112 lawful taskframes; 100% scoped deterministictarget",
-    "P1":"each trainedspeaker ->fixed decoder->W on288testcases, report all28frameexact/variable14bitexact/validformat/tuple/answer",
-    "P2":"canonicalteacherframes ->each trainedreceiver->W on288testcases",
-    "P3":"all3x3 independentlytrained sender/receiver pairs on same288testcases, no finetuning",
-    "cross_seeds":"9 pairings share6 trainedcomponents, not9 independenttrials",
-    "metrics":"unconditional frame/tuple/answer; invalidstaysindenominator; separate valid-frameconditionaladherence; per-seedandfullmatrix; no pooledaccuracyonly"
+    "P0": "fixedcodec roundtrip and actualW for all2112 lawful taskframes; 100% scoped deterministictarget",
+    "P1": "each trainedspeaker ->fixed decoder->W on288testcases, report all28frameexact/variable14bitexact/validformat/tuple/answer",
+    "P2": "canonicalteacherframes ->each trainedreceiver->W on288testcases",
+    "P3": "all3x3 independentlytrained sender/receiver pairs on same288testcases, no finetuning",
+    "cross_seeds": "9 pairings share6 trainedcomponents, not9 independenttrials",
+    "metrics": "unconditional frame/tuple/answer; invalidstaysindenominator; separate valid-frameconditionaladherence; per-seedandfullmatrix; no pooledaccuracyonly"
   },
   "interventions": {
-    "scope":"for each of9 learnedpairs on all288tests; first derive frozen actualspeakerframes; no teaching or optimization",
-    "clean":"unchanged actualspeakerframe",
-    "op_next":"for structurallyvalidframe replaceits4opbits bynextop in ADD,XOR,AND,OR cycle, preserveallotherbits; invalidframe unchanged and excludedfrom conditionalcounterfactualadherence but keptin totalcount",
-    "a_flip":"toggle frameposition20 (lowestabit); legaldatachange, tailsuntouched; evaluate against decodedmodifiedframe",
-    "shuffle":"rotate actualspeakerframe list by4rows (one operandpair), sameopindex; check receiver followsdonorframe and independently report originaltask accuracy",
-    "tail_flip":"toggle position21 (a tail); report originallyvalidframes rejected, not semanticunderstanding",
-    "cut":"send zero-lengthpayload; requireexplicitreject and no fallbackanswer",
-    "scoring":"perconditioncount, validity, predictedtuple versus actualreceivedframe, actualWanswer versus receivedframe and originaltask; answer-changingeligible strataandexacttuples reported, so sameanswercollisionscannot masqueradeas causaluse",
-    "interpretation":"legalchangesestablish content-mediated behavior only in thisfixedinterface; tail0 is not checksum; no safetyoradversarialrobustnessclaim"
+    "scope": "for each of9 learnedpairs on all288tests; first derive frozen actualspeakerframes; no teaching or optimization",
+    "clean": "unchanged actualspeakerframe",
+    "op_next": "for structurallyvalidframe replaceits4opbits bynextop in ADD,XOR,AND,OR cycle, preserveallotherbits; invalidframe unchanged and excludedfrom conditionalcounterfactualadherence but keptin totalcount",
+    "a_flip": "toggle frameposition20 (lowestabit); legaldatachange, tailsuntouched; evaluate against decodedmodifiedframe",
+    "shuffle": "rotate actualspeakerframe list by4rows (one operandpair), sameopindex; check receiver followsdonorframe and independently report originaltask accuracy",
+    "tail_flip": "toggle position21 (a tail); report originallyvalidframes rejected, not semanticunderstanding",
+    "cut": "send zero-lengthpayload; requireexplicitreject and no fallbackanswer",
+    "scoring": "perconditioncount, validity, predictedtuple versus actualreceivedframe, actualWanswer versus receivedframe and originaltask; answer-changingeligible strataandexacttuples reported, so sameanswercollisionscannot masqueradeas causaluse",
+    "interpretation": "legalchangesestablish content-mediated behavior only in thisfixedinterface; tail0 is not checksum; no safetyoradversarialrobustnessclaim"
   },
   "verification": {
-    "before_run":"finite difference gradient check, codec consistency with originalW, allsplitdisjointness androlecoverage; allmodel/data/codehashes locked beforetraining",
-    "saved":"allraw train/val/testrows, exactbatchindices, persteploss, initialandcheckpointweightsandAdamstate, allpredictionlogits andwirebytes, failures, timing/environment",
-    "independent":"array-level independentforward and Adamrecurrence replay; independentdataset/profile/metric reconstruction; subprocessinput trace audit; archiveSHA,size,CRC and memberhashes",
-    "replays":"auditrecurrences distinguished from new experimentaltraining"
+    "before_run": "finite difference gradient check, codec consistency with originalW, allsplitdisjointness androlecoverage; allmodel/data/codehashes locked beforetraining",
+    "saved": "allraw train/val/testrows, exactbatchindices, persteploss, initialandcheckpointweightsandAdamstate, allpredictionlogits andwirebytes, failures, timing/environment",
+    "independent": "array-level independentforward and Adamrecurrence replay; independentdataset/profile/metric reconstruction; subprocessinput trace audit; archiveSHA,size,CRC and memberhashes",
+    "replays": "auditrecurrences distinguished from new experimentaltraining"
   },
-  "costs": "report learnerparams, bothAdam buffers, Wdense/nonzero values, fixedprotocol/scaffolding, meaningful28bits and32transportbits, denseMAC excludingbias/nonlinearity, actualtrainingupdates/presentations, executiontime without hardware speedclaim",
-  "limits": ["supervised fixed semantic interface, not spontaneous language emergence","no equal-budget monolith/plainbinary/vector comparator; no SLE superiority conclusion","only4knownops,fixedwidth5 and2operands","no end-to-end arithmetic learning or autonomous networkgrowth","handfilled syntaxguard and W remain explicit programmerprovided knowledge"],
-  "attribution": {"U":"internal SLE communication and handfilled good-student direction","F":"Fable original W candidate codec/core and earlier plan","A":"this learner/transport/split/intervention experimentdesign","T":"only results actually executed afterregistration","Dot":"transport and receipt, not experimentauthor"},
-  "external_workers": {"nvidia_status":"skipped_unavailable","actual_calls":0,"reason":"no callable worker tool or configured OpenRouter/NVIDIA key in current research environment"}
+  "costs": "report learnerparams, bothAdam buffers, Wdense/nonzero values, fixedprotocol/scaffolding, meaningful28bits,32packedpayloadbits,and40wirebits including8bitlengthprefix, denseMAC excludingbias/nonlinearity, actualtrainingupdates/presentations, executiontime without hardware speedclaim",
+  "limits": [
+    "supervised fixed semantic interface, not spontaneous language emergence",
+    "no equal-budget monolith/plainbinary/vector comparator; no SLE superiority conclusion",
+    "only4knownops,fixedwidth5 and2operands",
+    "no end-to-end arithmetic learning or autonomous networkgrowth",
+    "handfilled syntaxguard and W remain explicit programmerprovided knowledge"
+  ],
+  "attribution": {
+    "U": "internal SLE communication and handfilled good-student direction",
+    "F": "Fable original W candidate codec/core and earlier plan",
+    "A": "this learner/transport/split/intervention experimentdesign",
+    "T": "only results actually executed afterregistration",
+    "Dot": "transport and receipt, not experimentauthor"
+  },
+  "external_workers": {
+    "nvidia_status": "skipped_unavailable",
+    "actual_calls": 0,
+    "reason": "no callable worker tool or configured OpenRouter/NVIDIA key in current research environment"
+  }
 }
