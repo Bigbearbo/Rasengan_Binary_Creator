@@ -38,7 +38,7 @@ One automated run:36,864 optimizer updates,4,718,592 presentations,81 checkpoint
 
 Independent audit passed81checkpoints,99prediction files/272,016rows,27feature caches/121,104rows,9,360source-readout rows and144short verification-only Adam recurrences (16 per head). Features, logits, metrics, early parameters and optimizer state match exactly. The full36,864-step training was not replayed. Locked hashes, the completion barrier and temporal records agree.
 
-See [full report](report_zh.md), [protocol](protocol.json), [source lock](source_lock.json), [post hoc analysis](posthoc_analysis.md), [preparation audit](preparation_audit.json), and [result audit](result_audit.json). Exact archive identity and packaged replay are in the delivery record added after archive creation.
+See [full report](report_zh.md), [protocol](protocol.json), [source lock](source_lock.json), [post hoc analysis](posthoc_analysis.md), [preparation audit](preparation_audit.json), and [result audit](result_audit.json). Exact archive identity and the executed packaged replay are in [DELIVERY.md](DELIVERY.md).
 
 ## Provenance
 
