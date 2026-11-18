@@ -1,0 +1,19 @@
+{
+  "schema": "handfill-selector-preflight-attempt-v1",
+  "status": "FAILED_IMPLEMENTATION_PATH_JOIN",
+  "attempt": 1,
+  "error": "TypeError: 'PosixPath' object is not subscriptable at final source_manifest hash check; ROOT[item_path] corrected to ROOT/item_path before source lock and training",
+  "earlier_checks_completed": ["three source train fixtures", "15-parameter finite difference", "8 primitive mux inputs", "16 exact comparator/copy train fixtures"],
+  "source_forward_rows": 48,
+  "source_forward_mac": 59904,
+  "selector_gradient_forward_rows": 496,
+  "selector_gradient_forward_mac": 6944,
+  "primitive_mux_rows": 8,
+  "primitive_mux_mac": 336,
+  "exact_hybrid_rows": 16,
+  "exact_hybrid_mac": 896,
+  "experimental_training_updates": 0,
+  "verification_optimizer_updates": 0,
+  "test_inference_rows": 0,
+  "challenge_inference_rows": 0
+}

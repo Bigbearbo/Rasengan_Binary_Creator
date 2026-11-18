@@ -1,0 +1,46 @@
+{
+  "schema": "handfill-selector-preflight-v1",
+  "status": "PASS",
+  "created_utc": "2026-11-18T00:48:33.092640+00:00",
+  "source_checks": [
+    {
+      "seed": 101,
+      "training_fixture_rows": 16,
+      "source_unchanged": true
+    },
+    {
+      "seed": 202,
+      "training_fixture_rows": 16,
+      "source_unchanged": true
+    },
+    {
+      "seed": 303,
+      "training_fixture_rows": 16,
+      "source_unchanged": true
+    }
+  ],
+  "gradient": {
+    "parameters_checked": 15,
+    "fixture_rows": 16,
+    "epsilon": 1e-05,
+    "max_absolute_error": 4.307221246335757e-12,
+    "loss": 0.6835050557641762
+  },
+  "mux_all_primitive_bit_combinations": 8,
+  "exact_comparator_on_actual_decoded_train_fixture": 16,
+  "locked_source_copies_checked": 12,
+  "verification_work": {
+    "source_forward_rows": 48,
+    "source_forward_mac": 59904,
+    "selector_gradient_forward_rows": 496,
+    "selector_gradient_forward_mac": 6944,
+    "primitive_mux_rows": 8,
+    "primitive_mux_mac": 336,
+    "exact_hybrid_rows": 16,
+    "exact_hybrid_mac": 896
+  },
+  "experimental_training_updates": 0,
+  "verification_optimizer_updates": 0,
+  "test_inference_rows": 0,
+  "challenge_inference_rows": 0
+}
