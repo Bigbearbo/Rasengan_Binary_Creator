@@ -1,0 +1,191 @@
+{
+  "schema": "independent-feature-transfer-preparation-audit-v1",
+  "audit_author": "retention_method; separate from experiment preparation and training implementation author",
+  "created_utc": "2026-11-17T23:42:14.578576+00:00",
+  "status": "PASS_complete_independent_preflight",
+  "scope": "Preparation integrity, independent numerical finite differences/initialization/feature fixtures, and final trainer call-path review before formal training; no training replay.",
+  "source_artifact_hashes": {
+    "sources/codec.py": "67f71587892ff7d17f9cea207296cd35347a59c4e06e4545fee20b0bfdf5e265",
+    "sources/neural_growth.py": "e95db95a6bbb9558786c6e033df502cccd3c1a610691e8164d1c411dd30badf2",
+    "sources/pr130_data.json": "8732d0e34fc847597aeb55769fae1253b699d780fbb823c1f9dd44c75d24fd6d",
+    "sources/pr130_protocol.json": "f6e7bf7f42f7e1807a8c5d6f37e142d8b63bab1f7d46502d0b42ec3771321c04",
+    "sources/pr130_source_lock.json": "7364ae1c27dbff7d58a25f45c15a7b1276b87e5bf3e8c8fcd8fac21dde3b98bf",
+    "sources/pr130_run_metadata.json": "3494808fc27294086cbbd865f2937190e545988fdb3926cdc78eac1d6397d1e6",
+    "sources/receiver_seed101.npz": "db1356c70933dd64d1a7757f0ff3a43b13e3fbdbdf22e2efb78a002e986e7936",
+    "sources/parent_receiver_seed101.npz": "f1abc4ee1078e65ad0bacffc172d215dd78366000c5d6f10971e2b79f3a7c91f",
+    "sources/receiver_seed202.npz": "7f324a6fb045dd127c8da18394b3087b07ca428cc023ed6cd58bc5e3ba1cc4ed",
+    "sources/parent_receiver_seed202.npz": "14448f3c9ce6929b8293c4d9593d573df55645346a67623970c14c360f0a3770",
+    "sources/receiver_seed303.npz": "3a4ee632d2de15091e7d22d8ada5a6b4a13e25a451e0c67fa2aa587c7853b01d",
+    "sources/parent_receiver_seed303.npz": "d95e3ddc25420c28a933b7c6540701cf5ef0af938f28b9a8b2f28f47d24c3ce8",
+    "sources/pr129_data.json": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90"
+  },
+  "generated_artifact_hashes": {
+    "data.json": "d2ec16ec5abd2b0acf8bf1dda44073528f7e0c24db74dbd05bf4c1433e8115fa",
+    "protocol.json": "62630b54d386483b11c63950c5d5dcc6581fbb2a60fd9ba3de9987001b676fd0",
+    "projection_receipt.json": "2e41b671fc91495e5c206c256617e84fa8e64f95d14a127eac07d36460f8b93f",
+    "banks/random_seed101.npz": "e47f22d197ef47cc9515943f2831366fc4daed5efcaf52376676654ef215a529",
+    "banks/random_seed202.npz": "8914ad120760183220e98a23d8c9b9fee8011c1012828135f874c56fad6828a7",
+    "banks/random_seed303.npz": "0099fc3268dc6e6773aec5e6e9ffee5bb67684419c26816c9e954ceaa74271ec",
+    "banks/raw_projection.npz": "ba1201e84a3493e12833ea7fe28c82412e293c556033fe19335f13da7acfd9c9",
+    "batches/seed101.npz": "4fb5d87b0b0d2c1f47b109fab7cb6f7120dbaaf18acaae01e5afde71da62762b",
+    "batches/seed202.npz": "2364b2024723e37d4db5c1dc1fc97d60bbb11eebac6d65f4f10bc5e771b084e9",
+    "batches/seed303.npz": "3d64a08b3d98be73b499e291a883f3004f370175e523cd72c0bc91be110def49"
+  },
+  "source_manifest_sha256": "34161b97f621b4eb11fb3f986911a9fa8341bea47783957a2c0d855b799221b6",
+  "check_counts": {
+    "initial_source_copy_files_compared_to_original": 12,
+    "added_ancestor_source_copy_files_compared_to_original": 1,
+    "current_source_copy_files_hash_verified": 13,
+    "generated_file_hashes_checked": 10,
+    "row_integrity_checks": 13456,
+    "paired_batch_streams_independently_regenerated": 3,
+    "random_banks_independently_regenerated": 3,
+    "mature_source_checkpoint_metadata_and_parameter_shapes_checked": 3
+  },
+  "data_checks": {
+    "unordered_split_intersections": 0,
+    "source_old_and_new_train_val_test_exposure_intersections": 0,
+    "all_rows_independently_reconstructed_frame_and_original_operation_answer_and_max_target": true,
+    "all_rows_have_unique_case_id": true,
+    "all_operator_variants_and_operand_directions_remain_in_same_split": true,
+    "fixed_seed_split_order_independently_reconstructed": true,
+    "all_rows_satisfy_0_le_a_b_lt_128_and_sum_lt_128": true,
+    "split_counts": {
+      "train": {
+        "unordered_groups": 1036,
+        "ties": 12,
+        "rows": 8240
+      },
+      "val": {
+        "unordered_groups": 268,
+        "ties": 12,
+        "rows": 2096
+      },
+      "test": {
+        "unordered_groups": 396,
+        "ties": 12,
+        "rows": 3120
+      }
+    },
+    "remaining_untouched_unequal_groups": 117
+  },
+  "ancestor_addendum": {
+    "source_path": "sources/pr129_data.json",
+    "sha256": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90",
+    "parent_split_identity_checked": 3,
+    "eligible_unordered_pool_groups_checked": 1817,
+    "intersections_with_all_ancestor_train_val_test_unordered_groups": 0,
+    "old_protocol_sha256": "513f631337d071686b3c747a0744ceecf7facfc1f9dae4ee1e2b58a2344e1e30",
+    "current_protocol_sha256": "4f086f4d6f5e4fa57895d75cc21870fa926b3a022820779367648f1bc06aef46",
+    "candidate_profile_scope_wording_confirmed": true,
+    "unchanged_row_gradient_or_training_checks_not_repeated": true
+  },
+  "raw_projection_checks": {
+    "variable_dimensions": 18,
+    "constant_dimensions": 16,
+    "constant_columns_same_across_train_val_test": true,
+    "matrix_rank_on_variable_subspace": 18,
+    "max_abs_row_gram_minus_identity": 4.440892098500626e-16,
+    "condition_number": 1.0000000000000007,
+    "bias_exactly_negative_half_variable_row_sum": true,
+    "constant_rows_exactly_zero": true,
+    "no_test_projection_or_neural_features_computed": true
+  },
+  "source_checks": {
+    "study": "PR130",
+    "arm": "demand",
+    "role": "receiver",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "step": 4096,
+    "shape": [
+      34,
+      24,
+      18
+    ],
+    "full_parameters_each": 1290
+  },
+  "execution_accounting": {
+    "new_training_updates": 0,
+    "optimizer_calls": 0,
+    "formal_training_replays": 0,
+    "test_features_generated": 0,
+    "test_model_predictions_generated": 0,
+    "production_training_fixture_feature_rows": 72,
+    "independent_training_fixture_feature_arithmetic_rows": 72,
+    "source_or_random_tanh_neural_rows_including_independent_crosscheck": 96,
+    "synthetic_new_head_forward_rows_including_gradients_and_finite_differences": 2645,
+    "dataset_structure_and_label_integrity_only_on_test": true,
+    "other_author_preflight": "Kernel separately ran its own zero-update preflight.json; its work is not counted as this independent audit."
+  },
+  "pending": [],
+  "completed_utc": "2026-11-17T23:46:34.638494+00:00",
+  "independent_numeric_preflight": {
+    "status": "PASS_independent_numeric_preflight",
+    "finite_difference_parameters": 263,
+    "finite_difference_step": 1e-06,
+    "max_gradient_absolute_error": 1.5127168788431344e-10,
+    "independent_objective_loss_difference": 0,
+    "paired_initializations_checked": 9,
+    "feature_and_normalizer_fixtures_checked": 9,
+    "feature_forward_max_error": 0,
+    "normalizer_max_error": 0,
+    "raw_normalized_squared_distance_rescaled_max_error": 1.7763568394002505e-15,
+    "in_memory_source_arrays_unchanged": true,
+    "stable_extreme_logit_loss_and_gradient": true,
+    "synthetic_gradient_fixture_rows": 5,
+    "finite_difference_objective_calls": 526,
+    "finite_difference_objective_head_rows": 2630,
+    "additional_independent_objective_calls": 2,
+    "additional_independent_objective_head_rows": 10,
+    "production_feature_extract_rows": 72,
+    "independent_feature_arithmetic_rows": 72,
+    "test_features_generated": 0,
+    "experimental_optimizer_updates": 0,
+    "no_Adam_calls": true
+  },
+  "trainer_call_path_review": {
+    "status": "PASS",
+    "test_array_creation_calls": 1,
+    "test_array_creation_only_in": "evaluate_fresh_test",
+    "test_features_and_source_readout_after_all_nine_head_completion": true,
+    "barrier_models": 9,
+    "barrier_gradient_updates": 36864,
+    "normalizer_fit_call_only_on_train_features": true,
+    "frozen_train_mean_and_one_global_scalar_used_for_val_and_test": true,
+    "optimizer_only_receives_new_head_params": true,
+    "fixed_bank_arrays_compared_bitwise_before_and_after_training": true,
+    "same_seed_initial_digest_and_saved_batch_stream_enforced_for_all_three_arms": true,
+    "feature_inputs_only_frame_bits_no_question_bits_operands_or_labels": true,
+    "true_operands_used_only_for_supervised_targets_and_offline_metrics": true,
+    "source_lock_verified_before_and_after_formal_run": true,
+    "test_does_not_mutate_final_checkpoints_hash_verified": true,
+    "no_conditional_early_stop_or_reseed_or_validation_driven_training_changes": true,
+    "postbarrier_final_train_uses_cached_features_only": true,
+    "postbarrier_final_train_extra_head_rows": 74160,
+    "postbarrier_final_train_extra_head_dense_mac": 18391680,
+    "total_formal_evaluation_head_rows_including_final_train": 272016,
+    "total_formal_evaluation_head_dense_mac_including_final_train": 67459968,
+    "formal_source_feature_rows": 121104,
+    "formal_source_feature_dense_mac": 98820864,
+    "formal_mature_source_readout_rows": 9360,
+    "formal_mature_source_readout_dense_mac": 4043520,
+    "cost_scope": "Only head capacity and active encoder shapes are matched. Retained full source storage and inherited training are separately disclosed.",
+    "limitations": [
+      "Fixed feature transfer only; no free-parent recovery result",
+      "Fixed externally selected MAX head; no learned task router or new SLE opcode",
+      "No whole-system equal-storage or from-scratch cost-superiority claim",
+      "All generalization remains inside the declared bounded source domain"
+    ]
+  },
+  "final_reviewed_code_sha256": {
+    "feature_model.py": "8a6888a2871e2133769fe2db2e48cd0d7edc2bdafd809efd2e0bf64c25d88290",
+    "run_train.py": "a97a5fcafcf47d9a3aa76a3081a7893a9efbfc5ef12f6e666a76fbab03c0465c",
+    "protocol.json": "62630b54d386483b11c63950c5d5dcc6581fbb2a60fd9ba3de9987001b676fd0",
+    "sources/neural_growth.py": "e95db95a6bbb9558786c6e033df502cccd3c1a610691e8164d1c411dd30badf2"
+  },
+  "protocol_revision_note": "Final-train fit diagnostic and its additional evaluation cost were added before formal training; dataset, sources, random banks, streams and head objective remain unchanged."
+}

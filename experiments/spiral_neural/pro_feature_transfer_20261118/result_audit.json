@@ -1,0 +1,158 @@
+{
+  "schema": "independent-feature-transfer-result-audit-v1",
+  "status": "PASS",
+  "created_utc": "2026-11-17T23:50:40.183018+00:00",
+  "elapsed_seconds": 2.2105169509959524,
+  "author": "retention_method; independent of experiment implementation",
+  "verifier_sha256": "0fe60ce6faca128a045074008624742901698d489db33314f35c96b6b343b681",
+  "preparation_audit_sha256": "7e8f5eb66a7c3339c3a779f0f8251db039bc0983589a93539ce59e989acc7f46",
+  "source_lock_sha256": "e40405bf6068ed8388343e72da316d261ae354ba45f940b4f669b76eaf67b13a",
+  "run_metadata_sha256": "fa39370ffc4f6fab6bb11eb7402dec9bc22f324c7914d04f87f557dd99638f49",
+  "formal_experimental_updates_verified_by_saved_trace_structure": 36864,
+  "audit_recurrences": 144,
+  "audit_recurrence_scope": "Only step0 to step16 for each of nine heads",
+  "new_experimental_updates": 0,
+  "full_training_replays": 0,
+  "checkpoint_files_checked": 81,
+  "prediction_files_checked": 99,
+  "prediction_rows_recomputed": 272016,
+  "feature_cache_files_checked": 27,
+  "feature_rows_recomputed": 121104,
+  "source_readout_rows_recomputed": 9360,
+  "source_readout_correct": 9360,
+  "max_abs_errors": {
+    "normalizer_mean": 0.0,
+    "normalizer_scalar": 0.0,
+    "normalizer_rms": 0.0,
+    "raw_feature_cache": 0.0,
+    "normalized_feature_cache": 0.0,
+    "prediction_logits": 0.0,
+    "metric_accuracy": 0.0,
+    "metric_bit_accuracy": 0.0,
+    "metric_loss": 0.0,
+    "copy_baseline": 0.0,
+    "stratum_accuracy": 0.0,
+    "validation_auc": 0.0,
+    "prefix_loss": 0.0,
+    "prefix_gradient_norm": 0.0,
+    "prefix_clip_scale": 0.0,
+    "prefix_params": 0.0,
+    "prefix_adam_m": 0.0,
+    "prefix_adam_v": 0.0,
+    "source_readout_logits": 0.0
+  },
+  "temporal_order_files_checked": 129,
+  "test_barrier_evidence": "Locked call path, durable all-nine completion receipt, all final checkpoint hashes, UTC ordering and file modification ordering agree; not an OS security boundary",
+  "fixed_source_hashes_rechecked_before_and_after": 29,
+  "paired_initial_head_digest_by_seed": {
+    "101": "2e2b94ebe490afaca5f5740ee2d2998547be8c7b35e0eab75af6cab7eac148b4",
+    "202": "fc67072d814446befa0ff23cb9d28b44d7fbbd565b028d8a6acc660055531f72",
+    "303": "b33fbd1ac55eb6e5349db22b65a9657abbc2d1080961f18b46e3000b544cb63f"
+  },
+  "split_and_exposure_checks": "Referenced immutable independent preparation audit and its data hashes; no repeated dataset redesign",
+  "expected_formal_counts": {
+    "models": 9,
+    "actual_new_head_updates": 36864,
+    "actual_training_presentations": 4718592,
+    "actual_head_forward_training_mac": 1170210816,
+    "actual_feature_forward_rows": 121104,
+    "actual_feature_forward_mac": 98820864,
+    "actual_evaluation_head_forward_rows": 272016,
+    "actual_evaluation_head_forward_mac": 67459968,
+    "actual_source_readout_audit_rows": 9360,
+    "actual_source_readout_audit_mac": 4043520,
+    "checkpoint_files": 81,
+    "new_source_training_updates": 0,
+    "manual_training_interventions": 0,
+    "test_tuned_continuations": 0,
+    "fresh_test_feature_rows_before_training_completion": 0
+  },
+  "models": [
+    {
+      "arm": "mature_hidden",
+      "seed": 101,
+      "first_validation_95": null,
+      "validation_auc": 0.3860170786617366,
+      "train": 0.3945388349514563,
+      "validation": 0.4002862595419847,
+      "test": 0.382051282051282
+    },
+    {
+      "arm": "random_hidden",
+      "seed": 101,
+      "first_validation_95": null,
+      "validation_auc": 0.36027422024093514,
+      "train": 0.4046116504854369,
+      "validation": 0.383587786259542,
+      "test": 0.3919871794871795
+    },
+    {
+      "arm": "raw_projection",
+      "seed": 101,
+      "first_validation_95": null,
+      "validation_auc": 0.4802944969584923,
+      "train": 0.5865291262135922,
+      "validation": 0.5958969465648855,
+      "test": 0.5897435897435898
+    },
+    {
+      "arm": "mature_hidden",
+      "seed": 202,
+      "first_validation_95": null,
+      "validation_auc": 0.30313506381202293,
+      "train": 0.3816747572815534,
+      "validation": 0.34780534351145037,
+      "test": 0.3631410256410256
+    },
+    {
+      "arm": "random_hidden",
+      "seed": 202,
+      "first_validation_95": null,
+      "validation_auc": 0.370016549379771,
+      "train": 0.39672330097087377,
+      "validation": 0.39122137404580154,
+      "test": 0.36025641025641025
+    },
+    {
+      "arm": "raw_projection",
+      "seed": 202,
+      "first_validation_95": null,
+      "validation_auc": 0.39436817897185117,
+      "train": 0.4258495145631068,
+      "validation": 0.4241412213740458,
+      "test": 0.36762820512820515
+    },
+    {
+      "arm": "mature_hidden",
+      "seed": 303,
+      "first_validation_95": null,
+      "validation_auc": 0.4329573070729961,
+      "train": 0.5035194174757281,
+      "validation": 0.5109732824427481,
+      "test": 0.48044871794871796
+    },
+    {
+      "arm": "random_hidden",
+      "seed": 303,
+      "first_validation_95": null,
+      "validation_auc": 0.4241542670562977,
+      "train": 0.44393203883495147,
+      "validation": 0.47853053435114506,
+      "test": 0.40544871794871795
+    },
+    {
+      "arm": "raw_projection",
+      "seed": 303,
+      "first_validation_95": null,
+      "validation_auc": 0.48529658426765265,
+      "train": 0.5716019417475728,
+      "validation": 0.5725190839694656,
+      "test": 0.5288461538461539
+    }
+  ],
+  "limits": [
+    "No complete 4096-step recurrence replay; later optimizer history verified structurally, predictions recomputed from every saved checkpoint",
+    "Fixed-bank transfer only; not a test of free-parent regression or recovery",
+    "A failed MAX head does not prove the frozen representation lacks operand information or cannot support another head/budget"
+  ]
+}
