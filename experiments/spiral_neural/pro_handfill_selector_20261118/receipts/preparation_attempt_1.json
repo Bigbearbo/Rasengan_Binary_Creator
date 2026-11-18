@@ -1,0 +1,16 @@
+{
+  "status": "FAILED_AT_FINAL_LOCK_CHECK_BEFORE_RECEIPT",
+  "recorded_utc": "2026-11-18T00:50:45.154604+00:00",
+  "reason": "run_train.py accounting-only edit raced with initial source lock; all preceding independent checks completed. No training or heldout inference.",
+  "checked_raw_rows": 14392,
+  "source_unique_training_rows": 96,
+  "source_forward_row_executions": 192,
+  "finite_difference_coordinates": 45,
+  "finite_difference_loss_evaluations": 90,
+  "comparator_analytic_gradient_evaluations": 3,
+  "mux_truth_table_word_rows": 8,
+  "optimizer_updates": 0,
+  "heldout_source_rows": 0,
+  "failed_expected_lock_sha256": "b70e2f0dbd09cd4d7e77ffe048227091cdae873ef4051ed16f6c22a63a5f8fe0",
+  "note": "Process exited without saving computed numerical residuals; final corrected-lock audit will rerun to produce authoritative receipt."
+}

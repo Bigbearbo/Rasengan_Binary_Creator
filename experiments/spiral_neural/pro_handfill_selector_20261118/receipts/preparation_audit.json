@@ -1,0 +1,57 @@
+{
+  "status": "PASS_complete_independent_preflight",
+  "created_utc": "2026-11-18T00:51:24.628757+00:00",
+  "wall_seconds": 0.573607587000879,
+  "audit_scope": "Independent raw parsing, data/exclusion/reuse audit, actual source arithmetic on32train rows/source, selector finite differences and full per-bit copy truth table; no heldout source inference or training",
+  "dataset_rows_checked": 14392,
+  "group_counts": {
+    "train": 1036,
+    "val": 268,
+    "test": 396,
+    "challenge": 117
+  },
+  "source_training_rows": 96,
+  "source_training_rows_per_seed": 32,
+  "source_forward_row_executions": 192,
+  "source_forward_dense_mac": 239616,
+  "source_max_absolute_error": 0.0,
+  "finite_difference_coordinates": 45,
+  "finite_difference_epsilon": 1e-06,
+  "finite_difference_max_absolute_error": 8.555223196538009e-11,
+  "mux_boolean_triples_per_bit": 8,
+  "mux_numeric_values": 63,
+  "mux_connectivity_indices": 42,
+  "comparator_values": 15,
+  "total_added_numeric_values": 78,
+  "source_parameters": 1290,
+  "full_retained_model_numeric_values": 1368,
+  "executed_sparse_weight_products_per_row": 56,
+  "source_dense_mac_per_row": 1248,
+  "complete_forward_dense_plus_sparse_mac_per_row": 1304,
+  "decoder_reorder_indices": 14,
+  "source_hashes": {
+    "101": "db1356c70933dd64d1a7757f0ff3a43b13e3fbdbdf22e2efb78a002e986e7936",
+    "202": "7f324a6fb045dd127c8da18394b3087b07ca428cc023ed6cd58bc5e3ba1cc4ed",
+    "303": "3a4ee632d2de15091e7d22d8ada5a6b4a13e25a451e0c67fa2aa587c7853b01d"
+  },
+  "batch_hashes": {
+    "101": "4fb5d87b0b0d2c1f47b109fab7cb6f7120dbaaf18acaae01e5afde71da62762b",
+    "202": "2364b2024723e37d4db5c1dc1fc97d60bbb11eebac6d65f4f10bc5e771b084e9",
+    "303": "3d64a08b3d98be73b499e291a883f3004f370175e523cd72c0bc91be110def49"
+  },
+  "locked_file_count": 20,
+  "final_reviewed_code_sha256": {
+    "prepare_study.py": "53d09fb9f51f5eefe5d7970199f2e439b8dc0b458481df3a076875ce953b6e26",
+    "hybrid_model.py": "6fd48b4f53b0e1289f6491e868d40f3bc6f161721146c5e218951d1b9a082f9f",
+    "run_train.py": "e1d5d9d387630cd1cf2e6ba2e205e0131c04b2e90e3d12fdede3088ee104b2c9",
+    "preflight.py": "930dc2d7ff4e8fdca009c7e6e111e2da520baa5e3da7c4a07986fe8f4b9c678c"
+  },
+  "actual_gradient_updates": 0,
+  "heldout_model_forward_rows": 0,
+  "limitations": [
+    "PR132 test is reused and already inspected; only117challenge groups are newly unqueried within this continuation.",
+    "Selector supervision and manual wiring/numeric place-value priors differ from PR132seven-bit supervision.",
+    "Frozen source isolates reuse; no freely adapting-parent recovery or autonomous-growth claim.",
+    "Full handfilled comparator capacity is not learned rule discovery."
+  ]
+}

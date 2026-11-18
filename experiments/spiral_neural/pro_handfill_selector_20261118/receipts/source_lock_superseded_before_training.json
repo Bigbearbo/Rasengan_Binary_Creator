@@ -1,0 +1,30 @@
+{
+  "schema": "handfill-selector-source-lock-v1",
+  "run": "pro_handfill_selector_20261118_v1",
+  "locked_utc": "2026-11-18T00:49:18.612865+00:00",
+  "training_updates_before_lock": 0,
+  "reused_test_or_challenge_source_inference_rows_before_lock": 0,
+  "preflight_scope": "See both preflight receipts: train-fixture numerical checks only; no experimental training.",
+  "source_sha256": {
+    "protocol.json": "de87f4a683c2c821461c841f08644ab114943b67120efd204e3fd2677d9066ea",
+    "data.json": "222a1ca994cd5400fe63ddfef4129e3cec170d912c484a06bc28bbdd3f349d71",
+    "hybrid_model.py": "6fd48b4f53b0e1289f6491e868d40f3bc6f161721146c5e218951d1b9a082f9f",
+    "run_train.py": "f32272a2a14814513841cc2c348dfa898cec9b5686472901f0a389b7853e2d1d",
+    "prepare_study.py": "53d09fb9f51f5eefe5d7970199f2e439b8dc0b458481df3a076875ce953b6e26",
+    "preflight.py": "930dc2d7ff4e8fdca009c7e6e111e2da520baa5e3da7c4a07986fe8f4b9c678c",
+    "handfilled_mux.npz": "0c209c0f31c63b2a4fafb7bed3b659920afe8ec7d5ce424aa3fe26db51912592",
+    "source_manifest.json": "7fe624b216d55117b3409aff46c707e09710583f9fe70100442b7ec893794269",
+    "batches/seed101.npz": "4fb5d87b0b0d2c1f47b109fab7cb6f7120dbaaf18acaae01e5afde71da62762b",
+    "batches/seed202.npz": "2364b2024723e37d4db5c1dc1fc97d60bbb11eebac6d65f4f10bc5e771b084e9",
+    "batches/seed303.npz": "3d64a08b3d98be73b499e291a883f3004f370175e523cd72c0bc91be110def49",
+    "sources/codec.py": "67f71587892ff7d17f9cea207296cd35347a59c4e06e4545fee20b0bfdf5e265",
+    "sources/pr129_data.json": "7ecdf97e8ecf6f5f5eeb58d27bd7bca65466bc75a5c3cd5a41766187eebd9d90",
+    "sources/pr130_data.json": "8732d0e34fc847597aeb55769fae1253b699d780fbb823c1f9dd44c75d24fd6d",
+    "sources/pr132_data.json": "d2ec16ec5abd2b0acf8bf1dda44073528f7e0c24db74dbd05bf4c1433e8115fa",
+    "sources/pr132_protocol.json": "62630b54d386483b11c63950c5d5dcc6581fbb2a60fd9ba3de9987001b676fd0",
+    "sources/pr132_source_lock.json": "e40405bf6068ed8388343e72da316d261ae354ba45f940b4f669b76eaf67b13a",
+    "sources/receiver_seed101.npz": "db1356c70933dd64d1a7757f0ff3a43b13e3fbdbdf22e2efb78a002e986e7936",
+    "sources/receiver_seed202.npz": "7f324a6fb045dd127c8da18394b3087b07ca428cc023ed6cd58bc5e3ba1cc4ed",
+    "sources/receiver_seed303.npz": "3a4ee632d2de15091e7d22d8ada5a6b4a13e25a451e0c67fa2aa587c7853b01d"
+  }
+}

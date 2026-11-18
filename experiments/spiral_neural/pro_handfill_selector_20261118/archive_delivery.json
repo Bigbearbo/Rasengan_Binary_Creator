@@ -1,0 +1,17 @@
+{
+  "run": "pro_handfill_selector_20261118_v1",
+  "filename": "sle_handfill_selector_20261118_v1.zip",
+  "library_path": "/SLE_NN_Exchange/archives/sle_handfill_selector_20261118_v1.zip",
+  "size_bytes": 32830875,
+  "sha256": "c33c180362cec0e968fa704f3cf2dd55fbff5c36e348ad8e755b201c347cbed2",
+  "zip_crc": "PASS",
+  "members": 238,
+  "hashed_payload_files": 237,
+  "source_pull_request": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/133",
+  "source_lock_sha256": "6622b5d38ba9cb35b05c98eadf544af68b2c5a1fe03679f05d84b1d47b96367d",
+  "independent_result_audit_sha256": "f9c6f932f91cf879e2a9d738dc45a639476a019640bf1e5dcc2c42ccd7356694",
+  "packaged_replay": "PASS; all237 payload hashes and238 CRC members;99 prediction files475896rows;96 verification-only recurrences;0 newexperimentalupdates",
+  "local_windows_sync": "READY_FOR_PULL",
+  "actual_run_status": "completed_after_metadata_recovery",
+  "note": "The original runner's final bookkeeping exception and zero-inference recovery are preserved; no experimental weights or predictions were changed."
+}
