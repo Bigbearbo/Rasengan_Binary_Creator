@@ -41,4 +41,16 @@ The original locked runner is preserved with its final Path-join typo: all train
 
 The full model retains1,368 numeric values and adds22 threshold units, with15 trainable values in learned arms. Compared with PR132's mature hidden-head configuration, retained values drop1,578→1,368, while per-query forward MAC increases1,064→1,304 because the original decoder output layer is now used. Explicit selector labels and handfilled copy priors are added, so this is not a pure encoding or equal-architecture comparison.
 
-U: the user's growth, word communication and handfill/training direction. F: PR130/PR132 sources and the Fable W candidate profile. A: this comparator/copy experiment. T: actual execution receipts, added after execution. NVIDIA review is unavailable in this environment; external model calls0. Independent local review is recorded separately.
+## Immutable archive and packaged replay
+
+Archive: `sle_handfill_selector_20261118_v1.zip`, 32,830,875 bytes. SHA256: `c33c180362cec0e968fa704f3cf2dd55fbff5c36e348ad8e755b201c347cbed2`. It contains238 members and237 hashed payload files; ZIP CRC passes. The saved Library copy was listed and its name/size checked before handoff publication.
+
+Run the public [replay_archive.py](replay_archive.py) against the exact ZIP. Packaged replay was actually executed and passed; [packaged_replay_receipt.json](packaged_replay_receipt.json) records the fresh independent audit,96 verification-only recurrences and0 new experimental updates. The separate initial result audit also used96 verification-only recurrences; neither changed the24,576 experimental updates.
+
+```bash
+python replay_archive.py /absolute/path/sle_handfill_selector_20261118_v1.zip --receipt /absolute/path/new_replay_receipt.json
+```
+
+The ZIP is immutable. Windows handoff is `READY_FOR_PULL`; a matching Dot receipt is required before claiming Windows synchronization. See [archive_delivery.json](archive_delivery.json).
+
+U: the user's growth, word communication and handfill/training direction. F: PR130/PR132 sources and the Fable W candidate profile. A: this comparator/copy experiment. T: actual execution and replay receipts. NVIDIA review is unavailable in this environment; external model calls0. Independent local review is recorded separately.
