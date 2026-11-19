@@ -1,0 +1,9 @@
+# Post-hoc raw-frame census at the end of MIN acquisition
+
+This diagnostic was specified after the main and staged numerical results were inspected. It changed no weights. It covers every ordered pair with a+b<128 encoded under each of the four PR133 n7 opcodes, 33,024 distinct raw frames per receiver. It compares the complete learned-receiver pipeline to the corresponding head on ideal operand bits. The exact PR133 encoder is bundled in codec.py. All 14,392 archived PR133 panel frames were found byte-for-byte, and 18,632 additional frames per receiver were scored. This is a finite functional audit; certain inputs were seen in the history of this system.
+
+Run `python census.py --verify` from this directory. If relocating the other components, explicitly pass `--core PATH --staged PATH` to the main and staged study directories. Neither reruns training. The receipt and code retain every outcome, both correct and wrong; results/inputs.npz uses MSB-first packing, with six padding bits. results/summary.json documents decompositions and field layouts.
+
+On seeds 101/202/303, the receiver misread 3/1/0 operand pairs among 33,024 raw frames per seed. All four affected frames lie outside the four archived PR133 panels. Seed 101 decoded (5,2) as (1,2) under AND, and (7,3) as (3,3) under XOR and OR. Seed 202 decoded (11,3) as (11,2) under XOR. All four opcode classifications were correct. Operation requests originate outside the frame; the experiment uses the four existing tokens as nuisance variation.
+
+At MIN step 512 the frozen pipeline's correct MAX counts were 33,021/33,024/33,024, and MIN counts were 33,023/33,023/33,024. The ideal-input frozen circuit is exact. A corrupted non-selected operand can leave the correct final answer unchanged, which is why operand and answer error counts differ. The remaining arms and partitions are given in results/summary.json.

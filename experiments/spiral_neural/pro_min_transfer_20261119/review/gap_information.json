@@ -1,0 +1,103 @@
+{
+  "kind": "exploratory_static_ceiling_no_training",
+  "target": "1 <= abs(a-b) <= 3",
+  "reader_input": "single exact comparator bit only; no access to operands",
+  "all_unequal": {
+    "n_unequal": 16256,
+    "near": 756,
+    "not_near": 15500,
+    "each_possible_readout": [
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          false,
+          false
+        ],
+        "correct": 15500,
+        "sensitivity": "0",
+        "specificity": "1",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          false,
+          true
+        ],
+        "correct": 8128,
+        "sensitivity": "1/2",
+        "specificity": "1/2",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          true,
+          false
+        ],
+        "correct": 8128,
+        "sensitivity": "1/2",
+        "specificity": "1/2",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          true,
+          true
+        ],
+        "correct": 756,
+        "sensitivity": "1",
+        "specificity": "0",
+        "balanced_accuracy": "1/2"
+      }
+    ],
+    "best_raw_accuracy": 0.953494094488189,
+    "best_balanced_accuracy": 0.5
+  },
+  "legal_sum_below_128_unequal": {
+    "n_unequal": 8192,
+    "near": 380,
+    "not_near": 7812,
+    "each_possible_readout": [
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          false,
+          false
+        ],
+        "correct": 7812,
+        "sensitivity": "0",
+        "specificity": "1",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          false,
+          true
+        ],
+        "correct": 4096,
+        "sensitivity": "1/2",
+        "specificity": "1/2",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          true,
+          false
+        ],
+        "correct": 4096,
+        "sensitivity": "1/2",
+        "specificity": "1/2",
+        "balanced_accuracy": "1/2"
+      },
+      {
+        "output_if_left_smaller_then_if_left_larger": [
+          true,
+          true
+        ],
+        "correct": 380,
+        "sensitivity": "1",
+        "specificity": "0",
+        "balanced_accuracy": "1/2"
+      }
+    ],
+    "best_raw_accuracy": 0.95361328125,
+    "best_balanced_accuracy": 0.5
+  }
+}

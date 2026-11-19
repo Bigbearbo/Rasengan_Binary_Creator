@@ -1,0 +1,10 @@
+{
+  "run": "pro_min_transfer_20261119_v1",
+  "filename": "sle_min_transfer_20261119_v1.zip",
+  "size_bytes": 2850163,
+  "sha256": "ddb93ae83bdef91017fc49a602a0a73ec595cfdced9702dd7221d40aa667746d",
+  "members": 125,
+  "crc": "PASS",
+  "checksummed_members": 124,
+  "source_pr": "https://github.com/Bigbearbo/Rasengan_Binary_Creator/pull/134"
+}

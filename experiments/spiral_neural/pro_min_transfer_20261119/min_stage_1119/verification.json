@@ -1,0 +1,430 @@
+{
+  "status": "PASS",
+  "verified_optimizer_steps": 1536,
+  "max_weight_and_moment_abs_error": 4.440892098500626e-16,
+  "decoded_predictions_rows_per_task": 47364264,
+  "both_task_numeric_predictions": 94728528,
+  "verification": "Independently decode receiver outputs, check every optimization transition from its saved predecessor with an independent formula, unpack both selectors for every panel and step, score selected numeric operands directly, cross-check all saved metrics, paired batches and matching initially frozen checkpoints.",
+  "matched_endpoints": {
+    "101": {
+      "train": {
+        "frozen": {
+          "n": 8240,
+          "max_correct": 8240,
+          "min_correct": 8240,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8240,
+          "max_correct": 252,
+          "min_correct": 8036,
+          "changed_old_answers": 7988,
+          "changed_old_tie_choices": 16
+        },
+        "staged": {
+          "n": 8240,
+          "max_correct": 8200,
+          "min_correct": 8200,
+          "changed_old_answers": 40,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "val": {
+        "frozen": {
+          "n": 2096,
+          "max_correct": 2096,
+          "min_correct": 2096,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 2096,
+          "max_correct": 104,
+          "min_correct": 2040,
+          "changed_old_answers": 1992,
+          "changed_old_tie_choices": 12
+        },
+        "staged": {
+          "n": 2096,
+          "max_correct": 2080,
+          "min_correct": 2080,
+          "changed_old_answers": 16,
+          "changed_old_tie_choices": 8
+        }
+      },
+      "test": {
+        "frozen": {
+          "n": 3120,
+          "max_correct": 3120,
+          "min_correct": 3120,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 3120,
+          "max_correct": 132,
+          "min_correct": 3036,
+          "changed_old_answers": 2988,
+          "changed_old_tie_choices": 4
+        },
+        "staged": {
+          "n": 3120,
+          "max_correct": 3108,
+          "min_correct": 3108,
+          "changed_old_answers": 12,
+          "changed_old_tie_choices": 12
+        }
+      },
+      "challenge": {
+        "frozen": {
+          "n": 936,
+          "max_correct": 936,
+          "min_correct": 936,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 936,
+          "max_correct": 24,
+          "min_correct": 912,
+          "changed_old_answers": 912,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 936,
+          "max_correct": 936,
+          "min_correct": 936,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "ideal": {
+        "frozen": {
+          "n": 16384,
+          "max_correct": 16384,
+          "min_correct": 16384,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 16384,
+          "max_correct": 2149,
+          "min_correct": 14363,
+          "changed_old_answers": 14235,
+          "changed_old_tie_choices": 14
+        },
+        "staged": {
+          "n": 16384,
+          "max_correct": 16280,
+          "min_correct": 16280,
+          "changed_old_answers": 104,
+          "changed_old_tie_choices": 20
+        }
+      },
+      "ideal_in_domain": {
+        "frozen": {
+          "n": 8256,
+          "max_correct": 8256,
+          "min_correct": 8256,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8256,
+          "max_correct": 302,
+          "min_correct": 8018,
+          "changed_old_answers": 7954,
+          "changed_old_tie_choices": 14
+        },
+        "staged": {
+          "n": 8256,
+          "max_correct": 8216,
+          "min_correct": 8216,
+          "changed_old_answers": 40,
+          "changed_old_tie_choices": 14
+        }
+      }
+    },
+    "202": {
+      "train": {
+        "frozen": {
+          "n": 8240,
+          "max_correct": 8240,
+          "min_correct": 8240,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8240,
+          "max_correct": 192,
+          "min_correct": 8096,
+          "changed_old_answers": 8048,
+          "changed_old_tie_choices": 40
+        },
+        "staged": {
+          "n": 8240,
+          "max_correct": 8100,
+          "min_correct": 8100,
+          "changed_old_answers": 140,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "val": {
+        "frozen": {
+          "n": 2096,
+          "max_correct": 2096,
+          "min_correct": 2096,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 2096,
+          "max_correct": 96,
+          "min_correct": 2048,
+          "changed_old_answers": 2000,
+          "changed_old_tie_choices": 44
+        },
+        "staged": {
+          "n": 2096,
+          "max_correct": 2040,
+          "min_correct": 2040,
+          "changed_old_answers": 56,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "test": {
+        "frozen": {
+          "n": 3120,
+          "max_correct": 3120,
+          "min_correct": 3120,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 3120,
+          "max_correct": 88,
+          "min_correct": 3080,
+          "changed_old_answers": 3032,
+          "changed_old_tie_choices": 40
+        },
+        "staged": {
+          "n": 3120,
+          "max_correct": 3076,
+          "min_correct": 3076,
+          "changed_old_answers": 44,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "challenge": {
+        "frozen": {
+          "n": 936,
+          "max_correct": 936,
+          "min_correct": 936,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 936,
+          "max_correct": 16,
+          "min_correct": 920,
+          "changed_old_answers": 920,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 936,
+          "max_correct": 924,
+          "min_correct": 924,
+          "changed_old_answers": 12,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "ideal": {
+        "frozen": {
+          "n": 16384,
+          "max_correct": 16384,
+          "min_correct": 16384,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 16384,
+          "max_correct": 1865,
+          "min_correct": 14647,
+          "changed_old_answers": 14519,
+          "changed_old_tie_choices": 120
+        },
+        "staged": {
+          "n": 16384,
+          "max_correct": 16033,
+          "min_correct": 16033,
+          "changed_old_answers": 351,
+          "changed_old_tie_choices": 2
+        }
+      },
+      "ideal_in_domain": {
+        "frozen": {
+          "n": 8256,
+          "max_correct": 8256,
+          "min_correct": 8256,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8256,
+          "max_correct": 222,
+          "min_correct": 8098,
+          "changed_old_answers": 8034,
+          "changed_old_tie_choices": 56
+        },
+        "staged": {
+          "n": 8256,
+          "max_correct": 8105,
+          "min_correct": 8105,
+          "changed_old_answers": 151,
+          "changed_old_tie_choices": 2
+        }
+      }
+    },
+    "303": {
+      "train": {
+        "frozen": {
+          "n": 8240,
+          "max_correct": 8240,
+          "min_correct": 8240,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8240,
+          "max_correct": 272,
+          "min_correct": 8016,
+          "changed_old_answers": 7968,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 8240,
+          "max_correct": 8228,
+          "min_correct": 8228,
+          "changed_old_answers": 12,
+          "changed_old_tie_choices": 20
+        }
+      },
+      "val": {
+        "frozen": {
+          "n": 2096,
+          "max_correct": 2096,
+          "min_correct": 2096,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 2096,
+          "max_correct": 112,
+          "min_correct": 2032,
+          "changed_old_answers": 1984,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 2096,
+          "max_correct": 2092,
+          "min_correct": 2092,
+          "changed_old_answers": 4,
+          "changed_old_tie_choices": 16
+        }
+      },
+      "test": {
+        "frozen": {
+          "n": 3120,
+          "max_correct": 3120,
+          "min_correct": 3120,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 3120,
+          "max_correct": 112,
+          "min_correct": 3056,
+          "changed_old_answers": 3008,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 3120,
+          "max_correct": 3104,
+          "min_correct": 3104,
+          "changed_old_answers": 16,
+          "changed_old_tie_choices": 16
+        }
+      },
+      "challenge": {
+        "frozen": {
+          "n": 936,
+          "max_correct": 936,
+          "min_correct": 936,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 936,
+          "max_correct": 16,
+          "min_correct": 920,
+          "changed_old_answers": 920,
+          "changed_old_tie_choices": 0
+        },
+        "staged": {
+          "n": 936,
+          "max_correct": 936,
+          "min_correct": 936,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        }
+      },
+      "ideal": {
+        "frozen": {
+          "n": 16384,
+          "max_correct": 16384,
+          "min_correct": 16384,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 16384,
+          "max_correct": 1977,
+          "min_correct": 14535,
+          "changed_old_answers": 14407,
+          "changed_old_tie_choices": 6
+        },
+        "staged": {
+          "n": 16384,
+          "max_correct": 16347,
+          "min_correct": 16347,
+          "changed_old_answers": 37,
+          "changed_old_tie_choices": 51
+        }
+      },
+      "ideal_in_domain": {
+        "frozen": {
+          "n": 8256,
+          "max_correct": 8256,
+          "min_correct": 8256,
+          "changed_old_answers": 0,
+          "changed_old_tie_choices": 0
+        },
+        "joint": {
+          "n": 8256,
+          "max_correct": 264,
+          "min_correct": 8056,
+          "changed_old_answers": 7992,
+          "changed_old_tie_choices": 6
+        },
+        "staged": {
+          "n": 8256,
+          "max_correct": 8238,
+          "min_correct": 8238,
+          "changed_old_answers": 18,
+          "changed_old_tie_choices": 26
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "raw_source_check": "PASS",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "panels": {
+    "train": {
+      "frames": 8240,
+      "unordered_pairs": 1036,
+      "ordered_pairs": 2060,
+      "ties": 48,
+      "operand_predictions_correct_per_seed": 8240
+    },
+    "val": {
+      "frames": 2096,
+      "unordered_pairs": 268,
+      "ordered_pairs": 524,
+      "ties": 48,
+      "operand_predictions_correct_per_seed": 2096
+    },
+    "test": {
+      "frames": 3120,
+      "unordered_pairs": 396,
+      "ordered_pairs": 780,
+      "ties": 48,
+      "operand_predictions_correct_per_seed": 3120
+    },
+    "challenge": {
+      "frames": 936,
+      "unordered_pairs": 117,
+      "ordered_pairs": 234,
+      "ties": 0,
+      "operand_predictions_correct_per_seed": 936
+    }
+  },
+  "unique_raw_frames": 14392,
+  "total_across_receivers": 43176,
+  "unique_unordered_pairs": 1817,
+  "claim": "Recomputed from raw frames and source weights. SHA256 of actual decoded words matches all saved PR133 source cache records."
+}
