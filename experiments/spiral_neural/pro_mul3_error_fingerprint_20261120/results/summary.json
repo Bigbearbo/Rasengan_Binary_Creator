@@ -1,0 +1,71 @@
+{
+  "scope": "synthetic integer rules; no neural model evaluated",
+  "inputs": 128,
+  "no_carry": 34,
+  "has_carry": 94,
+  "correct_per_rule": {
+    "true_mul3": 128,
+    "double": 1,
+    "xor": 34,
+    "or": 34,
+    "one_carry": 34,
+    "trunc7": 43,
+    "trunc8": 86
+  },
+  "same_correctness": [
+    [
+      "xor",
+      "or"
+    ],
+    [
+      "xor",
+      "one_carry"
+    ],
+    [
+      "or",
+      "one_carry"
+    ]
+  ],
+  "shortest_panel": [
+    43,
+    86
+  ],
+  "shortest_panel_outputs": [
+    {
+      "true_mul3": 129,
+      "double": 86,
+      "xor": 125,
+      "or": 127,
+      "one_carry": 121,
+      "trunc7": 1,
+      "trunc8": 129
+    },
+    {
+      "true_mul3": 258,
+      "double": 172,
+      "xor": 250,
+      "or": 254,
+      "one_carry": 242,
+      "trunc7": 2,
+      "trunc8": 2
+    }
+  ],
+  "robust_panel": [
+    43,
+    44,
+    45,
+    86,
+    87,
+    88
+  ],
+  "robust_panel_min_distance": 3,
+  "eligible_middle_upper": [
+    18,
+    22
+  ],
+  "corruption_checks": 294,
+  "symmetric_difference_with_xor_on_held": {
+    "random_order": 8,
+    "low_carry_first": 7
+  }
+}
