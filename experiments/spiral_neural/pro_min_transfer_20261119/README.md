@@ -15,6 +15,10 @@ On the complete ideal 7-bit pair grid (16,384 cases), the frozen condition has z
 
 MIN is an especially favorable complementary task. Freezing the original comparator preserves MAX by construction. The observed acquisition speed and whether the optimizer writes a new rule into the adapter or the older module are empirical. A single comparator bit can implement MIN by reversing its choice; the experiment supplies the task switch, copying circuit and selector supervision. This study does not establish a general expansion schedule, discovery of task opcodes, or superiority of the SLE encoding.
 
+A post-hoc census additionally enumerates all 33,024 valid raw n7 frames per seed, including 18,632 outside the earlier panels. The learned receiver misreads 3, 1 and 0 operand pairs. With a frozen exact comparison circuit, MAX is correct on 33,021, 33,024 and 33,024 raw frames, MIN on 33,023, 33,023 and 33,024. This distinguishes exact ideal-input behavior from occasional upstream decoding errors. The census, complete experiment report and archive receipt are available below.
+
+[Chinese report](report_zh.md) · [Raw-frame census](min_census_1119/README.md) · [Archive identity](archive_delivery.json)
+
 ## Evidence and replay
 
 The original and supplemental protocols were committed before the respective outcomes: [main](PREREG.md) and [staged release](SUPPLEMENT_PREREG.md). Public source is arranged like the immutable archive. Raw frames, the paired batches, trained weights and individual predictions are archive-only. Use Python 3.12 and NumPy 2.3.5 for a matched rerun. After extraction, run the following in the archive root:
@@ -23,6 +27,9 @@ The original and supplemental protocols were committed before the respective out
 python min_transfer_20261119/replay.py
 OPENBLAS_NUM_THREADS=1 python review/independent_replay.py min_transfer_20261119
 python min_stage_1119/verify_staged.py
+python min_census_1119/census.py --verify
 ```
 
 The main audit independently decodes 43,176 source evaluations, checks all 5,376 optimizer batches, every registered weight and Adam moment, and all 4,431,744 checkpoint/panel rows. A separate post-hoc audit uses mathematically equivalent floating-point expressions on the joint arm. Exact end values vary, but severe MAX loss persists in all three seeds. The raw-frame challenge is reused from PR133 and the exhaustive grid is a separately labeled component test. See the [main replay note](min_transfer_20261119/README.md), [independent audit receipt](review/scientific_replay.json), and [staged metrics](min_stage_1119/results/summary.json).
+
+For the whole-file SHA, member CRC, member SHA and fresh extracted replay, keep the [archive verifier](replay_archive.py) and [receipt](archive_delivery.json) together, then run `python replay_archive.py sle_min_transfer_20261119_v1.zip`.
