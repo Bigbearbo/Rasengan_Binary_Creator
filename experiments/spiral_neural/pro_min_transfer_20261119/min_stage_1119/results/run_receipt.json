@@ -1,0 +1,22 @@
+{
+  "prereg": "172ada5",
+  "run": "pro_min_transfer_20261119_v1",
+  "arm": "staged",
+  "core_sha256": "07c984ab20ec142ccc2e496a515b1016b9acee4855907587299b988384dc9155",
+  "train_steps": 1536,
+  "examples_seen": 98304,
+  "recovery_steps": 0,
+  "widths": [
+    15,
+    2
+  ],
+  "adapter_steps": 1536,
+  "comparator_steps": 1373,
+  "eval_protocol": "Post-training every step 0..512, train/val/test/challenge/ideal, ideal in-domain subset a+b<128; sign tie selects left",
+  "extra_parameters_over_MAX": 2,
+  "deployed_values": 1370,
+  "per_row_MAX_MAC": 1304,
+  "per_row_MIN_MAC": 1305,
+  "serialization": "states.npz contains all 513 snapshots plus identical sampled minibatches. Packed decision shape (513,2,ceil(N/8)), little bit order; choice 1 selects left. copy_outputs[choice,row] gives the emitted seven-bit integer, no truth substituted.",
+  "elapsed_seconds": 4.159674834998441
+}

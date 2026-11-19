@@ -1,0 +1,79 @@
+{
+  "run": "pro_min_transfer_20261119_v1",
+  "prereg_git": "e9ee14f24031265f154890fdbf4e00a002b208de",
+  "pr133_archive_sha256": "c33c180362cec0e968fa704f3cf2dd55fbff5c36e348ad8e755b201c347cbed2",
+  "source": {
+    "101": {
+      "train": {
+        "n": 8240,
+        "correct_operand_pairs": 8240
+      },
+      "val": {
+        "n": 2096,
+        "correct_operand_pairs": 2096
+      },
+      "test": {
+        "n": 3120,
+        "correct_operand_pairs": 3120
+      },
+      "challenge": {
+        "n": 936,
+        "correct_operand_pairs": 936
+      }
+    },
+    "202": {
+      "train": {
+        "n": 8240,
+        "correct_operand_pairs": 8240
+      },
+      "val": {
+        "n": 2096,
+        "correct_operand_pairs": 2096
+      },
+      "test": {
+        "n": 3120,
+        "correct_operand_pairs": 3120
+      },
+      "challenge": {
+        "n": 936,
+        "correct_operand_pairs": 936
+      }
+    },
+    "303": {
+      "train": {
+        "n": 8240,
+        "correct_operand_pairs": 8240
+      },
+      "val": {
+        "n": 2096,
+        "correct_operand_pairs": 2096
+      },
+      "test": {
+        "n": 3120,
+        "correct_operand_pairs": 3120
+      },
+      "challenge": {
+        "n": 936,
+        "correct_operand_pairs": 936
+      }
+    }
+  },
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "min_update_steps": 4608,
+  "recovery_update_steps": 768,
+  "min_presentations": 294912,
+  "recovery_update_presentations": 49152,
+  "each_receiver_inherited_updates": 5120,
+  "receiver_forward_rows": 43176,
+  "receiver_values": 1290,
+  "comparator_values": 15,
+  "copy_values": 63,
+  "expanded_additional_values": 2,
+  "expanded_total_values": 1370,
+  "per_row_MAC_old": 1304,
+  "per_row_MAC_new_expanded": 1305,
+  "per_row_MAC_direct": 1304,
+  "assumptions": "One MAC per weighted edge; signs, bias, external task switch excluded. Direct has two placeholder identity numbers in state serialization, never invoked or optimized. restore_000 is a weights-only intervention; old optimizer state there is for provenance only. Max recovery resets comparator optimizer. Frozen received no old updates. Numeric outputs preserve all seven bits losslessly (unsigned integer).",
+  "elapsed_s": 1.2411196829998516
+}

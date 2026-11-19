@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "verified_checkpoint_states": 144,
+  "verified_panel_rows_with_both_predictions": 4431744,
+  "verified_answer_values": 8863488,
+  "exhaustive_copy_network_checks": 32768,
+  "replay_optimizer_updates_in_memory": 5376,
+  "max_abs_weight_or_adam_delta": 0.0,
+  "prereg_sha256": "51ca6bcaab3b8182b9360e6cb661efbd5a998b3fdbf863aa638338e135d52d49",
+  "new_training_to_change_results": 0
+}
