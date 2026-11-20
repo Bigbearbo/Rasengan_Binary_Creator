@@ -1,0 +1,3 @@
+# Arithmetic in a constrained execution environment
+
+Compare the existing fixed-weight serial arithmetic block against an independently written serial circuit using a common LUT and state model. Separately run register-based arithmetic firmware for targets with and without integer multiplication. Use exact answers (including full-width products, carry and remainders), count program and data resources separately, and distinguish CPU instructions from network rounds. Where available, check the 7-bit domains used by the existing four-operation language network. Keep raw states, weights, private receipts and conversations out of the public branch.
