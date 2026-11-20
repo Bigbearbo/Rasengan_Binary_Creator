@@ -1,0 +1,8 @@
+Run: pro_step_merge_20261120_v1
+Archive: sle_step_merge_20261120_v1.zip
+SHA-256: 676a70dfc3d477493545fdc148d3a9cd9273000d44921c7529e022e626362572
+Size: 332774 bytes
+Report SHA-256: 5609a3b80b34a16450f270f7ca6d77faaa93b122a6f7fa88d1c2fb3198ac5c56
+Results commit: c7d3368afc39339297a8520d2f3012b1c7888e72
+Verified 27 member CRCs and 26 payload hashes. Full clean-extraction replay regenerated eight outputs byte for byte, including raw student outputs and original T3 grading. Independent endpoint verification rechecked 224 model checkpoints.
+Private archive is available via the project exchange. This batch has not been independently replayed by the Windows team.
