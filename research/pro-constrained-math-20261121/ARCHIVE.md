@@ -1,0 +1,3 @@
+# Private replay archive
+
+`sle_constrained_math_20261121_v1.zip`, 305033 bytes. SHA-256 `7ff17277aa0835a89d08aea74d07c091e01e878e2c027779bd6056e2028861fa`. There are 54 ZIP members and 53 per-file checksums. The archive contains the complete fixed-weight construction, constrained firmware, packed cases, and the same-CPU deployment. In an extracted copy run `python -B replay_all.py`. The command was run from an extracted clean copy, with all checks passed. The original project codec's scorer is not bundled; independent frame generators, original frame examples, full neural outputs and exact machine outputs support the comparison.
