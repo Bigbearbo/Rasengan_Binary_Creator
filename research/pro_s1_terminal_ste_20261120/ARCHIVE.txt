@@ -1,0 +1,6 @@
+Run: pro_s1_terminal_ste_20261120_v1
+ZIP: sle_s1_terminal_ste_20261120_v1.zip
+SHA256: 007463fb2b7e24fe96840890f623b5506c031e73ca360febc005035df6f10988
+Bytes: 209668
+Source code: 0a83e4ec8ad1bb0e5eec417044663517a6f9eef7
+Restored ZIP verified with all 13 payload SHA256 digests and 14 member CRCs. Fresh extraction reproduced all four training and audit outputs, including 240 independent scoring checks. This is a cloud-side research receipt.
