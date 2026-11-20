@@ -1,0 +1,6 @@
+Run: pro_handfill_s1_borrow_growth_20261120_v1
+Archive: sle_handfill_s1_borrow_growth_20261120_v1.zip
+SHA256: 44a01cf1ce8f47dd95ba7e774c2fc59dd5dcfeee9c705721fcee1b03a83fe9b7
+Bytes: 447326
+Results commit: 56f34c161aa3f9a3739877192b2dd9f2c8bcc169
+38 ZIP members, 37 payload SHA256 checks and ZIP CRC passed after research archive restore. Re-execution from fresh extraction reproduced the numerical borrow and wiring results, tape-copy and dispatcher audits and full reference vectors. This receipt records cloud-side verification.

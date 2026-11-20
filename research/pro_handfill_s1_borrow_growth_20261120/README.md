@@ -1,0 +1,9 @@
+# Findings and replay
+
+With all original 19 adder activations available, the optimal deterministic first-step borrow predictor attained 49,152/65,536 (75%). One additional threshold cell reading A0, B0 and its own previous borrow attained correct eight-step traces on every one of 65,536 ordered operand pairs in all 16 local-rule training trials. Cutting feedback gave 22,288 correct sequences. Complete 9-bit addition, prior learned carry and exactly-two readouts, and the old board and stop schedule were preserved. These are internal board tasks. The network does not emit the subtraction difference.
+
+Opening all 18 old board bits plus self-feedback to a zero-initialized threshold learner gave 16/16 runs at or above 95% exact-sequence accuracy (9/16 perfect) after training on 64 distinct full-byte pairs per seed. Training on the same count of small operands (0..15) gave 8/16 at or above 95% and 4/16 perfect in the same exhaustive byte domain. All 32 fitted their own training set. The extra monitoring unit, writable feedback bit, and supervision were supplied by construction. No policy to initiate growth was learned.
+
+A separate post-hoc bounded-VM check replayed the original 300 copy inputs with an independent slice oracle. The original six-instruction program scored 211/300. A ten-instruction ROM with two boundary guards scored 300/300 on the same unchanged network, and 304/304 on a two-tape interval grid. A dispatcher probe reproduced a mismatch between single and nested multiword number parsing, and invalid-row behavior in mixed batches. These checks did not re-execute every upstream task or deploy changes to upstream systems.
+
+The study code is in this directory. The project research archive supplies the exact input snapshots, prior readouts, checksums, numeric reference vectors and full per-seed results. See REPLAY.md in the archive. The research draft is for independent inspection.
