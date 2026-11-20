@@ -1,0 +1,7 @@
+Research batch pro_teacher_wiring_remediation_20261120_v1
+Archive: sle_wiring_remediation_20261120_v1.zip
+SHA-256: f63e4e320e07e5675e46a1beb1ced1d22e0bfda14c151561586d8cce0f7d6a5f
+Bytes: 298193
+Results commit: 877e97e165363ae3924f46a2f72454a292794bec
+Verification: all 32 ZIP entries passed CRC and all 31 payloads passed SHA-256. A fresh extraction reproduced all nine outputs byte for byte, including independent checks. Report SHA-256: 5c65bb2989c761189e0bb9d6fae4c63179b7c84f16dc371af110c6b509bade58.
+This archive is distributed in the project's private exchange. Independent local-team replay of this batch is pending.
