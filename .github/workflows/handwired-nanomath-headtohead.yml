@@ -1,0 +1,37 @@
+name: Handwired vs nanomath held-out common-set pilot
+'on':
+  push:
+    branches:
+      - research/hwleft-peer-headtohead-20261122
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  math-compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OMP_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "2"
+      PEER_LIMIT: "10"
+      HF_HUB_DISABLE_XET: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --quiet numpy huggingface_hub
+          python -m pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Run shared held-out comparison
+        run: |
+          /usr/bin/time -v python experiments/leftbrain_peer_compare/compare.py
+      - name: Upload scores, predictions and fixed sample IDs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: handwired-vs-nanomath-heldout-20261122
+          path: experiments/leftbrain_peer_compare/compare_results.json
+          if-no-files-found: warn
