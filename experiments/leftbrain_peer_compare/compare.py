@@ -60,13 +60,12 @@ def run_handwired(items):
     hw.install()
     start=time.perf_counter()
     rows=[]
-    for d in items:
-        try:
-            item=hw.run([d])[0]
-            rows.append({**d,"state":item["result"],"pred":item.get("why",""),
+    # The released evaluator processes a whole question set in one pass.
+    # Reproduce its intended batch mode rather than 60 separate overhead-heavy calls.
+    out=hw.run(items)
+    for d,item in zip(items,out):
+        rows.append({**d,"state":item["result"],"pred":item.get("why",""),
                 "structured":item.get("en"),"reason":item.get("why","")})
-        except Exception as e:
-            rows.append({**d,"state":"error","reason":repr(e),"pred":None})
     return {"model":"handwired-public-v0","seconds":round(time.perf_counter()-start,3),"items":rows}
 
 def run_nanomath(items):
