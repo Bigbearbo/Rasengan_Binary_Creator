@@ -50,7 +50,7 @@ jobs:
                   rows.append(dict(expr=expr,gold=gold,pred=None,msg=str(e),status=status))
           app=Path('_nm/app.py').read_text(encoding='utf-8')
           marker={'model_loads_state_dict':'model.load_state_dict(' in app,
-                  'app_calls_model_forward':bool(__import__('re').search(r'(?<![a-zA-Z_])model\\s*\\(',app)) or ('.forward(' in app) or ('model.predict(' in app),
+                  'app_calls_model_forward':('model.forward(' in app) or (' model(' in app) or ('=model(' in app),
                   'app_calls_symbolic_engine':'evaluate_expression_tree(' in app}
           out={'probe_scope':'published symbolic_engine MathTextParser + evaluator; NOT neural network inference',
                'neural_integration_observation':marker,'items':rows}
