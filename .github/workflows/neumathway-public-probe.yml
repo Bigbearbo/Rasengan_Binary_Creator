@@ -1,0 +1,67 @@
+name: Neumathway public entrypoint independent numeric probe
+'on':
+  push:
+    branches:
+      - research/neumathway-public-solver-probe-20261122
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch public reference source
+        run: |
+          git clone --depth 1 https://github.com/christopherhamonangan/Neumathway.git _nm
+          cd _nm && git rev-parse HEAD
+      - name: Exercise published symbolic evaluator and distinguish neural integration
+        run: |
+          python - <<'PY'
+          import sys, json, hashlib
+          from fractions import Fraction
+          from pathlib import Path
+          sys.path.insert(0, '_nm')
+          import symbolic_engine as s
+          cases = [
+             ('2+3','5'), ('17*24','408'), ('20/4','5'), ('-7+8','1'),
+             ('1.25+0.5','7/4'), ('1/2+1/3','5/6'), ('gcd(48,18)','6'),
+             ('pow(2,-1)','1/2'), ('sqrt(2)','irrational_sqrt_2'),
+             ('sqrt(16)','4'), ('fact(6)','720'), ('pow2(9)','81'),
+             ('1/0','refuse'), ('sqrt(-1)','refuse'), ('5*(3+4)','35'),
+             ('1000000+1','1000001')
+          ]
+          rows=[]
+          for expr,gold in cases:
+              try:
+                  tree=s.MathTextParser.parse(expr)
+                  trace, value, message=s.evaluate_expression_tree(tree)
+                  pred=None if value is None else str(value)
+                  if gold=='refuse':
+                      status='correct_refusal' if value is None else 'wrong'
+                  elif gold=='irrational_sqrt_2':
+                      status='wrong' if value is not None and message=='OK' else 'correct_refusal'
+                  else:
+                      status='correct' if value is not None and Fraction(str(value))==Fraction(gold) else 'wrong'
+                  rows.append(dict(expr=expr,gold=gold,pred=pred,msg=message,status=status,steps=len(trace)))
+              except Exception as e:
+                  status='correct_refusal' if gold=='refuse' else 'error'
+                  rows.append(dict(expr=expr,gold=gold,pred=None,msg=str(e),status=status))
+          app=Path('_nm/app.py').read_text(encoding='utf-8')
+          marker={'model_loads_state_dict':'model.load_state_dict(' in app,
+                  'app_calls_model_forward':('model(' in app) or ('.forward(' in app) or ('model.predict(' in app),
+                  'app_calls_symbolic_engine':'evaluate_expression_tree(' in app}
+          out={'probe_scope':'published symbolic_engine MathTextParser + evaluator; NOT neural network inference',
+               'neural_integration_observation':marker,'items':rows}
+          Path('neumathway_probe_20261122.json').write_text(json.dumps(out,indent=2,ensure_ascii=False))
+          for row in rows: print(row,flush=True)
+          print('APP_ENTRYPOINT',marker,flush=True)
+          print('COUNTS',{s:sum(x['status']==s for x in rows) for s in sorted(set(x['status'] for x in rows))},flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: neumathway-symbolic-only-probe-20261122
+          path: neumathway_probe_20261122.json
+          if-no-files-found: warn
