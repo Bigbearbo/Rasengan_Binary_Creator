@@ -1,0 +1,84 @@
+name: Independent HandWired-LeftBrain-1 verification
+'on':
+  push:
+    branches:
+      - research/hf-leftbrain-check-20261122
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "4"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install public test dependencies
+        run: python -m pip install --quiet numpy huggingface_hub
+      - name: Download pinned public model repository
+        run: |
+          python - <<'PY'
+          from huggingface_hub import snapshot_download
+          repo = 'Bigbearbo/handwired-left-brain-1'
+          sha = '15750436b2842f7afd6cef7a9323113b04a9c2bd'
+          print('HF repository:', repo, 'revision:', sha, flush=True)
+          path = snapshot_download(repo_id=repo, revision=sha, local_dir='hwleft')
+          print('Downloaded to:', path, flush=True)
+          PY
+          find hwleft -type f | sort
+      - name: Quick check (20 questions per module)
+        run: |
+          cd hwleft
+          python eval.py --limit 20 --out quick_results.json
+      - name: Complete bundled 1400-question evaluation
+        run: |
+          cd hwleft
+          /usr/bin/time -v python eval.py --out full_results.json
+      - name: Rebuild and compare network manifest
+        run: |
+          cd hwleft
+          cp weights_manifest.json weights_manifest_published.json
+          python make_manifest.py
+          python - <<'PY'
+          import json
+          a = json.load(open('weights_manifest_published.json', encoding='utf-8'))
+          b = json.load(open('weights_manifest.json', encoding='utf-8'))
+          aa, bb = a['networks'], b['networks']
+          print('MANIFEST networks published/rebuilt:', len(aa), len(bb))
+          print('MANIFEST nonzero published/rebuilt:', sum(n['nonzero'] for n in aa), sum(n['nonzero'] for n in bb))
+          mismatches = [(x.get('name'), y.get('name')) for x, y in zip(aa, bb) if x != y]
+          print('MANIFEST identical network entries:', aa == bb)
+          print('MANIFEST entry mismatches:', mismatches[:10])
+          PY
+      - name: Summarize detailed outcome and refusals
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os, collections
+          for fn in ('quick_results.json','full_results.json'):
+              path = 'hwleft/'+fn
+              if not os.path.exists(path):
+                  print('MISSING:', fn); continue
+              v = json.load(open(path,encoding='utf-8'))
+              print('===',fn,'elapsed_s=',v.get('seconds'),'===')
+              for k,x in v['summary'].items(): print(k,x)
+              print('REFUSAL REASONS', v.get('refuse_reasons',{}))
+              for item in [x for x in v['items'] if x['result'] != 'correct'][:15]:
+                  print('EXCEPTION',json.dumps(item, ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leftbrain-independent-check-20261122
+          path: |
+            hwleft/quick_results.json
+            hwleft/full_results.json
+            hwleft/weights_manifest.json
+            hwleft/weights_manifest_published.json
+          if-no-files-found: warn
